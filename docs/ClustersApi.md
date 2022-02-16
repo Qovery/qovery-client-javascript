@@ -1,0 +1,730 @@
+# BetaQoveryApi.ClustersApi
+
+All URIs are relative to *https://api.qovery.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createCluster**](ClustersApi.md#createCluster) | **POST** /organization/{organizationId}/cluster | Create a cluster
+[**deleteCluster**](ClustersApi.md#deleteCluster) | **DELETE** /organization/{organizationId}/cluster/{clusterId} | Delete a cluster
+[**deployCluster**](ClustersApi.md#deployCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/deploy | Deploy a cluster
+[**editCluster**](ClustersApi.md#editCluster) | **PUT** /organization/{organizationId}/cluster/{clusterId} | Edit a cluster
+[**editRoutingTable**](ClustersApi.md#editRoutingTable) | **PUT** /organization/{organizationId}/cluster/{clusterId}/routingTable | Edit routing table
+[**getClusterReadinessStatus**](ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
+[**getClusterStatus**](ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
+[**getOrganizationCloudProviderInfo**](ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
+[**getOrganizationClusterStatus**](ClustersApi.md#getOrganizationClusterStatus) | **GET** /organization/{organizationId}/cluster/status | List all clusters statuses
+[**getRoutingTable**](ClustersApi.md#getRoutingTable) | **GET** /organization/{organizationId}/cluster/{clusterId}/routingTable | Get routing table
+[**listOrganizationCluster**](ClustersApi.md#listOrganizationCluster) | **GET** /organization/{organizationId}/cluster | List organization clusters
+[**specifyClusterCloudProviderInfo**](ClustersApi.md#specifyClusterCloudProviderInfo) | **POST** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Specify cluster cloud provider info and credentials
+[**stopCluster**](ClustersApi.md#stopCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/stop | Stop cluster
+[**updateCluster**](ClustersApi.md#updateCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/update | Update a cluster Version
+
+
+
+## createCluster
+
+> ClusterResponse createCluster(organizationId, opts)
+
+Create a cluster
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let opts = {
+  'clusterRequest': new BetaQoveryApi.ClusterRequest() // ClusterRequest | 
+};
+apiInstance.createCluster(organizationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterRequest** | [**ClusterRequest**](ClusterRequest.md)|  | [optional] 
+
+### Return type
+
+[**ClusterResponse**](ClusterResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## deleteCluster
+
+> deleteCluster(organizationId, clusterId)
+
+Delete a cluster
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.deleteCluster(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deployCluster
+
+> ClusterStatusResponse deployCluster(organizationId, clusterId)
+
+Deploy a cluster
+
+allows to deploy a cluster
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.deployCluster(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+[**ClusterStatusResponse**](ClusterStatusResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## editCluster
+
+> ClusterResponse editCluster(organizationId, clusterId, opts)
+
+Edit a cluster
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+let opts = {
+  'clusterRequest': new BetaQoveryApi.ClusterRequest() // ClusterRequest | 
+};
+apiInstance.editCluster(organizationId, clusterId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+ **clusterRequest** | [**ClusterRequest**](ClusterRequest.md)|  | [optional] 
+
+### Return type
+
+[**ClusterResponse**](ClusterResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## editRoutingTable
+
+> ClusterRoutingTableResponse editRoutingTable(organizationId, clusterId, opts)
+
+Edit routing table
+
+Edit routing table by returning updated table.
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+let opts = {
+  'clusterRoutingTableRequest': new BetaQoveryApi.ClusterRoutingTableRequest() // ClusterRoutingTableRequest | 
+};
+apiInstance.editRoutingTable(organizationId, clusterId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+ **clusterRoutingTableRequest** | [**ClusterRoutingTableRequest**](ClusterRoutingTableRequest.md)|  | [optional] 
+
+### Return type
+
+[**ClusterRoutingTableResponse**](ClusterRoutingTableResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getClusterReadinessStatus
+
+> ClusterReadinessStatus getClusterReadinessStatus(organizationId, clusterId)
+
+Know if a cluster is ready to be deployed or not
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.getClusterReadinessStatus(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+[**ClusterReadinessStatus**](ClusterReadinessStatus.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getClusterStatus
+
+> ClusterStatusResponse getClusterStatus(organizationId, clusterId)
+
+Get cluster status
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.getClusterStatus(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+[**ClusterStatusResponse**](ClusterStatusResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getOrganizationCloudProviderInfo
+
+> ClusterCloudProviderInfoResponse getOrganizationCloudProviderInfo(organizationId, clusterId)
+
+Get cluster cloud provider info and credentials
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.getOrganizationCloudProviderInfo(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+[**ClusterCloudProviderInfoResponse**](ClusterCloudProviderInfoResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getOrganizationClusterStatus
+
+> ClusterStatusResponseList getOrganizationClusterStatus(organizationId)
+
+List all clusters statuses
+
+Returns a list of clusters with only their id and status.
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+apiInstance.getOrganizationClusterStatus(organizationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+
+### Return type
+
+[**ClusterStatusResponseList**](ClusterStatusResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getRoutingTable
+
+> ClusterRoutingTableResponse getRoutingTable(organizationId, clusterId)
+
+Get routing table
+
+Retrieve network routing table where each line corresponds to a route between a destination and a target.
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.getRoutingTable(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+[**ClusterRoutingTableResponse**](ClusterRoutingTableResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listOrganizationCluster
+
+> ClusterResponseList listOrganizationCluster(organizationId)
+
+List organization clusters
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+apiInstance.listOrganizationCluster(organizationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+
+### Return type
+
+[**ClusterResponseList**](ClusterResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## specifyClusterCloudProviderInfo
+
+> ClusterCloudProviderInfoResponse specifyClusterCloudProviderInfo(organizationId, clusterId, opts)
+
+Specify cluster cloud provider info and credentials
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+let opts = {
+  'clusterCloudProviderInfoRequest': new BetaQoveryApi.ClusterCloudProviderInfoRequest() // ClusterCloudProviderInfoRequest | 
+};
+apiInstance.specifyClusterCloudProviderInfo(organizationId, clusterId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+ **clusterCloudProviderInfoRequest** | [**ClusterCloudProviderInfoRequest**](ClusterCloudProviderInfoRequest.md)|  | [optional] 
+
+### Return type
+
+[**ClusterCloudProviderInfoResponse**](ClusterCloudProviderInfoResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## stopCluster
+
+> ClusterStatusResponse stopCluster(organizationId, clusterId)
+
+Stop cluster
+
+Cluster stop has been requester.
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.stopCluster(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+[**ClusterStatusResponse**](ClusterStatusResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## updateCluster
+
+> ClusterStatusResponse updateCluster(organizationId, clusterId)
+
+Update a cluster Version
+
+allows to update cluster version
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.updateCluster(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+[**ClusterStatusResponse**](ClusterStatusResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+

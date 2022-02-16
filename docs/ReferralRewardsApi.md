@@ -1,0 +1,104 @@
+# BetaQoveryApi.ReferralRewardsApi
+
+All URIs are relative to *https://api.qovery.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getAccountReferral**](ReferralRewardsApi.md#getAccountReferral) | **GET** /account/referral | Get your referral information
+[**postAccountRewardClaim**](ReferralRewardsApi.md#postAccountRewardClaim) | **POST** /account/rewardClaim | Claim a reward
+
+
+
+## getAccountReferral
+
+> ReferralResponse getAccountReferral()
+
+Get your referral information
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ReferralRewardsApi();
+apiInstance.getAccountReferral((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ReferralResponse**](ReferralResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## postAccountRewardClaim
+
+> postAccountRewardClaim(opts)
+
+Claim a reward
+
+A same code can be claimed only 3 times at max
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ReferralRewardsApi();
+let opts = {
+  'rewardClaimResponse': new BetaQoveryApi.RewardClaimResponse() // RewardClaimResponse | 
+};
+apiInstance.postAccountRewardClaim(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **rewardClaimResponse** | [**RewardClaimResponse**](RewardClaimResponse.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+

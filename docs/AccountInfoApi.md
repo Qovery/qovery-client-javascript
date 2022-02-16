@@ -1,0 +1,52 @@
+# BetaQoveryApi.AccountInfoApi
+
+All URIs are relative to *https://api.qovery.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getAccountInformation**](AccountInfoApi.md#getAccountInformation) | **GET** /account | Get Account information
+
+
+
+## getAccountInformation
+
+> AccountInfoResponse getAccountInformation()
+
+Get Account information
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.AccountInfoApi();
+apiInstance.getAccountInformation((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**AccountInfoResponse**](AccountInfoResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+

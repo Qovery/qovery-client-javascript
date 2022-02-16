@@ -1,0 +1,512 @@
+# BetaQoveryApi.ApplicationMainCallsApi
+
+All URIs are relative to *https://api.qovery.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createApplicationTag**](ApplicationMainCallsApi.md#createApplicationTag) | **POST** /application/{applicationId}/tag | Add application tag
+[**deleteApplication**](ApplicationMainCallsApi.md#deleteApplication) | **DELETE** /application/{applicationId} | Delete application
+[**deleteApplicationTag**](ApplicationMainCallsApi.md#deleteApplicationTag) | **DELETE** /application/{applicationId}/tag/{tagId} | Delete application tag
+[**editApplication**](ApplicationMainCallsApi.md#editApplication) | **PUT** /application/{applicationId} | Edit application
+[**getApplication**](ApplicationMainCallsApi.md#getApplication) | **GET** /application/{applicationId} | Get application by ID
+[**getApplicationStatus**](ApplicationMainCallsApi.md#getApplicationStatus) | **GET** /application/{applicationId}/status | Get application status
+[**listApplicationCommit**](ApplicationMainCallsApi.md#listApplicationCommit) | **GET** /application/{applicationId}/commit | List last commits
+[**listApplicationContributor**](ApplicationMainCallsApi.md#listApplicationContributor) | **GET** /application/{applicationId}/contributor | List contributors
+[**listApplicationLinks**](ApplicationMainCallsApi.md#listApplicationLinks) | **GET** /application/{applicationId}/link | List all URLs of the application
+[**listApplicationTag**](ApplicationMainCallsApi.md#listApplicationTag) | **GET** /application/{applicationId}/tag | List tags
+
+
+
+## createApplicationTag
+
+> TagResponseList createApplicationTag(applicationId, opts)
+
+Add application tag
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+let opts = {
+  'tagRequest': new BetaQoveryApi.TagRequest() // TagRequest | 
+};
+apiInstance.createApplicationTag(applicationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+ **tagRequest** | [**TagRequest**](TagRequest.md)|  | [optional] 
+
+### Return type
+
+[**TagResponseList**](TagResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## deleteApplication
+
+> deleteApplication(applicationId)
+
+Delete application
+
+To delete the application you must have the admin permission
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.deleteApplication(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## deleteApplicationTag
+
+> deleteApplicationTag(applicationId, tagId)
+
+Delete application tag
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+let tagId = "tagId_example"; // String | Tag ID
+apiInstance.deleteApplicationTag(applicationId, tagId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+ **tagId** | **String**| Tag ID | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## editApplication
+
+> ApplicationResponse editApplication(applicationId, opts)
+
+Edit application
+
+- To edit the application you must have the admin permission. - For port edition, if you provide a port id, we will update the corresponding port. If you don&#39;t we will create a new one. If you remove a port from the payload, we will delete it. - For storage edition, if you provide a storage id, we will update the corresponding storage. If you don&#39;t we will create a new one. If you remove a storage from the payload, we will delete it. 
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+let opts = {
+  'applicationEditRequest': new BetaQoveryApi.ApplicationEditRequest() // ApplicationEditRequest | 
+};
+apiInstance.editApplication(applicationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+ **applicationEditRequest** | [**ApplicationEditRequest**](ApplicationEditRequest.md)|  | [optional] 
+
+### Return type
+
+[**ApplicationResponse**](ApplicationResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getApplication
+
+> ApplicationResponse getApplication(applicationId)
+
+Get application by ID
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.getApplication(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**ApplicationResponse**](ApplicationResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getApplicationStatus
+
+> Status getApplicationStatus(applicationId)
+
+Get application status
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.getApplicationStatus(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listApplicationCommit
+
+> CommitResponseList listApplicationCommit(applicationId, opts)
+
+List last commits
+
+Returns list of the last 100 commits made on the repository linked to the application
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+let opts = {
+  'startId': "startId_example", // String | Starting point after which to return results
+  'gitCommitId': "gitCommitId_example" // String | Git Commit ID
+};
+apiInstance.listApplicationCommit(applicationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+ **startId** | **String**| Starting point after which to return results | [optional] 
+ **gitCommitId** | **String**| Git Commit ID | [optional] 
+
+### Return type
+
+[**CommitResponseList**](CommitResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listApplicationContributor
+
+> UserResponseList listApplicationContributor(applicationId)
+
+List contributors
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.listApplicationContributor(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**UserResponseList**](UserResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listApplicationLinks
+
+> LinkResponseList listApplicationLinks(applicationId)
+
+List all URLs of the application
+
+This will return all the custom domains and Qovery autogenerated domain for the given application
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.listApplicationLinks(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**LinkResponseList**](LinkResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listApplicationTag
+
+> TagResponseList listApplicationTag(applicationId)
+
+List tags
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.listApplicationTag(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**TagResponseList**](TagResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+

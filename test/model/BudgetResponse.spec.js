@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.BudgetResponse();
+    instance = new QoveryApi.BudgetResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('BudgetResponse', function() {
     it('should create an instance of BudgetResponse', function() {
       // uncomment below and update the code to test BudgetResponse
-      //var instance = new BetaQoveryApi.BudgetResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.BudgetResponse);
+      //var instance = new QoveryApi.BudgetResponse();
+      //expect(instance).to.be.a(QoveryApi.BudgetResponse);
     });
 
     it('should have the property totalInCents (base name: "total_in_cents")', function() {
       // uncomment below and update the code to test the property totalInCents
-      //var instance = new BetaQoveryApi.BudgetResponse();
+      //var instance = new QoveryApi.BudgetResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property total (base name: "total")', function() {
       // uncomment below and update the code to test the property total
-      //var instance = new BetaQoveryApi.BudgetResponse();
+      //var instance = new QoveryApi.BudgetResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property currencyCode (base name: "currency_code")', function() {
       // uncomment below and update the code to test the property currencyCode
-      //var instance = new BetaQoveryApi.BudgetResponse();
+      //var instance = new QoveryApi.BudgetResponse();
       //expect(instance).to.be();
     });
 

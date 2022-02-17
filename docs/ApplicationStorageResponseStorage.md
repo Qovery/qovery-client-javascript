@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationStorageResponseStorage
+# QoveryApi.ApplicationStorageResponseStorage
 
 ## Properties
 

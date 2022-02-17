@@ -1,4 +1,4 @@
-# BetaQoveryApi.BackupPaginatedResponseList
+# QoveryApi.BackupPaginatedResponseList
 
 ## Properties
 

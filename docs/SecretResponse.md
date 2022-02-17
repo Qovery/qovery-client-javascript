@@ -1,4 +1,4 @@
-# BetaQoveryApi.SecretResponse
+# QoveryApi.SecretResponse
 
 ## Properties
 

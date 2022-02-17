@@ -1,4 +1,4 @@
-# BetaQoveryApi.CostResponse
+# QoveryApi.CostResponse
 
 ## Properties
 

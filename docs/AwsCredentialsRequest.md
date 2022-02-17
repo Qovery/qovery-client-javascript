@@ -1,4 +1,4 @@
-# BetaQoveryApi.AwsCredentialsRequest
+# QoveryApi.AwsCredentialsRequest
 
 ## Properties
 

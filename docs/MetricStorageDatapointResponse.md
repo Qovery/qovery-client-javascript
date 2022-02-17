@@ -1,4 +1,4 @@
-# BetaQoveryApi.MetricStorageDatapointResponse
+# QoveryApi.MetricStorageDatapointResponse
 
 ## Properties
 

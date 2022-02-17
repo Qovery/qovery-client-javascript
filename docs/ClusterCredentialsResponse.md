@@ -1,4 +1,4 @@
-# BetaQoveryApi.ClusterCredentialsResponse
+# QoveryApi.ClusterCredentialsResponse
 
 ## Properties
 

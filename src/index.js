@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -284,14 +284,14 @@ import ReferralRewardsApi from './api/ReferralRewardsApi';
 
 
 /**
-* __Qovery_is_the_fastest_way_to_deploy_your_full_stack_apps_on_any_Cloud_provider____The_API_is_in_Beta_and_still_in_progress__Some_endpoints_are_not_available_yet_.<br>
+* __Qovery_is_the_fastest_way_to_deploy_your_full_stack_apps_on_any_Cloud_provider____The_API_is_stable_and_still_in_development_.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var BetaQoveryApi = require('index'); // See note below*.
-* var xxxSvc = new BetaQoveryApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new BetaQoveryApi.Yyy(); // Construct a model instance.
+* var QoveryApi = require('index'); // See note below*.
+* var xxxSvc = new QoveryApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new QoveryApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -303,8 +303,8 @@ import ReferralRewardsApi from './api/ReferralRewardsApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new BetaQoveryApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new BetaQoveryApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new QoveryApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new QoveryApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

@@ -1,4 +1,4 @@
-# BetaQoveryApi.CloneRequest
+# QoveryApi.CloneRequest
 
 ## Properties
 

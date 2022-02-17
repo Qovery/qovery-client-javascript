@@ -1,4 +1,4 @@
-# BetaQoveryApi.ReferenceObject
+# QoveryApi.ReferenceObject
 
 ## Properties
 

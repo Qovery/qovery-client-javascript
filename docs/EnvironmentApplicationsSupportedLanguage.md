@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentApplicationsSupportedLanguage
+# QoveryApi.EnvironmentApplicationsSupportedLanguage
 
 ## Properties
 

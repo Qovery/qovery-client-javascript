@@ -1,4 +1,4 @@
-# BetaQoveryApi.LinkResponse
+# QoveryApi.LinkResponse
 
 ## Properties
 

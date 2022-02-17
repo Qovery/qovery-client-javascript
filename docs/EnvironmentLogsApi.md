@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentLogsApi
+# QoveryApi.EnvironmentLogsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -19,13 +19,13 @@ This returns the last 1000 environment deployment logs.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentLogsApi();
+let apiInstance = new QoveryApi.EnvironmentLogsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.listEnvironmentLog(environmentId, (error, data, response) => {
   if (error) {

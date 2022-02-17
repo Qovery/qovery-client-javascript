@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.StorageDiskResponse();
+    instance = new QoveryApi.StorageDiskResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,55 +50,55 @@
   describe('StorageDiskResponse', function() {
     it('should create an instance of StorageDiskResponse', function() {
       // uncomment below and update the code to test StorageDiskResponse
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.StorageDiskResponse);
+      //var instance = new QoveryApi.StorageDiskResponse();
+      //expect(instance).to.be.a(QoveryApi.StorageDiskResponse);
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property storageId (base name: "storage_id")', function() {
       // uncomment below and update the code to test the property storageId
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property requestedInGb (base name: "requested_in_gb")', function() {
       // uncomment below and update the code to test the property requestedInGb
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property consumedInGb (base name: "consumed_in_gb")', function() {
       // uncomment below and update the code to test the property consumedInGb
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property consumedInPercent (base name: "consumed_in_percent")', function() {
       // uncomment below and update the code to test the property consumedInPercent
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property warningThresholdInPercent (base name: "warning_threshold_in_percent")', function() {
       // uncomment below and update the code to test the property warningThresholdInPercent
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property alertThresholdInPercent (base name: "alert_threshold_in_percent")', function() {
       // uncomment below and update the code to test the property alertThresholdInPercent
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new BetaQoveryApi.StorageDiskResponse();
+      //var instance = new QoveryApi.StorageDiskResponse();
       //expect(instance).to.be();
     });
 

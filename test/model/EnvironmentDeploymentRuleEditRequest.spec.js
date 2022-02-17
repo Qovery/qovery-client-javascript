@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+    instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('EnvironmentDeploymentRuleEditRequest', function() {
     it('should create an instance of EnvironmentDeploymentRuleEditRequest', function() {
       // uncomment below and update the code to test EnvironmentDeploymentRuleEditRequest
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.EnvironmentDeploymentRuleEditRequest);
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentDeploymentRuleEditRequest);
     });
 
     it('should have the property autoDeploy (base name: "auto_deploy")', function() {
       // uncomment below and update the code to test the property autoDeploy
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property autoDelete (base name: "auto_delete")', function() {
       // uncomment below and update the code to test the property autoDelete
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property autoStop (base name: "auto_stop")', function() {
       // uncomment below and update the code to test the property autoStop
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property timezone (base name: "timezone")', function() {
       // uncomment below and update the code to test the property timezone
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property startTime (base name: "start_time")', function() {
       // uncomment below and update the code to test the property startTime
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property stopTime (base name: "stop_time")', function() {
       // uncomment below and update the code to test the property stopTime
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property weekdays (base name: "weekdays")', function() {
       // uncomment below and update the code to test the property weekdays
-      //var instance = new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest();
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
       //expect(instance).to.be();
     });
 

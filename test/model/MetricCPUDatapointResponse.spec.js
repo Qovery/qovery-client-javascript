@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.MetricCPUDatapointResponse();
+    instance = new QoveryApi.MetricCPUDatapointResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('MetricCPUDatapointResponse', function() {
     it('should create an instance of MetricCPUDatapointResponse', function() {
       // uncomment below and update the code to test MetricCPUDatapointResponse
-      //var instance = new BetaQoveryApi.MetricCPUDatapointResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.MetricCPUDatapointResponse);
+      //var instance = new QoveryApi.MetricCPUDatapointResponse();
+      //expect(instance).to.be.a(QoveryApi.MetricCPUDatapointResponse);
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.MetricCPUDatapointResponse();
+      //var instance = new QoveryApi.MetricCPUDatapointResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property requestedInNumber (base name: "requested_in_number")', function() {
       // uncomment below and update the code to test the property requestedInNumber
-      //var instance = new BetaQoveryApi.MetricCPUDatapointResponse();
+      //var instance = new QoveryApi.MetricCPUDatapointResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property consumedInNumber (base name: "consumed_in_number")', function() {
       // uncomment below and update the code to test the property consumedInNumber
-      //var instance = new BetaQoveryApi.MetricCPUDatapointResponse();
+      //var instance = new QoveryApi.MetricCPUDatapointResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property consumedInPercent (base name: "consumed_in_percent")', function() {
       // uncomment below and update the code to test the property consumedInPercent
-      //var instance = new BetaQoveryApi.MetricCPUDatapointResponse();
+      //var instance = new QoveryApi.MetricCPUDatapointResponse();
       //expect(instance).to.be();
     });
 

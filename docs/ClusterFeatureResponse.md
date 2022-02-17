@@ -1,4 +1,4 @@
-# BetaQoveryApi.ClusterFeatureResponse
+# QoveryApi.ClusterFeatureResponse
 
 ## Properties
 

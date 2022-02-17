@@ -1,4 +1,4 @@
-# BetaQoveryApi.AccountInfoApi
+# QoveryApi.AccountInfoApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -17,13 +17,13 @@ Get Account information
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.AccountInfoApi();
+let apiInstance = new QoveryApi.AccountInfoApi();
 apiInstance.getAccountInformation((error, data, response) => {
   if (error) {
     console.error(error);

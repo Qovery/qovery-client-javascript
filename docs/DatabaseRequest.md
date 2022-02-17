@@ -1,4 +1,4 @@
-# BetaQoveryApi.DatabaseRequest
+# QoveryApi.DatabaseRequest
 
 ## Properties
 

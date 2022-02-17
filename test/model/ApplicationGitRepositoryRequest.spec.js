@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ApplicationGitRepositoryRequest();
+    instance = new QoveryApi.ApplicationGitRepositoryRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('ApplicationGitRepositoryRequest', function() {
     it('should create an instance of ApplicationGitRepositoryRequest', function() {
       // uncomment below and update the code to test ApplicationGitRepositoryRequest
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.ApplicationGitRepositoryRequest);
+      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
+      //expect(instance).to.be.a(QoveryApi.ApplicationGitRepositoryRequest);
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryRequest();
+      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property branch (base name: "branch")', function() {
       // uncomment below and update the code to test the property branch
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryRequest();
+      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property rootPath (base name: "root_path")', function() {
       // uncomment below and update the code to test the property rootPath
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryRequest();
+      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
       //expect(instance).to.be();
     });
 

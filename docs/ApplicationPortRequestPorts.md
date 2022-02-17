@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationPortRequestPorts
+# QoveryApi.ApplicationPortRequestPorts
 
 ## Properties
 

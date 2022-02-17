@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
+    instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('DeploymentHistoryEnvironmentPaginatedResponseList', function() {
     it('should create an instance of DeploymentHistoryEnvironmentPaginatedResponseList', function() {
       // uncomment below and update the code to test DeploymentHistoryEnvironmentPaginatedResponseList
-      //var instance = new BetaQoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
-      //expect(instance).to.be.a(BetaQoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList);
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
+      //expect(instance).to.be.a(QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new BetaQoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
       //expect(instance).to.be();
     });
 
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
-      //var instance = new BetaQoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
       //expect(instance).to.be();
     });
 
     it('should have the property pageSize (base name: "page_size")', function() {
       // uncomment below and update the code to test the property pageSize
-      //var instance = new BetaQoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
       //expect(instance).to.be();
     });
 

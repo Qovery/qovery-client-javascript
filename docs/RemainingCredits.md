@@ -1,4 +1,4 @@
-# BetaQoveryApi.RemainingCredits
+# QoveryApi.RemainingCredits
 
 ## Properties
 

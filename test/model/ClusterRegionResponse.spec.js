@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ClusterRegionResponse();
+    instance = new QoveryApi.ClusterRegionResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ClusterRegionResponse', function() {
     it('should create an instance of ClusterRegionResponse', function() {
       // uncomment below and update the code to test ClusterRegionResponse
-      //var instance = new BetaQoveryApi.ClusterRegionResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.ClusterRegionResponse);
+      //var instance = new QoveryApi.ClusterRegionResponse();
+      //expect(instance).to.be.a(QoveryApi.ClusterRegionResponse);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.ClusterRegionResponse();
+      //var instance = new QoveryApi.ClusterRegionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property countryCode (base name: "country_code")', function() {
       // uncomment below and update the code to test the property countryCode
-      //var instance = new BetaQoveryApi.ClusterRegionResponse();
+      //var instance = new QoveryApi.ClusterRegionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instance = new BetaQoveryApi.ClusterRegionResponse();
+      //var instance = new QoveryApi.ClusterRegionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instance = new BetaQoveryApi.ClusterRegionResponse();
+      //var instance = new QoveryApi.ClusterRegionResponse();
       //expect(instance).to.be();
     });
 

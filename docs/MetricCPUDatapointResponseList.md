@@ -1,4 +1,4 @@
-# BetaQoveryApi.MetricCPUDatapointResponseList
+# QoveryApi.MetricCPUDatapointResponseList
 
 ## Properties
 

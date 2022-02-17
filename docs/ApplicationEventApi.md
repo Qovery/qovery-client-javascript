@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationEventApi
+# QoveryApi.ApplicationEventApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -19,13 +19,13 @@ By default it returns the 20 last results. The response is paginated. In order t
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEventApi();
+let apiInstance = new QoveryApi.ApplicationEventApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
   'startId': "startId_example" // String | Starting point after which to return results

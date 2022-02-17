@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.DatabaseEditRequest();
+    instance = new QoveryApi.DatabaseEditRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('DatabaseEditRequest', function() {
     it('should create an instance of DatabaseEditRequest', function() {
       // uncomment below and update the code to test DatabaseEditRequest
-      //var instance = new BetaQoveryApi.DatabaseEditRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.DatabaseEditRequest);
+      //var instance = new QoveryApi.DatabaseEditRequest();
+      //expect(instance).to.be.a(QoveryApi.DatabaseEditRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.DatabaseEditRequest();
+      //var instance = new QoveryApi.DatabaseEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new BetaQoveryApi.DatabaseEditRequest();
+      //var instance = new QoveryApi.DatabaseEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property accessibility (base name: "accessibility")', function() {
       // uncomment below and update the code to test the property accessibility
-      //var instance = new BetaQoveryApi.DatabaseEditRequest();
+      //var instance = new QoveryApi.DatabaseEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property cpu (base name: "cpu")', function() {
       // uncomment below and update the code to test the property cpu
-      //var instance = new BetaQoveryApi.DatabaseEditRequest();
+      //var instance = new QoveryApi.DatabaseEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property memory (base name: "memory")', function() {
       // uncomment below and update the code to test the property memory
-      //var instance = new BetaQoveryApi.DatabaseEditRequest();
+      //var instance = new QoveryApi.DatabaseEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property storage (base name: "storage")', function() {
       // uncomment below and update the code to test the property storage
-      //var instance = new BetaQoveryApi.DatabaseEditRequest();
+      //var instance = new QoveryApi.DatabaseEditRequest();
       //expect(instance).to.be();
     });
 

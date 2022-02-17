@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationMainCallsApi
+# QoveryApi.ApplicationMainCallsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -26,16 +26,16 @@ Add application tag
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
-  'tagRequest': new BetaQoveryApi.TagRequest() // TagRequest | 
+  'tagRequest': new QoveryApi.TagRequest() // TagRequest | 
 };
 apiInstance.createApplicationTag(applicationId, opts, (error, data, response) => {
   if (error) {
@@ -79,13 +79,13 @@ To delete the application you must have the admin permission
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.deleteApplication(applicationId, (error, data, response) => {
   if (error) {
@@ -126,13 +126,13 @@ Delete application tag
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let tagId = "tagId_example"; // String | Tag ID
 apiInstance.deleteApplicationTag(applicationId, tagId, (error, data, response) => {
@@ -177,16 +177,16 @@ Edit application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
-  'applicationEditRequest': new BetaQoveryApi.ApplicationEditRequest() // ApplicationEditRequest | 
+  'applicationEditRequest': new QoveryApi.ApplicationEditRequest() // ApplicationEditRequest | 
 };
 apiInstance.editApplication(applicationId, opts, (error, data, response) => {
   if (error) {
@@ -228,13 +228,13 @@ Get application by ID
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.getApplication(applicationId, (error, data, response) => {
   if (error) {
@@ -275,13 +275,13 @@ Get application status
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.getApplicationStatus(applicationId, (error, data, response) => {
   if (error) {
@@ -324,13 +324,13 @@ Returns list of the last 100 commits made on the repository linked to the applic
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
   'startId': "startId_example", // String | Starting point after which to return results
@@ -377,13 +377,13 @@ List contributors
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationContributor(applicationId, (error, data, response) => {
   if (error) {
@@ -426,13 +426,13 @@ This will return all the custom domains and Qovery autogenerated domain for the 
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationLinks(applicationId, (error, data, response) => {
   if (error) {
@@ -473,13 +473,13 @@ List tags
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMainCallsApi();
+let apiInstance = new QoveryApi.ApplicationMainCallsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationTag(applicationId, (error, data, response) => {
   if (error) {

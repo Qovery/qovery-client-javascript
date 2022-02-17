@@ -1,4 +1,4 @@
-# BetaQoveryApi.DatabaseApplicationApi
+# QoveryApi.DatabaseApplicationApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -18,13 +18,13 @@ List applications using the database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseApplicationApi();
+let apiInstance = new QoveryApi.DatabaseApplicationApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.listDatabaseApplication(databaseId, (error, data, response) => {
   if (error) {
@@ -65,13 +65,13 @@ Remove an application from this database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseApplicationApi();
+let apiInstance = new QoveryApi.DatabaseApplicationApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let targetApplicationId = "targetApplicationId_example"; // String | Target application ID
 apiInstance.removeApplicationFromDatabase(databaseId, targetApplicationId, (error, data, response) => {

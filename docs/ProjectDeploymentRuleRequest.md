@@ -1,4 +1,4 @@
-# BetaQoveryApi.ProjectDeploymentRuleRequest
+# QoveryApi.ProjectDeploymentRuleRequest
 
 ## Properties
 

@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.DatabaseResponse();
+    instance = new QoveryApi.DatabaseResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,109 +50,109 @@
   describe('DatabaseResponse', function() {
     it('should create an instance of DatabaseResponse', function() {
       // uncomment below and update the code to test DatabaseResponse
-      //var instance = new BetaQoveryApi.DatabaseResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.DatabaseResponse);
+      //var instance = new QoveryApi.DatabaseResponse();
+      //expect(instance).to.be.a(QoveryApi.DatabaseResponse);
     });
 
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property host (base name: "host")', function() {
       // uncomment below and update the code to test the property host
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property port (base name: "port")', function() {
       // uncomment below and update the code to test the property port
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property maximumCpu (base name: "maximum_cpu")', function() {
       // uncomment below and update the code to test the property maximumCpu
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property maximumMemory (base name: "maximum_memory")', function() {
       // uncomment below and update the code to test the property maximumMemory
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property diskEncrypted (base name: "disk_encrypted")', function() {
       // uncomment below and update the code to test the property diskEncrypted
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property mode (base name: "mode")', function() {
       // uncomment below and update the code to test the property mode
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property accessibility (base name: "accessibility")', function() {
       // uncomment below and update the code to test the property accessibility
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property cpu (base name: "cpu")', function() {
       // uncomment below and update the code to test the property cpu
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property memory (base name: "memory")', function() {
       // uncomment below and update the code to test the property memory
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property storage (base name: "storage")', function() {
       // uncomment below and update the code to test the property storage
-      //var instance = new BetaQoveryApi.DatabaseResponse();
+      //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentDeploymentRuleApi
+# QoveryApi.EnvironmentDeploymentRuleApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -18,17 +18,17 @@ Edit an environment deployment rule
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentDeploymentRuleApi();
+let apiInstance = new QoveryApi.EnvironmentDeploymentRuleApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let deploymentRuleId = "deploymentRuleId_example"; // String | Deployment Rule ID
 let opts = {
-  'environmentDeploymentRuleEditRequest': new BetaQoveryApi.EnvironmentDeploymentRuleEditRequest() // EnvironmentDeploymentRuleEditRequest | 
+  'environmentDeploymentRuleEditRequest': new QoveryApi.EnvironmentDeploymentRuleEditRequest() // EnvironmentDeploymentRuleEditRequest | 
 };
 apiInstance.editEnvironmentDeploymentRule(environmentId, deploymentRuleId, opts, (error, data, response) => {
   if (error) {
@@ -71,13 +71,13 @@ Get environment deployment rule
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentDeploymentRuleApi();
+let apiInstance = new QoveryApi.EnvironmentDeploymentRuleApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.getEnvironmentDeploymentRule(environmentId, (error, data, response) => {
   if (error) {

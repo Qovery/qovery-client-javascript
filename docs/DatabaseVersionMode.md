@@ -1,4 +1,4 @@
-# BetaQoveryApi.DatabaseVersionMode
+# QoveryApi.DatabaseVersionMode
 
 ## Properties
 

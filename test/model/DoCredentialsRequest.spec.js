@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.DoCredentialsRequest();
+    instance = new QoveryApi.DoCredentialsRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('DoCredentialsRequest', function() {
     it('should create an instance of DoCredentialsRequest', function() {
       // uncomment below and update the code to test DoCredentialsRequest
-      //var instance = new BetaQoveryApi.DoCredentialsRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.DoCredentialsRequest);
+      //var instance = new QoveryApi.DoCredentialsRequest();
+      //expect(instance).to.be.a(QoveryApi.DoCredentialsRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.DoCredentialsRequest();
+      //var instance = new QoveryApi.DoCredentialsRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instance = new BetaQoveryApi.DoCredentialsRequest();
+      //var instance = new QoveryApi.DoCredentialsRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property spacesAccessId (base name: "spaces_access_id")', function() {
       // uncomment below and update the code to test the property spacesAccessId
-      //var instance = new BetaQoveryApi.DoCredentialsRequest();
+      //var instance = new QoveryApi.DoCredentialsRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property spacesSecretKey (base name: "spaces_secret_key")', function() {
       // uncomment below and update the code to test the property spacesSecretKey
-      //var instance = new BetaQoveryApi.DoCredentialsRequest();
+      //var instance = new QoveryApi.DoCredentialsRequest();
       //expect(instance).to.be();
     });
 

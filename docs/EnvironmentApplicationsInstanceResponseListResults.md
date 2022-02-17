@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentApplicationsInstanceResponseListResults
+# QoveryApi.EnvironmentApplicationsInstanceResponseListResults
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.VersionResponseList
+# QoveryApi.VersionResponseList
 
 ## Properties
 

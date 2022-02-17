@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentActionsApi
+# QoveryApi.EnvironmentActionsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -23,13 +23,13 @@ Cancel the current deployment of your environment.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentActionsApi();
+let apiInstance = new QoveryApi.EnvironmentActionsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.cancelEnvironmentDeployment(environmentId, (error, data, response) => {
   if (error) {
@@ -72,16 +72,16 @@ You must provide a name. This will create a new environment, with the same confi
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentActionsApi();
+let apiInstance = new QoveryApi.EnvironmentActionsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'cloneRequest': new BetaQoveryApi.CloneRequest() // CloneRequest | 
+  'cloneRequest': new QoveryApi.CloneRequest() // CloneRequest | 
 };
 apiInstance.cloneEnvironment(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -125,13 +125,13 @@ This will deploy all the services of this environment to their latest version.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentActionsApi();
+let apiInstance = new QoveryApi.EnvironmentActionsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.deployEnvironment(environmentId, (error, data, response) => {
   if (error) {
@@ -172,16 +172,16 @@ Restart environment
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentActionsApi();
+let apiInstance = new QoveryApi.EnvironmentActionsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'environmentRestartRequest': new BetaQoveryApi.EnvironmentRestartRequest() // EnvironmentRestartRequest | 
+  'environmentRestartRequest': new QoveryApi.EnvironmentRestartRequest() // EnvironmentRestartRequest | 
 };
 apiInstance.restartEnvironment(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -223,13 +223,13 @@ Stop environment
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentActionsApi();
+let apiInstance = new QoveryApi.EnvironmentActionsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.stopEnvironment(environmentId, (error, data, response) => {
   if (error) {

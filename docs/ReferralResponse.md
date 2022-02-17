@@ -1,4 +1,4 @@
-# BetaQoveryApi.ReferralResponse
+# QoveryApi.ReferralResponse
 
 ## Properties
 

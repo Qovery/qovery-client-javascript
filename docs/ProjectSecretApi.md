@@ -1,4 +1,4 @@
-# BetaQoveryApi.ProjectSecretApi
+# QoveryApi.ProjectSecretApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -24,16 +24,16 @@ Add a secret to the project
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectSecretApi();
+let apiInstance = new QoveryApi.ProjectSecretApi();
 let projectId = "projectId_example"; // String | Project ID
 let opts = {
-  'secretRequest': new BetaQoveryApi.SecretRequest() // SecretRequest | 
+  'secretRequest': new QoveryApi.SecretRequest() // SecretRequest | 
 };
 apiInstance.createProjectSecret(projectId, opts, (error, data, response) => {
   if (error) {
@@ -77,17 +77,17 @@ Create a secret alias at the project level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectSecretApi();
+let apiInstance = new QoveryApi.ProjectSecretApi();
 let projectId = "projectId_example"; // String | Project ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
-  'key': new BetaQoveryApi.Key() // Key | 
+  'key': new QoveryApi.Key() // Key | 
 };
 apiInstance.createProjectSecretAlias(projectId, secretId, opts, (error, data, response) => {
   if (error) {
@@ -132,17 +132,17 @@ Create a secret override at the project level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectSecretApi();
+let apiInstance = new QoveryApi.ProjectSecretApi();
 let projectId = "projectId_example"; // String | Project ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
-  'value': new BetaQoveryApi.Value() // Value | 
+  'value': new QoveryApi.Value() // Value | 
 };
 apiInstance.createProjectSecretOverride(projectId, secretId, opts, (error, data, response) => {
   if (error) {
@@ -187,13 +187,13 @@ Delete a secret from a project
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectSecretApi();
+let apiInstance = new QoveryApi.ProjectSecretApi();
 let projectId = "projectId_example"; // String | Project ID
 let secretId = "secretId_example"; // String | Secret ID
 apiInstance.deleteProjectSecret(projectId, secretId, (error, data, response) => {
@@ -238,16 +238,16 @@ Edit a secret belonging to the project
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectSecretApi();
+let apiInstance = new QoveryApi.ProjectSecretApi();
 let projectId = "projectId_example"; // String | Project ID
 let secretId = "secretId_example"; // String | Secret ID
-let secretEditRequest = new BetaQoveryApi.SecretEditRequest(); // SecretEditRequest | 
+let secretEditRequest = new QoveryApi.SecretEditRequest(); // SecretEditRequest | 
 apiInstance.editProjectSecret(projectId, secretId, secretEditRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -289,13 +289,13 @@ List project secrets
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectSecretApi();
+let apiInstance = new QoveryApi.ProjectSecretApi();
 let projectId = "projectId_example"; // String | Project ID
 apiInstance.listProjectSecrets(projectId, (error, data, response) => {
   if (error) {

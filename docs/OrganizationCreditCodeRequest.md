@@ -1,4 +1,4 @@
-# BetaQoveryApi.OrganizationCreditCodeRequest
+# QoveryApi.OrganizationCreditCodeRequest
 
 ## Properties
 

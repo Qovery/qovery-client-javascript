@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationMetricsApi
+# QoveryApi.ApplicationMetricsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -24,13 +24,13 @@ List currently running instances of the application with their CPU and RAM metri
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.getApplicationCurrentInstance(applicationId, (error, data, response) => {
   if (error) {
@@ -73,13 +73,13 @@ Returns min, max, and running number of instances of the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.getApplicationCurrentScale(applicationId, (error, data, response) => {
   if (error) {
@@ -120,13 +120,13 @@ List current storage disk usage
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.getApplicationCurrentStorageDisk(applicationId, (error, data, response) => {
   if (error) {
@@ -167,13 +167,13 @@ Get CPU consumption metric over time for the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getApplicationMetricCpu(applicationId, lastSeconds, (error, data, response) => {
@@ -218,13 +218,13 @@ The value returned corresponds to the 95th centile
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getApplicationMetricHealthCheck(applicationId, lastSeconds, (error, data, response) => {
@@ -267,13 +267,13 @@ Get Memory consumption metric over time for the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getApplicationMetricMemory(applicationId, lastSeconds, (error, data, response) => {
@@ -318,13 +318,13 @@ Get application restart message and timestamp.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getApplicationMetricRestart(applicationId, lastSeconds, (error, data, response) => {
@@ -367,13 +367,13 @@ Get Storage consumption metric over time for the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationMetricsApi();
+let apiInstance = new QoveryApi.ApplicationMetricsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getApplicationMetricStorage(applicationId, lastSeconds, (error, data, response) => {

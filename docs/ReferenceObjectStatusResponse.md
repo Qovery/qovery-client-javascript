@@ -1,4 +1,4 @@
-# BetaQoveryApi.ReferenceObjectStatusResponse
+# QoveryApi.ReferenceObjectStatusResponse
 
 ## Properties
 

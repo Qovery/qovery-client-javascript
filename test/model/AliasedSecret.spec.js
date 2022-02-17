@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.AliasedSecret();
+    instance = new QoveryApi.AliasedSecret();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('AliasedSecret', function() {
     it('should create an instance of AliasedSecret', function() {
       // uncomment below and update the code to test AliasedSecret
-      //var instance = new BetaQoveryApi.AliasedSecret();
-      //expect(instance).to.be.a(BetaQoveryApi.AliasedSecret);
+      //var instance = new QoveryApi.AliasedSecret();
+      //expect(instance).to.be.a(QoveryApi.AliasedSecret);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.AliasedSecret();
+      //var instance = new QoveryApi.AliasedSecret();
       //expect(instance).to.be();
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instance = new BetaQoveryApi.AliasedSecret();
+      //var instance = new QoveryApi.AliasedSecret();
       //expect(instance).to.be();
     });
 
     it('should have the property scope (base name: "scope")', function() {
       // uncomment below and update the code to test the property scope
-      //var instance = new BetaQoveryApi.AliasedSecret();
+      //var instance = new QoveryApi.AliasedSecret();
       //expect(instance).to.be();
     });
 

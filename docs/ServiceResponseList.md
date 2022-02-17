@@ -1,4 +1,4 @@
-# BetaQoveryApi.ServiceResponseList
+# QoveryApi.ServiceResponseList
 
 ## Properties
 

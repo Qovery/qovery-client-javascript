@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.AccountInfoResponse();
+    instance = new QoveryApi.AccountInfoResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('AccountInfoResponse', function() {
     it('should create an instance of AccountInfoResponse', function() {
       // uncomment below and update the code to test AccountInfoResponse
-      //var instance = new BetaQoveryApi.AccountInfoResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.AccountInfoResponse);
+      //var instance = new QoveryApi.AccountInfoResponse();
+      //expect(instance).to.be.a(QoveryApi.AccountInfoResponse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.AccountInfoResponse();
+      //var instance = new QoveryApi.AccountInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.AccountInfoResponse();
+      //var instance = new QoveryApi.AccountInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property nickname (base name: "nickname")', function() {
       // uncomment below and update the code to test the property nickname
-      //var instance = new BetaQoveryApi.AccountInfoResponse();
+      //var instance = new QoveryApi.AccountInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instance = new BetaQoveryApi.AccountInfoResponse();
+      //var instance = new QoveryApi.AccountInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instance = new BetaQoveryApi.AccountInfoResponse();
+      //var instance = new QoveryApi.AccountInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property profilePictureUrl (base name: "profile_picture_url")', function() {
       // uncomment below and update the code to test the property profilePictureUrl
-      //var instance = new BetaQoveryApi.AccountInfoResponse();
+      //var instance = new QoveryApi.AccountInfoResponse();
       //expect(instance).to.be();
     });
 

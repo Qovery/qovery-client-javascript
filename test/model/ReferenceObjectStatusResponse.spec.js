@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ReferenceObjectStatusResponse();
+    instance = new QoveryApi.ReferenceObjectStatusResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ReferenceObjectStatusResponse', function() {
     it('should create an instance of ReferenceObjectStatusResponse', function() {
       // uncomment below and update the code to test ReferenceObjectStatusResponse
-      //var instance = new BetaQoveryApi.ReferenceObjectStatusResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.ReferenceObjectStatusResponse);
+      //var instance = new QoveryApi.ReferenceObjectStatusResponse();
+      //expect(instance).to.be.a(QoveryApi.ReferenceObjectStatusResponse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.ReferenceObjectStatusResponse();
+      //var instance = new QoveryApi.ReferenceObjectStatusResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instance = new BetaQoveryApi.ReferenceObjectStatusResponse();
+      //var instance = new QoveryApi.ReferenceObjectStatusResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instance = new BetaQoveryApi.ReferenceObjectStatusResponse();
+      //var instance = new QoveryApi.ReferenceObjectStatusResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property serviceDeploymentStatus (base name: "service_deployment_status")', function() {
       // uncomment below and update the code to test the property serviceDeploymentStatus
-      //var instance = new BetaQoveryApi.ReferenceObjectStatusResponse();
+      //var instance = new QoveryApi.ReferenceObjectStatusResponse();
       //expect(instance).to.be();
     });
 

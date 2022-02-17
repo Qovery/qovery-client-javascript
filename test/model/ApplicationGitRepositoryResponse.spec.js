@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+    instance = new QoveryApi.ApplicationGitRepositoryResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,73 +50,73 @@
   describe('ApplicationGitRepositoryResponse', function() {
     it('should create an instance of ApplicationGitRepositoryResponse', function() {
       // uncomment below and update the code to test ApplicationGitRepositoryResponse
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.ApplicationGitRepositoryResponse);
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
+      //expect(instance).to.be.a(QoveryApi.ApplicationGitRepositoryResponse);
     });
 
     it('should have the property hasAccess (base name: "has_access")', function() {
       // uncomment below and update the code to test the property hasAccess
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property provider (base name: "provider")', function() {
       // uncomment below and update the code to test the property provider
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property owner (base name: "owner")', function() {
       // uncomment below and update the code to test the property owner
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property branch (base name: "branch")', function() {
       // uncomment below and update the code to test the property branch
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property rootPath (base name: "root_path")', function() {
       // uncomment below and update the code to test the property rootPath
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property deployedCommitId (base name: "deployed_commit_id")', function() {
       // uncomment below and update the code to test the property deployedCommitId
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property deployedCommitDate (base name: "deployed_commit_date")', function() {
       // uncomment below and update the code to test the property deployedCommitDate
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property deployedCommitContributor (base name: "deployed_commit_contributor")', function() {
       // uncomment below and update the code to test the property deployedCommitContributor
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property deployedCommitTag (base name: "deployed_commit_tag")', function() {
       // uncomment below and update the code to test the property deployedCommitTag
-      //var instance = new BetaQoveryApi.ApplicationGitRepositoryResponse();
+      //var instance = new QoveryApi.ApplicationGitRepositoryResponse();
       //expect(instance).to.be();
     });
 

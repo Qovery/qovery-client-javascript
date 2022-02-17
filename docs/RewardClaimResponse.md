@@ -1,4 +1,4 @@
-# BetaQoveryApi.RewardClaimResponse
+# QoveryApi.RewardClaimResponse
 
 ## Properties
 

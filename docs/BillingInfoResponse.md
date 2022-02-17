@@ -1,4 +1,4 @@
-# BetaQoveryApi.BillingInfoResponse
+# QoveryApi.BillingInfoResponse
 
 ## Properties
 

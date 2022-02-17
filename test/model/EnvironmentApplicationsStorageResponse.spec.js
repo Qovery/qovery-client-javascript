@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.EnvironmentApplicationsStorageResponse();
+    instance = new QoveryApi.EnvironmentApplicationsStorageResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('EnvironmentApplicationsStorageResponse', function() {
     it('should create an instance of EnvironmentApplicationsStorageResponse', function() {
       // uncomment below and update the code to test EnvironmentApplicationsStorageResponse
-      //var instance = new BetaQoveryApi.EnvironmentApplicationsStorageResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.EnvironmentApplicationsStorageResponse);
+      //var instance = new QoveryApi.EnvironmentApplicationsStorageResponse();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentApplicationsStorageResponse);
     });
 
     it('should have the property application (base name: "application")', function() {
       // uncomment below and update the code to test the property application
-      //var instance = new BetaQoveryApi.EnvironmentApplicationsStorageResponse();
+      //var instance = new QoveryApi.EnvironmentApplicationsStorageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property disks (base name: "disks")', function() {
       // uncomment below and update the code to test the property disks
-      //var instance = new BetaQoveryApi.EnvironmentApplicationsStorageResponse();
+      //var instance = new QoveryApi.EnvironmentApplicationsStorageResponse();
       //expect(instance).to.be();
     });
 

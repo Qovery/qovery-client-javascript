@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationSecretApi
+# QoveryApi.ApplicationSecretApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -24,16 +24,16 @@ Add a secret to the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationSecretApi();
+let apiInstance = new QoveryApi.ApplicationSecretApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
-  'secretRequest': new BetaQoveryApi.SecretRequest() // SecretRequest | 
+  'secretRequest': new QoveryApi.SecretRequest() // SecretRequest | 
 };
 apiInstance.createApplicationSecret(applicationId, opts, (error, data, response) => {
   if (error) {
@@ -77,17 +77,17 @@ Create a secret alias at the application level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationSecretApi();
+let apiInstance = new QoveryApi.ApplicationSecretApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
-  'key': new BetaQoveryApi.Key() // Key | 
+  'key': new QoveryApi.Key() // Key | 
 };
 apiInstance.createApplicationSecretAlias(applicationId, secretId, opts, (error, data, response) => {
   if (error) {
@@ -132,17 +132,17 @@ Create a secret override at the application level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationSecretApi();
+let apiInstance = new QoveryApi.ApplicationSecretApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
-  'value': new BetaQoveryApi.Value() // Value | 
+  'value': new QoveryApi.Value() // Value | 
 };
 apiInstance.createApplicationSecretOverride(applicationId, secretId, opts, (error, data, response) => {
   if (error) {
@@ -187,13 +187,13 @@ Delete a secret from an application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationSecretApi();
+let apiInstance = new QoveryApi.ApplicationSecretApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let secretId = "secretId_example"; // String | Secret ID
 apiInstance.deleteApplicationSecret(applicationId, secretId, (error, data, response) => {
@@ -238,16 +238,16 @@ Edit a secret belonging to the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationSecretApi();
+let apiInstance = new QoveryApi.ApplicationSecretApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let secretId = "secretId_example"; // String | Secret ID
-let secretEditRequest = new BetaQoveryApi.SecretEditRequest(); // SecretEditRequest | 
+let secretEditRequest = new QoveryApi.SecretEditRequest(); // SecretEditRequest | 
 apiInstance.editApplicationSecret(applicationId, secretId, secretEditRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -291,13 +291,13 @@ Secrets are like environment variables, but they are secured and can&#39;t be re
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationSecretApi();
+let apiInstance = new QoveryApi.ApplicationSecretApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationSecrets(applicationId, (error, data, response) => {
   if (error) {

@@ -1,4 +1,4 @@
-# BetaQoveryApi.UnexpectedError
+# QoveryApi.UnexpectedError
 
 ## Properties
 

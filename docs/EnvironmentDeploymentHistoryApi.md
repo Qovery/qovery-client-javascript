@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentDeploymentHistoryApi
+# QoveryApi.EnvironmentDeploymentHistoryApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -19,13 +19,13 @@ List previous and current environment deployments with the status deployment and
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentDeploymentHistoryApi();
+let apiInstance = new QoveryApi.EnvironmentDeploymentHistoryApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
   'startId': "startId_example" // String | Starting point after which to return results

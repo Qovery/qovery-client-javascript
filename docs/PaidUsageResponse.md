@@ -1,4 +1,4 @@
-# BetaQoveryApi.PaidUsageResponse
+# QoveryApi.PaidUsageResponse
 
 ## Properties
 

@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.AwsCredentialsRequest();
+    instance = new QoveryApi.AwsCredentialsRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('AwsCredentialsRequest', function() {
     it('should create an instance of AwsCredentialsRequest', function() {
       // uncomment below and update the code to test AwsCredentialsRequest
-      //var instance = new BetaQoveryApi.AwsCredentialsRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.AwsCredentialsRequest);
+      //var instance = new QoveryApi.AwsCredentialsRequest();
+      //expect(instance).to.be.a(QoveryApi.AwsCredentialsRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.AwsCredentialsRequest();
+      //var instance = new QoveryApi.AwsCredentialsRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property accessKeyId (base name: "access_key_id")', function() {
       // uncomment below and update the code to test the property accessKeyId
-      //var instance = new BetaQoveryApi.AwsCredentialsRequest();
+      //var instance = new QoveryApi.AwsCredentialsRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property secretAccessKey (base name: "secret_access_key")', function() {
       // uncomment below and update the code to test the property secretAccessKey
-      //var instance = new BetaQoveryApi.AwsCredentialsRequest();
+      //var instance = new QoveryApi.AwsCredentialsRequest();
       //expect(instance).to.be();
     });
 

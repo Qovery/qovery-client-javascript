@@ -1,4 +1,4 @@
-# BetaQoveryApi.DatabaseMainCallsApi
+# QoveryApi.DatabaseMainCallsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -25,13 +25,13 @@ To delete a database you must have the admin permission
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMainCallsApi();
+let apiInstance = new QoveryApi.DatabaseMainCallsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.deleteDatabase(databaseId, (error, data, response) => {
   if (error) {
@@ -74,16 +74,16 @@ To edit a database  you must have the admin permission
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMainCallsApi();
+let apiInstance = new QoveryApi.DatabaseMainCallsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let opts = {
-  'databaseEditRequest': new BetaQoveryApi.DatabaseEditRequest() // DatabaseEditRequest | 
+  'databaseEditRequest': new QoveryApi.DatabaseEditRequest() // DatabaseEditRequest | 
 };
 apiInstance.editDatabase(databaseId, opts, (error, data, response) => {
   if (error) {
@@ -125,16 +125,16 @@ Edit database  master credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMainCallsApi();
+let apiInstance = new QoveryApi.DatabaseMainCallsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let opts = {
-  'credentialsRequest': new BetaQoveryApi.CredentialsRequest() // CredentialsRequest | 
+  'credentialsRequest': new QoveryApi.CredentialsRequest() // CredentialsRequest | 
 };
 apiInstance.editDatabaseCredentials(databaseId, opts, (error, data, response) => {
   if (error) {
@@ -176,13 +176,13 @@ Get database by ID
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMainCallsApi();
+let apiInstance = new QoveryApi.DatabaseMainCallsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.getDatabase(databaseId, (error, data, response) => {
   if (error) {
@@ -223,13 +223,13 @@ Get master credentials of the database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMainCallsApi();
+let apiInstance = new QoveryApi.DatabaseMainCallsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.getDatabaseMasterCredentials(databaseId, (error, data, response) => {
   if (error) {
@@ -270,13 +270,13 @@ Get database status
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMainCallsApi();
+let apiInstance = new QoveryApi.DatabaseMainCallsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.getDatabaseStatus(databaseId, (error, data, response) => {
   if (error) {
@@ -317,13 +317,13 @@ List eligible versions for the database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMainCallsApi();
+let apiInstance = new QoveryApi.DatabaseMainCallsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.listDatabaseVersion(databaseId, (error, data, response) => {
   if (error) {

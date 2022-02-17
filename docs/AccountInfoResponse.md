@@ -1,4 +1,4 @@
-# BetaQoveryApi.AccountInfoResponse
+# QoveryApi.AccountInfoResponse
 
 ## Properties
 

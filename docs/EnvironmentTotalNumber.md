@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentTotalNumber
+# QoveryApi.EnvironmentTotalNumber
 
 ## Properties
 

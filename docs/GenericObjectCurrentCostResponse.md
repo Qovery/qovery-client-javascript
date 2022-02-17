@@ -1,4 +1,4 @@
-# BetaQoveryApi.GenericObjectCurrentCostResponse
+# QoveryApi.GenericObjectCurrentCostResponse
 
 ## Properties
 

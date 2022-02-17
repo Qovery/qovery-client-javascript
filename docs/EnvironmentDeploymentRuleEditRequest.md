@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentDeploymentRuleEditRequest
+# QoveryApi.EnvironmentDeploymentRuleEditRequest
 
 ## Properties
 

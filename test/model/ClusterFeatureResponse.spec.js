@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ClusterFeatureResponse();
+    instance = new QoveryApi.ClusterFeatureResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('ClusterFeatureResponse', function() {
     it('should create an instance of ClusterFeatureResponse', function() {
       // uncomment below and update the code to test ClusterFeatureResponse
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.ClusterFeatureResponse);
+      //var instance = new QoveryApi.ClusterFeatureResponse();
+      //expect(instance).to.be.a(QoveryApi.ClusterFeatureResponse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property costPerMonthInCents (base name: "cost_per_month_in_cents")', function() {
       // uncomment below and update the code to test the property costPerMonthInCents
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property costPerMonth (base name: "cost_per_month")', function() {
       // uncomment below and update the code to test the property costPerMonth
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property currencyCode (base name: "currency_code")', function() {
       // uncomment below and update the code to test the property currencyCode
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property valueType (base name: "value_type")', function() {
       // uncomment below and update the code to test the property valueType
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property isValueUpdatable (base name: "is_value_updatable")', function() {
       // uncomment below and update the code to test the property isValueUpdatable
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property acceptedValues (base name: "accepted_values")', function() {
       // uncomment below and update the code to test the property acceptedValues
-      //var instance = new BetaQoveryApi.ClusterFeatureResponse();
+      //var instance = new QoveryApi.ClusterFeatureResponse();
       //expect(instance).to.be();
     });
 

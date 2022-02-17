@@ -1,4 +1,4 @@
-# BetaQoveryApi.MetricRestartResponse
+# QoveryApi.MetricRestartResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationDependencyRequest
+# QoveryApi.ApplicationDependencyRequest
 
 ## Properties
 

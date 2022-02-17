@@ -1,4 +1,4 @@
-# BetaQoveryApi.DeploymentHistoryResponseList
+# QoveryApi.DeploymentHistoryResponseList
 
 ## Properties
 

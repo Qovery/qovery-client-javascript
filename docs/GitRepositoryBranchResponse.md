@@ -1,4 +1,4 @@
-# BetaQoveryApi.GitRepositoryBranchResponse
+# QoveryApi.GitRepositoryBranchResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.CredentialsRequest
+# QoveryApi.CredentialsRequest
 
 ## Properties
 

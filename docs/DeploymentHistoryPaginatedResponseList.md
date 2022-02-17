@@ -1,4 +1,4 @@
-# BetaQoveryApi.DeploymentHistoryPaginatedResponseList
+# QoveryApi.DeploymentHistoryPaginatedResponseList
 
 ## Properties
 

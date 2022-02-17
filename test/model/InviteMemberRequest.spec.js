@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.InviteMemberRequest();
+    instance = new QoveryApi.InviteMemberRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('InviteMemberRequest', function() {
     it('should create an instance of InviteMemberRequest', function() {
       // uncomment below and update the code to test InviteMemberRequest
-      //var instance = new BetaQoveryApi.InviteMemberRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.InviteMemberRequest);
+      //var instance = new QoveryApi.InviteMemberRequest();
+      //expect(instance).to.be.a(QoveryApi.InviteMemberRequest);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instance = new BetaQoveryApi.InviteMemberRequest();
+      //var instance = new QoveryApi.InviteMemberRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property role (base name: "role")', function() {
       // uncomment below and update the code to test the property role
-      //var instance = new BetaQoveryApi.InviteMemberRequest();
+      //var instance = new QoveryApi.InviteMemberRequest();
       //expect(instance).to.be();
     });
 

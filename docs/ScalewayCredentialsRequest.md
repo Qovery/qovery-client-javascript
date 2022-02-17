@@ -1,4 +1,4 @@
-# BetaQoveryApi.ScalewayCredentialsRequest
+# QoveryApi.ScalewayCredentialsRequest
 
 ## Properties
 

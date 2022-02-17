@@ -1,4 +1,4 @@
-# BetaQoveryApi.TransferOwnershipRequest
+# QoveryApi.TransferOwnershipRequest
 
 ## Properties
 

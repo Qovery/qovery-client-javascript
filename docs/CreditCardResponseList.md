@@ -1,4 +1,4 @@
-# BetaQoveryApi.CreditCardResponseList
+# QoveryApi.CreditCardResponseList
 
 ## Properties
 

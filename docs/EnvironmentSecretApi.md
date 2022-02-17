@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentSecretApi
+# QoveryApi.EnvironmentSecretApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -24,16 +24,16 @@ Add a secret to the environment
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
+let apiInstance = new QoveryApi.EnvironmentSecretApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'secretRequest': new BetaQoveryApi.SecretRequest() // SecretRequest | 
+  'secretRequest': new QoveryApi.SecretRequest() // SecretRequest | 
 };
 apiInstance.createEnvironmentSecret(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -77,17 +77,17 @@ Create a secret alias at the environment level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
+let apiInstance = new QoveryApi.EnvironmentSecretApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
-  'key': new BetaQoveryApi.Key() // Key | 
+  'key': new QoveryApi.Key() // Key | 
 };
 apiInstance.createEnvironmentSecretAlias(environmentId, secretId, opts, (error, data, response) => {
   if (error) {
@@ -132,17 +132,17 @@ Create a secret override at the environment level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
+let apiInstance = new QoveryApi.EnvironmentSecretApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
-  'value': new BetaQoveryApi.Value() // Value | 
+  'value': new QoveryApi.Value() // Value | 
 };
 apiInstance.createEnvironmentSecretOverride(environmentId, secretId, opts, (error, data, response) => {
   if (error) {
@@ -187,13 +187,13 @@ Delete a secret from the environment
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
+let apiInstance = new QoveryApi.EnvironmentSecretApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let secretId = "secretId_example"; // String | Secret ID
 apiInstance.deleteEnvironmentSecret(environmentId, secretId, (error, data, response) => {
@@ -238,16 +238,16 @@ Edit a secret belonging to the environment
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
+let apiInstance = new QoveryApi.EnvironmentSecretApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let secretId = "secretId_example"; // String | Secret ID
-let secretEditRequest = new BetaQoveryApi.SecretEditRequest(); // SecretEditRequest | 
+let secretEditRequest = new QoveryApi.SecretEditRequest(); // SecretEditRequest | 
 apiInstance.editEnvironmentSecret(environmentId, secretId, secretEditRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -289,13 +289,13 @@ List environment secrets
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
+let apiInstance = new QoveryApi.EnvironmentSecretApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.listEnvironmentSecrets(environmentId, (error, data, response) => {
   if (error) {

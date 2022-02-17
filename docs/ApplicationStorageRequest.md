@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationStorageRequest
+# QoveryApi.ApplicationStorageRequest
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentLogPaginatedResponseList
+# QoveryApi.EnvironmentLogPaginatedResponseList
 
 ## Properties
 

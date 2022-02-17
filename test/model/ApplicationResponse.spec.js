@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ApplicationResponse();
+    instance = new QoveryApi.ApplicationResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,127 +50,127 @@
   describe('ApplicationResponse', function() {
     it('should create an instance of ApplicationResponse', function() {
       // uncomment below and update the code to test ApplicationResponse
-      //var instance = new BetaQoveryApi.ApplicationResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.ApplicationResponse);
+      //var instance = new QoveryApi.ApplicationResponse();
+      //expect(instance).to.be.a(QoveryApi.ApplicationResponse);
     });
 
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property gitRepository (base name: "git_repository")', function() {
       // uncomment below and update the code to test the property gitRepository
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property maximumCpu (base name: "maximum_cpu")', function() {
       // uncomment below and update the code to test the property maximumCpu
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property maximumMemory (base name: "maximum_memory")', function() {
       // uncomment below and update the code to test the property maximumMemory
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property buildMode (base name: "build_mode")', function() {
       // uncomment below and update the code to test the property buildMode
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property dockerfilePath (base name: "dockerfile_path")', function() {
       // uncomment below and update the code to test the property dockerfilePath
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property buildpackLanguage (base name: "buildpack_language")', function() {
       // uncomment below and update the code to test the property buildpackLanguage
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property cpu (base name: "cpu")', function() {
       // uncomment below and update the code to test the property cpu
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property memory (base name: "memory")', function() {
       // uncomment below and update the code to test the property memory
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property minRunningInstances (base name: "min_running_instances")', function() {
       // uncomment below and update the code to test the property minRunningInstances
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property maxRunningInstances (base name: "max_running_instances")', function() {
       // uncomment below and update the code to test the property maxRunningInstances
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property healthcheck (base name: "healthcheck")', function() {
       // uncomment below and update the code to test the property healthcheck
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property autoPreview (base name: "auto_preview")', function() {
       // uncomment below and update the code to test the property autoPreview
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property storage (base name: "storage")', function() {
       // uncomment below and update the code to test the property storage
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property ports (base name: "ports")', function() {
       // uncomment below and update the code to test the property ports
-      //var instance = new BetaQoveryApi.ApplicationResponse();
+      //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });
 

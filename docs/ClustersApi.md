@@ -1,4 +1,4 @@
-# BetaQoveryApi.ClustersApi
+# QoveryApi.ClustersApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -30,16 +30,16 @@ Create a cluster
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'clusterRequest': new BetaQoveryApi.ClusterRequest() // ClusterRequest | 
+  'clusterRequest': new QoveryApi.ClusterRequest() // ClusterRequest | 
 };
 apiInstance.createCluster(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -81,13 +81,13 @@ Delete a cluster
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.deleteCluster(organizationId, clusterId, (error, data, response) => {
@@ -132,13 +132,13 @@ allows to deploy a cluster
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.deployCluster(organizationId, clusterId, (error, data, response) => {
@@ -181,17 +181,17 @@ Edit a cluster
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 let opts = {
-  'clusterRequest': new BetaQoveryApi.ClusterRequest() // ClusterRequest | 
+  'clusterRequest': new QoveryApi.ClusterRequest() // ClusterRequest | 
 };
 apiInstance.editCluster(organizationId, clusterId, opts, (error, data, response) => {
   if (error) {
@@ -236,17 +236,17 @@ Edit routing table by returning updated table.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 let opts = {
-  'clusterRoutingTableRequest': new BetaQoveryApi.ClusterRoutingTableRequest() // ClusterRoutingTableRequest | 
+  'clusterRoutingTableRequest': new QoveryApi.ClusterRoutingTableRequest() // ClusterRoutingTableRequest | 
 };
 apiInstance.editRoutingTable(organizationId, clusterId, opts, (error, data, response) => {
   if (error) {
@@ -289,13 +289,13 @@ Know if a cluster is ready to be deployed or not
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.getClusterReadinessStatus(organizationId, clusterId, (error, data, response) => {
@@ -338,13 +338,13 @@ Get cluster status
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.getClusterStatus(organizationId, clusterId, (error, data, response) => {
@@ -387,13 +387,13 @@ Get cluster cloud provider info and credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.getOrganizationCloudProviderInfo(organizationId, clusterId, (error, data, response) => {
@@ -438,13 +438,13 @@ Returns a list of clusters with only their id and status.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganizationClusterStatus(organizationId, (error, data, response) => {
   if (error) {
@@ -487,13 +487,13 @@ Retrieve network routing table where each line corresponds to a route between a 
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.getRoutingTable(organizationId, clusterId, (error, data, response) => {
@@ -536,13 +536,13 @@ List organization clusters
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.listOrganizationCluster(organizationId, (error, data, response) => {
   if (error) {
@@ -583,17 +583,17 @@ Specify cluster cloud provider info and credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 let opts = {
-  'clusterCloudProviderInfoRequest': new BetaQoveryApi.ClusterCloudProviderInfoRequest() // ClusterCloudProviderInfoRequest | 
+  'clusterCloudProviderInfoRequest': new QoveryApi.ClusterCloudProviderInfoRequest() // ClusterCloudProviderInfoRequest | 
 };
 apiInstance.specifyClusterCloudProviderInfo(organizationId, clusterId, opts, (error, data, response) => {
   if (error) {
@@ -638,13 +638,13 @@ Cluster stop has been requester.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.stopCluster(organizationId, clusterId, (error, data, response) => {
@@ -689,13 +689,13 @@ allows to update cluster version
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ClustersApi();
+let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.updateCluster(organizationId, clusterId, (error, data, response) => {

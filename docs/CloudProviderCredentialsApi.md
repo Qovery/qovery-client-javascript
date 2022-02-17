@@ -1,4 +1,4 @@
-# BetaQoveryApi.CloudProviderCredentialsApi
+# QoveryApi.CloudProviderCredentialsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -28,16 +28,16 @@ Create AWS credentials set
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'awsCredentialsRequest': new BetaQoveryApi.AwsCredentialsRequest() // AwsCredentialsRequest | 
+  'awsCredentialsRequest': new QoveryApi.AwsCredentialsRequest() // AwsCredentialsRequest | 
 };
 apiInstance.createAWSCredentials(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -79,16 +79,16 @@ Create Digital Ocean credentials set
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'doCredentialsRequest': new BetaQoveryApi.DoCredentialsRequest() // DoCredentialsRequest | 
+  'doCredentialsRequest': new QoveryApi.DoCredentialsRequest() // DoCredentialsRequest | 
 };
 apiInstance.createDOCredentials(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -130,16 +130,16 @@ Create Scaleway credentials set
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'scalewayCredentialsRequest': new BetaQoveryApi.ScalewayCredentialsRequest() // ScalewayCredentialsRequest | 
+  'scalewayCredentialsRequest': new QoveryApi.ScalewayCredentialsRequest() // ScalewayCredentialsRequest | 
 };
 apiInstance.createScalewayCredentials(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -181,13 +181,13 @@ Delete a set of AWS credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let credentialsId = "credentialsId_example"; // String | Credentials ID
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.deleteAWSCredentials(credentialsId, organizationId, (error, data, response) => {
@@ -230,13 +230,13 @@ Delete a set of Digital Ocean credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let credentialsId = "credentialsId_example"; // String | Credentials ID
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.deleteDOCredentials(credentialsId, organizationId, (error, data, response) => {
@@ -279,13 +279,13 @@ Delete a set of Scaleway credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let credentialsId = "credentialsId_example"; // String | Credentials ID
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.deleteScalewayCredentials(credentialsId, organizationId, (error, data, response) => {
@@ -328,17 +328,17 @@ Edit a set of AWS credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let credentialsId = "credentialsId_example"; // String | Credentials ID
 let opts = {
-  'awsCredentialsRequest': new BetaQoveryApi.AwsCredentialsRequest() // AwsCredentialsRequest | 
+  'awsCredentialsRequest': new QoveryApi.AwsCredentialsRequest() // AwsCredentialsRequest | 
 };
 apiInstance.editAWSCredentials(organizationId, credentialsId, opts, (error, data, response) => {
   if (error) {
@@ -381,17 +381,17 @@ Edit a set of Digital Ocean credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let credentialsId = "credentialsId_example"; // String | Credentials ID
 let opts = {
-  'doCredentialsRequest': new BetaQoveryApi.DoCredentialsRequest() // DoCredentialsRequest | 
+  'doCredentialsRequest': new QoveryApi.DoCredentialsRequest() // DoCredentialsRequest | 
 };
 apiInstance.editDOCredentials(organizationId, credentialsId, opts, (error, data, response) => {
   if (error) {
@@ -434,17 +434,17 @@ Edit a set of Scaleway credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let credentialsId = "credentialsId_example"; // String | Credentials ID
 let opts = {
-  'scalewayCredentialsRequest': new BetaQoveryApi.ScalewayCredentialsRequest() // ScalewayCredentialsRequest | 
+  'scalewayCredentialsRequest': new QoveryApi.ScalewayCredentialsRequest() // ScalewayCredentialsRequest | 
 };
 apiInstance.editScalewayCredentials(organizationId, credentialsId, opts, (error, data, response) => {
   if (error) {
@@ -487,13 +487,13 @@ List AWS credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.listAWSCredentials(organizationId, (error, data, response) => {
   if (error) {
@@ -534,13 +534,13 @@ List DO credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.listDOCredentials(organizationId, (error, data, response) => {
   if (error) {
@@ -581,13 +581,13 @@ List Scaleway credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.CloudProviderCredentialsApi();
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.listScalewayCredentials(organizationId, (error, data, response) => {
   if (error) {

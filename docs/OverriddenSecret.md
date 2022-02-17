@@ -1,4 +1,4 @@
-# BetaQoveryApi.OverriddenSecret
+# QoveryApi.OverriddenSecret
 
 ## Properties
 

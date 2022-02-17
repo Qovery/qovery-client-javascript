@@ -1,4 +1,4 @@
-# BetaQoveryApi.Healthcheck
+# QoveryApi.Healthcheck
 
 ## Properties
 

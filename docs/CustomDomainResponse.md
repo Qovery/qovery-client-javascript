@@ -1,4 +1,4 @@
-# BetaQoveryApi.CustomDomainResponse
+# QoveryApi.CustomDomainResponse
 
 ## Properties
 

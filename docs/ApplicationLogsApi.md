@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationLogsApi
+# QoveryApi.ApplicationLogsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -19,13 +19,13 @@ This will list the last 1000 logs of the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationLogsApi();
+let apiInstance = new QoveryApi.ApplicationLogsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationLog(applicationId, (error, data, response) => {
   if (error) {

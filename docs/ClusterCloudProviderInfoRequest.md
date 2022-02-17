@@ -1,4 +1,4 @@
-# BetaQoveryApi.ClusterCloudProviderInfoRequest
+# QoveryApi.ClusterCloudProviderInfoRequest
 
 ## Properties
 

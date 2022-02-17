@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ApplicationStorageRequestStorage();
+    instance = new QoveryApi.ApplicationStorageRequestStorage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('ApplicationStorageRequestStorage', function() {
     it('should create an instance of ApplicationStorageRequestStorage', function() {
       // uncomment below and update the code to test ApplicationStorageRequestStorage
-      //var instance = new BetaQoveryApi.ApplicationStorageRequestStorage();
-      //expect(instance).to.be.a(BetaQoveryApi.ApplicationStorageRequestStorage);
+      //var instance = new QoveryApi.ApplicationStorageRequestStorage();
+      //expect(instance).to.be.a(QoveryApi.ApplicationStorageRequestStorage);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new BetaQoveryApi.ApplicationStorageRequestStorage();
+      //var instance = new QoveryApi.ApplicationStorageRequestStorage();
       //expect(instance).to.be();
     });
 
     it('should have the property size (base name: "size")', function() {
       // uncomment below and update the code to test the property size
-      //var instance = new BetaQoveryApi.ApplicationStorageRequestStorage();
+      //var instance = new QoveryApi.ApplicationStorageRequestStorage();
       //expect(instance).to.be();
     });
 
     it('should have the property mountPoint (base name: "mount_point")', function() {
       // uncomment below and update the code to test the property mountPoint
-      //var instance = new BetaQoveryApi.ApplicationStorageRequestStorage();
+      //var instance = new QoveryApi.ApplicationStorageRequestStorage();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.MembersApi
+# QoveryApi.MembersApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -23,13 +23,13 @@ Remove an invited member
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.MembersApi();
+let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.deleteInviteMember(organizationId, (error, data, response) => {
   if (error) {
@@ -70,13 +70,13 @@ Remove a member
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.MembersApi();
+let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let userId = "userId_example"; // String | User ID
 apiInstance.deleteMember(organizationId, userId, (error, data, response) => {
@@ -119,13 +119,13 @@ Get invited members
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.MembersApi();
+let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganizationInvitedMembers(organizationId, (error, data, response) => {
   if (error) {
@@ -166,13 +166,13 @@ Get organization members
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.MembersApi();
+let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganizationMembers(organizationId, (error, data, response) => {
   if (error) {
@@ -213,13 +213,13 @@ Accept Invite in the organization
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.MembersApi();
+let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let inviteId = "inviteId_example"; // String | Invite ID
 apiInstance.postAcceptInviteMember(organizationId, inviteId, (error, data, response) => {
@@ -262,16 +262,16 @@ Invite someone in the organization
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.MembersApi();
+let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'inviteMemberRequest': new BetaQoveryApi.InviteMemberRequest() // InviteMemberRequest | 
+  'inviteMemberRequest': new QoveryApi.InviteMemberRequest() // InviteMemberRequest | 
 };
 apiInstance.postInviteMember(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -313,16 +313,16 @@ Transfer organization ownership to another user
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.MembersApi();
+let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'transferOwnershipRequest': new BetaQoveryApi.TransferOwnershipRequest() // TransferOwnershipRequest | 
+  'transferOwnershipRequest': new QoveryApi.TransferOwnershipRequest() // TransferOwnershipRequest | 
 };
 apiInstance.postOrganizationTransferOwnership(organizationId, opts, (error, data, response) => {
   if (error) {

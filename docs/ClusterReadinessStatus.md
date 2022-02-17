@@ -1,4 +1,4 @@
-# BetaQoveryApi.ClusterReadinessStatus
+# QoveryApi.ClusterReadinessStatus
 
 ## Properties
 

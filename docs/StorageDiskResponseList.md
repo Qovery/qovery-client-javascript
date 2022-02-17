@@ -1,4 +1,4 @@
-# BetaQoveryApi.StorageDiskResponseList
+# QoveryApi.StorageDiskResponseList
 
 ## Properties
 

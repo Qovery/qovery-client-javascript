@@ -1,4 +1,4 @@
-# BetaQoveryApi.MetricGenericResponseList
+# QoveryApi.MetricGenericResponseList
 
 ## Properties
 

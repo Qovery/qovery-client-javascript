@@ -1,4 +1,4 @@
-# BetaQoveryApi.OrganizationEditRequest
+# QoveryApi.OrganizationEditRequest
 
 ## Properties
 

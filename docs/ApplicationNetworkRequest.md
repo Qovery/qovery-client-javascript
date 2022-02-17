@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationNetworkRequest
+# QoveryApi.ApplicationNetworkRequest
 
 ## Properties
 

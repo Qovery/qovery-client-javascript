@@ -1,4 +1,4 @@
-# BetaQoveryApi.LogicalDatabaseApi
+# QoveryApi.LogicalDatabaseApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -26,16 +26,16 @@ If you don&#39;t specify credentials, Qovery will autogenerate them.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let opts = {
-  'logicalDatabaseRequest': new BetaQoveryApi.LogicalDatabaseRequest() // LogicalDatabaseRequest | 
+  'logicalDatabaseRequest': new QoveryApi.LogicalDatabaseRequest() // LogicalDatabaseRequest | 
 };
 apiInstance.createLogicalDatabaseOnDatabase(databaseId, opts, (error, data, response) => {
   if (error) {
@@ -79,13 +79,13 @@ To delete a logical database you must have the project user permission
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let logicalDatabaseId = "logicalDatabaseId_example"; // String | Logical Database ID
 apiInstance.deleteLogicalDatabase(logicalDatabaseId, (error, data, response) => {
   if (error) {
@@ -126,16 +126,16 @@ Edit a logical database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let logicalDatabaseId = "logicalDatabaseId_example"; // String | Logical Database ID
 let opts = {
-  'logicalDatabaseRequest': new BetaQoveryApi.LogicalDatabaseRequest() // LogicalDatabaseRequest | 
+  'logicalDatabaseRequest': new QoveryApi.LogicalDatabaseRequest() // LogicalDatabaseRequest | 
 };
 apiInstance.editLogicalDatabase(logicalDatabaseId, opts, (error, data, response) => {
   if (error) {
@@ -177,16 +177,16 @@ Edit logical database credentials
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let logicalDatabaseId = "logicalDatabaseId_example"; // String | Logical Database ID
 let opts = {
-  'credentialsRequest': new BetaQoveryApi.CredentialsRequest() // CredentialsRequest | 
+  'credentialsRequest': new QoveryApi.CredentialsRequest() // CredentialsRequest | 
 };
 apiInstance.editLogicalDatabaseCredentials(logicalDatabaseId, opts, (error, data, response) => {
   if (error) {
@@ -230,13 +230,13 @@ A logical database exists inside a database. The database is a service that exis
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let logicalDatabaseId = "logicalDatabaseId_example"; // String | Logical Database ID
 apiInstance.getLogicalDatabase(logicalDatabaseId, (error, data, response) => {
   if (error) {
@@ -277,13 +277,13 @@ Get  credentials of the logical database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let logicalDatabaseId = "logicalDatabaseId_example"; // String | Logical Database ID
 apiInstance.getLogicalDatabaseCredentials(logicalDatabaseId, (error, data, response) => {
   if (error) {
@@ -324,13 +324,13 @@ List linked applications
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let logicalDatabaseId = "logicalDatabaseId_example"; // String | Logical Database ID
 apiInstance.listLogicalDatabaseApplication(logicalDatabaseId, (error, data, response) => {
   if (error) {
@@ -373,13 +373,13 @@ A logical database exists inside a database. The database is a service that exis
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.LogicalDatabaseApi();
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.listLogicalDatabaseDatabase(databaseId, (error, data, response) => {
   if (error) {

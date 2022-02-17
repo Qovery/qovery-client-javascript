@@ -1,4 +1,4 @@
-# BetaQoveryApi.EventPaginatedResponseList
+# QoveryApi.EventPaginatedResponseList
 
 ## Properties
 

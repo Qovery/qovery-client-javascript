@@ -1,4 +1,4 @@
-# BetaQoveryApi.MetricStorageResponse
+# QoveryApi.MetricStorageResponse
 
 ## Properties
 

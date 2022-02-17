@@ -1,4 +1,4 @@
-# BetaQoveryApi.Status
+# QoveryApi.Status
 
 ## Properties
 

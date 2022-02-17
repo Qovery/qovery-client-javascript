@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentApplicationsCurrentScaleResponseList
+# QoveryApi.EnvironmentApplicationsCurrentScaleResponseList
 
 ## Properties
 

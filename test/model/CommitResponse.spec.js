@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.CommitResponse();
+    instance = new QoveryApi.CommitResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('CommitResponse', function() {
     it('should create an instance of CommitResponse', function() {
       // uncomment below and update the code to test CommitResponse
-      //var instance = new BetaQoveryApi.CommitResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.CommitResponse);
+      //var instance = new QoveryApi.CommitResponse();
+      //expect(instance).to.be.a(QoveryApi.CommitResponse);
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.CommitResponse();
+      //var instance = new QoveryApi.CommitResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property gitCommitId (base name: "git_commit_id")', function() {
       // uncomment below and update the code to test the property gitCommitId
-      //var instance = new BetaQoveryApi.CommitResponse();
+      //var instance = new QoveryApi.CommitResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instance = new BetaQoveryApi.CommitResponse();
+      //var instance = new QoveryApi.CommitResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instance = new BetaQoveryApi.CommitResponse();
+      //var instance = new QoveryApi.CommitResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property authorName (base name: "author_name")', function() {
       // uncomment below and update the code to test the property authorName
-      //var instance = new BetaQoveryApi.CommitResponse();
+      //var instance = new QoveryApi.CommitResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property authorAvatarUrl (base name: "author_avatar_url")', function() {
       // uncomment below and update the code to test the property authorAvatarUrl
-      //var instance = new BetaQoveryApi.CommitResponse();
+      //var instance = new QoveryApi.CommitResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property commitPageUrl (base name: "commit_page_url")', function() {
       // uncomment below and update the code to test the property commitPageUrl
-      //var instance = new BetaQoveryApi.CommitResponse();
+      //var instance = new QoveryApi.CommitResponse();
       //expect(instance).to.be();
     });
 

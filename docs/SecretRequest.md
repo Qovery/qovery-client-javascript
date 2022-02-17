@@ -1,4 +1,4 @@
-# BetaQoveryApi.SecretRequest
+# QoveryApi.SecretRequest
 
 ## Properties
 

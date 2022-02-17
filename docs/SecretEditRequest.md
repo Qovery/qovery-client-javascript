@@ -1,4 +1,4 @@
-# BetaQoveryApi.SecretEditRequest
+# QoveryApi.SecretEditRequest
 
 ## Properties
 

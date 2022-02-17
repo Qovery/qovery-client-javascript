@@ -1,4 +1,4 @@
-# BetaQoveryApi.OrganizationMainCallsApi
+# QoveryApi.OrganizationMainCallsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -21,15 +21,15 @@ Create an organization
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.OrganizationMainCallsApi();
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
 let opts = {
-  'organizationRequest': new BetaQoveryApi.OrganizationRequest() // OrganizationRequest | 
+  'organizationRequest': new QoveryApi.OrganizationRequest() // OrganizationRequest | 
 };
 apiInstance.createOrganization(opts, (error, data, response) => {
   if (error) {
@@ -72,13 +72,13 @@ To delete an organization you must have the admin permission
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.OrganizationMainCallsApi();
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.deleteOrganization(organizationId, (error, data, response) => {
   if (error) {
@@ -121,16 +121,16 @@ To edit an organization you must have the admin permission
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.OrganizationMainCallsApi();
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'organizationEditRequest': new BetaQoveryApi.OrganizationEditRequest() // OrganizationEditRequest | 
+  'organizationEditRequest': new QoveryApi.OrganizationEditRequest() // OrganizationEditRequest | 
 };
 apiInstance.editOrganization(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -172,13 +172,13 @@ Get organization by ID
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.OrganizationMainCallsApi();
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganization(organizationId, (error, data, response) => {
   if (error) {
@@ -219,13 +219,13 @@ List user organizations
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.OrganizationMainCallsApi();
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
 apiInstance.listOrganization((error, data, response) => {
   if (error) {
     console.error(error);

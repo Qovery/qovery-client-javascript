@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentRestartRequest
+# QoveryApi.EnvironmentRestartRequest
 
 ## Properties
 

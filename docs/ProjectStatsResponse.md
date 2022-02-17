@@ -1,4 +1,4 @@
-# BetaQoveryApi.ProjectStatsResponse
+# QoveryApi.ProjectStatsResponse
 
 ## Properties
 

@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.CustomDomainRequest();
+    instance = new QoveryApi.CustomDomainRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('CustomDomainRequest', function() {
     it('should create an instance of CustomDomainRequest', function() {
       // uncomment below and update the code to test CustomDomainRequest
-      //var instance = new BetaQoveryApi.CustomDomainRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.CustomDomainRequest);
+      //var instance = new QoveryApi.CustomDomainRequest();
+      //expect(instance).to.be.a(QoveryApi.CustomDomainRequest);
     });
 
     it('should have the property domain (base name: "domain")', function() {
       // uncomment below and update the code to test the property domain
-      //var instance = new BetaQoveryApi.CustomDomainRequest();
+      //var instance = new QoveryApi.CustomDomainRequest();
       //expect(instance).to.be();
     });
 

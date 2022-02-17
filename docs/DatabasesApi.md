@@ -1,4 +1,4 @@
-# BetaQoveryApi.DatabasesApi
+# QoveryApi.DatabasesApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -21,16 +21,16 @@ Create a database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabasesApi();
+let apiInstance = new QoveryApi.DatabasesApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'databaseRequest': new BetaQoveryApi.DatabaseRequest() // DatabaseRequest | 
+  'databaseRequest': new QoveryApi.DatabaseRequest() // DatabaseRequest | 
 };
 apiInstance.createDatabase(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -74,13 +74,13 @@ Returns a list of databases with only their id and status.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabasesApi();
+let apiInstance = new QoveryApi.DatabasesApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.getEnvironmentDatabaseStatus(environmentId, (error, data, response) => {
   if (error) {
@@ -121,13 +121,13 @@ List environment databases
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabasesApi();
+let apiInstance = new QoveryApi.DatabasesApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.listDatabase(environmentId, (error, data, response) => {
   if (error) {
@@ -168,13 +168,13 @@ List eligible database types, versions and modes for the environment
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabasesApi();
+let apiInstance = new QoveryApi.DatabasesApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.listEnvironmentDatabaseConfig(environmentId, (error, data, response) => {
   if (error) {
@@ -215,13 +215,13 @@ List current metric consumption for each database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabasesApi();
+let apiInstance = new QoveryApi.DatabasesApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.listEnvironmentDatabaseCurrentMetric(environmentId, (error, data, response) => {
   if (error) {

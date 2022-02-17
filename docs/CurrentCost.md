@@ -1,4 +1,4 @@
-# BetaQoveryApi.CurrentCost
+# QoveryApi.CurrentCost
 
 ## Properties
 

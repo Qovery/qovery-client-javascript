@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.EnvironmentVariableResponse();
+    instance = new QoveryApi.EnvironmentVariableResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,61 +50,61 @@
   describe('EnvironmentVariableResponse', function() {
     it('should create an instance of EnvironmentVariableResponse', function() {
       // uncomment below and update the code to test EnvironmentVariableResponse
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.EnvironmentVariableResponse);
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentVariableResponse);
     });
 
     it('should have the property overriddenVariable (base name: "overridden_variable")', function() {
       // uncomment below and update the code to test the property overriddenVariable
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property aliasedVariable (base name: "aliased_variable")', function() {
       // uncomment below and update the code to test the property aliasedVariable
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property scope (base name: "scope")', function() {
       // uncomment below and update the code to test the property scope
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property serviceName (base name: "service_name")', function() {
       // uncomment below and update the code to test the property serviceName
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new BetaQoveryApi.EnvironmentVariableResponse();
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });
 

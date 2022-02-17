@@ -1,4 +1,4 @@
-# BetaQoveryApi.ProjectEnvironmentVariableApi
+# QoveryApi.ProjectEnvironmentVariableApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -24,16 +24,16 @@ Add an environment variable to the project
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ProjectEnvironmentVariableApi();
 let projectId = "projectId_example"; // String | Project ID
 let opts = {
-  'environmentVariableRequest': new BetaQoveryApi.EnvironmentVariableRequest() // EnvironmentVariableRequest | 
+  'environmentVariableRequest': new QoveryApi.EnvironmentVariableRequest() // EnvironmentVariableRequest | 
 };
 apiInstance.createProjectEnvironmentVariable(projectId, opts, (error, data, response) => {
   if (error) {
@@ -77,17 +77,17 @@ Create an environment variable alias at the project level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ProjectEnvironmentVariableApi();
 let projectId = "projectId_example"; // String | Project ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 let opts = {
-  'key': new BetaQoveryApi.Key() // Key | 
+  'key': new QoveryApi.Key() // Key | 
 };
 apiInstance.createProjectEnvironmentVariableAlias(projectId, environmentVariableId, opts, (error, data, response) => {
   if (error) {
@@ -132,17 +132,17 @@ Create an environment variable override at the project level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ProjectEnvironmentVariableApi();
 let projectId = "projectId_example"; // String | Project ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 let opts = {
-  'value': new BetaQoveryApi.Value() // Value | 
+  'value': new QoveryApi.Value() // Value | 
 };
 apiInstance.createProjectEnvironmentVariableOverride(projectId, environmentVariableId, opts, (error, data, response) => {
   if (error) {
@@ -187,13 +187,13 @@ Delete an environment variable from a project
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ProjectEnvironmentVariableApi();
 let projectId = "projectId_example"; // String | Project ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 apiInstance.deleteProjectEnvironmentVariable(projectId, environmentVariableId, (error, data, response) => {
@@ -238,16 +238,16 @@ Edit an environment variable belonging to the project
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ProjectEnvironmentVariableApi();
 let projectId = "projectId_example"; // String | Project ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
-let environmentVariableEditRequest = new BetaQoveryApi.EnvironmentVariableEditRequest(); // EnvironmentVariableEditRequest | 
+let environmentVariableEditRequest = new QoveryApi.EnvironmentVariableEditRequest(); // EnvironmentVariableEditRequest | 
 apiInstance.editProjectEnvironmentVariable(projectId, environmentVariableId, environmentVariableEditRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -289,13 +289,13 @@ List project environment variables
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ProjectEnvironmentVariableApi();
 let projectId = "projectId_example"; // String | Project ID
 apiInstance.listProjectEnvironmentVariable(projectId, (error, data, response) => {
   if (error) {

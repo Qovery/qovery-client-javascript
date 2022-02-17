@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationsApi
+# QoveryApi.ApplicationsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -23,16 +23,16 @@ Create an application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationsApi();
+let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'applicationRequest': new BetaQoveryApi.ApplicationRequest() // ApplicationRequest | 
+  'applicationRequest': new QoveryApi.ApplicationRequest() // ApplicationRequest | 
 };
 apiInstance.createApplication(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -74,13 +74,13 @@ List running instances with CPU and RAM usage for each application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationsApi();
+let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.getEnvironmentApplicationCurrentInstance(environmentId, (error, data, response) => {
   if (error) {
@@ -123,13 +123,13 @@ Returns min, max, and running number of instances for each application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationsApi();
+let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.getEnvironmentApplicationCurrentScale(environmentId, (error, data, response) => {
   if (error) {
@@ -170,13 +170,13 @@ List current storage disk usage for each application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationsApi();
+let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.getEnvironmentApplicationCurrentStorage(environmentId, (error, data, response) => {
   if (error) {
@@ -219,13 +219,13 @@ Returns a list of applications with only their id and status.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationsApi();
+let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.getEnvironmentApplicationStatus(environmentId, (error, data, response) => {
   if (error) {
@@ -268,13 +268,13 @@ Returns list of languages supported by Buildpacks.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationsApi();
+let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 apiInstance.getEnvironmentApplicationSupportedLanguages(environmentId, (error, data, response) => {
   if (error) {
@@ -315,13 +315,13 @@ List applications
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationsApi();
+let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
   'toUpdate': false // Boolean | return (or not) results that must be updated

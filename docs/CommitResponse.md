@@ -1,4 +1,4 @@
-# BetaQoveryApi.CommitResponse
+# QoveryApi.CommitResponse
 
 ## Properties
 

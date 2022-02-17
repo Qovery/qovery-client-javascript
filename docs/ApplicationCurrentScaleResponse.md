@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationCurrentScaleResponse
+# QoveryApi.ApplicationCurrentScaleResponse
 
 ## Properties
 

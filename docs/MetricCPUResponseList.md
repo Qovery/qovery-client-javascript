@@ -1,4 +1,4 @@
-# BetaQoveryApi.MetricCPUResponseList
+# QoveryApi.MetricCPUResponseList
 
 ## Properties
 

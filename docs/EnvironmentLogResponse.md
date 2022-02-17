@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentLogResponse
+# QoveryApi.EnvironmentLogResponse
 
 ## Properties
 

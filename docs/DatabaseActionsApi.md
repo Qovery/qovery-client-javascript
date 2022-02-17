@@ -1,4 +1,4 @@
-# BetaQoveryApi.DatabaseActionsApi
+# QoveryApi.DatabaseActionsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -19,13 +19,13 @@ Deploy database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseActionsApi();
+let apiInstance = new QoveryApi.DatabaseActionsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.deployDatabase(databaseId, (error, data, response) => {
   if (error) {
@@ -66,13 +66,13 @@ Retart database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseActionsApi();
+let apiInstance = new QoveryApi.DatabaseActionsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.restartDatabase(databaseId, (error, data, response) => {
   if (error) {
@@ -113,13 +113,13 @@ Stop database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseActionsApi();
+let apiInstance = new QoveryApi.DatabaseActionsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.stopDatabase(databaseId, (error, data, response) => {
   if (error) {

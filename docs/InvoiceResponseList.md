@@ -1,4 +1,4 @@
-# BetaQoveryApi.InvoiceResponseList
+# QoveryApi.InvoiceResponseList
 
 ## Properties
 

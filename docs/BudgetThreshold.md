@@ -1,4 +1,4 @@
-# BetaQoveryApi.BudgetThreshold
+# QoveryApi.BudgetThreshold
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.EventResponseList
+# QoveryApi.EventResponseList
 
 ## Properties
 

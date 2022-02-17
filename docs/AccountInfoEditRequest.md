@@ -1,4 +1,4 @@
-# BetaQoveryApi.AccountInfoEditRequest
+# QoveryApi.AccountInfoEditRequest
 
 ## Properties
 

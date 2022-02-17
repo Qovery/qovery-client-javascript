@@ -1,4 +1,4 @@
-# BetaQoveryApi.BillingEnd
+# QoveryApi.BillingEnd
 
 ## Properties
 

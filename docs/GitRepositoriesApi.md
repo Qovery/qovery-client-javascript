@@ -1,4 +1,4 @@
-# BetaQoveryApi.GitRepositoriesApi
+# QoveryApi.GitRepositoriesApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -23,13 +23,13 @@ Get bitbucket repositories of the connected user
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.GitRepositoriesApi();
+let apiInstance = new QoveryApi.GitRepositoriesApi();
 apiInstance.getBitbucketRepositories((error, data, response) => {
   if (error) {
     console.error(error);
@@ -66,13 +66,13 @@ Get bitbucket branches of the specified repository
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.GitRepositoriesApi();
+let apiInstance = new QoveryApi.GitRepositoriesApi();
 let opts = {
   'name': "name_example" // String | The name of the repository where to retrieve the branches
 };
@@ -115,13 +115,13 @@ Get git provider accounts
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.GitRepositoriesApi();
+let apiInstance = new QoveryApi.GitRepositoriesApi();
 apiInstance.getGitProviderAccount((error, data, response) => {
   if (error) {
     console.error(error);
@@ -158,13 +158,13 @@ Get github repositories of the connected user
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.GitRepositoriesApi();
+let apiInstance = new QoveryApi.GitRepositoriesApi();
 apiInstance.getGithubRepositories((error, data, response) => {
   if (error) {
     console.error(error);
@@ -201,13 +201,13 @@ Get github branches of the specified repository
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.GitRepositoriesApi();
+let apiInstance = new QoveryApi.GitRepositoriesApi();
 let opts = {
   'name': "name_example" // String | The name of the repository where to retrieve the branches
 };
@@ -250,13 +250,13 @@ Get gitlab repositories of the connected user
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.GitRepositoriesApi();
+let apiInstance = new QoveryApi.GitRepositoriesApi();
 apiInstance.getGitlabRepositories((error, data, response) => {
   if (error) {
     console.error(error);
@@ -293,13 +293,13 @@ Get gitlab branches of the specified repository
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.GitRepositoriesApi();
+let apiInstance = new QoveryApi.GitRepositoriesApi();
 let opts = {
   'name': "name_example" // String | The name of the repository to retrieve the branches
 };

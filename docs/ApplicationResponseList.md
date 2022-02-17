@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationResponseList
+# QoveryApi.ApplicationResponseList
 
 ## Properties
 

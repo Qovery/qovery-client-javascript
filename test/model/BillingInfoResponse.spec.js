@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.BillingInfoResponse();
+    instance = new QoveryApi.BillingInfoResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('BillingInfoResponse', function() {
     it('should create an instance of BillingInfoResponse', function() {
       // uncomment below and update the code to test BillingInfoResponse
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.BillingInfoResponse);
+      //var instance = new QoveryApi.BillingInfoResponse();
+      //expect(instance).to.be.a(QoveryApi.BillingInfoResponse);
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property zip (base name: "zip")', function() {
       // uncomment below and update the code to test the property zip
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property countryCode (base name: "country_code")', function() {
       // uncomment below and update the code to test the property countryCode
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property vatNumber (base name: "vat_number")', function() {
       // uncomment below and update the code to test the property vatNumber
-      //var instance = new BetaQoveryApi.BillingInfoResponse();
+      //var instance = new QoveryApi.BillingInfoResponse();
       //expect(instance).to.be();
     });
 

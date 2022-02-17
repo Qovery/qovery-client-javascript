@@ -1,4 +1,4 @@
-# BetaQoveryApi.ClusterCloudProviderInfoRequestCredentials
+# QoveryApi.ClusterCloudProviderInfoRequestCredentials
 
 ## Properties
 

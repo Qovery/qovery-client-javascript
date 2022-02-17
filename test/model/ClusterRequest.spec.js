@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ClusterRequest();
+    instance = new QoveryApi.ClusterRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('ClusterRequest', function() {
     it('should create an instance of ClusterRequest', function() {
       // uncomment below and update the code to test ClusterRequest
-      //var instance = new BetaQoveryApi.ClusterRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.ClusterRequest);
+      //var instance = new QoveryApi.ClusterRequest();
+      //expect(instance).to.be.a(QoveryApi.ClusterRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property cloudProvider (base name: "cloud_provider")', function() {
       // uncomment below and update the code to test the property cloudProvider
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property autoUpdate (base name: "auto_update")', function() {
       // uncomment below and update the code to test the property autoUpdate
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property cpu (base name: "cpu")', function() {
       // uncomment below and update the code to test the property cpu
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property memory (base name: "memory")', function() {
       // uncomment below and update the code to test the property memory
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property minRunningNodes (base name: "min_running_nodes")', function() {
       // uncomment below and update the code to test the property minRunningNodes
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property maxRunningNodes (base name: "max_running_nodes")', function() {
       // uncomment below and update the code to test the property maxRunningNodes
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property features (base name: "features")', function() {
       // uncomment below and update the code to test the property features
-      //var instance = new BetaQoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterRequest();
       //expect(instance).to.be();
     });
 

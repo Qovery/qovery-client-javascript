@@ -1,4 +1,4 @@
-# BetaQoveryApi.PaginationDataResponse
+# QoveryApi.PaginationDataResponse
 
 ## Properties
 

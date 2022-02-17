@@ -1,4 +1,4 @@
-# BetaQoveryApi.VariableImportResponseSuccessfulImportedVariables
+# QoveryApi.VariableImportResponseSuccessfulImportedVariables
 
 ## Properties
 

@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.EnvironmentApplicationsInstanceResponseList();
+    instance = new QoveryApi.EnvironmentApplicationsInstanceResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('EnvironmentApplicationsInstanceResponseList', function() {
     it('should create an instance of EnvironmentApplicationsInstanceResponseList', function() {
       // uncomment below and update the code to test EnvironmentApplicationsInstanceResponseList
-      //var instance = new BetaQoveryApi.EnvironmentApplicationsInstanceResponseList();
-      //expect(instance).to.be.a(BetaQoveryApi.EnvironmentApplicationsInstanceResponseList);
+      //var instance = new QoveryApi.EnvironmentApplicationsInstanceResponseList();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentApplicationsInstanceResponseList);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new BetaQoveryApi.EnvironmentApplicationsInstanceResponseList();
+      //var instance = new QoveryApi.EnvironmentApplicationsInstanceResponseList();
       //expect(instance).to.be();
     });
 

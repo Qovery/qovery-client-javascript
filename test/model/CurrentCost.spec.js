@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.CurrentCost();
+    instance = new QoveryApi.CurrentCost();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('CurrentCost', function() {
     it('should create an instance of CurrentCost', function() {
       // uncomment below and update the code to test CurrentCost
-      //var instance = new BetaQoveryApi.CurrentCost();
-      //expect(instance).to.be.a(BetaQoveryApi.CurrentCost);
+      //var instance = new QoveryApi.CurrentCost();
+      //expect(instance).to.be.a(QoveryApi.CurrentCost);
     });
 
     it('should have the property plan (base name: "plan")', function() {
       // uncomment below and update the code to test the property plan
-      //var instance = new BetaQoveryApi.CurrentCost();
+      //var instance = new QoveryApi.CurrentCost();
       //expect(instance).to.be();
     });
 
     it('should have the property remainingTrialDay (base name: "remaining_trial_day")', function() {
       // uncomment below and update the code to test the property remainingTrialDay
-      //var instance = new BetaQoveryApi.CurrentCost();
+      //var instance = new QoveryApi.CurrentCost();
       //expect(instance).to.be();
     });
 
     it('should have the property remainingCredits (base name: "remaining_credits")', function() {
       // uncomment below and update the code to test the property remainingCredits
-      //var instance = new BetaQoveryApi.CurrentCost();
+      //var instance = new QoveryApi.CurrentCost();
       //expect(instance).to.be();
     });
 
     it('should have the property cost (base name: "cost")', function() {
       // uncomment below and update the code to test the property cost
-      //var instance = new BetaQoveryApi.CurrentCost();
+      //var instance = new QoveryApi.CurrentCost();
       //expect(instance).to.be();
     });
 

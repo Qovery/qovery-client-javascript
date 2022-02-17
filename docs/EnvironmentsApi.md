@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentsApi
+# QoveryApi.EnvironmentsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -20,16 +20,16 @@ Create an environment
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentsApi();
+let apiInstance = new QoveryApi.EnvironmentsApi();
 let projectId = "projectId_example"; // String | Project ID
 let opts = {
-  'environmentRequest': new BetaQoveryApi.EnvironmentRequest() // EnvironmentRequest | 
+  'environmentRequest': new QoveryApi.EnvironmentRequest() // EnvironmentRequest | 
 };
 apiInstance.createEnvironment(projectId, opts, (error, data, response) => {
   if (error) {
@@ -73,13 +73,13 @@ Returns a list of environment ids, and for each its total numberof services
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentsApi();
+let apiInstance = new QoveryApi.EnvironmentsApi();
 let projectId = "projectId_example"; // String | Project ID
 apiInstance.getProjectEnvironmentServiceNumber(projectId, (error, data, response) => {
   if (error) {
@@ -122,13 +122,13 @@ Returns a list of environments with only their id and status.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentsApi();
+let apiInstance = new QoveryApi.EnvironmentsApi();
 let projectId = "projectId_example"; // String | Project ID
 apiInstance.getProjectEnvironmentStatus(projectId, (error, data, response) => {
   if (error) {
@@ -169,13 +169,13 @@ List environments
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.EnvironmentsApi();
+let apiInstance = new QoveryApi.EnvironmentsApi();
 let projectId = "projectId_example"; // String | Project ID
 apiInstance.listEnvironment(projectId, (error, data, response) => {
   if (error) {

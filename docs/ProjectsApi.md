@@ -1,4 +1,4 @@
-# BetaQoveryApi.ProjectsApi
+# QoveryApi.ProjectsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -19,16 +19,16 @@ Create a project
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectsApi();
+let apiInstance = new QoveryApi.ProjectsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'projectRequest': new BetaQoveryApi.ProjectRequest() // ProjectRequest | 
+  'projectRequest': new QoveryApi.ProjectRequest() // ProjectRequest | 
 };
 apiInstance.createProject(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -72,13 +72,13 @@ Returns a list of project ids, and for each its total numberof services and envi
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectsApi();
+let apiInstance = new QoveryApi.ProjectsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganizationProjectStats(organizationId, (error, data, response) => {
   if (error) {
@@ -119,13 +119,13 @@ List projects
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectsApi();
+let apiInstance = new QoveryApi.ProjectsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.listProject(organizationId, (error, data, response) => {
   if (error) {

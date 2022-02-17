@@ -1,4 +1,4 @@
-# BetaQoveryApi.BackupResponse
+# QoveryApi.BackupResponse
 
 ## Properties
 

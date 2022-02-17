@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.OrganizationResponse();
+    instance = new QoveryApi.OrganizationResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,73 +50,73 @@
   describe('OrganizationResponse', function() {
     it('should create an instance of OrganizationResponse', function() {
       // uncomment below and update the code to test OrganizationResponse
-      //var instance = new BetaQoveryApi.OrganizationResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.OrganizationResponse);
+      //var instance = new QoveryApi.OrganizationResponse();
+      //expect(instance).to.be.a(QoveryApi.OrganizationResponse);
     });
 
     it('should have the property owner (base name: "owner")', function() {
       // uncomment below and update the code to test the property owner
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property plan (base name: "plan")', function() {
       // uncomment below and update the code to test the property plan
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property websiteUrl (base name: "website_url")', function() {
       // uncomment below and update the code to test the property websiteUrl
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property repository (base name: "repository")', function() {
       // uncomment below and update the code to test the property repository
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property logoUrl (base name: "logo_url")', function() {
       // uncomment below and update the code to test the property logoUrl
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property iconUrl (base name: "icon_url")', function() {
       // uncomment below and update the code to test the property iconUrl
-      //var instance = new BetaQoveryApi.OrganizationResponse();
+      //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });
 

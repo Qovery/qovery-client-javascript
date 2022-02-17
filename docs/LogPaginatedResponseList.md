@@ -1,4 +1,4 @@
-# BetaQoveryApi.LogPaginatedResponseList
+# QoveryApi.LogPaginatedResponseList
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.EnvironmentDatabasesCurrentMetricResponseCpu
+# QoveryApi.EnvironmentDatabasesCurrentMetricResponseCpu
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationDatabaseApi
+# QoveryApi.ApplicationDatabaseApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -22,13 +22,13 @@ Link a database to the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationDatabaseApi();
+let apiInstance = new QoveryApi.ApplicationDatabaseApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let targetDatabaseId = "targetDatabaseId_example"; // String | Target database ID
 apiInstance.attachDatabasetoApplication(applicationId, targetDatabaseId, (error, data, response) => {
@@ -71,13 +71,13 @@ Link a logical database to the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationDatabaseApi();
+let apiInstance = new QoveryApi.ApplicationDatabaseApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let targetLogicalDatabaseId = "targetLogicalDatabaseId_example"; // String | Target database ID
 apiInstance.attachLogicalDatabasetoApplication(applicationId, targetLogicalDatabaseId, (error, data, response) => {
@@ -120,13 +120,13 @@ List linked databases
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationDatabaseApi();
+let apiInstance = new QoveryApi.ApplicationDatabaseApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationDatabase(applicationId, (error, data, response) => {
   if (error) {
@@ -167,13 +167,13 @@ List linked logical databases
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationDatabaseApi();
+let apiInstance = new QoveryApi.ApplicationDatabaseApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationLogicalDatabase(applicationId, (error, data, response) => {
   if (error) {
@@ -214,13 +214,13 @@ Remove database link to this application.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationDatabaseApi();
+let apiInstance = new QoveryApi.ApplicationDatabaseApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let targetDatabaseId = "targetDatabaseId_example"; // String | Target database ID
 apiInstance.removeDatabaseFromApplication(applicationId, targetDatabaseId, (error, data, response) => {
@@ -263,13 +263,13 @@ Remove logical database link to this application.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationDatabaseApi();
+let apiInstance = new QoveryApi.ApplicationDatabaseApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let targetLogicalDatabaseId = "targetLogicalDatabaseId_example"; // String | Target database ID
 apiInstance.removeLogicalDatabaseFromApplication(applicationId, targetLogicalDatabaseId, (error, data, response) => {

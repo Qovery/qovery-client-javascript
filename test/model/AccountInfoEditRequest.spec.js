@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.AccountInfoEditRequest();
+    instance = new QoveryApi.AccountInfoEditRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('AccountInfoEditRequest', function() {
     it('should create an instance of AccountInfoEditRequest', function() {
       // uncomment below and update the code to test AccountInfoEditRequest
-      //var instance = new BetaQoveryApi.AccountInfoEditRequest();
-      //expect(instance).to.be.a(BetaQoveryApi.AccountInfoEditRequest);
+      //var instance = new QoveryApi.AccountInfoEditRequest();
+      //expect(instance).to.be.a(QoveryApi.AccountInfoEditRequest);
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instance = new BetaQoveryApi.AccountInfoEditRequest();
+      //var instance = new QoveryApi.AccountInfoEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instance = new BetaQoveryApi.AccountInfoEditRequest();
+      //var instance = new QoveryApi.AccountInfoEditRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property profilePictureUrl (base name: "profile_picture_url")', function() {
       // uncomment below and update the code to test the property profilePictureUrl
-      //var instance = new BetaQoveryApi.AccountInfoEditRequest();
+      //var instance = new QoveryApi.AccountInfoEditRequest();
       //expect(instance).to.be();
     });
 

@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.ReferralResponse();
+    instance = new QoveryApi.ReferralResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('ReferralResponse', function() {
     it('should create an instance of ReferralResponse', function() {
       // uncomment below and update the code to test ReferralResponse
-      //var instance = new BetaQoveryApi.ReferralResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.ReferralResponse);
+      //var instance = new QoveryApi.ReferralResponse();
+      //expect(instance).to.be.a(QoveryApi.ReferralResponse);
     });
 
     it('should have the property totalInvited (base name: "total_invited")', function() {
       // uncomment below and update the code to test the property totalInvited
-      //var instance = new BetaQoveryApi.ReferralResponse();
+      //var instance = new QoveryApi.ReferralResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property invitationLink (base name: "invitation_link")', function() {
       // uncomment below and update the code to test the property invitationLink
-      //var instance = new BetaQoveryApi.ReferralResponse();
+      //var instance = new QoveryApi.ReferralResponse();
       //expect(instance).to.be();
     });
 

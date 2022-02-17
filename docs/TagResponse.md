@@ -1,4 +1,4 @@
-# BetaQoveryApi.TagResponse
+# QoveryApi.TagResponse
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# BetaQoveryApi.BackupsApi
+# QoveryApi.BackupsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -19,16 +19,16 @@ Add a backup to the Database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BackupsApi();
+let apiInstance = new QoveryApi.BackupsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let opts = {
-  'backupRequest': new BetaQoveryApi.BackupRequest() // BackupRequest | 
+  'backupRequest': new QoveryApi.BackupRequest() // BackupRequest | 
 };
 apiInstance.addBackupDatabase(databaseId, opts, (error, data, response) => {
   if (error) {
@@ -72,13 +72,13 @@ By default it returns the 20 last results. The response is paginated. In order t
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BackupsApi();
+let apiInstance = new QoveryApi.BackupsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let opts = {
   'startId': "startId_example" // String | Starting point after which to return results
@@ -123,13 +123,13 @@ Remove database  backup
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BackupsApi();
+let apiInstance = new QoveryApi.BackupsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let backupId = "backupId_example"; // String | Database Backup ID
 apiInstance.removeDatabaseBackup(databaseId, backupId, (error, data, response) => {

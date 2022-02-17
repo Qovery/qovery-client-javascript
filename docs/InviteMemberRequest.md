@@ -1,4 +1,4 @@
-# BetaQoveryApi.InviteMemberRequest
+# QoveryApi.InviteMemberRequest
 
 ## Properties
 

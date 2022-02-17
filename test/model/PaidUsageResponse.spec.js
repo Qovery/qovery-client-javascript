@@ -1,6 +1,6 @@
 /**
- * [BETA] Qovery API
- * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is in Beta and still in progress. Some endpoints are not available yet. 
+ * Qovery API
+ * - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. 
  *
  * The version of the OpenAPI document: 1.0.0
  * Contact: support+api+documentation@qovery.com
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.BetaQoveryApi);
+    factory(root.expect, root.QoveryApi);
   }
-}(this, function(expect, BetaQoveryApi) {
+}(this, function(expect, QoveryApi) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new BetaQoveryApi.PaidUsageResponse();
+    instance = new QoveryApi.PaidUsageResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('PaidUsageResponse', function() {
     it('should create an instance of PaidUsageResponse', function() {
       // uncomment below and update the code to test PaidUsageResponse
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
-      //expect(instance).to.be.a(BetaQoveryApi.PaidUsageResponse);
+      //var instance = new QoveryApi.PaidUsageResponse();
+      //expect(instance).to.be.a(QoveryApi.PaidUsageResponse);
     });
 
     it('should have the property maxDeploymentsPerMonth (base name: "max_deployments_per_month")', function() {
       // uncomment below and update the code to test the property maxDeploymentsPerMonth
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
+      //var instance = new QoveryApi.PaidUsageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property consumedDeployments (base name: "consumed_deployments")', function() {
       // uncomment below and update the code to test the property consumedDeployments
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
+      //var instance = new QoveryApi.PaidUsageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property monthlyPlanCost (base name: "monthly_plan_cost")', function() {
       // uncomment below and update the code to test the property monthlyPlanCost
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
+      //var instance = new QoveryApi.PaidUsageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property monthlyPlanCostInCents (base name: "monthly_plan_cost_in_cents")', function() {
       // uncomment below and update the code to test the property monthlyPlanCostInCents
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
+      //var instance = new QoveryApi.PaidUsageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property remainingDeployments (base name: "remaining_deployments")', function() {
       // uncomment below and update the code to test the property remainingDeployments
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
+      //var instance = new QoveryApi.PaidUsageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property deploymentsExceeded (base name: "deployments_exceeded")', function() {
       // uncomment below and update the code to test the property deploymentsExceeded
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
+      //var instance = new QoveryApi.PaidUsageResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property renewalAt (base name: "renewal_at")', function() {
       // uncomment below and update the code to test the property renewalAt
-      //var instance = new BetaQoveryApi.PaidUsageResponse();
+      //var instance = new QoveryApi.PaidUsageResponse();
       //expect(instance).to.be();
     });
 

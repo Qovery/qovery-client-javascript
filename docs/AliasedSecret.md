@@ -1,4 +1,4 @@
-# BetaQoveryApi.AliasedSecret
+# QoveryApi.AliasedSecret
 
 ## Properties
 

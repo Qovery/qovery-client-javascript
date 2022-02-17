@@ -1,4 +1,4 @@
-# BetaQoveryApi.ReferralRewardsApi
+# QoveryApi.ReferralRewardsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -18,13 +18,13 @@ Get your referral information
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ReferralRewardsApi();
+let apiInstance = new QoveryApi.ReferralRewardsApi();
 apiInstance.getAccountReferral((error, data, response) => {
   if (error) {
     console.error(error);
@@ -63,15 +63,15 @@ A same code can be claimed only 3 times at max
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ReferralRewardsApi();
+let apiInstance = new QoveryApi.ReferralRewardsApi();
 let opts = {
-  'rewardClaimResponse': new BetaQoveryApi.RewardClaimResponse() // RewardClaimResponse | 
+  'rewardClaimResponse': new QoveryApi.RewardClaimResponse() // RewardClaimResponse | 
 };
 apiInstance.postAccountRewardClaim(opts, (error, data, response) => {
   if (error) {

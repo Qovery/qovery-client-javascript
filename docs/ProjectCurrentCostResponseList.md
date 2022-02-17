@@ -1,4 +1,4 @@
-# BetaQoveryApi.ProjectCurrentCostResponseList
+# QoveryApi.ProjectCurrentCostResponseList
 
 ## Properties
 

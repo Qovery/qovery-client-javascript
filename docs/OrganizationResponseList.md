@@ -1,4 +1,4 @@
-# BetaQoveryApi.OrganizationResponseList
+# QoveryApi.OrganizationResponseList
 
 ## Properties
 

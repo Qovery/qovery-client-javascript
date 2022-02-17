@@ -1,4 +1,4 @@
-# BetaQoveryApi.ServiceTotalNumber
+# QoveryApi.ServiceTotalNumber
 
 ## Properties
 

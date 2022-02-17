@@ -1,4 +1,4 @@
-# BetaQoveryApi.Value
+# QoveryApi.Value
 
 ## Properties
 

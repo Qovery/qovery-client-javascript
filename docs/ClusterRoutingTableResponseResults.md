@@ -1,4 +1,4 @@
-# BetaQoveryApi.ClusterRoutingTableResponseResults
+# QoveryApi.ClusterRoutingTableResponseResults
 
 ## Properties
 

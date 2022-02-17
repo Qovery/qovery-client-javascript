@@ -1,4 +1,4 @@
-# BetaQoveryApi.DependencyApi
+# QoveryApi.DependencyApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -21,13 +21,13 @@ Add application dependency to this application to prevent this application start
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DependencyApi();
+let apiInstance = new QoveryApi.DependencyApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let targetApplicationId = "targetApplicationId_example"; // String | Target application ID
 apiInstance.createApplicationDependency(applicationId, targetApplicationId, (error, data, response) => {
@@ -70,13 +70,13 @@ List application dependencies
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DependencyApi();
+let apiInstance = new QoveryApi.DependencyApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationDependency(applicationId, (error, data, response) => {
   if (error) {
@@ -117,13 +117,13 @@ Remove application dependency to this application.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DependencyApi();
+let apiInstance = new QoveryApi.DependencyApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let targetApplicationId = "targetApplicationId_example"; // String | Target application ID
 apiInstance.removeApplicationDependency(applicationId, targetApplicationId, (error, data, response) => {

@@ -1,4 +1,4 @@
-# BetaQoveryApi.LogicalDatabaseResponse
+# QoveryApi.LogicalDatabaseResponse
 
 ## Properties
 

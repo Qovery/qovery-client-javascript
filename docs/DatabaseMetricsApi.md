@@ -1,4 +1,4 @@
-# BetaQoveryApi.DatabaseMetricsApi
+# QoveryApi.DatabaseMetricsApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -22,13 +22,13 @@ Get current metric consumption of the database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMetricsApi();
+let apiInstance = new QoveryApi.DatabaseMetricsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 apiInstance.getDatabaseCurrentMetric(databaseId, (error, data, response) => {
   if (error) {
@@ -69,13 +69,13 @@ Get CPU consumption metric over time for the database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMetricsApi();
+let apiInstance = new QoveryApi.DatabaseMetricsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getDatabaseMetricCpu(databaseId, lastSeconds, (error, data, response) => {
@@ -120,13 +120,13 @@ The value returned corresponds to the 95th centile
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMetricsApi();
+let apiInstance = new QoveryApi.DatabaseMetricsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getDatabaseMetricHealthCheck(databaseId, lastSeconds, (error, data, response) => {
@@ -169,13 +169,13 @@ Get Memory consumption metric over time for the database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMetricsApi();
+let apiInstance = new QoveryApi.DatabaseMetricsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getDatabaseMetricMemory(databaseId, lastSeconds, (error, data, response) => {
@@ -220,13 +220,13 @@ Get database restart message and timestamp.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMetricsApi();
+let apiInstance = new QoveryApi.DatabaseMetricsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getDatabaseMetricRestart(databaseId, lastSeconds, (error, data, response) => {
@@ -269,13 +269,13 @@ Get Storage consumption metric over time for the database
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.DatabaseMetricsApi();
+let apiInstance = new QoveryApi.DatabaseMetricsApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let lastSeconds = 3.4; // Number | Up to how many seconds in the past to ask analytics results
 apiInstance.getDatabaseMetricStorage(databaseId, lastSeconds, (error, data, response) => {

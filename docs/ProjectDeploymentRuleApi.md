@@ -1,4 +1,4 @@
-# BetaQoveryApi.ProjectDeploymentRuleApi
+# QoveryApi.ProjectDeploymentRuleApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -21,16 +21,16 @@ Create a deployment rule
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectDeploymentRuleApi();
+let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
 let projectId = "projectId_example"; // String | Project ID
 let opts = {
-  'projectDeploymentRuleRequest': new BetaQoveryApi.ProjectDeploymentRuleRequest() // ProjectDeploymentRuleRequest | 
+  'projectDeploymentRuleRequest': new QoveryApi.ProjectDeploymentRuleRequest() // ProjectDeploymentRuleRequest | 
 };
 apiInstance.createDeploymentRule(projectId, opts, (error, data, response) => {
   if (error) {
@@ -72,13 +72,13 @@ Delete a project deployment rule
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectDeploymentRuleApi();
+let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
 let projectId = "projectId_example"; // String | Project ID
 let deploymentRuleId = "deploymentRuleId_example"; // String | Deployment Rule ID
 apiInstance.deleteProjectDeploymentRule(projectId, deploymentRuleId, (error, data, response) => {
@@ -121,17 +121,17 @@ Edit a project deployment rule
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectDeploymentRuleApi();
+let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
 let projectId = "projectId_example"; // String | Project ID
 let deploymentRuleId = "deploymentRuleId_example"; // String | Deployment Rule ID
 let opts = {
-  'projectDeploymentRuleRequest': new BetaQoveryApi.ProjectDeploymentRuleRequest() // ProjectDeploymentRuleRequest | 
+  'projectDeploymentRuleRequest': new QoveryApi.ProjectDeploymentRuleRequest() // ProjectDeploymentRuleRequest | 
 };
 apiInstance.editProjectDeployemtnRule(projectId, deploymentRuleId, opts, (error, data, response) => {
   if (error) {
@@ -174,13 +174,13 @@ Get project deployment rule
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectDeploymentRuleApi();
+let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
 let projectId = "projectId_example"; // String | Project ID
 let deploymentRuleId = "deploymentRuleId_example"; // String | Deployment Rule ID
 apiInstance.getProjectDeploymentRule(projectId, deploymentRuleId, (error, data, response) => {
@@ -223,13 +223,13 @@ List project deployment rules
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ProjectDeploymentRuleApi();
+let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
 let projectId = "projectId_example"; // String | Project ID
 apiInstance.listProjectDeploymentRule(projectId, (error, data, response) => {
   if (error) {

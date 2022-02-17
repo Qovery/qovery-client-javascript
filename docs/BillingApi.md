@@ -1,4 +1,4 @@
-# BetaQoveryApi.BillingApi
+# QoveryApi.BillingApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -29,16 +29,16 @@ Add credit card
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'creditCardRequest': new BetaQoveryApi.CreditCardRequest() // CreditCardRequest | 
+  'creditCardRequest': new QoveryApi.CreditCardRequest() // CreditCardRequest | 
 };
 apiInstance.addCreditCard(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -80,16 +80,16 @@ Add credit code
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'organizationCreditCodeRequest': new BetaQoveryApi.OrganizationCreditCodeRequest() // OrganizationCreditCodeRequest | 
+  'organizationCreditCodeRequest': new QoveryApi.OrganizationCreditCodeRequest() // OrganizationCreditCodeRequest | 
 };
 apiInstance.addCreditCode(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -131,13 +131,13 @@ Delete credit card
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let creditCardId = "creditCardId_example"; // String | Credit Card ID
 apiInstance.deleteCreditCard(organizationId, creditCardId, (error, data, response) => {
@@ -180,16 +180,16 @@ Edit Organization Billing Info
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'billingInfoRequest': new BetaQoveryApi.BillingInfoRequest() // BillingInfoRequest | 
+  'billingInfoRequest': new QoveryApi.BillingInfoRequest() // BillingInfoRequest | 
 };
 apiInstance.editOrganizationBillingInfo(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -233,13 +233,13 @@ Get your cluster cost range. We are unable to give a precise cost of your infras
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.getClusterCurrentCost(organizationId, clusterId, (error, data, response) => {
@@ -282,13 +282,13 @@ Get organization billing info
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganizationBillingInfo(organizationId, (error, data, response) => {
   if (error) {
@@ -331,13 +331,13 @@ This endpoint returns a \&quot;is_valid\&quot; boolean field reflecting the bill
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganizationBillingStatus(organizationId, (error, data, response) => {
   if (error) {
@@ -378,13 +378,13 @@ Get organization current cost
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.getOrganizationCurrentCost(organizationId, (error, data, response) => {
   if (error) {
@@ -425,13 +425,13 @@ Get organization invoice
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let invoiceId = "invoiceId_example"; // String | Invoice ID
 apiInstance.getOrganizationInvoice(organizationId, invoiceId, (error, data, response) => {
@@ -476,13 +476,13 @@ This will return URL of the invoice PDF
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let invoiceId = "invoiceId_example"; // String | Invoice ID
 apiInstance.getOrganizationInvoicePDF(organizationId, invoiceId, (error, data, response) => {
@@ -525,13 +525,13 @@ List organization credit cards
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.listOrganizationCreditCards(organizationId, (error, data, response) => {
   if (error) {
@@ -572,13 +572,13 @@ List organization invoices
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.listOrganizationInvoice(organizationId, (error, data, response) => {
   if (error) {
@@ -619,13 +619,13 @@ Download all invoices
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.BillingApi();
+let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 apiInstance.organizationDownloadAllInvoices(organizationId, (error, data, response) => {
   if (error) {

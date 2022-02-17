@@ -1,4 +1,4 @@
-# BetaQoveryApi.BillingPeriod
+# QoveryApi.BillingPeriod
 
 ## Properties
 

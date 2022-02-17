@@ -1,4 +1,4 @@
-# BetaQoveryApi.CloudProviderResponseList
+# QoveryApi.CloudProviderResponseList
 
 ## Properties
 

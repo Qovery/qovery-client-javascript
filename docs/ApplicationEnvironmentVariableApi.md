@@ -1,4 +1,4 @@
-# BetaQoveryApi.ApplicationEnvironmentVariableApi
+# QoveryApi.ApplicationEnvironmentVariableApi
 
 All URIs are relative to *https://api.qovery.com*
 
@@ -25,16 +25,16 @@ Add an environment variable to the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ApplicationEnvironmentVariableApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
-  'environmentVariableRequest': new BetaQoveryApi.EnvironmentVariableRequest() // EnvironmentVariableRequest | 
+  'environmentVariableRequest': new QoveryApi.EnvironmentVariableRequest() // EnvironmentVariableRequest | 
 };
 apiInstance.createApplicationEnvironmentVariable(applicationId, opts, (error, data, response) => {
   if (error) {
@@ -78,17 +78,17 @@ Create an environment variable alias at the application level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ApplicationEnvironmentVariableApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 let opts = {
-  'key': new BetaQoveryApi.Key() // Key | 
+  'key': new QoveryApi.Key() // Key | 
 };
 apiInstance.createApplicationEnvironmentVariableAlias(applicationId, environmentVariableId, opts, (error, data, response) => {
   if (error) {
@@ -133,17 +133,17 @@ Create an environment variable override at the application level
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ApplicationEnvironmentVariableApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 let opts = {
-  'value': new BetaQoveryApi.Value() // Value | 
+  'value': new QoveryApi.Value() // Value | 
 };
 apiInstance.createApplicationEnvironmentVariableOverride(applicationId, environmentVariableId, opts, (error, data, response) => {
   if (error) {
@@ -188,13 +188,13 @@ Delete an environment variable from an application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ApplicationEnvironmentVariableApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 apiInstance.deleteApplicationEnvironmentVariable(applicationId, environmentVariableId, (error, data, response) => {
@@ -239,16 +239,16 @@ Edit an environment variable belonging to the application
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ApplicationEnvironmentVariableApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
-let environmentVariableEditRequest = new BetaQoveryApi.EnvironmentVariableEditRequest(); // EnvironmentVariableEditRequest | 
+let environmentVariableEditRequest = new QoveryApi.EnvironmentVariableEditRequest(); // EnvironmentVariableEditRequest | 
 apiInstance.editApplicationEnvironmentVariable(applicationId, environmentVariableId, environmentVariableEditRequest, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -292,16 +292,16 @@ Import environment variables in a defined scope, with a defined visibility.
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ApplicationEnvironmentVariableApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
-  'variableImportRequest': new BetaQoveryApi.VariableImportRequest() // VariableImportRequest | 
+  'variableImportRequest': new QoveryApi.VariableImportRequest() // VariableImportRequest | 
 };
 apiInstance.importEnvironmentVariable(applicationId, opts, (error, data, response) => {
   if (error) {
@@ -343,13 +343,13 @@ List environment variables
 ### Example
 
 ```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new BetaQoveryApi.ApplicationEnvironmentVariableApi();
+let apiInstance = new QoveryApi.ApplicationEnvironmentVariableApi();
 let applicationId = "applicationId_example"; // String | Application ID
 apiInstance.listApplicationEnvironmentVariable(applicationId, (error, data, response) => {
   if (error) {

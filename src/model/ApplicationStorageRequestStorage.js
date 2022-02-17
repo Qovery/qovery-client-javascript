@@ -97,24 +97,6 @@ ApplicationStorageRequestStorage.prototype['mount_point'] = undefined;
 ApplicationStorageRequestStorage['TypeEnum'] = {
 
     /**
-     * value: "SLOW_HDD"
-     * @const
-     */
-    "SLOW_HDD": "SLOW_HDD",
-
-    /**
-     * value: "HDD"
-     * @const
-     */
-    "HDD": "HDD",
-
-    /**
-     * value: "SSD"
-     * @const
-     */
-    "SSD": "SSD",
-
-    /**
      * value: "FAST_SSD"
      * @const
      */

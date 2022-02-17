@@ -13,12 +13,6 @@ Name | Type | Description | Notes
 ## Enum: TypeEnum
 
 
-* `SLOW_HDD` (value: `"SLOW_HDD"`)
-
-* `HDD` (value: `"HDD"`)
-
-* `SSD` (value: `"SSD"`)
-
 * `FAST_SSD` (value: `"FAST_SSD"`)
 
 

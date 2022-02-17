@@ -132,16 +132,10 @@ EnvironmentLogResponse.prototype['hint'] = undefined;
 EnvironmentLogResponse['StateEnum'] = {
 
     /**
-     * value: "INITIALIZED"
+     * value: "BUILD_ERROR"
      * @const
      */
-    "INITIALIZED": "INITIALIZED",
-
-    /**
-     * value: "QUEUED"
-     * @const
-     */
-    "QUEUED": "QUEUED",
+    "BUILD_ERROR": "BUILD_ERROR",
 
     /**
      * value: "BUILDING"
@@ -150,58 +144,10 @@ EnvironmentLogResponse['StateEnum'] = {
     "BUILDING": "BUILDING",
 
     /**
-     * value: "BUILD_ERROR"
-     * @const
-     */
-    "BUILD_ERROR": "BUILD_ERROR",
-
-    /**
      * value: "BUILT"
      * @const
      */
     "BUILT": "BUILT",
-
-    /**
-     * value: "DEPLOYING"
-     * @const
-     */
-    "DEPLOYING": "DEPLOYING",
-
-    /**
-     * value: "DEPLOYMENT_ERROR"
-     * @const
-     */
-    "DEPLOYMENT_ERROR": "DEPLOYMENT_ERROR",
-
-    /**
-     * value: "DEPLOYED"
-     * @const
-     */
-    "DEPLOYED": "DEPLOYED",
-
-    /**
-     * value: "STOPPING"
-     * @const
-     */
-    "STOPPING": "STOPPING",
-
-    /**
-     * value: "STOP_ERROR"
-     * @const
-     */
-    "STOP_ERROR": "STOP_ERROR",
-
-    /**
-     * value: "STOPPED"
-     * @const
-     */
-    "STOPPED": "STOPPED",
-
-    /**
-     * value: "DELETING"
-     * @const
-     */
-    "DELETING": "DELETING",
 
     /**
      * value: "DELETE_ERROR"
@@ -216,6 +162,42 @@ EnvironmentLogResponse['StateEnum'] = {
     "DELETED": "DELETED",
 
     /**
+     * value: "DELETING"
+     * @const
+     */
+    "DELETING": "DELETING",
+
+    /**
+     * value: "DEPLOYED"
+     * @const
+     */
+    "DEPLOYED": "DEPLOYED",
+
+    /**
+     * value: "DEPLOYING"
+     * @const
+     */
+    "DEPLOYING": "DEPLOYING",
+
+    /**
+     * value: "DEPLOYMENT_ERROR"
+     * @const
+     */
+    "DEPLOYMENT_ERROR": "DEPLOYMENT_ERROR",
+
+    /**
+     * value: "INITIALIZED"
+     * @const
+     */
+    "INITIALIZED": "INITIALIZED",
+
+    /**
+     * value: "QUEUED"
+     * @const
+     */
+    "QUEUED": "QUEUED",
+
+    /**
      * value: "RUNNING"
      * @const
      */
@@ -225,7 +207,25 @@ EnvironmentLogResponse['StateEnum'] = {
      * value: "RUNNING_ERROR"
      * @const
      */
-    "RUNNING_ERROR": "RUNNING_ERROR"
+    "RUNNING_ERROR": "RUNNING_ERROR",
+
+    /**
+     * value: "STOP_ERROR"
+     * @const
+     */
+    "STOP_ERROR": "STOP_ERROR",
+
+    /**
+     * value: "STOPPED"
+     * @const
+     */
+    "STOPPED": "STOPPED",
+
+    /**
+     * value: "STOPPING"
+     * @const
+     */
+    "STOPPING": "STOPPING"
 };
 
 

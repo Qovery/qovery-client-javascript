@@ -7,9 +7,9 @@ Method | HTTP request | Description
 [**createProjectSecret**](ProjectSecretApi.md#createProjectSecret) | **POST** /project/{projectId}/secret | Add a secret to the project
 [**createProjectSecretAlias**](ProjectSecretApi.md#createProjectSecretAlias) | **POST** /project/{projectId}/secret/{secretId}/alias | Create a secret alias at the project level
 [**createProjectSecretOverride**](ProjectSecretApi.md#createProjectSecretOverride) | **POST** /project/{projectId}/secret/{secretId}/override | Create a secret override at the project level
+[**deleteProjectSecret**](ProjectSecretApi.md#deleteProjectSecret) | **DELETE** /project/{projectId}/secret/{secretId} | Delete a secret from a project
 [**editProjectSecret**](ProjectSecretApi.md#editProjectSecret) | **PUT** /project/{projectId}/secret/{secretId} | Edit a secret belonging to the project
 [**listProjectSecrets**](ProjectSecretApi.md#listProjectSecrets) | **GET** /project/{projectId}/secret | List project secrets
-[**projectProjectIdSecretSecretIdDelete**](ProjectSecretApi.md#projectProjectIdSecretSecretIdDelete) | **DELETE** /project/{projectId}/secret/{secretId} | Delete a secret from a project
 
 
 
@@ -176,6 +176,57 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## deleteProjectSecret
+
+> deleteProjectSecret(projectId, secretId)
+
+Delete a secret from a project
+
+- To delete a secret you must have the project user permission - You can&#39;t delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteProjectSecret 
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.ProjectSecretApi();
+let projectId = "projectId_example"; // String | Project ID
+let secretId = "secretId_example"; // String | Secret ID
+apiInstance.deleteProjectSecret(projectId, secretId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectId** | **String**| Project ID | 
+ **secretId** | **String**| Secret ID | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
 ## editProjectSecret
 
 > SecretResponse editProjectSecret(projectId, secretId, secretEditRequest)
@@ -274,55 +325,4 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
-
-
-## projectProjectIdSecretSecretIdDelete
-
-> projectProjectIdSecretSecretIdDelete(projectId, secretId)
-
-Delete a secret from a project
-
-- To delete a secret you must have the project user permission - You can&#39;t delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteProjectSecret 
-
-### Example
-
-```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new BetaQoveryApi.ProjectSecretApi();
-let projectId = "projectId_example"; // String | Project ID
-let secretId = "secretId_example"; // String | Secret ID
-apiInstance.projectProjectIdSecretSecretIdDelete(projectId, secretId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projectId** | **String**| Project ID | 
- **secretId** | **String**| Secret ID | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
 

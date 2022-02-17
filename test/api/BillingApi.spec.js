@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('deleteCreditCard', function() {
+      it('should call deleteCreditCard successfully', function(done) {
+        //uncomment below and update the code to test deleteCreditCard
+        //instance.deleteCreditCard(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editOrganizationBillingInfo', function() {
       it('should call editOrganizationBillingInfo successfully', function(done) {
         //uncomment below and update the code to test editOrganizationBillingInfo
@@ -162,16 +172,6 @@
       it('should call organizationDownloadAllInvoices successfully', function(done) {
         //uncomment below and update the code to test organizationDownloadAllInvoices
         //instance.organizationDownloadAllInvoices(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('organizationOrganizationIdCreditCardCreditCardIdDelete', function() {
-      it('should call organizationOrganizationIdCreditCardCreditCardIdDelete successfully', function(done) {
-        //uncomment below and update the code to test organizationOrganizationIdCreditCardCreditCardIdDelete
-        //instance.organizationOrganizationIdCreditCardCreditCardIdDelete(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

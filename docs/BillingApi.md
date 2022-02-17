@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addCreditCard**](BillingApi.md#addCreditCard) | **POST** /organization/{organizationId}/creditCard | Add credit card
 [**addCreditCode**](BillingApi.md#addCreditCode) | **POST** /organization/{organizationId}/creditCode | Add credit code
+[**deleteCreditCard**](BillingApi.md#deleteCreditCard) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 [**editOrganizationBillingInfo**](BillingApi.md#editOrganizationBillingInfo) | **PUT** /organization/{organizationId}/billingInfo | Edit Organization Billing Info
 [**getClusterCurrentCost**](BillingApi.md#getClusterCurrentCost) | **GET** /organization/{organizationId}/cluster/{clusterId}/currentCost | Get cluster current cost
 [**getOrganizationBillingInfo**](BillingApi.md#getOrganizationBillingInfo) | **GET** /organization/{organizationId}/billingInfo | Get organization billing info
@@ -16,7 +17,6 @@ Method | HTTP request | Description
 [**listOrganizationCreditCards**](BillingApi.md#listOrganizationCreditCards) | **GET** /organization/{organizationId}/creditCard | List organization credit cards
 [**listOrganizationInvoice**](BillingApi.md#listOrganizationInvoice) | **GET** /organization/{organizationId}/invoice | List organization invoices
 [**organizationDownloadAllInvoices**](BillingApi.md#organizationDownloadAllInvoices) | **POST** /organization/{organizationId}/downloadInvoices | Download all invoices
-[**organizationOrganizationIdCreditCardCreditCardIdDelete**](BillingApi.md#organizationOrganizationIdCreditCardCreditCardIdDelete) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 
 
 
@@ -119,6 +119,55 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: Not defined
+
+
+## deleteCreditCard
+
+> deleteCreditCard(organizationId, creditCardId)
+
+Delete credit card
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.BillingApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let creditCardId = "creditCardId_example"; // String | Credit Card ID
+apiInstance.deleteCreditCard(organizationId, creditCardId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **creditCardId** | **String**| Credit Card ID | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: Not defined
 
 
@@ -593,55 +642,6 @@ apiInstance.organizationDownloadAllInvoices(organizationId, (error, data, respon
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
-
-
-## organizationOrganizationIdCreditCardCreditCardIdDelete
-
-> organizationOrganizationIdCreditCardCreditCardIdDelete(organizationId, creditCardId)
-
-Delete credit card
-
-### Example
-
-```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new BetaQoveryApi.BillingApi();
-let organizationId = "organizationId_example"; // String | Organization ID
-let creditCardId = "creditCardId_example"; // String | Credit Card ID
-apiInstance.organizationOrganizationIdCreditCardCreditCardIdDelete(organizationId, creditCardId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organizationId** | **String**| Organization ID | 
- **creditCardId** | **String**| Credit Card ID | 
 
 ### Return type
 

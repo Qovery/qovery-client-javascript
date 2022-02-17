@@ -135,6 +135,53 @@ export default class BillingApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteCreditCard operation.
+     * @callback module:api/BillingApi~deleteCreditCardCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete credit card
+     * @param {String} organizationId Organization ID
+     * @param {String} creditCardId Credit Card ID
+     * @param {module:api/BillingApi~deleteCreditCardCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteCreditCard(organizationId, creditCardId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling deleteCreditCard");
+      }
+      // verify the required parameter 'creditCardId' is set
+      if (creditCardId === undefined || creditCardId === null) {
+        throw new Error("Missing the required parameter 'creditCardId' when calling deleteCreditCard");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'creditCardId': creditCardId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/creditCard/{creditCardId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editOrganizationBillingInfo operation.
      * @callback module:api/BillingApi~editOrganizationBillingInfoCallback
      * @param {String} error Error message, if any.
@@ -572,53 +619,6 @@ export default class BillingApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/organization/{organizationId}/downloadInvoices', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the organizationOrganizationIdCreditCardCreditCardIdDelete operation.
-     * @callback module:api/BillingApi~organizationOrganizationIdCreditCardCreditCardIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete credit card
-     * @param {String} organizationId Organization ID
-     * @param {String} creditCardId Credit Card ID
-     * @param {module:api/BillingApi~organizationOrganizationIdCreditCardCreditCardIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    organizationOrganizationIdCreditCardCreditCardIdDelete(organizationId, creditCardId, callback) {
-      let postBody = null;
-      // verify the required parameter 'organizationId' is set
-      if (organizationId === undefined || organizationId === null) {
-        throw new Error("Missing the required parameter 'organizationId' when calling organizationOrganizationIdCreditCardCreditCardIdDelete");
-      }
-      // verify the required parameter 'creditCardId' is set
-      if (creditCardId === undefined || creditCardId === null) {
-        throw new Error("Missing the required parameter 'creditCardId' when calling organizationOrganizationIdCreditCardCreditCardIdDelete");
-      }
-
-      let pathParams = {
-        'organizationId': organizationId,
-        'creditCardId': creditCardId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/organization/{organizationId}/creditCard/{creditCardId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

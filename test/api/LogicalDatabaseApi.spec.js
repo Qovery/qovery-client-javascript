@@ -48,6 +48,16 @@
   }
 
   describe('LogicalDatabaseApi', function() {
+    describe('createLogicalDatabaseOnDatabase', function() {
+      it('should call createLogicalDatabaseOnDatabase successfully', function(done) {
+        //uncomment below and update the code to test createLogicalDatabaseOnDatabase
+        //instance.createLogicalDatabaseOnDatabase(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteLogicalDatabase', function() {
       it('should call deleteLogicalDatabase successfully', function(done) {
         //uncomment below and update the code to test deleteLogicalDatabase

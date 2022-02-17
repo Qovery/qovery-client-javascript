@@ -17,37 +17,37 @@ Name | Type | Description | Notes
 ## Enum: StateEnum
 
 
-* `INITIALIZED` (value: `"INITIALIZED"`)
-
-* `QUEUED` (value: `"QUEUED"`)
+* `BUILD_ERROR` (value: `"BUILD_ERROR"`)
 
 * `BUILDING` (value: `"BUILDING"`)
 
-* `BUILD_ERROR` (value: `"BUILD_ERROR"`)
-
 * `BUILT` (value: `"BUILT"`)
-
-* `DEPLOYING` (value: `"DEPLOYING"`)
-
-* `DEPLOYMENT_ERROR` (value: `"DEPLOYMENT_ERROR"`)
-
-* `DEPLOYED` (value: `"DEPLOYED"`)
-
-* `STOPPING` (value: `"STOPPING"`)
-
-* `STOP_ERROR` (value: `"STOP_ERROR"`)
-
-* `STOPPED` (value: `"STOPPED"`)
-
-* `DELETING` (value: `"DELETING"`)
 
 * `DELETE_ERROR` (value: `"DELETE_ERROR"`)
 
 * `DELETED` (value: `"DELETED"`)
 
+* `DELETING` (value: `"DELETING"`)
+
+* `DEPLOYED` (value: `"DEPLOYED"`)
+
+* `DEPLOYING` (value: `"DEPLOYING"`)
+
+* `DEPLOYMENT_ERROR` (value: `"DEPLOYMENT_ERROR"`)
+
+* `INITIALIZED` (value: `"INITIALIZED"`)
+
+* `QUEUED` (value: `"QUEUED"`)
+
 * `RUNNING` (value: `"RUNNING"`)
 
 * `RUNNING_ERROR` (value: `"RUNNING_ERROR"`)
+
+* `STOP_ERROR` (value: `"STOP_ERROR"`)
+
+* `STOPPED` (value: `"STOPPED"`)
+
+* `STOPPING` (value: `"STOPPING"`)
 
 
 

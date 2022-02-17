@@ -40,6 +40,52 @@ export default class LogicalDatabaseApi {
 
 
     /**
+     * Callback function to receive the result of the createLogicalDatabaseOnDatabase operation.
+     * @callback module:api/LogicalDatabaseApi~createLogicalDatabaseOnDatabaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/LogicalDatabaseResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a logical database on the database
+     * If you don't specify credentials, Qovery will autogenerate them.
+     * @param {String} databaseId Database ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LogicalDatabaseRequest} opts.logicalDatabaseRequest 
+     * @param {module:api/LogicalDatabaseApi~createLogicalDatabaseOnDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/LogicalDatabaseResponse}
+     */
+    createLogicalDatabaseOnDatabase(databaseId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['logicalDatabaseRequest'];
+      // verify the required parameter 'databaseId' is set
+      if (databaseId === undefined || databaseId === null) {
+        throw new Error("Missing the required parameter 'databaseId' when calling createLogicalDatabaseOnDatabase");
+      }
+
+      let pathParams = {
+        'databaseId': databaseId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = LogicalDatabaseResponse;
+      return this.apiClient.callApi(
+        '/database/{databaseId}/logicalDatabase', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the deleteLogicalDatabase operation.
      * @callback module:api/LogicalDatabaseApi~deleteLogicalDatabaseCallback
      * @param {String} error Error message, if any.

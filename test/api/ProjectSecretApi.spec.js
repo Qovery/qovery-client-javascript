@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('deleteProjectSecret', function() {
+      it('should call deleteProjectSecret successfully', function(done) {
+        //uncomment below and update the code to test deleteProjectSecret
+        //instance.deleteProjectSecret(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editProjectSecret', function() {
       it('should call editProjectSecret successfully', function(done) {
         //uncomment below and update the code to test editProjectSecret
@@ -92,16 +102,6 @@
       it('should call listProjectSecrets successfully', function(done) {
         //uncomment below and update the code to test listProjectSecrets
         //instance.listProjectSecrets(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('projectProjectIdSecretSecretIdDelete', function() {
-      it('should call projectProjectIdSecretSecretIdDelete successfully', function(done) {
-        //uncomment below and update the code to test projectProjectIdSecretSecretIdDelete
-        //instance.projectProjectIdSecretSecretIdDelete(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

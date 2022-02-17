@@ -190,6 +190,54 @@ export default class ProjectSecretApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteProjectSecret operation.
+     * @callback module:api/ProjectSecretApi~deleteProjectSecretCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a secret from a project
+     * - To delete a secret you must have the project user permission - You can't delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteProjectSecret 
+     * @param {String} projectId Project ID
+     * @param {String} secretId Secret ID
+     * @param {module:api/ProjectSecretApi~deleteProjectSecretCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteProjectSecret(projectId, secretId, callback) {
+      let postBody = null;
+      // verify the required parameter 'projectId' is set
+      if (projectId === undefined || projectId === null) {
+        throw new Error("Missing the required parameter 'projectId' when calling deleteProjectSecret");
+      }
+      // verify the required parameter 'secretId' is set
+      if (secretId === undefined || secretId === null) {
+        throw new Error("Missing the required parameter 'secretId' when calling deleteProjectSecret");
+      }
+
+      let pathParams = {
+        'projectId': projectId,
+        'secretId': secretId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/project/{projectId}/secret/{secretId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editProjectSecret operation.
      * @callback module:api/ProjectSecretApi~editProjectSecretCallback
      * @param {String} error Error message, if any.
@@ -280,54 +328,6 @@ export default class ProjectSecretApi {
       let returnType = SecretResponseList;
       return this.apiClient.callApi(
         '/project/{projectId}/secret', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the projectProjectIdSecretSecretIdDelete operation.
-     * @callback module:api/ProjectSecretApi~projectProjectIdSecretSecretIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete a secret from a project
-     * - To delete a secret you must have the project user permission - You can't delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteProjectSecret 
-     * @param {String} projectId Project ID
-     * @param {String} secretId Secret ID
-     * @param {module:api/ProjectSecretApi~projectProjectIdSecretSecretIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    projectProjectIdSecretSecretIdDelete(projectId, secretId, callback) {
-      let postBody = null;
-      // verify the required parameter 'projectId' is set
-      if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling projectProjectIdSecretSecretIdDelete");
-      }
-      // verify the required parameter 'secretId' is set
-      if (secretId === undefined || secretId === null) {
-        throw new Error("Missing the required parameter 'secretId' when calling projectProjectIdSecretSecretIdDelete");
-      }
-
-      let pathParams = {
-        'projectId': projectId,
-        'secretId': secretId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/project/{projectId}/secret/{secretId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -35,29 +35,27 @@ Name | Type | Description | Notes
 ## Enum: BuildpackLanguageEnum
 
 
-* `GO` (value: `"GO"`)
-
-* `NODE_JS` (value: `"NODE_JS"`)
-
 * `CLOJURE` (value: `"CLOJURE"`)
 
-* `PYTHON` (value: `"PYTHON"`)
-
-* `JAVA` (value: `"JAVA"`)
+* `GO` (value: `"GO"`)
 
 * `GRADLE` (value: `"GRADLE"`)
 
-* `JVM` (value: `"JVM"`)
-
 * `GRAILS` (value: `"GRAILS"`)
 
-* `SCALA` (value: `"SCALA"`)
+* `JAVA` (value: `"JAVA"`)
 
-* `PLAY` (value: `"PLAY"`)
+* `JVM` (value: `"JVM"`)
+
+* `NODE_JS` (value: `"NODE_JS"`)
 
 * `PHP` (value: `"PHP"`)
 
-* `GO` (value: `"GO"`)
+* `PLAY` (value: `"PLAY"`)
+
+* `PYTHON` (value: `"PYTHON"`)
+
+* `SCALA` (value: `"SCALA"`)
 
 
 

@@ -256,7 +256,6 @@ import CloudProviderApi from './api/CloudProviderApi';
 import CloudProviderCredentialsApi from './api/CloudProviderCredentialsApi';
 import ClustersApi from './api/ClustersApi';
 import CustomDomainApi from './api/CustomDomainApi';
-import DatabaseApi from './api/DatabaseApi';
 import DatabaseActionsApi from './api/DatabaseActionsApi';
 import DatabaseApplicationApi from './api/DatabaseApplicationApi';
 import DatabaseEventApi from './api/DatabaseEventApi';
@@ -1779,12 +1778,6 @@ export {
     * @property {module:api/CustomDomainApi}
     */
     CustomDomainApi,
-
-    /**
-    * The DatabaseApi service constructor.
-    * @property {module:api/DatabaseApi}
-    */
-    DatabaseApi,
 
     /**
     * The DatabaseActionsApi service constructor.

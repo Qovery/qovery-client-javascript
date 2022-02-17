@@ -78,20 +78,20 @@
         done();
       });
     });
-    describe('editEnvironmentSecret', function() {
-      it('should call editEnvironmentSecret successfully', function(done) {
-        //uncomment below and update the code to test editEnvironmentSecret
-        //instance.editEnvironmentSecret(function(error) {
+    describe('deleteEnvironmentSecret', function() {
+      it('should call deleteEnvironmentSecret successfully', function(done) {
+        //uncomment below and update the code to test deleteEnvironmentSecret
+        //instance.deleteEnvironmentSecret(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('environmentEnvironmentIdSecretSecretIdDelete', function() {
-      it('should call environmentEnvironmentIdSecretSecretIdDelete successfully', function(done) {
-        //uncomment below and update the code to test environmentEnvironmentIdSecretSecretIdDelete
-        //instance.environmentEnvironmentIdSecretSecretIdDelete(function(error) {
+    describe('editEnvironmentSecret', function() {
+      it('should call editEnvironmentSecret successfully', function(done) {
+        //uncomment below and update the code to test editEnvironmentSecret
+        //instance.editEnvironmentSecret(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

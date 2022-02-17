@@ -100,7 +100,6 @@ docs/CustomDomainRequest.md
 docs/CustomDomainResponse.md
 docs/CustomDomainResponseList.md
 docs/DatabaseActionsApi.md
-docs/DatabaseApi.md
 docs/DatabaseApplicationApi.md
 docs/DatabaseConfigurationResponse.md
 docs/DatabaseConfigurationResponseList.md
@@ -295,7 +294,6 @@ src/api/CloudProviderCredentialsApi.js
 src/api/ClustersApi.js
 src/api/CustomDomainApi.js
 src/api/DatabaseActionsApi.js
-src/api/DatabaseApi.js
 src/api/DatabaseApplicationApi.js
 src/api/DatabaseEventApi.js
 src/api/DatabaseMainCallsApi.js
@@ -565,7 +563,6 @@ test/api/CloudProviderCredentialsApi.spec.js
 test/api/ClustersApi.spec.js
 test/api/CustomDomainApi.spec.js
 test/api/DatabaseActionsApi.spec.js
-test/api/DatabaseApi.spec.js
 test/api/DatabaseApplicationApi.spec.js
 test/api/DatabaseEventApi.spec.js
 test/api/DatabaseMainCallsApi.spec.js

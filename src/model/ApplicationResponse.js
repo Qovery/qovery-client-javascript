@@ -308,34 +308,16 @@ ApplicationResponse['BuildModeEnum'] = {
 ApplicationResponse['BuildpackLanguageEnum'] = {
 
     /**
-     * value: "GO"
-     * @const
-     */
-    "GO": "GO",
-
-    /**
-     * value: "NODE_JS"
-     * @const
-     */
-    "NODE_JS": "NODE_JS",
-
-    /**
      * value: "CLOJURE"
      * @const
      */
     "CLOJURE": "CLOJURE",
 
     /**
-     * value: "PYTHON"
+     * value: "GO"
      * @const
      */
-    "PYTHON": "PYTHON",
-
-    /**
-     * value: "JAVA"
-     * @const
-     */
-    "JAVA": "JAVA",
+    "GO": "GO",
 
     /**
      * value: "GRADLE"
@@ -344,28 +326,28 @@ ApplicationResponse['BuildpackLanguageEnum'] = {
     "GRADLE": "GRADLE",
 
     /**
-     * value: "JVM"
-     * @const
-     */
-    "JVM": "JVM",
-
-    /**
      * value: "GRAILS"
      * @const
      */
     "GRAILS": "GRAILS",
 
     /**
-     * value: "SCALA"
+     * value: "JAVA"
      * @const
      */
-    "SCALA": "SCALA",
+    "JAVA": "JAVA",
 
     /**
-     * value: "PLAY"
+     * value: "JVM"
      * @const
      */
-    "PLAY": "PLAY",
+    "JVM": "JVM",
+
+    /**
+     * value: "NODE_JS"
+     * @const
+     */
+    "NODE_JS": "NODE_JS",
 
     /**
      * value: "PHP"
@@ -374,10 +356,22 @@ ApplicationResponse['BuildpackLanguageEnum'] = {
     "PHP": "PHP",
 
     /**
-     * value: "GO"
+     * value: "PLAY"
      * @const
      */
-    "GO": "GO"
+    "PLAY": "PLAY",
+
+    /**
+     * value: "PYTHON"
+     * @const
+     */
+    "PYTHON": "PYTHON",
+
+    /**
+     * value: "SCALA"
+     * @const
+     */
+    "SCALA": "SCALA"
 };
 
 

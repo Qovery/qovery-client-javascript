@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**createEnvironmentSecret**](EnvironmentSecretApi.md#createEnvironmentSecret) | **POST** /environment/{environmentId}/secret | Add a secret to the environment
 [**createEnvironmentSecretAlias**](EnvironmentSecretApi.md#createEnvironmentSecretAlias) | **POST** /environment/{environmentId}/secret/{secretId}/alias | Create a secret alias at the environment level
 [**createEnvironmentSecretOverride**](EnvironmentSecretApi.md#createEnvironmentSecretOverride) | **POST** /environment/{environmentId}/secret/{secretId}/override | Create a secret override at the environment level
+[**deleteEnvironmentSecret**](EnvironmentSecretApi.md#deleteEnvironmentSecret) | **DELETE** /environment/{environmentId}/secret/{secretId} | Delete a secret from the environment
 [**editEnvironmentSecret**](EnvironmentSecretApi.md#editEnvironmentSecret) | **PUT** /environment/{environmentId}/secret/{secretId} | Edit a secret belonging to the environment
-[**environmentEnvironmentIdSecretSecretIdDelete**](EnvironmentSecretApi.md#environmentEnvironmentIdSecretSecretIdDelete) | **DELETE** /environment/{environmentId}/secret/{secretId} | Delete a secret from the environment
 [**listEnvironmentSecrets**](EnvironmentSecretApi.md#listEnvironmentSecrets) | **GET** /environment/{environmentId}/secret | List environment secrets
 
 
@@ -176,6 +176,57 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## deleteEnvironmentSecret
+
+> deleteEnvironmentSecret(environmentId, secretId)
+
+Delete a secret from the environment
+
+- To delete a secret you must have the project user permission - You can&#39;t delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteEnvironmentSecret 
+
+### Example
+
+```javascript
+import BetaQoveryApi from '_beta_qovery_api';
+let defaultClient = BetaQoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
+let environmentId = "environmentId_example"; // String | Environment ID
+let secretId = "secretId_example"; // String | Secret ID
+apiInstance.deleteEnvironmentSecret(environmentId, secretId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **environmentId** | **String**| Environment ID | 
+ **secretId** | **String**| Secret ID | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
 ## editEnvironmentSecret
 
 > SecretResponse editEnvironmentSecret(environmentId, secretId, secretEditRequest)
@@ -227,57 +278,6 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json
 - **Accept**: application/json
-
-
-## environmentEnvironmentIdSecretSecretIdDelete
-
-> environmentEnvironmentIdSecretSecretIdDelete(environmentId, secretId)
-
-Delete a secret from the environment
-
-- To delete a secret you must have the project user permission - You can&#39;t delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteEnvironmentSecret 
-
-### Example
-
-```javascript
-import BetaQoveryApi from '_beta_qovery_api';
-let defaultClient = BetaQoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new BetaQoveryApi.EnvironmentSecretApi();
-let environmentId = "environmentId_example"; // String | Environment ID
-let secretId = "secretId_example"; // String | Secret ID
-apiInstance.environmentEnvironmentIdSecretSecretIdDelete(environmentId, secretId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **environmentId** | **String**| Environment ID | 
- **secretId** | **String**| Secret ID | 
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: Not defined
 
 
 ## listEnvironmentSecrets

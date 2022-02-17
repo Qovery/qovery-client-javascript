@@ -190,6 +190,54 @@ export default class EnvironmentSecretApi {
     }
 
     /**
+     * Callback function to receive the result of the deleteEnvironmentSecret operation.
+     * @callback module:api/EnvironmentSecretApi~deleteEnvironmentSecretCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a secret from the environment
+     * - To delete a secret you must have the project user permission - You can't delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteEnvironmentSecret 
+     * @param {String} environmentId Environment ID
+     * @param {String} secretId Secret ID
+     * @param {module:api/EnvironmentSecretApi~deleteEnvironmentSecretCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteEnvironmentSecret(environmentId, secretId, callback) {
+      let postBody = null;
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling deleteEnvironmentSecret");
+      }
+      // verify the required parameter 'secretId' is set
+      if (secretId === undefined || secretId === null) {
+        throw new Error("Missing the required parameter 'secretId' when calling deleteEnvironmentSecret");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId,
+        'secretId': secretId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/secret/{secretId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editEnvironmentSecret operation.
      * @callback module:api/EnvironmentSecretApi~editEnvironmentSecretCallback
      * @param {String} error Error message, if any.
@@ -238,54 +286,6 @@ export default class EnvironmentSecretApi {
       let returnType = SecretResponse;
       return this.apiClient.callApi(
         '/environment/{environmentId}/secret/{secretId}', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the environmentEnvironmentIdSecretSecretIdDelete operation.
-     * @callback module:api/EnvironmentSecretApi~environmentEnvironmentIdSecretSecretIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete a secret from the environment
-     * - To delete a secret you must have the project user permission - You can't delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well  operationId: deleteEnvironmentSecret 
-     * @param {String} environmentId Environment ID
-     * @param {String} secretId Secret ID
-     * @param {module:api/EnvironmentSecretApi~environmentEnvironmentIdSecretSecretIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    environmentEnvironmentIdSecretSecretIdDelete(environmentId, secretId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling environmentEnvironmentIdSecretSecretIdDelete");
-      }
-      // verify the required parameter 'secretId' is set
-      if (secretId === undefined || secretId === null) {
-        throw new Error("Missing the required parameter 'secretId' when calling environmentEnvironmentIdSecretSecretIdDelete");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId,
-        'secretId': secretId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/secret/{secretId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

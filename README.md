@@ -184,6 +184,7 @@ Class | Method | HTTP request | Description
 *BetaQoveryApi.BackupsApi* | [**removeDatabaseBackup**](docs/BackupsApi.md#removeDatabaseBackup) | **DELETE** /database/{databaseId}/backup/{backupId} | Remove database  backup
 *BetaQoveryApi.BillingApi* | [**addCreditCard**](docs/BillingApi.md#addCreditCard) | **POST** /organization/{organizationId}/creditCard | Add credit card
 *BetaQoveryApi.BillingApi* | [**addCreditCode**](docs/BillingApi.md#addCreditCode) | **POST** /organization/{organizationId}/creditCode | Add credit code
+*BetaQoveryApi.BillingApi* | [**deleteCreditCard**](docs/BillingApi.md#deleteCreditCard) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 *BetaQoveryApi.BillingApi* | [**editOrganizationBillingInfo**](docs/BillingApi.md#editOrganizationBillingInfo) | **PUT** /organization/{organizationId}/billingInfo | Edit Organization Billing Info
 *BetaQoveryApi.BillingApi* | [**getClusterCurrentCost**](docs/BillingApi.md#getClusterCurrentCost) | **GET** /organization/{organizationId}/cluster/{clusterId}/currentCost | Get cluster current cost
 *BetaQoveryApi.BillingApi* | [**getOrganizationBillingInfo**](docs/BillingApi.md#getOrganizationBillingInfo) | **GET** /organization/{organizationId}/billingInfo | Get organization billing info
@@ -194,7 +195,6 @@ Class | Method | HTTP request | Description
 *BetaQoveryApi.BillingApi* | [**listOrganizationCreditCards**](docs/BillingApi.md#listOrganizationCreditCards) | **GET** /organization/{organizationId}/creditCard | List organization credit cards
 *BetaQoveryApi.BillingApi* | [**listOrganizationInvoice**](docs/BillingApi.md#listOrganizationInvoice) | **GET** /organization/{organizationId}/invoice | List organization invoices
 *BetaQoveryApi.BillingApi* | [**organizationDownloadAllInvoices**](docs/BillingApi.md#organizationDownloadAllInvoices) | **POST** /organization/{organizationId}/downloadInvoices | Download all invoices
-*BetaQoveryApi.BillingApi* | [**organizationOrganizationIdCreditCardCreditCardIdDelete**](docs/BillingApi.md#organizationOrganizationIdCreditCardCreditCardIdDelete) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 *BetaQoveryApi.CloudProviderApi* | [**listAWSFeatures**](docs/CloudProviderApi.md#listAWSFeatures) | **GET** /aws/clusterFeature | List AWS features available
 *BetaQoveryApi.CloudProviderApi* | [**listAWSRegions**](docs/CloudProviderApi.md#listAWSRegions) | **GET** /aws/region | List AWS regions
 *BetaQoveryApi.CloudProviderApi* | [**listCloudProvider**](docs/CloudProviderApi.md#listCloudProvider) | **GET** /cloudProvider | List Cloud providers available
@@ -233,7 +233,6 @@ Class | Method | HTTP request | Description
 *BetaQoveryApi.CustomDomainApi* | [**editCustomDomain**](docs/CustomDomainApi.md#editCustomDomain) | **PUT** /application/{applicationId}/customDomain/{customDomainId} | Edit a Custom Domain
 *BetaQoveryApi.CustomDomainApi* | [**getCustomDomainStatus**](docs/CustomDomainApi.md#getCustomDomainStatus) | **GET** /application/{applicationId}/customDomain/{customDomainId}/status | Get Custom Domain status
 *BetaQoveryApi.CustomDomainApi* | [**listApplicationCustomDomain**](docs/CustomDomainApi.md#listApplicationCustomDomain) | **GET** /application/{applicationId}/customDomain | List application custom domains
-*BetaQoveryApi.DatabaseApi* | [**createLogicalDatabaseOnDatabase**](docs/DatabaseApi.md#createLogicalDatabaseOnDatabase) | **POST** /database/{databaseId}/logicalDatabase | Create a logical database on the database
 *BetaQoveryApi.DatabaseActionsApi* | [**deployDatabase**](docs/DatabaseActionsApi.md#deployDatabase) | **POST** /database/{databaseId}/deploy | Deploy database 
 *BetaQoveryApi.DatabaseActionsApi* | [**restartDatabase**](docs/DatabaseActionsApi.md#restartDatabase) | **POST** /database/{databaseId}/restart | Retart database
 *BetaQoveryApi.DatabaseActionsApi* | [**stopDatabase**](docs/DatabaseActionsApi.md#stopDatabase) | **POST** /database/{databaseId}/stop | Stop database
@@ -278,8 +277,8 @@ Class | Method | HTTP request | Description
 *BetaQoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecret**](docs/EnvironmentSecretApi.md#createEnvironmentSecret) | **POST** /environment/{environmentId}/secret | Add a secret to the environment
 *BetaQoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecretAlias**](docs/EnvironmentSecretApi.md#createEnvironmentSecretAlias) | **POST** /environment/{environmentId}/secret/{secretId}/alias | Create a secret alias at the environment level
 *BetaQoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecretOverride**](docs/EnvironmentSecretApi.md#createEnvironmentSecretOverride) | **POST** /environment/{environmentId}/secret/{secretId}/override | Create a secret override at the environment level
+*BetaQoveryApi.EnvironmentSecretApi* | [**deleteEnvironmentSecret**](docs/EnvironmentSecretApi.md#deleteEnvironmentSecret) | **DELETE** /environment/{environmentId}/secret/{secretId} | Delete a secret from the environment
 *BetaQoveryApi.EnvironmentSecretApi* | [**editEnvironmentSecret**](docs/EnvironmentSecretApi.md#editEnvironmentSecret) | **PUT** /environment/{environmentId}/secret/{secretId} | Edit a secret belonging to the environment
-*BetaQoveryApi.EnvironmentSecretApi* | [**environmentEnvironmentIdSecretSecretIdDelete**](docs/EnvironmentSecretApi.md#environmentEnvironmentIdSecretSecretIdDelete) | **DELETE** /environment/{environmentId}/secret/{secretId} | Delete a secret from the environment
 *BetaQoveryApi.EnvironmentSecretApi* | [**listEnvironmentSecrets**](docs/EnvironmentSecretApi.md#listEnvironmentSecrets) | **GET** /environment/{environmentId}/secret | List environment secrets
 *BetaQoveryApi.EnvironmentVariableApi* | [**createEnvironmentEnvironmentVariable**](docs/EnvironmentVariableApi.md#createEnvironmentEnvironmentVariable) | **POST** /environment/{environmentId}/environmentVariable | Add an environment variable to the environment
 *BetaQoveryApi.EnvironmentVariableApi* | [**createEnvironmentEnvironmentVariableAlias**](docs/EnvironmentVariableApi.md#createEnvironmentEnvironmentVariableAlias) | **POST** /environment/{environmentId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the environment level
@@ -298,6 +297,7 @@ Class | Method | HTTP request | Description
 *BetaQoveryApi.GitRepositoriesApi* | [**getGithubRepositoryBranches**](docs/GitRepositoriesApi.md#getGithubRepositoryBranches) | **GET** /account/github/repository/branch | Get github branches of the specified repository
 *BetaQoveryApi.GitRepositoriesApi* | [**getGitlabRepositories**](docs/GitRepositoriesApi.md#getGitlabRepositories) | **GET** /account/gitlab/repository | Get gitlab repositories of the connected user
 *BetaQoveryApi.GitRepositoriesApi* | [**getGitlabRepositoryBranches**](docs/GitRepositoriesApi.md#getGitlabRepositoryBranches) | **GET** /account/gitlab/repository/branch | Get gitlab branches of the specified repository
+*BetaQoveryApi.LogicalDatabaseApi* | [**createLogicalDatabaseOnDatabase**](docs/LogicalDatabaseApi.md#createLogicalDatabaseOnDatabase) | **POST** /database/{databaseId}/logicalDatabase | Create a logical database on the database
 *BetaQoveryApi.LogicalDatabaseApi* | [**deleteLogicalDatabase**](docs/LogicalDatabaseApi.md#deleteLogicalDatabase) | **DELETE** /logicalDatabase/{logicalDatabaseId} | Delete a Logical database
 *BetaQoveryApi.LogicalDatabaseApi* | [**editLogicalDatabase**](docs/LogicalDatabaseApi.md#editLogicalDatabase) | **PUT** /logicalDatabase/{logicalDatabaseId} | Edit a logical database
 *BetaQoveryApi.LogicalDatabaseApi* | [**editLogicalDatabaseCredentials**](docs/LogicalDatabaseApi.md#editLogicalDatabaseCredentials) | **PUT** /logicalDatabase/{logicalDatabaseId}/credentials | Edit logical database credentials
@@ -334,9 +334,9 @@ Class | Method | HTTP request | Description
 *BetaQoveryApi.ProjectSecretApi* | [**createProjectSecret**](docs/ProjectSecretApi.md#createProjectSecret) | **POST** /project/{projectId}/secret | Add a secret to the project
 *BetaQoveryApi.ProjectSecretApi* | [**createProjectSecretAlias**](docs/ProjectSecretApi.md#createProjectSecretAlias) | **POST** /project/{projectId}/secret/{secretId}/alias | Create a secret alias at the project level
 *BetaQoveryApi.ProjectSecretApi* | [**createProjectSecretOverride**](docs/ProjectSecretApi.md#createProjectSecretOverride) | **POST** /project/{projectId}/secret/{secretId}/override | Create a secret override at the project level
+*BetaQoveryApi.ProjectSecretApi* | [**deleteProjectSecret**](docs/ProjectSecretApi.md#deleteProjectSecret) | **DELETE** /project/{projectId}/secret/{secretId} | Delete a secret from a project
 *BetaQoveryApi.ProjectSecretApi* | [**editProjectSecret**](docs/ProjectSecretApi.md#editProjectSecret) | **PUT** /project/{projectId}/secret/{secretId} | Edit a secret belonging to the project
 *BetaQoveryApi.ProjectSecretApi* | [**listProjectSecrets**](docs/ProjectSecretApi.md#listProjectSecrets) | **GET** /project/{projectId}/secret | List project secrets
-*BetaQoveryApi.ProjectSecretApi* | [**projectProjectIdSecretSecretIdDelete**](docs/ProjectSecretApi.md#projectProjectIdSecretSecretIdDelete) | **DELETE** /project/{projectId}/secret/{secretId} | Delete a secret from a project
 *BetaQoveryApi.ProjectsApi* | [**createProject**](docs/ProjectsApi.md#createProject) | **POST** /organization/{organizationId}/project | Create a project
 *BetaQoveryApi.ProjectsApi* | [**getOrganizationProjectStats**](docs/ProjectsApi.md#getOrganizationProjectStats) | **GET** /organization/{organizationId}/project/stats | List total number of services and environments for each project of the organization
 *BetaQoveryApi.ProjectsApi* | [**listProject**](docs/ProjectsApi.md#listProject) | **GET** /organization/{organizationId}/project | List projects

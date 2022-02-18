@@ -7,14 +7,17 @@ Method | HTTP request | Description
 [**createDeploymentRule**](ProjectDeploymentRuleApi.md#createDeploymentRule) | **POST** /project/{projectId}/deploymentRule | Create a deployment rule
 [**deleteProjectDeploymentRule**](ProjectDeploymentRuleApi.md#deleteProjectDeploymentRule) | **DELETE** /project/{projectId}/deploymentRule/{deploymentRuleId} | Delete a project deployment rule
 [**editProjectDeployemtnRule**](ProjectDeploymentRuleApi.md#editProjectDeployemtnRule) | **PUT** /project/{projectId}/deploymentRule/{deploymentRuleId} | Edit a project deployment rule
-[**getProjectDeploymentRule**](ProjectDeploymentRuleApi.md#getProjectDeploymentRule) | **GET** /project/{projectId}/deploymentRule/{deploymentRuleId} | Get project deployment rule
-[**listProjectDeploymentRule**](ProjectDeploymentRuleApi.md#listProjectDeploymentRule) | **GET** /project/{projectId}/deploymentRule | List project deployment rules
+[**getProjectDeploymentRule**](ProjectDeploymentRuleApi.md#getProjectDeploymentRule) | **GET** /project/{projectId}/deploymentRule/{deploymentRuleId} | Get a project deployment rule
+[**listProjectDeploymentRules**](ProjectDeploymentRuleApi.md#listProjectDeploymentRules) | **GET** /project/{projectId}/deploymentRule | List project deployment rules
+[**updateDeploymentRulesPriorityOrder**](ProjectDeploymentRuleApi.md#updateDeploymentRulesPriorityOrder) | **PUT** /project/{projectId}/deploymentRule/order | Update deployment rules priority order
 
 
 
 ## createDeploymentRule
 
 > ProjectDeploymentRuleResponse createDeploymentRule(projectId, opts)
+
+Create a deployment rule
 
 Create a deployment rule
 
@@ -69,6 +72,8 @@ Name | Type | Description  | Notes
 
 Delete a project deployment rule
 
+Delete a project deployment rule
+
 ### Example
 
 ```javascript
@@ -115,6 +120,8 @@ null (empty response body)
 ## editProjectDeployemtnRule
 
 > ProjectDeploymentRuleResponse editProjectDeployemtnRule(projectId, deploymentRuleId, opts)
+
+Edit a project deployment rule
 
 Edit a project deployment rule
 
@@ -169,7 +176,9 @@ Name | Type | Description  | Notes
 
 > ProjectDeploymentRuleResponse getProjectDeploymentRule(projectId, deploymentRuleId)
 
-Get project deployment rule
+Get a project deployment rule
+
+Get a project deployment rule
 
 ### Example
 
@@ -214,9 +223,11 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## listProjectDeploymentRule
+## listProjectDeploymentRules
 
-> ProjectDeploymentRuleResponseList listProjectDeploymentRule(projectId)
+> ProjectDeploymentRuleResponseList listProjectDeploymentRules(projectId)
+
+List project deployment rules
 
 List project deployment rules
 
@@ -231,7 +242,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
 let projectId = "projectId_example"; // String | Project ID
-apiInstance.listProjectDeploymentRule(projectId, (error, data, response) => {
+apiInstance.listProjectDeploymentRules(projectId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -259,4 +270,57 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
+
+## updateDeploymentRulesPriorityOrder
+
+> updateDeploymentRulesPriorityOrder(projectId, opts)
+
+Update deployment rules priority order
+
+Update deployment rules priority order
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
+let projectId = "projectId_example"; // String | Project ID
+let opts = {
+  'inlineObject': new QoveryApi.InlineObject() // InlineObject | 
+};
+apiInstance.updateDeploymentRulesPriorityOrder(projectId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projectId** | **String**| Project ID | 
+ **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
 

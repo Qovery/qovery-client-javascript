@@ -175,6 +175,7 @@ docs/GitRepositoryBranchResponseList.md
 docs/GitRepositoryResponse.md
 docs/GitRepositoryResponseList.md
 docs/Healthcheck.md
+docs/InlineObject.md
 docs/InstanceResponse.md
 docs/InstanceResponseList.md
 docs/InviteMemberRequest.md
@@ -232,6 +233,7 @@ docs/ProjectDeploymentRuleResponse.md
 docs/ProjectDeploymentRuleResponseList.md
 docs/ProjectEnvironmentVariableApi.md
 docs/ProjectMainCallsApi.md
+docs/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.md
 docs/ProjectRequest.md
 docs/ProjectResponse.md
 docs/ProjectResponseList.md
@@ -457,6 +459,7 @@ src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponse.js
 src/model/GitRepositoryResponseList.js
 src/model/Healthcheck.js
+src/model/InlineObject.js
 src/model/InstanceResponse.js
 src/model/InstanceResponseList.js
 src/model/InviteMemberRequest.js
@@ -508,6 +511,7 @@ src/model/ProjectCurrentCostResponseList.js
 src/model/ProjectDeploymentRuleRequest.js
 src/model/ProjectDeploymentRuleResponse.js
 src/model/ProjectDeploymentRuleResponseList.js
+src/model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.js
 src/model/ProjectRequest.js
 src/model/ProjectResponse.js
 src/model/ProjectResponseList.js
@@ -725,6 +729,7 @@ test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponse.spec.js
 test/model/GitRepositoryResponseList.spec.js
 test/model/Healthcheck.spec.js
+test/model/InlineObject.spec.js
 test/model/InstanceResponse.spec.js
 test/model/InstanceResponseList.spec.js
 test/model/InviteMemberRequest.spec.js
@@ -776,6 +781,7 @@ test/model/ProjectCurrentCostResponseList.spec.js
 test/model/ProjectDeploymentRuleRequest.spec.js
 test/model/ProjectDeploymentRuleResponse.spec.js
 test/model/ProjectDeploymentRuleResponseList.spec.js
+test/model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.spec.js
 test/model/ProjectRequest.spec.js
 test/model/ProjectResponse.spec.js
 test/model/ProjectResponseList.spec.js

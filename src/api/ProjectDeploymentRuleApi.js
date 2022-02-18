@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import InlineObject from '../model/InlineObject';
 import ProjectDeploymentRuleRequest from '../model/ProjectDeploymentRuleRequest';
 import ProjectDeploymentRuleResponse from '../model/ProjectDeploymentRuleResponse';
 import ProjectDeploymentRuleResponseList from '../model/ProjectDeploymentRuleResponseList';
@@ -45,6 +46,7 @@ export default class ProjectDeploymentRuleApi {
      */
 
     /**
+     * Create a deployment rule
      * Create a deployment rule
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
@@ -90,6 +92,7 @@ export default class ProjectDeploymentRuleApi {
      */
 
     /**
+     * Delete a project deployment rule
      * Delete a project deployment rule
      * @param {String} projectId Project ID
      * @param {String} deploymentRuleId Deployment Rule ID
@@ -137,6 +140,7 @@ export default class ProjectDeploymentRuleApi {
      */
 
     /**
+     * Edit a project deployment rule
      * Edit a project deployment rule
      * @param {String} projectId Project ID
      * @param {String} deploymentRuleId Deployment Rule ID
@@ -188,7 +192,8 @@ export default class ProjectDeploymentRuleApi {
      */
 
     /**
-     * Get project deployment rule
+     * Get a project deployment rule
+     * Get a project deployment rule
      * @param {String} projectId Project ID
      * @param {String} deploymentRuleId Deployment Rule ID
      * @param {module:api/ProjectDeploymentRuleApi~getProjectDeploymentRuleCallback} callback The callback function, accepting three arguments: error, data, response
@@ -228,8 +233,8 @@ export default class ProjectDeploymentRuleApi {
     }
 
     /**
-     * Callback function to receive the result of the listProjectDeploymentRule operation.
-     * @callback module:api/ProjectDeploymentRuleApi~listProjectDeploymentRuleCallback
+     * Callback function to receive the result of the listProjectDeploymentRules operation.
+     * @callback module:api/ProjectDeploymentRuleApi~listProjectDeploymentRulesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ProjectDeploymentRuleResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -237,15 +242,16 @@ export default class ProjectDeploymentRuleApi {
 
     /**
      * List project deployment rules
+     * List project deployment rules
      * @param {String} projectId Project ID
-     * @param {module:api/ProjectDeploymentRuleApi~listProjectDeploymentRuleCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ProjectDeploymentRuleApi~listProjectDeploymentRulesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ProjectDeploymentRuleResponseList}
      */
-    listProjectDeploymentRule(projectId, callback) {
+    listProjectDeploymentRules(projectId, callback) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling listProjectDeploymentRule");
+        throw new Error("Missing the required parameter 'projectId' when calling listProjectDeploymentRules");
       }
 
       let pathParams = {
@@ -264,6 +270,51 @@ export default class ProjectDeploymentRuleApi {
       let returnType = ProjectDeploymentRuleResponseList;
       return this.apiClient.callApi(
         '/project/{projectId}/deploymentRule', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the updateDeploymentRulesPriorityOrder operation.
+     * @callback module:api/ProjectDeploymentRuleApi~updateDeploymentRulesPriorityOrderCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update deployment rules priority order
+     * Update deployment rules priority order
+     * @param {String} projectId Project ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject} opts.inlineObject 
+     * @param {module:api/ProjectDeploymentRuleApi~updateDeploymentRulesPriorityOrderCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    updateDeploymentRulesPriorityOrder(projectId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['inlineObject'];
+      // verify the required parameter 'projectId' is set
+      if (projectId === undefined || projectId === null) {
+        throw new Error("Missing the required parameter 'projectId' when calling updateDeploymentRulesPriorityOrder");
+      }
+
+      let pathParams = {
+        'projectId': projectId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/project/{projectId}/deploymentRule/order', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -151,6 +151,7 @@ import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponse
 import GitRepositoryResponse from './model/GitRepositoryResponse';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import Healthcheck from './model/Healthcheck';
+import InlineObject from './model/InlineObject';
 import InstanceResponse from './model/InstanceResponse';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMemberRequest from './model/InviteMemberRequest';
@@ -202,6 +203,7 @@ import ProjectCurrentCostResponseList from './model/ProjectCurrentCostResponseLi
 import ProjectDeploymentRuleRequest from './model/ProjectDeploymentRuleRequest';
 import ProjectDeploymentRuleResponse from './model/ProjectDeploymentRuleResponse';
 import ProjectDeploymentRuleResponseList from './model/ProjectDeploymentRuleResponseList';
+import ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder from './model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder';
 import ProjectRequest from './model/ProjectRequest';
 import ProjectResponse from './model/ProjectResponse';
 import ProjectResponseList from './model/ProjectResponseList';
@@ -1150,6 +1152,12 @@ export {
     Healthcheck,
 
     /**
+     * The InlineObject model constructor.
+     * @property {module:model/InlineObject}
+     */
+    InlineObject,
+
+    /**
      * The InstanceResponse model constructor.
      * @property {module:model/InstanceResponse}
      */
@@ -1454,6 +1462,12 @@ export {
      * @property {module:model/ProjectDeploymentRuleResponseList}
      */
     ProjectDeploymentRuleResponseList,
+
+    /**
+     * The ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder model constructor.
+     * @property {module:model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder}
+     */
+    ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder,
 
     /**
      * The ProjectRequest model constructor.

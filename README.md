@@ -320,8 +320,9 @@ Class | Method | HTTP request | Description
 *QoveryApi.ProjectDeploymentRuleApi* | [**createDeploymentRule**](docs/ProjectDeploymentRuleApi.md#createDeploymentRule) | **POST** /project/{projectId}/deploymentRule | Create a deployment rule
 *QoveryApi.ProjectDeploymentRuleApi* | [**deleteProjectDeploymentRule**](docs/ProjectDeploymentRuleApi.md#deleteProjectDeploymentRule) | **DELETE** /project/{projectId}/deploymentRule/{deploymentRuleId} | Delete a project deployment rule
 *QoveryApi.ProjectDeploymentRuleApi* | [**editProjectDeployemtnRule**](docs/ProjectDeploymentRuleApi.md#editProjectDeployemtnRule) | **PUT** /project/{projectId}/deploymentRule/{deploymentRuleId} | Edit a project deployment rule
-*QoveryApi.ProjectDeploymentRuleApi* | [**getProjectDeploymentRule**](docs/ProjectDeploymentRuleApi.md#getProjectDeploymentRule) | **GET** /project/{projectId}/deploymentRule/{deploymentRuleId} | Get project deployment rule
-*QoveryApi.ProjectDeploymentRuleApi* | [**listProjectDeploymentRule**](docs/ProjectDeploymentRuleApi.md#listProjectDeploymentRule) | **GET** /project/{projectId}/deploymentRule | List project deployment rules
+*QoveryApi.ProjectDeploymentRuleApi* | [**getProjectDeploymentRule**](docs/ProjectDeploymentRuleApi.md#getProjectDeploymentRule) | **GET** /project/{projectId}/deploymentRule/{deploymentRuleId} | Get a project deployment rule
+*QoveryApi.ProjectDeploymentRuleApi* | [**listProjectDeploymentRules**](docs/ProjectDeploymentRuleApi.md#listProjectDeploymentRules) | **GET** /project/{projectId}/deploymentRule | List project deployment rules
+*QoveryApi.ProjectDeploymentRuleApi* | [**updateDeploymentRulesPriorityOrder**](docs/ProjectDeploymentRuleApi.md#updateDeploymentRulesPriorityOrder) | **PUT** /project/{projectId}/deploymentRule/order | Update deployment rules priority order
 *QoveryApi.ProjectEnvironmentVariableApi* | [**createProjectEnvironmentVariable**](docs/ProjectEnvironmentVariableApi.md#createProjectEnvironmentVariable) | **POST** /project/{projectId}/environmentVariable | Add an environment variable to the project
 *QoveryApi.ProjectEnvironmentVariableApi* | [**createProjectEnvironmentVariableAlias**](docs/ProjectEnvironmentVariableApi.md#createProjectEnvironmentVariableAlias) | **POST** /project/{projectId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the project level
 *QoveryApi.ProjectEnvironmentVariableApi* | [**createProjectEnvironmentVariableOverride**](docs/ProjectEnvironmentVariableApi.md#createProjectEnvironmentVariableOverride) | **POST** /project/{projectId}/environmentVariable/{environmentVariableId}/override | Create an environment variable override at the project level
@@ -484,6 +485,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryResponse](docs/GitRepositoryResponse.md)
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
+ - [QoveryApi.InlineObject](docs/InlineObject.md)
  - [QoveryApi.InstanceResponse](docs/InstanceResponse.md)
  - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
  - [QoveryApi.InviteMemberRequest](docs/InviteMemberRequest.md)
@@ -535,6 +537,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ProjectDeploymentRuleRequest](docs/ProjectDeploymentRuleRequest.md)
  - [QoveryApi.ProjectDeploymentRuleResponse](docs/ProjectDeploymentRuleResponse.md)
  - [QoveryApi.ProjectDeploymentRuleResponseList](docs/ProjectDeploymentRuleResponseList.md)
+ - [QoveryApi.ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder](docs/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.md)
  - [QoveryApi.ProjectRequest](docs/ProjectRequest.md)
  - [QoveryApi.ProjectResponse](docs/ProjectResponse.md)
  - [QoveryApi.ProjectResponseList](docs/ProjectResponseList.md)

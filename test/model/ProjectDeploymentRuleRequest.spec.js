@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.ProjectDeploymentRuleRequest);
     });
 
-    it('should have the property environmentTarget (base name: "environment_target")', function() {
-      // uncomment below and update the code to test the property environmentTarget
-      //var instance = new QoveryApi.ProjectDeploymentRuleRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.ProjectDeploymentRuleRequest();
@@ -78,8 +72,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property cluster (base name: "cluster")', function() {
-      // uncomment below and update the code to test the property cluster
+    it('should have the property clusterId (base name: "cluster_id")', function() {
+      // uncomment below and update the code to test the property clusterId
       //var instance = new QoveryApi.ProjectDeploymentRuleRequest();
       //expect(instance).to.be();
     });
@@ -116,6 +110,12 @@
 
     it('should have the property weekdays (base name: "weekdays")', function() {
       // uncomment below and update the code to test the property weekdays
+      //var instance = new QoveryApi.ProjectDeploymentRuleRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property wildcard (base name: "wildcard")', function() {
+      // uncomment below and update the code to test the property wildcard
       //var instance = new QoveryApi.ProjectDeploymentRuleRequest();
       //expect(instance).to.be();
     });

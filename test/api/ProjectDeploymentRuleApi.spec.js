@@ -88,10 +88,20 @@
         done();
       });
     });
-    describe('listProjectDeploymentRule', function() {
-      it('should call listProjectDeploymentRule successfully', function(done) {
-        //uncomment below and update the code to test listProjectDeploymentRule
-        //instance.listProjectDeploymentRule(function(error) {
+    describe('listProjectDeploymentRules', function() {
+      it('should call listProjectDeploymentRules successfully', function(done) {
+        //uncomment below and update the code to test listProjectDeploymentRules
+        //instance.listProjectDeploymentRules(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('updateDeploymentRulesPriorityOrder', function() {
+      it('should call updateDeploymentRulesPriorityOrder successfully', function(done) {
+        //uncomment below and update the code to test updateDeploymentRulesPriorityOrder
+        //instance.updateDeploymentRulesPriorityOrder(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

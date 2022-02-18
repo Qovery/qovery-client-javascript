@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import DeploymentRuleRequest from './DeploymentRuleRequest';
 
 /**
  * The ProjectDeploymentRuleRequest model module.
@@ -23,15 +22,20 @@ class ProjectDeploymentRuleRequest {
     /**
      * Constructs a new <code>ProjectDeploymentRuleRequest</code>.
      * @alias module:model/ProjectDeploymentRuleRequest
-     * @implements module:model/DeploymentRuleRequest
      * @param name {String} name is case insensitive
      * @param mode {module:model/ProjectDeploymentRuleRequest.ModeEnum} 
-     * @param cluster {String} 
+     * @param clusterId {String} 
+     * @param autoDeploy {Boolean} 
      * @param autoStop {Boolean} 
+     * @param timezone {String} specify value only if auto_stop = false
+     * @param startTime {Date} specify value only if auto_stop = false
+     * @param stopTime {Date} specify value only if auto_stop = false
+     * @param weekdays {Array.<module:model/ProjectDeploymentRuleRequest.WeekdaysEnum>} specify value only if auto_stop = false
+     * @param wildcard {String} wildcard pattern composed of '?' and/or '*' used to target new created environments
      */
-    constructor(name, mode, cluster, autoStop) { 
-        DeploymentRuleRequest.initialize(this, name, mode, cluster, autoStop);
-        ProjectDeploymentRuleRequest.initialize(this, name, mode, cluster, autoStop);
+    constructor(name, mode, clusterId, autoDeploy, autoStop, timezone, startTime, stopTime, weekdays, wildcard) { 
+        
+        ProjectDeploymentRuleRequest.initialize(this, name, mode, clusterId, autoDeploy, autoStop, timezone, startTime, stopTime, weekdays, wildcard);
     }
 
     /**
@@ -39,12 +43,17 @@ class ProjectDeploymentRuleRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, mode, cluster, autoStop) { 
-        obj['environment_target'] = environmentTarget;
+    static initialize(obj, name, mode, clusterId, autoDeploy, autoStop, timezone, startTime, stopTime, weekdays, wildcard) { 
         obj['name'] = name;
         obj['mode'] = mode;
-        obj['cluster'] = cluster;
-        obj['auto_stop'] = autoStop || false;
+        obj['cluster_id'] = clusterId;
+        obj['auto_deploy'] = autoDeploy;
+        obj['auto_stop'] = autoStop;
+        obj['timezone'] = timezone || 'Europe/London';
+        obj['start_time'] = startTime;
+        obj['stop_time'] = stopTime;
+        obj['weekdays'] = weekdays;
+        obj['wildcard'] = wildcard;
     }
 
     /**
@@ -57,11 +66,7 @@ class ProjectDeploymentRuleRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ProjectDeploymentRuleRequest();
-            DeploymentRuleRequest.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('environment_target')) {
-                obj['environment_target'] = ApiClient.convertToType(data['environment_target'], 'String');
-            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -71,8 +76,8 @@ class ProjectDeploymentRuleRequest {
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
             }
-            if (data.hasOwnProperty('cluster')) {
-                obj['cluster'] = ApiClient.convertToType(data['cluster'], 'String');
+            if (data.hasOwnProperty('cluster_id')) {
+                obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
             }
             if (data.hasOwnProperty('auto_deploy')) {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
@@ -92,18 +97,15 @@ class ProjectDeploymentRuleRequest {
             if (data.hasOwnProperty('weekdays')) {
                 obj['weekdays'] = ApiClient.convertToType(data['weekdays'], ['String']);
             }
+            if (data.hasOwnProperty('wildcard')) {
+                obj['wildcard'] = ApiClient.convertToType(data['wildcard'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * specify here a wildcard based on environment name that will target new environments after their creation
- * @member {String} environment_target
- */
-ProjectDeploymentRuleRequest.prototype['environment_target'] = undefined;
 
 /**
  * name is case insensitive
@@ -122,21 +124,19 @@ ProjectDeploymentRuleRequest.prototype['description'] = undefined;
 ProjectDeploymentRuleRequest.prototype['mode'] = undefined;
 
 /**
- * @member {String} cluster
+ * @member {String} cluster_id
  */
-ProjectDeploymentRuleRequest.prototype['cluster'] = undefined;
+ProjectDeploymentRuleRequest.prototype['cluster_id'] = undefined;
 
 /**
  * @member {Boolean} auto_deploy
- * @default true
  */
-ProjectDeploymentRuleRequest.prototype['auto_deploy'] = true;
+ProjectDeploymentRuleRequest.prototype['auto_deploy'] = undefined;
 
 /**
  * @member {Boolean} auto_stop
- * @default false
  */
-ProjectDeploymentRuleRequest.prototype['auto_stop'] = false;
+ProjectDeploymentRuleRequest.prototype['auto_stop'] = undefined;
 
 /**
  * specify value only if auto_stop = false
@@ -163,56 +163,13 @@ ProjectDeploymentRuleRequest.prototype['stop_time'] = undefined;
  */
 ProjectDeploymentRuleRequest.prototype['weekdays'] = undefined;
 
+/**
+ * wildcard pattern composed of '?' and/or '*' used to target new created environments
+ * @member {String} wildcard
+ */
+ProjectDeploymentRuleRequest.prototype['wildcard'] = undefined;
 
-// Implement DeploymentRuleRequest interface:
-/**
- * name is case insensitive
- * @member {String} name
- */
-DeploymentRuleRequest.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-DeploymentRuleRequest.prototype['description'] = undefined;
-/**
- * @member {module:model/DeploymentRuleRequest.ModeEnum} mode
- */
-DeploymentRuleRequest.prototype['mode'] = undefined;
-/**
- * @member {String} cluster
- */
-DeploymentRuleRequest.prototype['cluster'] = undefined;
-/**
- * @member {Boolean} auto_deploy
- * @default true
- */
-DeploymentRuleRequest.prototype['auto_deploy'] = true;
-/**
- * @member {Boolean} auto_stop
- * @default false
- */
-DeploymentRuleRequest.prototype['auto_stop'] = false;
-/**
- * specify value only if auto_stop = false
- * @member {String} timezone
- * @default 'Europe/London'
- */
-DeploymentRuleRequest.prototype['timezone'] = 'Europe/London';
-/**
- * specify value only if auto_stop = false
- * @member {Date} start_time
- */
-DeploymentRuleRequest.prototype['start_time'] = undefined;
-/**
- * specify value only if auto_stop = false
- * @member {Date} stop_time
- */
-DeploymentRuleRequest.prototype['stop_time'] = undefined;
-/**
- * specify value only if auto_stop = false
- * @member {Array.<module:model/DeploymentRuleRequest.WeekdaysEnum>} weekdays
- */
-DeploymentRuleRequest.prototype['weekdays'] = undefined;
+
 
 
 

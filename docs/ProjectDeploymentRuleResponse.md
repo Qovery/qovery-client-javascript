@@ -4,19 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**priorityIndex** | **Number** | used to select the first deployment rule to match new created environments | [optional] 
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** | name is case insensitive | 
 **description** | **String** |  | [optional] 
 **mode** | **String** |  | 
-**cluster** | **String** |  | 
-**autoDeploy** | **Boolean** |  | [optional] [default to true]
-**autoStop** | **Boolean** |  | [default to false]
-**timezone** | **String** | specify value only if auto_stop &#x3D; false | [optional] [default to &#39;Europe/London&#39;]
-**startTime** | **Date** | specify value only if auto_stop &#x3D; false | [optional] 
-**stopTime** | **Date** | specify value only if auto_stop &#x3D; false | [optional] 
-**weekdays** | **[String]** | specify value only if auto_stop &#x3D; false | [optional] 
+**clusterId** | **String** |  | 
+**autoDeploy** | **Boolean** |  | 
+**autoStop** | **Boolean** |  | 
+**timezone** | **String** | specify value only if auto_stop &#x3D; false | [default to &#39;Europe/London&#39;]
+**startTime** | **Date** | specify value only if auto_stop &#x3D; false | 
+**stopTime** | **Date** | specify value only if auto_stop &#x3D; false | 
+**weekdays** | **[String]** | specify value only if auto_stop &#x3D; false | 
+**wildcard** | **String** | wildcard pattern composed of &#39;?&#39; and/or &#39;*&#39; used to target new created environments | 
 
 
 

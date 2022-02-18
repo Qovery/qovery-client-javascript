@@ -38,6 +38,10 @@ class EnvironmentDeploymentRuleResponse {
      * Only for internal use.
      */
     static initialize(obj, id, createdAt) { 
+        obj['timezone'] = timezone;
+        obj['start_time'] = startTime;
+        obj['stop_time'] = stopTime;
+        obj['weekdays'] = weekdays;
         obj['id'] = id;
         obj['created_at'] = createdAt;
     }
@@ -101,26 +105,21 @@ EnvironmentDeploymentRuleResponse.prototype['auto_deploy'] = true;
 EnvironmentDeploymentRuleResponse.prototype['auto_stop'] = false;
 
 /**
- * specify value only if auto_stop = false
  * @member {String} timezone
- * @default 'Europe/London'
  */
-EnvironmentDeploymentRuleResponse.prototype['timezone'] = 'Europe/London';
+EnvironmentDeploymentRuleResponse.prototype['timezone'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Date} start_time
  */
 EnvironmentDeploymentRuleResponse.prototype['start_time'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Date} stop_time
  */
 EnvironmentDeploymentRuleResponse.prototype['stop_time'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Array.<module:model/EnvironmentDeploymentRuleResponse.WeekdaysEnum>} weekdays
  */
 EnvironmentDeploymentRuleResponse.prototype['weekdays'] = undefined;

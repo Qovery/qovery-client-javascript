@@ -22,10 +22,14 @@ class EnvironmentDeploymentRuleEditRequest {
     /**
      * Constructs a new <code>EnvironmentDeploymentRuleEditRequest</code>.
      * @alias module:model/EnvironmentDeploymentRuleEditRequest
+     * @param timezone {String} 
+     * @param startTime {Date} 
+     * @param stopTime {Date} 
+     * @param weekdays {Array.<module:model/EnvironmentDeploymentRuleEditRequest.WeekdaysEnum>} 
      */
-    constructor() { 
+    constructor(timezone, startTime, stopTime, weekdays) { 
         
-        EnvironmentDeploymentRuleEditRequest.initialize(this);
+        EnvironmentDeploymentRuleEditRequest.initialize(this, timezone, startTime, stopTime, weekdays);
     }
 
     /**
@@ -33,7 +37,11 @@ class EnvironmentDeploymentRuleEditRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, timezone, startTime, stopTime, weekdays) { 
+        obj['timezone'] = timezone;
+        obj['start_time'] = startTime;
+        obj['stop_time'] = stopTime;
+        obj['weekdays'] = weekdays;
     }
 
     /**
@@ -94,26 +102,21 @@ EnvironmentDeploymentRuleEditRequest.prototype['auto_delete'] = false;
 EnvironmentDeploymentRuleEditRequest.prototype['auto_stop'] = false;
 
 /**
- * specify value only if auto_stop = false
  * @member {String} timezone
- * @default 'Europe/London'
  */
-EnvironmentDeploymentRuleEditRequest.prototype['timezone'] = 'Europe/London';
+EnvironmentDeploymentRuleEditRequest.prototype['timezone'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Date} start_time
  */
 EnvironmentDeploymentRuleEditRequest.prototype['start_time'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Date} stop_time
  */
 EnvironmentDeploymentRuleEditRequest.prototype['stop_time'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Array.<module:model/EnvironmentDeploymentRuleEditRequest.WeekdaysEnum>} weekdays
  */
 EnvironmentDeploymentRuleEditRequest.prototype['weekdays'] = undefined;

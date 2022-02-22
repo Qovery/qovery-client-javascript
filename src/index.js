@@ -18,6 +18,9 @@ import AccountInfoResponse from './model/AccountInfoResponse';
 import AliasedSecret from './model/AliasedSecret';
 import ApplicationCurrentScaleResponse from './model/ApplicationCurrentScaleResponse';
 import ApplicationDependencyRequest from './model/ApplicationDependencyRequest';
+import ApplicationDeploymentRestriction from './model/ApplicationDeploymentRestriction';
+import ApplicationDeploymentRuleEditRequest from './model/ApplicationDeploymentRuleEditRequest';
+import ApplicationDeploymentRuleResponse from './model/ApplicationDeploymentRuleResponse';
 import ApplicationEditRequest from './model/ApplicationEditRequest';
 import ApplicationGitRepositoryRequest from './model/ApplicationGitRepositoryRequest';
 import ApplicationGitRepositoryResponse from './model/ApplicationGitRepositoryResponse';
@@ -245,6 +248,7 @@ import ApplicationActionsApi from './api/ApplicationActionsApi';
 import ApplicationConfigurationApi from './api/ApplicationConfigurationApi';
 import ApplicationDatabaseApi from './api/ApplicationDatabaseApi';
 import ApplicationDeploymentHistoryApi from './api/ApplicationDeploymentHistoryApi';
+import ApplicationDeploymentRuleApi from './api/ApplicationDeploymentRuleApi';
 import ApplicationEnvironmentVariableApi from './api/ApplicationEnvironmentVariableApi';
 import ApplicationEventApi from './api/ApplicationEventApi';
 import ApplicationLogsApi from './api/ApplicationLogsApi';
@@ -352,6 +356,24 @@ export {
      * @property {module:model/ApplicationDependencyRequest}
      */
     ApplicationDependencyRequest,
+
+    /**
+     * The ApplicationDeploymentRestriction model constructor.
+     * @property {module:model/ApplicationDeploymentRestriction}
+     */
+    ApplicationDeploymentRestriction,
+
+    /**
+     * The ApplicationDeploymentRuleEditRequest model constructor.
+     * @property {module:model/ApplicationDeploymentRuleEditRequest}
+     */
+    ApplicationDeploymentRuleEditRequest,
+
+    /**
+     * The ApplicationDeploymentRuleResponse model constructor.
+     * @property {module:model/ApplicationDeploymentRuleResponse}
+     */
+    ApplicationDeploymentRuleResponse,
 
     /**
      * The ApplicationEditRequest model constructor.
@@ -1714,6 +1736,12 @@ export {
     * @property {module:api/ApplicationDeploymentHistoryApi}
     */
     ApplicationDeploymentHistoryApi,
+
+    /**
+    * The ApplicationDeploymentRuleApi service constructor.
+    * @property {module:api/ApplicationDeploymentRuleApi}
+    */
+    ApplicationDeploymentRuleApi,
 
     /**
     * The ApplicationEnvironmentVariableApi service constructor.

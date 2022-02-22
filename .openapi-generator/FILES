@@ -13,6 +13,10 @@ docs/ApplicationCurrentScaleResponse.md
 docs/ApplicationDatabaseApi.md
 docs/ApplicationDependencyRequest.md
 docs/ApplicationDeploymentHistoryApi.md
+docs/ApplicationDeploymentRestriction.md
+docs/ApplicationDeploymentRuleApi.md
+docs/ApplicationDeploymentRuleEditRequest.md
+docs/ApplicationDeploymentRuleResponse.md
 docs/ApplicationEditRequest.md
 docs/ApplicationEnvironmentVariableApi.md
 docs/ApplicationEventApi.md
@@ -282,6 +286,7 @@ src/api/ApplicationActionsApi.js
 src/api/ApplicationConfigurationApi.js
 src/api/ApplicationDatabaseApi.js
 src/api/ApplicationDeploymentHistoryApi.js
+src/api/ApplicationDeploymentRuleApi.js
 src/api/ApplicationEnvironmentVariableApi.js
 src/api/ApplicationEventApi.js
 src/api/ApplicationLogsApi.js
@@ -326,6 +331,9 @@ src/model/AccountInfoResponse.js
 src/model/AliasedSecret.js
 src/model/ApplicationCurrentScaleResponse.js
 src/model/ApplicationDependencyRequest.js
+src/model/ApplicationDeploymentRestriction.js
+src/model/ApplicationDeploymentRuleEditRequest.js
+src/model/ApplicationDeploymentRuleResponse.js
 src/model/ApplicationEditRequest.js
 src/model/ApplicationGitRepositoryRequest.js
 src/model/ApplicationGitRepositoryResponse.js
@@ -553,6 +561,7 @@ test/api/ApplicationActionsApi.spec.js
 test/api/ApplicationConfigurationApi.spec.js
 test/api/ApplicationDatabaseApi.spec.js
 test/api/ApplicationDeploymentHistoryApi.spec.js
+test/api/ApplicationDeploymentRuleApi.spec.js
 test/api/ApplicationEnvironmentVariableApi.spec.js
 test/api/ApplicationEventApi.spec.js
 test/api/ApplicationLogsApi.spec.js
@@ -596,6 +605,9 @@ test/model/AccountInfoResponse.spec.js
 test/model/AliasedSecret.spec.js
 test/model/ApplicationCurrentScaleResponse.spec.js
 test/model/ApplicationDependencyRequest.spec.js
+test/model/ApplicationDeploymentRestriction.spec.js
+test/model/ApplicationDeploymentRuleEditRequest.spec.js
+test/model/ApplicationDeploymentRuleResponse.spec.js
 test/model/ApplicationEditRequest.spec.js
 test/model/ApplicationGitRepositoryRequest.spec.js
 test/model/ApplicationGitRepositoryResponse.spec.js

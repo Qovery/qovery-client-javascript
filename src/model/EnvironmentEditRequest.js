@@ -50,6 +50,9 @@ class EnvironmentEditRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('mode')) {
+                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+            }
         }
         return obj;
     }
@@ -62,8 +65,47 @@ class EnvironmentEditRequest {
  */
 EnvironmentEditRequest.prototype['name'] = undefined;
 
+/**
+ * PREVIEW value is reserved for preview environments only
+ * @member {module:model/EnvironmentEditRequest.ModeEnum} mode
+ */
+EnvironmentEditRequest.prototype['mode'] = undefined;
 
 
+
+
+
+/**
+ * Allowed values for the <code>mode</code> property.
+ * @enum {String}
+ * @readonly
+ */
+EnvironmentEditRequest['ModeEnum'] = {
+
+    /**
+     * value: "DEVELOPMENT"
+     * @const
+     */
+    "DEVELOPMENT": "DEVELOPMENT",
+
+    /**
+     * value: "STAGING"
+     * @const
+     */
+    "STAGING": "STAGING",
+
+    /**
+     * value: "PRODUCTION"
+     * @const
+     */
+    "PRODUCTION": "PRODUCTION",
+
+    /**
+     * value: "PREVIEW"
+     * @const
+     */
+    "PREVIEW": "PREVIEW"
+};
 
 
 

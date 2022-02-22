@@ -12,22 +12,25 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **mode** | **String** |  | 
 **clusterId** | **String** |  | 
-**autoDeploy** | **Boolean** |  | 
-**autoStop** | **Boolean** |  | 
-**timezone** | **String** | specify value only if auto_stop &#x3D; false | [default to &#39;Europe/London&#39;]
-**startTime** | **Date** | specify value only if auto_stop &#x3D; false | 
-**stopTime** | **Date** | specify value only if auto_stop &#x3D; false | 
-**weekdays** | **[String]** | specify value only if auto_stop &#x3D; false | 
-**wildcard** | **String** | wildcard pattern composed of &#39;?&#39; and/or &#39;*&#39; used to target new created environments | 
+**autoDeploy** | **Boolean** |  | [optional] [default to false]
+**autoStop** | **Boolean** |  | [optional] [default to false]
+**autoDelete** | **Boolean** |  | [optional] [default to false]
+**timezone** | **String** |  | 
+**startTime** | **Date** |  | 
+**stopTime** | **Date** |  | 
+**weekdays** | **[String]** |  | 
+**wildcard** | **String** | wildcard pattern composed of &#39;?&#39; and/or &#39;*&#39; used to target new created environments | [default to &#39;&#39;]
 
 
 
 ## Enum: ModeEnum
 
 
-* `PRODUCTION` (value: `"PRODUCTION"`)
-
 * `DEVELOPMENT` (value: `"DEVELOPMENT"`)
+
+* `STAGING` (value: `"STAGING"`)
+
+* `PRODUCTION` (value: `"PRODUCTION"`)
 
 
 

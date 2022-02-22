@@ -25,17 +25,15 @@ class ProjectDeploymentRuleRequest {
      * @param name {String} name is case insensitive
      * @param mode {module:model/ProjectDeploymentRuleRequest.ModeEnum} 
      * @param clusterId {String} 
-     * @param autoDeploy {Boolean} 
-     * @param autoStop {Boolean} 
-     * @param timezone {String} specify value only if auto_stop = false
-     * @param startTime {Date} specify value only if auto_stop = false
-     * @param stopTime {Date} specify value only if auto_stop = false
-     * @param weekdays {Array.<module:model/ProjectDeploymentRuleRequest.WeekdaysEnum>} specify value only if auto_stop = false
+     * @param timezone {String} 
+     * @param startTime {Date} 
+     * @param stopTime {Date} 
+     * @param weekdays {Array.<module:model/ProjectDeploymentRuleRequest.WeekdaysEnum>} 
      * @param wildcard {String} wildcard pattern composed of '?' and/or '*' used to target new created environments
      */
-    constructor(name, mode, clusterId, autoDeploy, autoStop, timezone, startTime, stopTime, weekdays, wildcard) { 
+    constructor(name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard) { 
         
-        ProjectDeploymentRuleRequest.initialize(this, name, mode, clusterId, autoDeploy, autoStop, timezone, startTime, stopTime, weekdays, wildcard);
+        ProjectDeploymentRuleRequest.initialize(this, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard);
     }
 
     /**
@@ -43,17 +41,15 @@ class ProjectDeploymentRuleRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, mode, clusterId, autoDeploy, autoStop, timezone, startTime, stopTime, weekdays, wildcard) { 
+    static initialize(obj, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard) { 
         obj['name'] = name;
         obj['mode'] = mode;
         obj['cluster_id'] = clusterId;
-        obj['auto_deploy'] = autoDeploy;
-        obj['auto_stop'] = autoStop;
-        obj['timezone'] = timezone || 'Europe/London';
+        obj['timezone'] = timezone;
         obj['start_time'] = startTime;
         obj['stop_time'] = stopTime;
         obj['weekdays'] = weekdays;
-        obj['wildcard'] = wildcard;
+        obj['wildcard'] = wildcard || '';
     }
 
     /**
@@ -84,6 +80,9 @@ class ProjectDeploymentRuleRequest {
             }
             if (data.hasOwnProperty('auto_stop')) {
                 obj['auto_stop'] = ApiClient.convertToType(data['auto_stop'], 'Boolean');
+            }
+            if (data.hasOwnProperty('auto_delete')) {
+                obj['auto_delete'] = ApiClient.convertToType(data['auto_delete'], 'Boolean');
             }
             if (data.hasOwnProperty('timezone')) {
                 obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
@@ -130,35 +129,38 @@ ProjectDeploymentRuleRequest.prototype['cluster_id'] = undefined;
 
 /**
  * @member {Boolean} auto_deploy
+ * @default false
  */
-ProjectDeploymentRuleRequest.prototype['auto_deploy'] = undefined;
+ProjectDeploymentRuleRequest.prototype['auto_deploy'] = false;
 
 /**
  * @member {Boolean} auto_stop
+ * @default false
  */
-ProjectDeploymentRuleRequest.prototype['auto_stop'] = undefined;
+ProjectDeploymentRuleRequest.prototype['auto_stop'] = false;
 
 /**
- * specify value only if auto_stop = false
+ * @member {Boolean} auto_delete
+ * @default false
+ */
+ProjectDeploymentRuleRequest.prototype['auto_delete'] = false;
+
+/**
  * @member {String} timezone
- * @default 'Europe/London'
  */
-ProjectDeploymentRuleRequest.prototype['timezone'] = 'Europe/London';
+ProjectDeploymentRuleRequest.prototype['timezone'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Date} start_time
  */
 ProjectDeploymentRuleRequest.prototype['start_time'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Date} stop_time
  */
 ProjectDeploymentRuleRequest.prototype['stop_time'] = undefined;
 
 /**
- * specify value only if auto_stop = false
  * @member {Array.<module:model/ProjectDeploymentRuleRequest.WeekdaysEnum>} weekdays
  */
 ProjectDeploymentRuleRequest.prototype['weekdays'] = undefined;
@@ -166,8 +168,9 @@ ProjectDeploymentRuleRequest.prototype['weekdays'] = undefined;
 /**
  * wildcard pattern composed of '?' and/or '*' used to target new created environments
  * @member {String} wildcard
+ * @default ''
  */
-ProjectDeploymentRuleRequest.prototype['wildcard'] = undefined;
+ProjectDeploymentRuleRequest.prototype['wildcard'] = '';
 
 
 
@@ -181,16 +184,22 @@ ProjectDeploymentRuleRequest.prototype['wildcard'] = undefined;
 ProjectDeploymentRuleRequest['ModeEnum'] = {
 
     /**
-     * value: "PRODUCTION"
-     * @const
-     */
-    "PRODUCTION": "PRODUCTION",
-
-    /**
      * value: "DEVELOPMENT"
      * @const
      */
-    "DEVELOPMENT": "DEVELOPMENT"
+    "DEVELOPMENT": "DEVELOPMENT",
+
+    /**
+     * value: "STAGING"
+     * @const
+     */
+    "STAGING": "STAGING",
+
+    /**
+     * value: "PRODUCTION"
+     * @const
+     */
+    "PRODUCTION": "PRODUCTION"
 };
 
 

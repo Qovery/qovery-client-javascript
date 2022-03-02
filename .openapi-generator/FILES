@@ -163,6 +163,7 @@ docs/EnvironmentDeploymentRuleEditRequest.md
 docs/EnvironmentDeploymentRuleResponse.md
 docs/EnvironmentDeploymentRuleResponseAllOf.md
 docs/EnvironmentEditRequest.md
+docs/EnvironmentEnvironmentIdApplicationDeployApplications.md
 docs/EnvironmentLogPaginatedResponseList.md
 docs/EnvironmentLogPaginatedResponseListAllOf.md
 docs/EnvironmentLogResponse.md
@@ -204,6 +205,7 @@ docs/GitRepositoryResponse.md
 docs/GitRepositoryResponseList.md
 docs/Healthcheck.md
 docs/InlineObject.md
+docs/InlineObject1.md
 docs/InstanceResponse.md
 docs/InstanceResponseList.md
 docs/InviteMemberRequest.md
@@ -492,6 +494,7 @@ src/model/EnvironmentDeploymentRuleEditRequest.js
 src/model/EnvironmentDeploymentRuleResponse.js
 src/model/EnvironmentDeploymentRuleResponseAllOf.js
 src/model/EnvironmentEditRequest.js
+src/model/EnvironmentEnvironmentIdApplicationDeployApplications.js
 src/model/EnvironmentLogPaginatedResponseList.js
 src/model/EnvironmentLogPaginatedResponseListAllOf.js
 src/model/EnvironmentLogResponse.js
@@ -527,6 +530,7 @@ src/model/GitRepositoryResponse.js
 src/model/GitRepositoryResponseList.js
 src/model/Healthcheck.js
 src/model/InlineObject.js
+src/model/InlineObject1.js
 src/model/InstanceResponse.js
 src/model/InstanceResponseList.js
 src/model/InviteMemberRequest.js
@@ -801,6 +805,7 @@ test/model/EnvironmentDeploymentRuleEditRequest.spec.js
 test/model/EnvironmentDeploymentRuleResponse.spec.js
 test/model/EnvironmentDeploymentRuleResponseAllOf.spec.js
 test/model/EnvironmentEditRequest.spec.js
+test/model/EnvironmentEnvironmentIdApplicationDeployApplications.spec.js
 test/model/EnvironmentLogPaginatedResponseList.spec.js
 test/model/EnvironmentLogPaginatedResponseListAllOf.spec.js
 test/model/EnvironmentLogResponse.spec.js
@@ -836,6 +841,7 @@ test/model/GitRepositoryResponse.spec.js
 test/model/GitRepositoryResponseList.spec.js
 test/model/Healthcheck.spec.js
 test/model/InlineObject.spec.js
+test/model/InlineObject1.spec.js
 test/model/InstanceResponse.spec.js
 test/model/InstanceResponseList.spec.js
 test/model/InviteMemberRequest.spec.js

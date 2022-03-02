@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('deployAllApplications', function() {
+      it('should call deployAllApplications successfully', function(done) {
+        //uncomment below and update the code to test deployAllApplications
+        //instance.deployAllApplications(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEnvironmentApplicationCurrentInstance', function() {
       it('should call getEnvironmentApplicationCurrentInstance successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentApplicationCurrentInstance

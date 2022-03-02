@@ -144,6 +144,7 @@ import EnvironmentDeploymentRuleEditRequest from './model/EnvironmentDeploymentR
 import EnvironmentDeploymentRuleResponse from './model/EnvironmentDeploymentRuleResponse';
 import EnvironmentDeploymentRuleResponseAllOf from './model/EnvironmentDeploymentRuleResponseAllOf';
 import EnvironmentEditRequest from './model/EnvironmentEditRequest';
+import EnvironmentEnvironmentIdApplicationDeployApplications from './model/EnvironmentEnvironmentIdApplicationDeployApplications';
 import EnvironmentLogPaginatedResponseList from './model/EnvironmentLogPaginatedResponseList';
 import EnvironmentLogPaginatedResponseListAllOf from './model/EnvironmentLogPaginatedResponseListAllOf';
 import EnvironmentLogResponse from './model/EnvironmentLogResponse';
@@ -179,6 +180,7 @@ import GitRepositoryResponse from './model/GitRepositoryResponse';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import Healthcheck from './model/Healthcheck';
 import InlineObject from './model/InlineObject';
+import InlineObject1 from './model/InlineObject1';
 import InstanceResponse from './model/InstanceResponse';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMemberRequest from './model/InviteMemberRequest';
@@ -1149,6 +1151,12 @@ export {
     EnvironmentEditRequest,
 
     /**
+     * The EnvironmentEnvironmentIdApplicationDeployApplications model constructor.
+     * @property {module:model/EnvironmentEnvironmentIdApplicationDeployApplications}
+     */
+    EnvironmentEnvironmentIdApplicationDeployApplications,
+
+    /**
      * The EnvironmentLogPaginatedResponseList model constructor.
      * @property {module:model/EnvironmentLogPaginatedResponseList}
      */
@@ -1357,6 +1365,12 @@ export {
      * @property {module:model/InlineObject}
      */
     InlineObject,
+
+    /**
+     * The InlineObject1 model constructor.
+     * @property {module:model/InlineObject1}
+     */
+    InlineObject1,
 
     /**
      * The InstanceResponse model constructor.

@@ -175,6 +175,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**editApplicationSecret**](docs/ApplicationSecretApi.md#editApplicationSecret) | **PUT** /application/{applicationId}/secret/{secretId} | Edit a secret belonging to the application
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
+*QoveryApi.ApplicationsApi* | [**deployAllApplications**](docs/ApplicationsApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentInstance**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentInstance) | **GET** /environment/{environmentId}/application/instance | List running instances with CPU and RAM usage for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentStorage**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
@@ -480,6 +481,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentDeploymentRuleResponse](docs/EnvironmentDeploymentRuleResponse.md)
  - [QoveryApi.EnvironmentDeploymentRuleResponseAllOf](docs/EnvironmentDeploymentRuleResponseAllOf.md)
  - [QoveryApi.EnvironmentEditRequest](docs/EnvironmentEditRequest.md)
+ - [QoveryApi.EnvironmentEnvironmentIdApplicationDeployApplications](docs/EnvironmentEnvironmentIdApplicationDeployApplications.md)
  - [QoveryApi.EnvironmentLogPaginatedResponseList](docs/EnvironmentLogPaginatedResponseList.md)
  - [QoveryApi.EnvironmentLogPaginatedResponseListAllOf](docs/EnvironmentLogPaginatedResponseListAllOf.md)
  - [QoveryApi.EnvironmentLogResponse](docs/EnvironmentLogResponse.md)
@@ -515,6 +517,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
  - [QoveryApi.InlineObject](docs/InlineObject.md)
+ - [QoveryApi.InlineObject1](docs/InlineObject1.md)
  - [QoveryApi.InstanceResponse](docs/InstanceResponse.md)
  - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
  - [QoveryApi.InviteMemberRequest](docs/InviteMemberRequest.md)

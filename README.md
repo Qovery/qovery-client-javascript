@@ -315,6 +315,9 @@ Class | Method | HTTP request | Description
 *QoveryApi.MembersApi* | [**postAcceptInviteMember**](docs/MembersApi.md#postAcceptInviteMember) | **POST** /organization/{organizationId}/inviteMember/{inviteId} | Accept Invite in the organization
 *QoveryApi.MembersApi* | [**postInviteMember**](docs/MembersApi.md#postInviteMember) | **POST** /organization/{organizationId}/inviteMember | Invite someone in the organization
 *QoveryApi.MembersApi* | [**postOrganizationTransferOwnership**](docs/MembersApi.md#postOrganizationTransferOwnership) | **POST** /organization/{organizationId}/transferOwnership | Transfer organization ownership to another user
+*QoveryApi.OrganizationApiTokenApi* | [**createOrganizationApiToken**](docs/OrganizationApiTokenApi.md#createOrganizationApiToken) | **POST** /organization/{organizationId}/apiToken | Create an organization api token
+*QoveryApi.OrganizationApiTokenApi* | [**deleteOrganizationApiToken**](docs/OrganizationApiTokenApi.md#deleteOrganizationApiToken) | **DELETE** /organization/{organizationId}/apiToken/{apiTokenId} | Delete organization api token
+*QoveryApi.OrganizationApiTokenApi* | [**listOrganizationApiTokens**](docs/OrganizationApiTokenApi.md#listOrganizationApiTokens) | **GET** /organization/{organizationId}/apiToken | List organization api tokens
 *QoveryApi.OrganizationMainCallsApi* | [**createOrganization**](docs/OrganizationMainCallsApi.md#createOrganization) | **POST** /organization | Create an organization
 *QoveryApi.OrganizationMainCallsApi* | [**deleteOrganization**](docs/OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
 *QoveryApi.OrganizationMainCallsApi* | [**editOrganization**](docs/OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
@@ -559,6 +562,13 @@ Class | Method | HTTP request | Description
  - [QoveryApi.MetricStorageResponse](docs/MetricStorageResponse.md)
  - [QoveryApi.MetricStorageResponseList](docs/MetricStorageResponseList.md)
  - [QoveryApi.Name](docs/Name.md)
+ - [QoveryApi.OrganizationApiTokenCreateRequest](docs/OrganizationApiTokenCreateRequest.md)
+ - [QoveryApi.OrganizationApiTokenCreateResponse](docs/OrganizationApiTokenCreateResponse.md)
+ - [QoveryApi.OrganizationApiTokenCreateResponseAllOf](docs/OrganizationApiTokenCreateResponseAllOf.md)
+ - [QoveryApi.OrganizationApiTokenResponse](docs/OrganizationApiTokenResponse.md)
+ - [QoveryApi.OrganizationApiTokenResponseAllOf](docs/OrganizationApiTokenResponseAllOf.md)
+ - [QoveryApi.OrganizationApiTokenResponseList](docs/OrganizationApiTokenResponseList.md)
+ - [QoveryApi.OrganizationApiTokenScope](docs/OrganizationApiTokenScope.md)
  - [QoveryApi.OrganizationCreditCodeRequest](docs/OrganizationCreditCodeRequest.md)
  - [QoveryApi.OrganizationCurrentCostResponse](docs/OrganizationCurrentCostResponse.md)
  - [QoveryApi.OrganizationEditRequest](docs/OrganizationEditRequest.md)

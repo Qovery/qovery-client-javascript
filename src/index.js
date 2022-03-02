@@ -222,6 +222,13 @@ import MetricStorageDatapointResponseList from './model/MetricStorageDatapointRe
 import MetricStorageResponse from './model/MetricStorageResponse';
 import MetricStorageResponseList from './model/MetricStorageResponseList';
 import Name from './model/Name';
+import OrganizationApiTokenCreateRequest from './model/OrganizationApiTokenCreateRequest';
+import OrganizationApiTokenCreateResponse from './model/OrganizationApiTokenCreateResponse';
+import OrganizationApiTokenCreateResponseAllOf from './model/OrganizationApiTokenCreateResponseAllOf';
+import OrganizationApiTokenResponse from './model/OrganizationApiTokenResponse';
+import OrganizationApiTokenResponseAllOf from './model/OrganizationApiTokenResponseAllOf';
+import OrganizationApiTokenResponseList from './model/OrganizationApiTokenResponseList';
+import OrganizationApiTokenScope from './model/OrganizationApiTokenScope';
 import OrganizationCreditCodeRequest from './model/OrganizationCreditCodeRequest';
 import OrganizationCurrentCostResponse from './model/OrganizationCurrentCostResponse';
 import OrganizationEditRequest from './model/OrganizationEditRequest';
@@ -317,6 +324,7 @@ import EnvironmentsApi from './api/EnvironmentsApi';
 import GitRepositoriesApi from './api/GitRepositoriesApi';
 import LogicalDatabaseApi from './api/LogicalDatabaseApi';
 import MembersApi from './api/MembersApi';
+import OrganizationApiTokenApi from './api/OrganizationApiTokenApi';
 import OrganizationMainCallsApi from './api/OrganizationMainCallsApi';
 import ProjectDeploymentRuleApi from './api/ProjectDeploymentRuleApi';
 import ProjectEnvironmentVariableApi from './api/ProjectEnvironmentVariableApi';
@@ -1619,6 +1627,48 @@ export {
     Name,
 
     /**
+     * The OrganizationApiTokenCreateRequest model constructor.
+     * @property {module:model/OrganizationApiTokenCreateRequest}
+     */
+    OrganizationApiTokenCreateRequest,
+
+    /**
+     * The OrganizationApiTokenCreateResponse model constructor.
+     * @property {module:model/OrganizationApiTokenCreateResponse}
+     */
+    OrganizationApiTokenCreateResponse,
+
+    /**
+     * The OrganizationApiTokenCreateResponseAllOf model constructor.
+     * @property {module:model/OrganizationApiTokenCreateResponseAllOf}
+     */
+    OrganizationApiTokenCreateResponseAllOf,
+
+    /**
+     * The OrganizationApiTokenResponse model constructor.
+     * @property {module:model/OrganizationApiTokenResponse}
+     */
+    OrganizationApiTokenResponse,
+
+    /**
+     * The OrganizationApiTokenResponseAllOf model constructor.
+     * @property {module:model/OrganizationApiTokenResponseAllOf}
+     */
+    OrganizationApiTokenResponseAllOf,
+
+    /**
+     * The OrganizationApiTokenResponseList model constructor.
+     * @property {module:model/OrganizationApiTokenResponseList}
+     */
+    OrganizationApiTokenResponseList,
+
+    /**
+     * The OrganizationApiTokenScope model constructor.
+     * @property {module:model/OrganizationApiTokenScope}
+     */
+    OrganizationApiTokenScope,
+
+    /**
      * The OrganizationCreditCodeRequest model constructor.
      * @property {module:model/OrganizationCreditCodeRequest}
      */
@@ -2187,6 +2237,12 @@ export {
     * @property {module:api/MembersApi}
     */
     MembersApi,
+
+    /**
+    * The OrganizationApiTokenApi service constructor.
+    * @property {module:api/OrganizationApiTokenApi}
+    */
+    OrganizationApiTokenApi,
 
     /**
     * The OrganizationMainCallsApi service constructor.

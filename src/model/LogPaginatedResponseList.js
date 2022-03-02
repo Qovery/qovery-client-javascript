@@ -12,24 +12,26 @@
  */
 
 import ApiClient from '../ApiClient';
+import LogPaginatedResponseListAllOf from './LogPaginatedResponseListAllOf';
 import LogResponse from './LogResponse';
 import PaginationDataResponse from './PaginationDataResponse';
 
 /**
  * The LogPaginatedResponseList model module.
  * @module model/LogPaginatedResponseList
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class LogPaginatedResponseList {
     /**
      * Constructs a new <code>LogPaginatedResponseList</code>.
      * @alias module:model/LogPaginatedResponseList
      * @implements module:model/PaginationDataResponse
+     * @implements module:model/LogPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);
+        PaginationDataResponse.initialize(this, page, pageSize);LogPaginatedResponseListAllOf.initialize(this);
         LogPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -54,15 +56,16 @@ class LogPaginatedResponseList {
         if (data) {
             obj = obj || new LogPaginatedResponseList();
             PaginationDataResponse.constructFromObject(data, obj);
+            LogPaginatedResponseListAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [LogResponse]);
-            }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
             }
             if (data.hasOwnProperty('page_size')) {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
+            }
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [LogResponse]);
             }
         }
         return obj;
@@ -70,11 +73,6 @@ class LogPaginatedResponseList {
 
 
 }
-
-/**
- * @member {Array.<module:model/LogResponse>} results
- */
-LogPaginatedResponseList.prototype['results'] = undefined;
 
 /**
  * @member {Number} page
@@ -86,6 +84,11 @@ LogPaginatedResponseList.prototype['page'] = undefined;
  */
 LogPaginatedResponseList.prototype['page_size'] = undefined;
 
+/**
+ * @member {Array.<module:model/LogResponse>} results
+ */
+LogPaginatedResponseList.prototype['results'] = undefined;
+
 
 // Implement PaginationDataResponse interface:
 /**
@@ -96,6 +99,11 @@ PaginationDataResponse.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationDataResponse.prototype['page_size'] = undefined;
+// Implement LogPaginatedResponseListAllOf interface:
+/**
+ * @member {Array.<module:model/LogResponse>} results
+ */
+LogPaginatedResponseListAllOf.prototype['results'] = undefined;
 
 
 

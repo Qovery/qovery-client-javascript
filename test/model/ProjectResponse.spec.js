@@ -54,24 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.ProjectResponse);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ProjectResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.ProjectResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property organization (base name: "organization")', function() {
-      // uncomment below and update the code to test the property organization
-      //var instance = new QoveryApi.ProjectResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.ProjectResponse();
@@ -86,6 +68,24 @@
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.ProjectResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new QoveryApi.ProjectResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new QoveryApi.ProjectResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property organization (base name: "organization")', function() {
+      // uncomment below and update the code to test the property organization
       //var instance = new QoveryApi.ProjectResponse();
       //expect(instance).to.be();
     });

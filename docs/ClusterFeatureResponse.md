@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **valueType** | **String** |  | [optional] 
 **value** | **String** |  | [optional] 
 **isValueUpdatable** | **Boolean** |  | [optional] [default to false]
-**acceptedValues** | [**[AnyOfstringboolean]**](AnyOfstringboolean.md) |  | [optional] 
+**acceptedValues** | [**[OneOfstringboolean]**](OneOfstringboolean.md) |  | [optional] 
 
 
 

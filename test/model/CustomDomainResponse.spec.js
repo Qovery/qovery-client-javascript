@@ -54,18 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.CustomDomainResponse);
     });
 
-    it('should have the property validationDomain (base name: "validation_domain")', function() {
-      // uncomment below and update the code to test the property validationDomain
-      //var instance = new QoveryApi.CustomDomainResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.CustomDomainResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.CustomDomainResponse();
@@ -86,6 +74,18 @@
 
     it('should have the property domain (base name: "domain")', function() {
       // uncomment below and update the code to test the property domain
+      //var instance = new QoveryApi.CustomDomainResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property validationDomain (base name: "validation_domain")', function() {
+      // uncomment below and update the code to test the property validationDomain
+      //var instance = new QoveryApi.CustomDomainResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new QoveryApi.CustomDomainResponse();
       //expect(instance).to.be();
     });

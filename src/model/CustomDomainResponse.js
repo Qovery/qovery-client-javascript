@@ -14,11 +14,12 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import CustomDomainRequest from './CustomDomainRequest';
+import CustomDomainResponseAllOf from './CustomDomainResponseAllOf';
 
 /**
  * The CustomDomainResponse model module.
  * @module model/CustomDomainResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class CustomDomainResponse {
     /**
@@ -26,12 +27,13 @@ class CustomDomainResponse {
      * @alias module:model/CustomDomainResponse
      * @implements module:model/BaseResponse
      * @implements module:model/CustomDomainRequest
+     * @implements module:model/CustomDomainResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param domain {String} your custom domain
      */
     constructor(id, createdAt, domain) { 
-        BaseResponse.initialize(this, id, createdAt);CustomDomainRequest.initialize(this, domain);
+        BaseResponse.initialize(this, id, createdAt);CustomDomainRequest.initialize(this, domain);CustomDomainResponseAllOf.initialize(this);
         CustomDomainResponse.initialize(this, id, createdAt, domain);
     }
 
@@ -58,13 +60,8 @@ class CustomDomainResponse {
             obj = obj || new CustomDomainResponse();
             BaseResponse.constructFromObject(data, obj);
             CustomDomainRequest.constructFromObject(data, obj);
+            CustomDomainResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('validation_domain')) {
-                obj['validation_domain'] = ApiClient.convertToType(data['validation_domain'], 'String');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -77,23 +74,18 @@ class CustomDomainResponse {
             if (data.hasOwnProperty('domain')) {
                 obj['domain'] = ApiClient.convertToType(data['domain'], 'String');
             }
+            if (data.hasOwnProperty('validation_domain')) {
+                obj['validation_domain'] = ApiClient.convertToType(data['validation_domain'], 'String');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * URL provided by Qovery. You must create a CNAME on your DNS provider using that URL
- * @member {String} validation_domain
- */
-CustomDomainResponse.prototype['validation_domain'] = undefined;
-
-/**
- * @member {module:model/CustomDomainResponse.StatusEnum} status
- */
-CustomDomainResponse.prototype['status'] = undefined;
 
 /**
  * @member {String} id
@@ -116,6 +108,17 @@ CustomDomainResponse.prototype['updated_at'] = undefined;
  */
 CustomDomainResponse.prototype['domain'] = undefined;
 
+/**
+ * URL provided by Qovery. You must create a CNAME on your DNS provider using that URL
+ * @member {String} validation_domain
+ */
+CustomDomainResponse.prototype['validation_domain'] = undefined;
+
+/**
+ * @member {module:model/CustomDomainResponse.StatusEnum} status
+ */
+CustomDomainResponse.prototype['status'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -136,6 +139,16 @@ BaseResponse.prototype['updated_at'] = undefined;
  * @member {String} domain
  */
 CustomDomainRequest.prototype['domain'] = undefined;
+// Implement CustomDomainResponseAllOf interface:
+/**
+ * URL provided by Qovery. You must create a CNAME on your DNS provider using that URL
+ * @member {String} validation_domain
+ */
+CustomDomainResponseAllOf.prototype['validation_domain'] = undefined;
+/**
+ * @member {module:model/CustomDomainResponseAllOf.StatusEnum} status
+ */
+CustomDomainResponseAllOf.prototype['status'] = undefined;
 
 
 

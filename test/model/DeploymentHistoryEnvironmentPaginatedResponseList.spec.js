@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList);
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
-      //expect(instance).to.be();
-    });
-
     it('should have the property page (base name: "page")', function() {
       // uncomment below and update the code to test the property page
       //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
@@ -68,6 +62,12 @@
 
     it('should have the property pageSize (base name: "page_size")', function() {
       // uncomment below and update the code to test the property pageSize
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
       //var instance = new QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList();
       //expect(instance).to.be();
     });

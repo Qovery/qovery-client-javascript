@@ -29,7 +29,7 @@ import OrganizationCurrentCostResponse from '../model/OrganizationCurrentCostRes
 /**
 * Billing service.
 * @module api/BillingApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class BillingApi {
 

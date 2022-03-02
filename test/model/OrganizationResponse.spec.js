@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.OrganizationResponse);
     });
 
-    it('should have the property owner (base name: "owner")', function() {
-      // uncomment below and update the code to test the property owner
-      //var instance = new QoveryApi.OrganizationResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.OrganizationResponse();
@@ -116,6 +110,12 @@
 
     it('should have the property iconUrl (base name: "icon_url")', function() {
       // uncomment below and update the code to test the property iconUrl
+      //var instance = new QoveryApi.OrganizationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property owner (base name: "owner")', function() {
+      // uncomment below and update the code to test the property owner
       //var instance = new QoveryApi.OrganizationResponse();
       //expect(instance).to.be();
     });

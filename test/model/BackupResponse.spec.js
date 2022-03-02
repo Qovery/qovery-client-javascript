@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.BackupResponse);
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.BackupResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.BackupResponse();
@@ -86,6 +80,12 @@
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
+      //var instance = new QoveryApi.BackupResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new QoveryApi.BackupResponse();
       //expect(instance).to.be();
     });

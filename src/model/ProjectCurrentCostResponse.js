@@ -14,24 +14,26 @@
 import ApiClient from '../ApiClient';
 import CostResponse from './CostResponse';
 import GenericObjectCurrentCostResponse from './GenericObjectCurrentCostResponse';
+import ProjectCurrentCostResponseAllOf from './ProjectCurrentCostResponseAllOf';
 
 /**
  * The ProjectCurrentCostResponse model module.
  * @module model/ProjectCurrentCostResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ProjectCurrentCostResponse {
     /**
      * Constructs a new <code>ProjectCurrentCostResponse</code>.
      * @alias module:model/ProjectCurrentCostResponse
      * @implements module:model/GenericObjectCurrentCostResponse
+     * @implements module:model/ProjectCurrentCostResponseAllOf
      * @param id {String} 
      * @param name {String} 
      * @param consumedTimeInSeconds {Number} 
      * @param cost {module:model/CostResponse} 
      */
     constructor(id, name, consumedTimeInSeconds, cost) { 
-        GenericObjectCurrentCostResponse.initialize(this, id, name, consumedTimeInSeconds, cost);
+        GenericObjectCurrentCostResponse.initialize(this, id, name, consumedTimeInSeconds, cost);ProjectCurrentCostResponseAllOf.initialize(this);
         ProjectCurrentCostResponse.initialize(this, id, name, consumedTimeInSeconds, cost);
     }
 
@@ -58,10 +60,8 @@ class ProjectCurrentCostResponse {
         if (data) {
             obj = obj || new ProjectCurrentCostResponse();
             GenericObjectCurrentCostResponse.constructFromObject(data, obj);
+            ProjectCurrentCostResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('environments')) {
-                obj['environments'] = ApiClient.convertToType(data['environments'], [GenericObjectCurrentCostResponse]);
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -74,17 +74,15 @@ class ProjectCurrentCostResponse {
             if (data.hasOwnProperty('cost')) {
                 obj['cost'] = CostResponse.constructFromObject(data['cost']);
             }
+            if (data.hasOwnProperty('environments')) {
+                obj['environments'] = ApiClient.convertToType(data['environments'], [GenericObjectCurrentCostResponse]);
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {Array.<module:model/GenericObjectCurrentCostResponse>} environments
- */
-ProjectCurrentCostResponse.prototype['environments'] = undefined;
 
 /**
  * @member {String} id
@@ -106,6 +104,11 @@ ProjectCurrentCostResponse.prototype['consumed_time_in_seconds'] = undefined;
  */
 ProjectCurrentCostResponse.prototype['cost'] = undefined;
 
+/**
+ * @member {Array.<module:model/GenericObjectCurrentCostResponse>} environments
+ */
+ProjectCurrentCostResponse.prototype['environments'] = undefined;
+
 
 // Implement GenericObjectCurrentCostResponse interface:
 /**
@@ -124,6 +127,11 @@ GenericObjectCurrentCostResponse.prototype['consumed_time_in_seconds'] = undefin
  * @member {module:model/CostResponse} cost
  */
 GenericObjectCurrentCostResponse.prototype['cost'] = undefined;
+// Implement ProjectCurrentCostResponseAllOf interface:
+/**
+ * @member {Array.<module:model/GenericObjectCurrentCostResponse>} environments
+ */
+ProjectCurrentCostResponseAllOf.prototype['environments'] = undefined;
 
 
 

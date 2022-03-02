@@ -22,6 +22,7 @@ import ApplicationDeploymentRestriction from './model/ApplicationDeploymentRestr
 import ApplicationDeploymentRuleEditRequest from './model/ApplicationDeploymentRuleEditRequest';
 import ApplicationDeploymentRuleResponse from './model/ApplicationDeploymentRuleResponse';
 import ApplicationEditRequest from './model/ApplicationEditRequest';
+import ApplicationEditRequestAllOf from './model/ApplicationEditRequestAllOf';
 import ApplicationGitRepositoryRequest from './model/ApplicationGitRepositoryRequest';
 import ApplicationGitRepositoryResponse from './model/ApplicationGitRepositoryResponse';
 import ApplicationNetworkRequest from './model/ApplicationNetworkRequest';
@@ -31,7 +32,9 @@ import ApplicationPortRequestPorts from './model/ApplicationPortRequestPorts';
 import ApplicationPortResponse from './model/ApplicationPortResponse';
 import ApplicationPortResponsePorts from './model/ApplicationPortResponsePorts';
 import ApplicationRequest from './model/ApplicationRequest';
+import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponse from './model/ApplicationResponse';
+import ApplicationResponseAllOf from './model/ApplicationResponseAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
 import ApplicationStorageRequest from './model/ApplicationStorageRequest';
 import ApplicationStorageRequestStorage from './model/ApplicationStorageRequestStorage';
@@ -41,6 +44,7 @@ import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import BackupPaginatedResponseList from './model/BackupPaginatedResponseList';
 import BackupRequest from './model/BackupRequest';
 import BackupResponse from './model/BackupResponse';
+import BackupResponseAllOf from './model/BackupResponseAllOf';
 import BackupResponseList from './model/BackupResponseList';
 import BaseResponse from './model/BaseResponse';
 import BillingEnd from './model/BillingEnd';
@@ -51,6 +55,7 @@ import BillingStart from './model/BillingStart';
 import BillingStatus from './model/BillingStatus';
 import BudgetResponse from './model/BudgetResponse';
 import BudgetThreshold from './model/BudgetThreshold';
+import BuildPackLanguageEnum from './model/BuildPackLanguageEnum';
 import CloneRequest from './model/CloneRequest';
 import CloudProviderResponse from './model/CloudProviderResponse';
 import CloudProviderResponseList from './model/CloudProviderResponseList';
@@ -70,6 +75,7 @@ import ClusterRegionResponse from './model/ClusterRegionResponse';
 import ClusterRegionResponseList from './model/ClusterRegionResponseList';
 import ClusterRequest from './model/ClusterRequest';
 import ClusterResponse from './model/ClusterResponse';
+import ClusterResponseAllOf from './model/ClusterResponseAllOf';
 import ClusterResponseList from './model/ClusterResponseList';
 import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
 import ClusterRoutingTableRequestRoutes from './model/ClusterRoutingTableRequestRoutes';
@@ -78,6 +84,7 @@ import ClusterRoutingTableResponseResults from './model/ClusterRoutingTableRespo
 import ClusterStatusResponse from './model/ClusterStatusResponse';
 import ClusterStatusResponseList from './model/ClusterStatusResponseList';
 import CommitPaginatedResponseList from './model/CommitPaginatedResponseList';
+import CommitPaginatedResponseListAllOf from './model/CommitPaginatedResponseListAllOf';
 import CommitResponse from './model/CommitResponse';
 import CommitResponseList from './model/CommitResponseList';
 import CommunityUsage from './model/CommunityUsage';
@@ -93,6 +100,7 @@ import CreditCardResponseList from './model/CreditCardResponseList';
 import CurrentCost from './model/CurrentCost';
 import CustomDomainRequest from './model/CustomDomainRequest';
 import CustomDomainResponse from './model/CustomDomainResponse';
+import CustomDomainResponseAllOf from './model/CustomDomainResponseAllOf';
 import CustomDomainResponseList from './model/CustomDomainResponseList';
 import DatabaseConfigurationResponse from './model/DatabaseConfigurationResponse';
 import DatabaseConfigurationResponseList from './model/DatabaseConfigurationResponseList';
@@ -100,15 +108,22 @@ import DatabaseCurrentMetricResponse from './model/DatabaseCurrentMetricResponse
 import DatabaseEditRequest from './model/DatabaseEditRequest';
 import DatabaseRequest from './model/DatabaseRequest';
 import DatabaseResponse from './model/DatabaseResponse';
+import DatabaseResponseAllOf from './model/DatabaseResponseAllOf';
 import DatabaseResponseList from './model/DatabaseResponseList';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistoryApplicationResponse from './model/DeploymentHistoryApplicationResponse';
+import DeploymentHistoryApplicationResponseAllOf from './model/DeploymentHistoryApplicationResponseAllOf';
 import DeploymentHistoryDatabaseResponse from './model/DeploymentHistoryDatabaseResponse';
+import DeploymentHistoryDatabaseResponseAllOf from './model/DeploymentHistoryDatabaseResponseAllOf';
 import DeploymentHistoryEnvironmentPaginatedResponseList from './model/DeploymentHistoryEnvironmentPaginatedResponseList';
+import DeploymentHistoryEnvironmentPaginatedResponseListAllOf from './model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf';
 import DeploymentHistoryEnvironmentResponse from './model/DeploymentHistoryEnvironmentResponse';
+import DeploymentHistoryEnvironmentResponseAllOf from './model/DeploymentHistoryEnvironmentResponseAllOf';
 import DeploymentHistoryPaginatedResponseList from './model/DeploymentHistoryPaginatedResponseList';
+import DeploymentHistoryPaginatedResponseListAllOf from './model/DeploymentHistoryPaginatedResponseListAllOf';
 import DeploymentHistoryResponse from './model/DeploymentHistoryResponse';
+import DeploymentHistoryResponseAllOf from './model/DeploymentHistoryResponseAllOf';
 import DeploymentHistoryResponseList from './model/DeploymentHistoryResponseList';
 import DeploymentRuleRequest from './model/DeploymentRuleRequest';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
@@ -127,13 +142,17 @@ import EnvironmentDatabasesCurrentMetricResponseMemory from './model/Environment
 import EnvironmentDatabasesCurrentMetricResponseStorage from './model/EnvironmentDatabasesCurrentMetricResponseStorage';
 import EnvironmentDeploymentRuleEditRequest from './model/EnvironmentDeploymentRuleEditRequest';
 import EnvironmentDeploymentRuleResponse from './model/EnvironmentDeploymentRuleResponse';
+import EnvironmentDeploymentRuleResponseAllOf from './model/EnvironmentDeploymentRuleResponseAllOf';
 import EnvironmentEditRequest from './model/EnvironmentEditRequest';
 import EnvironmentLogPaginatedResponseList from './model/EnvironmentLogPaginatedResponseList';
+import EnvironmentLogPaginatedResponseListAllOf from './model/EnvironmentLogPaginatedResponseListAllOf';
 import EnvironmentLogResponse from './model/EnvironmentLogResponse';
 import EnvironmentLogResponseList from './model/EnvironmentLogResponseList';
 import EnvironmentLogResponseScope from './model/EnvironmentLogResponseScope';
 import EnvironmentRequest from './model/EnvironmentRequest';
 import EnvironmentResponse from './model/EnvironmentResponse';
+import EnvironmentResponseAllOf from './model/EnvironmentResponseAllOf';
+import EnvironmentResponseAllOfCloudProvider from './model/EnvironmentResponseAllOfCloudProvider';
 import EnvironmentResponseList from './model/EnvironmentResponseList';
 import EnvironmentRestartRequest from './model/EnvironmentRestartRequest';
 import EnvironmentStatsResponse from './model/EnvironmentStatsResponse';
@@ -142,9 +161,14 @@ import EnvironmentTotalNumber from './model/EnvironmentTotalNumber';
 import EnvironmentVariableEditRequest from './model/EnvironmentVariableEditRequest';
 import EnvironmentVariableRequest from './model/EnvironmentVariableRequest';
 import EnvironmentVariableResponse from './model/EnvironmentVariableResponse';
+import EnvironmentVariableResponseAllOf from './model/EnvironmentVariableResponseAllOf';
+import EnvironmentVariableResponseAllOfAliasedVariable from './model/EnvironmentVariableResponseAllOfAliasedVariable';
+import EnvironmentVariableResponseAllOfOverriddenVariable from './model/EnvironmentVariableResponseAllOfOverriddenVariable';
 import EnvironmentVariableResponseList from './model/EnvironmentVariableResponseList';
 import EventPaginatedResponseList from './model/EventPaginatedResponseList';
+import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListAllOf';
 import EventResponse from './model/EventResponse';
+import EventResponseAllOf from './model/EventResponseAllOf';
 import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCostResponse from './model/GenericObjectCurrentCostResponse';
 import GitAuthProviderResponse from './model/GitAuthProviderResponse';
@@ -159,19 +183,24 @@ import InstanceResponse from './model/InstanceResponse';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMemberRequest from './model/InviteMemberRequest';
 import InviteMemberResponse from './model/InviteMemberResponse';
+import InviteMemberResponseAllOf from './model/InviteMemberResponseAllOf';
 import InviteMemberResponseList from './model/InviteMemberResponseList';
 import InvoiceResponse from './model/InvoiceResponse';
+import InvoiceResponseAllOf from './model/InvoiceResponseAllOf';
 import InvoiceResponseList from './model/InvoiceResponseList';
 import Key from './model/Key';
 import LinkResponse from './model/LinkResponse';
 import LinkResponseList from './model/LinkResponseList';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
+import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
 import LogResponse from './model/LogResponse';
 import LogResponseList from './model/LogResponseList';
 import LogicalDatabaseRequest from './model/LogicalDatabaseRequest';
 import LogicalDatabaseResponse from './model/LogicalDatabaseResponse';
+import LogicalDatabaseResponseAllOf from './model/LogicalDatabaseResponseAllOf';
 import LogicalDatabaseResponseList from './model/LogicalDatabaseResponseList';
 import MemberResponse from './model/MemberResponse';
+import MemberResponseAllOf from './model/MemberResponseAllOf';
 import MemberResponseList from './model/MemberResponseList';
 import MetricCPUDatapointResponse from './model/MetricCPUDatapointResponse';
 import MetricCPUDatapointResponseList from './model/MetricCPUDatapointResponseList';
@@ -196,19 +225,23 @@ import OrganizationCurrentCostResponse from './model/OrganizationCurrentCostResp
 import OrganizationEditRequest from './model/OrganizationEditRequest';
 import OrganizationRequest from './model/OrganizationRequest';
 import OrganizationResponse from './model/OrganizationResponse';
+import OrganizationResponseAllOf from './model/OrganizationResponseAllOf';
 import OrganizationResponseList from './model/OrganizationResponseList';
 import OverriddenSecret from './model/OverriddenSecret';
 import PaginationDataResponse from './model/PaginationDataResponse';
 import PaidUsage from './model/PaidUsage';
 import PaidUsageResponse from './model/PaidUsageResponse';
 import ProjectCurrentCostResponse from './model/ProjectCurrentCostResponse';
+import ProjectCurrentCostResponseAllOf from './model/ProjectCurrentCostResponseAllOf';
 import ProjectCurrentCostResponseList from './model/ProjectCurrentCostResponseList';
 import ProjectDeploymentRuleRequest from './model/ProjectDeploymentRuleRequest';
 import ProjectDeploymentRuleResponse from './model/ProjectDeploymentRuleResponse';
+import ProjectDeploymentRuleResponseAllOf from './model/ProjectDeploymentRuleResponseAllOf';
 import ProjectDeploymentRuleResponseList from './model/ProjectDeploymentRuleResponseList';
 import ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder from './model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder';
 import ProjectRequest from './model/ProjectRequest';
 import ProjectResponse from './model/ProjectResponse';
+import ProjectResponseAllOf from './model/ProjectResponseAllOf';
 import ProjectResponseList from './model/ProjectResponseList';
 import ProjectStatsResponse from './model/ProjectStatsResponse';
 import ProjectStatsResponseList from './model/ProjectStatsResponseList';
@@ -222,8 +255,10 @@ import ScalewayCredentialsRequest from './model/ScalewayCredentialsRequest';
 import SecretEditRequest from './model/SecretEditRequest';
 import SecretRequest from './model/SecretRequest';
 import SecretResponse from './model/SecretResponse';
+import SecretResponseAllOf from './model/SecretResponseAllOf';
 import SecretResponseList from './model/SecretResponseList';
 import ServiceResponse from './model/ServiceResponse';
+import ServiceResponseAllOf from './model/ServiceResponseAllOf';
 import ServiceResponseList from './model/ServiceResponseList';
 import ServiceTotalNumber from './model/ServiceTotalNumber';
 import Status from './model/Status';
@@ -318,7 +353,7 @@ import ReferralRewardsApi from './api/ReferralRewardsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.3
+* @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
 */
 export {
     /**
@@ -382,6 +417,12 @@ export {
     ApplicationEditRequest,
 
     /**
+     * The ApplicationEditRequestAllOf model constructor.
+     * @property {module:model/ApplicationEditRequestAllOf}
+     */
+    ApplicationEditRequestAllOf,
+
+    /**
      * The ApplicationGitRepositoryRequest model constructor.
      * @property {module:model/ApplicationGitRepositoryRequest}
      */
@@ -436,10 +477,22 @@ export {
     ApplicationRequest,
 
     /**
+     * The ApplicationRequestAllOf model constructor.
+     * @property {module:model/ApplicationRequestAllOf}
+     */
+    ApplicationRequestAllOf,
+
+    /**
      * The ApplicationResponse model constructor.
      * @property {module:model/ApplicationResponse}
      */
     ApplicationResponse,
+
+    /**
+     * The ApplicationResponseAllOf model constructor.
+     * @property {module:model/ApplicationResponseAllOf}
+     */
+    ApplicationResponseAllOf,
 
     /**
      * The ApplicationResponseList model constructor.
@@ -494,6 +547,12 @@ export {
      * @property {module:model/BackupResponse}
      */
     BackupResponse,
+
+    /**
+     * The BackupResponseAllOf model constructor.
+     * @property {module:model/BackupResponseAllOf}
+     */
+    BackupResponseAllOf,
 
     /**
      * The BackupResponseList model constructor.
@@ -554,6 +613,12 @@ export {
      * @property {module:model/BudgetThreshold}
      */
     BudgetThreshold,
+
+    /**
+     * The BuildPackLanguageEnum model constructor.
+     * @property {module:model/BuildPackLanguageEnum}
+     */
+    BuildPackLanguageEnum,
 
     /**
      * The CloneRequest model constructor.
@@ -670,6 +735,12 @@ export {
     ClusterResponse,
 
     /**
+     * The ClusterResponseAllOf model constructor.
+     * @property {module:model/ClusterResponseAllOf}
+     */
+    ClusterResponseAllOf,
+
+    /**
      * The ClusterResponseList model constructor.
      * @property {module:model/ClusterResponseList}
      */
@@ -716,6 +787,12 @@ export {
      * @property {module:model/CommitPaginatedResponseList}
      */
     CommitPaginatedResponseList,
+
+    /**
+     * The CommitPaginatedResponseListAllOf model constructor.
+     * @property {module:model/CommitPaginatedResponseListAllOf}
+     */
+    CommitPaginatedResponseListAllOf,
 
     /**
      * The CommitResponse model constructor.
@@ -808,6 +885,12 @@ export {
     CustomDomainResponse,
 
     /**
+     * The CustomDomainResponseAllOf model constructor.
+     * @property {module:model/CustomDomainResponseAllOf}
+     */
+    CustomDomainResponseAllOf,
+
+    /**
      * The CustomDomainResponseList model constructor.
      * @property {module:model/CustomDomainResponseList}
      */
@@ -850,6 +933,12 @@ export {
     DatabaseResponse,
 
     /**
+     * The DatabaseResponseAllOf model constructor.
+     * @property {module:model/DatabaseResponseAllOf}
+     */
+    DatabaseResponseAllOf,
+
+    /**
      * The DatabaseResponseList model constructor.
      * @property {module:model/DatabaseResponseList}
      */
@@ -874,10 +963,22 @@ export {
     DeploymentHistoryApplicationResponse,
 
     /**
+     * The DeploymentHistoryApplicationResponseAllOf model constructor.
+     * @property {module:model/DeploymentHistoryApplicationResponseAllOf}
+     */
+    DeploymentHistoryApplicationResponseAllOf,
+
+    /**
      * The DeploymentHistoryDatabaseResponse model constructor.
      * @property {module:model/DeploymentHistoryDatabaseResponse}
      */
     DeploymentHistoryDatabaseResponse,
+
+    /**
+     * The DeploymentHistoryDatabaseResponseAllOf model constructor.
+     * @property {module:model/DeploymentHistoryDatabaseResponseAllOf}
+     */
+    DeploymentHistoryDatabaseResponseAllOf,
 
     /**
      * The DeploymentHistoryEnvironmentPaginatedResponseList model constructor.
@@ -886,10 +987,22 @@ export {
     DeploymentHistoryEnvironmentPaginatedResponseList,
 
     /**
+     * The DeploymentHistoryEnvironmentPaginatedResponseListAllOf model constructor.
+     * @property {module:model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf}
+     */
+    DeploymentHistoryEnvironmentPaginatedResponseListAllOf,
+
+    /**
      * The DeploymentHistoryEnvironmentResponse model constructor.
      * @property {module:model/DeploymentHistoryEnvironmentResponse}
      */
     DeploymentHistoryEnvironmentResponse,
+
+    /**
+     * The DeploymentHistoryEnvironmentResponseAllOf model constructor.
+     * @property {module:model/DeploymentHistoryEnvironmentResponseAllOf}
+     */
+    DeploymentHistoryEnvironmentResponseAllOf,
 
     /**
      * The DeploymentHistoryPaginatedResponseList model constructor.
@@ -898,10 +1011,22 @@ export {
     DeploymentHistoryPaginatedResponseList,
 
     /**
+     * The DeploymentHistoryPaginatedResponseListAllOf model constructor.
+     * @property {module:model/DeploymentHistoryPaginatedResponseListAllOf}
+     */
+    DeploymentHistoryPaginatedResponseListAllOf,
+
+    /**
      * The DeploymentHistoryResponse model constructor.
      * @property {module:model/DeploymentHistoryResponse}
      */
     DeploymentHistoryResponse,
+
+    /**
+     * The DeploymentHistoryResponseAllOf model constructor.
+     * @property {module:model/DeploymentHistoryResponseAllOf}
+     */
+    DeploymentHistoryResponseAllOf,
 
     /**
      * The DeploymentHistoryResponseList model constructor.
@@ -1012,6 +1137,12 @@ export {
     EnvironmentDeploymentRuleResponse,
 
     /**
+     * The EnvironmentDeploymentRuleResponseAllOf model constructor.
+     * @property {module:model/EnvironmentDeploymentRuleResponseAllOf}
+     */
+    EnvironmentDeploymentRuleResponseAllOf,
+
+    /**
      * The EnvironmentEditRequest model constructor.
      * @property {module:model/EnvironmentEditRequest}
      */
@@ -1022,6 +1153,12 @@ export {
      * @property {module:model/EnvironmentLogPaginatedResponseList}
      */
     EnvironmentLogPaginatedResponseList,
+
+    /**
+     * The EnvironmentLogPaginatedResponseListAllOf model constructor.
+     * @property {module:model/EnvironmentLogPaginatedResponseListAllOf}
+     */
+    EnvironmentLogPaginatedResponseListAllOf,
 
     /**
      * The EnvironmentLogResponse model constructor.
@@ -1052,6 +1189,18 @@ export {
      * @property {module:model/EnvironmentResponse}
      */
     EnvironmentResponse,
+
+    /**
+     * The EnvironmentResponseAllOf model constructor.
+     * @property {module:model/EnvironmentResponseAllOf}
+     */
+    EnvironmentResponseAllOf,
+
+    /**
+     * The EnvironmentResponseAllOfCloudProvider model constructor.
+     * @property {module:model/EnvironmentResponseAllOfCloudProvider}
+     */
+    EnvironmentResponseAllOfCloudProvider,
 
     /**
      * The EnvironmentResponseList model constructor.
@@ -1102,6 +1251,24 @@ export {
     EnvironmentVariableResponse,
 
     /**
+     * The EnvironmentVariableResponseAllOf model constructor.
+     * @property {module:model/EnvironmentVariableResponseAllOf}
+     */
+    EnvironmentVariableResponseAllOf,
+
+    /**
+     * The EnvironmentVariableResponseAllOfAliasedVariable model constructor.
+     * @property {module:model/EnvironmentVariableResponseAllOfAliasedVariable}
+     */
+    EnvironmentVariableResponseAllOfAliasedVariable,
+
+    /**
+     * The EnvironmentVariableResponseAllOfOverriddenVariable model constructor.
+     * @property {module:model/EnvironmentVariableResponseAllOfOverriddenVariable}
+     */
+    EnvironmentVariableResponseAllOfOverriddenVariable,
+
+    /**
      * The EnvironmentVariableResponseList model constructor.
      * @property {module:model/EnvironmentVariableResponseList}
      */
@@ -1114,10 +1281,22 @@ export {
     EventPaginatedResponseList,
 
     /**
+     * The EventPaginatedResponseListAllOf model constructor.
+     * @property {module:model/EventPaginatedResponseListAllOf}
+     */
+    EventPaginatedResponseListAllOf,
+
+    /**
      * The EventResponse model constructor.
      * @property {module:model/EventResponse}
      */
     EventResponse,
+
+    /**
+     * The EventResponseAllOf model constructor.
+     * @property {module:model/EventResponseAllOf}
+     */
+    EventResponseAllOf,
 
     /**
      * The EventResponseList model constructor.
@@ -1204,6 +1383,12 @@ export {
     InviteMemberResponse,
 
     /**
+     * The InviteMemberResponseAllOf model constructor.
+     * @property {module:model/InviteMemberResponseAllOf}
+     */
+    InviteMemberResponseAllOf,
+
+    /**
      * The InviteMemberResponseList model constructor.
      * @property {module:model/InviteMemberResponseList}
      */
@@ -1214,6 +1399,12 @@ export {
      * @property {module:model/InvoiceResponse}
      */
     InvoiceResponse,
+
+    /**
+     * The InvoiceResponseAllOf model constructor.
+     * @property {module:model/InvoiceResponseAllOf}
+     */
+    InvoiceResponseAllOf,
 
     /**
      * The InvoiceResponseList model constructor.
@@ -1246,6 +1437,12 @@ export {
     LogPaginatedResponseList,
 
     /**
+     * The LogPaginatedResponseListAllOf model constructor.
+     * @property {module:model/LogPaginatedResponseListAllOf}
+     */
+    LogPaginatedResponseListAllOf,
+
+    /**
      * The LogResponse model constructor.
      * @property {module:model/LogResponse}
      */
@@ -1270,6 +1467,12 @@ export {
     LogicalDatabaseResponse,
 
     /**
+     * The LogicalDatabaseResponseAllOf model constructor.
+     * @property {module:model/LogicalDatabaseResponseAllOf}
+     */
+    LogicalDatabaseResponseAllOf,
+
+    /**
      * The LogicalDatabaseResponseList model constructor.
      * @property {module:model/LogicalDatabaseResponseList}
      */
@@ -1280,6 +1483,12 @@ export {
      * @property {module:model/MemberResponse}
      */
     MemberResponse,
+
+    /**
+     * The MemberResponseAllOf model constructor.
+     * @property {module:model/MemberResponseAllOf}
+     */
+    MemberResponseAllOf,
 
     /**
      * The MemberResponseList model constructor.
@@ -1426,6 +1635,12 @@ export {
     OrganizationResponse,
 
     /**
+     * The OrganizationResponseAllOf model constructor.
+     * @property {module:model/OrganizationResponseAllOf}
+     */
+    OrganizationResponseAllOf,
+
+    /**
      * The OrganizationResponseList model constructor.
      * @property {module:model/OrganizationResponseList}
      */
@@ -1462,6 +1677,12 @@ export {
     ProjectCurrentCostResponse,
 
     /**
+     * The ProjectCurrentCostResponseAllOf model constructor.
+     * @property {module:model/ProjectCurrentCostResponseAllOf}
+     */
+    ProjectCurrentCostResponseAllOf,
+
+    /**
      * The ProjectCurrentCostResponseList model constructor.
      * @property {module:model/ProjectCurrentCostResponseList}
      */
@@ -1478,6 +1699,12 @@ export {
      * @property {module:model/ProjectDeploymentRuleResponse}
      */
     ProjectDeploymentRuleResponse,
+
+    /**
+     * The ProjectDeploymentRuleResponseAllOf model constructor.
+     * @property {module:model/ProjectDeploymentRuleResponseAllOf}
+     */
+    ProjectDeploymentRuleResponseAllOf,
 
     /**
      * The ProjectDeploymentRuleResponseList model constructor.
@@ -1502,6 +1729,12 @@ export {
      * @property {module:model/ProjectResponse}
      */
     ProjectResponse,
+
+    /**
+     * The ProjectResponseAllOf model constructor.
+     * @property {module:model/ProjectResponseAllOf}
+     */
+    ProjectResponseAllOf,
 
     /**
      * The ProjectResponseList model constructor.
@@ -1582,6 +1815,12 @@ export {
     SecretResponse,
 
     /**
+     * The SecretResponseAllOf model constructor.
+     * @property {module:model/SecretResponseAllOf}
+     */
+    SecretResponseAllOf,
+
+    /**
      * The SecretResponseList model constructor.
      * @property {module:model/SecretResponseList}
      */
@@ -1592,6 +1831,12 @@ export {
      * @property {module:model/ServiceResponse}
      */
     ServiceResponse,
+
+    /**
+     * The ServiceResponseAllOf model constructor.
+     * @property {module:model/ServiceResponseAllOf}
+     */
+    ServiceResponseAllOf,
 
     /**
      * The ServiceResponseList model constructor.

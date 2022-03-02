@@ -23,7 +23,7 @@ import Value from '../model/Value';
 /**
 * ApplicationSecret service.
 * @module api/ApplicationSecretApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class ApplicationSecretApi {
 

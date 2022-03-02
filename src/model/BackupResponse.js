@@ -13,13 +13,14 @@
 
 import ApiClient from '../ApiClient';
 import BackupRequest from './BackupRequest';
+import BackupResponseAllOf from './BackupResponseAllOf';
 import BaseResponse from './BaseResponse';
 import Status from './Status';
 
 /**
  * The BackupResponse model module.
  * @module model/BackupResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class BackupResponse {
     /**
@@ -27,13 +28,14 @@ class BackupResponse {
      * @alias module:model/BackupResponse
      * @implements module:model/BaseResponse
      * @implements module:model/BackupRequest
+     * @implements module:model/BackupResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} 
      * @param message {String} 
      */
     constructor(id, createdAt, name, message) { 
-        BaseResponse.initialize(this, id, createdAt);BackupRequest.initialize(this, name, message);
+        BaseResponse.initialize(this, id, createdAt);BackupRequest.initialize(this, name, message);BackupResponseAllOf.initialize(this);
         BackupResponse.initialize(this, id, createdAt, name, message);
     }
 
@@ -61,10 +63,8 @@ class BackupResponse {
             obj = obj || new BackupResponse();
             BaseResponse.constructFromObject(data, obj);
             BackupRequest.constructFromObject(data, obj);
+            BackupResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = Status.constructFromObject(data['status']);
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -80,17 +80,15 @@ class BackupResponse {
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = Status.constructFromObject(data['status']);
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:model/Status} status
- */
-BackupResponse.prototype['status'] = undefined;
 
 /**
  * @member {String} id
@@ -117,6 +115,11 @@ BackupResponse.prototype['name'] = undefined;
  */
 BackupResponse.prototype['message'] = undefined;
 
+/**
+ * @member {module:model/Status} status
+ */
+BackupResponse.prototype['status'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -140,6 +143,11 @@ BackupRequest.prototype['name'] = undefined;
  * @member {String} message
  */
 BackupRequest.prototype['message'] = undefined;
+// Implement BackupResponseAllOf interface:
+/**
+ * @member {module:model/Status} status
+ */
+BackupResponseAllOf.prototype['status'] = undefined;
 
 
 

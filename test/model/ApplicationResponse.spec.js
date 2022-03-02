@@ -54,6 +54,36 @@
       //expect(instance).to.be.a(QoveryApi.ApplicationResponse);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.ApplicationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.ApplicationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.ApplicationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property storage (base name: "storage")', function() {
+      // uncomment below and update the code to test the property storage
+      //var instance = new QoveryApi.ApplicationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ports (base name: "ports")', function() {
+      // uncomment below and update the code to test the property ports
+      //var instance = new QoveryApi.ApplicationResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
       //var instance = new QoveryApi.ApplicationResponse();
@@ -140,36 +170,6 @@
 
     it('should have the property autoPreview (base name: "auto_preview")', function() {
       // uncomment below and update the code to test the property autoPreview
-      //var instance = new QoveryApi.ApplicationResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ApplicationResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.ApplicationResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
-      //var instance = new QoveryApi.ApplicationResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property storage (base name: "storage")', function() {
-      // uncomment below and update the code to test the property storage
-      //var instance = new QoveryApi.ApplicationResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ports (base name: "ports")', function() {
-      // uncomment below and update the code to test the property ports
       //var instance = new QoveryApi.ApplicationResponse();
       //expect(instance).to.be();
     });

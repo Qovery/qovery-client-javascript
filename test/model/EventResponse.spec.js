@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(QoveryApi.EventResponse);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.EventResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.EventResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.EventResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property user (base name: "user")', function() {
       // uncomment below and update the code to test the property user
       //var instance = new QoveryApi.EventResponse();
@@ -80,24 +98,6 @@
 
     it('should have the property log (base name: "log")', function() {
       // uncomment below and update the code to test the property log
-      //var instance = new QoveryApi.EventResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.EventResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.EventResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
       //var instance = new QoveryApi.EventResponse();
       //expect(instance).to.be();
     });

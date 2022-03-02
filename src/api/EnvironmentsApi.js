@@ -22,7 +22,7 @@ import Status from '../model/Status';
 /**
 * Environments service.
 * @module api/EnvironmentsApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class EnvironmentsApi {
 

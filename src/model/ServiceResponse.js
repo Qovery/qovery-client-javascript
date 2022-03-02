@@ -13,22 +13,24 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import ServiceResponseAllOf from './ServiceResponseAllOf';
 
 /**
  * The ServiceResponse model module.
  * @module model/ServiceResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ServiceResponse {
     /**
      * Constructs a new <code>ServiceResponse</code>.
      * @alias module:model/ServiceResponse
      * @implements module:model/BaseResponse
-     * @param id {String} 
+     * @implements module:model/ServiceResponseAllOf
+     * @param id {String} uuid of the associated service (application, database, job, gateway...)
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
+        BaseResponse.initialize(this, id, createdAt);ServiceResponseAllOf.initialize(this, id);
         ServiceResponse.initialize(this, id, createdAt);
     }
 
@@ -53,15 +55,22 @@ class ServiceResponse {
         if (data) {
             obj = obj || new ServiceResponse();
             BaseResponse.constructFromObject(data, obj);
+            ServiceResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('deployed_commit_id')) {
                 obj['deployed_commit_id'] = ApiClient.convertToType(data['deployed_commit_id'], 'String');
@@ -81,18 +90,28 @@ class ServiceResponse {
             if (data.hasOwnProperty('to_update')) {
                 obj['to_update'] = ApiClient.convertToType(data['to_update'], 'Boolean');
             }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * uuid of the associated service (application, database, job, gateway...)
+ * @member {String} id
+ */
+ServiceResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+ServiceResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+ServiceResponse.prototype['updated_at'] = undefined;
 
 /**
  * type of the service (application, database, job, gateway...)
@@ -105,12 +124,6 @@ ServiceResponse.prototype['type'] = undefined;
  * @member {String} name
  */
 ServiceResponse.prototype['name'] = undefined;
-
-/**
- * uuid of the associated service (application, database, job, gateway...)
- * @member {String} id
- */
-ServiceResponse.prototype['id'] = undefined;
 
 /**
  * Git commit ID corresponding to the deployed version of the application
@@ -147,16 +160,6 @@ ServiceResponse.prototype['service_version'] = undefined;
  */
 ServiceResponse.prototype['to_update'] = undefined;
 
-/**
- * @member {Date} created_at
- */
-ServiceResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-ServiceResponse.prototype['updated_at'] = undefined;
-
 
 // Implement BaseResponse interface:
 /**
@@ -171,6 +174,51 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement ServiceResponseAllOf interface:
+/**
+ * type of the service (application, database, job, gateway...)
+ * @member {module:model/ServiceResponseAllOf.TypeEnum} type
+ */
+ServiceResponseAllOf.prototype['type'] = undefined;
+/**
+ * name of the service
+ * @member {String} name
+ */
+ServiceResponseAllOf.prototype['name'] = undefined;
+/**
+ * uuid of the associated service (application, database, job, gateway...)
+ * @member {String} id
+ */
+ServiceResponseAllOf.prototype['id'] = undefined;
+/**
+ * Git commit ID corresponding to the deployed version of the application
+ * @member {String} deployed_commit_id
+ */
+ServiceResponseAllOf.prototype['deployed_commit_id'] = undefined;
+/**
+ * uuid of the user that made the last update
+ * @member {String} last_updated_by
+ */
+ServiceResponseAllOf.prototype['last_updated_by'] = undefined;
+/**
+ * global overview of resources consumption of the service
+ * @member {Number} consumed_resources_in_percent
+ */
+ServiceResponseAllOf.prototype['consumed_resources_in_percent'] = undefined;
+/**
+ * describes the typology of service (container, postgresl, redis...)
+ * @member {String} service_typology
+ */
+ServiceResponseAllOf.prototype['service_typology'] = undefined;
+/**
+ * for databases this field exposes the database version
+ * @member {String} service_version
+ */
+ServiceResponseAllOf.prototype['service_version'] = undefined;
+/**
+ * @member {Boolean} to_update
+ */
+ServiceResponseAllOf.prototype['to_update'] = undefined;
 
 
 

@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.ProjectCurrentCostResponse);
     });
 
-    it('should have the property environments (base name: "environments")', function() {
-      // uncomment below and update the code to test the property environments
-      //var instance = new QoveryApi.ProjectCurrentCostResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.ProjectCurrentCostResponse();
@@ -80,6 +74,12 @@
 
     it('should have the property cost (base name: "cost")', function() {
       // uncomment below and update the code to test the property cost
+      //var instance = new QoveryApi.ProjectCurrentCostResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property environments (base name: "environments")', function() {
+      // uncomment below and update the code to test the property environments
       //var instance = new QoveryApi.ProjectCurrentCostResponse();
       //expect(instance).to.be();
     });

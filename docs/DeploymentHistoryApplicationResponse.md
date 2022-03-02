@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
-**commit** | [**CommitResponse**](CommitResponse.md) |  | [optional] 
-**status** | **String** |  | [optional] 
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
+**name** | **String** |  | [optional] 
+**commit** | [**CommitResponse**](CommitResponse.md) |  | [optional] 
+**status** | **String** |  | [optional] 
 
 
 

@@ -13,24 +13,31 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import EnvironmentResponseAllOf from './EnvironmentResponseAllOf';
+import EnvironmentResponseAllOfCloudProvider from './EnvironmentResponseAllOfCloudProvider';
 import ReferenceObject from './ReferenceObject';
 
 /**
  * The EnvironmentResponse model module.
  * @module model/EnvironmentResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class EnvironmentResponse {
     /**
      * Constructs a new <code>EnvironmentResponse</code>.
      * @alias module:model/EnvironmentResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/EnvironmentResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param name {String} name is case insensitive
+     * @param cloudProvider {module:model/EnvironmentResponseAllOfCloudProvider} 
+     * @param mode {module:model/EnvironmentResponse.ModeEnum} 
+     * @param clusterId {String} 
      */
-    constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
-        EnvironmentResponse.initialize(this, id, createdAt);
+    constructor(id, createdAt, name, cloudProvider, mode, clusterId) { 
+        BaseResponse.initialize(this, id, createdAt);EnvironmentResponseAllOf.initialize(this, name, cloudProvider, mode, clusterId);
+        EnvironmentResponse.initialize(this, id, createdAt, name, cloudProvider, mode, clusterId);
     }
 
     /**
@@ -38,13 +45,13 @@ class EnvironmentResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt) { 
+    static initialize(obj, id, createdAt, name, cloudProvider, mode, clusterId) { 
+        obj['id'] = id;
+        obj['created_at'] = createdAt;
         obj['name'] = name;
         obj['cloud_provider'] = cloudProvider;
         obj['mode'] = mode;
         obj['cluster_id'] = clusterId;
-        obj['id'] = id;
-        obj['created_at'] = createdAt;
     }
 
     /**
@@ -58,7 +65,17 @@ class EnvironmentResponse {
         if (data) {
             obj = obj || new EnvironmentResponse();
             BaseResponse.constructFromObject(data, obj);
+            EnvironmentResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -69,7 +86,7 @@ class EnvironmentResponse {
                 obj['last_updated_by'] = ApiClient.convertToType(data['last_updated_by'], 'String');
             }
             if (data.hasOwnProperty('cloud_provider')) {
-                obj['cloud_provider'] = ApiClient.convertToType(data['cloud_provider'], Object);
+                obj['cloud_provider'] = EnvironmentResponseAllOfCloudProvider.constructFromObject(data['cloud_provider']);
             }
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
@@ -77,21 +94,27 @@ class EnvironmentResponse {
             if (data.hasOwnProperty('cluster_id')) {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
             }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} id
+ */
+EnvironmentResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+EnvironmentResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+EnvironmentResponse.prototype['updated_at'] = undefined;
 
 /**
  * name is case insensitive
@@ -111,7 +134,7 @@ EnvironmentResponse.prototype['project'] = undefined;
 EnvironmentResponse.prototype['last_updated_by'] = undefined;
 
 /**
- * @member {Object} cloud_provider
+ * @member {module:model/EnvironmentResponseAllOfCloudProvider} cloud_provider
  */
 EnvironmentResponse.prototype['cloud_provider'] = undefined;
 
@@ -124,21 +147,6 @@ EnvironmentResponse.prototype['mode'] = undefined;
  * @member {String} cluster_id
  */
 EnvironmentResponse.prototype['cluster_id'] = undefined;
-
-/**
- * @member {String} id
- */
-EnvironmentResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-EnvironmentResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-EnvironmentResponse.prototype['updated_at'] = undefined;
 
 
 // Implement BaseResponse interface:
@@ -154,6 +162,33 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement EnvironmentResponseAllOf interface:
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+EnvironmentResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {module:model/ReferenceObject} project
+ */
+EnvironmentResponseAllOf.prototype['project'] = undefined;
+/**
+ * uuid of the user that made the last update
+ * @member {String} last_updated_by
+ */
+EnvironmentResponseAllOf.prototype['last_updated_by'] = undefined;
+/**
+ * @member {module:model/EnvironmentResponseAllOfCloudProvider} cloud_provider
+ */
+EnvironmentResponseAllOf.prototype['cloud_provider'] = undefined;
+/**
+ * @member {module:model/EnvironmentResponseAllOf.ModeEnum} mode
+ */
+EnvironmentResponseAllOf.prototype['mode'] = undefined;
+/**
+ * @member {String} cluster_id
+ */
+EnvironmentResponseAllOf.prototype['cluster_id'] = undefined;
 
 
 

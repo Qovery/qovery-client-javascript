@@ -54,6 +54,18 @@
       //expect(instance).to.be.a(QoveryApi.ApplicationRequest);
     });
 
+    it('should have the property storage (base name: "storage")', function() {
+      // uncomment below and update the code to test the property storage
+      //var instance = new QoveryApi.ApplicationRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ports (base name: "ports")', function() {
+      // uncomment below and update the code to test the property ports
+      //var instance = new QoveryApi.ApplicationRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.ApplicationRequest();
@@ -122,18 +134,6 @@
 
     it('should have the property autoPreview (base name: "auto_preview")', function() {
       // uncomment below and update the code to test the property autoPreview
-      //var instance = new QoveryApi.ApplicationRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property storage (base name: "storage")', function() {
-      // uncomment below and update the code to test the property storage
-      //var instance = new QoveryApi.ApplicationRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ports (base name: "ports")', function() {
-      // uncomment below and update the code to test the property ports
       //var instance = new QoveryApi.ApplicationRequest();
       //expect(instance).to.be();
     });

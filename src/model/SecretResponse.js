@@ -15,23 +15,26 @@ import ApiClient from '../ApiClient';
 import AliasedSecret from './AliasedSecret';
 import BaseResponse from './BaseResponse';
 import OverriddenSecret from './OverriddenSecret';
+import SecretResponseAllOf from './SecretResponseAllOf';
 
 /**
  * The SecretResponse model module.
  * @module model/SecretResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class SecretResponse {
     /**
      * Constructs a new <code>SecretResponse</code>.
      * @alias module:model/SecretResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/SecretResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param scope {module:model/SecretResponse.ScopeEnum} 
      */
-    constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
-        SecretResponse.initialize(this, id, createdAt);
+    constructor(id, createdAt, scope) { 
+        BaseResponse.initialize(this, id, createdAt);SecretResponseAllOf.initialize(this, scope);
+        SecretResponse.initialize(this, id, createdAt, scope);
     }
 
     /**
@@ -39,10 +42,10 @@ class SecretResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt) { 
-        obj['scope'] = scope;
+    static initialize(obj, id, createdAt, scope) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
+        obj['scope'] = scope;
     }
 
     /**
@@ -56,7 +59,17 @@ class SecretResponse {
         if (data) {
             obj = obj || new SecretResponse();
             BaseResponse.constructFromObject(data, obj);
+            SecretResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('key')) {
                 obj['key'] = ApiClient.convertToType(data['key'], 'String');
             }
@@ -69,21 +82,27 @@ class SecretResponse {
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
             }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} id
+ */
+SecretResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+SecretResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+SecretResponse.prototype['updated_at'] = undefined;
 
 /**
  * key is case sensitive
@@ -106,21 +125,6 @@ SecretResponse.prototype['aliased_secret'] = undefined;
  */
 SecretResponse.prototype['scope'] = undefined;
 
-/**
- * @member {String} id
- */
-SecretResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-SecretResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-SecretResponse.prototype['updated_at'] = undefined;
-
 
 // Implement BaseResponse interface:
 /**
@@ -135,6 +139,24 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement SecretResponseAllOf interface:
+/**
+ * key is case sensitive
+ * @member {String} key
+ */
+SecretResponseAllOf.prototype['key'] = undefined;
+/**
+ * @member {module:model/OverriddenSecret} overridden_secret
+ */
+SecretResponseAllOf.prototype['overridden_secret'] = undefined;
+/**
+ * @member {module:model/AliasedSecret} aliased_secret
+ */
+SecretResponseAllOf.prototype['aliased_secret'] = undefined;
+/**
+ * @member {module:model/SecretResponseAllOf.ScopeEnum} scope
+ */
+SecretResponseAllOf.prototype['scope'] = undefined;
 
 
 

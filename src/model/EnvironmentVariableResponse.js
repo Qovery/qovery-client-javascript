@@ -14,11 +14,14 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import EnvironmentVariableRequest from './EnvironmentVariableRequest';
+import EnvironmentVariableResponseAllOf from './EnvironmentVariableResponseAllOf';
+import EnvironmentVariableResponseAllOfAliasedVariable from './EnvironmentVariableResponseAllOfAliasedVariable';
+import EnvironmentVariableResponseAllOfOverriddenVariable from './EnvironmentVariableResponseAllOfOverriddenVariable';
 
 /**
  * The EnvironmentVariableResponse model module.
  * @module model/EnvironmentVariableResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class EnvironmentVariableResponse {
     /**
@@ -26,14 +29,16 @@ class EnvironmentVariableResponse {
      * @alias module:model/EnvironmentVariableResponse
      * @implements module:model/BaseResponse
      * @implements module:model/EnvironmentVariableRequest
+     * @implements module:model/EnvironmentVariableResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param key {String} key is case sensitive
      * @param value {String} value of the env variable.
+     * @param scope {module:model/EnvironmentVariableResponse.ScopeEnum} 
      */
-    constructor(id, createdAt, key, value) { 
-        BaseResponse.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key, value);
-        EnvironmentVariableResponse.initialize(this, id, createdAt, key, value);
+    constructor(id, createdAt, key, value, scope) { 
+        BaseResponse.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key, value);EnvironmentVariableResponseAllOf.initialize(this, scope);
+        EnvironmentVariableResponse.initialize(this, id, createdAt, key, value, scope);
     }
 
     /**
@@ -41,12 +46,12 @@ class EnvironmentVariableResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, key, value) { 
-        obj['scope'] = scope;
+    static initialize(obj, id, createdAt, key, value, scope) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['key'] = key;
         obj['value'] = value;
+        obj['scope'] = scope;
     }
 
     /**
@@ -61,19 +66,8 @@ class EnvironmentVariableResponse {
             obj = obj || new EnvironmentVariableResponse();
             BaseResponse.constructFromObject(data, obj);
             EnvironmentVariableRequest.constructFromObject(data, obj);
+            EnvironmentVariableResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('overridden_variable')) {
-                obj['overridden_variable'] = ApiClient.convertToType(data['overridden_variable'], Object);
-            }
-            if (data.hasOwnProperty('aliased_variable')) {
-                obj['aliased_variable'] = ApiClient.convertToType(data['aliased_variable'], Object);
-            }
-            if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
-            }
-            if (data.hasOwnProperty('service_name')) {
-                obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -89,32 +83,24 @@ class EnvironmentVariableResponse {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('overridden_variable')) {
+                obj['overridden_variable'] = EnvironmentVariableResponseAllOfOverriddenVariable.constructFromObject(data['overridden_variable']);
+            }
+            if (data.hasOwnProperty('aliased_variable')) {
+                obj['aliased_variable'] = EnvironmentVariableResponseAllOfAliasedVariable.constructFromObject(data['aliased_variable']);
+            }
+            if (data.hasOwnProperty('scope')) {
+                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+            }
+            if (data.hasOwnProperty('service_name')) {
+                obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {Object} overridden_variable
- */
-EnvironmentVariableResponse.prototype['overridden_variable'] = undefined;
-
-/**
- * @member {Object} aliased_variable
- */
-EnvironmentVariableResponse.prototype['aliased_variable'] = undefined;
-
-/**
- * @member {module:model/EnvironmentVariableResponse.ScopeEnum} scope
- */
-EnvironmentVariableResponse.prototype['scope'] = undefined;
-
-/**
- * @member {String} service_name
- */
-EnvironmentVariableResponse.prototype['service_name'] = undefined;
 
 /**
  * @member {String} id
@@ -143,6 +129,26 @@ EnvironmentVariableResponse.prototype['key'] = undefined;
  */
 EnvironmentVariableResponse.prototype['value'] = undefined;
 
+/**
+ * @member {module:model/EnvironmentVariableResponseAllOfOverriddenVariable} overridden_variable
+ */
+EnvironmentVariableResponse.prototype['overridden_variable'] = undefined;
+
+/**
+ * @member {module:model/EnvironmentVariableResponseAllOfAliasedVariable} aliased_variable
+ */
+EnvironmentVariableResponse.prototype['aliased_variable'] = undefined;
+
+/**
+ * @member {module:model/EnvironmentVariableResponse.ScopeEnum} scope
+ */
+EnvironmentVariableResponse.prototype['scope'] = undefined;
+
+/**
+ * @member {String} service_name
+ */
+EnvironmentVariableResponse.prototype['service_name'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -168,6 +174,23 @@ EnvironmentVariableRequest.prototype['key'] = undefined;
  * @member {String} value
  */
 EnvironmentVariableRequest.prototype['value'] = undefined;
+// Implement EnvironmentVariableResponseAllOf interface:
+/**
+ * @member {module:model/EnvironmentVariableResponseAllOfOverriddenVariable} overridden_variable
+ */
+EnvironmentVariableResponseAllOf.prototype['overridden_variable'] = undefined;
+/**
+ * @member {module:model/EnvironmentVariableResponseAllOfAliasedVariable} aliased_variable
+ */
+EnvironmentVariableResponseAllOf.prototype['aliased_variable'] = undefined;
+/**
+ * @member {module:model/EnvironmentVariableResponseAllOf.ScopeEnum} scope
+ */
+EnvironmentVariableResponseAllOf.prototype['scope'] = undefined;
+/**
+ * @member {String} service_name
+ */
+EnvironmentVariableResponseAllOf.prototype['service_name'] = undefined;
 
 
 

@@ -54,30 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.EnvironmentVariableResponse);
     });
 
-    it('should have the property overriddenVariable (base name: "overridden_variable")', function() {
-      // uncomment below and update the code to test the property overriddenVariable
-      //var instance = new QoveryApi.EnvironmentVariableResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property aliasedVariable (base name: "aliased_variable")', function() {
-      // uncomment below and update the code to test the property aliasedVariable
-      //var instance = new QoveryApi.EnvironmentVariableResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property scope (base name: "scope")', function() {
-      // uncomment below and update the code to test the property scope
-      //var instance = new QoveryApi.EnvironmentVariableResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property serviceName (base name: "service_name")', function() {
-      // uncomment below and update the code to test the property serviceName
-      //var instance = new QoveryApi.EnvironmentVariableResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.EnvironmentVariableResponse();
@@ -104,6 +80,30 @@
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property overriddenVariable (base name: "overridden_variable")', function() {
+      // uncomment below and update the code to test the property overriddenVariable
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property aliasedVariable (base name: "aliased_variable")', function() {
+      // uncomment below and update the code to test the property aliasedVariable
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scope (base name: "scope")', function() {
+      // uncomment below and update the code to test the property scope
+      //var instance = new QoveryApi.EnvironmentVariableResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property serviceName (base name: "service_name")', function() {
+      // uncomment below and update the code to test the property serviceName
       //var instance = new QoveryApi.EnvironmentVariableResponse();
       //expect(instance).to.be();
     });

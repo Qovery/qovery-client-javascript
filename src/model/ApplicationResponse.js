@@ -15,16 +15,18 @@ import ApiClient from '../ApiClient';
 import ApplicationGitRepositoryResponse from './ApplicationGitRepositoryResponse';
 import ApplicationPortResponse from './ApplicationPortResponse';
 import ApplicationPortResponsePorts from './ApplicationPortResponsePorts';
+import ApplicationResponseAllOf from './ApplicationResponseAllOf';
 import ApplicationStorageResponse from './ApplicationStorageResponse';
 import ApplicationStorageResponseStorage from './ApplicationStorageResponseStorage';
 import BaseResponse from './BaseResponse';
+import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 
 /**
  * The ApplicationResponse model module.
  * @module model/ApplicationResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ApplicationResponse {
     /**
@@ -33,11 +35,12 @@ class ApplicationResponse {
      * @implements module:model/BaseResponse
      * @implements module:model/ApplicationStorageResponse
      * @implements module:model/ApplicationPortResponse
+     * @implements module:model/ApplicationResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);ApplicationStorageResponse.initialize(this);ApplicationPortResponse.initialize(this);
+        BaseResponse.initialize(this, id, createdAt);ApplicationStorageResponse.initialize(this);ApplicationPortResponse.initialize(this);ApplicationResponseAllOf.initialize(this);
         ApplicationResponse.initialize(this, id, createdAt);
     }
 
@@ -64,7 +67,23 @@ class ApplicationResponse {
             BaseResponse.constructFromObject(data, obj);
             ApplicationStorageResponse.constructFromObject(data, obj);
             ApplicationPortResponse.constructFromObject(data, obj);
+            ApplicationResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
+            if (data.hasOwnProperty('storage')) {
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageResponseStorage]);
+            }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortResponsePorts]);
+            }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
@@ -90,7 +109,7 @@ class ApplicationResponse {
                 obj['dockerfile_path'] = ApiClient.convertToType(data['dockerfile_path'], 'String');
             }
             if (data.hasOwnProperty('buildpack_language')) {
-                obj['buildpack_language'] = ApiClient.convertToType(data['buildpack_language'], 'String');
+                obj['buildpack_language'] = BuildPackLanguageEnum.constructFromObject(data['buildpack_language']);
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -110,27 +129,37 @@ class ApplicationResponse {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
-            if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageResponseStorage]);
-            }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortResponsePorts]);
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} id
+ */
+ApplicationResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+ApplicationResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+ApplicationResponse.prototype['updated_at'] = undefined;
+
+/**
+ * @member {Array.<module:model/ApplicationStorageResponseStorage>} storage
+ */
+ApplicationResponse.prototype['storage'] = undefined;
+
+/**
+ * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
+ */
+ApplicationResponse.prototype['ports'] = undefined;
 
 /**
  * @member {module:model/ReferenceObject} environment
@@ -182,8 +211,7 @@ ApplicationResponse.prototype['build_mode'] = 'BUILDPACKS';
 ApplicationResponse.prototype['dockerfile_path'] = undefined;
 
 /**
- * Development language of the application
- * @member {module:model/ApplicationResponse.BuildpackLanguageEnum} buildpack_language
+ * @member {module:model/BuildPackLanguageEnum} buildpack_language
  */
 ApplicationResponse.prototype['buildpack_language'] = undefined;
 
@@ -227,31 +255,6 @@ ApplicationResponse.prototype['healthcheck'] = undefined;
  */
 ApplicationResponse.prototype['auto_preview'] = true;
 
-/**
- * @member {String} id
- */
-ApplicationResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-ApplicationResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-ApplicationResponse.prototype['updated_at'] = undefined;
-
-/**
- * @member {Array.<module:model/ApplicationStorageResponseStorage>} storage
- */
-ApplicationResponse.prototype['storage'] = undefined;
-
-/**
- * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
- */
-ApplicationResponse.prototype['ports'] = undefined;
-
 
 // Implement BaseResponse interface:
 /**
@@ -276,6 +279,86 @@ ApplicationStorageResponse.prototype['storage'] = undefined;
  * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
  */
 ApplicationPortResponse.prototype['ports'] = undefined;
+// Implement ApplicationResponseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+ApplicationResponseAllOf.prototype['environment'] = undefined;
+/**
+ * @member {module:model/ApplicationGitRepositoryResponse} git_repository
+ */
+ApplicationResponseAllOf.prototype['git_repository'] = undefined;
+/**
+ * Maximum cpu that can be allocated to the application based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ * @default 250
+ */
+ApplicationResponseAllOf.prototype['maximum_cpu'] = 250;
+/**
+ * Maximum memory that can be allocated to the application based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ * @default 256
+ */
+ApplicationResponseAllOf.prototype['maximum_memory'] = 256;
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+ApplicationResponseAllOf.prototype['name'] = undefined;
+/**
+ * give a description to this application
+ * @member {String} description
+ */
+ApplicationResponseAllOf.prototype['description'] = undefined;
+/**
+ * `DOCKER` requires `dockerfile_path` `BUILDPACKS` does not require any `dockerfile_path` 
+ * @member {module:model/ApplicationResponseAllOf.BuildModeEnum} build_mode
+ * @default 'BUILDPACKS'
+ */
+ApplicationResponseAllOf.prototype['build_mode'] = 'BUILDPACKS';
+/**
+ * The path of the associated Dockerfile. Only if you are using build_mode = DOCKER
+ * @member {String} dockerfile_path
+ */
+ApplicationResponseAllOf.prototype['dockerfile_path'] = undefined;
+/**
+ * @member {module:model/BuildPackLanguageEnum} buildpack_language
+ */
+ApplicationResponseAllOf.prototype['buildpack_language'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ * @default 250
+ */
+ApplicationResponseAllOf.prototype['cpu'] = 250;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ * @default 256
+ */
+ApplicationResponseAllOf.prototype['memory'] = 256;
+/**
+ * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
+ * @member {Number} min_running_instances
+ * @default 1
+ */
+ApplicationResponseAllOf.prototype['min_running_instances'] = 1;
+/**
+ * Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
+ * @member {Number} max_running_instances
+ * @default 1
+ */
+ApplicationResponseAllOf.prototype['max_running_instances'] = 1;
+/**
+ * @member {module:model/Healthcheck} healthcheck
+ */
+ApplicationResponseAllOf.prototype['healthcheck'] = undefined;
+/**
+ * Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request. 
+ * @member {Boolean} auto_preview
+ * @default true
+ */
+ApplicationResponseAllOf.prototype['auto_preview'] = true;
 
 
 
@@ -297,81 +380,6 @@ ApplicationResponse['BuildModeEnum'] = {
      * @const
      */
     "BUILDPACKS": "BUILDPACKS"
-};
-
-
-/**
- * Allowed values for the <code>buildpack_language</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationResponse['BuildpackLanguageEnum'] = {
-
-    /**
-     * value: "CLOJURE"
-     * @const
-     */
-    "CLOJURE": "CLOJURE",
-
-    /**
-     * value: "GO"
-     * @const
-     */
-    "GO": "GO",
-
-    /**
-     * value: "GRADLE"
-     * @const
-     */
-    "GRADLE": "GRADLE",
-
-    /**
-     * value: "GRAILS"
-     * @const
-     */
-    "GRAILS": "GRAILS",
-
-    /**
-     * value: "JAVA"
-     * @const
-     */
-    "JAVA": "JAVA",
-
-    /**
-     * value: "JVM"
-     * @const
-     */
-    "JVM": "JVM",
-
-    /**
-     * value: "NODE_JS"
-     * @const
-     */
-    "NODE_JS": "NODE_JS",
-
-    /**
-     * value: "PHP"
-     * @const
-     */
-    "PHP": "PHP",
-
-    /**
-     * value: "PLAY"
-     * @const
-     */
-    "PLAY": "PLAY",
-
-    /**
-     * value: "PYTHON"
-     * @const
-     */
-    "PYTHON": "PYTHON",
-
-    /**
-     * value: "SCALA"
-     * @const
-     */
-    "SCALA": "SCALA"
 };
 
 

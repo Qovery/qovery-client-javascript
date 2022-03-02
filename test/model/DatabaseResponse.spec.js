@@ -54,42 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.DatabaseResponse);
     });
 
-    it('should have the property environment (base name: "environment")', function() {
-      // uncomment below and update the code to test the property environment
-      //var instance = new QoveryApi.DatabaseResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property host (base name: "host")', function() {
-      // uncomment below and update the code to test the property host
-      //var instance = new QoveryApi.DatabaseResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property port (base name: "port")', function() {
-      // uncomment below and update the code to test the property port
-      //var instance = new QoveryApi.DatabaseResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property maximumCpu (base name: "maximum_cpu")', function() {
-      // uncomment below and update the code to test the property maximumCpu
-      //var instance = new QoveryApi.DatabaseResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property maximumMemory (base name: "maximum_memory")', function() {
-      // uncomment below and update the code to test the property maximumMemory
-      //var instance = new QoveryApi.DatabaseResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property diskEncrypted (base name: "disk_encrypted")', function() {
-      // uncomment below and update the code to test the property diskEncrypted
-      //var instance = new QoveryApi.DatabaseResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.DatabaseResponse();
@@ -152,6 +116,42 @@
 
     it('should have the property storage (base name: "storage")', function() {
       // uncomment below and update the code to test the property storage
+      //var instance = new QoveryApi.DatabaseResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property environment (base name: "environment")', function() {
+      // uncomment below and update the code to test the property environment
+      //var instance = new QoveryApi.DatabaseResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property host (base name: "host")', function() {
+      // uncomment below and update the code to test the property host
+      //var instance = new QoveryApi.DatabaseResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property port (base name: "port")', function() {
+      // uncomment below and update the code to test the property port
+      //var instance = new QoveryApi.DatabaseResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property maximumCpu (base name: "maximum_cpu")', function() {
+      // uncomment below and update the code to test the property maximumCpu
+      //var instance = new QoveryApi.DatabaseResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property maximumMemory (base name: "maximum_memory")', function() {
+      // uncomment below and update the code to test the property maximumMemory
+      //var instance = new QoveryApi.DatabaseResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property diskEncrypted (base name: "disk_encrypted")', function() {
+      // uncomment below and update the code to test the property diskEncrypted
       //var instance = new QoveryApi.DatabaseResponse();
       //expect(instance).to.be();
     });

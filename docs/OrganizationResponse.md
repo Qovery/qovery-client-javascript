@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**owner** | **String** | uuid of the user owning the organization | [optional] 
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
@@ -15,6 +14,7 @@ Name | Type | Description | Notes
 **repository** | **String** |  | [optional] 
 **logoUrl** | **String** |  | [optional] 
 **iconUrl** | **String** |  | [optional] 
+**owner** | **String** | uuid of the user owning the organization | [optional] 
 
 
 

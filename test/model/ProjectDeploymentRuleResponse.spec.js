@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.ProjectDeploymentRuleResponse);
     });
 
-    it('should have the property priorityIndex (base name: "priority_index")', function() {
-      // uncomment below and update the code to test the property priorityIndex
-      //var instance = new QoveryApi.ProjectDeploymentRuleResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.ProjectDeploymentRuleResponse();
@@ -146,6 +140,12 @@
 
     it('should have the property wildcard (base name: "wildcard")', function() {
       // uncomment below and update the code to test the property wildcard
+      //var instance = new QoveryApi.ProjectDeploymentRuleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property priorityIndex (base name: "priority_index")', function() {
+      // uncomment below and update the code to test the property priorityIndex
       //var instance = new QoveryApi.ProjectDeploymentRuleResponse();
       //expect(instance).to.be();
     });

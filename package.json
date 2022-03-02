@@ -1,6 +1,6 @@
 {
   "name": "qovery_api",
-  "version": "1.0.3",
+  "version": "$(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')",
   "description": "__Qovery_is_the_fastest_way_to_deploy_your_full_stack_apps_on_any_Cloud_provider____The_API_is_stable_and_still_in_development_",
   "license": "Unlicense",
   "main": "dist/index.js",

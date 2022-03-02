@@ -15,22 +15,24 @@ import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import DeploymentHistoryApplicationResponse from './DeploymentHistoryApplicationResponse';
 import DeploymentHistoryDatabaseResponse from './DeploymentHistoryDatabaseResponse';
+import DeploymentHistoryEnvironmentResponseAllOf from './DeploymentHistoryEnvironmentResponseAllOf';
 
 /**
  * The DeploymentHistoryEnvironmentResponse model module.
  * @module model/DeploymentHistoryEnvironmentResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class DeploymentHistoryEnvironmentResponse {
     /**
      * Constructs a new <code>DeploymentHistoryEnvironmentResponse</code>.
      * @alias module:model/DeploymentHistoryEnvironmentResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/DeploymentHistoryEnvironmentResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
+        BaseResponse.initialize(this, id, createdAt);DeploymentHistoryEnvironmentResponseAllOf.initialize(this);
         DeploymentHistoryEnvironmentResponse.initialize(this, id, createdAt);
     }
 
@@ -55,16 +57,8 @@ class DeploymentHistoryEnvironmentResponse {
         if (data) {
             obj = obj || new DeploymentHistoryEnvironmentResponse();
             BaseResponse.constructFromObject(data, obj);
+            DeploymentHistoryEnvironmentResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('applications')) {
-                obj['applications'] = ApiClient.convertToType(data['applications'], [DeploymentHistoryApplicationResponse]);
-            }
-            if (data.hasOwnProperty('databases')) {
-                obj['databases'] = ApiClient.convertToType(data['databases'], [DeploymentHistoryDatabaseResponse]);
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -74,27 +68,21 @@ class DeploymentHistoryEnvironmentResponse {
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
+            if (data.hasOwnProperty('applications')) {
+                obj['applications'] = ApiClient.convertToType(data['applications'], [DeploymentHistoryApplicationResponse]);
+            }
+            if (data.hasOwnProperty('databases')) {
+                obj['databases'] = ApiClient.convertToType(data['databases'], [DeploymentHistoryDatabaseResponse]);
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:model/DeploymentHistoryEnvironmentResponse.StatusEnum} status
- */
-DeploymentHistoryEnvironmentResponse.prototype['status'] = undefined;
-
-/**
- * @member {Array.<module:model/DeploymentHistoryApplicationResponse>} applications
- */
-DeploymentHistoryEnvironmentResponse.prototype['applications'] = undefined;
-
-/**
- * @member {Array.<module:model/DeploymentHistoryDatabaseResponse>} databases
- */
-DeploymentHistoryEnvironmentResponse.prototype['databases'] = undefined;
 
 /**
  * @member {String} id
@@ -111,6 +99,21 @@ DeploymentHistoryEnvironmentResponse.prototype['created_at'] = undefined;
  */
 DeploymentHistoryEnvironmentResponse.prototype['updated_at'] = undefined;
 
+/**
+ * @member {module:model/DeploymentHistoryEnvironmentResponse.StatusEnum} status
+ */
+DeploymentHistoryEnvironmentResponse.prototype['status'] = undefined;
+
+/**
+ * @member {Array.<module:model/DeploymentHistoryApplicationResponse>} applications
+ */
+DeploymentHistoryEnvironmentResponse.prototype['applications'] = undefined;
+
+/**
+ * @member {Array.<module:model/DeploymentHistoryDatabaseResponse>} databases
+ */
+DeploymentHistoryEnvironmentResponse.prototype['databases'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -125,6 +128,19 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement DeploymentHistoryEnvironmentResponseAllOf interface:
+/**
+ * @member {module:model/DeploymentHistoryEnvironmentResponseAllOf.StatusEnum} status
+ */
+DeploymentHistoryEnvironmentResponseAllOf.prototype['status'] = undefined;
+/**
+ * @member {Array.<module:model/DeploymentHistoryApplicationResponse>} applications
+ */
+DeploymentHistoryEnvironmentResponseAllOf.prototype['applications'] = undefined;
+/**
+ * @member {Array.<module:model/DeploymentHistoryDatabaseResponse>} databases
+ */
+DeploymentHistoryEnvironmentResponseAllOf.prototype['databases'] = undefined;
 
 
 

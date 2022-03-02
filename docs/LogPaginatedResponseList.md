@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[LogResponse]**](LogResponse.md) |  | [optional] 
 **page** | **Number** |  | 
 **pageSize** | **Number** |  | 
+**results** | [**[LogResponse]**](LogResponse.md) |  | [optional] 
 
 

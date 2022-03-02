@@ -21,7 +21,7 @@ import Status from '../model/Status';
 /**
 * EnvironmentActions service.
 * @module api/EnvironmentActionsApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class EnvironmentActionsApi {
 

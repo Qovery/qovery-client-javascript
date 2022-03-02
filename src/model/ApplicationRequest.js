@@ -15,14 +15,16 @@ import ApiClient from '../ApiClient';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import ApplicationPortRequest from './ApplicationPortRequest';
 import ApplicationPortRequestPorts from './ApplicationPortRequestPorts';
+import ApplicationRequestAllOf from './ApplicationRequestAllOf';
 import ApplicationStorageRequest from './ApplicationStorageRequest';
 import ApplicationStorageRequestStorage from './ApplicationStorageRequestStorage';
+import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 
 /**
  * The ApplicationRequest model module.
  * @module model/ApplicationRequest
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ApplicationRequest {
     /**
@@ -30,10 +32,13 @@ class ApplicationRequest {
      * @alias module:model/ApplicationRequest
      * @implements module:model/ApplicationStorageRequest
      * @implements module:model/ApplicationPortRequest
+     * @implements module:model/ApplicationRequestAllOf
+     * @param name {String} name is case insensitive
+     * @param gitRepository {module:model/ApplicationGitRepositoryRequest} 
      */
-    constructor() { 
-        ApplicationStorageRequest.initialize(this);ApplicationPortRequest.initialize(this);
-        ApplicationRequest.initialize(this);
+    constructor(name, gitRepository) { 
+        ApplicationStorageRequest.initialize(this);ApplicationPortRequest.initialize(this);ApplicationRequestAllOf.initialize(this, name, gitRepository);
+        ApplicationRequest.initialize(this, name, gitRepository);
     }
 
     /**
@@ -41,7 +46,7 @@ class ApplicationRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, name, gitRepository) { 
         obj['name'] = name;
         obj['git_repository'] = gitRepository;
     }
@@ -58,7 +63,14 @@ class ApplicationRequest {
             obj = obj || new ApplicationRequest();
             ApplicationStorageRequest.constructFromObject(data, obj);
             ApplicationPortRequest.constructFromObject(data, obj);
+            ApplicationRequestAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('storage')) {
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorage]);
+            }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPorts]);
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -75,7 +87,7 @@ class ApplicationRequest {
                 obj['dockerfile_path'] = ApiClient.convertToType(data['dockerfile_path'], 'String');
             }
             if (data.hasOwnProperty('buildpack_language')) {
-                obj['buildpack_language'] = ApiClient.convertToType(data['buildpack_language'], 'String');
+                obj['buildpack_language'] = BuildPackLanguageEnum.constructFromObject(data['buildpack_language']);
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -95,18 +107,22 @@ class ApplicationRequest {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
-            if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorage]);
-            }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPorts]);
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {Array.<module:model/ApplicationStorageRequestStorage>} storage
+ */
+ApplicationRequest.prototype['storage'] = undefined;
+
+/**
+ * @member {Array.<module:model/ApplicationPortRequestPorts>} ports
+ */
+ApplicationRequest.prototype['ports'] = undefined;
 
 /**
  * name is case insensitive
@@ -139,8 +155,7 @@ ApplicationRequest.prototype['build_mode'] = 'BUILDPACKS';
 ApplicationRequest.prototype['dockerfile_path'] = undefined;
 
 /**
- * Development language of the application
- * @member {module:model/ApplicationRequest.BuildpackLanguageEnum} buildpack_language
+ * @member {module:model/BuildPackLanguageEnum} buildpack_language
  */
 ApplicationRequest.prototype['buildpack_language'] = undefined;
 
@@ -184,16 +199,6 @@ ApplicationRequest.prototype['healthcheck'] = undefined;
  */
 ApplicationRequest.prototype['auto_preview'] = true;
 
-/**
- * @member {Array.<module:model/ApplicationStorageRequestStorage>} storage
- */
-ApplicationRequest.prototype['storage'] = undefined;
-
-/**
- * @member {Array.<module:model/ApplicationPortRequestPorts>} ports
- */
-ApplicationRequest.prototype['ports'] = undefined;
-
 
 // Implement ApplicationStorageRequest interface:
 /**
@@ -205,6 +210,70 @@ ApplicationStorageRequest.prototype['storage'] = undefined;
  * @member {Array.<module:model/ApplicationPortRequestPorts>} ports
  */
 ApplicationPortRequest.prototype['ports'] = undefined;
+// Implement ApplicationRequestAllOf interface:
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+ApplicationRequestAllOf.prototype['name'] = undefined;
+/**
+ * give a description to this application
+ * @member {String} description
+ */
+ApplicationRequestAllOf.prototype['description'] = undefined;
+/**
+ * @member {module:model/ApplicationGitRepositoryRequest} git_repository
+ */
+ApplicationRequestAllOf.prototype['git_repository'] = undefined;
+/**
+ * `DOCKER` requires `dockerfile_path` `BUILDPACKS` does not require any `dockerfile_path` 
+ * @member {module:model/ApplicationRequestAllOf.BuildModeEnum} build_mode
+ * @default 'BUILDPACKS'
+ */
+ApplicationRequestAllOf.prototype['build_mode'] = 'BUILDPACKS';
+/**
+ * The path of the associated Dockerfile. Only if you are using build_mode = DOCKER
+ * @member {String} dockerfile_path
+ */
+ApplicationRequestAllOf.prototype['dockerfile_path'] = undefined;
+/**
+ * @member {module:model/BuildPackLanguageEnum} buildpack_language
+ */
+ApplicationRequestAllOf.prototype['buildpack_language'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ * @default 250
+ */
+ApplicationRequestAllOf.prototype['cpu'] = 250;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ * @default 256
+ */
+ApplicationRequestAllOf.prototype['memory'] = 256;
+/**
+ * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
+ * @member {Number} min_running_instances
+ * @default 1
+ */
+ApplicationRequestAllOf.prototype['min_running_instances'] = 1;
+/**
+ * Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
+ * @member {Number} max_running_instances
+ * @default 1
+ */
+ApplicationRequestAllOf.prototype['max_running_instances'] = 1;
+/**
+ * @member {module:model/Healthcheck} healthcheck
+ */
+ApplicationRequestAllOf.prototype['healthcheck'] = undefined;
+/**
+ * Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request. 
+ * @member {Boolean} auto_preview
+ * @default true
+ */
+ApplicationRequestAllOf.prototype['auto_preview'] = true;
 
 
 
@@ -226,81 +295,6 @@ ApplicationRequest['BuildModeEnum'] = {
      * @const
      */
     "BUILDPACKS": "BUILDPACKS"
-};
-
-
-/**
- * Allowed values for the <code>buildpack_language</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationRequest['BuildpackLanguageEnum'] = {
-
-    /**
-     * value: "CLOJURE"
-     * @const
-     */
-    "CLOJURE": "CLOJURE",
-
-    /**
-     * value: "GO"
-     * @const
-     */
-    "GO": "GO",
-
-    /**
-     * value: "GRADLE"
-     * @const
-     */
-    "GRADLE": "GRADLE",
-
-    /**
-     * value: "GRAILS"
-     * @const
-     */
-    "GRAILS": "GRAILS",
-
-    /**
-     * value: "JAVA"
-     * @const
-     */
-    "JAVA": "JAVA",
-
-    /**
-     * value: "JVM"
-     * @const
-     */
-    "JVM": "JVM",
-
-    /**
-     * value: "NODE_JS"
-     * @const
-     */
-    "NODE_JS": "NODE_JS",
-
-    /**
-     * value: "PHP"
-     * @const
-     */
-    "PHP": "PHP",
-
-    /**
-     * value: "PLAY"
-     * @const
-     */
-    "PLAY": "PLAY",
-
-    /**
-     * value: "PYTHON"
-     * @const
-     */
-    "PYTHON": "PYTHON",
-
-    /**
-     * value: "SCALA"
-     * @const
-     */
-    "SCALA": "SCALA"
 };
 
 

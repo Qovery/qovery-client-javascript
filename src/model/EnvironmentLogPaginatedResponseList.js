@@ -12,24 +12,26 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentLogPaginatedResponseListAllOf from './EnvironmentLogPaginatedResponseListAllOf';
 import EnvironmentLogResponse from './EnvironmentLogResponse';
 import PaginationDataResponse from './PaginationDataResponse';
 
 /**
  * The EnvironmentLogPaginatedResponseList model module.
  * @module model/EnvironmentLogPaginatedResponseList
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class EnvironmentLogPaginatedResponseList {
     /**
      * Constructs a new <code>EnvironmentLogPaginatedResponseList</code>.
      * @alias module:model/EnvironmentLogPaginatedResponseList
      * @implements module:model/PaginationDataResponse
+     * @implements module:model/EnvironmentLogPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);
+        PaginationDataResponse.initialize(this, page, pageSize);EnvironmentLogPaginatedResponseListAllOf.initialize(this);
         EnvironmentLogPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -54,15 +56,16 @@ class EnvironmentLogPaginatedResponseList {
         if (data) {
             obj = obj || new EnvironmentLogPaginatedResponseList();
             PaginationDataResponse.constructFromObject(data, obj);
+            EnvironmentLogPaginatedResponseListAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentLogResponse]);
-            }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
             }
             if (data.hasOwnProperty('page_size')) {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
+            }
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentLogResponse]);
             }
         }
         return obj;
@@ -70,11 +73,6 @@ class EnvironmentLogPaginatedResponseList {
 
 
 }
-
-/**
- * @member {Array.<module:model/EnvironmentLogResponse>} results
- */
-EnvironmentLogPaginatedResponseList.prototype['results'] = undefined;
 
 /**
  * @member {Number} page
@@ -86,6 +84,11 @@ EnvironmentLogPaginatedResponseList.prototype['page'] = undefined;
  */
 EnvironmentLogPaginatedResponseList.prototype['page_size'] = undefined;
 
+/**
+ * @member {Array.<module:model/EnvironmentLogResponse>} results
+ */
+EnvironmentLogPaginatedResponseList.prototype['results'] = undefined;
+
 
 // Implement PaginationDataResponse interface:
 /**
@@ -96,6 +99,11 @@ PaginationDataResponse.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationDataResponse.prototype['page_size'] = undefined;
+// Implement EnvironmentLogPaginatedResponseListAllOf interface:
+/**
+ * @member {Array.<module:model/EnvironmentLogResponse>} results
+ */
+EnvironmentLogPaginatedResponseListAllOf.prototype['results'] = undefined;
 
 
 

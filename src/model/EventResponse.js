@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import CommitResponse from './CommitResponse';
+import EventResponseAllOf from './EventResponseAllOf';
 import ReferenceObject from './ReferenceObject';
 import Status from './Status';
 import UserResponse from './UserResponse';
@@ -21,18 +22,19 @@ import UserResponse from './UserResponse';
 /**
  * The EventResponse model module.
  * @module model/EventResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class EventResponse {
     /**
      * Constructs a new <code>EventResponse</code>.
      * @alias module:model/EventResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/EventResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
+        BaseResponse.initialize(this, id, createdAt);EventResponseAllOf.initialize(this);
         EventResponse.initialize(this, id, createdAt);
     }
 
@@ -57,7 +59,17 @@ class EventResponse {
         if (data) {
             obj = obj || new EventResponse();
             BaseResponse.constructFromObject(data, obj);
+            EventResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('user')) {
                 obj['user'] = UserResponse.constructFromObject(data['user']);
             }
@@ -73,21 +85,27 @@ class EventResponse {
             if (data.hasOwnProperty('log')) {
                 obj['log'] = ReferenceObject.constructFromObject(data['log']);
             }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} id
+ */
+EventResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+EventResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+EventResponse.prototype['updated_at'] = undefined;
 
 /**
  * @member {module:model/UserResponse} user
@@ -115,21 +133,6 @@ EventResponse.prototype['type'] = undefined;
  */
 EventResponse.prototype['log'] = undefined;
 
-/**
- * @member {String} id
- */
-EventResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-EventResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-EventResponse.prototype['updated_at'] = undefined;
-
 
 // Implement BaseResponse interface:
 /**
@@ -144,6 +147,28 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement EventResponseAllOf interface:
+/**
+ * @member {module:model/UserResponse} user
+ */
+EventResponseAllOf.prototype['user'] = undefined;
+/**
+ * @member {module:model/CommitResponse} commit
+ */
+EventResponseAllOf.prototype['commit'] = undefined;
+/**
+ * @member {module:model/Status} status
+ */
+EventResponseAllOf.prototype['status'] = undefined;
+/**
+ * DRAFT - we have to specify here all the possible events
+ * @member {String} type
+ */
+EventResponseAllOf.prototype['type'] = undefined;
+/**
+ * @member {module:model/ReferenceObject} log
+ */
+EventResponseAllOf.prototype['log'] = undefined;
 
 
 

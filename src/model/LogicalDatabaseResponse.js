@@ -14,12 +14,13 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import LogicalDatabaseRequest from './LogicalDatabaseRequest';
+import LogicalDatabaseResponseAllOf from './LogicalDatabaseResponseAllOf';
 import ReferenceObject from './ReferenceObject';
 
 /**
  * The LogicalDatabaseResponse model module.
  * @module model/LogicalDatabaseResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class LogicalDatabaseResponse {
     /**
@@ -27,12 +28,13 @@ class LogicalDatabaseResponse {
      * @alias module:model/LogicalDatabaseResponse
      * @implements module:model/BaseResponse
      * @implements module:model/LogicalDatabaseRequest
+     * @implements module:model/LogicalDatabaseResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
      */
     constructor(id, createdAt, name) { 
-        BaseResponse.initialize(this, id, createdAt);LogicalDatabaseRequest.initialize(this, name);
+        BaseResponse.initialize(this, id, createdAt);LogicalDatabaseRequest.initialize(this, name);LogicalDatabaseResponseAllOf.initialize(this);
         LogicalDatabaseResponse.initialize(this, id, createdAt, name);
     }
 
@@ -59,10 +61,8 @@ class LogicalDatabaseResponse {
             obj = obj || new LogicalDatabaseResponse();
             BaseResponse.constructFromObject(data, obj);
             LogicalDatabaseRequest.constructFromObject(data, obj);
+            LogicalDatabaseResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('database')) {
-                obj['database'] = ReferenceObject.constructFromObject(data['database']);
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -78,17 +78,15 @@ class LogicalDatabaseResponse {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('database')) {
+                obj['database'] = ReferenceObject.constructFromObject(data['database']);
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:model/ReferenceObject} database
- */
-LogicalDatabaseResponse.prototype['database'] = undefined;
 
 /**
  * @member {String} id
@@ -116,6 +114,11 @@ LogicalDatabaseResponse.prototype['name'] = undefined;
  */
 LogicalDatabaseResponse.prototype['description'] = undefined;
 
+/**
+ * @member {module:model/ReferenceObject} database
+ */
+LogicalDatabaseResponse.prototype['database'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -140,6 +143,11 @@ LogicalDatabaseRequest.prototype['name'] = undefined;
  * @member {String} description
  */
 LogicalDatabaseRequest.prototype['description'] = undefined;
+// Implement LogicalDatabaseResponseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} database
+ */
+LogicalDatabaseResponseAllOf.prototype['database'] = undefined;
 
 
 

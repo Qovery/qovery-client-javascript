@@ -18,7 +18,7 @@ import EnvironmentLogResponseList from '../model/EnvironmentLogResponseList';
 /**
 * EnvironmentLogs service.
 * @module api/EnvironmentLogsApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class EnvironmentLogsApi {
 

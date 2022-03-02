@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(QoveryApi.EnvironmentResponse);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.EnvironmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.EnvironmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.EnvironmentResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.EnvironmentResponse();
@@ -86,24 +104,6 @@
 
     it('should have the property clusterId (base name: "cluster_id")', function() {
       // uncomment below and update the code to test the property clusterId
-      //var instance = new QoveryApi.EnvironmentResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.EnvironmentResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.EnvironmentResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
       //var instance = new QoveryApi.EnvironmentResponse();
       //expect(instance).to.be();
     });

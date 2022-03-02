@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.LogicalDatabaseResponse);
     });
 
-    it('should have the property database (base name: "database")', function() {
-      // uncomment below and update the code to test the property database
-      //var instance = new QoveryApi.LogicalDatabaseResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.LogicalDatabaseResponse();
@@ -86,6 +80,12 @@
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
+      //var instance = new QoveryApi.LogicalDatabaseResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property database (base name: "database")', function() {
+      // uncomment below and update the code to test the property database
       //var instance = new QoveryApi.LogicalDatabaseResponse();
       //expect(instance).to.be();
     });

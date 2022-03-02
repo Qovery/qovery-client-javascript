@@ -25,7 +25,7 @@ import UserResponseList from '../model/UserResponseList';
 /**
 * ApplicationMainCalls service.
 * @module api/ApplicationMainCallsApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class ApplicationMainCallsApi {
 

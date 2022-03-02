@@ -23,7 +23,7 @@ import MetricStorageDatapointResponseList from '../model/MetricStorageDatapointR
 /**
 * DatabaseMetrics service.
 * @module api/DatabaseMetricsApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class DatabaseMetricsApi {
 

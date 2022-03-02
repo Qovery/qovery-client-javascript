@@ -14,22 +14,24 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import CommitResponse from './CommitResponse';
+import DeploymentHistoryResponseAllOf from './DeploymentHistoryResponseAllOf';
 
 /**
  * The DeploymentHistoryResponse model module.
  * @module model/DeploymentHistoryResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class DeploymentHistoryResponse {
     /**
      * Constructs a new <code>DeploymentHistoryResponse</code>.
      * @alias module:model/DeploymentHistoryResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/DeploymentHistoryResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
+        BaseResponse.initialize(this, id, createdAt);DeploymentHistoryResponseAllOf.initialize(this);
         DeploymentHistoryResponse.initialize(this, id, createdAt);
     }
 
@@ -54,13 +56,8 @@ class DeploymentHistoryResponse {
         if (data) {
             obj = obj || new DeploymentHistoryResponse();
             BaseResponse.constructFromObject(data, obj);
+            DeploymentHistoryResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('commit')) {
-                obj['commit'] = CommitResponse.constructFromObject(data['commit']);
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -70,22 +67,18 @@ class DeploymentHistoryResponse {
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
+            if (data.hasOwnProperty('commit')) {
+                obj['commit'] = CommitResponse.constructFromObject(data['commit']);
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:model/CommitResponse} commit
- */
-DeploymentHistoryResponse.prototype['commit'] = undefined;
-
-/**
- * @member {module:model/DeploymentHistoryResponse.StatusEnum} status
- */
-DeploymentHistoryResponse.prototype['status'] = undefined;
 
 /**
  * @member {String} id
@@ -102,6 +95,16 @@ DeploymentHistoryResponse.prototype['created_at'] = undefined;
  */
 DeploymentHistoryResponse.prototype['updated_at'] = undefined;
 
+/**
+ * @member {module:model/CommitResponse} commit
+ */
+DeploymentHistoryResponse.prototype['commit'] = undefined;
+
+/**
+ * @member {module:model/DeploymentHistoryResponse.StatusEnum} status
+ */
+DeploymentHistoryResponse.prototype['status'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -116,6 +119,15 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement DeploymentHistoryResponseAllOf interface:
+/**
+ * @member {module:model/CommitResponse} commit
+ */
+DeploymentHistoryResponseAllOf.prototype['commit'] = undefined;
+/**
+ * @member {module:model/DeploymentHistoryResponseAllOf.StatusEnum} status
+ */
+DeploymentHistoryResponseAllOf.prototype['status'] = undefined;
 
 
 

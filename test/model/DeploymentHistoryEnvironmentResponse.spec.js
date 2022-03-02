@@ -54,24 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.DeploymentHistoryEnvironmentResponse);
     });
 
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property applications (base name: "applications")', function() {
-      // uncomment below and update the code to test the property applications
-      //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property databases (base name: "databases")', function() {
-      // uncomment below and update the code to test the property databases
-      //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
@@ -86,6 +68,24 @@
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property applications (base name: "applications")', function() {
+      // uncomment below and update the code to test the property applications
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databases (base name: "databases")', function() {
+      // uncomment below and update the code to test the property databases
       //var instance = new QoveryApi.DeploymentHistoryEnvironmentResponse();
       //expect(instance).to.be();
     });

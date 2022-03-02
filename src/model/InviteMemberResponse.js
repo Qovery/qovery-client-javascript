@@ -13,23 +13,30 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import InviteMemberResponseAllOf from './InviteMemberResponseAllOf';
 
 /**
  * The InviteMemberResponse model module.
  * @module model/InviteMemberResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class InviteMemberResponse {
     /**
      * Constructs a new <code>InviteMemberResponse</code>.
      * @alias module:model/InviteMemberResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/InviteMemberResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param email {String} 
+     * @param role {module:model/InviteMemberResponse.RoleEnum} 
+     * @param invitationLink {String} 
+     * @param invitationStatus {module:model/InviteMemberResponse.InvitationStatusEnum} 
+     * @param inviter {String} 
      */
-    constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
-        InviteMemberResponse.initialize(this, id, createdAt);
+    constructor(id, createdAt, email, role, invitationLink, invitationStatus, inviter) { 
+        BaseResponse.initialize(this, id, createdAt);InviteMemberResponseAllOf.initialize(this, email, role, invitationLink, invitationStatus, inviter);
+        InviteMemberResponse.initialize(this, id, createdAt, email, role, invitationLink, invitationStatus, inviter);
     }
 
     /**
@@ -37,14 +44,14 @@ class InviteMemberResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt) { 
+    static initialize(obj, id, createdAt, email, role, invitationLink, invitationStatus, inviter) { 
+        obj['id'] = id;
+        obj['created_at'] = createdAt;
         obj['email'] = email;
         obj['role'] = role;
         obj['invitation_link'] = invitationLink;
         obj['invitation_status'] = invitationStatus;
         obj['inviter'] = inviter;
-        obj['id'] = id;
-        obj['created_at'] = createdAt;
     }
 
     /**
@@ -58,7 +65,17 @@ class InviteMemberResponse {
         if (data) {
             obj = obj || new InviteMemberResponse();
             BaseResponse.constructFromObject(data, obj);
+            InviteMemberResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
@@ -77,21 +94,27 @@ class InviteMemberResponse {
             if (data.hasOwnProperty('logo_url')) {
                 obj['logo_url'] = ApiClient.convertToType(data['logo_url'], 'String');
             }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} id
+ */
+InviteMemberResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+InviteMemberResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+InviteMemberResponse.prototype['updated_at'] = undefined;
 
 /**
  * @member {String} email
@@ -123,21 +146,6 @@ InviteMemberResponse.prototype['inviter'] = undefined;
  */
 InviteMemberResponse.prototype['logo_url'] = undefined;
 
-/**
- * @member {String} id
- */
-InviteMemberResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-InviteMemberResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-InviteMemberResponse.prototype['updated_at'] = undefined;
-
 
 // Implement BaseResponse interface:
 /**
@@ -152,6 +160,31 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement InviteMemberResponseAllOf interface:
+/**
+ * @member {String} email
+ */
+InviteMemberResponseAllOf.prototype['email'] = undefined;
+/**
+ * @member {module:model/InviteMemberResponseAllOf.RoleEnum} role
+ */
+InviteMemberResponseAllOf.prototype['role'] = undefined;
+/**
+ * @member {String} invitation_link
+ */
+InviteMemberResponseAllOf.prototype['invitation_link'] = undefined;
+/**
+ * @member {module:model/InviteMemberResponseAllOf.InvitationStatusEnum} invitation_status
+ */
+InviteMemberResponseAllOf.prototype['invitation_status'] = undefined;
+/**
+ * @member {String} inviter
+ */
+InviteMemberResponseAllOf.prototype['inviter'] = undefined;
+/**
+ * @member {String} logo_url
+ */
+InviteMemberResponseAllOf.prototype['logo_url'] = undefined;
 
 
 

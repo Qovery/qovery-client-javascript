@@ -13,23 +13,26 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import MemberResponseAllOf from './MemberResponseAllOf';
 
 /**
  * The MemberResponse model module.
  * @module model/MemberResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class MemberResponse {
     /**
      * Constructs a new <code>MemberResponse</code>.
      * @alias module:model/MemberResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/MemberResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param email {String} 
      */
-    constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
-        MemberResponse.initialize(this, id, createdAt);
+    constructor(id, createdAt, email) { 
+        BaseResponse.initialize(this, id, createdAt);MemberResponseAllOf.initialize(this, email);
+        MemberResponse.initialize(this, id, createdAt, email);
     }
 
     /**
@@ -37,10 +40,10 @@ class MemberResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt) { 
-        obj['email'] = email;
+    static initialize(obj, id, createdAt, email) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
+        obj['email'] = email;
     }
 
     /**
@@ -54,7 +57,17 @@ class MemberResponse {
         if (data) {
             obj = obj || new MemberResponse();
             BaseResponse.constructFromObject(data, obj);
+            MemberResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -73,21 +86,27 @@ class MemberResponse {
             if (data.hasOwnProperty('role')) {
                 obj['role'] = ApiClient.convertToType(data['role'], 'String');
             }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} id
+ */
+MemberResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+MemberResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+MemberResponse.prototype['updated_at'] = undefined;
 
 /**
  * @member {String} name
@@ -120,21 +139,6 @@ MemberResponse.prototype['last_activity_at'] = undefined;
  */
 MemberResponse.prototype['role'] = undefined;
 
-/**
- * @member {String} id
- */
-MemberResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-MemberResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-MemberResponse.prototype['updated_at'] = undefined;
-
 
 // Implement BaseResponse interface:
 /**
@@ -149,6 +153,32 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement MemberResponseAllOf interface:
+/**
+ * @member {String} name
+ */
+MemberResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} nickname
+ */
+MemberResponseAllOf.prototype['nickname'] = undefined;
+/**
+ * @member {String} email
+ */
+MemberResponseAllOf.prototype['email'] = undefined;
+/**
+ * @member {String} profile_picture_url
+ */
+MemberResponseAllOf.prototype['profile_picture_url'] = undefined;
+/**
+ * last time the user was connected
+ * @member {Date} last_activity_at
+ */
+MemberResponseAllOf.prototype['last_activity_at'] = undefined;
+/**
+ * @member {module:model/MemberResponseAllOf.RoleEnum} role
+ */
+MemberResponseAllOf.prototype['role'] = undefined;
 
 
 

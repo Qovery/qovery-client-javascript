@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **String** |  | [optional] 
-**applications** | [**[DeploymentHistoryApplicationResponse]**](DeploymentHistoryApplicationResponse.md) |  | [optional] 
-**databases** | [**[DeploymentHistoryDatabaseResponse]**](DeploymentHistoryDatabaseResponse.md) |  | [optional] 
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
+**status** | **String** |  | [optional] 
+**applications** | [**[DeploymentHistoryApplicationResponse]**](DeploymentHistoryApplicationResponse.md) |  | [optional] 
+**databases** | [**[DeploymentHistoryDatabaseResponse]**](DeploymentHistoryDatabaseResponse.md) |  | [optional] 
 
 
 

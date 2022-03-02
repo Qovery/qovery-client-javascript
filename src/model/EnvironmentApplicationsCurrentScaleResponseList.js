@@ -17,7 +17,7 @@ import EnvironmentApplicationsCurrentScaleResponse from './EnvironmentApplicatio
 /**
  * The EnvironmentApplicationsCurrentScaleResponseList model module.
  * @module model/EnvironmentApplicationsCurrentScaleResponseList
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class EnvironmentApplicationsCurrentScaleResponseList {
     /**

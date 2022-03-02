@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(QoveryApi.ServiceResponse);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.ServiceResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.ServiceResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.ServiceResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
       //var instance = new QoveryApi.ServiceResponse();
@@ -62,12 +80,6 @@
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ServiceResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.ServiceResponse();
       //expect(instance).to.be();
     });
@@ -104,18 +116,6 @@
 
     it('should have the property toUpdate (base name: "to_update")', function() {
       // uncomment below and update the code to test the property toUpdate
-      //var instance = new QoveryApi.ServiceResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.ServiceResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
       //var instance = new QoveryApi.ServiceResponse();
       //expect(instance).to.be();
     });

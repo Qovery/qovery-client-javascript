@@ -13,24 +13,27 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import ProjectResponseAllOf from './ProjectResponseAllOf';
 import ReferenceObject from './ReferenceObject';
 
 /**
  * The ProjectResponse model module.
  * @module model/ProjectResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ProjectResponse {
     /**
      * Constructs a new <code>ProjectResponse</code>.
      * @alias module:model/ProjectResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/ProjectResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param name {String} 
      */
-    constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
-        ProjectResponse.initialize(this, id, createdAt);
+    constructor(id, createdAt, name) { 
+        BaseResponse.initialize(this, id, createdAt);ProjectResponseAllOf.initialize(this, name);
+        ProjectResponse.initialize(this, id, createdAt, name);
     }
 
     /**
@@ -38,10 +41,10 @@ class ProjectResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt) { 
-        obj['name'] = name;
+    static initialize(obj, id, createdAt, name) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
+        obj['name'] = name;
     }
 
     /**
@@ -55,16 +58,8 @@ class ProjectResponse {
         if (data) {
             obj = obj || new ProjectResponse();
             BaseResponse.constructFromObject(data, obj);
+            ProjectResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('organization')) {
-                obj['organization'] = ReferenceObject.constructFromObject(data['organization']);
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -74,27 +69,21 @@ class ProjectResponse {
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('organization')) {
+                obj['organization'] = ReferenceObject.constructFromObject(data['organization']);
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {String} name
- */
-ProjectResponse.prototype['name'] = undefined;
-
-/**
- * @member {String} description
- */
-ProjectResponse.prototype['description'] = undefined;
-
-/**
- * @member {module:model/ReferenceObject} organization
- */
-ProjectResponse.prototype['organization'] = undefined;
 
 /**
  * @member {String} id
@@ -111,6 +100,21 @@ ProjectResponse.prototype['created_at'] = undefined;
  */
 ProjectResponse.prototype['updated_at'] = undefined;
 
+/**
+ * @member {String} name
+ */
+ProjectResponse.prototype['name'] = undefined;
+
+/**
+ * @member {String} description
+ */
+ProjectResponse.prototype['description'] = undefined;
+
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+ProjectResponse.prototype['organization'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -125,6 +129,19 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement ProjectResponseAllOf interface:
+/**
+ * @member {String} name
+ */
+ProjectResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+ProjectResponseAllOf.prototype['description'] = undefined;
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+ProjectResponseAllOf.prototype['organization'] = undefined;
 
 
 

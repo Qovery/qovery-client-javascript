@@ -12,15 +12,16 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfstringboolean from './AnyOfstringboolean';
 import BaseResponse from './BaseResponse';
 import Cluster from './Cluster';
 import ClusterFeatureResponse from './ClusterFeatureResponse';
+import ClusterResponseAllOf from './ClusterResponseAllOf';
+import OneOfstringboolean from './OneOfstringboolean';
 
 /**
  * The ClusterResponse model module.
  * @module model/ClusterResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ClusterResponse {
     /**
@@ -29,6 +30,7 @@ class ClusterResponse {
      * @implements module:model/BaseResponse
      * @implements module:model/Cluster
      * @implements module:model/ClusterFeatureResponse
+     * @implements module:model/ClusterResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case-insensitive
@@ -36,7 +38,7 @@ class ClusterResponse {
      * @param region {String} 
      */
     constructor(id, createdAt, name, cloudProvider, region) { 
-        BaseResponse.initialize(this, id, createdAt);Cluster.initialize(this, name, cloudProvider, region);ClusterFeatureResponse.initialize(this);
+        BaseResponse.initialize(this, id, createdAt);Cluster.initialize(this, name, cloudProvider, region);ClusterFeatureResponse.initialize(this);ClusterResponseAllOf.initialize(this);
         ClusterResponse.initialize(this, id, createdAt, name, cloudProvider, region);
     }
 
@@ -66,22 +68,8 @@ class ClusterResponse {
             BaseResponse.constructFromObject(data, obj);
             Cluster.constructFromObject(data, obj);
             ClusterFeatureResponse.constructFromObject(data, obj);
+            ClusterResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('estimated_cloud_provider_cost')) {
-                obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('has_access')) {
-                obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
-            }
-            if (data.hasOwnProperty('version')) {
-                obj['version'] = ApiClient.convertToType(data['version'], 'String');
-            }
-            if (data.hasOwnProperty('is_default')) {
-                obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -140,7 +128,22 @@ class ClusterResponse {
                 obj['is_value_updatable'] = ApiClient.convertToType(data['is_value_updatable'], 'Boolean');
             }
             if (data.hasOwnProperty('accepted_values')) {
-                obj['accepted_values'] = ApiClient.convertToType(data['accepted_values'], [AnyOfstringboolean]);
+                obj['accepted_values'] = ApiClient.convertToType(data['accepted_values'], [OneOfstringboolean]);
+            }
+            if (data.hasOwnProperty('estimated_cloud_provider_cost')) {
+                obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
+            if (data.hasOwnProperty('has_access')) {
+                obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
+            }
+            if (data.hasOwnProperty('version')) {
+                obj['version'] = ApiClient.convertToType(data['version'], 'String');
+            }
+            if (data.hasOwnProperty('is_default')) {
+                obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
             }
         }
         return obj;
@@ -148,32 +151,6 @@ class ClusterResponse {
 
 
 }
-
-/**
- * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
- * @member {Number} estimated_cloud_provider_cost
- */
-ClusterResponse.prototype['estimated_cloud_provider_cost'] = undefined;
-
-/**
- * @member {module:model/ClusterResponse.StatusEnum} status
- */
-ClusterResponse.prototype['status'] = undefined;
-
-/**
- * @member {Boolean} has_access
- */
-ClusterResponse.prototype['has_access'] = undefined;
-
-/**
- * @member {String} version
- */
-ClusterResponse.prototype['version'] = undefined;
-
-/**
- * @member {Boolean} is_default
- */
-ClusterResponse.prototype['is_default'] = undefined;
 
 /**
  * @member {String} id
@@ -279,9 +256,35 @@ ClusterResponse.prototype['value'] = undefined;
 ClusterResponse.prototype['is_value_updatable'] = false;
 
 /**
- * @member {Array.<module:model/AnyOfstringboolean>} accepted_values
+ * @member {Array.<module:model/OneOfstringboolean>} accepted_values
  */
 ClusterResponse.prototype['accepted_values'] = undefined;
+
+/**
+ * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
+ * @member {Number} estimated_cloud_provider_cost
+ */
+ClusterResponse.prototype['estimated_cloud_provider_cost'] = undefined;
+
+/**
+ * @member {module:model/ClusterResponse.StatusEnum} status
+ */
+ClusterResponse.prototype['status'] = undefined;
+
+/**
+ * @member {Boolean} has_access
+ */
+ClusterResponse.prototype['has_access'] = undefined;
+
+/**
+ * @member {String} version
+ */
+ClusterResponse.prototype['version'] = undefined;
+
+/**
+ * @member {Boolean} is_default
+ */
+ClusterResponse.prototype['is_default'] = undefined;
 
 
 // Implement BaseResponse interface:
@@ -380,37 +383,32 @@ ClusterFeatureResponse.prototype['value'] = undefined;
  */
 ClusterFeatureResponse.prototype['is_value_updatable'] = false;
 /**
- * @member {Array.<module:model/AnyOfstringboolean>} accepted_values
+ * @member {Array.<module:model/OneOfstringboolean>} accepted_values
  */
 ClusterFeatureResponse.prototype['accepted_values'] = undefined;
-
-
-
+// Implement ClusterResponseAllOf interface:
 /**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
+ * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
+ * @member {Number} estimated_cloud_provider_cost
  */
-ClusterResponse['StatusEnum'] = {
+ClusterResponseAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
+/**
+ * @member {module:model/ClusterResponseAllOf.StatusEnum} status
+ */
+ClusterResponseAllOf.prototype['status'] = undefined;
+/**
+ * @member {Boolean} has_access
+ */
+ClusterResponseAllOf.prototype['has_access'] = undefined;
+/**
+ * @member {String} version
+ */
+ClusterResponseAllOf.prototype['version'] = undefined;
+/**
+ * @member {Boolean} is_default
+ */
+ClusterResponseAllOf.prototype['is_default'] = undefined;
 
-    /**
-     * value: "READY"
-     * @const
-     */
-    "READY": "READY",
-
-    /**
-     * value: "RUNNING"
-     * @const
-     */
-    "RUNNING": "RUNNING",
-
-    /**
-     * value: "WARNING"
-     * @const
-     */
-    "WARNING": "WARNING"
-};
 
 
 /**
@@ -452,6 +450,33 @@ ClusterResponse['ValueTypeEnum'] = {
      * @const
      */
     "BOOLEAN": "BOOLEAN"
+};
+
+
+/**
+ * Allowed values for the <code>status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ClusterResponse['StatusEnum'] = {
+
+    /**
+     * value: "READY"
+     * @const
+     */
+    "READY": "READY",
+
+    /**
+     * value: "RUNNING"
+     * @const
+     */
+    "RUNNING": "RUNNING",
+
+    /**
+     * value: "WARNING"
+     * @const
+     */
+    "WARNING": "WARNING"
 };
 
 

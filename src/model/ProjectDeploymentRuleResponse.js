@@ -14,11 +14,12 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import ProjectDeploymentRuleRequest from './ProjectDeploymentRuleRequest';
+import ProjectDeploymentRuleResponseAllOf from './ProjectDeploymentRuleResponseAllOf';
 
 /**
  * The ProjectDeploymentRuleResponse model module.
  * @module model/ProjectDeploymentRuleResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ProjectDeploymentRuleResponse {
     /**
@@ -26,6 +27,7 @@ class ProjectDeploymentRuleResponse {
      * @alias module:model/ProjectDeploymentRuleResponse
      * @implements module:model/BaseResponse
      * @implements module:model/ProjectDeploymentRuleRequest
+     * @implements module:model/ProjectDeploymentRuleResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
@@ -38,7 +40,7 @@ class ProjectDeploymentRuleResponse {
      * @param wildcard {String} wildcard pattern composed of '?' and/or '*' used to target new created environments
      */
     constructor(id, createdAt, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard) { 
-        BaseResponse.initialize(this, id, createdAt);ProjectDeploymentRuleRequest.initialize(this, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard);
+        BaseResponse.initialize(this, id, createdAt);ProjectDeploymentRuleRequest.initialize(this, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard);ProjectDeploymentRuleResponseAllOf.initialize(this);
         ProjectDeploymentRuleResponse.initialize(this, id, createdAt, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard);
     }
 
@@ -72,10 +74,8 @@ class ProjectDeploymentRuleResponse {
             obj = obj || new ProjectDeploymentRuleResponse();
             BaseResponse.constructFromObject(data, obj);
             ProjectDeploymentRuleRequest.constructFromObject(data, obj);
+            ProjectDeploymentRuleResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('priority_index')) {
-                obj['priority_index'] = ApiClient.convertToType(data['priority_index'], 'Number');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -121,18 +121,15 @@ class ProjectDeploymentRuleResponse {
             if (data.hasOwnProperty('wildcard')) {
                 obj['wildcard'] = ApiClient.convertToType(data['wildcard'], 'String');
             }
+            if (data.hasOwnProperty('priority_index')) {
+                obj['priority_index'] = ApiClient.convertToType(data['priority_index'], 'Number');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * used to select the first deployment rule to match new created environments
- * @member {Number} priority_index
- */
-ProjectDeploymentRuleResponse.prototype['priority_index'] = undefined;
 
 /**
  * @member {String} id
@@ -215,6 +212,12 @@ ProjectDeploymentRuleResponse.prototype['weekdays'] = undefined;
  */
 ProjectDeploymentRuleResponse.prototype['wildcard'] = '';
 
+/**
+ * used to select the first deployment rule to match new created environments
+ * @member {Number} priority_index
+ */
+ProjectDeploymentRuleResponse.prototype['priority_index'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -284,6 +287,12 @@ ProjectDeploymentRuleRequest.prototype['weekdays'] = undefined;
  * @default ''
  */
 ProjectDeploymentRuleRequest.prototype['wildcard'] = '';
+// Implement ProjectDeploymentRuleResponseAllOf interface:
+/**
+ * used to select the first deployment rule to match new created environments
+ * @member {Number} priority_index
+ */
+ProjectDeploymentRuleResponseAllOf.prototype['priority_index'] = undefined;
 
 
 

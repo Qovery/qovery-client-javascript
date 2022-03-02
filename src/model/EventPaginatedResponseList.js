@@ -12,24 +12,26 @@
  */
 
 import ApiClient from '../ApiClient';
+import EventPaginatedResponseListAllOf from './EventPaginatedResponseListAllOf';
 import EventResponse from './EventResponse';
 import PaginationDataResponse from './PaginationDataResponse';
 
 /**
  * The EventPaginatedResponseList model module.
  * @module model/EventPaginatedResponseList
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class EventPaginatedResponseList {
     /**
      * Constructs a new <code>EventPaginatedResponseList</code>.
      * @alias module:model/EventPaginatedResponseList
      * @implements module:model/PaginationDataResponse
+     * @implements module:model/EventPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);
+        PaginationDataResponse.initialize(this, page, pageSize);EventPaginatedResponseListAllOf.initialize(this);
         EventPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -54,15 +56,16 @@ class EventPaginatedResponseList {
         if (data) {
             obj = obj || new EventPaginatedResponseList();
             PaginationDataResponse.constructFromObject(data, obj);
+            EventPaginatedResponseListAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EventResponse]);
-            }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
             }
             if (data.hasOwnProperty('page_size')) {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
+            }
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [EventResponse]);
             }
         }
         return obj;
@@ -70,11 +73,6 @@ class EventPaginatedResponseList {
 
 
 }
-
-/**
- * @member {Array.<module:model/EventResponse>} results
- */
-EventPaginatedResponseList.prototype['results'] = undefined;
 
 /**
  * @member {Number} page
@@ -86,6 +84,11 @@ EventPaginatedResponseList.prototype['page'] = undefined;
  */
 EventPaginatedResponseList.prototype['page_size'] = undefined;
 
+/**
+ * @member {Array.<module:model/EventResponse>} results
+ */
+EventPaginatedResponseList.prototype['results'] = undefined;
+
 
 // Implement PaginationDataResponse interface:
 /**
@@ -96,6 +99,11 @@ PaginationDataResponse.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationDataResponse.prototype['page_size'] = undefined;
+// Implement EventPaginatedResponseListAllOf interface:
+/**
+ * @member {Array.<module:model/EventResponse>} results
+ */
+EventPaginatedResponseListAllOf.prototype['results'] = undefined;
 
 
 

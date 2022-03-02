@@ -14,12 +14,13 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import DatabaseRequest from './DatabaseRequest';
+import DatabaseResponseAllOf from './DatabaseResponseAllOf';
 import ReferenceObject from './ReferenceObject';
 
 /**
  * The DatabaseResponse model module.
  * @module model/DatabaseResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class DatabaseResponse {
     /**
@@ -27,6 +28,7 @@ class DatabaseResponse {
      * @alias module:model/DatabaseResponse
      * @implements module:model/BaseResponse
      * @implements module:model/DatabaseRequest
+     * @implements module:model/DatabaseResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
@@ -35,7 +37,7 @@ class DatabaseResponse {
      * @param mode {module:model/DatabaseResponse.ModeEnum} 
      */
     constructor(id, createdAt, name, type, version, mode) { 
-        BaseResponse.initialize(this, id, createdAt);DatabaseRequest.initialize(this, name, type, version, mode);
+        BaseResponse.initialize(this, id, createdAt);DatabaseRequest.initialize(this, name, type, version, mode);DatabaseResponseAllOf.initialize(this);
         DatabaseResponse.initialize(this, id, createdAt, name, type, version, mode);
     }
 
@@ -65,25 +67,8 @@ class DatabaseResponse {
             obj = obj || new DatabaseResponse();
             BaseResponse.constructFromObject(data, obj);
             DatabaseRequest.constructFromObject(data, obj);
+            DatabaseResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('environment')) {
-                obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
-            }
-            if (data.hasOwnProperty('host')) {
-                obj['host'] = ApiClient.convertToType(data['host'], 'String');
-            }
-            if (data.hasOwnProperty('port')) {
-                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
-            }
-            if (data.hasOwnProperty('maximum_cpu')) {
-                obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
-            }
-            if (data.hasOwnProperty('maximum_memory')) {
-                obj['maximum_memory'] = ApiClient.convertToType(data['maximum_memory'], 'Number');
-            }
-            if (data.hasOwnProperty('disk_encrypted')) {
-                obj['disk_encrypted'] = ApiClient.convertToType(data['disk_encrypted'], 'Boolean');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -117,47 +102,30 @@ class DatabaseResponse {
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], 'Number');
             }
+            if (data.hasOwnProperty('environment')) {
+                obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
+            }
+            if (data.hasOwnProperty('host')) {
+                obj['host'] = ApiClient.convertToType(data['host'], 'String');
+            }
+            if (data.hasOwnProperty('port')) {
+                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
+            }
+            if (data.hasOwnProperty('maximum_cpu')) {
+                obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
+            }
+            if (data.hasOwnProperty('maximum_memory')) {
+                obj['maximum_memory'] = ApiClient.convertToType(data['maximum_memory'], 'Number');
+            }
+            if (data.hasOwnProperty('disk_encrypted')) {
+                obj['disk_encrypted'] = ApiClient.convertToType(data['disk_encrypted'], 'Boolean');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {module:model/ReferenceObject} environment
- */
-DatabaseResponse.prototype['environment'] = undefined;
-
-/**
- * @member {String} host
- */
-DatabaseResponse.prototype['host'] = undefined;
-
-/**
- * @member {Number} port
- */
-DatabaseResponse.prototype['port'] = undefined;
-
-/**
- * Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
- * @member {Number} maximum_cpu
- * @default 250
- */
-DatabaseResponse.prototype['maximum_cpu'] = 250;
-
-/**
- * Maximum memory that can be allocated to the database based on organization cluster configuration. unit is MB. 1024 MB = 1GB
- * @member {Number} maximum_memory
- * @default 256
- */
-DatabaseResponse.prototype['maximum_memory'] = 256;
-
-/**
- * indicates if the database disk is encrypted or not
- * @member {Boolean} disk_encrypted
- */
-DatabaseResponse.prototype['disk_encrypted'] = undefined;
 
 /**
  * @member {String} id
@@ -222,6 +190,41 @@ DatabaseResponse.prototype['memory'] = 256;
  */
 DatabaseResponse.prototype['storage'] = 10240;
 
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+DatabaseResponse.prototype['environment'] = undefined;
+
+/**
+ * @member {String} host
+ */
+DatabaseResponse.prototype['host'] = undefined;
+
+/**
+ * @member {Number} port
+ */
+DatabaseResponse.prototype['port'] = undefined;
+
+/**
+ * Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ * @default 250
+ */
+DatabaseResponse.prototype['maximum_cpu'] = 250;
+
+/**
+ * Maximum memory that can be allocated to the database based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ * @default 256
+ */
+DatabaseResponse.prototype['maximum_memory'] = 256;
+
+/**
+ * indicates if the database disk is encrypted or not
+ * @member {Boolean} disk_encrypted
+ */
+DatabaseResponse.prototype['disk_encrypted'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -277,6 +280,36 @@ DatabaseRequest.prototype['memory'] = 256;
  * @default 10240
  */
 DatabaseRequest.prototype['storage'] = 10240;
+// Implement DatabaseResponseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+DatabaseResponseAllOf.prototype['environment'] = undefined;
+/**
+ * @member {String} host
+ */
+DatabaseResponseAllOf.prototype['host'] = undefined;
+/**
+ * @member {Number} port
+ */
+DatabaseResponseAllOf.prototype['port'] = undefined;
+/**
+ * Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ * @default 250
+ */
+DatabaseResponseAllOf.prototype['maximum_cpu'] = 250;
+/**
+ * Maximum memory that can be allocated to the database based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ * @default 256
+ */
+DatabaseResponseAllOf.prototype['maximum_memory'] = 256;
+/**
+ * indicates if the database disk is encrypted or not
+ * @member {Boolean} disk_encrypted
+ */
+DatabaseResponseAllOf.prototype['disk_encrypted'] = undefined;
 
 
 

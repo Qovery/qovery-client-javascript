@@ -13,24 +13,29 @@
 
 import ApiClient from '../ApiClient';
 import CostResponse from './CostResponse';
+import InvoiceResponseAllOf from './InvoiceResponseAllOf';
 
 /**
  * The InvoiceResponse model module.
  * @module model/InvoiceResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class InvoiceResponse {
     /**
      * Constructs a new <code>InvoiceResponse</code>.
      * @alias module:model/InvoiceResponse
      * @implements module:model/CostResponse
+     * @implements module:model/InvoiceResponseAllOf
      * @param totalInCents {Number} 
      * @param total {Number} 
      * @param currencyCode {String} 
+     * @param id {String} 
+     * @param createdAt {Date} 
+     * @param status {module:model/InvoiceResponse.StatusEnum} 
      */
-    constructor(totalInCents, total, currencyCode) { 
-        CostResponse.initialize(this, totalInCents, total, currencyCode);
-        InvoiceResponse.initialize(this, totalInCents, total, currencyCode);
+    constructor(totalInCents, total, currencyCode, id, createdAt, status) { 
+        CostResponse.initialize(this, totalInCents, total, currencyCode);InvoiceResponseAllOf.initialize(this, id, createdAt, status);
+        InvoiceResponse.initialize(this, totalInCents, total, currencyCode, id, createdAt, status);
     }
 
     /**
@@ -38,13 +43,13 @@ class InvoiceResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, totalInCents, total, currencyCode) { 
-        obj['id'] = id;
-        obj['created_at'] = createdAt;
-        obj['status'] = status;
+    static initialize(obj, totalInCents, total, currencyCode, id, createdAt, status) { 
         obj['total_in_cents'] = totalInCents;
         obj['total'] = total;
         obj['currency_code'] = currencyCode;
+        obj['id'] = id;
+        obj['created_at'] = createdAt;
+        obj['status'] = status;
     }
 
     /**
@@ -58,16 +63,8 @@ class InvoiceResponse {
         if (data) {
             obj = obj || new InvoiceResponse();
             CostResponse.constructFromObject(data, obj);
+            InvoiceResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
             if (data.hasOwnProperty('total_in_cents')) {
                 obj['total_in_cents'] = ApiClient.convertToType(data['total_in_cents'], 'Number');
             }
@@ -77,27 +74,21 @@ class InvoiceResponse {
             if (data.hasOwnProperty('currency_code')) {
                 obj['currency_code'] = ApiClient.convertToType(data['currency_code'], 'String');
             }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * @member {String} id
- */
-InvoiceResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-InvoiceResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {module:model/InvoiceResponse.StatusEnum} status
- */
-InvoiceResponse.prototype['status'] = undefined;
 
 /**
  * @member {Number} total_in_cents
@@ -114,6 +105,21 @@ InvoiceResponse.prototype['total'] = undefined;
  */
 InvoiceResponse.prototype['currency_code'] = undefined;
 
+/**
+ * @member {String} id
+ */
+InvoiceResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+InvoiceResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {module:model/InvoiceResponse.StatusEnum} status
+ */
+InvoiceResponse.prototype['status'] = undefined;
+
 
 // Implement CostResponse interface:
 /**
@@ -128,6 +134,19 @@ CostResponse.prototype['total'] = undefined;
  * @member {String} currency_code
  */
 CostResponse.prototype['currency_code'] = undefined;
+// Implement InvoiceResponseAllOf interface:
+/**
+ * @member {String} id
+ */
+InvoiceResponseAllOf.prototype['id'] = undefined;
+/**
+ * @member {Date} created_at
+ */
+InvoiceResponseAllOf.prototype['created_at'] = undefined;
+/**
+ * @member {module:model/InvoiceResponseAllOf.StatusEnum} status
+ */
+InvoiceResponseAllOf.prototype['status'] = undefined;
 
 
 

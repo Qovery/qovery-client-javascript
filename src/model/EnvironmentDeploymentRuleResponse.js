@@ -13,23 +13,29 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import EnvironmentDeploymentRuleResponseAllOf from './EnvironmentDeploymentRuleResponseAllOf';
 
 /**
  * The EnvironmentDeploymentRuleResponse model module.
  * @module model/EnvironmentDeploymentRuleResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class EnvironmentDeploymentRuleResponse {
     /**
      * Constructs a new <code>EnvironmentDeploymentRuleResponse</code>.
      * @alias module:model/EnvironmentDeploymentRuleResponse
      * @implements module:model/BaseResponse
+     * @implements module:model/EnvironmentDeploymentRuleResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param timezone {String} 
+     * @param startTime {Date} 
+     * @param stopTime {Date} 
+     * @param weekdays {Array.<module:model/EnvironmentDeploymentRuleResponse.WeekdaysEnum>} 
      */
-    constructor(id, createdAt) { 
-        BaseResponse.initialize(this, id, createdAt);
-        EnvironmentDeploymentRuleResponse.initialize(this, id, createdAt);
+    constructor(id, createdAt, timezone, startTime, stopTime, weekdays) { 
+        BaseResponse.initialize(this, id, createdAt);EnvironmentDeploymentRuleResponseAllOf.initialize(this, timezone, startTime, stopTime, weekdays);
+        EnvironmentDeploymentRuleResponse.initialize(this, id, createdAt, timezone, startTime, stopTime, weekdays);
     }
 
     /**
@@ -37,13 +43,13 @@ class EnvironmentDeploymentRuleResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt) { 
+    static initialize(obj, id, createdAt, timezone, startTime, stopTime, weekdays) { 
+        obj['id'] = id;
+        obj['created_at'] = createdAt;
         obj['timezone'] = timezone;
         obj['start_time'] = startTime;
         obj['stop_time'] = stopTime;
         obj['weekdays'] = weekdays;
-        obj['id'] = id;
-        obj['created_at'] = createdAt;
     }
 
     /**
@@ -57,7 +63,17 @@ class EnvironmentDeploymentRuleResponse {
         if (data) {
             obj = obj || new EnvironmentDeploymentRuleResponse();
             BaseResponse.constructFromObject(data, obj);
+            EnvironmentDeploymentRuleResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('auto_deploy')) {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
@@ -82,21 +98,27 @@ class EnvironmentDeploymentRuleResponse {
             if (data.hasOwnProperty('weekdays')) {
                 obj['weekdays'] = ApiClient.convertToType(data['weekdays'], ['String']);
             }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('updated_at')) {
-                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} id
+ */
+EnvironmentDeploymentRuleResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+EnvironmentDeploymentRuleResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+EnvironmentDeploymentRuleResponse.prototype['updated_at'] = undefined;
 
 /**
  * @member {Boolean} auto_deploy
@@ -142,21 +164,6 @@ EnvironmentDeploymentRuleResponse.prototype['stop_time'] = undefined;
  */
 EnvironmentDeploymentRuleResponse.prototype['weekdays'] = undefined;
 
-/**
- * @member {String} id
- */
-EnvironmentDeploymentRuleResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-EnvironmentDeploymentRuleResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-EnvironmentDeploymentRuleResponse.prototype['updated_at'] = undefined;
-
 
 // Implement BaseResponse interface:
 /**
@@ -171,6 +178,43 @@ BaseResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 BaseResponse.prototype['updated_at'] = undefined;
+// Implement EnvironmentDeploymentRuleResponseAllOf interface:
+/**
+ * @member {Boolean} auto_deploy
+ * @default true
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['auto_deploy'] = true;
+/**
+ * @member {Boolean} auto_stop
+ * @default false
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['auto_stop'] = false;
+/**
+ * @member {Boolean} auto_delete
+ * @default false
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['auto_delete'] = false;
+/**
+ * @member {Boolean} auto_preview
+ * @default false
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['auto_preview'] = false;
+/**
+ * @member {String} timezone
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['timezone'] = undefined;
+/**
+ * @member {Date} start_time
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['start_time'] = undefined;
+/**
+ * @member {Date} stop_time
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['stop_time'] = undefined;
+/**
+ * @member {Array.<module:model/EnvironmentDeploymentRuleResponseAllOf.WeekdaysEnum>} weekdays
+ */
+EnvironmentDeploymentRuleResponseAllOf.prototype['weekdays'] = undefined;
 
 
 

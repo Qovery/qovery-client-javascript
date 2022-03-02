@@ -14,11 +14,12 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import OrganizationRequest from './OrganizationRequest';
+import OrganizationResponseAllOf from './OrganizationResponseAllOf';
 
 /**
  * The OrganizationResponse model module.
  * @module model/OrganizationResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class OrganizationResponse {
     /**
@@ -26,13 +27,14 @@ class OrganizationResponse {
      * @alias module:model/OrganizationResponse
      * @implements module:model/BaseResponse
      * @implements module:model/OrganizationRequest
+     * @implements module:model/OrganizationResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
      * @param plan {module:model/OrganizationResponse.PlanEnum} 
      */
     constructor(id, createdAt, name, plan) { 
-        BaseResponse.initialize(this, id, createdAt);OrganizationRequest.initialize(this, name, plan);
+        BaseResponse.initialize(this, id, createdAt);OrganizationRequest.initialize(this, name, plan);OrganizationResponseAllOf.initialize(this);
         OrganizationResponse.initialize(this, id, createdAt, name, plan);
     }
 
@@ -60,10 +62,8 @@ class OrganizationResponse {
             obj = obj || new OrganizationResponse();
             BaseResponse.constructFromObject(data, obj);
             OrganizationRequest.constructFromObject(data, obj);
+            OrganizationResponseAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('owner')) {
-                obj['owner'] = ApiClient.convertToType(data['owner'], 'String');
-            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -94,18 +94,15 @@ class OrganizationResponse {
             if (data.hasOwnProperty('icon_url')) {
                 obj['icon_url'] = ApiClient.convertToType(data['icon_url'], 'String');
             }
+            if (data.hasOwnProperty('owner')) {
+                obj['owner'] = ApiClient.convertToType(data['owner'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
-
-/**
- * uuid of the user owning the organization
- * @member {String} owner
- */
-OrganizationResponse.prototype['owner'] = undefined;
 
 /**
  * @member {String} id
@@ -158,6 +155,12 @@ OrganizationResponse.prototype['logo_url'] = undefined;
  */
 OrganizationResponse.prototype['icon_url'] = undefined;
 
+/**
+ * uuid of the user owning the organization
+ * @member {String} owner
+ */
+OrganizationResponse.prototype['owner'] = undefined;
+
 
 // Implement BaseResponse interface:
 /**
@@ -202,6 +205,12 @@ OrganizationRequest.prototype['logo_url'] = undefined;
  * @member {String} icon_url
  */
 OrganizationRequest.prototype['icon_url'] = undefined;
+// Implement OrganizationResponseAllOf interface:
+/**
+ * uuid of the user owning the organization
+ * @member {String} owner
+ */
+OrganizationResponseAllOf.prototype['owner'] = undefined;
 
 
 

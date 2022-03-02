@@ -12,24 +12,26 @@
  */
 
 import ApiClient from '../ApiClient';
+import DeploymentHistoryPaginatedResponseListAllOf from './DeploymentHistoryPaginatedResponseListAllOf';
 import DeploymentHistoryResponse from './DeploymentHistoryResponse';
 import PaginationDataResponse from './PaginationDataResponse';
 
 /**
  * The DeploymentHistoryPaginatedResponseList model module.
  * @module model/DeploymentHistoryPaginatedResponseList
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class DeploymentHistoryPaginatedResponseList {
     /**
      * Constructs a new <code>DeploymentHistoryPaginatedResponseList</code>.
      * @alias module:model/DeploymentHistoryPaginatedResponseList
      * @implements module:model/PaginationDataResponse
+     * @implements module:model/DeploymentHistoryPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);
+        PaginationDataResponse.initialize(this, page, pageSize);DeploymentHistoryPaginatedResponseListAllOf.initialize(this);
         DeploymentHistoryPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -54,15 +56,16 @@ class DeploymentHistoryPaginatedResponseList {
         if (data) {
             obj = obj || new DeploymentHistoryPaginatedResponseList();
             PaginationDataResponse.constructFromObject(data, obj);
+            DeploymentHistoryPaginatedResponseListAllOf.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryResponse]);
-            }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
             }
             if (data.hasOwnProperty('page_size')) {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
+            }
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryResponse]);
             }
         }
         return obj;
@@ -70,11 +73,6 @@ class DeploymentHistoryPaginatedResponseList {
 
 
 }
-
-/**
- * @member {Array.<module:model/DeploymentHistoryResponse>} results
- */
-DeploymentHistoryPaginatedResponseList.prototype['results'] = undefined;
 
 /**
  * @member {Number} page
@@ -86,6 +84,11 @@ DeploymentHistoryPaginatedResponseList.prototype['page'] = undefined;
  */
 DeploymentHistoryPaginatedResponseList.prototype['page_size'] = undefined;
 
+/**
+ * @member {Array.<module:model/DeploymentHistoryResponse>} results
+ */
+DeploymentHistoryPaginatedResponseList.prototype['results'] = undefined;
+
 
 // Implement PaginationDataResponse interface:
 /**
@@ -96,6 +99,11 @@ PaginationDataResponse.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationDataResponse.prototype['page_size'] = undefined;
+// Implement DeploymentHistoryPaginatedResponseListAllOf interface:
+/**
+ * @member {Array.<module:model/DeploymentHistoryResponse>} results
+ */
+DeploymentHistoryPaginatedResponseListAllOf.prototype['results'] = undefined;
 
 
 

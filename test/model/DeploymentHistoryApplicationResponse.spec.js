@@ -54,24 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.DeploymentHistoryApplicationResponse);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property commit (base name: "commit")', function() {
-      // uncomment below and update the code to test the property commit
-      //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
       //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
@@ -86,6 +68,24 @@
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property commit (base name: "commit")', function() {
+      // uncomment below and update the code to test the property commit
+      //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new QoveryApi.DeploymentHistoryApplicationResponse();
       //expect(instance).to.be();
     });

@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
-import AnyOfstringboolean from './AnyOfstringboolean';
+import OneOfstringboolean from './OneOfstringboolean';
 
 /**
  * The ClusterFeatureResponse model module.
  * @module model/ClusterFeatureResponse
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ClusterFeatureResponse {
     /**
@@ -76,7 +76,7 @@ class ClusterFeatureResponse {
                 obj['is_value_updatable'] = ApiClient.convertToType(data['is_value_updatable'], 'Boolean');
             }
             if (data.hasOwnProperty('accepted_values')) {
-                obj['accepted_values'] = ApiClient.convertToType(data['accepted_values'], [AnyOfstringboolean]);
+                obj['accepted_values'] = ApiClient.convertToType(data['accepted_values'], [OneOfstringboolean]);
             }
         }
         return obj;
@@ -132,7 +132,7 @@ ClusterFeatureResponse.prototype['value'] = undefined;
 ClusterFeatureResponse.prototype['is_value_updatable'] = false;
 
 /**
- * @member {Array.<module:model/AnyOfstringboolean>} accepted_values
+ * @member {Array.<module:model/OneOfstringboolean>} accepted_values
  */
 ClusterFeatureResponse.prototype['accepted_values'] = undefined;
 

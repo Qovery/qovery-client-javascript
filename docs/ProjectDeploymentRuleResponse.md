@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**priorityIndex** | **Number** | used to select the first deployment rule to match new created environments | [optional] 
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
@@ -20,6 +19,7 @@ Name | Type | Description | Notes
 **stopTime** | **Date** |  | 
 **weekdays** | **[String]** |  | 
 **wildcard** | **String** | wildcard pattern composed of &#39;?&#39; and/or &#39;*&#39; used to target new created environments | [default to &#39;&#39;]
+**priorityIndex** | **Number** | used to select the first deployment rule to match new created environments | [optional] 
 
 
 

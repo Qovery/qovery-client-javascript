@@ -19,7 +19,7 @@ import EnvironmentDeploymentRuleResponse from '../model/EnvironmentDeploymentRul
 /**
 * EnvironmentDeploymentRule service.
 * @module api/EnvironmentDeploymentRuleApi
-* @version 1.0.3
+* @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
 export default class EnvironmentDeploymentRuleApi {
 

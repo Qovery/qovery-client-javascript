@@ -12,17 +12,19 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApplicationEditRequestAllOf from './ApplicationEditRequestAllOf';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import ApplicationPortResponse from './ApplicationPortResponse';
 import ApplicationPortResponsePorts from './ApplicationPortResponsePorts';
 import ApplicationStorageResponse from './ApplicationStorageResponse';
 import ApplicationStorageResponseStorage from './ApplicationStorageResponseStorage';
+import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 
 /**
  * The ApplicationEditRequest model module.
  * @module model/ApplicationEditRequest
- * @version 1.0.3
+ * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
 class ApplicationEditRequest {
     /**
@@ -30,9 +32,10 @@ class ApplicationEditRequest {
      * @alias module:model/ApplicationEditRequest
      * @implements module:model/ApplicationStorageResponse
      * @implements module:model/ApplicationPortResponse
+     * @implements module:model/ApplicationEditRequestAllOf
      */
     constructor() { 
-        ApplicationStorageResponse.initialize(this);ApplicationPortResponse.initialize(this);
+        ApplicationStorageResponse.initialize(this);ApplicationPortResponse.initialize(this);ApplicationEditRequestAllOf.initialize(this);
         ApplicationEditRequest.initialize(this);
     }
 
@@ -56,7 +59,14 @@ class ApplicationEditRequest {
             obj = obj || new ApplicationEditRequest();
             ApplicationStorageResponse.constructFromObject(data, obj);
             ApplicationPortResponse.constructFromObject(data, obj);
+            ApplicationEditRequestAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('storage')) {
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageResponseStorage]);
+            }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortResponsePorts]);
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -73,7 +83,7 @@ class ApplicationEditRequest {
                 obj['dockerfile_path'] = ApiClient.convertToType(data['dockerfile_path'], 'String');
             }
             if (data.hasOwnProperty('buildpack_language')) {
-                obj['buildpack_language'] = ApiClient.convertToType(data['buildpack_language'], 'String');
+                obj['buildpack_language'] = BuildPackLanguageEnum.constructFromObject(data['buildpack_language']);
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -96,18 +106,22 @@ class ApplicationEditRequest {
             if (data.hasOwnProperty('sticky_session')) {
                 obj['sticky_session'] = ApiClient.convertToType(data['sticky_session'], 'Boolean');
             }
-            if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageResponseStorage]);
-            }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortResponsePorts]);
-            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {Array.<module:model/ApplicationStorageResponseStorage>} storage
+ */
+ApplicationEditRequest.prototype['storage'] = undefined;
+
+/**
+ * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
+ */
+ApplicationEditRequest.prototype['ports'] = undefined;
 
 /**
  * name is case insensitive
@@ -139,8 +153,7 @@ ApplicationEditRequest.prototype['build_mode'] = undefined;
 ApplicationEditRequest.prototype['dockerfile_path'] = undefined;
 
 /**
- * Development language of the application
- * @member {module:model/ApplicationEditRequest.BuildpackLanguageEnum} buildpack_language
+ * @member {module:model/BuildPackLanguageEnum} buildpack_language
  */
 ApplicationEditRequest.prototype['buildpack_language'] = undefined;
 
@@ -191,16 +204,6 @@ ApplicationEditRequest.prototype['auto_preview'] = true;
  */
 ApplicationEditRequest.prototype['sticky_session'] = false;
 
-/**
- * @member {Array.<module:model/ApplicationStorageResponseStorage>} storage
- */
-ApplicationEditRequest.prototype['storage'] = undefined;
-
-/**
- * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
- */
-ApplicationEditRequest.prototype['ports'] = undefined;
-
 
 // Implement ApplicationStorageResponse interface:
 /**
@@ -212,6 +215,75 @@ ApplicationStorageResponse.prototype['storage'] = undefined;
  * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
  */
 ApplicationPortResponse.prototype['ports'] = undefined;
+// Implement ApplicationEditRequestAllOf interface:
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+ApplicationEditRequestAllOf.prototype['name'] = undefined;
+/**
+ * give a description to this application
+ * @member {String} description
+ */
+ApplicationEditRequestAllOf.prototype['description'] = undefined;
+/**
+ * @member {module:model/ApplicationGitRepositoryRequest} git_repository
+ */
+ApplicationEditRequestAllOf.prototype['git_repository'] = undefined;
+/**
+ * `DOCKER` requires `dockerfile_path` `BUILDPACKS` does not require any `dockerfile_path` 
+ * @member {module:model/ApplicationEditRequestAllOf.BuildModeEnum} build_mode
+ */
+ApplicationEditRequestAllOf.prototype['build_mode'] = undefined;
+/**
+ * The path of the associated Dockerfile
+ * @member {String} dockerfile_path
+ */
+ApplicationEditRequestAllOf.prototype['dockerfile_path'] = undefined;
+/**
+ * @member {module:model/BuildPackLanguageEnum} buildpack_language
+ */
+ApplicationEditRequestAllOf.prototype['buildpack_language'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ * @default 250
+ */
+ApplicationEditRequestAllOf.prototype['cpu'] = 250;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ * @default 256
+ */
+ApplicationEditRequestAllOf.prototype['memory'] = 256;
+/**
+ * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
+ * @member {Number} min_running_instances
+ * @default 1
+ */
+ApplicationEditRequestAllOf.prototype['min_running_instances'] = 1;
+/**
+ * Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
+ * @member {Number} max_running_instances
+ * @default 1
+ */
+ApplicationEditRequestAllOf.prototype['max_running_instances'] = 1;
+/**
+ * @member {module:model/Healthcheck} healthcheck
+ */
+ApplicationEditRequestAllOf.prototype['healthcheck'] = undefined;
+/**
+ * Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request. 
+ * @member {Boolean} auto_preview
+ * @default true
+ */
+ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
+/**
+ * Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application. 
+ * @member {Boolean} sticky_session
+ * @default false
+ */
+ApplicationEditRequestAllOf.prototype['sticky_session'] = false;
 
 
 
@@ -233,81 +305,6 @@ ApplicationEditRequest['BuildModeEnum'] = {
      * @const
      */
     "BUILDPACKS": "BUILDPACKS"
-};
-
-
-/**
- * Allowed values for the <code>buildpack_language</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationEditRequest['BuildpackLanguageEnum'] = {
-
-    /**
-     * value: "CLOJURE"
-     * @const
-     */
-    "CLOJURE": "CLOJURE",
-
-    /**
-     * value: "GO"
-     * @const
-     */
-    "GO": "GO",
-
-    /**
-     * value: "GRADLE"
-     * @const
-     */
-    "GRADLE": "GRADLE",
-
-    /**
-     * value: "GRAILS"
-     * @const
-     */
-    "GRAILS": "GRAILS",
-
-    /**
-     * value: "JAVA"
-     * @const
-     */
-    "JAVA": "JAVA",
-
-    /**
-     * value: "JVM"
-     * @const
-     */
-    "JVM": "JVM",
-
-    /**
-     * value: "NODE_JS"
-     * @const
-     */
-    "NODE_JS": "NODE_JS",
-
-    /**
-     * value: "PHP"
-     * @const
-     */
-    "PHP": "PHP",
-
-    /**
-     * value: "PLAY"
-     * @const
-     */
-    "PLAY": "PLAY",
-
-    /**
-     * value: "PYTHON"
-     * @const
-     */
-    "PYTHON": "PYTHON",
-
-    /**
-     * value: "SCALA"
-     * @const
-     */
-    "SCALA": "SCALA"
 };
 
 

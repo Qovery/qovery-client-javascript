@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
-**createdAt** | **Date** |  | 
-**status** | **String** |  | 
 **totalInCents** | **Number** |  | 
 **total** | **Number** |  | 
 **currencyCode** | **String** |  | 
+**id** | **String** |  | 
+**createdAt** | **Date** |  | 
+**status** | **String** |  | 
 
 
 

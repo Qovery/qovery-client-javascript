@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(QoveryApi.InviteMemberResponse);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.InviteMemberResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.InviteMemberResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.InviteMemberResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
       //var instance = new QoveryApi.InviteMemberResponse();
@@ -86,24 +104,6 @@
 
     it('should have the property logoUrl (base name: "logo_url")', function() {
       // uncomment below and update the code to test the property logoUrl
-      //var instance = new QoveryApi.InviteMemberResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.InviteMemberResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.InviteMemberResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
       //var instance = new QoveryApi.InviteMemberResponse();
       //expect(instance).to.be();
     });

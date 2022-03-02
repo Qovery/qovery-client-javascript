@@ -54,24 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.InvoiceResponse);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.InvoiceResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.InvoiceResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.InvoiceResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property totalInCents (base name: "total_in_cents")', function() {
       // uncomment below and update the code to test the property totalInCents
       //var instance = new QoveryApi.InvoiceResponse();
@@ -86,6 +68,24 @@
 
     it('should have the property currencyCode (base name: "currency_code")', function() {
       // uncomment below and update the code to test the property currencyCode
+      //var instance = new QoveryApi.InvoiceResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.InvoiceResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.InvoiceResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new QoveryApi.InvoiceResponse();
       //expect(instance).to.be();
     });

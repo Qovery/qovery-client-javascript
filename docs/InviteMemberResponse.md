@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [readonly] 
+**createdAt** | **Date** |  | [readonly] 
+**updatedAt** | **Date** |  | [optional] [readonly] 
 **email** | **String** |  | 
 **role** | **String** |  | 
 **invitationLink** | **String** |  | 
 **invitationStatus** | **String** |  | 
 **inviter** | **String** |  | 
 **logoUrl** | **String** |  | [optional] 
-**id** | **String** |  | [readonly] 
-**createdAt** | **Date** |  | [readonly] 
-**updatedAt** | **Date** |  | [optional] [readonly] 
 
 
 

@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(QoveryApi.EnvironmentDeploymentRuleResponse);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property autoDeploy (base name: "auto_deploy")', function() {
       // uncomment below and update the code to test the property autoDeploy
       //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
@@ -98,24 +116,6 @@
 
     it('should have the property weekdays (base name: "weekdays")', function() {
       // uncomment below and update the code to test the property weekdays
-      //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
       //var instance = new QoveryApi.EnvironmentDeploymentRuleResponse();
       //expect(instance).to.be();
     });

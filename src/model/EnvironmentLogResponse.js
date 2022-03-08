@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import EnvironmentLogResponseScope from './EnvironmentLogResponseScope';
+import GlobalDeploymentStatus from './GlobalDeploymentStatus';
 
 /**
  * The EnvironmentLogResponse model module.
@@ -64,7 +65,7 @@ class EnvironmentLogResponse {
                 obj['scope'] = EnvironmentLogResponseScope.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('state')) {
-                obj['state'] = ApiClient.convertToType(data['state'], 'String');
+                obj['state'] = GlobalDeploymentStatus.constructFromObject(data['state']);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
@@ -98,8 +99,7 @@ EnvironmentLogResponse.prototype['created_at'] = undefined;
 EnvironmentLogResponse.prototype['scope'] = undefined;
 
 /**
- * Status is a state machine. It starts with `BUILDING` or `DEPLOYING` state (or `INITIALIZED`if auto-deploy is deactivated). Then finish with `*_ERROR` or any termination state. 
- * @member {module:model/EnvironmentLogResponse.StateEnum} state
+ * @member {module:model/GlobalDeploymentStatus} state
  */
 EnvironmentLogResponse.prototype['state'] = undefined;
 
@@ -122,111 +122,6 @@ EnvironmentLogResponse.prototype['hint'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>state</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentLogResponse['StateEnum'] = {
-
-    /**
-     * value: "BUILD_ERROR"
-     * @const
-     */
-    "BUILD_ERROR": "BUILD_ERROR",
-
-    /**
-     * value: "BUILDING"
-     * @const
-     */
-    "BUILDING": "BUILDING",
-
-    /**
-     * value: "BUILT"
-     * @const
-     */
-    "BUILT": "BUILT",
-
-    /**
-     * value: "DELETE_ERROR"
-     * @const
-     */
-    "DELETE_ERROR": "DELETE_ERROR",
-
-    /**
-     * value: "DELETED"
-     * @const
-     */
-    "DELETED": "DELETED",
-
-    /**
-     * value: "DELETING"
-     * @const
-     */
-    "DELETING": "DELETING",
-
-    /**
-     * value: "DEPLOYED"
-     * @const
-     */
-    "DEPLOYED": "DEPLOYED",
-
-    /**
-     * value: "DEPLOYING"
-     * @const
-     */
-    "DEPLOYING": "DEPLOYING",
-
-    /**
-     * value: "DEPLOYMENT_ERROR"
-     * @const
-     */
-    "DEPLOYMENT_ERROR": "DEPLOYMENT_ERROR",
-
-    /**
-     * value: "INITIALIZED"
-     * @const
-     */
-    "INITIALIZED": "INITIALIZED",
-
-    /**
-     * value: "QUEUED"
-     * @const
-     */
-    "QUEUED": "QUEUED",
-
-    /**
-     * value: "RUNNING"
-     * @const
-     */
-    "RUNNING": "RUNNING",
-
-    /**
-     * value: "RUNNING_ERROR"
-     * @const
-     */
-    "RUNNING_ERROR": "RUNNING_ERROR",
-
-    /**
-     * value: "STOP_ERROR"
-     * @const
-     */
-    "STOP_ERROR": "STOP_ERROR",
-
-    /**
-     * value: "STOPPED"
-     * @const
-     */
-    "STOPPED": "STOPPED",
-
-    /**
-     * value: "STOPPING"
-     * @const
-     */
-    "STOPPING": "STOPPING"
-};
 
 
 

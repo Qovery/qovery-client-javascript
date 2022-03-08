@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
+import WeekdayEnum from './WeekdayEnum';
 
 /**
  * The DeploymentRuleRequest model module.
@@ -23,7 +25,7 @@ class DeploymentRuleRequest {
      * Constructs a new <code>DeploymentRuleRequest</code>.
      * @alias module:model/DeploymentRuleRequest
      * @param name {String} name is case insensitive
-     * @param mode {module:model/DeploymentRuleRequest.ModeEnum} 
+     * @param mode {module:model/EnvironmentModeEnum} 
      * @param cluster {String} 
      * @param autoStop {Boolean} 
      */
@@ -62,7 +64,7 @@ class DeploymentRuleRequest {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('cluster')) {
                 obj['cluster'] = ApiClient.convertToType(data['cluster'], 'String');
@@ -83,7 +85,7 @@ class DeploymentRuleRequest {
                 obj['stop_time'] = ApiClient.convertToType(data['stop_time'], 'Date');
             }
             if (data.hasOwnProperty('weekdays')) {
-                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], ['String']);
+                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], [WeekdayEnum]);
             }
         }
         return obj;
@@ -104,7 +106,7 @@ DeploymentRuleRequest.prototype['name'] = undefined;
 DeploymentRuleRequest.prototype['description'] = undefined;
 
 /**
- * @member {module:model/DeploymentRuleRequest.ModeEnum} mode
+ * @member {module:model/EnvironmentModeEnum} mode
  */
 DeploymentRuleRequest.prototype['mode'] = undefined;
 
@@ -146,84 +148,12 @@ DeploymentRuleRequest.prototype['stop_time'] = undefined;
 
 /**
  * specify value only if auto_stop = false
- * @member {Array.<module:model/DeploymentRuleRequest.WeekdaysEnum>} weekdays
+ * @member {Array.<module:model/WeekdayEnum>} weekdays
  */
 DeploymentRuleRequest.prototype['weekdays'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-DeploymentRuleRequest['ModeEnum'] = {
-
-    /**
-     * value: "PRODUCTION"
-     * @const
-     */
-    "PRODUCTION": "PRODUCTION",
-
-    /**
-     * value: "DEVELOPMENT"
-     * @const
-     */
-    "DEVELOPMENT": "DEVELOPMENT"
-};
-
-
-/**
- * Allowed values for the <code>weekdays</code> property.
- * @enum {String}
- * @readonly
- */
-DeploymentRuleRequest['WeekdaysEnum'] = {
-
-    /**
-     * value: "MONDAY"
-     * @const
-     */
-    "MONDAY": "MONDAY",
-
-    /**
-     * value: "TUESDAY"
-     * @const
-     */
-    "TUESDAY": "TUESDAY",
-
-    /**
-     * value: "WEDNESDAY"
-     * @const
-     */
-    "WEDNESDAY": "WEDNESDAY",
-
-    /**
-     * value: "THURSDAY"
-     * @const
-     */
-    "THURSDAY": "THURSDAY",
-
-    /**
-     * value: "FRIDAY"
-     * @const
-     */
-    "FRIDAY": "FRIDAY",
-
-    /**
-     * value: "SATURDAY"
-     * @const
-     */
-    "SATURDAY": "SATURDAY",
-
-    /**
-     * value: "SUNDAY"
-     * @const
-     */
-    "SUNDAY": "SUNDAY"
-};
 
 
 

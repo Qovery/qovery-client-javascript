@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import EnvironmentVariableResponseAllOfAliasedVariable from './EnvironmentVariableResponseAllOfAliasedVariable';
 import EnvironmentVariableResponseAllOfOverriddenVariable from './EnvironmentVariableResponseAllOfOverriddenVariable';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 
 /**
  * The EnvironmentVariableResponseAllOf model module.
@@ -24,7 +25,7 @@ class EnvironmentVariableResponseAllOf {
     /**
      * Constructs a new <code>EnvironmentVariableResponseAllOf</code>.
      * @alias module:model/EnvironmentVariableResponseAllOf
-     * @param scope {module:model/EnvironmentVariableResponseAllOf.ScopeEnum} 
+     * @param scope {module:model/EnvironmentVariableScopeEnum} 
      */
     constructor(scope) { 
         
@@ -58,7 +59,7 @@ class EnvironmentVariableResponseAllOf {
                 obj['aliased_variable'] = EnvironmentVariableResponseAllOfAliasedVariable.constructFromObject(data['aliased_variable']);
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('service_name')) {
                 obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
@@ -81,7 +82,7 @@ EnvironmentVariableResponseAllOf.prototype['overridden_variable'] = undefined;
 EnvironmentVariableResponseAllOf.prototype['aliased_variable'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableResponseAllOf.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 EnvironmentVariableResponseAllOf.prototype['scope'] = undefined;
 
@@ -92,39 +93,6 @@ EnvironmentVariableResponseAllOf.prototype['service_name'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentVariableResponseAllOf['ScopeEnum'] = {
-
-    /**
-     * value: "BUILT_IN"
-     * @const
-     */
-    "BUILT_IN": "BUILT_IN",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

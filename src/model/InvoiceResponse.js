@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import CostResponse from './CostResponse';
 import InvoiceResponseAllOf from './InvoiceResponseAllOf';
+import InvoiceStatusEnum from './InvoiceStatusEnum';
 
 /**
  * The InvoiceResponse model module.
@@ -31,7 +32,7 @@ class InvoiceResponse {
      * @param currencyCode {String} 
      * @param id {String} 
      * @param createdAt {Date} 
-     * @param status {module:model/InvoiceResponse.StatusEnum} 
+     * @param status {module:model/InvoiceStatusEnum} 
      */
     constructor(totalInCents, total, currencyCode, id, createdAt, status) { 
         CostResponse.initialize(this, totalInCents, total, currencyCode);InvoiceResponseAllOf.initialize(this, id, createdAt, status);
@@ -81,7 +82,7 @@ class InvoiceResponse {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = InvoiceStatusEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -116,7 +117,7 @@ InvoiceResponse.prototype['id'] = undefined;
 InvoiceResponse.prototype['created_at'] = undefined;
 
 /**
- * @member {module:model/InvoiceResponse.StatusEnum} status
+ * @member {module:model/InvoiceStatusEnum} status
  */
 InvoiceResponse.prototype['status'] = undefined;
 
@@ -144,61 +145,10 @@ InvoiceResponseAllOf.prototype['id'] = undefined;
  */
 InvoiceResponseAllOf.prototype['created_at'] = undefined;
 /**
- * @member {module:model/InvoiceResponseAllOf.StatusEnum} status
+ * @member {module:model/InvoiceStatusEnum} status
  */
 InvoiceResponseAllOf.prototype['status'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-InvoiceResponse['StatusEnum'] = {
-
-    /**
-     * value: "PAID"
-     * @const
-     */
-    "PAID": "PAID",
-
-    /**
-     * value: "POSTED"
-     * @const
-     */
-    "POSTED": "POSTED",
-
-    /**
-     * value: "PAYMENT_DUE"
-     * @const
-     */
-    "PAYMENT_DUE": "PAYMENT_DUE",
-
-    /**
-     * value: "NOT_PAID"
-     * @const
-     */
-    "NOT_PAID": "NOT_PAID",
-
-    /**
-     * value: "VOIDED"
-     * @const
-     */
-    "VOIDED": "VOIDED",
-
-    /**
-     * value: "PENDING"
-     * @const
-     */
-    "PENDING": "PENDING",
-
-    /**
-     * value: "UNKNOWN"
-     * @const
-     */
-    "UNKNOWN": "UNKNOWN"
-};
 
 
 

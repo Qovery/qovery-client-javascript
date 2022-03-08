@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
 
 /**
  * The EnvironmentEditRequest model module.
@@ -51,7 +52,7 @@ class EnvironmentEditRequest {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
             }
         }
         return obj;
@@ -66,46 +67,12 @@ class EnvironmentEditRequest {
 EnvironmentEditRequest.prototype['name'] = undefined;
 
 /**
- * PREVIEW value is reserved for preview environments only
- * @member {module:model/EnvironmentEditRequest.ModeEnum} mode
+ * @member {module:model/EnvironmentModeEnum} mode
  */
 EnvironmentEditRequest.prototype['mode'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentEditRequest['ModeEnum'] = {
-
-    /**
-     * value: "DEVELOPMENT"
-     * @const
-     */
-    "DEVELOPMENT": "DEVELOPMENT",
-
-    /**
-     * value: "STAGING"
-     * @const
-     */
-    "STAGING": "STAGING",
-
-    /**
-     * value: "PRODUCTION"
-     * @const
-     */
-    "PRODUCTION": "PRODUCTION",
-
-    /**
-     * value: "PREVIEW"
-     * @const
-     */
-    "PREVIEW": "PREVIEW"
-};
 
 
 

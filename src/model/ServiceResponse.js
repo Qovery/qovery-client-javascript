@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import ServiceResponseAllOf from './ServiceResponseAllOf';
+import ServiceTypeEnum from './ServiceTypeEnum';
 
 /**
  * The ServiceResponse model module.
@@ -67,7 +68,7 @@ class ServiceResponse {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = ServiceTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -114,8 +115,7 @@ ServiceResponse.prototype['created_at'] = undefined;
 ServiceResponse.prototype['updated_at'] = undefined;
 
 /**
- * type of the service (application, database, job, gateway...)
- * @member {module:model/ServiceResponse.TypeEnum} type
+ * @member {module:model/ServiceTypeEnum} type
  */
 ServiceResponse.prototype['type'] = undefined;
 
@@ -176,8 +176,7 @@ BaseResponse.prototype['created_at'] = undefined;
 BaseResponse.prototype['updated_at'] = undefined;
 // Implement ServiceResponseAllOf interface:
 /**
- * type of the service (application, database, job, gateway...)
- * @member {module:model/ServiceResponseAllOf.TypeEnum} type
+ * @member {module:model/ServiceTypeEnum} type
  */
 ServiceResponseAllOf.prototype['type'] = undefined;
 /**
@@ -220,27 +219,6 @@ ServiceResponseAllOf.prototype['service_version'] = undefined;
  */
 ServiceResponseAllOf.prototype['to_update'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-ServiceResponse['TypeEnum'] = {
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION",
-
-    /**
-     * value: "DATABASE"
-     * @const
-     */
-    "DATABASE": "DATABASE"
-};
 
 
 

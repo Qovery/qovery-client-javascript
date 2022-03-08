@@ -10,20 +10,7 @@ Name | Type | Description | Notes
 **runningInPercent** | **Number** |  | [optional] 
 **warningThresholdInPercent** | **Number** |  | [optional] 
 **alertThresholdInPercent** | **Number** |  | [optional] 
-**status** | **String** |  | [optional] 
+**status** | [**ThresholdMetricStatusEnum**](ThresholdMetricStatusEnum.md) |  | [optional] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
-
-
-
-## Enum: StatusEnum
-
-
-* `OK` (value: `"OK"`)
-
-* `Warning` (value: `"Warning"`)
-
-* `Alert` (value: `"Alert"`)
-
-
 
 

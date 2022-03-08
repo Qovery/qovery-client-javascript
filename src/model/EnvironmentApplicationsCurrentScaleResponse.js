@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ThresholdMetricStatusEnum from './ThresholdMetricStatusEnum';
 
 /**
  * The EnvironmentApplicationsCurrentScaleResponse model module.
@@ -69,7 +70,7 @@ class EnvironmentApplicationsCurrentScaleResponse {
                 obj['alert_threshold_in_percent'] = ApiClient.convertToType(data['alert_threshold_in_percent'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = ThresholdMetricStatusEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
@@ -117,7 +118,7 @@ EnvironmentApplicationsCurrentScaleResponse.prototype['warning_threshold_in_perc
 EnvironmentApplicationsCurrentScaleResponse.prototype['alert_threshold_in_percent'] = undefined;
 
 /**
- * @member {module:model/EnvironmentApplicationsCurrentScaleResponse.StatusEnum} status
+ * @member {module:model/ThresholdMetricStatusEnum} status
  */
 EnvironmentApplicationsCurrentScaleResponse.prototype['status'] = undefined;
 
@@ -128,33 +129,6 @@ EnvironmentApplicationsCurrentScaleResponse.prototype['updated_at'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentApplicationsCurrentScaleResponse['StatusEnum'] = {
-
-    /**
-     * value: "OK"
-     * @const
-     */
-    "OK": "OK",
-
-    /**
-     * value: "Warning"
-     * @const
-     */
-    "Warning": "Warning",
-
-    /**
-     * value: "Alert"
-     * @const
-     */
-    "Alert": "Alert"
-};
 
 
 

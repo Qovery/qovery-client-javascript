@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import InviteMemberRoleEnum from './InviteMemberRoleEnum';
 import MemberResponseAllOf from './MemberResponseAllOf';
 
 /**
@@ -84,7 +85,7 @@ class MemberResponse {
                 obj['last_activity_at'] = ApiClient.convertToType(data['last_activity_at'], 'Date');
             }
             if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
+                obj['role'] = InviteMemberRoleEnum.constructFromObject(data['role']);
             }
         }
         return obj;
@@ -135,7 +136,7 @@ MemberResponse.prototype['profile_picture_url'] = undefined;
 MemberResponse.prototype['last_activity_at'] = undefined;
 
 /**
- * @member {module:model/MemberResponse.RoleEnum} role
+ * @member {module:model/InviteMemberRoleEnum} role
  */
 MemberResponse.prototype['role'] = undefined;
 
@@ -176,43 +177,10 @@ MemberResponseAllOf.prototype['profile_picture_url'] = undefined;
  */
 MemberResponseAllOf.prototype['last_activity_at'] = undefined;
 /**
- * @member {module:model/MemberResponseAllOf.RoleEnum} role
+ * @member {module:model/InviteMemberRoleEnum} role
  */
 MemberResponseAllOf.prototype['role'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
- */
-MemberResponse['RoleEnum'] = {
-
-    /**
-     * value: "OWNER"
-     * @const
-     */
-    "OWNER": "OWNER",
-
-    /**
-     * value: "ADMIN"
-     * @const
-     */
-    "ADMIN": "ADMIN",
-
-    /**
-     * value: "DEVELOPER"
-     * @const
-     */
-    "DEVELOPER": "DEVELOPER",
-
-    /**
-     * value: "VIEWER"
-     * @const
-     */
-    "VIEWER": "VIEWER"
-};
 
 
 

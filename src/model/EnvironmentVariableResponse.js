@@ -17,6 +17,7 @@ import EnvironmentVariableRequest from './EnvironmentVariableRequest';
 import EnvironmentVariableResponseAllOf from './EnvironmentVariableResponseAllOf';
 import EnvironmentVariableResponseAllOfAliasedVariable from './EnvironmentVariableResponseAllOfAliasedVariable';
 import EnvironmentVariableResponseAllOfOverriddenVariable from './EnvironmentVariableResponseAllOfOverriddenVariable';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 
 /**
  * The EnvironmentVariableResponse model module.
@@ -34,7 +35,7 @@ class EnvironmentVariableResponse {
      * @param createdAt {Date} 
      * @param key {String} key is case sensitive
      * @param value {String} value of the env variable.
-     * @param scope {module:model/EnvironmentVariableResponse.ScopeEnum} 
+     * @param scope {module:model/EnvironmentVariableScopeEnum} 
      */
     constructor(id, createdAt, key, value, scope) { 
         BaseResponse.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key, value);EnvironmentVariableResponseAllOf.initialize(this, scope);
@@ -90,7 +91,7 @@ class EnvironmentVariableResponse {
                 obj['aliased_variable'] = EnvironmentVariableResponseAllOfAliasedVariable.constructFromObject(data['aliased_variable']);
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('service_name')) {
                 obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
@@ -140,7 +141,7 @@ EnvironmentVariableResponse.prototype['overridden_variable'] = undefined;
 EnvironmentVariableResponse.prototype['aliased_variable'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableResponse.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 EnvironmentVariableResponse.prototype['scope'] = undefined;
 
@@ -184,7 +185,7 @@ EnvironmentVariableResponseAllOf.prototype['overridden_variable'] = undefined;
  */
 EnvironmentVariableResponseAllOf.prototype['aliased_variable'] = undefined;
 /**
- * @member {module:model/EnvironmentVariableResponseAllOf.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 EnvironmentVariableResponseAllOf.prototype['scope'] = undefined;
 /**
@@ -192,39 +193,6 @@ EnvironmentVariableResponseAllOf.prototype['scope'] = undefined;
  */
 EnvironmentVariableResponseAllOf.prototype['service_name'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentVariableResponse['ScopeEnum'] = {
-
-    /**
-     * value: "BUILT_IN"
-     * @const
-     */
-    "BUILT_IN": "BUILT_IN",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

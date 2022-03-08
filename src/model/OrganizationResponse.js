@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import OrganizationRequest from './OrganizationRequest';
 import OrganizationResponseAllOf from './OrganizationResponseAllOf';
+import PlanEnum from './PlanEnum';
 
 /**
  * The OrganizationResponse model module.
@@ -31,7 +32,7 @@ class OrganizationResponse {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
-     * @param plan {module:model/OrganizationResponse.PlanEnum} 
+     * @param plan {module:model/PlanEnum} 
      */
     constructor(id, createdAt, name, plan) { 
         BaseResponse.initialize(this, id, createdAt);OrganizationRequest.initialize(this, name, plan);OrganizationResponseAllOf.initialize(this);
@@ -80,7 +81,7 @@ class OrganizationResponse {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('plan')) {
-                obj['plan'] = ApiClient.convertToType(data['plan'], 'String');
+                obj['plan'] = PlanEnum.constructFromObject(data['plan']);
             }
             if (data.hasOwnProperty('website_url')) {
                 obj['website_url'] = ApiClient.convertToType(data['website_url'], 'String');
@@ -131,7 +132,7 @@ OrganizationResponse.prototype['name'] = undefined;
 OrganizationResponse.prototype['description'] = undefined;
 
 /**
- * @member {module:model/OrganizationResponse.PlanEnum} plan
+ * @member {module:model/PlanEnum} plan
  */
 OrganizationResponse.prototype['plan'] = undefined;
 
@@ -186,7 +187,7 @@ OrganizationRequest.prototype['name'] = undefined;
  */
 OrganizationRequest.prototype['description'] = undefined;
 /**
- * @member {module:model/OrganizationRequest.PlanEnum} plan
+ * @member {module:model/PlanEnum} plan
  */
 OrganizationRequest.prototype['plan'] = undefined;
 /**
@@ -212,39 +213,6 @@ OrganizationRequest.prototype['icon_url'] = undefined;
  */
 OrganizationResponseAllOf.prototype['owner'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>plan</code> property.
- * @enum {String}
- * @readonly
- */
-OrganizationResponse['PlanEnum'] = {
-
-    /**
-     * value: "COMMUNITY"
-     * @const
-     */
-    "COMMUNITY": "COMMUNITY",
-
-    /**
-     * value: "FREE"
-     * @const
-     */
-    "FREE": "FREE",
-
-    /**
-     * value: "PROFESSIONAL"
-     * @const
-     */
-    "PROFESSIONAL": "PROFESSIONAL",
-
-    /**
-     * value: "BUSINESS"
-     * @const
-     */
-    "BUSINESS": "BUSINESS"
-};
 
 
 

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import CloudProviderEnum from './CloudProviderEnum';
 import Cluster from './Cluster';
 import ClusterFeatureRequest from './ClusterFeatureRequest';
 import ClusterFeatureRequestFeatures from './ClusterFeatureRequestFeatures';
@@ -28,7 +29,7 @@ class ClusterRequest {
      * @implements module:model/Cluster
      * @implements module:model/ClusterFeatureRequest
      * @param name {String} name is case-insensitive
-     * @param cloudProvider {module:model/ClusterRequest.CloudProviderEnum} 
+     * @param cloudProvider {module:model/CloudProviderEnum} 
      * @param region {String} 
      */
     constructor(name, cloudProvider, region) { 
@@ -67,7 +68,7 @@ class ClusterRequest {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('cloud_provider')) {
-                obj['cloud_provider'] = ApiClient.convertToType(data['cloud_provider'], 'String');
+                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
             }
             if (data.hasOwnProperty('region')) {
                 obj['region'] = ApiClient.convertToType(data['region'], 'String');
@@ -109,7 +110,7 @@ ClusterRequest.prototype['name'] = undefined;
 ClusterRequest.prototype['description'] = undefined;
 
 /**
- * @member {module:model/ClusterRequest.CloudProviderEnum} cloud_provider
+ * @member {module:model/CloudProviderEnum} cloud_provider
  */
 ClusterRequest.prototype['cloud_provider'] = undefined;
 
@@ -166,7 +167,7 @@ Cluster.prototype['name'] = undefined;
  */
 Cluster.prototype['description'] = undefined;
 /**
- * @member {module:model/Cluster.CloudProviderEnum} cloud_provider
+ * @member {module:model/CloudProviderEnum} cloud_provider
  */
 Cluster.prototype['cloud_provider'] = undefined;
 /**
@@ -205,33 +206,6 @@ Cluster.prototype['max_running_nodes'] = 1;
  */
 ClusterFeatureRequest.prototype['features'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>cloud_provider</code> property.
- * @enum {String}
- * @readonly
- */
-ClusterRequest['CloudProviderEnum'] = {
-
-    /**
-     * value: "AWS"
-     * @const
-     */
-    "AWS": "AWS",
-
-    /**
-     * value: "DIGITAL_OCEAN"
-     * @const
-     */
-    "DIGITAL_OCEAN": "DIGITAL_OCEAN",
-
-    /**
-     * value: "SCALEWAY"
-     * @const
-     */
-    "SCALEWAY": "SCALEWAY"
-};
 
 
 

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ClusterStatusEnum from './ClusterStatusEnum';
 
 /**
  * The ClusterResponseAllOf model module.
@@ -51,7 +52,7 @@ class ClusterResponseAllOf {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = ClusterStatusEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('has_access')) {
                 obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
@@ -76,7 +77,7 @@ class ClusterResponseAllOf {
 ClusterResponseAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
 
 /**
- * @member {module:model/ClusterResponseAllOf.StatusEnum} status
+ * @member {module:model/ClusterStatusEnum} status
  */
 ClusterResponseAllOf.prototype['status'] = undefined;
 
@@ -97,33 +98,6 @@ ClusterResponseAllOf.prototype['is_default'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-ClusterResponseAllOf['StatusEnum'] = {
-
-    /**
-     * value: "READY"
-     * @const
-     */
-    "READY": "READY",
-
-    /**
-     * value: "RUNNING"
-     * @const
-     */
-    "RUNNING": "RUNNING",
-
-    /**
-     * value: "WARNING"
-     * @const
-     */
-    "WARNING": "WARNING"
-};
 
 
 

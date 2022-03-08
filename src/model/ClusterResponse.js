@@ -13,9 +13,11 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import CloudProviderEnum from './CloudProviderEnum';
 import Cluster from './Cluster';
 import ClusterFeatureResponse from './ClusterFeatureResponse';
 import ClusterResponseAllOf from './ClusterResponseAllOf';
+import ClusterStatusEnum from './ClusterStatusEnum';
 import OneOfstringboolean from './OneOfstringboolean';
 
 /**
@@ -34,7 +36,7 @@ class ClusterResponse {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case-insensitive
-     * @param cloudProvider {module:model/ClusterResponse.CloudProviderEnum} 
+     * @param cloudProvider {module:model/CloudProviderEnum} 
      * @param region {String} 
      */
     constructor(id, createdAt, name, cloudProvider, region) { 
@@ -86,7 +88,7 @@ class ClusterResponse {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('cloud_provider')) {
-                obj['cloud_provider'] = ApiClient.convertToType(data['cloud_provider'], 'String');
+                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
             }
             if (data.hasOwnProperty('region')) {
                 obj['region'] = ApiClient.convertToType(data['region'], 'String');
@@ -134,7 +136,7 @@ class ClusterResponse {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = ClusterStatusEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('has_access')) {
                 obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
@@ -179,7 +181,7 @@ ClusterResponse.prototype['name'] = undefined;
 ClusterResponse.prototype['description'] = undefined;
 
 /**
- * @member {module:model/ClusterResponse.CloudProviderEnum} cloud_provider
+ * @member {module:model/CloudProviderEnum} cloud_provider
  */
 ClusterResponse.prototype['cloud_provider'] = undefined;
 
@@ -267,7 +269,7 @@ ClusterResponse.prototype['accepted_values'] = undefined;
 ClusterResponse.prototype['estimated_cloud_provider_cost'] = undefined;
 
 /**
- * @member {module:model/ClusterResponse.StatusEnum} status
+ * @member {module:model/ClusterStatusEnum} status
  */
 ClusterResponse.prototype['status'] = undefined;
 
@@ -311,7 +313,7 @@ Cluster.prototype['name'] = undefined;
  */
 Cluster.prototype['description'] = undefined;
 /**
- * @member {module:model/Cluster.CloudProviderEnum} cloud_provider
+ * @member {module:model/CloudProviderEnum} cloud_provider
  */
 Cluster.prototype['cloud_provider'] = undefined;
 /**
@@ -393,7 +395,7 @@ ClusterFeatureResponse.prototype['accepted_values'] = undefined;
  */
 ClusterResponseAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
 /**
- * @member {module:model/ClusterResponseAllOf.StatusEnum} status
+ * @member {module:model/ClusterStatusEnum} status
  */
 ClusterResponseAllOf.prototype['status'] = undefined;
 /**
@@ -412,33 +414,6 @@ ClusterResponseAllOf.prototype['is_default'] = undefined;
 
 
 /**
- * Allowed values for the <code>cloud_provider</code> property.
- * @enum {String}
- * @readonly
- */
-ClusterResponse['CloudProviderEnum'] = {
-
-    /**
-     * value: "AWS"
-     * @const
-     */
-    "AWS": "AWS",
-
-    /**
-     * value: "DIGITAL_OCEAN"
-     * @const
-     */
-    "DIGITAL_OCEAN": "DIGITAL_OCEAN",
-
-    /**
-     * value: "SCALEWAY"
-     * @const
-     */
-    "SCALEWAY": "SCALEWAY"
-};
-
-
-/**
  * Allowed values for the <code>value_type</code> property.
  * @enum {String}
  * @readonly
@@ -450,33 +425,6 @@ ClusterResponse['ValueTypeEnum'] = {
      * @const
      */
     "BOOLEAN": "BOOLEAN"
-};
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-ClusterResponse['StatusEnum'] = {
-
-    /**
-     * value: "READY"
-     * @const
-     */
-    "READY": "READY",
-
-    /**
-     * value: "RUNNING"
-     * @const
-     */
-    "RUNNING": "RUNNING",
-
-    /**
-     * value: "WARNING"
-     * @const
-     */
-    "WARNING": "WARNING"
 };
 
 

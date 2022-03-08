@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Cost from './Cost';
+import PlanEnum from './PlanEnum';
 import RemainingCredits from './RemainingCredits';
 
 /**
@@ -50,7 +51,7 @@ class CurrentCost {
             obj = obj || new CurrentCost();
 
             if (data.hasOwnProperty('plan')) {
-                obj['plan'] = ApiClient.convertToType(data['plan'], 'String');
+                obj['plan'] = PlanEnum.constructFromObject(data['plan']);
             }
             if (data.hasOwnProperty('remaining_trial_day')) {
                 obj['remaining_trial_day'] = ApiClient.convertToType(data['remaining_trial_day'], 'Number');
@@ -69,7 +70,7 @@ class CurrentCost {
 }
 
 /**
- * @member {module:model/CurrentCost.PlanEnum} plan
+ * @member {module:model/PlanEnum} plan
  */
 CurrentCost.prototype['plan'] = undefined;
 
@@ -91,39 +92,6 @@ CurrentCost.prototype['cost'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>plan</code> property.
- * @enum {String}
- * @readonly
- */
-CurrentCost['PlanEnum'] = {
-
-    /**
-     * value: "COMMUNITY"
-     * @const
-     */
-    "COMMUNITY": "COMMUNITY",
-
-    /**
-     * value: "FREE"
-     * @const
-     */
-    "FREE": "FREE",
-
-    /**
-     * value: "PROFESSIONAL"
-     * @const
-     */
-    "PROFESSIONAL": "PROFESSIONAL",
-
-    /**
-     * value: "BUSINESS"
-     * @const
-     */
-    "BUSINESS": "BUSINESS"
-};
 
 
 

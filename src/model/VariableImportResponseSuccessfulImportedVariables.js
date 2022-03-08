@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 
 /**
  * The VariableImportResponseSuccessfulImportedVariables model module.
@@ -23,7 +24,7 @@ class VariableImportResponseSuccessfulImportedVariables {
      * Constructs a new <code>VariableImportResponseSuccessfulImportedVariables</code>.
      * @alias module:model/VariableImportResponseSuccessfulImportedVariables
      * @param name {String} 
-     * @param scope {module:model/VariableImportResponseSuccessfulImportedVariables.ScopeEnum} 
+     * @param scope {module:model/EnvironmentVariableScopeEnum} 
      * @param isSecret {Boolean} 
      */
     constructor(name, scope, isSecret) { 
@@ -60,7 +61,7 @@ class VariableImportResponseSuccessfulImportedVariables {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('is_secret')) {
                 obj['is_secret'] = ApiClient.convertToType(data['is_secret'], 'Boolean');
@@ -84,7 +85,7 @@ VariableImportResponseSuccessfulImportedVariables.prototype['name'] = undefined;
 VariableImportResponseSuccessfulImportedVariables.prototype['value'] = undefined;
 
 /**
- * @member {module:model/VariableImportResponseSuccessfulImportedVariables.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 VariableImportResponseSuccessfulImportedVariables.prototype['scope'] = undefined;
 
@@ -95,39 +96,6 @@ VariableImportResponseSuccessfulImportedVariables.prototype['is_secret'] = undef
 
 
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-VariableImportResponseSuccessfulImportedVariables['ScopeEnum'] = {
-
-    /**
-     * value: "ORGANIZATION"
-     * @const
-     */
-    "ORGANIZATION": "ORGANIZATION",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

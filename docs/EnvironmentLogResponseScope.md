@@ -4,21 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | [optional] 
+**type** | [**EnvironmentLogTypeEnum**](EnvironmentLogTypeEnum.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
-
-
-
-## Enum: TypeEnum
-
-
-* `APPLICATION` (value: `"APPLICATION"`)
-
-* `DATABASE` (value: `"DATABASE"`)
-
-* `ENVIRONMENT` (value: `"ENVIRONMENT"`)
-
-
 
 

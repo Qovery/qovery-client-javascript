@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import StorageTypeEnum from './StorageTypeEnum';
 
 /**
  * The ApplicationStorageResponseStorage model module.
@@ -22,7 +23,7 @@ class ApplicationStorageResponseStorage {
     /**
      * Constructs a new <code>ApplicationStorageResponseStorage</code>.
      * @alias module:model/ApplicationStorageResponseStorage
-     * @param type {module:model/ApplicationStorageResponseStorage.TypeEnum} 
+     * @param type {module:model/StorageTypeEnum} 
      * @param size {Number} unit is GB
      * @param mountPoint {String} 
      */
@@ -57,7 +58,7 @@ class ApplicationStorageResponseStorage {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = StorageTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('size')) {
                 obj['size'] = ApiClient.convertToType(data['size'], 'Number');
@@ -78,7 +79,7 @@ class ApplicationStorageResponseStorage {
 ApplicationStorageResponseStorage.prototype['id'] = undefined;
 
 /**
- * @member {module:model/ApplicationStorageResponseStorage.TypeEnum} type
+ * @member {module:model/StorageTypeEnum} type
  */
 ApplicationStorageResponseStorage.prototype['type'] = undefined;
 
@@ -95,39 +96,6 @@ ApplicationStorageResponseStorage.prototype['mount_point'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationStorageResponseStorage['TypeEnum'] = {
-
-    /**
-     * value: "SLOW_HDD"
-     * @const
-     */
-    "SLOW_HDD": "SLOW_HDD",
-
-    /**
-     * value: "HDD"
-     * @const
-     */
-    "HDD": "HDD",
-
-    /**
-     * value: "SSD"
-     * @const
-     */
-    "SSD": "SSD",
-
-    /**
-     * value: "FAST_SSD"
-     * @const
-     */
-    "FAST_SSD": "FAST_SSD"
-};
 
 
 

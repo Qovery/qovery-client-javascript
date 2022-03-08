@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import WeekdayEnum from './WeekdayEnum';
 
 /**
  * The EnvironmentDeploymentRuleResponseAllOf model module.
@@ -25,7 +26,7 @@ class EnvironmentDeploymentRuleResponseAllOf {
      * @param timezone {String} 
      * @param startTime {Date} 
      * @param stopTime {Date} 
-     * @param weekdays {Array.<module:model/EnvironmentDeploymentRuleResponseAllOf.WeekdaysEnum>} 
+     * @param weekdays {Array.<module:model/WeekdayEnum>} 
      */
     constructor(timezone, startTime, stopTime, weekdays) { 
         
@@ -77,7 +78,7 @@ class EnvironmentDeploymentRuleResponseAllOf {
                 obj['stop_time'] = ApiClient.convertToType(data['stop_time'], 'Date');
             }
             if (data.hasOwnProperty('weekdays')) {
-                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], ['String']);
+                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], [WeekdayEnum]);
             }
         }
         return obj;
@@ -126,63 +127,12 @@ EnvironmentDeploymentRuleResponseAllOf.prototype['start_time'] = undefined;
 EnvironmentDeploymentRuleResponseAllOf.prototype['stop_time'] = undefined;
 
 /**
- * @member {Array.<module:model/EnvironmentDeploymentRuleResponseAllOf.WeekdaysEnum>} weekdays
+ * @member {Array.<module:model/WeekdayEnum>} weekdays
  */
 EnvironmentDeploymentRuleResponseAllOf.prototype['weekdays'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>weekdays</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentDeploymentRuleResponseAllOf['WeekdaysEnum'] = {
-
-    /**
-     * value: "MONDAY"
-     * @const
-     */
-    "MONDAY": "MONDAY",
-
-    /**
-     * value: "TUESDAY"
-     * @const
-     */
-    "TUESDAY": "TUESDAY",
-
-    /**
-     * value: "WEDNESDAY"
-     * @const
-     */
-    "WEDNESDAY": "WEDNESDAY",
-
-    /**
-     * value: "THURSDAY"
-     * @const
-     */
-    "THURSDAY": "THURSDAY",
-
-    /**
-     * value: "FRIDAY"
-     * @const
-     */
-    "FRIDAY": "FRIDAY",
-
-    /**
-     * value: "SATURDAY"
-     * @const
-     */
-    "SATURDAY": "SATURDAY",
-
-    /**
-     * value: "SUNDAY"
-     * @const
-     */
-    "SUNDAY": "SUNDAY"
-};
 
 
 

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import CloudProviderEnum from './CloudProviderEnum';
 import ClusterCloudProviderInfoRequestCredentials from './ClusterCloudProviderInfoRequestCredentials';
 
 /**
@@ -49,7 +50,7 @@ class ClusterCloudProviderInfoRequest {
             obj = obj || new ClusterCloudProviderInfoRequest();
 
             if (data.hasOwnProperty('cloud_provider')) {
-                obj['cloud_provider'] = ApiClient.convertToType(data['cloud_provider'], 'String');
+                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
             }
             if (data.hasOwnProperty('credentials')) {
                 obj['credentials'] = ClusterCloudProviderInfoRequestCredentials.constructFromObject(data['credentials']);
@@ -65,7 +66,7 @@ class ClusterCloudProviderInfoRequest {
 }
 
 /**
- * @member {module:model/ClusterCloudProviderInfoRequest.CloudProviderEnum} cloud_provider
+ * @member {module:model/CloudProviderEnum} cloud_provider
  */
 ClusterCloudProviderInfoRequest.prototype['cloud_provider'] = undefined;
 
@@ -81,33 +82,6 @@ ClusterCloudProviderInfoRequest.prototype['region'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>cloud_provider</code> property.
- * @enum {String}
- * @readonly
- */
-ClusterCloudProviderInfoRequest['CloudProviderEnum'] = {
-
-    /**
-     * value: "AWS"
-     * @const
-     */
-    "AWS": "AWS",
-
-    /**
-     * value: "DIGITAL_OCEAN"
-     * @const
-     */
-    "DIGITAL_OCEAN": "DIGITAL_OCEAN",
-
-    /**
-     * value: "SCALEWAY"
-     * @const
-     */
-    "SCALEWAY": "SCALEWAY"
-};
 
 
 

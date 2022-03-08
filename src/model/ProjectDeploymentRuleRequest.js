@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
+import WeekdayEnum from './WeekdayEnum';
 
 /**
  * The ProjectDeploymentRuleRequest model module.
@@ -23,12 +25,12 @@ class ProjectDeploymentRuleRequest {
      * Constructs a new <code>ProjectDeploymentRuleRequest</code>.
      * @alias module:model/ProjectDeploymentRuleRequest
      * @param name {String} name is case insensitive
-     * @param mode {module:model/ProjectDeploymentRuleRequest.ModeEnum} 
+     * @param mode {module:model/EnvironmentModeEnum} 
      * @param clusterId {String} 
      * @param timezone {String} 
      * @param startTime {Date} 
      * @param stopTime {Date} 
-     * @param weekdays {Array.<module:model/ProjectDeploymentRuleRequest.WeekdaysEnum>} 
+     * @param weekdays {Array.<module:model/WeekdayEnum>} 
      * @param wildcard {String} wildcard pattern composed of '?' and/or '*' used to target new created environments
      */
     constructor(name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard) { 
@@ -70,7 +72,7 @@ class ProjectDeploymentRuleRequest {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('cluster_id')) {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
@@ -94,7 +96,7 @@ class ProjectDeploymentRuleRequest {
                 obj['stop_time'] = ApiClient.convertToType(data['stop_time'], 'Date');
             }
             if (data.hasOwnProperty('weekdays')) {
-                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], ['String']);
+                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], [WeekdayEnum]);
             }
             if (data.hasOwnProperty('wildcard')) {
                 obj['wildcard'] = ApiClient.convertToType(data['wildcard'], 'String');
@@ -118,7 +120,7 @@ ProjectDeploymentRuleRequest.prototype['name'] = undefined;
 ProjectDeploymentRuleRequest.prototype['description'] = undefined;
 
 /**
- * @member {module:model/ProjectDeploymentRuleRequest.ModeEnum} mode
+ * @member {module:model/EnvironmentModeEnum} mode
  */
 ProjectDeploymentRuleRequest.prototype['mode'] = undefined;
 
@@ -161,7 +163,7 @@ ProjectDeploymentRuleRequest.prototype['start_time'] = undefined;
 ProjectDeploymentRuleRequest.prototype['stop_time'] = undefined;
 
 /**
- * @member {Array.<module:model/ProjectDeploymentRuleRequest.WeekdaysEnum>} weekdays
+ * @member {Array.<module:model/WeekdayEnum>} weekdays
  */
 ProjectDeploymentRuleRequest.prototype['weekdays'] = undefined;
 
@@ -174,84 +176,6 @@ ProjectDeploymentRuleRequest.prototype['wildcard'] = '';
 
 
 
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-ProjectDeploymentRuleRequest['ModeEnum'] = {
-
-    /**
-     * value: "DEVELOPMENT"
-     * @const
-     */
-    "DEVELOPMENT": "DEVELOPMENT",
-
-    /**
-     * value: "STAGING"
-     * @const
-     */
-    "STAGING": "STAGING",
-
-    /**
-     * value: "PRODUCTION"
-     * @const
-     */
-    "PRODUCTION": "PRODUCTION"
-};
-
-
-/**
- * Allowed values for the <code>weekdays</code> property.
- * @enum {String}
- * @readonly
- */
-ProjectDeploymentRuleRequest['WeekdaysEnum'] = {
-
-    /**
-     * value: "MONDAY"
-     * @const
-     */
-    "MONDAY": "MONDAY",
-
-    /**
-     * value: "TUESDAY"
-     * @const
-     */
-    "TUESDAY": "TUESDAY",
-
-    /**
-     * value: "WEDNESDAY"
-     * @const
-     */
-    "WEDNESDAY": "WEDNESDAY",
-
-    /**
-     * value: "THURSDAY"
-     * @const
-     */
-    "THURSDAY": "THURSDAY",
-
-    /**
-     * value: "FRIDAY"
-     * @const
-     */
-    "FRIDAY": "FRIDAY",
-
-    /**
-     * value: "SATURDAY"
-     * @const
-     */
-    "SATURDAY": "SATURDAY",
-
-    /**
-     * value: "SUNDAY"
-     * @const
-     */
-    "SUNDAY": "SUNDAY"
-};
 
 
 

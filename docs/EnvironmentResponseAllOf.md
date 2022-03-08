@@ -8,22 +8,7 @@ Name | Type | Description | Notes
 **project** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
 **lastUpdatedBy** | **String** | uuid of the user that made the last update | [optional] 
 **cloudProvider** | [**EnvironmentResponseAllOfCloudProvider**](EnvironmentResponseAllOfCloudProvider.md) |  | 
-**mode** | **String** |  | 
+**mode** | [**EnvironmentModeEnum**](EnvironmentModeEnum.md) |  | 
 **clusterId** | **String** |  | 
-
-
-
-## Enum: ModeEnum
-
-
-* `PRODUCTION` (value: `"PRODUCTION"`)
-
-* `DEVELOPMENT` (value: `"DEVELOPMENT"`)
-
-* `STAGING` (value: `"STAGING"`)
-
-* `PREVIEW` (value: `"PREVIEW"`)
-
-
 
 

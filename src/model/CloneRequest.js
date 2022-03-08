@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
 
 /**
  * The CloneRequest model module.
@@ -56,7 +57,7 @@ class CloneRequest {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
             }
         }
         return obj;
@@ -77,45 +78,12 @@ CloneRequest.prototype['name'] = undefined;
 CloneRequest.prototype['cluster_id'] = undefined;
 
 /**
- * @member {module:model/CloneRequest.ModeEnum} mode
+ * @member {module:model/EnvironmentModeEnum} mode
  */
 CloneRequest.prototype['mode'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-CloneRequest['ModeEnum'] = {
-
-    /**
-     * value: "PRODUCTION"
-     * @const
-     */
-    "PRODUCTION": "PRODUCTION",
-
-    /**
-     * value: "DEVELOPMENT"
-     * @const
-     */
-    "DEVELOPMENT": "DEVELOPMENT",
-
-    /**
-     * value: "STAGING"
-     * @const
-     */
-    "STAGING": "STAGING",
-
-    /**
-     * value: "PREVIEW"
-     * @const
-     */
-    "PREVIEW": "PREVIEW"
-};
 
 
 

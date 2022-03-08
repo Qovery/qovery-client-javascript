@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 
 /**
  * The OverriddenSecret model module.
@@ -54,7 +55,7 @@ class OverriddenSecret {
                 obj['key'] = ApiClient.convertToType(data['key'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -74,45 +75,12 @@ OverriddenSecret.prototype['id'] = undefined;
 OverriddenSecret.prototype['key'] = undefined;
 
 /**
- * @member {module:model/OverriddenSecret.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 OverriddenSecret.prototype['scope'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-OverriddenSecret['ScopeEnum'] = {
-
-    /**
-     * value: "BUILT_IN"
-     * @const
-     */
-    "BUILT_IN": "BUILT_IN",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

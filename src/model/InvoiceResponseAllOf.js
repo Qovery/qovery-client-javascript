@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InvoiceStatusEnum from './InvoiceStatusEnum';
 
 /**
  * The InvoiceResponseAllOf model module.
@@ -24,7 +25,7 @@ class InvoiceResponseAllOf {
      * @alias module:model/InvoiceResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
-     * @param status {module:model/InvoiceResponseAllOf.StatusEnum} 
+     * @param status {module:model/InvoiceStatusEnum} 
      */
     constructor(id, createdAt, status) { 
         
@@ -60,7 +61,7 @@ class InvoiceResponseAllOf {
                 obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = InvoiceStatusEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -80,63 +81,12 @@ InvoiceResponseAllOf.prototype['id'] = undefined;
 InvoiceResponseAllOf.prototype['created_at'] = undefined;
 
 /**
- * @member {module:model/InvoiceResponseAllOf.StatusEnum} status
+ * @member {module:model/InvoiceStatusEnum} status
  */
 InvoiceResponseAllOf.prototype['status'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-InvoiceResponseAllOf['StatusEnum'] = {
-
-    /**
-     * value: "PAID"
-     * @const
-     */
-    "PAID": "PAID",
-
-    /**
-     * value: "POSTED"
-     * @const
-     */
-    "POSTED": "POSTED",
-
-    /**
-     * value: "PAYMENT_DUE"
-     * @const
-     */
-    "PAYMENT_DUE": "PAYMENT_DUE",
-
-    /**
-     * value: "NOT_PAID"
-     * @const
-     */
-    "NOT_PAID": "NOT_PAID",
-
-    /**
-     * value: "VOIDED"
-     * @const
-     */
-    "VOIDED": "VOIDED",
-
-    /**
-     * value: "PENDING"
-     * @const
-     */
-    "PENDING": "PENDING",
-
-    /**
-     * value: "UNKNOWN"
-     * @const
-     */
-    "UNKNOWN": "UNKNOWN"
-};
 
 
 

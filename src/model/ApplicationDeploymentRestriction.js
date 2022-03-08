@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import DeploymentRestrictionModeEnum from './DeploymentRestrictionModeEnum';
+import DeploymentRestrictionTypeEnum from './DeploymentRestrictionTypeEnum';
 
 /**
  * The ApplicationDeploymentRestriction model module.
@@ -22,8 +24,8 @@ class ApplicationDeploymentRestriction {
     /**
      * Constructs a new <code>ApplicationDeploymentRestriction</code>.
      * @alias module:model/ApplicationDeploymentRestriction
-     * @param mode {module:model/ApplicationDeploymentRestriction.ModeEnum} Match mode will rebuild app only if specified items are updated. Exclude mode will not rebuild app if specified items are updated.
-     * @param type {module:model/ApplicationDeploymentRestriction.TypeEnum} 
+     * @param mode {module:model/DeploymentRestrictionModeEnum} 
+     * @param type {module:model/DeploymentRestrictionTypeEnum} 
      * @param value {String} 
      */
     constructor(mode, type, value) { 
@@ -54,10 +56,10 @@ class ApplicationDeploymentRestriction {
             obj = obj || new ApplicationDeploymentRestriction();
 
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = DeploymentRestrictionModeEnum.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = DeploymentRestrictionTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
@@ -70,13 +72,12 @@ class ApplicationDeploymentRestriction {
 }
 
 /**
- * Match mode will rebuild app only if specified items are updated. Exclude mode will not rebuild app if specified items are updated.
- * @member {module:model/ApplicationDeploymentRestriction.ModeEnum} mode
+ * @member {module:model/DeploymentRestrictionModeEnum} mode
  */
 ApplicationDeploymentRestriction.prototype['mode'] = undefined;
 
 /**
- * @member {module:model/ApplicationDeploymentRestriction.TypeEnum} type
+ * @member {module:model/DeploymentRestrictionTypeEnum} type
  */
 ApplicationDeploymentRestriction.prototype['type'] = undefined;
 
@@ -87,48 +88,6 @@ ApplicationDeploymentRestriction.prototype['value'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationDeploymentRestriction['ModeEnum'] = {
-
-    /**
-     * value: "MATCH"
-     * @const
-     */
-    "MATCH": "MATCH",
-
-    /**
-     * value: "EXCLUDE"
-     * @const
-     */
-    "EXCLUDE": "EXCLUDE"
-};
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationDeploymentRestriction['TypeEnum'] = {
-
-    /**
-     * value: "FILE"
-     * @const
-     */
-    "FILE": "FILE",
-
-    /**
-     * value: "PATH"
-     * @const
-     */
-    "PATH": "PATH"
-};
 
 
 

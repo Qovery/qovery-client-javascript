@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **name** | **String** | name is case insensitive | [optional] 
 **description** | **String** | give a description to this application | [optional] 
 **gitRepository** | [**ApplicationGitRepositoryRequest**](ApplicationGitRepositoryRequest.md) |  | [optional] 
-**buildMode** | **String** | &#x60;DOCKER&#x60; requires &#x60;dockerfile_path&#x60; &#x60;BUILDPACKS&#x60; does not require any &#x60;dockerfile_path&#x60;  | [optional] 
+**buildMode** | [**BuildModeEnum**](BuildModeEnum.md) |  | [optional] 
 **dockerfilePath** | **String** | The path of the associated Dockerfile | [optional] 
 **buildpackLanguage** | [**BuildPackLanguageEnum**](BuildPackLanguageEnum.md) |  | [optional] 
 **cpu** | **Number** | unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] [default to 250]
@@ -19,16 +19,5 @@ Name | Type | Description | Notes
 **healthcheck** | [**Healthcheck**](Healthcheck.md) |  | [optional] 
 **autoPreview** | **Boolean** | Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request.  | [optional] [default to true]
 **stickySession** | **Boolean** | Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application.  | [optional] [default to false]
-
-
-
-## Enum: BuildModeEnum
-
-
-* `DOCKER` (value: `"DOCKER"`)
-
-* `BUILDPACKS` (value: `"BUILDPACKS"`)
-
-
 
 

@@ -18,6 +18,7 @@ import Cost from './Cost';
 import CurrentCost from './CurrentCost';
 import PaidUsage from './PaidUsage';
 import PaidUsageResponse from './PaidUsageResponse';
+import PlanEnum from './PlanEnum';
 import RemainingCredits from './RemainingCredits';
 
 /**
@@ -61,7 +62,7 @@ class OrganizationCurrentCostResponse {
             CommunityUsage.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('plan')) {
-                obj['plan'] = ApiClient.convertToType(data['plan'], 'String');
+                obj['plan'] = PlanEnum.constructFromObject(data['plan']);
             }
             if (data.hasOwnProperty('remaining_trial_day')) {
                 obj['remaining_trial_day'] = ApiClient.convertToType(data['remaining_trial_day'], 'Number');
@@ -86,7 +87,7 @@ class OrganizationCurrentCostResponse {
 }
 
 /**
- * @member {module:model/OrganizationCurrentCostResponse.PlanEnum} plan
+ * @member {module:model/PlanEnum} plan
  */
 OrganizationCurrentCostResponse.prototype['plan'] = undefined;
 
@@ -119,7 +120,7 @@ OrganizationCurrentCostResponse.prototype['community_usage'] = undefined;
 
 // Implement CurrentCost interface:
 /**
- * @member {module:model/CurrentCost.PlanEnum} plan
+ * @member {module:model/PlanEnum} plan
  */
 CurrentCost.prototype['plan'] = undefined;
 /**
@@ -146,39 +147,6 @@ PaidUsage.prototype['paid_usage'] = undefined;
  */
 CommunityUsage.prototype['community_usage'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>plan</code> property.
- * @enum {String}
- * @readonly
- */
-OrganizationCurrentCostResponse['PlanEnum'] = {
-
-    /**
-     * value: "COMMUNITY"
-     * @const
-     */
-    "COMMUNITY": "COMMUNITY",
-
-    /**
-     * value: "FREE"
-     * @const
-     */
-    "FREE": "FREE",
-
-    /**
-     * value: "PROFESSIONAL"
-     * @const
-     */
-    "PROFESSIONAL": "PROFESSIONAL",
-
-    /**
-     * value: "BUSINESS"
-     * @const
-     */
-    "BUSINESS": "BUSINESS"
-};
 
 
 

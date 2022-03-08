@@ -4,21 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cloudProvider** | **String** |  | [optional] 
+**cloudProvider** | [**CloudProviderEnum**](CloudProviderEnum.md) |  | [optional] 
 **credentials** | [**ClusterCloudProviderInfoRequestCredentials**](ClusterCloudProviderInfoRequestCredentials.md) |  | [optional] 
 **region** | **String** |  | [optional] 
-
-
-
-## Enum: CloudProviderEnum
-
-
-* `AWS` (value: `"AWS"`)
-
-* `DIGITAL_OCEAN` (value: `"DIGITAL_OCEAN"`)
-
-* `SCALEWAY` (value: `"SCALEWAY"`)
-
-
 
 

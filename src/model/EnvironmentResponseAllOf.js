@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
 import EnvironmentResponseAllOfCloudProvider from './EnvironmentResponseAllOfCloudProvider';
 import ReferenceObject from './ReferenceObject';
 
@@ -26,7 +27,7 @@ class EnvironmentResponseAllOf {
      * @alias module:model/EnvironmentResponseAllOf
      * @param name {String} name is case insensitive
      * @param cloudProvider {module:model/EnvironmentResponseAllOfCloudProvider} 
-     * @param mode {module:model/EnvironmentResponseAllOf.ModeEnum} 
+     * @param mode {module:model/EnvironmentModeEnum} 
      * @param clusterId {String} 
      */
     constructor(name, cloudProvider, mode, clusterId) { 
@@ -70,7 +71,7 @@ class EnvironmentResponseAllOf {
                 obj['cloud_provider'] = EnvironmentResponseAllOfCloudProvider.constructFromObject(data['cloud_provider']);
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('cluster_id')) {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
@@ -105,7 +106,7 @@ EnvironmentResponseAllOf.prototype['last_updated_by'] = undefined;
 EnvironmentResponseAllOf.prototype['cloud_provider'] = undefined;
 
 /**
- * @member {module:model/EnvironmentResponseAllOf.ModeEnum} mode
+ * @member {module:model/EnvironmentModeEnum} mode
  */
 EnvironmentResponseAllOf.prototype['mode'] = undefined;
 
@@ -116,39 +117,6 @@ EnvironmentResponseAllOf.prototype['cluster_id'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentResponseAllOf['ModeEnum'] = {
-
-    /**
-     * value: "PRODUCTION"
-     * @const
-     */
-    "PRODUCTION": "PRODUCTION",
-
-    /**
-     * value: "DEVELOPMENT"
-     * @const
-     */
-    "DEVELOPMENT": "DEVELOPMENT",
-
-    /**
-     * value: "STAGING"
-     * @const
-     */
-    "STAGING": "STAGING",
-
-    /**
-     * value: "PREVIEW"
-     * @const
-     */
-    "PREVIEW": "PREVIEW"
-};
 
 
 

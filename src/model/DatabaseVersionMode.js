@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import DatabaseModeEnum from './DatabaseModeEnum';
 
 /**
  * The DatabaseVersionMode model module.
@@ -51,7 +52,7 @@ class DatabaseVersionMode {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('supported_mode')) {
-                obj['supported_mode'] = ApiClient.convertToType(data['supported_mode'], 'String');
+                obj['supported_mode'] = DatabaseModeEnum.constructFromObject(data['supported_mode']);
             }
         }
         return obj;
@@ -66,33 +67,12 @@ class DatabaseVersionMode {
 DatabaseVersionMode.prototype['name'] = undefined;
 
 /**
- * @member {module:model/DatabaseVersionMode.SupportedModeEnum} supported_mode
+ * @member {module:model/DatabaseModeEnum} supported_mode
  */
 DatabaseVersionMode.prototype['supported_mode'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>supported_mode</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseVersionMode['SupportedModeEnum'] = {
-
-    /**
-     * value: "CONTAINER"
-     * @const
-     */
-    "CONTAINER": "CONTAINER",
-
-    /**
-     * value: "MANAGED"
-     * @const
-     */
-    "MANAGED": "MANAGED"
-};
 
 
 

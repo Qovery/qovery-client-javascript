@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** | name is case-insensitive | 
 **description** | **String** |  | [optional] 
-**cloudProvider** | **String** |  | 
+**cloudProvider** | [**CloudProviderEnum**](CloudProviderEnum.md) |  | 
 **region** | **String** |  | 
 **autoUpdate** | **Boolean** |  | [optional] 
 **cpu** | **Number** | unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] [default to 250]
@@ -25,23 +25,10 @@ Name | Type | Description | Notes
 **isValueUpdatable** | **Boolean** |  | [optional] [default to false]
 **acceptedValues** | [**[OneOfstringboolean]**](OneOfstringboolean.md) |  | [optional] 
 **estimatedCloudProviderCost** | **Number** | This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration | [optional] 
-**status** | **String** |  | [optional] 
+**status** | [**ClusterStatusEnum**](ClusterStatusEnum.md) |  | [optional] 
 **hasAccess** | **Boolean** |  | [optional] 
 **version** | **String** |  | [optional] 
 **isDefault** | **Boolean** |  | [optional] 
-
-
-
-## Enum: CloudProviderEnum
-
-
-* `AWS` (value: `"AWS"`)
-
-* `DIGITAL_OCEAN` (value: `"DIGITAL_OCEAN"`)
-
-* `SCALEWAY` (value: `"SCALEWAY"`)
-
-
 
 
 
@@ -49,19 +36,6 @@ Name | Type | Description | Notes
 
 
 * `BOOLEAN` (value: `"BOOLEAN"`)
-
-
-
-
-
-## Enum: StatusEnum
-
-
-* `READY` (value: `"READY"`)
-
-* `RUNNING` (value: `"RUNNING"`)
-
-* `WARNING` (value: `"WARNING"`)
 
 
 

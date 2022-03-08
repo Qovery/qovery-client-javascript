@@ -9,26 +9,11 @@ Name | Type | Description | Notes
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** | name is case insensitive | 
 **description** | **String** |  | [optional] 
-**plan** | **String** |  | 
+**plan** | [**PlanEnum**](PlanEnum.md) |  | 
 **websiteUrl** | **String** |  | [optional] 
 **repository** | **String** |  | [optional] 
 **logoUrl** | **String** |  | [optional] 
 **iconUrl** | **String** |  | [optional] 
 **owner** | **String** | uuid of the user owning the organization | [optional] 
-
-
-
-## Enum: PlanEnum
-
-
-* `COMMUNITY` (value: `"COMMUNITY"`)
-
-* `FREE` (value: `"FREE"`)
-
-* `PROFESSIONAL` (value: `"PROFESSIONAL"`)
-
-* `BUSINESS` (value: `"BUSINESS"`)
-
-
 
 

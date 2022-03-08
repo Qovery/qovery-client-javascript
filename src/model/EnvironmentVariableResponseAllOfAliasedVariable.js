@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 
 /**
  * The EnvironmentVariableResponseAllOfAliasedVariable model module.
@@ -57,7 +58,7 @@ class EnvironmentVariableResponseAllOfAliasedVariable {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -82,45 +83,12 @@ EnvironmentVariableResponseAllOfAliasedVariable.prototype['key'] = undefined;
 EnvironmentVariableResponseAllOfAliasedVariable.prototype['value'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableResponseAllOfAliasedVariable.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 EnvironmentVariableResponseAllOfAliasedVariable.prototype['scope'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentVariableResponseAllOfAliasedVariable['ScopeEnum'] = {
-
-    /**
-     * value: "BUILT_IN"
-     * @const
-     */
-    "BUILT_IN": "BUILT_IN",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

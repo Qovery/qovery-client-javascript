@@ -11,19 +11,6 @@ Name | Type | Description | Notes
 **consumedInPercent** | **Number** |  | [optional] 
 **warningThresholdInPercent** | **Number** |  | [optional] 
 **alertThresholdInPercent** | **Number** |  | [optional] 
-**status** | **String** |  | [optional] 
-
-
-
-## Enum: StatusEnum
-
-
-* `OK` (value: `"OK"`)
-
-* `Warning` (value: `"Warning"`)
-
-* `Alert` (value: `"Alert"`)
-
-
+**status** | [**ThresholdMetricStatusEnum**](ThresholdMetricStatusEnum.md) |  | [optional] 
 
 

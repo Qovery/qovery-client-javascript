@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import DatabaseAccessibilityEnum from './DatabaseAccessibilityEnum';
 
 /**
  * The DatabaseEditRequest model module.
@@ -54,7 +55,7 @@ class DatabaseEditRequest {
                 obj['version'] = ApiClient.convertToType(data['version'], 'String');
             }
             if (data.hasOwnProperty('accessibility')) {
-                obj['accessibility'] = ApiClient.convertToType(data['accessibility'], 'String');
+                obj['accessibility'] = DatabaseAccessibilityEnum.constructFromObject(data['accessibility']);
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -84,7 +85,7 @@ DatabaseEditRequest.prototype['name'] = undefined;
 DatabaseEditRequest.prototype['version'] = undefined;
 
 /**
- * @member {module:model/DatabaseEditRequest.AccessibilityEnum} accessibility
+ * @member {module:model/DatabaseAccessibilityEnum} accessibility
  */
 DatabaseEditRequest.prototype['accessibility'] = undefined;
 
@@ -110,27 +111,6 @@ DatabaseEditRequest.prototype['storage'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>accessibility</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseEditRequest['AccessibilityEnum'] = {
-
-    /**
-     * value: "PUBLIC"
-     * @const
-     */
-    "PUBLIC": "PUBLIC",
-
-    /**
-     * value: "PRIVATE"
-     * @const
-     */
-    "PRIVATE": "PRIVATE"
-};
 
 
 

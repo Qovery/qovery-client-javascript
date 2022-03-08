@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import PlanEnum from './PlanEnum';
 
 /**
  * The OrganizationRequest model module.
@@ -23,7 +24,7 @@ class OrganizationRequest {
      * Constructs a new <code>OrganizationRequest</code>.
      * @alias module:model/OrganizationRequest
      * @param name {String} name is case insensitive
-     * @param plan {module:model/OrganizationRequest.PlanEnum} 
+     * @param plan {module:model/PlanEnum} 
      */
     constructor(name, plan) { 
         
@@ -58,7 +59,7 @@ class OrganizationRequest {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('plan')) {
-                obj['plan'] = ApiClient.convertToType(data['plan'], 'String');
+                obj['plan'] = PlanEnum.constructFromObject(data['plan']);
             }
             if (data.hasOwnProperty('website_url')) {
                 obj['website_url'] = ApiClient.convertToType(data['website_url'], 'String');
@@ -91,7 +92,7 @@ OrganizationRequest.prototype['name'] = undefined;
 OrganizationRequest.prototype['description'] = undefined;
 
 /**
- * @member {module:model/OrganizationRequest.PlanEnum} plan
+ * @member {module:model/PlanEnum} plan
  */
 OrganizationRequest.prototype['plan'] = undefined;
 
@@ -117,39 +118,6 @@ OrganizationRequest.prototype['icon_url'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>plan</code> property.
- * @enum {String}
- * @readonly
- */
-OrganizationRequest['PlanEnum'] = {
-
-    /**
-     * value: "COMMUNITY"
-     * @const
-     */
-    "COMMUNITY": "COMMUNITY",
-
-    /**
-     * value: "FREE"
-     * @const
-     */
-    "FREE": "FREE",
-
-    /**
-     * value: "PROFESSIONAL"
-     * @const
-     */
-    "PROFESSIONAL": "PROFESSIONAL",
-
-    /**
-     * value: "BUSINESS"
-     * @const
-     */
-    "BUSINESS": "BUSINESS"
-};
 
 
 

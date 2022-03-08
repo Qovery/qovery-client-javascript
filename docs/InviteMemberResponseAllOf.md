@@ -5,34 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** |  | 
-**role** | **String** |  | 
+**role** | [**InviteMemberRoleEnum**](InviteMemberRoleEnum.md) |  | 
 **invitationLink** | **String** |  | 
-**invitationStatus** | **String** |  | 
+**invitationStatus** | [**InviteStatusEnum**](InviteStatusEnum.md) |  | 
 **inviter** | **String** |  | 
 **logoUrl** | **String** |  | [optional] 
-
-
-
-## Enum: RoleEnum
-
-
-* `ADMIN` (value: `"ADMIN"`)
-
-* `DEVELOPER` (value: `"DEVELOPER"`)
-
-* `VIEWER` (value: `"VIEWER"`)
-
-
-
-
-
-## Enum: InvitationStatusEnum
-
-
-* `PENDING` (value: `"PENDING"`)
-
-* `EXPIRED` (value: `"EXPIRED"`)
-
-
 
 

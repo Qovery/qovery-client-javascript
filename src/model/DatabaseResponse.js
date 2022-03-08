@@ -13,8 +13,11 @@
 
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
+import DatabaseAccessibilityEnum from './DatabaseAccessibilityEnum';
+import DatabaseModeEnum from './DatabaseModeEnum';
 import DatabaseRequest from './DatabaseRequest';
 import DatabaseResponseAllOf from './DatabaseResponseAllOf';
+import DatabaseTypeEnum from './DatabaseTypeEnum';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -32,9 +35,9 @@ class DatabaseResponse {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
-     * @param type {module:model/DatabaseResponse.TypeEnum} 
+     * @param type {module:model/DatabaseTypeEnum} 
      * @param version {String} 
-     * @param mode {module:model/DatabaseResponse.ModeEnum} 
+     * @param mode {module:model/DatabaseModeEnum} 
      */
     constructor(id, createdAt, name, type, version, mode) { 
         BaseResponse.initialize(this, id, createdAt);DatabaseRequest.initialize(this, name, type, version, mode);DatabaseResponseAllOf.initialize(this);
@@ -82,16 +85,16 @@ class DatabaseResponse {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = DatabaseTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = DatabaseModeEnum.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('accessibility')) {
-                obj['accessibility'] = ApiClient.convertToType(data['accessibility'], 'String');
+                obj['accessibility'] = DatabaseAccessibilityEnum.constructFromObject(data['accessibility']);
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -149,7 +152,7 @@ DatabaseResponse.prototype['updated_at'] = undefined;
 DatabaseResponse.prototype['name'] = undefined;
 
 /**
- * @member {module:model/DatabaseResponse.TypeEnum} type
+ * @member {module:model/DatabaseTypeEnum} type
  */
 DatabaseResponse.prototype['type'] = undefined;
 
@@ -159,15 +162,14 @@ DatabaseResponse.prototype['type'] = undefined;
 DatabaseResponse.prototype['version'] = undefined;
 
 /**
- * @member {module:model/DatabaseResponse.ModeEnum} mode
+ * @member {module:model/DatabaseModeEnum} mode
  */
 DatabaseResponse.prototype['mode'] = undefined;
 
 /**
- * @member {module:model/DatabaseResponse.AccessibilityEnum} accessibility
- * @default 'PRIVATE'
+ * @member {module:model/DatabaseAccessibilityEnum} accessibility
  */
-DatabaseResponse.prototype['accessibility'] = 'PRIVATE';
+DatabaseResponse.prototype['accessibility'] = undefined;
 
 /**
  * unit is millicores (m). 1000m = 1 cpu
@@ -246,7 +248,7 @@ BaseResponse.prototype['updated_at'] = undefined;
  */
 DatabaseRequest.prototype['name'] = undefined;
 /**
- * @member {module:model/DatabaseRequest.TypeEnum} type
+ * @member {module:model/DatabaseTypeEnum} type
  */
 DatabaseRequest.prototype['type'] = undefined;
 /**
@@ -254,14 +256,13 @@ DatabaseRequest.prototype['type'] = undefined;
  */
 DatabaseRequest.prototype['version'] = undefined;
 /**
- * @member {module:model/DatabaseRequest.ModeEnum} mode
+ * @member {module:model/DatabaseModeEnum} mode
  */
 DatabaseRequest.prototype['mode'] = undefined;
 /**
- * @member {module:model/DatabaseRequest.AccessibilityEnum} accessibility
- * @default 'PRIVATE'
+ * @member {module:model/DatabaseAccessibilityEnum} accessibility
  */
-DatabaseRequest.prototype['accessibility'] = 'PRIVATE';
+DatabaseRequest.prototype['accessibility'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
@@ -311,81 +312,6 @@ DatabaseResponseAllOf.prototype['maximum_memory'] = 256;
  */
 DatabaseResponseAllOf.prototype['disk_encrypted'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseResponse['TypeEnum'] = {
-
-    /**
-     * value: "POSTGRESQL"
-     * @const
-     */
-    "POSTGRESQL": "POSTGRESQL",
-
-    /**
-     * value: "MYSQL"
-     * @const
-     */
-    "MYSQL": "MYSQL",
-
-    /**
-     * value: "MONGODB"
-     * @const
-     */
-    "MONGODB": "MONGODB",
-
-    /**
-     * value: "REDIS"
-     * @const
-     */
-    "REDIS": "REDIS"
-};
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseResponse['ModeEnum'] = {
-
-    /**
-     * value: "MANAGED"
-     * @const
-     */
-    "MANAGED": "MANAGED",
-
-    /**
-     * value: "CONTAINER"
-     * @const
-     */
-    "CONTAINER": "CONTAINER"
-};
-
-
-/**
- * Allowed values for the <code>accessibility</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseResponse['AccessibilityEnum'] = {
-
-    /**
-     * value: "PUBLIC"
-     * @const
-     */
-    "PUBLIC": "PUBLIC",
-
-    /**
-     * value: "PRIVATE"
-     * @const
-     */
-    "PRIVATE": "PRIVATE"
-};
 
 
 

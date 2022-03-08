@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import DeploymentHistoryDatabaseResponseAllOf from './DeploymentHistoryDatabaseResponseAllOf';
+import GlobalDeploymentStatus from './GlobalDeploymentStatus';
 
 /**
  * The DeploymentHistoryDatabaseResponse model module.
@@ -70,7 +71,7 @@ class DeploymentHistoryDatabaseResponse {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = GlobalDeploymentStatus.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -100,7 +101,7 @@ DeploymentHistoryDatabaseResponse.prototype['updated_at'] = undefined;
 DeploymentHistoryDatabaseResponse.prototype['name'] = undefined;
 
 /**
- * @member {module:model/DeploymentHistoryDatabaseResponse.StatusEnum} status
+ * @member {module:model/GlobalDeploymentStatus} status
  */
 DeploymentHistoryDatabaseResponse.prototype['status'] = undefined;
 
@@ -124,127 +125,10 @@ BaseResponse.prototype['updated_at'] = undefined;
  */
 DeploymentHistoryDatabaseResponseAllOf.prototype['name'] = undefined;
 /**
- * @member {module:model/DeploymentHistoryDatabaseResponseAllOf.StatusEnum} status
+ * @member {module:model/GlobalDeploymentStatus} status
  */
 DeploymentHistoryDatabaseResponseAllOf.prototype['status'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-DeploymentHistoryDatabaseResponse['StatusEnum'] = {
-
-    /**
-     * value: "READY"
-     * @const
-     */
-    "READY": "READY",
-
-    /**
-     * value: "BUILDING"
-     * @const
-     */
-    "BUILDING": "BUILDING",
-
-    /**
-     * value: "BUILD_ERROR"
-     * @const
-     */
-    "BUILD_ERROR": "BUILD_ERROR",
-
-    /**
-     * value: "BUILT"
-     * @const
-     */
-    "BUILT": "BUILT",
-
-    /**
-     * value: "DEPLOYMENT_QUEUED"
-     * @const
-     */
-    "DEPLOYMENT_QUEUED": "DEPLOYMENT_QUEUED",
-
-    /**
-     * value: "DEPLOYING"
-     * @const
-     */
-    "DEPLOYING": "DEPLOYING",
-
-    /**
-     * value: "DEPLOYMENT_ERROR"
-     * @const
-     */
-    "DEPLOYMENT_ERROR": "DEPLOYMENT_ERROR",
-
-    /**
-     * value: "DEPLOYED"
-     * @const
-     */
-    "DEPLOYED": "DEPLOYED",
-
-    /**
-     * value: "STOP_QUEUED"
-     * @const
-     */
-    "STOP_QUEUED": "STOP_QUEUED",
-
-    /**
-     * value: "STOPPING"
-     * @const
-     */
-    "STOPPING": "STOPPING",
-
-    /**
-     * value: "STOP_ERROR"
-     * @const
-     */
-    "STOP_ERROR": "STOP_ERROR",
-
-    /**
-     * value: "STOPPED"
-     * @const
-     */
-    "STOPPED": "STOPPED",
-
-    /**
-     * value: "DELETE_QUEUED"
-     * @const
-     */
-    "DELETE_QUEUED": "DELETE_QUEUED",
-
-    /**
-     * value: "DELETING"
-     * @const
-     */
-    "DELETING": "DELETING",
-
-    /**
-     * value: "DELETE_ERROR"
-     * @const
-     */
-    "DELETE_ERROR": "DELETE_ERROR",
-
-    /**
-     * value: "DELETED"
-     * @const
-     */
-    "DELETED": "DELETED",
-
-    /**
-     * value: "RUNNING"
-     * @const
-     */
-    "RUNNING": "RUNNING",
-
-    /**
-     * value: "RUNNING_ERROR"
-     * @const
-     */
-    "RUNNING_ERROR": "RUNNING_ERROR"
-};
 
 
 

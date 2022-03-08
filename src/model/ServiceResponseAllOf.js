@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ServiceTypeEnum from './ServiceTypeEnum';
 
 /**
  * The ServiceResponseAllOf model module.
@@ -50,7 +51,7 @@ class ServiceResponseAllOf {
             obj = obj || new ServiceResponseAllOf();
 
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = ServiceTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -84,8 +85,7 @@ class ServiceResponseAllOf {
 }
 
 /**
- * type of the service (application, database, job, gateway...)
- * @member {module:model/ServiceResponseAllOf.TypeEnum} type
+ * @member {module:model/ServiceTypeEnum} type
  */
 ServiceResponseAllOf.prototype['type'] = undefined;
 
@@ -138,27 +138,6 @@ ServiceResponseAllOf.prototype['to_update'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-ServiceResponseAllOf['TypeEnum'] = {
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION",
-
-    /**
-     * value: "DATABASE"
-     * @const
-     */
-    "DATABASE": "DATABASE"
-};
 
 
 

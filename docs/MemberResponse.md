@@ -12,21 +12,6 @@ Name | Type | Description | Notes
 **email** | **String** |  | 
 **profilePictureUrl** | **String** |  | [optional] 
 **lastActivityAt** | **Date** | last time the user was connected | [optional] 
-**role** | **String** |  | [optional] 
-
-
-
-## Enum: RoleEnum
-
-
-* `OWNER` (value: `"OWNER"`)
-
-* `ADMIN` (value: `"ADMIN"`)
-
-* `DEVELOPER` (value: `"DEVELOPER"`)
-
-* `VIEWER` (value: `"VIEWER"`)
-
-
+**role** | [**InviteMemberRoleEnum**](InviteMemberRoleEnum.md) |  | [optional] 
 
 

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
 
 /**
  * The EnvironmentRequest model module.
@@ -56,7 +57,7 @@ class EnvironmentRequest {
                 obj['cluster'] = ApiClient.convertToType(data['cluster'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
             }
         }
         return obj;
@@ -77,45 +78,12 @@ EnvironmentRequest.prototype['name'] = undefined;
 EnvironmentRequest.prototype['cluster'] = undefined;
 
 /**
- * @member {module:model/EnvironmentRequest.ModeEnum} mode
+ * @member {module:model/EnvironmentModeEnum} mode
  */
 EnvironmentRequest.prototype['mode'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentRequest['ModeEnum'] = {
-
-    /**
-     * value: "PRODUCTION"
-     * @const
-     */
-    "PRODUCTION": "PRODUCTION",
-
-    /**
-     * value: "DEVELOPMENT"
-     * @const
-     */
-    "DEVELOPMENT": "DEVELOPMENT",
-
-    /**
-     * value: "STAGING"
-     * @const
-     */
-    "STAGING": "STAGING",
-
-    /**
-     * value: "PREVIEW"
-     * @const
-     */
-    "PREVIEW": "PREVIEW"
-};
 
 
 

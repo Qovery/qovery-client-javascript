@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ThresholdMetricStatusEnum from './ThresholdMetricStatusEnum';
 
 /**
  * The EnvironmentDatabasesCurrentMetricResponseMemory model module.
@@ -63,7 +64,7 @@ class EnvironmentDatabasesCurrentMetricResponseMemory {
                 obj['alert_threshold_in_percent'] = ApiClient.convertToType(data['alert_threshold_in_percent'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = ThresholdMetricStatusEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -98,39 +99,12 @@ EnvironmentDatabasesCurrentMetricResponseMemory.prototype['warning_threshold_in_
 EnvironmentDatabasesCurrentMetricResponseMemory.prototype['alert_threshold_in_percent'] = undefined;
 
 /**
- * @member {module:model/EnvironmentDatabasesCurrentMetricResponseMemory.StatusEnum} status
+ * @member {module:model/ThresholdMetricStatusEnum} status
  */
 EnvironmentDatabasesCurrentMetricResponseMemory.prototype['status'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentDatabasesCurrentMetricResponseMemory['StatusEnum'] = {
-
-    /**
-     * value: "OK"
-     * @const
-     */
-    "OK": "OK",
-
-    /**
-     * value: "Warning"
-     * @const
-     */
-    "Warning": "Warning",
-
-    /**
-     * value: "Alert"
-     * @const
-     */
-    "Alert": "Alert"
-};
 
 
 

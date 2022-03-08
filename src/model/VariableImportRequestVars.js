@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 
 /**
  * The VariableImportRequestVars model module.
@@ -24,7 +25,7 @@ class VariableImportRequestVars {
      * @alias module:model/VariableImportRequestVars
      * @param name {String} 
      * @param value {String} 
-     * @param scope {module:model/VariableImportRequestVars.ScopeEnum} 
+     * @param scope {module:model/EnvironmentVariableScopeEnum} 
      * @param isSecret {Boolean} 
      */
     constructor(name, value, scope, isSecret) { 
@@ -62,7 +63,7 @@ class VariableImportRequestVars {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('is_secret')) {
                 obj['is_secret'] = ApiClient.convertToType(data['is_secret'], 'Boolean');
@@ -85,7 +86,7 @@ VariableImportRequestVars.prototype['name'] = undefined;
 VariableImportRequestVars.prototype['value'] = undefined;
 
 /**
- * @member {module:model/VariableImportRequestVars.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 VariableImportRequestVars.prototype['scope'] = undefined;
 
@@ -96,39 +97,6 @@ VariableImportRequestVars.prototype['is_secret'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-VariableImportRequestVars['ScopeEnum'] = {
-
-    /**
-     * value: "ORGANIZATION"
-     * @const
-     */
-    "ORGANIZATION": "ORGANIZATION",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

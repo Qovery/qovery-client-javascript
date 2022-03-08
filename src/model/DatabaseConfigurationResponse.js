@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import DatabaseTypeEnum from './DatabaseTypeEnum';
 import DatabaseVersionMode from './DatabaseVersionMode';
 
 /**
@@ -49,7 +50,7 @@ class DatabaseConfigurationResponse {
             obj = obj || new DatabaseConfigurationResponse();
 
             if (data.hasOwnProperty('database_type')) {
-                obj['database_type'] = ApiClient.convertToType(data['database_type'], 'String');
+                obj['database_type'] = DatabaseTypeEnum.constructFromObject(data['database_type']);
             }
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], [DatabaseVersionMode]);
@@ -62,7 +63,7 @@ class DatabaseConfigurationResponse {
 }
 
 /**
- * @member {module:model/DatabaseConfigurationResponse.DatabaseTypeEnum} database_type
+ * @member {module:model/DatabaseTypeEnum} database_type
  */
 DatabaseConfigurationResponse.prototype['database_type'] = undefined;
 
@@ -73,39 +74,6 @@ DatabaseConfigurationResponse.prototype['version'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>database_type</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseConfigurationResponse['DatabaseTypeEnum'] = {
-
-    /**
-     * value: "POSTGRESQL"
-     * @const
-     */
-    "POSTGRESQL": "POSTGRESQL",
-
-    /**
-     * value: "MYSQL"
-     * @const
-     */
-    "MYSQL": "MYSQL",
-
-    /**
-     * value: "MONGODB"
-     * @const
-     */
-    "MONGODB": "MONGODB",
-
-    /**
-     * value: "REDIS"
-     * @const
-     */
-    "REDIS": "REDIS"
-};
 
 
 

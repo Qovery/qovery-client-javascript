@@ -19,6 +19,7 @@ import ApplicationResponseAllOf from './ApplicationResponseAllOf';
 import ApplicationStorageResponse from './ApplicationStorageResponse';
 import ApplicationStorageResponseStorage from './ApplicationStorageResponseStorage';
 import BaseResponse from './BaseResponse';
+import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
@@ -103,7 +104,7 @@ class ApplicationResponse {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('build_mode')) {
-                obj['build_mode'] = ApiClient.convertToType(data['build_mode'], 'String');
+                obj['build_mode'] = BuildModeEnum.constructFromObject(data['build_mode']);
             }
             if (data.hasOwnProperty('dockerfile_path')) {
                 obj['dockerfile_path'] = ApiClient.convertToType(data['dockerfile_path'], 'String');
@@ -198,11 +199,9 @@ ApplicationResponse.prototype['name'] = undefined;
 ApplicationResponse.prototype['description'] = undefined;
 
 /**
- * `DOCKER` requires `dockerfile_path` `BUILDPACKS` does not require any `dockerfile_path` 
- * @member {module:model/ApplicationResponse.BuildModeEnum} build_mode
- * @default 'BUILDPACKS'
+ * @member {module:model/BuildModeEnum} build_mode
  */
-ApplicationResponse.prototype['build_mode'] = 'BUILDPACKS';
+ApplicationResponse.prototype['build_mode'] = undefined;
 
 /**
  * The path of the associated Dockerfile. Only if you are using build_mode = DOCKER
@@ -311,11 +310,9 @@ ApplicationResponseAllOf.prototype['name'] = undefined;
  */
 ApplicationResponseAllOf.prototype['description'] = undefined;
 /**
- * `DOCKER` requires `dockerfile_path` `BUILDPACKS` does not require any `dockerfile_path` 
- * @member {module:model/ApplicationResponseAllOf.BuildModeEnum} build_mode
- * @default 'BUILDPACKS'
+ * @member {module:model/BuildModeEnum} build_mode
  */
-ApplicationResponseAllOf.prototype['build_mode'] = 'BUILDPACKS';
+ApplicationResponseAllOf.prototype['build_mode'] = undefined;
 /**
  * The path of the associated Dockerfile. Only if you are using build_mode = DOCKER
  * @member {String} dockerfile_path
@@ -360,27 +357,6 @@ ApplicationResponseAllOf.prototype['healthcheck'] = undefined;
  */
 ApplicationResponseAllOf.prototype['auto_preview'] = true;
 
-
-
-/**
- * Allowed values for the <code>build_mode</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationResponse['BuildModeEnum'] = {
-
-    /**
-     * value: "DOCKER"
-     * @const
-     */
-    "DOCKER": "DOCKER",
-
-    /**
-     * value: "BUILDPACKS"
-     * @const
-     */
-    "BUILDPACKS": "BUILDPACKS"
-};
 
 
 

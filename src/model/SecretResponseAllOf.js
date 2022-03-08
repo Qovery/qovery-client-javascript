@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import AliasedSecret from './AliasedSecret';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 import OverriddenSecret from './OverriddenSecret';
 
 /**
@@ -24,7 +25,7 @@ class SecretResponseAllOf {
     /**
      * Constructs a new <code>SecretResponseAllOf</code>.
      * @alias module:model/SecretResponseAllOf
-     * @param scope {module:model/SecretResponseAllOf.ScopeEnum} 
+     * @param scope {module:model/EnvironmentVariableScopeEnum} 
      */
     constructor(scope) { 
         
@@ -61,7 +62,7 @@ class SecretResponseAllOf {
                 obj['aliased_secret'] = AliasedSecret.constructFromObject(data['aliased_secret']);
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -87,45 +88,12 @@ SecretResponseAllOf.prototype['overridden_secret'] = undefined;
 SecretResponseAllOf.prototype['aliased_secret'] = undefined;
 
 /**
- * @member {module:model/SecretResponseAllOf.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 SecretResponseAllOf.prototype['scope'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-SecretResponseAllOf['ScopeEnum'] = {
-
-    /**
-     * value: "BUILT_IN"
-     * @const
-     */
-    "BUILT_IN": "BUILT_IN",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

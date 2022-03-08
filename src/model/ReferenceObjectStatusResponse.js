@@ -12,7 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import GlobalDeploymentStatus from './GlobalDeploymentStatus';
 import ReferenceObject from './ReferenceObject';
+import ServiceDeploymentStatusEnum from './ServiceDeploymentStatusEnum';
 import Status from './Status';
 
 /**
@@ -27,7 +29,7 @@ class ReferenceObjectStatusResponse {
      * @implements module:model/ReferenceObject
      * @implements module:model/Status
      * @param id {String} 
-     * @param state {module:model/ReferenceObjectStatusResponse.StateEnum} Status is a state machine. It starts with `BUILDING` or `DEPLOYING` state (or `INITIALIZED`if auto-deploy is deactivated). Then finish with `*_ERROR` or any termination state. 
+     * @param state {module:model/GlobalDeploymentStatus} 
      */
     constructor(id, state) { 
         ReferenceObject.initialize(this, id);Status.initialize(this, state);
@@ -61,13 +63,13 @@ class ReferenceObjectStatusResponse {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('state')) {
-                obj['state'] = ApiClient.convertToType(data['state'], 'String');
+                obj['state'] = GlobalDeploymentStatus.constructFromObject(data['state']);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
             if (data.hasOwnProperty('service_deployment_status')) {
-                obj['service_deployment_status'] = ApiClient.convertToType(data['service_deployment_status'], 'String');
+                obj['service_deployment_status'] = ServiceDeploymentStatusEnum.constructFromObject(data['service_deployment_status']);
             }
         }
         return obj;
@@ -82,8 +84,7 @@ class ReferenceObjectStatusResponse {
 ReferenceObjectStatusResponse.prototype['id'] = undefined;
 
 /**
- * Status is a state machine. It starts with `BUILDING` or `DEPLOYING` state (or `INITIALIZED`if auto-deploy is deactivated). Then finish with `*_ERROR` or any termination state. 
- * @member {module:model/ReferenceObjectStatusResponse.StateEnum} state
+ * @member {module:model/GlobalDeploymentStatus} state
  */
 ReferenceObjectStatusResponse.prototype['state'] = undefined;
 
@@ -94,7 +95,7 @@ ReferenceObjectStatusResponse.prototype['state'] = undefined;
 ReferenceObjectStatusResponse.prototype['message'] = undefined;
 
 /**
- * @member {module:model/ReferenceObjectStatusResponse.ServiceDeploymentStatusEnum} service_deployment_status
+ * @member {module:model/ServiceDeploymentStatusEnum} service_deployment_status
  */
 ReferenceObjectStatusResponse.prototype['service_deployment_status'] = undefined;
 
@@ -110,8 +111,7 @@ ReferenceObject.prototype['id'] = undefined;
  */
 Status.prototype['id'] = undefined;
 /**
- * Status is a state machine. It starts with `BUILDING` or `DEPLOYING` state (or `INITIALIZED`if auto-deploy is deactivated). Then finish with `*_ERROR` or any termination state. 
- * @member {module:model/Status.StateEnum} state
+ * @member {module:model/GlobalDeploymentStatus} state
  */
 Status.prototype['state'] = undefined;
 /**
@@ -120,184 +120,10 @@ Status.prototype['state'] = undefined;
  */
 Status.prototype['message'] = undefined;
 /**
- * @member {module:model/Status.ServiceDeploymentStatusEnum} service_deployment_status
+ * @member {module:model/ServiceDeploymentStatusEnum} service_deployment_status
  */
 Status.prototype['service_deployment_status'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>state</code> property.
- * @enum {String}
- * @readonly
- */
-ReferenceObjectStatusResponse['StateEnum'] = {
-
-    /**
-     * value: "INITIALIZED"
-     * @const
-     */
-    "INITIALIZED": "INITIALIZED",
-
-    /**
-     * value: "BUILDING_QUEUED"
-     * @const
-     */
-    "BUILDING_QUEUED": "BUILDING_QUEUED",
-
-    /**
-     * value: "BUILDING"
-     * @const
-     */
-    "BUILDING": "BUILDING",
-
-    /**
-     * value: "BUILD_ERROR"
-     * @const
-     */
-    "BUILD_ERROR": "BUILD_ERROR",
-
-    /**
-     * value: "BUILT"
-     * @const
-     */
-    "BUILT": "BUILT",
-
-    /**
-     * value: "DEPLOYMENT_QUEUED"
-     * @const
-     */
-    "DEPLOYMENT_QUEUED": "DEPLOYMENT_QUEUED",
-
-    /**
-     * value: "DEPLOYING"
-     * @const
-     */
-    "DEPLOYING": "DEPLOYING",
-
-    /**
-     * value: "DEPLOYMENT_ERROR"
-     * @const
-     */
-    "DEPLOYMENT_ERROR": "DEPLOYMENT_ERROR",
-
-    /**
-     * value: "DEPLOYED"
-     * @const
-     */
-    "DEPLOYED": "DEPLOYED",
-
-    /**
-     * value: "STOP_QUEUED"
-     * @const
-     */
-    "STOP_QUEUED": "STOP_QUEUED",
-
-    /**
-     * value: "STOPPING"
-     * @const
-     */
-    "STOPPING": "STOPPING",
-
-    /**
-     * value: "STOP_ERROR"
-     * @const
-     */
-    "STOP_ERROR": "STOP_ERROR",
-
-    /**
-     * value: "STOPPED"
-     * @const
-     */
-    "STOPPED": "STOPPED",
-
-    /**
-     * value: "DELETE_QUEUED"
-     * @const
-     */
-    "DELETE_QUEUED": "DELETE_QUEUED",
-
-    /**
-     * value: "DELETING"
-     * @const
-     */
-    "DELETING": "DELETING",
-
-    /**
-     * value: "DELETE_ERROR"
-     * @const
-     */
-    "DELETE_ERROR": "DELETE_ERROR",
-
-    /**
-     * value: "DELETED"
-     * @const
-     */
-    "DELETED": "DELETED",
-
-    /**
-     * value: "RUNNING"
-     * @const
-     */
-    "RUNNING": "RUNNING",
-
-    /**
-     * value: "RUNNING_ERROR"
-     * @const
-     */
-    "RUNNING_ERROR": "RUNNING_ERROR",
-
-    /**
-     * value: "CANCEL_QUEUED"
-     * @const
-     */
-    "CANCEL_QUEUED": "CANCEL_QUEUED",
-
-    /**
-     * value: "CANCELLING"
-     * @const
-     */
-    "CANCELLING": "CANCELLING",
-
-    /**
-     * value: "CANCEL_ERROR"
-     * @const
-     */
-    "CANCEL_ERROR": "CANCEL_ERROR",
-
-    /**
-     * value: "CANCELLED"
-     * @const
-     */
-    "CANCELLED": "CANCELLED"
-};
-
-
-/**
- * Allowed values for the <code>service_deployment_status</code> property.
- * @enum {String}
- * @readonly
- */
-ReferenceObjectStatusResponse['ServiceDeploymentStatusEnum'] = {
-
-    /**
-     * value: "NEVER_DEPLOYED"
-     * @const
-     */
-    "NEVER_DEPLOYED": "NEVER_DEPLOYED",
-
-    /**
-     * value: "UP_TO_DATE"
-     * @const
-     */
-    "UP_TO_DATE": "UP_TO_DATE",
-
-    /**
-     * value: "OUT_OF_DATE"
-     * @const
-     */
-    "OUT_OF_DATE": "OUT_OF_DATE"
-};
 
 
 

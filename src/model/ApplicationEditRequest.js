@@ -18,6 +18,7 @@ import ApplicationPortResponse from './ApplicationPortResponse';
 import ApplicationPortResponsePorts from './ApplicationPortResponsePorts';
 import ApplicationStorageResponse from './ApplicationStorageResponse';
 import ApplicationStorageResponseStorage from './ApplicationStorageResponseStorage';
+import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 
@@ -77,7 +78,7 @@ class ApplicationEditRequest {
                 obj['git_repository'] = ApplicationGitRepositoryRequest.constructFromObject(data['git_repository']);
             }
             if (data.hasOwnProperty('build_mode')) {
-                obj['build_mode'] = ApiClient.convertToType(data['build_mode'], 'String');
+                obj['build_mode'] = BuildModeEnum.constructFromObject(data['build_mode']);
             }
             if (data.hasOwnProperty('dockerfile_path')) {
                 obj['dockerfile_path'] = ApiClient.convertToType(data['dockerfile_path'], 'String');
@@ -141,8 +142,7 @@ ApplicationEditRequest.prototype['description'] = undefined;
 ApplicationEditRequest.prototype['git_repository'] = undefined;
 
 /**
- * `DOCKER` requires `dockerfile_path` `BUILDPACKS` does not require any `dockerfile_path` 
- * @member {module:model/ApplicationEditRequest.BuildModeEnum} build_mode
+ * @member {module:model/BuildModeEnum} build_mode
  */
 ApplicationEditRequest.prototype['build_mode'] = undefined;
 
@@ -231,8 +231,7 @@ ApplicationEditRequestAllOf.prototype['description'] = undefined;
  */
 ApplicationEditRequestAllOf.prototype['git_repository'] = undefined;
 /**
- * `DOCKER` requires `dockerfile_path` `BUILDPACKS` does not require any `dockerfile_path` 
- * @member {module:model/ApplicationEditRequestAllOf.BuildModeEnum} build_mode
+ * @member {module:model/BuildModeEnum} build_mode
  */
 ApplicationEditRequestAllOf.prototype['build_mode'] = undefined;
 /**
@@ -285,27 +284,6 @@ ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
  */
 ApplicationEditRequestAllOf.prototype['sticky_session'] = false;
 
-
-
-/**
- * Allowed values for the <code>build_mode</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationEditRequest['BuildModeEnum'] = {
-
-    /**
-     * value: "DOCKER"
-     * @const
-     */
-    "DOCKER": "DOCKER",
-
-    /**
-     * value: "BUILDPACKS"
-     * @const
-     */
-    "BUILDPACKS": "BUILDPACKS"
-};
 
 
 

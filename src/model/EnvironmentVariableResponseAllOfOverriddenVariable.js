@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 
 /**
  * The EnvironmentVariableResponseAllOfOverriddenVariable model module.
@@ -57,7 +58,7 @@ class EnvironmentVariableResponseAllOfOverriddenVariable {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = ApiClient.convertToType(data['scope'], 'String');
+                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -82,45 +83,12 @@ EnvironmentVariableResponseAllOfOverriddenVariable.prototype['key'] = undefined;
 EnvironmentVariableResponseAllOfOverriddenVariable.prototype['value'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableResponseAllOfOverriddenVariable.ScopeEnum} scope
+ * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 EnvironmentVariableResponseAllOfOverriddenVariable.prototype['scope'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>scope</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentVariableResponseAllOfOverriddenVariable['ScopeEnum'] = {
-
-    /**
-     * value: "BUILT_IN"
-     * @const
-     */
-    "BUILT_IN": "BUILT_IN",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT",
-
-    /**
-     * value: "PROJECT"
-     * @const
-     */
-    "PROJECT": "PROJECT",
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION"
-};
 
 
 

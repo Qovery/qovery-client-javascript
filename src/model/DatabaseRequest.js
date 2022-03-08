@@ -12,6 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import DatabaseAccessibilityEnum from './DatabaseAccessibilityEnum';
+import DatabaseModeEnum from './DatabaseModeEnum';
+import DatabaseTypeEnum from './DatabaseTypeEnum';
 
 /**
  * The DatabaseRequest model module.
@@ -23,9 +26,9 @@ class DatabaseRequest {
      * Constructs a new <code>DatabaseRequest</code>.
      * @alias module:model/DatabaseRequest
      * @param name {String} name is case insensitive
-     * @param type {module:model/DatabaseRequest.TypeEnum} 
+     * @param type {module:model/DatabaseTypeEnum} 
      * @param version {String} 
-     * @param mode {module:model/DatabaseRequest.ModeEnum} 
+     * @param mode {module:model/DatabaseModeEnum} 
      */
     constructor(name, type, version, mode) { 
         
@@ -59,16 +62,16 @@ class DatabaseRequest {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = DatabaseTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = ApiClient.convertToType(data['mode'], 'String');
+                obj['mode'] = DatabaseModeEnum.constructFromObject(data['mode']);
             }
             if (data.hasOwnProperty('accessibility')) {
-                obj['accessibility'] = ApiClient.convertToType(data['accessibility'], 'String');
+                obj['accessibility'] = DatabaseAccessibilityEnum.constructFromObject(data['accessibility']);
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -93,7 +96,7 @@ class DatabaseRequest {
 DatabaseRequest.prototype['name'] = undefined;
 
 /**
- * @member {module:model/DatabaseRequest.TypeEnum} type
+ * @member {module:model/DatabaseTypeEnum} type
  */
 DatabaseRequest.prototype['type'] = undefined;
 
@@ -103,15 +106,14 @@ DatabaseRequest.prototype['type'] = undefined;
 DatabaseRequest.prototype['version'] = undefined;
 
 /**
- * @member {module:model/DatabaseRequest.ModeEnum} mode
+ * @member {module:model/DatabaseModeEnum} mode
  */
 DatabaseRequest.prototype['mode'] = undefined;
 
 /**
- * @member {module:model/DatabaseRequest.AccessibilityEnum} accessibility
- * @default 'PRIVATE'
+ * @member {module:model/DatabaseAccessibilityEnum} accessibility
  */
-DatabaseRequest.prototype['accessibility'] = 'PRIVATE';
+DatabaseRequest.prototype['accessibility'] = undefined;
 
 /**
  * unit is millicores (m). 1000m = 1 cpu
@@ -136,81 +138,6 @@ DatabaseRequest.prototype['storage'] = 10240;
 
 
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseRequest['TypeEnum'] = {
-
-    /**
-     * value: "POSTGRESQL"
-     * @const
-     */
-    "POSTGRESQL": "POSTGRESQL",
-
-    /**
-     * value: "MYSQL"
-     * @const
-     */
-    "MYSQL": "MYSQL",
-
-    /**
-     * value: "MONGODB"
-     * @const
-     */
-    "MONGODB": "MONGODB",
-
-    /**
-     * value: "REDIS"
-     * @const
-     */
-    "REDIS": "REDIS"
-};
-
-
-/**
- * Allowed values for the <code>mode</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseRequest['ModeEnum'] = {
-
-    /**
-     * value: "MANAGED"
-     * @const
-     */
-    "MANAGED": "MANAGED",
-
-    /**
-     * value: "CONTAINER"
-     * @const
-     */
-    "CONTAINER": "CONTAINER"
-};
-
-
-/**
- * Allowed values for the <code>accessibility</code> property.
- * @enum {String}
- * @readonly
- */
-DatabaseRequest['AccessibilityEnum'] = {
-
-    /**
-     * value: "PUBLIC"
-     * @const
-     */
-    "PUBLIC": "PUBLIC",
-
-    /**
-     * value: "PRIVATE"
-     * @const
-     */
-    "PRIVATE": "PRIVATE"
-};
 
 
 

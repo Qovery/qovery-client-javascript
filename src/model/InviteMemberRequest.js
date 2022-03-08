@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import InviteMemberRoleEnum from './InviteMemberRoleEnum';
 
 /**
  * The InviteMemberRequest model module.
@@ -23,7 +24,7 @@ class InviteMemberRequest {
      * Constructs a new <code>InviteMemberRequest</code>.
      * @alias module:model/InviteMemberRequest
      * @param email {String} 
-     * @param role {module:model/InviteMemberRequest.RoleEnum} 
+     * @param role {module:model/InviteMemberRoleEnum} 
      */
     constructor(email, role) { 
         
@@ -55,7 +56,7 @@ class InviteMemberRequest {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
             if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
+                obj['role'] = InviteMemberRoleEnum.constructFromObject(data['role']);
             }
         }
         return obj;
@@ -70,39 +71,12 @@ class InviteMemberRequest {
 InviteMemberRequest.prototype['email'] = undefined;
 
 /**
- * @member {module:model/InviteMemberRequest.RoleEnum} role
+ * @member {module:model/InviteMemberRoleEnum} role
  */
 InviteMemberRequest.prototype['role'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
- */
-InviteMemberRequest['RoleEnum'] = {
-
-    /**
-     * value: "ADMIN"
-     * @const
-     */
-    "ADMIN": "ADMIN",
-
-    /**
-     * value: "DEVELOPER"
-     * @const
-     */
-    "DEVELOPER": "DEVELOPER",
-
-    /**
-     * value: "VIEWER"
-     * @const
-     */
-    "VIEWER": "VIEWER"
-};
 
 
 

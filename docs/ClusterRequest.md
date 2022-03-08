@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | name is case-insensitive | 
 **description** | **String** |  | [optional] 
-**cloudProvider** | **String** |  | 
+**cloudProvider** | [**CloudProviderEnum**](CloudProviderEnum.md) |  | 
 **region** | **String** |  | 
 **autoUpdate** | **Boolean** |  | [optional] 
 **cpu** | **Number** | unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] [default to 250]
@@ -14,18 +14,5 @@ Name | Type | Description | Notes
 **minRunningNodes** | **Number** |  | [optional] [default to 1]
 **maxRunningNodes** | **Number** |  | [optional] [default to 1]
 **features** | [**[ClusterFeatureRequestFeatures]**](ClusterFeatureRequestFeatures.md) |  | [optional] 
-
-
-
-## Enum: CloudProviderEnum
-
-
-* `AWS` (value: `"AWS"`)
-
-* `DIGITAL_OCEAN` (value: `"DIGITAL_OCEAN"`)
-
-* `SCALEWAY` (value: `"SCALEWAY"`)
-
-
 
 

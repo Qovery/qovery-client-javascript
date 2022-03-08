@@ -8,17 +8,6 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **commit** | [**CommitResponse**](CommitResponse.md) |  | [optional] 
-**status** | **String** |  | [optional] 
-
-
-
-## Enum: StatusEnum
-
-
-* `SUCCESS` (value: `"SUCCESS"`)
-
-* `FAILED` (value: `"FAILED"`)
-
-
+**status** | [**DeploymentHistoryStatusEnum**](DeploymentHistoryStatusEnum.md) |  | [optional] 
 
 

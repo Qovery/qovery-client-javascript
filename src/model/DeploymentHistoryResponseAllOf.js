@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import CommitResponse from './CommitResponse';
+import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
 
 /**
  * The DeploymentHistoryResponseAllOf model module.
@@ -52,7 +53,7 @@ class DeploymentHistoryResponseAllOf {
                 obj['commit'] = CommitResponse.constructFromObject(data['commit']);
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = DeploymentHistoryStatusEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -67,33 +68,12 @@ class DeploymentHistoryResponseAllOf {
 DeploymentHistoryResponseAllOf.prototype['commit'] = undefined;
 
 /**
- * @member {module:model/DeploymentHistoryResponseAllOf.StatusEnum} status
+ * @member {module:model/DeploymentHistoryStatusEnum} status
  */
 DeploymentHistoryResponseAllOf.prototype['status'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-DeploymentHistoryResponseAllOf['StatusEnum'] = {
-
-    /**
-     * value: "SUCCESS"
-     * @const
-     */
-    "SUCCESS": "SUCCESS",
-
-    /**
-     * value: "FAILED"
-     * @const
-     */
-    "FAILED": "FAILED"
-};
 
 
 

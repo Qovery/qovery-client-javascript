@@ -55,8 +55,10 @@ import BillingStart from './model/BillingStart';
 import BillingStatus from './model/BillingStatus';
 import BudgetResponse from './model/BudgetResponse';
 import BudgetThreshold from './model/BudgetThreshold';
+import BuildModeEnum from './model/BuildModeEnum';
 import BuildPackLanguageEnum from './model/BuildPackLanguageEnum';
 import CloneRequest from './model/CloneRequest';
+import CloudProviderEnum from './model/CloudProviderEnum';
 import CloudProviderResponse from './model/CloudProviderResponse';
 import CloudProviderResponseList from './model/CloudProviderResponseList';
 import Cluster from './model/Cluster';
@@ -66,6 +68,7 @@ import ClusterCloudProviderInfoResponse from './model/ClusterCloudProviderInfoRe
 import ClusterCredentialsRequest from './model/ClusterCredentialsRequest';
 import ClusterCredentialsResponse from './model/ClusterCredentialsResponse';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
+import ClusterDeploymentStatusEnum from './model/ClusterDeploymentStatusEnum';
 import ClusterFeatureRequest from './model/ClusterFeatureRequest';
 import ClusterFeatureRequestFeatures from './model/ClusterFeatureRequestFeatures';
 import ClusterFeatureResponse from './model/ClusterFeatureResponse';
@@ -81,6 +84,7 @@ import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
 import ClusterRoutingTableRequestRoutes from './model/ClusterRoutingTableRequestRoutes';
 import ClusterRoutingTableResponse from './model/ClusterRoutingTableResponse';
 import ClusterRoutingTableResponseResults from './model/ClusterRoutingTableResponseResults';
+import ClusterStatusEnum from './model/ClusterStatusEnum';
 import ClusterStatusResponse from './model/ClusterStatusResponse';
 import ClusterStatusResponseList from './model/ClusterStatusResponseList';
 import CommitPaginatedResponseList from './model/CommitPaginatedResponseList';
@@ -102,14 +106,17 @@ import CustomDomainRequest from './model/CustomDomainRequest';
 import CustomDomainResponse from './model/CustomDomainResponse';
 import CustomDomainResponseAllOf from './model/CustomDomainResponseAllOf';
 import CustomDomainResponseList from './model/CustomDomainResponseList';
+import DatabaseAccessibilityEnum from './model/DatabaseAccessibilityEnum';
 import DatabaseConfigurationResponse from './model/DatabaseConfigurationResponse';
 import DatabaseConfigurationResponseList from './model/DatabaseConfigurationResponseList';
 import DatabaseCurrentMetricResponse from './model/DatabaseCurrentMetricResponse';
 import DatabaseEditRequest from './model/DatabaseEditRequest';
+import DatabaseModeEnum from './model/DatabaseModeEnum';
 import DatabaseRequest from './model/DatabaseRequest';
 import DatabaseResponse from './model/DatabaseResponse';
 import DatabaseResponseAllOf from './model/DatabaseResponseAllOf';
 import DatabaseResponseList from './model/DatabaseResponseList';
+import DatabaseTypeEnum from './model/DatabaseTypeEnum';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistoryApplicationResponse from './model/DeploymentHistoryApplicationResponse';
@@ -125,6 +132,9 @@ import DeploymentHistoryPaginatedResponseListAllOf from './model/DeploymentHisto
 import DeploymentHistoryResponse from './model/DeploymentHistoryResponse';
 import DeploymentHistoryResponseAllOf from './model/DeploymentHistoryResponseAllOf';
 import DeploymentHistoryResponseList from './model/DeploymentHistoryResponseList';
+import DeploymentHistoryStatusEnum from './model/DeploymentHistoryStatusEnum';
+import DeploymentRestrictionModeEnum from './model/DeploymentRestrictionModeEnum';
+import DeploymentRestrictionTypeEnum from './model/DeploymentRestrictionTypeEnum';
 import DeploymentRuleRequest from './model/DeploymentRuleRequest';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
 import EnvironmentApplicationsCurrentScaleResponse from './model/EnvironmentApplicationsCurrentScaleResponse';
@@ -150,6 +160,8 @@ import EnvironmentLogPaginatedResponseListAllOf from './model/EnvironmentLogPagi
 import EnvironmentLogResponse from './model/EnvironmentLogResponse';
 import EnvironmentLogResponseList from './model/EnvironmentLogResponseList';
 import EnvironmentLogResponseScope from './model/EnvironmentLogResponseScope';
+import EnvironmentLogTypeEnum from './model/EnvironmentLogTypeEnum';
+import EnvironmentModeEnum from './model/EnvironmentModeEnum';
 import EnvironmentRequest from './model/EnvironmentRequest';
 import EnvironmentResponse from './model/EnvironmentResponse';
 import EnvironmentResponseAllOf from './model/EnvironmentResponseAllOf';
@@ -166,6 +178,7 @@ import EnvironmentVariableResponseAllOf from './model/EnvironmentVariableRespons
 import EnvironmentVariableResponseAllOfAliasedVariable from './model/EnvironmentVariableResponseAllOfAliasedVariable';
 import EnvironmentVariableResponseAllOfOverriddenVariable from './model/EnvironmentVariableResponseAllOfOverriddenVariable';
 import EnvironmentVariableResponseList from './model/EnvironmentVariableResponseList';
+import EnvironmentVariableScopeEnum from './model/EnvironmentVariableScopeEnum';
 import EventPaginatedResponseList from './model/EventPaginatedResponseList';
 import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListAllOf';
 import EventResponse from './model/EventResponse';
@@ -174,10 +187,12 @@ import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCostResponse from './model/GenericObjectCurrentCostResponse';
 import GitAuthProviderResponse from './model/GitAuthProviderResponse';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
+import GitProviderEnum from './model/GitProviderEnum';
 import GitRepositoryBranchResponse from './model/GitRepositoryBranchResponse';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponse from './model/GitRepositoryResponse';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
+import GlobalDeploymentStatus from './model/GlobalDeploymentStatus';
 import Healthcheck from './model/Healthcheck';
 import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
@@ -187,9 +202,12 @@ import InviteMemberRequest from './model/InviteMemberRequest';
 import InviteMemberResponse from './model/InviteMemberResponse';
 import InviteMemberResponseAllOf from './model/InviteMemberResponseAllOf';
 import InviteMemberResponseList from './model/InviteMemberResponseList';
+import InviteMemberRoleEnum from './model/InviteMemberRoleEnum';
+import InviteStatusEnum from './model/InviteStatusEnum';
 import InvoiceResponse from './model/InvoiceResponse';
 import InvoiceResponseAllOf from './model/InvoiceResponseAllOf';
 import InvoiceResponseList from './model/InvoiceResponseList';
+import InvoiceStatusEnum from './model/InvoiceStatusEnum';
 import Key from './model/Key';
 import LinkResponse from './model/LinkResponse';
 import LinkResponseList from './model/LinkResponseList';
@@ -240,6 +258,8 @@ import OverriddenSecret from './model/OverriddenSecret';
 import PaginationDataResponse from './model/PaginationDataResponse';
 import PaidUsage from './model/PaidUsage';
 import PaidUsageResponse from './model/PaidUsageResponse';
+import PlanEnum from './model/PlanEnum';
+import PortProtocolEnum from './model/PortProtocolEnum';
 import ProjectCurrentCostResponse from './model/ProjectCurrentCostResponse';
 import ProjectCurrentCostResponseAllOf from './model/ProjectCurrentCostResponseAllOf';
 import ProjectCurrentCostResponseList from './model/ProjectCurrentCostResponseList';
@@ -266,16 +286,20 @@ import SecretRequest from './model/SecretRequest';
 import SecretResponse from './model/SecretResponse';
 import SecretResponseAllOf from './model/SecretResponseAllOf';
 import SecretResponseList from './model/SecretResponseList';
+import ServiceDeploymentStatusEnum from './model/ServiceDeploymentStatusEnum';
 import ServiceResponse from './model/ServiceResponse';
 import ServiceResponseAllOf from './model/ServiceResponseAllOf';
 import ServiceResponseList from './model/ServiceResponseList';
 import ServiceTotalNumber from './model/ServiceTotalNumber';
+import ServiceTypeEnum from './model/ServiceTypeEnum';
 import Status from './model/Status';
 import StorageDiskResponse from './model/StorageDiskResponse';
 import StorageDiskResponseList from './model/StorageDiskResponseList';
+import StorageTypeEnum from './model/StorageTypeEnum';
 import TagRequest from './model/TagRequest';
 import TagResponse from './model/TagResponse';
 import TagResponseList from './model/TagResponseList';
+import ThresholdMetricStatusEnum from './model/ThresholdMetricStatusEnum';
 import TransferOwnershipRequest from './model/TransferOwnershipRequest';
 import UnexpectedError from './model/UnexpectedError';
 import UserResponse from './model/UserResponse';
@@ -287,6 +311,7 @@ import VariableImportResponse from './model/VariableImportResponse';
 import VariableImportResponseSuccessfulImportedVariables from './model/VariableImportResponseSuccessfulImportedVariables';
 import VersionResponse from './model/VersionResponse';
 import VersionResponseList from './model/VersionResponseList';
+import WeekdayEnum from './model/WeekdayEnum';
 import AccountInfoApi from './api/AccountInfoApi';
 import ApplicationActionsApi from './api/ApplicationActionsApi';
 import ApplicationConfigurationApi from './api/ApplicationConfigurationApi';
@@ -625,6 +650,12 @@ export {
     BudgetThreshold,
 
     /**
+     * The BuildModeEnum model constructor.
+     * @property {module:model/BuildModeEnum}
+     */
+    BuildModeEnum,
+
+    /**
      * The BuildPackLanguageEnum model constructor.
      * @property {module:model/BuildPackLanguageEnum}
      */
@@ -635,6 +666,12 @@ export {
      * @property {module:model/CloneRequest}
      */
     CloneRequest,
+
+    /**
+     * The CloudProviderEnum model constructor.
+     * @property {module:model/CloudProviderEnum}
+     */
+    CloudProviderEnum,
 
     /**
      * The CloudProviderResponse model constructor.
@@ -689,6 +726,12 @@ export {
      * @property {module:model/ClusterCredentialsResponseList}
      */
     ClusterCredentialsResponseList,
+
+    /**
+     * The ClusterDeploymentStatusEnum model constructor.
+     * @property {module:model/ClusterDeploymentStatusEnum}
+     */
+    ClusterDeploymentStatusEnum,
 
     /**
      * The ClusterFeatureRequest model constructor.
@@ -779,6 +822,12 @@ export {
      * @property {module:model/ClusterRoutingTableResponseResults}
      */
     ClusterRoutingTableResponseResults,
+
+    /**
+     * The ClusterStatusEnum model constructor.
+     * @property {module:model/ClusterStatusEnum}
+     */
+    ClusterStatusEnum,
 
     /**
      * The ClusterStatusResponse model constructor.
@@ -907,6 +956,12 @@ export {
     CustomDomainResponseList,
 
     /**
+     * The DatabaseAccessibilityEnum model constructor.
+     * @property {module:model/DatabaseAccessibilityEnum}
+     */
+    DatabaseAccessibilityEnum,
+
+    /**
      * The DatabaseConfigurationResponse model constructor.
      * @property {module:model/DatabaseConfigurationResponse}
      */
@@ -931,6 +986,12 @@ export {
     DatabaseEditRequest,
 
     /**
+     * The DatabaseModeEnum model constructor.
+     * @property {module:model/DatabaseModeEnum}
+     */
+    DatabaseModeEnum,
+
+    /**
      * The DatabaseRequest model constructor.
      * @property {module:model/DatabaseRequest}
      */
@@ -953,6 +1014,12 @@ export {
      * @property {module:model/DatabaseResponseList}
      */
     DatabaseResponseList,
+
+    /**
+     * The DatabaseTypeEnum model constructor.
+     * @property {module:model/DatabaseTypeEnum}
+     */
+    DatabaseTypeEnum,
 
     /**
      * The DatabaseVersionMode model constructor.
@@ -1043,6 +1110,24 @@ export {
      * @property {module:model/DeploymentHistoryResponseList}
      */
     DeploymentHistoryResponseList,
+
+    /**
+     * The DeploymentHistoryStatusEnum model constructor.
+     * @property {module:model/DeploymentHistoryStatusEnum}
+     */
+    DeploymentHistoryStatusEnum,
+
+    /**
+     * The DeploymentRestrictionModeEnum model constructor.
+     * @property {module:model/DeploymentRestrictionModeEnum}
+     */
+    DeploymentRestrictionModeEnum,
+
+    /**
+     * The DeploymentRestrictionTypeEnum model constructor.
+     * @property {module:model/DeploymentRestrictionTypeEnum}
+     */
+    DeploymentRestrictionTypeEnum,
 
     /**
      * The DeploymentRuleRequest model constructor.
@@ -1195,6 +1280,18 @@ export {
     EnvironmentLogResponseScope,
 
     /**
+     * The EnvironmentLogTypeEnum model constructor.
+     * @property {module:model/EnvironmentLogTypeEnum}
+     */
+    EnvironmentLogTypeEnum,
+
+    /**
+     * The EnvironmentModeEnum model constructor.
+     * @property {module:model/EnvironmentModeEnum}
+     */
+    EnvironmentModeEnum,
+
+    /**
      * The EnvironmentRequest model constructor.
      * @property {module:model/EnvironmentRequest}
      */
@@ -1291,6 +1388,12 @@ export {
     EnvironmentVariableResponseList,
 
     /**
+     * The EnvironmentVariableScopeEnum model constructor.
+     * @property {module:model/EnvironmentVariableScopeEnum}
+     */
+    EnvironmentVariableScopeEnum,
+
+    /**
      * The EventPaginatedResponseList model constructor.
      * @property {module:model/EventPaginatedResponseList}
      */
@@ -1339,6 +1442,12 @@ export {
     GitAuthProviderResponseList,
 
     /**
+     * The GitProviderEnum model constructor.
+     * @property {module:model/GitProviderEnum}
+     */
+    GitProviderEnum,
+
+    /**
      * The GitRepositoryBranchResponse model constructor.
      * @property {module:model/GitRepositoryBranchResponse}
      */
@@ -1361,6 +1470,12 @@ export {
      * @property {module:model/GitRepositoryResponseList}
      */
     GitRepositoryResponseList,
+
+    /**
+     * The GlobalDeploymentStatus model constructor.
+     * @property {module:model/GlobalDeploymentStatus}
+     */
+    GlobalDeploymentStatus,
 
     /**
      * The Healthcheck model constructor.
@@ -1417,6 +1532,18 @@ export {
     InviteMemberResponseList,
 
     /**
+     * The InviteMemberRoleEnum model constructor.
+     * @property {module:model/InviteMemberRoleEnum}
+     */
+    InviteMemberRoleEnum,
+
+    /**
+     * The InviteStatusEnum model constructor.
+     * @property {module:model/InviteStatusEnum}
+     */
+    InviteStatusEnum,
+
+    /**
      * The InvoiceResponse model constructor.
      * @property {module:model/InvoiceResponse}
      */
@@ -1433,6 +1560,12 @@ export {
      * @property {module:model/InvoiceResponseList}
      */
     InvoiceResponseList,
+
+    /**
+     * The InvoiceStatusEnum model constructor.
+     * @property {module:model/InvoiceStatusEnum}
+     */
+    InvoiceStatusEnum,
 
     /**
      * The Key model constructor.
@@ -1735,6 +1868,18 @@ export {
     PaidUsageResponse,
 
     /**
+     * The PlanEnum model constructor.
+     * @property {module:model/PlanEnum}
+     */
+    PlanEnum,
+
+    /**
+     * The PortProtocolEnum model constructor.
+     * @property {module:model/PortProtocolEnum}
+     */
+    PortProtocolEnum,
+
+    /**
      * The ProjectCurrentCostResponse model constructor.
      * @property {module:model/ProjectCurrentCostResponse}
      */
@@ -1891,6 +2036,12 @@ export {
     SecretResponseList,
 
     /**
+     * The ServiceDeploymentStatusEnum model constructor.
+     * @property {module:model/ServiceDeploymentStatusEnum}
+     */
+    ServiceDeploymentStatusEnum,
+
+    /**
      * The ServiceResponse model constructor.
      * @property {module:model/ServiceResponse}
      */
@@ -1915,6 +2066,12 @@ export {
     ServiceTotalNumber,
 
     /**
+     * The ServiceTypeEnum model constructor.
+     * @property {module:model/ServiceTypeEnum}
+     */
+    ServiceTypeEnum,
+
+    /**
      * The Status model constructor.
      * @property {module:model/Status}
      */
@@ -1933,6 +2090,12 @@ export {
     StorageDiskResponseList,
 
     /**
+     * The StorageTypeEnum model constructor.
+     * @property {module:model/StorageTypeEnum}
+     */
+    StorageTypeEnum,
+
+    /**
      * The TagRequest model constructor.
      * @property {module:model/TagRequest}
      */
@@ -1949,6 +2112,12 @@ export {
      * @property {module:model/TagResponseList}
      */
     TagResponseList,
+
+    /**
+     * The ThresholdMetricStatusEnum model constructor.
+     * @property {module:model/ThresholdMetricStatusEnum}
+     */
+    ThresholdMetricStatusEnum,
 
     /**
      * The TransferOwnershipRequest model constructor.
@@ -2015,6 +2184,12 @@ export {
      * @property {module:model/VersionResponseList}
      */
     VersionResponseList,
+
+    /**
+     * The WeekdayEnum model constructor.
+     * @property {module:model/WeekdayEnum}
+     */
+    WeekdayEnum,
 
     /**
     * The AccountInfoApi service constructor.

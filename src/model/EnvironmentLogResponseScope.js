@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentLogTypeEnum from './EnvironmentLogTypeEnum';
 
 /**
  * The EnvironmentLogResponseScope model module.
@@ -48,7 +49,7 @@ class EnvironmentLogResponseScope {
             obj = obj || new EnvironmentLogResponseScope();
 
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = EnvironmentLogTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -64,7 +65,7 @@ class EnvironmentLogResponseScope {
 }
 
 /**
- * @member {module:model/EnvironmentLogResponseScope.TypeEnum} type
+ * @member {module:model/EnvironmentLogTypeEnum} type
  */
 EnvironmentLogResponseScope.prototype['type'] = undefined;
 
@@ -80,33 +81,6 @@ EnvironmentLogResponseScope.prototype['id'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentLogResponseScope['TypeEnum'] = {
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION",
-
-    /**
-     * value: "DATABASE"
-     * @const
-     */
-    "DATABASE": "DATABASE",
-
-    /**
-     * value: "ENVIRONMENT"
-     * @const
-     */
-    "ENVIRONMENT": "ENVIRONMENT"
-};
 
 
 

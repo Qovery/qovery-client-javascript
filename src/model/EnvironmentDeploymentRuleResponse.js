@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import EnvironmentDeploymentRuleResponseAllOf from './EnvironmentDeploymentRuleResponseAllOf';
+import WeekdayEnum from './WeekdayEnum';
 
 /**
  * The EnvironmentDeploymentRuleResponse model module.
@@ -31,7 +32,7 @@ class EnvironmentDeploymentRuleResponse {
      * @param timezone {String} 
      * @param startTime {Date} 
      * @param stopTime {Date} 
-     * @param weekdays {Array.<module:model/EnvironmentDeploymentRuleResponse.WeekdaysEnum>} 
+     * @param weekdays {Array.<module:model/WeekdayEnum>} 
      */
     constructor(id, createdAt, timezone, startTime, stopTime, weekdays) { 
         BaseResponse.initialize(this, id, createdAt);EnvironmentDeploymentRuleResponseAllOf.initialize(this, timezone, startTime, stopTime, weekdays);
@@ -96,7 +97,7 @@ class EnvironmentDeploymentRuleResponse {
                 obj['stop_time'] = ApiClient.convertToType(data['stop_time'], 'Date');
             }
             if (data.hasOwnProperty('weekdays')) {
-                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], ['String']);
+                obj['weekdays'] = ApiClient.convertToType(data['weekdays'], [WeekdayEnum]);
             }
         }
         return obj;
@@ -160,7 +161,7 @@ EnvironmentDeploymentRuleResponse.prototype['start_time'] = undefined;
 EnvironmentDeploymentRuleResponse.prototype['stop_time'] = undefined;
 
 /**
- * @member {Array.<module:model/EnvironmentDeploymentRuleResponse.WeekdaysEnum>} weekdays
+ * @member {Array.<module:model/WeekdayEnum>} weekdays
  */
 EnvironmentDeploymentRuleResponse.prototype['weekdays'] = undefined;
 
@@ -212,61 +213,10 @@ EnvironmentDeploymentRuleResponseAllOf.prototype['start_time'] = undefined;
  */
 EnvironmentDeploymentRuleResponseAllOf.prototype['stop_time'] = undefined;
 /**
- * @member {Array.<module:model/EnvironmentDeploymentRuleResponseAllOf.WeekdaysEnum>} weekdays
+ * @member {Array.<module:model/WeekdayEnum>} weekdays
  */
 EnvironmentDeploymentRuleResponseAllOf.prototype['weekdays'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>weekdays</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentDeploymentRuleResponse['WeekdaysEnum'] = {
-
-    /**
-     * value: "MONDAY"
-     * @const
-     */
-    "MONDAY": "MONDAY",
-
-    /**
-     * value: "TUESDAY"
-     * @const
-     */
-    "TUESDAY": "TUESDAY",
-
-    /**
-     * value: "WEDNESDAY"
-     * @const
-     */
-    "WEDNESDAY": "WEDNESDAY",
-
-    /**
-     * value: "THURSDAY"
-     * @const
-     */
-    "THURSDAY": "THURSDAY",
-
-    /**
-     * value: "FRIDAY"
-     * @const
-     */
-    "FRIDAY": "FRIDAY",
-
-    /**
-     * value: "SATURDAY"
-     * @const
-     */
-    "SATURDAY": "SATURDAY",
-
-    /**
-     * value: "SUNDAY"
-     * @const
-     */
-    "SUNDAY": "SUNDAY"
-};
 
 
 

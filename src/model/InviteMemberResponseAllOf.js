@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import InviteMemberRoleEnum from './InviteMemberRoleEnum';
+import InviteStatusEnum from './InviteStatusEnum';
 
 /**
  * The InviteMemberResponseAllOf model module.
@@ -23,9 +25,9 @@ class InviteMemberResponseAllOf {
      * Constructs a new <code>InviteMemberResponseAllOf</code>.
      * @alias module:model/InviteMemberResponseAllOf
      * @param email {String} 
-     * @param role {module:model/InviteMemberResponseAllOf.RoleEnum} 
+     * @param role {module:model/InviteMemberRoleEnum} 
      * @param invitationLink {String} 
-     * @param invitationStatus {module:model/InviteMemberResponseAllOf.InvitationStatusEnum} 
+     * @param invitationStatus {module:model/InviteStatusEnum} 
      * @param inviter {String} 
      */
     constructor(email, role, invitationLink, invitationStatus, inviter) { 
@@ -61,13 +63,13 @@ class InviteMemberResponseAllOf {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
             if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
+                obj['role'] = InviteMemberRoleEnum.constructFromObject(data['role']);
             }
             if (data.hasOwnProperty('invitation_link')) {
                 obj['invitation_link'] = ApiClient.convertToType(data['invitation_link'], 'String');
             }
             if (data.hasOwnProperty('invitation_status')) {
-                obj['invitation_status'] = ApiClient.convertToType(data['invitation_status'], 'String');
+                obj['invitation_status'] = InviteStatusEnum.constructFromObject(data['invitation_status']);
             }
             if (data.hasOwnProperty('inviter')) {
                 obj['inviter'] = ApiClient.convertToType(data['inviter'], 'String');
@@ -88,7 +90,7 @@ class InviteMemberResponseAllOf {
 InviteMemberResponseAllOf.prototype['email'] = undefined;
 
 /**
- * @member {module:model/InviteMemberResponseAllOf.RoleEnum} role
+ * @member {module:model/InviteMemberRoleEnum} role
  */
 InviteMemberResponseAllOf.prototype['role'] = undefined;
 
@@ -98,7 +100,7 @@ InviteMemberResponseAllOf.prototype['role'] = undefined;
 InviteMemberResponseAllOf.prototype['invitation_link'] = undefined;
 
 /**
- * @member {module:model/InviteMemberResponseAllOf.InvitationStatusEnum} invitation_status
+ * @member {module:model/InviteStatusEnum} invitation_status
  */
 InviteMemberResponseAllOf.prototype['invitation_status'] = undefined;
 
@@ -114,54 +116,6 @@ InviteMemberResponseAllOf.prototype['logo_url'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
- */
-InviteMemberResponseAllOf['RoleEnum'] = {
-
-    /**
-     * value: "ADMIN"
-     * @const
-     */
-    "ADMIN": "ADMIN",
-
-    /**
-     * value: "DEVELOPER"
-     * @const
-     */
-    "DEVELOPER": "DEVELOPER",
-
-    /**
-     * value: "VIEWER"
-     * @const
-     */
-    "VIEWER": "VIEWER"
-};
-
-
-/**
- * Allowed values for the <code>invitation_status</code> property.
- * @enum {String}
- * @readonly
- */
-InviteMemberResponseAllOf['InvitationStatusEnum'] = {
-
-    /**
-     * value: "PENDING"
-     * @const
-     */
-    "PENDING": "PENDING",
-
-    /**
-     * value: "EXPIRED"
-     * @const
-     */
-    "EXPIRED": "EXPIRED"
-};
 
 
 

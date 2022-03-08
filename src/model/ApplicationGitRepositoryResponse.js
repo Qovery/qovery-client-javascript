@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import GitProviderEnum from './GitProviderEnum';
 
 /**
  * The ApplicationGitRepositoryResponse model module.
@@ -51,7 +52,7 @@ class ApplicationGitRepositoryResponse {
                 obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
             }
             if (data.hasOwnProperty('provider')) {
-                obj['provider'] = ApiClient.convertToType(data['provider'], 'String');
+                obj['provider'] = GitProviderEnum.constructFromObject(data['provider']);
             }
             if (data.hasOwnProperty('owner')) {
                 obj['owner'] = ApiClient.convertToType(data['owner'], 'String');
@@ -93,7 +94,7 @@ class ApplicationGitRepositoryResponse {
 ApplicationGitRepositoryResponse.prototype['has_access'] = undefined;
 
 /**
- * @member {module:model/ApplicationGitRepositoryResponse.ProviderEnum} provider
+ * @member {module:model/GitProviderEnum} provider
  */
 ApplicationGitRepositoryResponse.prototype['provider'] = undefined;
 
@@ -148,27 +149,6 @@ ApplicationGitRepositoryResponse.prototype['deployed_commit_tag'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>provider</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationGitRepositoryResponse['ProviderEnum'] = {
-
-    /**
-     * value: "GITHUB"
-     * @const
-     */
-    "GITHUB": "GITHUB",
-
-    /**
-     * value: "GITLAB"
-     * @const
-     */
-    "GITLAB": "GITLAB"
-};
 
 
 

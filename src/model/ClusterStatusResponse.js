@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ClusterDeploymentStatusEnum from './ClusterDeploymentStatusEnum';
 
 /**
  * The ClusterStatusResponse model module.
@@ -51,7 +52,7 @@ class ClusterStatusResponse {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = ClusterDeploymentStatusEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('is_deployed')) {
                 obj['is_deployed'] = ApiClient.convertToType(data['is_deployed'], 'Boolean');
@@ -69,7 +70,7 @@ class ClusterStatusResponse {
 ClusterStatusResponse.prototype['cluster_id'] = undefined;
 
 /**
- * @member {module:model/ClusterStatusResponse.StatusEnum} status
+ * @member {module:model/ClusterDeploymentStatusEnum} status
  */
 ClusterStatusResponse.prototype['status'] = undefined;
 
@@ -80,105 +81,6 @@ ClusterStatusResponse.prototype['is_deployed'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-ClusterStatusResponse['StatusEnum'] = {
-
-    /**
-     * value: "READY"
-     * @const
-     */
-    "READY": "READY",
-
-    /**
-     * value: "DEPLOYMENT_QUEUED"
-     * @const
-     */
-    "DEPLOYMENT_QUEUED": "DEPLOYMENT_QUEUED",
-
-    /**
-     * value: "DEPLOYING"
-     * @const
-     */
-    "DEPLOYING": "DEPLOYING",
-
-    /**
-     * value: "DEPLOYMENT_ERROR"
-     * @const
-     */
-    "DEPLOYMENT_ERROR": "DEPLOYMENT_ERROR",
-
-    /**
-     * value: "DEPLOYED"
-     * @const
-     */
-    "DEPLOYED": "DEPLOYED",
-
-    /**
-     * value: "STOP_QUEUED"
-     * @const
-     */
-    "STOP_QUEUED": "STOP_QUEUED",
-
-    /**
-     * value: "STOPPING"
-     * @const
-     */
-    "STOPPING": "STOPPING",
-
-    /**
-     * value: "STOP_ERROR"
-     * @const
-     */
-    "STOP_ERROR": "STOP_ERROR",
-
-    /**
-     * value: "STOPPED"
-     * @const
-     */
-    "STOPPED": "STOPPED",
-
-    /**
-     * value: "DELETE_QUEUED"
-     * @const
-     */
-    "DELETE_QUEUED": "DELETE_QUEUED",
-
-    /**
-     * value: "DELETING"
-     * @const
-     */
-    "DELETING": "DELETING",
-
-    /**
-     * value: "DELETE_ERROR"
-     * @const
-     */
-    "DELETE_ERROR": "DELETE_ERROR",
-
-    /**
-     * value: "DELETED"
-     * @const
-     */
-    "DELETED": "DELETED",
-
-    /**
-     * value: "RUNNING"
-     * @const
-     */
-    "RUNNING": "RUNNING",
-
-    /**
-     * value: "RUNNING_ERROR"
-     * @const
-     */
-    "RUNNING_ERROR": "RUNNING_ERROR"
-};
 
 
 

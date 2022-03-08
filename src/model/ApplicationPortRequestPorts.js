@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import PortProtocolEnum from './PortProtocolEnum';
 
 /**
  * The ApplicationPortRequestPorts model module.
@@ -64,7 +65,7 @@ class ApplicationPortRequestPorts {
                 obj['publicly_accessible'] = ApiClient.convertToType(data['publicly_accessible'], 'Boolean');
             }
             if (data.hasOwnProperty('protocol')) {
-                obj['protocol'] = ApiClient.convertToType(data['protocol'], 'String');
+                obj['protocol'] = PortProtocolEnum.constructFromObject(data['protocol']);
             }
         }
         return obj;
@@ -97,46 +98,12 @@ ApplicationPortRequestPorts.prototype['external_port'] = undefined;
 ApplicationPortRequestPorts.prototype['publicly_accessible'] = undefined;
 
 /**
- * @member {module:model/ApplicationPortRequestPorts.ProtocolEnum} protocol
- * @default 'HTTP'
+ * @member {module:model/PortProtocolEnum} protocol
  */
-ApplicationPortRequestPorts.prototype['protocol'] = 'HTTP';
+ApplicationPortRequestPorts.prototype['protocol'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>protocol</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationPortRequestPorts['ProtocolEnum'] = {
-
-    /**
-     * value: "HTTPS"
-     * @const
-     */
-    "HTTPS": "HTTPS",
-
-    /**
-     * value: "HTTP"
-     * @const
-     */
-    "HTTP": "HTTP",
-
-    /**
-     * value: "TCP"
-     * @const
-     */
-    "TCP": "TCP",
-
-    /**
-     * value: "UDP"
-     * @const
-     */
-    "UDP": "UDP"
-};
 
 
 

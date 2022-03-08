@@ -11,22 +11,7 @@ Name | Type | Description | Notes
 **value** | **String** | value of the env variable. | 
 **overriddenVariable** | [**EnvironmentVariableResponseAllOfOverriddenVariable**](EnvironmentVariableResponseAllOfOverriddenVariable.md) |  | [optional] 
 **aliasedVariable** | [**EnvironmentVariableResponseAllOfAliasedVariable**](EnvironmentVariableResponseAllOfAliasedVariable.md) |  | [optional] 
-**scope** | **String** |  | 
+**scope** | [**EnvironmentVariableScopeEnum**](EnvironmentVariableScopeEnum.md) |  | 
 **serviceName** | **String** |  | [optional] 
-
-
-
-## Enum: ScopeEnum
-
-
-* `BUILT_IN` (value: `"BUILT_IN"`)
-
-* `ENVIRONMENT` (value: `"ENVIRONMENT"`)
-
-* `PROJECT` (value: `"PROJECT"`)
-
-* `APPLICATION` (value: `"APPLICATION"`)
-
-
 
 

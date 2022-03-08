@@ -14,6 +14,8 @@
 import ApiClient from '../ApiClient';
 import BaseResponse from './BaseResponse';
 import InviteMemberResponseAllOf from './InviteMemberResponseAllOf';
+import InviteMemberRoleEnum from './InviteMemberRoleEnum';
+import InviteStatusEnum from './InviteStatusEnum';
 
 /**
  * The InviteMemberResponse model module.
@@ -29,9 +31,9 @@ class InviteMemberResponse {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param email {String} 
-     * @param role {module:model/InviteMemberResponse.RoleEnum} 
+     * @param role {module:model/InviteMemberRoleEnum} 
      * @param invitationLink {String} 
-     * @param invitationStatus {module:model/InviteMemberResponse.InvitationStatusEnum} 
+     * @param invitationStatus {module:model/InviteStatusEnum} 
      * @param inviter {String} 
      */
     constructor(id, createdAt, email, role, invitationLink, invitationStatus, inviter) { 
@@ -80,13 +82,13 @@ class InviteMemberResponse {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
             if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
+                obj['role'] = InviteMemberRoleEnum.constructFromObject(data['role']);
             }
             if (data.hasOwnProperty('invitation_link')) {
                 obj['invitation_link'] = ApiClient.convertToType(data['invitation_link'], 'String');
             }
             if (data.hasOwnProperty('invitation_status')) {
-                obj['invitation_status'] = ApiClient.convertToType(data['invitation_status'], 'String');
+                obj['invitation_status'] = InviteStatusEnum.constructFromObject(data['invitation_status']);
             }
             if (data.hasOwnProperty('inviter')) {
                 obj['inviter'] = ApiClient.convertToType(data['inviter'], 'String');
@@ -122,7 +124,7 @@ InviteMemberResponse.prototype['updated_at'] = undefined;
 InviteMemberResponse.prototype['email'] = undefined;
 
 /**
- * @member {module:model/InviteMemberResponse.RoleEnum} role
+ * @member {module:model/InviteMemberRoleEnum} role
  */
 InviteMemberResponse.prototype['role'] = undefined;
 
@@ -132,7 +134,7 @@ InviteMemberResponse.prototype['role'] = undefined;
 InviteMemberResponse.prototype['invitation_link'] = undefined;
 
 /**
- * @member {module:model/InviteMemberResponse.InvitationStatusEnum} invitation_status
+ * @member {module:model/InviteStatusEnum} invitation_status
  */
 InviteMemberResponse.prototype['invitation_status'] = undefined;
 
@@ -166,7 +168,7 @@ BaseResponse.prototype['updated_at'] = undefined;
  */
 InviteMemberResponseAllOf.prototype['email'] = undefined;
 /**
- * @member {module:model/InviteMemberResponseAllOf.RoleEnum} role
+ * @member {module:model/InviteMemberRoleEnum} role
  */
 InviteMemberResponseAllOf.prototype['role'] = undefined;
 /**
@@ -174,7 +176,7 @@ InviteMemberResponseAllOf.prototype['role'] = undefined;
  */
 InviteMemberResponseAllOf.prototype['invitation_link'] = undefined;
 /**
- * @member {module:model/InviteMemberResponseAllOf.InvitationStatusEnum} invitation_status
+ * @member {module:model/InviteStatusEnum} invitation_status
  */
 InviteMemberResponseAllOf.prototype['invitation_status'] = undefined;
 /**
@@ -186,54 +188,6 @@ InviteMemberResponseAllOf.prototype['inviter'] = undefined;
  */
 InviteMemberResponseAllOf.prototype['logo_url'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
- */
-InviteMemberResponse['RoleEnum'] = {
-
-    /**
-     * value: "ADMIN"
-     * @const
-     */
-    "ADMIN": "ADMIN",
-
-    /**
-     * value: "DEVELOPER"
-     * @const
-     */
-    "DEVELOPER": "DEVELOPER",
-
-    /**
-     * value: "VIEWER"
-     * @const
-     */
-    "VIEWER": "VIEWER"
-};
-
-
-/**
- * Allowed values for the <code>invitation_status</code> property.
- * @enum {String}
- * @readonly
- */
-InviteMemberResponse['InvitationStatusEnum'] = {
-
-    /**
-     * value: "PENDING"
-     * @const
-     */
-    "PENDING": "PENDING",
-
-    /**
-     * value: "EXPIRED"
-     * @const
-     */
-    "EXPIRED": "EXPIRED"
-};
 
 
 

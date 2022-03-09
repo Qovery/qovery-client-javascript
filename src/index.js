@@ -267,7 +267,6 @@ import ProjectDeploymentRuleRequest from './model/ProjectDeploymentRuleRequest';
 import ProjectDeploymentRuleResponse from './model/ProjectDeploymentRuleResponse';
 import ProjectDeploymentRuleResponseAllOf from './model/ProjectDeploymentRuleResponseAllOf';
 import ProjectDeploymentRuleResponseList from './model/ProjectDeploymentRuleResponseList';
-import ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder from './model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder';
 import ProjectRequest from './model/ProjectRequest';
 import ProjectResponse from './model/ProjectResponse';
 import ProjectResponseAllOf from './model/ProjectResponseAllOf';
@@ -1920,12 +1919,6 @@ export {
      * @property {module:model/ProjectDeploymentRuleResponseList}
      */
     ProjectDeploymentRuleResponseList,
-
-    /**
-     * The ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder model constructor.
-     * @property {module:model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder}
-     */
-    ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder,
 
     /**
      * The ProjectRequest model constructor.

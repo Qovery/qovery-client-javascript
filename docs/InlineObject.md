@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**projectDeploymentRuleIdsInOrder** | [**[ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder]**](ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.md) |  | [optional] 
+**projectDeploymentRuleIdsInOrder** | **[String]** |  | [optional] 
 
 

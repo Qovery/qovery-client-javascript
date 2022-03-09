@@ -299,7 +299,6 @@ docs/ProjectDeploymentRuleResponseAllOf.md
 docs/ProjectDeploymentRuleResponseList.md
 docs/ProjectEnvironmentVariableApi.md
 docs/ProjectMainCallsApi.md
-docs/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.md
 docs/ProjectRequest.md
 docs/ProjectResponse.md
 docs/ProjectResponseAllOf.md
@@ -651,7 +650,6 @@ src/model/ProjectDeploymentRuleRequest.js
 src/model/ProjectDeploymentRuleResponse.js
 src/model/ProjectDeploymentRuleResponseAllOf.js
 src/model/ProjectDeploymentRuleResponseList.js
-src/model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.js
 src/model/ProjectRequest.js
 src/model/ProjectResponse.js
 src/model/ProjectResponseAllOf.js
@@ -995,7 +993,6 @@ test/model/ProjectDeploymentRuleRequest.spec.js
 test/model/ProjectDeploymentRuleResponse.spec.js
 test/model/ProjectDeploymentRuleResponseAllOf.spec.js
 test/model/ProjectDeploymentRuleResponseList.spec.js
-test/model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.spec.js
 test/model/ProjectRequest.spec.js
 test/model/ProjectResponse.spec.js
 test/model/ProjectResponseAllOf.spec.js

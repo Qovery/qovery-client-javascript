@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder from './ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder';
 
 /**
  * The InlineObject model module.
@@ -49,7 +48,7 @@ class InlineObject {
             obj = obj || new InlineObject();
 
             if (data.hasOwnProperty('project_deployment_rule_ids_in_order')) {
-                obj['project_deployment_rule_ids_in_order'] = ApiClient.convertToType(data['project_deployment_rule_ids_in_order'], [ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder]);
+                obj['project_deployment_rule_ids_in_order'] = ApiClient.convertToType(data['project_deployment_rule_ids_in_order'], ['String']);
             }
         }
         return obj;
@@ -59,7 +58,7 @@ class InlineObject {
 }
 
 /**
- * @member {Array.<module:model/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder>} project_deployment_rule_ids_in_order
+ * @member {Array.<String>} project_deployment_rule_ids_in_order
  */
 InlineObject.prototype['project_deployment_rule_ids_in_order'] = undefined;
 

@@ -607,7 +607,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ProjectDeploymentRuleResponse](docs/ProjectDeploymentRuleResponse.md)
  - [QoveryApi.ProjectDeploymentRuleResponseAllOf](docs/ProjectDeploymentRuleResponseAllOf.md)
  - [QoveryApi.ProjectDeploymentRuleResponseList](docs/ProjectDeploymentRuleResponseList.md)
- - [QoveryApi.ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder](docs/ProjectProjectIdDeploymentRuleOrderProjectDeploymentRuleIdsInOrder.md)
  - [QoveryApi.ProjectRequest](docs/ProjectRequest.md)
  - [QoveryApi.ProjectResponse](docs/ProjectResponse.md)
  - [QoveryApi.ProjectResponseAllOf](docs/ProjectResponseAllOf.md)

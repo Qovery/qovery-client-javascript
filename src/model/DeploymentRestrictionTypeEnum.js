@@ -20,13 +20,6 @@ import ApiClient from '../ApiClient';
 export default class DeploymentRestrictionTypeEnum {
     
         /**
-         * value: "FILE"
-         * @const
-         */
-        "FILE" = "FILE";
-
-    
-        /**
          * value: "PATH"
          * @const
          */

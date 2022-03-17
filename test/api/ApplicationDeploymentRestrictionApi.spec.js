@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationDeploymentRuleApi();
+    instance = new QoveryApi.ApplicationDeploymentRestrictionApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,21 +47,41 @@
       object[property] = value;
   }
 
-  describe('ApplicationDeploymentRuleApi', function() {
-    describe('editApplicationDeploymentRule', function() {
-      it('should call editApplicationDeploymentRule successfully', function(done) {
-        //uncomment below and update the code to test editApplicationDeploymentRule
-        //instance.editApplicationDeploymentRule(function(error) {
+  describe('ApplicationDeploymentRestrictionApi', function() {
+    describe('createApplicationDeploymentRestriction', function() {
+      it('should call createApplicationDeploymentRestriction successfully', function(done) {
+        //uncomment below and update the code to test createApplicationDeploymentRestriction
+        //instance.createApplicationDeploymentRestriction(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('getApplicationDeploymentRule', function() {
-      it('should call getApplicationDeploymentRule successfully', function(done) {
-        //uncomment below and update the code to test getApplicationDeploymentRule
-        //instance.getApplicationDeploymentRule(function(error) {
+    describe('deleteApplicationDeploymentRestriction', function() {
+      it('should call deleteApplicationDeploymentRestriction successfully', function(done) {
+        //uncomment below and update the code to test deleteApplicationDeploymentRestriction
+        //instance.deleteApplicationDeploymentRestriction(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editApplicationDeploymentRestriction', function() {
+      it('should call editApplicationDeploymentRestriction successfully', function(done) {
+        //uncomment below and update the code to test editApplicationDeploymentRestriction
+        //instance.editApplicationDeploymentRestriction(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getApplicationDeploymentRestrictions', function() {
+      it('should call getApplicationDeploymentRestrictions successfully', function(done) {
+        //uncomment below and update the code to test getApplicationDeploymentRestrictions
+        //instance.getApplicationDeploymentRestrictions(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

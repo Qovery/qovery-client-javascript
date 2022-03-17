@@ -12,21 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationDeploymentRestriction from './ApplicationDeploymentRestriction';
 
 /**
- * The ApplicationDeploymentRuleEditRequest model module.
- * @module model/ApplicationDeploymentRuleEditRequest
+ * The ApplicationDeploymentRestrictionResponse model module.
+ * @module model/ApplicationDeploymentRestrictionResponse
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ApplicationDeploymentRuleEditRequest {
+class ApplicationDeploymentRestrictionResponse {
     /**
-     * Constructs a new <code>ApplicationDeploymentRuleEditRequest</code>.
-     * @alias module:model/ApplicationDeploymentRuleEditRequest
+     * Constructs a new <code>ApplicationDeploymentRestrictionResponse</code>.
+     * @alias module:model/ApplicationDeploymentRestrictionResponse
      */
     constructor() { 
         
-        ApplicationDeploymentRuleEditRequest.initialize(this);
+        ApplicationDeploymentRestrictionResponse.initialize(this);
     }
 
     /**
@@ -38,18 +37,18 @@ class ApplicationDeploymentRuleEditRequest {
     }
 
     /**
-     * Constructs a <code>ApplicationDeploymentRuleEditRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ApplicationDeploymentRestrictionResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApplicationDeploymentRuleEditRequest} obj Optional instance to populate.
-     * @return {module:model/ApplicationDeploymentRuleEditRequest} The populated <code>ApplicationDeploymentRuleEditRequest</code> instance.
+     * @param {module:model/ApplicationDeploymentRestrictionResponse} obj Optional instance to populate.
+     * @return {module:model/ApplicationDeploymentRestrictionResponse} The populated <code>ApplicationDeploymentRestrictionResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApplicationDeploymentRuleEditRequest();
+            obj = obj || new ApplicationDeploymentRestrictionResponse();
 
             if (data.hasOwnProperty('deployment_restrictions')) {
-                obj['deployment_restrictions'] = ApiClient.convertToType(data['deployment_restrictions'], [ApplicationDeploymentRestriction]);
+                obj['deployment_restrictions'] = ApiClient.convertToType(data['deployment_restrictions'], [Object]);
             }
         }
         return obj;
@@ -59,14 +58,14 @@ class ApplicationDeploymentRuleEditRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationDeploymentRestriction>} deployment_restrictions
+ * @member {Array.<Object>} deployment_restrictions
  */
-ApplicationDeploymentRuleEditRequest.prototype['deployment_restrictions'] = undefined;
+ApplicationDeploymentRestrictionResponse.prototype['deployment_restrictions'] = undefined;
 
 
 
 
 
 
-export default ApplicationDeploymentRuleEditRequest;
+export default ApplicationDeploymentRestrictionResponse;
 

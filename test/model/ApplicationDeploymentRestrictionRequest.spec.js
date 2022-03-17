@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationDeploymentRestriction();
+    instance = new QoveryApi.ApplicationDeploymentRestrictionRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('ApplicationDeploymentRestriction', function() {
-    it('should create an instance of ApplicationDeploymentRestriction', function() {
-      // uncomment below and update the code to test ApplicationDeploymentRestriction
-      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
-      //expect(instance).to.be.a(QoveryApi.ApplicationDeploymentRestriction);
+  describe('ApplicationDeploymentRestrictionRequest', function() {
+    it('should create an instance of ApplicationDeploymentRestrictionRequest', function() {
+      // uncomment below and update the code to test ApplicationDeploymentRestrictionRequest
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionRequest();
+      //expect(instance).to.be.a(QoveryApi.ApplicationDeploymentRestrictionRequest);
     });
 
     it('should have the property mode (base name: "mode")', function() {
       // uncomment below and update the code to test the property mode
-      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionRequest();
       //expect(instance).to.be();
     });
 

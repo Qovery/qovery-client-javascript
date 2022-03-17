@@ -16,21 +16,21 @@ import DeploymentRestrictionModeEnum from './DeploymentRestrictionModeEnum';
 import DeploymentRestrictionTypeEnum from './DeploymentRestrictionTypeEnum';
 
 /**
- * The ApplicationDeploymentRestriction model module.
- * @module model/ApplicationDeploymentRestriction
+ * The ApplicationDeploymentRestrictionRequest model module.
+ * @module model/ApplicationDeploymentRestrictionRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ApplicationDeploymentRestriction {
+class ApplicationDeploymentRestrictionRequest {
     /**
-     * Constructs a new <code>ApplicationDeploymentRestriction</code>.
-     * @alias module:model/ApplicationDeploymentRestriction
+     * Constructs a new <code>ApplicationDeploymentRestrictionRequest</code>.
+     * @alias module:model/ApplicationDeploymentRestrictionRequest
      * @param mode {module:model/DeploymentRestrictionModeEnum} 
      * @param type {module:model/DeploymentRestrictionTypeEnum} 
-     * @param value {String} 
+     * @param value {String} For `PATH` restrictions, the value must not start with `/`
      */
     constructor(mode, type, value) { 
         
-        ApplicationDeploymentRestriction.initialize(this, mode, type, value);
+        ApplicationDeploymentRestrictionRequest.initialize(this, mode, type, value);
     }
 
     /**
@@ -45,15 +45,15 @@ class ApplicationDeploymentRestriction {
     }
 
     /**
-     * Constructs a <code>ApplicationDeploymentRestriction</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ApplicationDeploymentRestrictionRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApplicationDeploymentRestriction} obj Optional instance to populate.
-     * @return {module:model/ApplicationDeploymentRestriction} The populated <code>ApplicationDeploymentRestriction</code> instance.
+     * @param {module:model/ApplicationDeploymentRestrictionRequest} obj Optional instance to populate.
+     * @return {module:model/ApplicationDeploymentRestrictionRequest} The populated <code>ApplicationDeploymentRestrictionRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApplicationDeploymentRestriction();
+            obj = obj || new ApplicationDeploymentRestrictionRequest();
 
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = DeploymentRestrictionModeEnum.constructFromObject(data['mode']);
@@ -74,22 +74,23 @@ class ApplicationDeploymentRestriction {
 /**
  * @member {module:model/DeploymentRestrictionModeEnum} mode
  */
-ApplicationDeploymentRestriction.prototype['mode'] = undefined;
+ApplicationDeploymentRestrictionRequest.prototype['mode'] = undefined;
 
 /**
  * @member {module:model/DeploymentRestrictionTypeEnum} type
  */
-ApplicationDeploymentRestriction.prototype['type'] = undefined;
+ApplicationDeploymentRestrictionRequest.prototype['type'] = undefined;
 
 /**
+ * For `PATH` restrictions, the value must not start with `/`
  * @member {String} value
  */
-ApplicationDeploymentRestriction.prototype['value'] = undefined;
+ApplicationDeploymentRestrictionRequest.prototype['value'] = undefined;
 
 
 
 
 
 
-export default ApplicationDeploymentRestriction;
+export default ApplicationDeploymentRestrictionRequest;
 

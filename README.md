@@ -139,8 +139,10 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationDatabaseApi* | [**removeDatabaseFromApplication**](docs/ApplicationDatabaseApi.md#removeDatabaseFromApplication) | **DELETE** /application/{applicationId}/database/{targetDatabaseId} | Remove database link to this application.
 *QoveryApi.ApplicationDatabaseApi* | [**removeLogicalDatabaseFromApplication**](docs/ApplicationDatabaseApi.md#removeLogicalDatabaseFromApplication) | **DELETE** /application/{applicationId}/logicalDatabase/{targetLogicalDatabaseId} | Remove logical database link to this application.
 *QoveryApi.ApplicationDeploymentHistoryApi* | [**listApplicationDeploymentHistory**](docs/ApplicationDeploymentHistoryApi.md#listApplicationDeploymentHistory) | **GET** /application/{applicationId}/deploymentHistory | List application deploys
-*QoveryApi.ApplicationDeploymentRuleApi* | [**editApplicationDeploymentRule**](docs/ApplicationDeploymentRuleApi.md#editApplicationDeploymentRule) | **PUT** /application/{applicationId}/deploymentRule/{deploymentRuleId} | Edit an application deployment rule
-*QoveryApi.ApplicationDeploymentRuleApi* | [**getApplicationDeploymentRule**](docs/ApplicationDeploymentRuleApi.md#getApplicationDeploymentRule) | **GET** /application/{applicationId}/deploymentRule | Get application deployment rule
+*QoveryApi.ApplicationDeploymentRestrictionApi* | [**createApplicationDeploymentRestriction**](docs/ApplicationDeploymentRestrictionApi.md#createApplicationDeploymentRestriction) | **POST** /application/{applicationId}/deploymentRestriction | Create an application deployment restriction
+*QoveryApi.ApplicationDeploymentRestrictionApi* | [**deleteApplicationDeploymentRestriction**](docs/ApplicationDeploymentRestrictionApi.md#deleteApplicationDeploymentRestriction) | **DELETE** /application/{applicationId}/deploymentRestriction/{deploymentRestrictionId} | Delete an application deployment restriction
+*QoveryApi.ApplicationDeploymentRestrictionApi* | [**editApplicationDeploymentRestriction**](docs/ApplicationDeploymentRestrictionApi.md#editApplicationDeploymentRestriction) | **PUT** /application/{applicationId}/deploymentRestriction/{deploymentRestrictionId} | Edit an application deployment restriction
+*QoveryApi.ApplicationDeploymentRestrictionApi* | [**getApplicationDeploymentRestrictions**](docs/ApplicationDeploymentRestrictionApi.md#getApplicationDeploymentRestrictions) | **GET** /application/{applicationId}/deploymentRestriction | Get application deployment restrictions
 *QoveryApi.ApplicationEnvironmentVariableApi* | [**createApplicationEnvironmentVariable**](docs/ApplicationEnvironmentVariableApi.md#createApplicationEnvironmentVariable) | **POST** /application/{applicationId}/environmentVariable | Add an environment variable to the application
 *QoveryApi.ApplicationEnvironmentVariableApi* | [**createApplicationEnvironmentVariableAlias**](docs/ApplicationEnvironmentVariableApi.md#createApplicationEnvironmentVariableAlias) | **POST** /application/{applicationId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the application level
 *QoveryApi.ApplicationEnvironmentVariableApi* | [**createApplicationEnvironmentVariableOverride**](docs/ApplicationEnvironmentVariableApi.md#createApplicationEnvironmentVariableOverride) | **POST** /application/{applicationId}/environmentVariable/{environmentVariableId}/override | Create an environment variable override at the application level
@@ -358,9 +360,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.AliasedSecret](docs/AliasedSecret.md)
  - [QoveryApi.ApplicationCurrentScaleResponse](docs/ApplicationCurrentScaleResponse.md)
  - [QoveryApi.ApplicationDependencyRequest](docs/ApplicationDependencyRequest.md)
- - [QoveryApi.ApplicationDeploymentRestriction](docs/ApplicationDeploymentRestriction.md)
- - [QoveryApi.ApplicationDeploymentRuleEditRequest](docs/ApplicationDeploymentRuleEditRequest.md)
- - [QoveryApi.ApplicationDeploymentRuleResponse](docs/ApplicationDeploymentRuleResponse.md)
+ - [QoveryApi.ApplicationDeploymentRestrictionRequest](docs/ApplicationDeploymentRestrictionRequest.md)
+ - [QoveryApi.ApplicationDeploymentRestrictionResponse](docs/ApplicationDeploymentRestrictionResponse.md)
  - [QoveryApi.ApplicationEditRequest](docs/ApplicationEditRequest.md)
  - [QoveryApi.ApplicationEditRequestAllOf](docs/ApplicationEditRequestAllOf.md)
  - [QoveryApi.ApplicationGitRepositoryRequest](docs/ApplicationGitRepositoryRequest.md)

@@ -13,10 +13,9 @@ docs/ApplicationCurrentScaleResponse.md
 docs/ApplicationDatabaseApi.md
 docs/ApplicationDependencyRequest.md
 docs/ApplicationDeploymentHistoryApi.md
-docs/ApplicationDeploymentRestriction.md
-docs/ApplicationDeploymentRuleApi.md
-docs/ApplicationDeploymentRuleEditRequest.md
-docs/ApplicationDeploymentRuleResponse.md
+docs/ApplicationDeploymentRestrictionApi.md
+docs/ApplicationDeploymentRestrictionRequest.md
+docs/ApplicationDeploymentRestrictionResponse.md
 docs/ApplicationEditRequest.md
 docs/ApplicationEditRequestAllOf.md
 docs/ApplicationEnvironmentVariableApi.md
@@ -355,7 +354,7 @@ src/api/ApplicationActionsApi.js
 src/api/ApplicationConfigurationApi.js
 src/api/ApplicationDatabaseApi.js
 src/api/ApplicationDeploymentHistoryApi.js
-src/api/ApplicationDeploymentRuleApi.js
+src/api/ApplicationDeploymentRestrictionApi.js
 src/api/ApplicationEnvironmentVariableApi.js
 src/api/ApplicationEventApi.js
 src/api/ApplicationLogsApi.js
@@ -401,9 +400,8 @@ src/model/AccountInfoResponse.js
 src/model/AliasedSecret.js
 src/model/ApplicationCurrentScaleResponse.js
 src/model/ApplicationDependencyRequest.js
-src/model/ApplicationDeploymentRestriction.js
-src/model/ApplicationDeploymentRuleEditRequest.js
-src/model/ApplicationDeploymentRuleResponse.js
+src/model/ApplicationDeploymentRestrictionRequest.js
+src/model/ApplicationDeploymentRestrictionResponse.js
 src/model/ApplicationEditRequest.js
 src/model/ApplicationEditRequestAllOf.js
 src/model/ApplicationGitRepositoryRequest.js
@@ -699,7 +697,7 @@ test/api/ApplicationActionsApi.spec.js
 test/api/ApplicationConfigurationApi.spec.js
 test/api/ApplicationDatabaseApi.spec.js
 test/api/ApplicationDeploymentHistoryApi.spec.js
-test/api/ApplicationDeploymentRuleApi.spec.js
+test/api/ApplicationDeploymentRestrictionApi.spec.js
 test/api/ApplicationEnvironmentVariableApi.spec.js
 test/api/ApplicationEventApi.spec.js
 test/api/ApplicationLogsApi.spec.js
@@ -744,9 +742,8 @@ test/model/AccountInfoResponse.spec.js
 test/model/AliasedSecret.spec.js
 test/model/ApplicationCurrentScaleResponse.spec.js
 test/model/ApplicationDependencyRequest.spec.js
-test/model/ApplicationDeploymentRestriction.spec.js
-test/model/ApplicationDeploymentRuleEditRequest.spec.js
-test/model/ApplicationDeploymentRuleResponse.spec.js
+test/model/ApplicationDeploymentRestrictionRequest.spec.js
+test/model/ApplicationDeploymentRestrictionResponse.spec.js
 test/model/ApplicationEditRequest.spec.js
 test/model/ApplicationEditRequestAllOf.spec.js
 test/model/ApplicationGitRepositoryRequest.spec.js

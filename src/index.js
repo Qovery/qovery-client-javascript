@@ -18,9 +18,8 @@ import AccountInfoResponse from './model/AccountInfoResponse';
 import AliasedSecret from './model/AliasedSecret';
 import ApplicationCurrentScaleResponse from './model/ApplicationCurrentScaleResponse';
 import ApplicationDependencyRequest from './model/ApplicationDependencyRequest';
-import ApplicationDeploymentRestriction from './model/ApplicationDeploymentRestriction';
-import ApplicationDeploymentRuleEditRequest from './model/ApplicationDeploymentRuleEditRequest';
-import ApplicationDeploymentRuleResponse from './model/ApplicationDeploymentRuleResponse';
+import ApplicationDeploymentRestrictionRequest from './model/ApplicationDeploymentRestrictionRequest';
+import ApplicationDeploymentRestrictionResponse from './model/ApplicationDeploymentRestrictionResponse';
 import ApplicationEditRequest from './model/ApplicationEditRequest';
 import ApplicationEditRequestAllOf from './model/ApplicationEditRequestAllOf';
 import ApplicationGitRepositoryRequest from './model/ApplicationGitRepositoryRequest';
@@ -316,7 +315,7 @@ import ApplicationActionsApi from './api/ApplicationActionsApi';
 import ApplicationConfigurationApi from './api/ApplicationConfigurationApi';
 import ApplicationDatabaseApi from './api/ApplicationDatabaseApi';
 import ApplicationDeploymentHistoryApi from './api/ApplicationDeploymentHistoryApi';
-import ApplicationDeploymentRuleApi from './api/ApplicationDeploymentRuleApi';
+import ApplicationDeploymentRestrictionApi from './api/ApplicationDeploymentRestrictionApi';
 import ApplicationEnvironmentVariableApi from './api/ApplicationEnvironmentVariableApi';
 import ApplicationEventApi from './api/ApplicationEventApi';
 import ApplicationLogsApi from './api/ApplicationLogsApi';
@@ -427,22 +426,16 @@ export {
     ApplicationDependencyRequest,
 
     /**
-     * The ApplicationDeploymentRestriction model constructor.
-     * @property {module:model/ApplicationDeploymentRestriction}
+     * The ApplicationDeploymentRestrictionRequest model constructor.
+     * @property {module:model/ApplicationDeploymentRestrictionRequest}
      */
-    ApplicationDeploymentRestriction,
+    ApplicationDeploymentRestrictionRequest,
 
     /**
-     * The ApplicationDeploymentRuleEditRequest model constructor.
-     * @property {module:model/ApplicationDeploymentRuleEditRequest}
+     * The ApplicationDeploymentRestrictionResponse model constructor.
+     * @property {module:model/ApplicationDeploymentRestrictionResponse}
      */
-    ApplicationDeploymentRuleEditRequest,
-
-    /**
-     * The ApplicationDeploymentRuleResponse model constructor.
-     * @property {module:model/ApplicationDeploymentRuleResponse}
-     */
-    ApplicationDeploymentRuleResponse,
+    ApplicationDeploymentRestrictionResponse,
 
     /**
      * The ApplicationEditRequest model constructor.
@@ -2215,10 +2208,10 @@ export {
     ApplicationDeploymentHistoryApi,
 
     /**
-    * The ApplicationDeploymentRuleApi service constructor.
-    * @property {module:api/ApplicationDeploymentRuleApi}
+    * The ApplicationDeploymentRestrictionApi service constructor.
+    * @property {module:api/ApplicationDeploymentRestrictionApi}
     */
-    ApplicationDeploymentRuleApi,
+    ApplicationDeploymentRestrictionApi,
 
     /**
     * The ApplicationEnvironmentVariableApi service constructor.

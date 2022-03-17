@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationDeploymentRuleResponse();
+    instance = new QoveryApi.ApplicationDeploymentRestrictionResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,16 @@
       object[property] = value;
   }
 
-  describe('ApplicationDeploymentRuleResponse', function() {
-    it('should create an instance of ApplicationDeploymentRuleResponse', function() {
-      // uncomment below and update the code to test ApplicationDeploymentRuleResponse
-      //var instance = new QoveryApi.ApplicationDeploymentRuleResponse();
-      //expect(instance).to.be.a(QoveryApi.ApplicationDeploymentRuleResponse);
+  describe('ApplicationDeploymentRestrictionResponse', function() {
+    it('should create an instance of ApplicationDeploymentRestrictionResponse', function() {
+      // uncomment below and update the code to test ApplicationDeploymentRestrictionResponse
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionResponse();
+      //expect(instance).to.be.a(QoveryApi.ApplicationDeploymentRestrictionResponse);
     });
 
     it('should have the property deploymentRestrictions (base name: "deployment_restrictions")', function() {
       // uncomment below and update the code to test the property deploymentRestrictions
-      //var instance = new QoveryApi.ApplicationDeploymentRuleResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ApplicationDeploymentRuleResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.ApplicationDeploymentRuleResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
-      //var instance = new QoveryApi.ApplicationDeploymentRuleResponse();
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionResponse();
       //expect(instance).to.be();
     });
 

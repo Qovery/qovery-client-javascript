@@ -351,6 +351,8 @@ Class | Method | HTTP request | Description
 *QoveryApi.ProjectsApi* | [**listProject**](docs/ProjectsApi.md#listProject) | **GET** /organization/{organizationId}/project | List projects
 *QoveryApi.ReferralRewardsApi* | [**getAccountReferral**](docs/ReferralRewardsApi.md#getAccountReferral) | **GET** /account/referral | Get your referral information
 *QoveryApi.ReferralRewardsApi* | [**postAccountRewardClaim**](docs/ReferralRewardsApi.md#postAccountRewardClaim) | **POST** /account/rewardClaim | Claim a reward
+*QoveryApi.UserSignUpApi* | [**createUserSignUp**](docs/UserSignUpApi.md#createUserSignUp) | **POST** /admin/userSignUp | Send Sign Up request
+*QoveryApi.UserSignUpApi* | [**getUserSignUp**](docs/UserSignUpApi.md#getUserSignUp) | **GET** /admin/userSignUp | Get Sign up information
 
 
 ## Documentation for Models
@@ -537,6 +539,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
  - [QoveryApi.InlineObject](docs/InlineObject.md)
  - [QoveryApi.InlineObject1](docs/InlineObject1.md)
+ - [QoveryApi.InlineObject2](docs/InlineObject2.md)
  - [QoveryApi.InstanceResponse](docs/InstanceResponse.md)
  - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
  - [QoveryApi.InviteMemberRequest](docs/InviteMemberRequest.md)

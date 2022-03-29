@@ -220,6 +220,7 @@ docs/GlobalDeploymentStatus.md
 docs/Healthcheck.md
 docs/InlineObject.md
 docs/InlineObject1.md
+docs/InlineObject2.md
 docs/InstanceResponse.md
 docs/InstanceResponseList.md
 docs/InviteMemberRequest.md
@@ -337,6 +338,7 @@ docs/TransferOwnershipRequest.md
 docs/UnexpectedError.md
 docs/UserResponse.md
 docs/UserResponseList.md
+docs/UserSignUpApi.md
 docs/Value.md
 docs/VariableImportRequest.md
 docs/VariableImportRequestVars.md
@@ -394,6 +396,7 @@ src/api/ProjectMainCallsApi.js
 src/api/ProjectSecretApi.js
 src/api/ProjectsApi.js
 src/api/ReferralRewardsApi.js
+src/api/UserSignUpApi.js
 src/index.js
 src/model/AccountInfoEditRequest.js
 src/model/AccountInfoResponse.js
@@ -577,6 +580,7 @@ src/model/GlobalDeploymentStatus.js
 src/model/Healthcheck.js
 src/model/InlineObject.js
 src/model/InlineObject1.js
+src/model/InlineObject2.js
 src/model/InstanceResponse.js
 src/model/InstanceResponseList.js
 src/model/InviteMemberRequest.js
@@ -737,6 +741,7 @@ test/api/ProjectMainCallsApi.spec.js
 test/api/ProjectSecretApi.spec.js
 test/api/ProjectsApi.spec.js
 test/api/ReferralRewardsApi.spec.js
+test/api/UserSignUpApi.spec.js
 test/model/AccountInfoEditRequest.spec.js
 test/model/AccountInfoResponse.spec.js
 test/model/AliasedSecret.spec.js
@@ -919,6 +924,7 @@ test/model/GlobalDeploymentStatus.spec.js
 test/model/Healthcheck.spec.js
 test/model/InlineObject.spec.js
 test/model/InlineObject1.spec.js
+test/model/InlineObject2.spec.js
 test/model/InstanceResponse.spec.js
 test/model/InstanceResponseList.spec.js
 test/model/InviteMemberRequest.spec.js

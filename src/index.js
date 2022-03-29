@@ -195,6 +195,7 @@ import GlobalDeploymentStatus from './model/GlobalDeploymentStatus';
 import Healthcheck from './model/Healthcheck';
 import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
+import InlineObject2 from './model/InlineObject2';
 import InstanceResponse from './model/InstanceResponse';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMemberRequest from './model/InviteMemberRequest';
@@ -355,6 +356,7 @@ import ProjectMainCallsApi from './api/ProjectMainCallsApi';
 import ProjectSecretApi from './api/ProjectSecretApi';
 import ProjectsApi from './api/ProjectsApi';
 import ReferralRewardsApi from './api/ReferralRewardsApi';
+import UserSignUpApi from './api/UserSignUpApi';
 
 
 /**
@@ -1488,6 +1490,12 @@ export {
     InlineObject1,
 
     /**
+     * The InlineObject2 model constructor.
+     * @property {module:model/InlineObject2}
+     */
+    InlineObject2,
+
+    /**
      * The InstanceResponse model constructor.
      * @property {module:model/InstanceResponse}
      */
@@ -2445,5 +2453,11 @@ export {
     * The ReferralRewardsApi service constructor.
     * @property {module:api/ReferralRewardsApi}
     */
-    ReferralRewardsApi
+    ReferralRewardsApi,
+
+    /**
+    * The UserSignUpApi service constructor.
+    * @property {module:api/UserSignUpApi}
+    */
+    UserSignUpApi
 };

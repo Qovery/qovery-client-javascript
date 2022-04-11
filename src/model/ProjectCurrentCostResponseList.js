@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ProjectCurrentCostResponse from './ProjectCurrentCostResponse';
+import ProjectCurrentCost from './ProjectCurrentCost';
 
 /**
  * The ProjectCurrentCostResponseList model module.
@@ -49,7 +49,7 @@ class ProjectCurrentCostResponseList {
             obj = obj || new ProjectCurrentCostResponseList();
 
             if (data.hasOwnProperty('projects')) {
-                obj['projects'] = ApiClient.convertToType(data['projects'], [ProjectCurrentCostResponse]);
+                obj['projects'] = ApiClient.convertToType(data['projects'], [ProjectCurrentCost]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ProjectCurrentCostResponseList {
 }
 
 /**
- * @member {Array.<module:model/ProjectCurrentCostResponse>} projects
+ * @member {Array.<module:model/ProjectCurrentCost>} projects
  */
 ProjectCurrentCostResponseList.prototype['projects'] = undefined;
 

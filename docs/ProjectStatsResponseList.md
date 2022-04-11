@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ProjectStatsResponse]**](ProjectStatsResponse.md) |  | [optional] 
+**results** | [**[ProjectStats]**](ProjectStats.md) |  | [optional] 
 
 

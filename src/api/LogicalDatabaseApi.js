@@ -14,10 +14,10 @@
 
 import ApiClient from "../ApiClient";
 import ApplicationResponseList from '../model/ApplicationResponseList';
+import Credentials from '../model/Credentials';
 import CredentialsRequest from '../model/CredentialsRequest';
-import CredentialsResponse from '../model/CredentialsResponse';
+import LogicalDatabase from '../model/LogicalDatabase';
 import LogicalDatabaseRequest from '../model/LogicalDatabaseRequest';
-import LogicalDatabaseResponse from '../model/LogicalDatabaseResponse';
 import LogicalDatabaseResponseList from '../model/LogicalDatabaseResponseList';
 
 /**
@@ -43,7 +43,7 @@ export default class LogicalDatabaseApi {
      * Callback function to receive the result of the createLogicalDatabaseOnDatabase operation.
      * @callback module:api/LogicalDatabaseApi~createLogicalDatabaseOnDatabaseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LogicalDatabaseResponse} data The data returned by the service call.
+     * @param {module:model/LogicalDatabase} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -54,7 +54,7 @@ export default class LogicalDatabaseApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/LogicalDatabaseRequest} opts.logicalDatabaseRequest 
      * @param {module:api/LogicalDatabaseApi~createLogicalDatabaseOnDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LogicalDatabaseResponse}
+     * data is of type: {@link module:model/LogicalDatabase}
      */
     createLogicalDatabaseOnDatabase(databaseId, opts, callback) {
       opts = opts || {};
@@ -77,7 +77,7 @@ export default class LogicalDatabaseApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = LogicalDatabaseResponse;
+      let returnType = LogicalDatabase;
       return this.apiClient.callApi(
         '/database/{databaseId}/logicalDatabase', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -131,7 +131,7 @@ export default class LogicalDatabaseApi {
      * Callback function to receive the result of the editLogicalDatabase operation.
      * @callback module:api/LogicalDatabaseApi~editLogicalDatabaseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LogicalDatabaseResponse} data The data returned by the service call.
+     * @param {module:model/LogicalDatabase} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -141,7 +141,7 @@ export default class LogicalDatabaseApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/LogicalDatabaseRequest} opts.logicalDatabaseRequest 
      * @param {module:api/LogicalDatabaseApi~editLogicalDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LogicalDatabaseResponse}
+     * data is of type: {@link module:model/LogicalDatabase}
      */
     editLogicalDatabase(logicalDatabaseId, opts, callback) {
       opts = opts || {};
@@ -164,7 +164,7 @@ export default class LogicalDatabaseApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = LogicalDatabaseResponse;
+      let returnType = LogicalDatabase;
       return this.apiClient.callApi(
         '/logicalDatabase/{logicalDatabaseId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -176,7 +176,7 @@ export default class LogicalDatabaseApi {
      * Callback function to receive the result of the editLogicalDatabaseCredentials operation.
      * @callback module:api/LogicalDatabaseApi~editLogicalDatabaseCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CredentialsResponse} data The data returned by the service call.
+     * @param {module:model/Credentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -186,7 +186,7 @@ export default class LogicalDatabaseApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/CredentialsRequest} opts.credentialsRequest 
      * @param {module:api/LogicalDatabaseApi~editLogicalDatabaseCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CredentialsResponse}
+     * data is of type: {@link module:model/Credentials}
      */
     editLogicalDatabaseCredentials(logicalDatabaseId, opts, callback) {
       opts = opts || {};
@@ -209,7 +209,7 @@ export default class LogicalDatabaseApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CredentialsResponse;
+      let returnType = Credentials;
       return this.apiClient.callApi(
         '/logicalDatabase/{logicalDatabaseId}/credentials', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -221,7 +221,7 @@ export default class LogicalDatabaseApi {
      * Callback function to receive the result of the getLogicalDatabase operation.
      * @callback module:api/LogicalDatabaseApi~getLogicalDatabaseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LogicalDatabaseResponse} data The data returned by the service call.
+     * @param {module:model/LogicalDatabase} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -230,7 +230,7 @@ export default class LogicalDatabaseApi {
      * A logical database exists inside a database. The database is a service that exists within an environment, that you can deploy, and that has allocated resources. A database can have several logical databases
      * @param {String} logicalDatabaseId Logical Database ID
      * @param {module:api/LogicalDatabaseApi~getLogicalDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LogicalDatabaseResponse}
+     * data is of type: {@link module:model/LogicalDatabase}
      */
     getLogicalDatabase(logicalDatabaseId, callback) {
       let postBody = null;
@@ -252,7 +252,7 @@ export default class LogicalDatabaseApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = LogicalDatabaseResponse;
+      let returnType = LogicalDatabase;
       return this.apiClient.callApi(
         '/logicalDatabase/{logicalDatabaseId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -264,7 +264,7 @@ export default class LogicalDatabaseApi {
      * Callback function to receive the result of the getLogicalDatabaseCredentials operation.
      * @callback module:api/LogicalDatabaseApi~getLogicalDatabaseCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CredentialsResponse} data The data returned by the service call.
+     * @param {module:model/Credentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -272,7 +272,7 @@ export default class LogicalDatabaseApi {
      * Get  credentials of the logical database
      * @param {String} logicalDatabaseId Logical Database ID
      * @param {module:api/LogicalDatabaseApi~getLogicalDatabaseCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CredentialsResponse}
+     * data is of type: {@link module:model/Credentials}
      */
     getLogicalDatabaseCredentials(logicalDatabaseId, callback) {
       let postBody = null;
@@ -294,7 +294,7 @@ export default class LogicalDatabaseApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = CredentialsResponse;
+      let returnType = Credentials;
       return this.apiClient.callApi(
         '/logicalDatabase/{logicalDatabaseId}/credentials', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

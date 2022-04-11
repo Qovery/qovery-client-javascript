@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**storage** | [**[ApplicationStorageResponseStorage]**](ApplicationStorageResponseStorage.md) |  | [optional] 
-**ports** | [**[ApplicationPortResponsePorts]**](ApplicationPortResponsePorts.md) |  | [optional] 
+**storage** | [**[ApplicationStorageStorage]**](ApplicationStorageStorage.md) |  | [optional] 
+**ports** | [**[ApplicationPortPorts]**](ApplicationPortPorts.md) |  | [optional] 
 **name** | **String** | name is case insensitive | [optional] 
 **description** | **String** | give a description to this application | [optional] 
 **gitRepository** | [**ApplicationGitRepositoryRequest**](ApplicationGitRepositoryRequest.md) |  | [optional] 

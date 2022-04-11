@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import MetricMemoryDatapointResponse from './MetricMemoryDatapointResponse';
+import MetricMemoryDatapoint from './MetricMemoryDatapoint';
 
 /**
  * The MetricMemoryDatapointResponseList model module.
@@ -49,7 +49,7 @@ class MetricMemoryDatapointResponseList {
             obj = obj || new MetricMemoryDatapointResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [MetricMemoryDatapointResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [MetricMemoryDatapoint]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class MetricMemoryDatapointResponseList {
 }
 
 /**
- * @member {Array.<module:model/MetricMemoryDatapointResponse>} results
+ * @member {Array.<module:model/MetricMemoryDatapoint>} results
  */
 MetricMemoryDatapointResponseList.prototype['results'] = undefined;
 

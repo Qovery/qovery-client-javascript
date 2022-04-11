@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## createOrganizationApiToken
 
-> OrganizationApiTokenCreateResponse createOrganizationApiToken(organizationId, opts)
+> OrganizationApiTokenCreate createOrganizationApiToken(organizationId, opts)
 
 Create an organization api token
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrganizationApiTokenCreateResponse**](OrganizationApiTokenCreateResponse.md)
+[**OrganizationApiTokenCreate**](OrganizationApiTokenCreate.md)
 
 ### Authorization
 

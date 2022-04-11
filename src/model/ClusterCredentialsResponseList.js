@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterCredentialsResponse from './ClusterCredentialsResponse';
+import ClusterCredentials from './ClusterCredentials';
 
 /**
  * The ClusterCredentialsResponseList model module.
@@ -49,7 +49,7 @@ class ClusterCredentialsResponseList {
             obj = obj || new ClusterCredentialsResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ClusterCredentialsResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ClusterCredentials]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ClusterCredentialsResponseList {
 }
 
 /**
- * @member {Array.<module:model/ClusterCredentialsResponse>} results
+ * @member {Array.<module:model/ClusterCredentials>} results
  */
 ClusterCredentialsResponseList.prototype['results'] = undefined;
 

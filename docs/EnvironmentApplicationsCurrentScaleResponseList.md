@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[EnvironmentApplicationsCurrentScaleResponse]**](EnvironmentApplicationsCurrentScaleResponse.md) |  | [optional] 
+**results** | [**[EnvironmentApplicationsCurrentScale]**](EnvironmentApplicationsCurrentScale.md) |  | [optional] 
 
 

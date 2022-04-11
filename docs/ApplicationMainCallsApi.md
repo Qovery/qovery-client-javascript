@@ -168,7 +168,7 @@ null (empty response body)
 
 ## editApplication
 
-> ApplicationResponse editApplication(applicationId, opts)
+> Application editApplication(applicationId, opts)
 
 Edit application
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationResponse**](ApplicationResponse.md)
+[**Application**](Application.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ## getApplication
 
-> ApplicationResponse getApplication(applicationId)
+> Application getApplication(applicationId)
 
 Get application by ID
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationResponse**](ApplicationResponse.md)
+[**Application**](Application.md)
 
 ### Authorization
 

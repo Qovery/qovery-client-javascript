@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import CommunityUsageResponse from './CommunityUsageResponse';
+import ProjectCurrentCost from './ProjectCurrentCost';
+import ProjectCurrentCostResponseList from './ProjectCurrentCostResponseList';
 
 /**
  * The CommunityUsage model module.
@@ -23,9 +24,10 @@ class CommunityUsage {
     /**
      * Constructs a new <code>CommunityUsage</code>.
      * @alias module:model/CommunityUsage
+     * @implements module:model/ProjectCurrentCostResponseList
      */
     constructor() { 
-        
+        ProjectCurrentCostResponseList.initialize(this);
         CommunityUsage.initialize(this);
     }
 
@@ -47,9 +49,10 @@ class CommunityUsage {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CommunityUsage();
+            ProjectCurrentCostResponseList.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('community_usage')) {
-                obj['community_usage'] = CommunityUsageResponse.constructFromObject(data['community_usage']);
+            if (data.hasOwnProperty('projects')) {
+                obj['projects'] = ApiClient.convertToType(data['projects'], [ProjectCurrentCost]);
             }
         }
         return obj;
@@ -59,11 +62,16 @@ class CommunityUsage {
 }
 
 /**
- * @member {module:model/CommunityUsageResponse} community_usage
+ * @member {Array.<module:model/ProjectCurrentCost>} projects
  */
-CommunityUsage.prototype['community_usage'] = undefined;
+CommunityUsage.prototype['projects'] = undefined;
 
 
+// Implement ProjectCurrentCostResponseList interface:
+/**
+ * @member {Array.<module:model/ProjectCurrentCost>} projects
+ */
+ProjectCurrentCostResponseList.prototype['projects'] = undefined;
 
 
 

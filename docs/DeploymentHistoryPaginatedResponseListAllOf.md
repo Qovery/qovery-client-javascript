@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[DeploymentHistoryResponse]**](DeploymentHistoryResponse.md) |  | [optional] 
+**results** | [**[DeploymentHistory]**](DeploymentHistory.md) |  | [optional] 
 
 

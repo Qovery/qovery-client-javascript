@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[EnvironmentApplicationsStorageResponse]**](EnvironmentApplicationsStorageResponse.md) |  | [optional] 
+**results** | [**[EnvironmentApplicationsStorage]**](EnvironmentApplicationsStorage.md) |  | [optional] 
 
 

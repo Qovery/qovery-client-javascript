@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**communityUsage** | [**CommunityUsageResponse**](CommunityUsageResponse.md) |  | [optional] 
+**projects** | [**[ProjectCurrentCost]**](ProjectCurrentCost.md) |  | [optional] 
 
 

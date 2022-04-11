@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 
 **pageSize** | **Number** |  | 
-**results** | [**[EventResponse]**](EventResponse.md) |  | [optional] 
+**results** | [**[Event]**](Event.md) |  | [optional] 
 
 

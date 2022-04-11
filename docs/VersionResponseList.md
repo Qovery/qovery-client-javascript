@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[VersionResponse]**](VersionResponse.md) |  | [optional] 
+**results** | [**[Version]**](Version.md) |  | [optional] 
 
 

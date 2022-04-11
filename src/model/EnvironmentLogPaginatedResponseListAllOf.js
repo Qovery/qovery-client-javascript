@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentLogResponse from './EnvironmentLogResponse';
+import EnvironmentLog from './EnvironmentLog';
 
 /**
  * The EnvironmentLogPaginatedResponseListAllOf model module.
@@ -49,7 +49,7 @@ class EnvironmentLogPaginatedResponseListAllOf {
             obj = obj || new EnvironmentLogPaginatedResponseListAllOf();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentLogResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentLog]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentLogPaginatedResponseListAllOf {
 }
 
 /**
- * @member {Array.<module:model/EnvironmentLogResponse>} results
+ * @member {Array.<module:model/EnvironmentLog>} results
  */
 EnvironmentLogPaginatedResponseListAllOf.prototype['results'] = undefined;
 

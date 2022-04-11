@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(QoveryApi.CommunityUsage);
     });
 
-    it('should have the property communityUsage (base name: "community_usage")', function() {
-      // uncomment below and update the code to test the property communityUsage
+    it('should have the property projects (base name: "projects")', function() {
+      // uncomment below and update the code to test the property projects
       //var instance = new QoveryApi.CommunityUsage();
       //expect(instance).to.be();
     });

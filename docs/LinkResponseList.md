@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[LinkResponse]**](LinkResponse.md) |  | [optional] 
+**results** | [**[Link]**](Link.md) |  | [optional] 
 
 

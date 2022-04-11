@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createEnvironmentEnvironmentVariable
 
-> EnvironmentVariableResponse createEnvironmentEnvironmentVariable(environmentId, opts)
+> EnvironmentVariable createEnvironmentEnvironmentVariable(environmentId, opts)
 
 Add an environment variable to the environment
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## createEnvironmentEnvironmentVariableAlias
 
-> EnvironmentVariableResponse createEnvironmentEnvironmentVariableAlias(environmentId, environmentVariableId, opts)
+> EnvironmentVariable createEnvironmentEnvironmentVariableAlias(environmentId, environmentVariableId, opts)
 
 Create an environment variable alias at the environment level
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## createEnvironmentEnvironmentVariableOverride
 
-> EnvironmentVariableResponse createEnvironmentEnvironmentVariableOverride(environmentId, environmentVariableId, opts)
+> EnvironmentVariable createEnvironmentEnvironmentVariableOverride(environmentId, environmentVariableId, opts)
 
 Create an environment variable override at the environment level
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ null (empty response body)
 
 ## editEnvironmentEnvironmentVariable
 
-> EnvironmentVariableResponse editEnvironmentEnvironmentVariable(environmentId, environmentVariableId, environmentVariableEditRequest)
+> EnvironmentVariable editEnvironmentEnvironmentVariable(environmentId, environmentVariableId, environmentVariableEditRequest)
 
 Edit an environment variable belonging to the environment
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 

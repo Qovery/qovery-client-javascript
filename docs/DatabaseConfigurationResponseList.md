@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[DatabaseConfigurationResponse]**](DatabaseConfigurationResponse.md) |  | [optional] 
+**results** | [**[DatabaseConfiguration]**](DatabaseConfiguration.md) |  | [optional] 
 
 

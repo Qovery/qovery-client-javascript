@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DatabaseResponse from './DatabaseResponse';
+import Database from './Database';
 
 /**
  * The DatabaseResponseList model module.
@@ -49,7 +49,7 @@ class DatabaseResponseList {
             obj = obj || new DatabaseResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DatabaseResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Database]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class DatabaseResponseList {
 }
 
 /**
- * @member {Array.<module:model/DatabaseResponse>} results
+ * @member {Array.<module:model/Database>} results
  */
 DatabaseResponseList.prototype['results'] = undefined;
 

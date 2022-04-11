@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import MetricCPUResponse from './MetricCPUResponse';
+import MetricCPU from './MetricCPU';
 
 /**
  * The MetricCPUResponseList model module.
@@ -49,7 +49,7 @@ class MetricCPUResponseList {
             obj = obj || new MetricCPUResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [MetricCPUResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [MetricCPU]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class MetricCPUResponseList {
 }
 
 /**
- * @member {Array.<module:model/MetricCPUResponse>} results
+ * @member {Array.<module:model/MetricCPU>} results
  */
 MetricCPUResponseList.prototype['results'] = undefined;
 

@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import AccountInfoResponse from '../model/AccountInfoResponse';
+import AccountInfo from '../model/AccountInfo';
 
 /**
 * AccountInfo service.
@@ -38,14 +38,14 @@ export default class AccountInfoApi {
      * Callback function to receive the result of the getAccountInformation operation.
      * @callback module:api/AccountInfoApi~getAccountInformationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AccountInfoResponse} data The data returned by the service call.
+     * @param {module:model/AccountInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get Account information
      * @param {module:api/AccountInfoApi~getAccountInformationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AccountInfoResponse}
+     * data is of type: {@link module:model/AccountInfo}
      */
     getAccountInformation(callback) {
       let postBody = null;
@@ -62,7 +62,7 @@ export default class AccountInfoApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = AccountInfoResponse;
+      let returnType = AccountInfo;
       return this.apiClient.callApi(
         '/account', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

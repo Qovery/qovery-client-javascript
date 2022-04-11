@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ProjectStatsResponse from './ProjectStatsResponse';
+import ProjectStats from './ProjectStats';
 
 /**
  * The ProjectStatsResponseList model module.
@@ -49,7 +49,7 @@ class ProjectStatsResponseList {
             obj = obj || new ProjectStatsResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ProjectStatsResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ProjectStats]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ProjectStatsResponseList {
 }
 
 /**
- * @member {Array.<module:model/ProjectStatsResponse>} results
+ * @member {Array.<module:model/ProjectStats>} results
  */
 ProjectStatsResponseList.prototype['results'] = undefined;
 

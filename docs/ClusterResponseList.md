@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ClusterResponse]**](ClusterResponse.md) |  | [optional] 
+**results** | [**[Cluster]**](Cluster.md) |  | [optional] 
 
 

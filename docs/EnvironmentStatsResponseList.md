@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[EnvironmentStatsResponse]**](EnvironmentStatsResponse.md) |  | [optional] 
+**results** | [**[EnvironmentStats]**](EnvironmentStats.md) |  | [optional] 
 
 

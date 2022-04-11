@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import LinkResponse from './LinkResponse';
+import Link from './Link';
 
 /**
  * The LinkResponseList model module.
@@ -49,7 +49,7 @@ class LinkResponseList {
             obj = obj || new LinkResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [LinkResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Link]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class LinkResponseList {
 }
 
 /**
- * @member {Array.<module:model/LinkResponse>} results
+ * @member {Array.<module:model/Link>} results
  */
 LinkResponseList.prototype['results'] = undefined;
 

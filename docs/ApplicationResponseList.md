@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ApplicationResponse]**](ApplicationResponse.md) |  | [optional] 
+**results** | [**[Application]**](Application.md) |  | [optional] 
 
 

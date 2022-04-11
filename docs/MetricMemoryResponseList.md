@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[MetricMemoryResponse]**](MetricMemoryResponse.md) |  | [optional] 
+**results** | [**[MetricMemory]**](MetricMemory.md) |  | [optional] 
 
 

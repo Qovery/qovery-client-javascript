@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import DeploymentHistory from './DeploymentHistory';
 import DeploymentHistoryPaginatedResponseListAllOf from './DeploymentHistoryPaginatedResponseListAllOf';
-import DeploymentHistoryResponse from './DeploymentHistoryResponse';
-import PaginationDataResponse from './PaginationDataResponse';
+import PaginationData from './PaginationData';
 
 /**
  * The DeploymentHistoryPaginatedResponseList model module.
@@ -25,13 +25,13 @@ class DeploymentHistoryPaginatedResponseList {
     /**
      * Constructs a new <code>DeploymentHistoryPaginatedResponseList</code>.
      * @alias module:model/DeploymentHistoryPaginatedResponseList
-     * @implements module:model/PaginationDataResponse
+     * @implements module:model/PaginationData
      * @implements module:model/DeploymentHistoryPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);DeploymentHistoryPaginatedResponseListAllOf.initialize(this);
+        PaginationData.initialize(this, page, pageSize);DeploymentHistoryPaginatedResponseListAllOf.initialize(this);
         DeploymentHistoryPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -55,7 +55,7 @@ class DeploymentHistoryPaginatedResponseList {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new DeploymentHistoryPaginatedResponseList();
-            PaginationDataResponse.constructFromObject(data, obj);
+            PaginationData.constructFromObject(data, obj);
             DeploymentHistoryPaginatedResponseListAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
@@ -65,7 +65,7 @@ class DeploymentHistoryPaginatedResponseList {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistory]);
             }
         }
         return obj;
@@ -85,23 +85,23 @@ DeploymentHistoryPaginatedResponseList.prototype['page'] = undefined;
 DeploymentHistoryPaginatedResponseList.prototype['page_size'] = undefined;
 
 /**
- * @member {Array.<module:model/DeploymentHistoryResponse>} results
+ * @member {Array.<module:model/DeploymentHistory>} results
  */
 DeploymentHistoryPaginatedResponseList.prototype['results'] = undefined;
 
 
-// Implement PaginationDataResponse interface:
+// Implement PaginationData interface:
 /**
  * @member {Number} page
  */
-PaginationDataResponse.prototype['page'] = undefined;
+PaginationData.prototype['page'] = undefined;
 /**
  * @member {Number} page_size
  */
-PaginationDataResponse.prototype['page_size'] = undefined;
+PaginationData.prototype['page_size'] = undefined;
 // Implement DeploymentHistoryPaginatedResponseListAllOf interface:
 /**
- * @member {Array.<module:model/DeploymentHistoryResponse>} results
+ * @member {Array.<module:model/DeploymentHistory>} results
  */
 DeploymentHistoryPaginatedResponseListAllOf.prototype['results'] = undefined;
 

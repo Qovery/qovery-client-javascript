@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createProjectEnvironmentVariable
 
-> EnvironmentVariableResponse createProjectEnvironmentVariable(projectId, opts)
+> EnvironmentVariable createProjectEnvironmentVariable(projectId, opts)
 
 Add an environment variable to the project
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## createProjectEnvironmentVariableAlias
 
-> EnvironmentVariableResponse createProjectEnvironmentVariableAlias(projectId, environmentVariableId, opts)
+> EnvironmentVariable createProjectEnvironmentVariableAlias(projectId, environmentVariableId, opts)
 
 Create an environment variable alias at the project level
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## createProjectEnvironmentVariableOverride
 
-> EnvironmentVariableResponse createProjectEnvironmentVariableOverride(projectId, environmentVariableId, opts)
+> EnvironmentVariable createProjectEnvironmentVariableOverride(projectId, environmentVariableId, opts)
 
 Create an environment variable override at the project level
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ null (empty response body)
 
 ## editProjectEnvironmentVariable
 
-> EnvironmentVariableResponse editProjectEnvironmentVariable(projectId, environmentVariableId, environmentVariableEditRequest)
+> EnvironmentVariable editProjectEnvironmentVariable(projectId, environmentVariableId, environmentVariableEditRequest)
 
 Edit an environment variable belonging to the project
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 

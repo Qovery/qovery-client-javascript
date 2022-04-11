@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 
 **pageSize** | **Number** |  | 
-**results** | [**[EnvironmentLogResponse]**](EnvironmentLogResponse.md) |  | [optional] 
+**results** | [**[EnvironmentLog]**](EnvironmentLog.md) |  | [optional] 
 
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import OrganizationResponse from './OrganizationResponse';
+import Organization from './Organization';
 
 /**
  * The OrganizationResponseList model module.
@@ -49,7 +49,7 @@ class OrganizationResponseList {
             obj = obj || new OrganizationResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [OrganizationResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Organization]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class OrganizationResponseList {
 }
 
 /**
- * @member {Array.<module:model/OrganizationResponse>} results
+ * @member {Array.<module:model/Organization>} results
  */
 OrganizationResponseList.prototype['results'] = undefined;
 

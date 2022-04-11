@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ServiceResponse]**](ServiceResponse.md) |  | [optional] 
+**results** | [**[Service]**](Service.md) |  | [optional] 
 
 

@@ -13,15 +13,15 @@
 
 
 import ApiClient from "../ApiClient";
+import Cluster from '../model/Cluster';
+import ClusterCloudProviderInfo from '../model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoRequest from '../model/ClusterCloudProviderInfoRequest';
-import ClusterCloudProviderInfoResponse from '../model/ClusterCloudProviderInfoResponse';
 import ClusterReadinessStatus from '../model/ClusterReadinessStatus';
 import ClusterRequest from '../model/ClusterRequest';
-import ClusterResponse from '../model/ClusterResponse';
 import ClusterResponseList from '../model/ClusterResponseList';
+import ClusterRoutingTable from '../model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from '../model/ClusterRoutingTableRequest';
-import ClusterRoutingTableResponse from '../model/ClusterRoutingTableResponse';
-import ClusterStatusResponse from '../model/ClusterStatusResponse';
+import ClusterStatus from '../model/ClusterStatus';
 import ClusterStatusResponseList from '../model/ClusterStatusResponseList';
 
 /**
@@ -47,7 +47,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the createCluster operation.
      * @callback module:api/ClustersApi~createClusterCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterResponse} data The data returned by the service call.
+     * @param {module:model/Cluster} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -57,7 +57,7 @@ export default class ClustersApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ClusterRequest} opts.clusterRequest 
      * @param {module:api/ClustersApi~createClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterResponse}
+     * data is of type: {@link module:model/Cluster}
      */
     createCluster(organizationId, opts, callback) {
       opts = opts || {};
@@ -80,7 +80,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterResponse;
+      let returnType = Cluster;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -139,7 +139,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the deployCluster operation.
      * @callback module:api/ClustersApi~deployClusterCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterStatusResponse} data The data returned by the service call.
+     * @param {module:model/ClusterStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -149,7 +149,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~deployClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterStatusResponse}
+     * data is of type: {@link module:model/ClusterStatus}
      */
     deployCluster(organizationId, clusterId, callback) {
       let postBody = null;
@@ -176,7 +176,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ClusterStatusResponse;
+      let returnType = ClusterStatus;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/deploy', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -188,7 +188,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the editCluster operation.
      * @callback module:api/ClustersApi~editClusterCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterResponse} data The data returned by the service call.
+     * @param {module:model/Cluster} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -199,7 +199,7 @@ export default class ClustersApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ClusterRequest} opts.clusterRequest 
      * @param {module:api/ClustersApi~editClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterResponse}
+     * data is of type: {@link module:model/Cluster}
      */
     editCluster(organizationId, clusterId, opts, callback) {
       opts = opts || {};
@@ -227,7 +227,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterResponse;
+      let returnType = Cluster;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -239,7 +239,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the editRoutingTable operation.
      * @callback module:api/ClustersApi~editRoutingTableCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterRoutingTableResponse} data The data returned by the service call.
+     * @param {module:model/ClusterRoutingTable} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -251,7 +251,7 @@ export default class ClustersApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ClusterRoutingTableRequest} opts.clusterRoutingTableRequest 
      * @param {module:api/ClustersApi~editRoutingTableCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterRoutingTableResponse}
+     * data is of type: {@link module:model/ClusterRoutingTable}
      */
     editRoutingTable(organizationId, clusterId, opts, callback) {
       opts = opts || {};
@@ -279,7 +279,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterRoutingTableResponse;
+      let returnType = ClusterRoutingTable;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/routingTable', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -339,7 +339,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the getClusterStatus operation.
      * @callback module:api/ClustersApi~getClusterStatusCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterStatusResponse} data The data returned by the service call.
+     * @param {module:model/ClusterStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -348,7 +348,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~getClusterStatusCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterStatusResponse}
+     * data is of type: {@link module:model/ClusterStatus}
      */
     getClusterStatus(organizationId, clusterId, callback) {
       let postBody = null;
@@ -375,7 +375,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ClusterStatusResponse;
+      let returnType = ClusterStatus;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -387,7 +387,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the getOrganizationCloudProviderInfo operation.
      * @callback module:api/ClustersApi~getOrganizationCloudProviderInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCloudProviderInfoResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCloudProviderInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -396,7 +396,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~getOrganizationCloudProviderInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCloudProviderInfoResponse}
+     * data is of type: {@link module:model/ClusterCloudProviderInfo}
      */
     getOrganizationCloudProviderInfo(organizationId, clusterId, callback) {
       let postBody = null;
@@ -423,7 +423,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ClusterCloudProviderInfoResponse;
+      let returnType = ClusterCloudProviderInfo;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -478,7 +478,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the getRoutingTable operation.
      * @callback module:api/ClustersApi~getRoutingTableCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterRoutingTableResponse} data The data returned by the service call.
+     * @param {module:model/ClusterRoutingTable} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -488,7 +488,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~getRoutingTableCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterRoutingTableResponse}
+     * data is of type: {@link module:model/ClusterRoutingTable}
      */
     getRoutingTable(organizationId, clusterId, callback) {
       let postBody = null;
@@ -515,7 +515,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ClusterRoutingTableResponse;
+      let returnType = ClusterRoutingTable;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/routingTable', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -569,7 +569,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the specifyClusterCloudProviderInfo operation.
      * @callback module:api/ClustersApi~specifyClusterCloudProviderInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCloudProviderInfoResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCloudProviderInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -580,7 +580,7 @@ export default class ClustersApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ClusterCloudProviderInfoRequest} opts.clusterCloudProviderInfoRequest 
      * @param {module:api/ClustersApi~specifyClusterCloudProviderInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCloudProviderInfoResponse}
+     * data is of type: {@link module:model/ClusterCloudProviderInfo}
      */
     specifyClusterCloudProviderInfo(organizationId, clusterId, opts, callback) {
       opts = opts || {};
@@ -608,7 +608,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterCloudProviderInfoResponse;
+      let returnType = ClusterCloudProviderInfo;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -620,7 +620,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the stopCluster operation.
      * @callback module:api/ClustersApi~stopClusterCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterStatusResponse} data The data returned by the service call.
+     * @param {module:model/ClusterStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -630,7 +630,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~stopClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterStatusResponse}
+     * data is of type: {@link module:model/ClusterStatus}
      */
     stopCluster(organizationId, clusterId, callback) {
       let postBody = null;
@@ -657,7 +657,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ClusterStatusResponse;
+      let returnType = ClusterStatus;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/stop', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -669,7 +669,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the updateCluster operation.
      * @callback module:api/ClustersApi~updateClusterCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterStatusResponse} data The data returned by the service call.
+     * @param {module:model/ClusterStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -679,7 +679,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~updateClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterStatusResponse}
+     * data is of type: {@link module:model/ClusterStatus}
      */
     updateCluster(organizationId, clusterId, callback) {
       let postBody = null;
@@ -706,7 +706,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ClusterStatusResponse;
+      let returnType = ClusterStatus;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/update', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import OrganizationApiTokenResponse from './OrganizationApiTokenResponse';
+import OrganizationApiToken from './OrganizationApiToken';
 
 /**
  * The OrganizationApiTokenResponseList model module.
@@ -49,7 +49,7 @@ class OrganizationApiTokenResponseList {
             obj = obj || new OrganizationApiTokenResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [OrganizationApiTokenResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [OrganizationApiToken]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class OrganizationApiTokenResponseList {
 }
 
 /**
- * @member {Array.<module:model/OrganizationApiTokenResponse>} results
+ * @member {Array.<module:model/OrganizationApiToken>} results
  */
 OrganizationApiTokenResponseList.prototype['results'] = undefined;
 

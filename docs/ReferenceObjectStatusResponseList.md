@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ReferenceObjectStatusResponse]**](ReferenceObjectStatusResponse.md) |  | [optional] 
+**results** | [**[ReferenceObjectStatus]**](ReferenceObjectStatus.md) |  | [optional] 
 
 

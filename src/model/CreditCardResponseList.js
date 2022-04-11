@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import CreditCardResponse from './CreditCardResponse';
+import CreditCard from './CreditCard';
 
 /**
  * The CreditCardResponseList model module.
@@ -49,7 +49,7 @@ class CreditCardResponseList {
             obj = obj || new CreditCardResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [CreditCardResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [CreditCard]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class CreditCardResponseList {
 }
 
 /**
- * @member {Array.<module:model/CreditCardResponse>} results
+ * @member {Array.<module:model/CreditCard>} results
  */
 CreditCardResponseList.prototype['results'] = undefined;
 

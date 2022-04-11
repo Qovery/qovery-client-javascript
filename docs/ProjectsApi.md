@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## createProject
 
-> ProjectResponse createProject(organizationId, opts)
+> Project createProject(organizationId, opts)
 
 Create a project
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectResponse**](ProjectResponse.md)
+[**Project**](Project.md)
 
 ### Authorization
 

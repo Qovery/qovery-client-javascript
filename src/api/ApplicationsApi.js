@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Application from '../model/Application';
 import ApplicationRequest from '../model/ApplicationRequest';
-import ApplicationResponse from '../model/ApplicationResponse';
 import ApplicationResponseList from '../model/ApplicationResponseList';
 import EnvironmentApplicationsCurrentScaleResponseList from '../model/EnvironmentApplicationsCurrentScaleResponseList';
 import EnvironmentApplicationsInstanceResponseList from '../model/EnvironmentApplicationsInstanceResponseList';
@@ -47,7 +47,7 @@ export default class ApplicationsApi {
      * Callback function to receive the result of the createApplication operation.
      * @callback module:api/ApplicationsApi~createApplicationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationResponse} data The data returned by the service call.
+     * @param {module:model/Application} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -57,7 +57,7 @@ export default class ApplicationsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ApplicationRequest} opts.applicationRequest 
      * @param {module:api/ApplicationsApi~createApplicationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationResponse}
+     * data is of type: {@link module:model/Application}
      */
     createApplication(environmentId, opts, callback) {
       opts = opts || {};
@@ -80,7 +80,7 @@ export default class ApplicationsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ApplicationResponse;
+      let returnType = Application;
       return this.apiClient.callApi(
         '/environment/{environmentId}/application', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

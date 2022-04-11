@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## addBackupDatabase
 
-> BackupResponse addBackupDatabase(databaseId, opts)
+> Backup addBackupDatabase(databaseId, opts)
 
 Add a backup to the Database 
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BackupResponse**](BackupResponse.md)
+[**Backup**](Backup.md)
 
 ### Authorization
 

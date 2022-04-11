@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[LogicalDatabaseResponse]**](LogicalDatabaseResponse.md) |  | [optional] 
+**results** | [**[LogicalDatabase]**](LogicalDatabase.md) |  | [optional] 
 
 

@@ -12,10 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
-import CloudProviderEnum from './CloudProviderEnum';
-import Cluster from './Cluster';
 import ClusterFeatureRequest from './ClusterFeatureRequest';
 import ClusterFeatureRequestFeatures from './ClusterFeatureRequestFeatures';
+import Model1 from './Model1';
 
 /**
  * The ClusterRequest model module.
@@ -26,15 +25,12 @@ class ClusterRequest {
     /**
      * Constructs a new <code>ClusterRequest</code>.
      * @alias module:model/ClusterRequest
-     * @implements module:model/Cluster
+     * @implements module:model/Model1
      * @implements module:model/ClusterFeatureRequest
-     * @param name {String} name is case-insensitive
-     * @param cloudProvider {module:model/CloudProviderEnum} 
-     * @param region {String} 
      */
-    constructor(name, cloudProvider, region) { 
-        Cluster.initialize(this, name, cloudProvider, region);ClusterFeatureRequest.initialize(this);
-        ClusterRequest.initialize(this, name, cloudProvider, region);
+    constructor() { 
+        ClusterFeatureRequest.initialize(this);
+        ClusterRequest.initialize(this);
     }
 
     /**
@@ -42,10 +38,7 @@ class ClusterRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, cloudProvider, region) { 
-        obj['name'] = name;
-        obj['cloud_provider'] = cloudProvider;
-        obj['region'] = region;
+    static initialize(obj) { 
     }
 
     /**
@@ -58,36 +51,9 @@ class ClusterRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ClusterRequest();
-            Cluster.constructFromObject(data, obj);
+            Model1.constructFromObject(data, obj);
             ClusterFeatureRequest.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('cloud_provider')) {
-                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
-            }
-            if (data.hasOwnProperty('region')) {
-                obj['region'] = ApiClient.convertToType(data['region'], 'String');
-            }
-            if (data.hasOwnProperty('auto_update')) {
-                obj['auto_update'] = ApiClient.convertToType(data['auto_update'], 'Boolean');
-            }
-            if (data.hasOwnProperty('cpu')) {
-                obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
-            }
-            if (data.hasOwnProperty('memory')) {
-                obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
-            }
-            if (data.hasOwnProperty('min_running_nodes')) {
-                obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
-            }
-            if (data.hasOwnProperty('max_running_nodes')) {
-                obj['max_running_nodes'] = ApiClient.convertToType(data['max_running_nodes'], 'Number');
-            }
             if (data.hasOwnProperty('features')) {
                 obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeatures]);
             }
@@ -99,107 +65,11 @@ class ClusterRequest {
 }
 
 /**
- * name is case-insensitive
- * @member {String} name
- */
-ClusterRequest.prototype['name'] = undefined;
-
-/**
- * @member {String} description
- */
-ClusterRequest.prototype['description'] = undefined;
-
-/**
- * @member {module:model/CloudProviderEnum} cloud_provider
- */
-ClusterRequest.prototype['cloud_provider'] = undefined;
-
-/**
- * @member {String} region
- */
-ClusterRequest.prototype['region'] = undefined;
-
-/**
- * @member {Boolean} auto_update
- */
-ClusterRequest.prototype['auto_update'] = undefined;
-
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 250
- */
-ClusterRequest.prototype['cpu'] = 250;
-
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 256
- */
-ClusterRequest.prototype['memory'] = 256;
-
-/**
- * @member {Number} min_running_nodes
- * @default 1
- */
-ClusterRequest.prototype['min_running_nodes'] = 1;
-
-/**
- * @member {Number} max_running_nodes
- * @default 1
- */
-ClusterRequest.prototype['max_running_nodes'] = 1;
-
-/**
  * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features
  */
 ClusterRequest.prototype['features'] = undefined;
 
 
-// Implement Cluster interface:
-/**
- * name is case-insensitive
- * @member {String} name
- */
-Cluster.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-Cluster.prototype['description'] = undefined;
-/**
- * @member {module:model/CloudProviderEnum} cloud_provider
- */
-Cluster.prototype['cloud_provider'] = undefined;
-/**
- * @member {String} region
- */
-Cluster.prototype['region'] = undefined;
-/**
- * @member {Boolean} auto_update
- */
-Cluster.prototype['auto_update'] = undefined;
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 250
- */
-Cluster.prototype['cpu'] = 250;
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 256
- */
-Cluster.prototype['memory'] = 256;
-/**
- * @member {Number} min_running_nodes
- * @default 1
- */
-Cluster.prototype['min_running_nodes'] = 1;
-/**
- * @member {Number} max_running_nodes
- * @default 1
- */
-Cluster.prototype['max_running_nodes'] = 1;
 // Implement ClusterFeatureRequest interface:
 /**
  * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features

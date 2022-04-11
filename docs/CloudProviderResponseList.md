@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[CloudProviderResponse]**](CloudProviderResponse.md) |  | [optional] 
+**results** | [**[CloudProvider]**](CloudProvider.md) |  | [optional] 
 
 

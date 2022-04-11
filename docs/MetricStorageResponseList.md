@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[MetricStorageResponse]**](MetricStorageResponse.md) |  | [optional] 
+**results** | [**[MetricStorage]**](MetricStorage.md) |  | [optional] 
 
 

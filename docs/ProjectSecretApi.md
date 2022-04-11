@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createProjectSecret
 
-> SecretResponse createProjectSecret(projectId, opts)
+> Secret createProjectSecret(projectId, opts)
 
 Add a secret to the project
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## createProjectSecretAlias
 
-> SecretResponse createProjectSecretAlias(projectId, secretId, opts)
+> Secret createProjectSecretAlias(projectId, secretId, opts)
 
 Create a secret alias at the project level
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## createProjectSecretOverride
 
-> SecretResponse createProjectSecretOverride(projectId, secretId, opts)
+> Secret createProjectSecretOverride(projectId, secretId, opts)
 
 Create a secret override at the project level
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ null (empty response body)
 
 ## editProjectSecret
 
-> SecretResponse editProjectSecret(projectId, secretId, secretEditRequest)
+> Secret editProjectSecret(projectId, secretId, secretEditRequest)
 
 Edit a secret belonging to the project
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 

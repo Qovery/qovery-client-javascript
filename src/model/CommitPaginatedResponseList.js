@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import Commit from './Commit';
 import CommitPaginatedResponseListAllOf from './CommitPaginatedResponseListAllOf';
-import CommitResponse from './CommitResponse';
-import PaginationDataResponse from './PaginationDataResponse';
+import PaginationData from './PaginationData';
 
 /**
  * The CommitPaginatedResponseList model module.
@@ -26,12 +26,12 @@ class CommitPaginatedResponseList {
      * Constructs a new <code>CommitPaginatedResponseList</code>.
      * @alias module:model/CommitPaginatedResponseList
      * @implements module:model/CommitPaginatedResponseListAllOf
-     * @implements module:model/PaginationDataResponse
+     * @implements module:model/PaginationData
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        CommitPaginatedResponseListAllOf.initialize(this);PaginationDataResponse.initialize(this, page, pageSize);
+        CommitPaginatedResponseListAllOf.initialize(this);PaginationData.initialize(this, page, pageSize);
         CommitPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -56,10 +56,10 @@ class CommitPaginatedResponseList {
         if (data) {
             obj = obj || new CommitPaginatedResponseList();
             CommitPaginatedResponseListAllOf.constructFromObject(data, obj);
-            PaginationDataResponse.constructFromObject(data, obj);
+            PaginationData.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [CommitResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Commit]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -75,7 +75,7 @@ class CommitPaginatedResponseList {
 }
 
 /**
- * @member {Array.<module:model/CommitResponse>} results
+ * @member {Array.<module:model/Commit>} results
  */
 CommitPaginatedResponseList.prototype['results'] = undefined;
 
@@ -92,18 +92,18 @@ CommitPaginatedResponseList.prototype['page_size'] = undefined;
 
 // Implement CommitPaginatedResponseListAllOf interface:
 /**
- * @member {Array.<module:model/CommitResponse>} results
+ * @member {Array.<module:model/Commit>} results
  */
 CommitPaginatedResponseListAllOf.prototype['results'] = undefined;
-// Implement PaginationDataResponse interface:
+// Implement PaginationData interface:
 /**
  * @member {Number} page
  */
-PaginationDataResponse.prototype['page'] = undefined;
+PaginationData.prototype['page'] = undefined;
 /**
  * @member {Number} page_size
  */
-PaginationDataResponse.prototype['page_size'] = undefined;
+PaginationData.prototype['page_size'] = undefined;
 
 
 

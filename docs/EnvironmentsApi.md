@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createEnvironment
 
-> EnvironmentResponse createEnvironment(projectId, opts)
+> Environment createEnvironment(projectId, opts)
 
 Create an environment
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentResponse**](EnvironmentResponse.md)
+[**Environment**](Environment.md)
 
 ### Authorization
 

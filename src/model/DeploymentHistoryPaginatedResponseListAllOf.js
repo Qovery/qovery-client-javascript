@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DeploymentHistoryResponse from './DeploymentHistoryResponse';
+import DeploymentHistory from './DeploymentHistory';
 
 /**
  * The DeploymentHistoryPaginatedResponseListAllOf model module.
@@ -49,7 +49,7 @@ class DeploymentHistoryPaginatedResponseListAllOf {
             obj = obj || new DeploymentHistoryPaginatedResponseListAllOf();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistory]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class DeploymentHistoryPaginatedResponseListAllOf {
 }
 
 /**
- * @member {Array.<module:model/DeploymentHistoryResponse>} results
+ * @member {Array.<module:model/DeploymentHistory>} results
  */
 DeploymentHistoryPaginatedResponseListAllOf.prototype['results'] = undefined;
 

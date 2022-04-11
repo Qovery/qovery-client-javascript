@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **application** | **String** |  | 
-**instances** | [**[InstanceResponse]**](InstanceResponse.md) |  | 
+**instances** | [**[Instance]**](Instance.md) |  | 
 
 

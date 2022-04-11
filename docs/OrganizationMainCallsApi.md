@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createOrganization
 
-> OrganizationResponse createOrganization(opts)
+> Organization createOrganization(opts)
 
 Create an organization
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrganizationResponse**](OrganizationResponse.md)
+[**Organization**](Organization.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ null (empty response body)
 
 ## editOrganization
 
-> OrganizationResponse editOrganization(organizationId, opts)
+> Organization editOrganization(organizationId, opts)
 
 Edit an organization
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrganizationResponse**](OrganizationResponse.md)
+[**Organization**](Organization.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ## getOrganization
 
-> OrganizationResponse getOrganization(organizationId)
+> Organization getOrganization(organizationId)
 
 Get organization by ID
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrganizationResponse**](OrganizationResponse.md)
+[**Organization**](Organization.md)
 
 ### Authorization
 

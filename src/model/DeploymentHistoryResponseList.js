@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DeploymentHistoryResponse from './DeploymentHistoryResponse';
+import DeploymentHistory from './DeploymentHistory';
 
 /**
  * The DeploymentHistoryResponseList model module.
@@ -49,7 +49,7 @@ class DeploymentHistoryResponseList {
             obj = obj || new DeploymentHistoryResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistory]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class DeploymentHistoryResponseList {
 }
 
 /**
- * @member {Array.<module:model/DeploymentHistoryResponse>} results
+ * @member {Array.<module:model/DeploymentHistory>} results
  */
 DeploymentHistoryResponseList.prototype['results'] = undefined;
 

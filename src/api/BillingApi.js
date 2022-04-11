@@ -13,18 +13,18 @@
 
 
 import ApiClient from "../ApiClient";
+import BillingInfo from '../model/BillingInfo';
 import BillingInfoRequest from '../model/BillingInfoRequest';
-import BillingInfoResponse from '../model/BillingInfoResponse';
 import BillingStatus from '../model/BillingStatus';
-import CostRangeResponse from '../model/CostRangeResponse';
+import CostRange from '../model/CostRange';
+import CreditCard from '../model/CreditCard';
 import CreditCardRequest from '../model/CreditCardRequest';
-import CreditCardResponse from '../model/CreditCardResponse';
 import CreditCardResponseList from '../model/CreditCardResponseList';
-import InvoiceResponse from '../model/InvoiceResponse';
+import Invoice from '../model/Invoice';
 import InvoiceResponseList from '../model/InvoiceResponseList';
-import LinkResponse from '../model/LinkResponse';
+import Link from '../model/Link';
 import OrganizationCreditCodeRequest from '../model/OrganizationCreditCodeRequest';
-import OrganizationCurrentCostResponse from '../model/OrganizationCurrentCostResponse';
+import OrganizationCurrentCost from '../model/OrganizationCurrentCost';
 
 /**
 * Billing service.
@@ -49,7 +49,7 @@ export default class BillingApi {
      * Callback function to receive the result of the addCreditCard operation.
      * @callback module:api/BillingApi~addCreditCardCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CreditCardResponse} data The data returned by the service call.
+     * @param {module:model/CreditCard} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -59,7 +59,7 @@ export default class BillingApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/CreditCardRequest} opts.creditCardRequest 
      * @param {module:api/BillingApi~addCreditCardCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CreditCardResponse}
+     * data is of type: {@link module:model/CreditCard}
      */
     addCreditCard(organizationId, opts, callback) {
       opts = opts || {};
@@ -82,7 +82,7 @@ export default class BillingApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CreditCardResponse;
+      let returnType = CreditCard;
       return this.apiClient.callApi(
         '/organization/{organizationId}/creditCard', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -185,7 +185,7 @@ export default class BillingApi {
      * Callback function to receive the result of the editOrganizationBillingInfo operation.
      * @callback module:api/BillingApi~editOrganizationBillingInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BillingInfoResponse} data The data returned by the service call.
+     * @param {module:model/BillingInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -195,7 +195,7 @@ export default class BillingApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/BillingInfoRequest} opts.billingInfoRequest 
      * @param {module:api/BillingApi~editOrganizationBillingInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BillingInfoResponse}
+     * data is of type: {@link module:model/BillingInfo}
      */
     editOrganizationBillingInfo(organizationId, opts, callback) {
       opts = opts || {};
@@ -218,7 +218,7 @@ export default class BillingApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = BillingInfoResponse;
+      let returnType = BillingInfo;
       return this.apiClient.callApi(
         '/organization/{organizationId}/billingInfo', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -230,7 +230,7 @@ export default class BillingApi {
      * Callback function to receive the result of the getClusterCurrentCost operation.
      * @callback module:api/BillingApi~getClusterCurrentCostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CostRangeResponse} data The data returned by the service call.
+     * @param {module:model/CostRange} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -240,7 +240,7 @@ export default class BillingApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/BillingApi~getClusterCurrentCostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CostRangeResponse}
+     * data is of type: {@link module:model/CostRange}
      */
     getClusterCurrentCost(organizationId, clusterId, callback) {
       let postBody = null;
@@ -267,7 +267,7 @@ export default class BillingApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = CostRangeResponse;
+      let returnType = CostRange;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/currentCost', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -279,7 +279,7 @@ export default class BillingApi {
      * Callback function to receive the result of the getOrganizationBillingInfo operation.
      * @callback module:api/BillingApi~getOrganizationBillingInfoCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BillingInfoResponse} data The data returned by the service call.
+     * @param {module:model/BillingInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -287,7 +287,7 @@ export default class BillingApi {
      * Get organization billing info
      * @param {String} organizationId Organization ID
      * @param {module:api/BillingApi~getOrganizationBillingInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BillingInfoResponse}
+     * data is of type: {@link module:model/BillingInfo}
      */
     getOrganizationBillingInfo(organizationId, callback) {
       let postBody = null;
@@ -309,7 +309,7 @@ export default class BillingApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = BillingInfoResponse;
+      let returnType = BillingInfo;
       return this.apiClient.callApi(
         '/organization/{organizationId}/billingInfo', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -364,7 +364,7 @@ export default class BillingApi {
      * Callback function to receive the result of the getOrganizationCurrentCost operation.
      * @callback module:api/BillingApi~getOrganizationCurrentCostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/OrganizationCurrentCostResponse} data The data returned by the service call.
+     * @param {module:model/OrganizationCurrentCost} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -372,7 +372,7 @@ export default class BillingApi {
      * Get organization current cost
      * @param {String} organizationId Organization ID
      * @param {module:api/BillingApi~getOrganizationCurrentCostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/OrganizationCurrentCostResponse}
+     * data is of type: {@link module:model/OrganizationCurrentCost}
      */
     getOrganizationCurrentCost(organizationId, callback) {
       let postBody = null;
@@ -394,7 +394,7 @@ export default class BillingApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = OrganizationCurrentCostResponse;
+      let returnType = OrganizationCurrentCost;
       return this.apiClient.callApi(
         '/organization/{organizationId}/currentCost', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -406,7 +406,7 @@ export default class BillingApi {
      * Callback function to receive the result of the getOrganizationInvoice operation.
      * @callback module:api/BillingApi~getOrganizationInvoiceCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InvoiceResponse} data The data returned by the service call.
+     * @param {module:model/Invoice} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -415,7 +415,7 @@ export default class BillingApi {
      * @param {String} organizationId Organization ID
      * @param {String} invoiceId Invoice ID
      * @param {module:api/BillingApi~getOrganizationInvoiceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InvoiceResponse}
+     * data is of type: {@link module:model/Invoice}
      */
     getOrganizationInvoice(organizationId, invoiceId, callback) {
       let postBody = null;
@@ -442,7 +442,7 @@ export default class BillingApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InvoiceResponse;
+      let returnType = Invoice;
       return this.apiClient.callApi(
         '/organization/{organizationId}/invoice/{invoiceId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -454,7 +454,7 @@ export default class BillingApi {
      * Callback function to receive the result of the getOrganizationInvoicePDF operation.
      * @callback module:api/BillingApi~getOrganizationInvoicePDFCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LinkResponse} data The data returned by the service call.
+     * @param {module:model/Link} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -464,7 +464,7 @@ export default class BillingApi {
      * @param {String} organizationId Organization ID
      * @param {String} invoiceId Invoice ID
      * @param {module:api/BillingApi~getOrganizationInvoicePDFCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LinkResponse}
+     * data is of type: {@link module:model/Link}
      */
     getOrganizationInvoicePDF(organizationId, invoiceId, callback) {
       let postBody = null;
@@ -491,7 +491,7 @@ export default class BillingApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = LinkResponse;
+      let returnType = Link;
       return this.apiClient.callApi(
         '/organization/{organizationId}/invoice/{invoiceId}/download', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

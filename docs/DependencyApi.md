@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## createApplicationDependency
 
-> ApplicationResponse createApplicationDependency(applicationId, targetApplicationId)
+> Application createApplicationDependency(applicationId, targetApplicationId)
 
 Add application dependency to this application.
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationResponse**](ApplicationResponse.md)
+[**Application**](Application.md)
 
 ### Authorization
 

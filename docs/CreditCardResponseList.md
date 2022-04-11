@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[CreditCardResponse]**](CreditCardResponse.md) |  | [optional] 
+**results** | [**[CreditCard]**](CreditCard.md) |  | [optional] 
 
 

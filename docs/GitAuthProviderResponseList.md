@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[GitAuthProviderResponse]**](GitAuthProviderResponse.md) |  | [optional] 
+**results** | [**[GitAuthProvider]**](GitAuthProvider.md) |  | [optional] 
 
 

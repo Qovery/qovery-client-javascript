@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[UserResponse]**](UserResponse.md) |  | [optional] 
+**results** | [**[User]**](User.md) |  | [optional] 
 
 

@@ -14,10 +14,10 @@
 import ApiClient from '../ApiClient';
 import ApplicationEditRequestAllOf from './ApplicationEditRequestAllOf';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
-import ApplicationPortResponse from './ApplicationPortResponse';
-import ApplicationPortResponsePorts from './ApplicationPortResponsePorts';
-import ApplicationStorageResponse from './ApplicationStorageResponse';
-import ApplicationStorageResponseStorage from './ApplicationStorageResponseStorage';
+import ApplicationPort from './ApplicationPort';
+import ApplicationPortPorts from './ApplicationPortPorts';
+import ApplicationStorage from './ApplicationStorage';
+import ApplicationStorageStorage from './ApplicationStorageStorage';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
@@ -31,12 +31,12 @@ class ApplicationEditRequest {
     /**
      * Constructs a new <code>ApplicationEditRequest</code>.
      * @alias module:model/ApplicationEditRequest
-     * @implements module:model/ApplicationStorageResponse
-     * @implements module:model/ApplicationPortResponse
+     * @implements module:model/ApplicationStorage
+     * @implements module:model/ApplicationPort
      * @implements module:model/ApplicationEditRequestAllOf
      */
     constructor() { 
-        ApplicationStorageResponse.initialize(this);ApplicationPortResponse.initialize(this);ApplicationEditRequestAllOf.initialize(this);
+        ApplicationStorage.initialize(this);ApplicationPort.initialize(this);ApplicationEditRequestAllOf.initialize(this);
         ApplicationEditRequest.initialize(this);
     }
 
@@ -58,15 +58,15 @@ class ApplicationEditRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ApplicationEditRequest();
-            ApplicationStorageResponse.constructFromObject(data, obj);
-            ApplicationPortResponse.constructFromObject(data, obj);
+            ApplicationStorage.constructFromObject(data, obj);
+            ApplicationPort.constructFromObject(data, obj);
             ApplicationEditRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageResponseStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortResponsePorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -115,12 +115,12 @@ class ApplicationEditRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageResponseStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorage>} storage
  */
 ApplicationEditRequest.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
+ * @member {Array.<module:model/ApplicationPortPorts>} ports
  */
 ApplicationEditRequest.prototype['ports'] = undefined;
 
@@ -205,16 +205,16 @@ ApplicationEditRequest.prototype['auto_preview'] = true;
 ApplicationEditRequest.prototype['sticky_session'] = false;
 
 
-// Implement ApplicationStorageResponse interface:
+// Implement ApplicationStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageResponseStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorage>} storage
  */
-ApplicationStorageResponse.prototype['storage'] = undefined;
-// Implement ApplicationPortResponse interface:
+ApplicationStorage.prototype['storage'] = undefined;
+// Implement ApplicationPort interface:
 /**
- * @member {Array.<module:model/ApplicationPortResponsePorts>} ports
+ * @member {Array.<module:model/ApplicationPortPorts>} ports
  */
-ApplicationPortResponse.prototype['ports'] = undefined;
+ApplicationPort.prototype['ports'] = undefined;
 // Implement ApplicationEditRequestAllOf interface:
 /**
  * name is case insensitive

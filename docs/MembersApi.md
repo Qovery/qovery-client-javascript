@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ## postAcceptInviteMember
 
-> InviteMemberResponse postAcceptInviteMember(organizationId, inviteId)
+> InviteMember postAcceptInviteMember(organizationId, inviteId)
 
 Accept Invite in the organization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InviteMemberResponse**](InviteMemberResponse.md)
+[**InviteMember**](InviteMember.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ## postInviteMember
 
-> InviteMemberResponse postInviteMember(organizationId, opts)
+> InviteMember postInviteMember(organizationId, opts)
 
 Invite someone in the organization
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InviteMemberResponse**](InviteMemberResponse.md)
+[**InviteMember**](InviteMember.md)
 
 ### Authorization
 

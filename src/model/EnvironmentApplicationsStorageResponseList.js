@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentApplicationsStorageResponse from './EnvironmentApplicationsStorageResponse';
+import EnvironmentApplicationsStorage from './EnvironmentApplicationsStorage';
 
 /**
  * The EnvironmentApplicationsStorageResponseList model module.
@@ -49,7 +49,7 @@ class EnvironmentApplicationsStorageResponseList {
             obj = obj || new EnvironmentApplicationsStorageResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentApplicationsStorageResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentApplicationsStorage]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentApplicationsStorageResponseList {
 }
 
 /**
- * @member {Array.<module:model/EnvironmentApplicationsStorageResponse>} results
+ * @member {Array.<module:model/EnvironmentApplicationsStorage>} results
  */
 EnvironmentApplicationsStorageResponseList.prototype['results'] = undefined;
 

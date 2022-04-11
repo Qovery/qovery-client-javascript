@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterFeatureResponse from './ClusterFeatureResponse';
+import ClusterFeature from './ClusterFeature';
 
 /**
  * The ClusterFeatureResponseList model module.
@@ -49,7 +49,7 @@ class ClusterFeatureResponseList {
             obj = obj || new ClusterFeatureResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ClusterFeatureResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ClusterFeature]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ClusterFeatureResponseList {
 }
 
 /**
- * @member {Array.<module:model/ClusterFeatureResponse>} results
+ * @member {Array.<module:model/ClusterFeature>} results
  */
 ClusterFeatureResponseList.prototype['results'] = undefined;
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[InviteMemberResponse]**](InviteMemberResponse.md) |  | [optional] 
+**results** | [**[InviteMember]**](InviteMember.md) |  | [optional] 
 
 

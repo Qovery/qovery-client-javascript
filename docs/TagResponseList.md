@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[TagResponse]**](TagResponse.md) |  | [optional] 
+**results** | [**[Tag]**](Tag.md) |  | [optional] 
 
 

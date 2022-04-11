@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InstanceResponse from './InstanceResponse';
+import Instance from './Instance';
 
 /**
  * The InstanceResponseList model module.
@@ -49,7 +49,7 @@ class InstanceResponseList {
             obj = obj || new InstanceResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [InstanceResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Instance]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class InstanceResponseList {
 }
 
 /**
- * @member {Array.<module:model/InstanceResponse>} results
+ * @member {Array.<module:model/Instance>} results
  */
 InstanceResponseList.prototype['results'] = undefined;
 

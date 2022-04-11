@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InvoiceResponse from './InvoiceResponse';
+import Invoice from './Invoice';
 
 /**
  * The InvoiceResponseList model module.
@@ -49,7 +49,7 @@ class InvoiceResponseList {
             obj = obj || new InvoiceResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [InvoiceResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Invoice]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class InvoiceResponseList {
 }
 
 /**
- * @member {Array.<module:model/InvoiceResponse>} results
+ * @member {Array.<module:model/Invoice>} results
  */
 InvoiceResponseList.prototype['results'] = undefined;
 

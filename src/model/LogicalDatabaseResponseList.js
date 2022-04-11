@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import LogicalDatabaseResponse from './LogicalDatabaseResponse';
+import LogicalDatabase from './LogicalDatabase';
 
 /**
  * The LogicalDatabaseResponseList model module.
@@ -49,7 +49,7 @@ class LogicalDatabaseResponseList {
             obj = obj || new LogicalDatabaseResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [LogicalDatabaseResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [LogicalDatabase]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class LogicalDatabaseResponseList {
 }
 
 /**
- * @member {Array.<module:model/LogicalDatabaseResponse>} results
+ * @member {Array.<module:model/LogicalDatabase>} results
  */
 LogicalDatabaseResponseList.prototype['results'] = undefined;
 

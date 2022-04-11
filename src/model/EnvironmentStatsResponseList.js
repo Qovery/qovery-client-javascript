@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentStatsResponse from './EnvironmentStatsResponse';
+import EnvironmentStats from './EnvironmentStats';
 
 /**
  * The EnvironmentStatsResponseList model module.
@@ -49,7 +49,7 @@ class EnvironmentStatsResponseList {
             obj = obj || new EnvironmentStatsResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentStatsResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentStats]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentStatsResponseList {
 }
 
 /**
- * @member {Array.<module:model/EnvironmentStatsResponse>} results
+ * @member {Array.<module:model/EnvironmentStats>} results
  */
 EnvironmentStatsResponseList.prototype['results'] = undefined;
 

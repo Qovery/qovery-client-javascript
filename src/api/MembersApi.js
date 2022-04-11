@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import InviteMember from '../model/InviteMember';
 import InviteMemberRequest from '../model/InviteMemberRequest';
-import InviteMemberResponse from '../model/InviteMemberResponse';
 import InviteMemberResponseList from '../model/InviteMemberResponseList';
 import MemberResponseList from '../model/MemberResponseList';
 import TransferOwnershipRequest from '../model/TransferOwnershipRequest';
@@ -214,7 +214,7 @@ export default class MembersApi {
      * Callback function to receive the result of the postAcceptInviteMember operation.
      * @callback module:api/MembersApi~postAcceptInviteMemberCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InviteMemberResponse} data The data returned by the service call.
+     * @param {module:model/InviteMember} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -223,7 +223,7 @@ export default class MembersApi {
      * @param {String} organizationId Organization ID
      * @param {String} inviteId Invite ID
      * @param {module:api/MembersApi~postAcceptInviteMemberCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InviteMemberResponse}
+     * data is of type: {@link module:model/InviteMember}
      */
     postAcceptInviteMember(organizationId, inviteId, callback) {
       let postBody = null;
@@ -250,7 +250,7 @@ export default class MembersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InviteMemberResponse;
+      let returnType = InviteMember;
       return this.apiClient.callApi(
         '/organization/{organizationId}/inviteMember/{inviteId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -262,7 +262,7 @@ export default class MembersApi {
      * Callback function to receive the result of the postInviteMember operation.
      * @callback module:api/MembersApi~postInviteMemberCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InviteMemberResponse} data The data returned by the service call.
+     * @param {module:model/InviteMember} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -272,7 +272,7 @@ export default class MembersApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/InviteMemberRequest} opts.inviteMemberRequest 
      * @param {module:api/MembersApi~postInviteMemberCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InviteMemberResponse}
+     * data is of type: {@link module:model/InviteMember}
      */
     postInviteMember(organizationId, opts, callback) {
       opts = opts || {};
@@ -295,7 +295,7 @@ export default class MembersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = InviteMemberResponse;
+      let returnType = InviteMember;
       return this.apiClient.callApi(
         '/organization/{organizationId}/inviteMember', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentDatabasesCurrentMetricResponse from './EnvironmentDatabasesCurrentMetricResponse';
+import EnvironmentDatabasesCurrentMetric from './EnvironmentDatabasesCurrentMetric';
 
 /**
  * The EnvironmentDatabasesCurrentMetricResponseList model module.
@@ -49,7 +49,7 @@ class EnvironmentDatabasesCurrentMetricResponseList {
             obj = obj || new EnvironmentDatabasesCurrentMetricResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentDatabasesCurrentMetricResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentDatabasesCurrentMetric]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentDatabasesCurrentMetricResponseList {
 }
 
 /**
- * @member {Array.<module:model/EnvironmentDatabasesCurrentMetricResponse>} results
+ * @member {Array.<module:model/EnvironmentDatabasesCurrentMetric>} results
  */
 EnvironmentDatabasesCurrentMetricResponseList.prototype['results'] = undefined;
 

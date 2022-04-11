@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterRegionResponse from './ClusterRegionResponse';
+import ClusterRegion from './ClusterRegion';
 
 /**
  * The ClusterRegionResponseList model module.
@@ -49,7 +49,7 @@ class ClusterRegionResponseList {
             obj = obj || new ClusterRegionResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ClusterRegionResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ClusterRegion]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ClusterRegionResponseList {
 }
 
 /**
- * @member {Array.<module:model/ClusterRegionResponse>} results
+ * @member {Array.<module:model/ClusterRegion>} results
  */
 ClusterRegionResponseList.prototype['results'] = undefined;
 

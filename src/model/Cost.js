@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import CostResponse from './CostResponse';
 
 /**
  * The Cost model module.
@@ -23,13 +22,12 @@ class Cost {
     /**
      * Constructs a new <code>Cost</code>.
      * @alias module:model/Cost
-     * @implements module:model/CostResponse
      * @param totalInCents {Number} 
      * @param total {Number} 
      * @param currencyCode {String} 
      */
     constructor(totalInCents, total, currencyCode) { 
-        CostResponse.initialize(this, totalInCents, total, currencyCode);
+        
         Cost.initialize(this, totalInCents, total, currencyCode);
     }
 
@@ -54,7 +52,6 @@ class Cost {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new Cost();
-            CostResponse.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('total_in_cents')) {
                 obj['total_in_cents'] = ApiClient.convertToType(data['total_in_cents'], 'Number');
@@ -88,19 +85,6 @@ Cost.prototype['total'] = undefined;
 Cost.prototype['currency_code'] = undefined;
 
 
-// Implement CostResponse interface:
-/**
- * @member {Number} total_in_cents
- */
-CostResponse.prototype['total_in_cents'] = undefined;
-/**
- * @member {Number} total
- */
-CostResponse.prototype['total'] = undefined;
-/**
- * @member {String} currency_code
- */
-CostResponse.prototype['currency_code'] = undefined;
 
 
 

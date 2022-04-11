@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[MetricCPUDatapointResponse]**](MetricCPUDatapointResponse.md) |  | [optional] 
+**results** | [**[MetricCPUDatapoint]**](MetricCPUDatapoint.md) |  | [optional] 
 
 

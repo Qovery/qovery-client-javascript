@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import Log from './Log';
 import LogPaginatedResponseListAllOf from './LogPaginatedResponseListAllOf';
-import LogResponse from './LogResponse';
-import PaginationDataResponse from './PaginationDataResponse';
+import PaginationData from './PaginationData';
 
 /**
  * The LogPaginatedResponseList model module.
@@ -25,13 +25,13 @@ class LogPaginatedResponseList {
     /**
      * Constructs a new <code>LogPaginatedResponseList</code>.
      * @alias module:model/LogPaginatedResponseList
-     * @implements module:model/PaginationDataResponse
+     * @implements module:model/PaginationData
      * @implements module:model/LogPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);LogPaginatedResponseListAllOf.initialize(this);
+        PaginationData.initialize(this, page, pageSize);LogPaginatedResponseListAllOf.initialize(this);
         LogPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -55,7 +55,7 @@ class LogPaginatedResponseList {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new LogPaginatedResponseList();
-            PaginationDataResponse.constructFromObject(data, obj);
+            PaginationData.constructFromObject(data, obj);
             LogPaginatedResponseListAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
@@ -65,7 +65,7 @@ class LogPaginatedResponseList {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [LogResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Log]);
             }
         }
         return obj;
@@ -85,23 +85,23 @@ LogPaginatedResponseList.prototype['page'] = undefined;
 LogPaginatedResponseList.prototype['page_size'] = undefined;
 
 /**
- * @member {Array.<module:model/LogResponse>} results
+ * @member {Array.<module:model/Log>} results
  */
 LogPaginatedResponseList.prototype['results'] = undefined;
 
 
-// Implement PaginationDataResponse interface:
+// Implement PaginationData interface:
 /**
  * @member {Number} page
  */
-PaginationDataResponse.prototype['page'] = undefined;
+PaginationData.prototype['page'] = undefined;
 /**
  * @member {Number} page_size
  */
-PaginationDataResponse.prototype['page_size'] = undefined;
+PaginationData.prototype['page_size'] = undefined;
 // Implement LogPaginatedResponseListAllOf interface:
 /**
- * @member {Array.<module:model/LogResponse>} results
+ * @member {Array.<module:model/Log>} results
  */
 LogPaginatedResponseListAllOf.prototype['results'] = undefined;
 

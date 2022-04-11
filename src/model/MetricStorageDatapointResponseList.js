@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import MetricStorageDatapointResponse from './MetricStorageDatapointResponse';
+import MetricStorageDatapoint from './MetricStorageDatapoint';
 
 /**
  * The MetricStorageDatapointResponseList model module.
@@ -49,7 +49,7 @@ class MetricStorageDatapointResponseList {
             obj = obj || new MetricStorageDatapointResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [MetricStorageDatapointResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [MetricStorageDatapoint]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class MetricStorageDatapointResponseList {
 }
 
 /**
- * @member {Array.<module:model/MetricStorageDatapointResponse>} results
+ * @member {Array.<module:model/MetricStorageDatapoint>} results
  */
 MetricStorageDatapointResponseList.prototype['results'] = undefined;
 

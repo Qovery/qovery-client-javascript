@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import Database from '../model/Database';
 import DatabaseConfigurationResponseList from '../model/DatabaseConfigurationResponseList';
 import DatabaseRequest from '../model/DatabaseRequest';
-import DatabaseResponse from '../model/DatabaseResponse';
 import DatabaseResponseList from '../model/DatabaseResponseList';
 import EnvironmentDatabasesCurrentMetricResponseList from '../model/EnvironmentDatabasesCurrentMetricResponseList';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
@@ -43,7 +43,7 @@ export default class DatabasesApi {
      * Callback function to receive the result of the createDatabase operation.
      * @callback module:api/DatabasesApi~createDatabaseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DatabaseResponse} data The data returned by the service call.
+     * @param {module:model/Database} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -53,7 +53,7 @@ export default class DatabasesApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/DatabaseRequest} opts.databaseRequest 
      * @param {module:api/DatabasesApi~createDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DatabaseResponse}
+     * data is of type: {@link module:model/Database}
      */
     createDatabase(environmentId, opts, callback) {
       opts = opts || {};
@@ -76,7 +76,7 @@ export default class DatabasesApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = DatabaseResponse;
+      let returnType = Database;
       return this.apiClient.callApi(
         '/environment/{environmentId}/database', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

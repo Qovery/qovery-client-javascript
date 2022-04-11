@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ProjectDeploymentRuleResponse from './ProjectDeploymentRuleResponse';
+import ProjectDeploymentRule from './ProjectDeploymentRule';
 
 /**
  * The ProjectDeploymentRuleResponseList model module.
@@ -49,7 +49,7 @@ class ProjectDeploymentRuleResponseList {
             obj = obj || new ProjectDeploymentRuleResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ProjectDeploymentRuleResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ProjectDeploymentRule]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ProjectDeploymentRuleResponseList {
 }
 
 /**
- * @member {Array.<module:model/ProjectDeploymentRuleResponse>} results
+ * @member {Array.<module:model/ProjectDeploymentRule>} results
  */
 ProjectDeploymentRuleResponseList.prototype['results'] = undefined;
 

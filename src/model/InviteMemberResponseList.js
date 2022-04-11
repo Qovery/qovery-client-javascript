@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InviteMemberResponse from './InviteMemberResponse';
+import InviteMember from './InviteMember';
 
 /**
  * The InviteMemberResponseList model module.
@@ -49,7 +49,7 @@ class InviteMemberResponseList {
             obj = obj || new InviteMemberResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [InviteMemberResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [InviteMember]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class InviteMemberResponseList {
 }
 
 /**
- * @member {Array.<module:model/InviteMemberResponse>} results
+ * @member {Array.<module:model/InviteMember>} results
  */
 InviteMemberResponseList.prototype['results'] = undefined;
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[DatabaseResponse]**](DatabaseResponse.md) |  | [optional] 
+**results** | [**[Database]**](Database.md) |  | [optional] 
 
 

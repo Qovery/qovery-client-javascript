@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Environment from '../model/Environment';
 import EnvironmentRequest from '../model/EnvironmentRequest';
-import EnvironmentResponse from '../model/EnvironmentResponse';
 import EnvironmentResponseList from '../model/EnvironmentResponseList';
 import EnvironmentStatsResponseList from '../model/EnvironmentStatsResponseList';
 import Status from '../model/Status';
@@ -42,7 +42,7 @@ export default class EnvironmentsApi {
      * Callback function to receive the result of the createEnvironment operation.
      * @callback module:api/EnvironmentsApi~createEnvironmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentResponse} data The data returned by the service call.
+     * @param {module:model/Environment} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -52,7 +52,7 @@ export default class EnvironmentsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/EnvironmentRequest} opts.environmentRequest 
      * @param {module:api/EnvironmentsApi~createEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentResponse}
+     * data is of type: {@link module:model/Environment}
      */
     createEnvironment(projectId, opts, callback) {
       opts = opts || {};
@@ -75,7 +75,7 @@ export default class EnvironmentsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentResponse;
+      let returnType = Environment;
       return this.apiClient.callApi(
         '/project/{projectId}/environment', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

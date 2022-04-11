@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## getApplicationCurrentScale
 
-> ApplicationCurrentScaleResponse getApplicationCurrentScale(applicationId)
+> ApplicationCurrentScale getApplicationCurrentScale(applicationId)
 
 Get current scaling of the application
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationCurrentScaleResponse**](ApplicationCurrentScaleResponse.md)
+[**ApplicationCurrentScale**](ApplicationCurrentScale.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ## getApplicationMetricRestart
 
-> MetricRestartResponse getApplicationMetricRestart(applicationId, lastSeconds)
+> MetricRestart getApplicationMetricRestart(applicationId, lastSeconds)
 
 List application restarts
 
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MetricRestartResponse**](MetricRestartResponse.md)
+[**MetricRestart**](MetricRestart.md)
 
 ### Authorization
 

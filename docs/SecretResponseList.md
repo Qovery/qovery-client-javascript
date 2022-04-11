@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[SecretResponse]**](SecretResponse.md) |  | [optional] 
+**results** | [**[Secret]**](Secret.md) |  | [optional] 
 
 

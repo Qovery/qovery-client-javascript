@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[MetricGenericResponse]**](MetricGenericResponse.md) |  | [optional] 
+**results** | [**[MetricGeneric]**](MetricGeneric.md) |  | [optional] 
 
 

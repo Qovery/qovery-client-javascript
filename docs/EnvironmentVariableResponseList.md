@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[EnvironmentVariableResponse]**](EnvironmentVariableResponse.md) |  | [optional] 
+**results** | [**[EnvironmentVariable]**](EnvironmentVariable.md) |  | [optional] 
 
 

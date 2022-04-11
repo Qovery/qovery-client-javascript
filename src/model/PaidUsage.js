@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import PaidUsageResponse from './PaidUsageResponse';
 
 /**
  * The PaidUsage model module.
@@ -48,8 +47,26 @@ class PaidUsage {
         if (data) {
             obj = obj || new PaidUsage();
 
-            if (data.hasOwnProperty('paid_usage')) {
-                obj['paid_usage'] = PaidUsageResponse.constructFromObject(data['paid_usage']);
+            if (data.hasOwnProperty('max_deployments_per_month')) {
+                obj['max_deployments_per_month'] = ApiClient.convertToType(data['max_deployments_per_month'], 'Number');
+            }
+            if (data.hasOwnProperty('consumed_deployments')) {
+                obj['consumed_deployments'] = ApiClient.convertToType(data['consumed_deployments'], 'Number');
+            }
+            if (data.hasOwnProperty('monthly_plan_cost')) {
+                obj['monthly_plan_cost'] = ApiClient.convertToType(data['monthly_plan_cost'], 'Number');
+            }
+            if (data.hasOwnProperty('monthly_plan_cost_in_cents')) {
+                obj['monthly_plan_cost_in_cents'] = ApiClient.convertToType(data['monthly_plan_cost_in_cents'], 'Number');
+            }
+            if (data.hasOwnProperty('remaining_deployments')) {
+                obj['remaining_deployments'] = ApiClient.convertToType(data['remaining_deployments'], 'Number');
+            }
+            if (data.hasOwnProperty('deployments_exceeded')) {
+                obj['deployments_exceeded'] = ApiClient.convertToType(data['deployments_exceeded'], 'Boolean');
+            }
+            if (data.hasOwnProperty('renewal_at')) {
+                obj['renewal_at'] = ApiClient.convertToType(data['renewal_at'], 'Date');
             }
         }
         return obj;
@@ -59,9 +76,39 @@ class PaidUsage {
 }
 
 /**
- * @member {module:model/PaidUsageResponse} paid_usage
+ * @member {Number} max_deployments_per_month
  */
-PaidUsage.prototype['paid_usage'] = undefined;
+PaidUsage.prototype['max_deployments_per_month'] = undefined;
+
+/**
+ * @member {Number} consumed_deployments
+ */
+PaidUsage.prototype['consumed_deployments'] = undefined;
+
+/**
+ * @member {Number} monthly_plan_cost
+ */
+PaidUsage.prototype['monthly_plan_cost'] = undefined;
+
+/**
+ * @member {Number} monthly_plan_cost_in_cents
+ */
+PaidUsage.prototype['monthly_plan_cost_in_cents'] = undefined;
+
+/**
+ * @member {Number} remaining_deployments
+ */
+PaidUsage.prototype['remaining_deployments'] = undefined;
+
+/**
+ * @member {Boolean} deployments_exceeded
+ */
+PaidUsage.prototype['deployments_exceeded'] = undefined;
+
+/**
+ * @member {Date} renewal_at
+ */
+PaidUsage.prototype['renewal_at'] = undefined;
 
 
 

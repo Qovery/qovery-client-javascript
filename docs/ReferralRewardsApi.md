@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getAccountReferral
 
-> ReferralResponse getAccountReferral()
+> Referral getAccountReferral()
 
 Get your referral information
 
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ReferralResponse**](ReferralResponse.md)
+[**Referral**](Referral.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ReferralRewardsApi();
 let opts = {
-  'rewardClaimResponse': new QoveryApi.RewardClaimResponse() // RewardClaimResponse | 
+  'rewardClaim': new QoveryApi.RewardClaim() // RewardClaim | 
 };
 apiInstance.postAccountRewardClaim(opts, (error, data, response) => {
   if (error) {
@@ -87,7 +87,7 @@ apiInstance.postAccountRewardClaim(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **rewardClaimResponse** | [**RewardClaimResponse**](RewardClaimResponse.md)|  | [optional] 
+ **rewardClaim** | [**RewardClaim**](RewardClaim.md)|  | [optional] 
 
 ### Return type
 

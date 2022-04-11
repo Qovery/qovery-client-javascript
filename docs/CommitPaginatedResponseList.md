@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[CommitResponse]**](CommitResponse.md) |  | [optional] 
+**results** | [**[Commit]**](Commit.md) |  | [optional] 
 **page** | **Number** |  | 
 **pageSize** | **Number** |  | 
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import VersionResponse from './VersionResponse';
+import Version from './Version';
 
 /**
  * The VersionResponseList model module.
@@ -49,7 +49,7 @@ class VersionResponseList {
             obj = obj || new VersionResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [VersionResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Version]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class VersionResponseList {
 }
 
 /**
- * @member {Array.<module:model/VersionResponse>} results
+ * @member {Array.<module:model/Version>} results
  */
 VersionResponseList.prototype['results'] = undefined;
 

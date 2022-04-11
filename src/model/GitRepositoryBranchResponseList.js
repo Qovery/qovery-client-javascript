@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import GitRepositoryBranchResponse from './GitRepositoryBranchResponse';
+import GitRepositoryBranch from './GitRepositoryBranch';
 
 /**
  * The GitRepositoryBranchResponseList model module.
@@ -49,7 +49,7 @@ class GitRepositoryBranchResponseList {
             obj = obj || new GitRepositoryBranchResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [GitRepositoryBranchResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [GitRepositoryBranch]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class GitRepositoryBranchResponseList {
 }
 
 /**
- * @member {Array.<module:model/GitRepositoryBranchResponse>} results
+ * @member {Array.<module:model/GitRepositoryBranch>} results
  */
 GitRepositoryBranchResponseList.prototype['results'] = undefined;
 

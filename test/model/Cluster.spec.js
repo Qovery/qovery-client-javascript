@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(QoveryApi.Cluster);
     });
 
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.Cluster();
@@ -104,6 +122,84 @@
 
     it('should have the property maxRunningNodes (base name: "max_running_nodes")', function() {
       // uncomment below and update the code to test the property maxRunningNodes
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property costPerMonthInCents (base name: "cost_per_month_in_cents")', function() {
+      // uncomment below and update the code to test the property costPerMonthInCents
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property costPerMonth (base name: "cost_per_month")', function() {
+      // uncomment below and update the code to test the property costPerMonth
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property currencyCode (base name: "currency_code")', function() {
+      // uncomment below and update the code to test the property currencyCode
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property valueType (base name: "value_type")', function() {
+      // uncomment below and update the code to test the property valueType
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isValueUpdatable (base name: "is_value_updatable")', function() {
+      // uncomment below and update the code to test the property isValueUpdatable
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property acceptedValues (base name: "accepted_values")', function() {
+      // uncomment below and update the code to test the property acceptedValues
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property estimatedCloudProviderCost (base name: "estimated_cloud_provider_cost")', function() {
+      // uncomment below and update the code to test the property estimatedCloudProviderCost
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property hasAccess (base name: "has_access")', function() {
+      // uncomment below and update the code to test the property hasAccess
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property version (base name: "version")', function() {
+      // uncomment below and update the code to test the property version
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDefault (base name: "is_default")', function() {
+      // uncomment below and update the code to test the property isDefault
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });

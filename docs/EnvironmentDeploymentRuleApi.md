@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## editEnvironmentDeploymentRule
 
-> EnvironmentDeploymentRuleResponse editEnvironmentDeploymentRule(environmentId, deploymentRuleId, opts)
+> EnvironmentDeploymentRule editEnvironmentDeploymentRule(environmentId, deploymentRuleId, opts)
 
 Edit an environment deployment rule
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentDeploymentRuleResponse**](EnvironmentDeploymentRuleResponse.md)
+[**EnvironmentDeploymentRule**](EnvironmentDeploymentRule.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## getEnvironmentDeploymentRule
 
-> EnvironmentDeploymentRuleResponse getEnvironmentDeploymentRule(environmentId)
+> EnvironmentDeploymentRule getEnvironmentDeploymentRule(environmentId)
 
 Get environment deployment rule
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentDeploymentRuleResponse**](EnvironmentDeploymentRuleResponse.md)
+[**EnvironmentDeploymentRule**](EnvironmentDeploymentRule.md)
 
 ### Authorization
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[BackupResponse]**](BackupResponse.md) |  | [optional] 
+**results** | [**[Backup]**](Backup.md) |  | [optional] 
 
 

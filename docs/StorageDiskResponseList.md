@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[StorageDiskResponse]**](StorageDiskResponse.md) |  | [optional] 
+**results** | [**[StorageDisk]**](StorageDisk.md) |  | [optional] 
 
 

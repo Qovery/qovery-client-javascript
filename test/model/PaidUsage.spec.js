@@ -54,8 +54,44 @@
       //expect(instance).to.be.a(QoveryApi.PaidUsage);
     });
 
-    it('should have the property paidUsage (base name: "paid_usage")', function() {
-      // uncomment below and update the code to test the property paidUsage
+    it('should have the property maxDeploymentsPerMonth (base name: "max_deployments_per_month")', function() {
+      // uncomment below and update the code to test the property maxDeploymentsPerMonth
+      //var instance = new QoveryApi.PaidUsage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property consumedDeployments (base name: "consumed_deployments")', function() {
+      // uncomment below and update the code to test the property consumedDeployments
+      //var instance = new QoveryApi.PaidUsage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property monthlyPlanCost (base name: "monthly_plan_cost")', function() {
+      // uncomment below and update the code to test the property monthlyPlanCost
+      //var instance = new QoveryApi.PaidUsage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property monthlyPlanCostInCents (base name: "monthly_plan_cost_in_cents")', function() {
+      // uncomment below and update the code to test the property monthlyPlanCostInCents
+      //var instance = new QoveryApi.PaidUsage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property remainingDeployments (base name: "remaining_deployments")', function() {
+      // uncomment below and update the code to test the property remainingDeployments
+      //var instance = new QoveryApi.PaidUsage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property deploymentsExceeded (base name: "deployments_exceeded")', function() {
+      // uncomment below and update the code to test the property deploymentsExceeded
+      //var instance = new QoveryApi.PaidUsage();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property renewalAt (base name: "renewal_at")', function() {
+      // uncomment below and update the code to test the property renewalAt
       //var instance = new QoveryApi.PaidUsage();
       //expect(instance).to.be();
     });

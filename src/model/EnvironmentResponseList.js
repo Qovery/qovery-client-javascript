@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentResponse from './EnvironmentResponse';
+import Environment from './Environment';
 
 /**
  * The EnvironmentResponseList model module.
@@ -49,7 +49,7 @@ class EnvironmentResponseList {
             obj = obj || new EnvironmentResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Environment]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentResponseList {
 }
 
 /**
- * @member {Array.<module:model/EnvironmentResponse>} results
+ * @member {Array.<module:model/Environment>} results
  */
 EnvironmentResponseList.prototype['results'] = undefined;
 

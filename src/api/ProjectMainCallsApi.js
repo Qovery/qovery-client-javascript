@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Project from '../model/Project';
 import ProjectRequest from '../model/ProjectRequest';
-import ProjectResponse from '../model/ProjectResponse';
 
 /**
 * ProjectMainCalls service.
@@ -81,7 +81,7 @@ export default class ProjectMainCallsApi {
      * Callback function to receive the result of the editProject operation.
      * @callback module:api/ProjectMainCallsApi~editProjectCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ProjectResponse} data The data returned by the service call.
+     * @param {module:model/Project} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -92,7 +92,7 @@ export default class ProjectMainCallsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ProjectRequest} opts.projectRequest 
      * @param {module:api/ProjectMainCallsApi~editProjectCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ProjectResponse}
+     * data is of type: {@link module:model/Project}
      */
     editProject(projectId, opts, callback) {
       opts = opts || {};
@@ -115,7 +115,7 @@ export default class ProjectMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ProjectResponse;
+      let returnType = Project;
       return this.apiClient.callApi(
         '/project/{projectId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -127,7 +127,7 @@ export default class ProjectMainCallsApi {
      * Callback function to receive the result of the getProject operation.
      * @callback module:api/ProjectMainCallsApi~getProjectCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ProjectResponse} data The data returned by the service call.
+     * @param {module:model/Project} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -135,7 +135,7 @@ export default class ProjectMainCallsApi {
      * Get project by ID
      * @param {String} projectId Project ID
      * @param {module:api/ProjectMainCallsApi~getProjectCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ProjectResponse}
+     * data is of type: {@link module:model/Project}
      */
     getProject(projectId, callback) {
       let postBody = null;
@@ -157,7 +157,7 @@ export default class ProjectMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ProjectResponse;
+      let returnType = Project;
       return this.apiClient.callApi(
         '/project/{projectId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

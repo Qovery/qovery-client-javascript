@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import GitAuthProviderResponse from './GitAuthProviderResponse';
+import GitAuthProvider from './GitAuthProvider';
 
 /**
  * The GitAuthProviderResponseList model module.
@@ -49,7 +49,7 @@ class GitAuthProviderResponseList {
             obj = obj || new GitAuthProviderResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [GitAuthProviderResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [GitAuthProvider]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class GitAuthProviderResponseList {
 }
 
 /**
- * @member {Array.<module:model/GitAuthProviderResponse>} results
+ * @member {Array.<module:model/GitAuthProvider>} results
  */
 GitAuthProviderResponseList.prototype['results'] = undefined;
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import TagResponse from './TagResponse';
+import Tag from './Tag';
 
 /**
  * The TagResponseList model module.
@@ -49,7 +49,7 @@ class TagResponseList {
             obj = obj || new TagResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [TagResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Tag]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class TagResponseList {
 }
 
 /**
- * @member {Array.<module:model/TagResponse>} results
+ * @member {Array.<module:model/Tag>} results
  */
 TagResponseList.prototype['results'] = undefined;
 

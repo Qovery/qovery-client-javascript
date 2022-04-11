@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EventResponse from './EventResponse';
+import Event from './Event';
 
 /**
  * The EventResponseList model module.
@@ -49,7 +49,7 @@ class EventResponseList {
             obj = obj || new EventResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EventResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Event]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EventResponseList {
 }
 
 /**
- * @member {Array.<module:model/EventResponse>} results
+ * @member {Array.<module:model/Event>} results
  */
 EventResponseList.prototype['results'] = undefined;
 

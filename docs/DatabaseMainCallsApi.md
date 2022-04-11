@@ -65,7 +65,7 @@ null (empty response body)
 
 ## editDatabase
 
-> DatabaseResponse editDatabase(databaseId, opts)
+> Database editDatabase(databaseId, opts)
 
 Edit a database 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DatabaseResponse**](DatabaseResponse.md)
+[**Database**](Database.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ## editDatabaseCredentials
 
-> CredentialsResponse editDatabaseCredentials(databaseId, opts)
+> Credentials editDatabaseCredentials(databaseId, opts)
 
 Edit database  master credentials
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CredentialsResponse**](CredentialsResponse.md)
+[**Credentials**](Credentials.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ## getDatabase
 
-> DatabaseResponse getDatabase(databaseId)
+> Database getDatabase(databaseId)
 
 Get database by ID
 
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DatabaseResponse**](DatabaseResponse.md)
+[**Database**](Database.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ## getDatabaseMasterCredentials
 
-> CredentialsResponse getDatabaseMasterCredentials(databaseId)
+> Credentials getDatabaseMasterCredentials(databaseId)
 
 Get master credentials of the database
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CredentialsResponse**](CredentialsResponse.md)
+[**Credentials**](Credentials.md)
 
 ### Authorization
 

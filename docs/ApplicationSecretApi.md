@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createApplicationSecret
 
-> SecretResponse createApplicationSecret(applicationId, opts)
+> Secret createApplicationSecret(applicationId, opts)
 
 Add a secret to the application
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## createApplicationSecretAlias
 
-> SecretResponse createApplicationSecretAlias(applicationId, secretId, opts)
+> Secret createApplicationSecretAlias(applicationId, secretId, opts)
 
 Create a secret alias at the application level
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## createApplicationSecretOverride
 
-> SecretResponse createApplicationSecretOverride(applicationId, secretId, opts)
+> Secret createApplicationSecretOverride(applicationId, secretId, opts)
 
 Create a secret override at the application level
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ null (empty response body)
 
 ## editApplicationSecret
 
-> SecretResponse editApplicationSecret(applicationId, secretId, secretEditRequest)
+> Secret editApplicationSecret(applicationId, secretId, secretEditRequest)
 
 Edit a secret belonging to the application
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[OrganizationApiTokenResponse]**](OrganizationApiTokenResponse.md) |  | [optional] 
+**results** | [**[OrganizationApiToken]**](OrganizationApiToken.md) |  | [optional] 
 
 

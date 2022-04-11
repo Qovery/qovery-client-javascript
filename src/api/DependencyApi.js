@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import ApplicationResponse from '../model/ApplicationResponse';
+import Application from '../model/Application';
 import ApplicationResponseList from '../model/ApplicationResponseList';
 
 /**
@@ -39,7 +39,7 @@ export default class DependencyApi {
      * Callback function to receive the result of the createApplicationDependency operation.
      * @callback module:api/DependencyApi~createApplicationDependencyCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationResponse} data The data returned by the service call.
+     * @param {module:model/Application} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,7 +49,7 @@ export default class DependencyApi {
      * @param {String} applicationId Application ID
      * @param {String} targetApplicationId Target application ID
      * @param {module:api/DependencyApi~createApplicationDependencyCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationResponse}
+     * data is of type: {@link module:model/Application}
      */
     createApplicationDependency(applicationId, targetApplicationId, callback) {
       let postBody = null;
@@ -76,7 +76,7 @@ export default class DependencyApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ApplicationResponse;
+      let returnType = Application;
       return this.apiClient.callApi(
         '/application/{applicationId}/dependency/{targetApplicationId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

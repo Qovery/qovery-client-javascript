@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import LogResponse from './LogResponse';
+import Log from './Log';
 
 /**
  * The LogResponseList model module.
@@ -49,7 +49,7 @@ class LogResponseList {
             obj = obj || new LogResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [LogResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Log]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class LogResponseList {
 }
 
 /**
- * @member {Array.<module:model/LogResponse>} results
+ * @member {Array.<module:model/Log>} results
  */
 LogResponseList.prototype['results'] = undefined;
 

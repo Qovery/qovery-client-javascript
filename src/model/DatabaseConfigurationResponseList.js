@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DatabaseConfigurationResponse from './DatabaseConfigurationResponse';
+import DatabaseConfiguration from './DatabaseConfiguration';
 
 /**
  * The DatabaseConfigurationResponseList model module.
@@ -49,7 +49,7 @@ class DatabaseConfigurationResponseList {
             obj = obj || new DatabaseConfigurationResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DatabaseConfigurationResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DatabaseConfiguration]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class DatabaseConfigurationResponseList {
 }
 
 /**
- * @member {Array.<module:model/DatabaseConfigurationResponse>} results
+ * @member {Array.<module:model/DatabaseConfiguration>} results
  */
 DatabaseConfigurationResponseList.prototype['results'] = undefined;
 

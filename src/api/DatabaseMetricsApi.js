@@ -13,11 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
-import DatabaseCurrentMetricResponse from '../model/DatabaseCurrentMetricResponse';
+import DatabaseCurrentMetric from '../model/DatabaseCurrentMetric';
 import MetricCPUDatapointResponseList from '../model/MetricCPUDatapointResponseList';
 import MetricGenericResponseList from '../model/MetricGenericResponseList';
 import MetricMemoryDatapointResponseList from '../model/MetricMemoryDatapointResponseList';
-import MetricRestartResponse from '../model/MetricRestartResponse';
+import MetricRestart from '../model/MetricRestart';
 import MetricStorageDatapointResponseList from '../model/MetricStorageDatapointResponseList';
 
 /**
@@ -43,7 +43,7 @@ export default class DatabaseMetricsApi {
      * Callback function to receive the result of the getDatabaseCurrentMetric operation.
      * @callback module:api/DatabaseMetricsApi~getDatabaseCurrentMetricCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DatabaseCurrentMetricResponse} data The data returned by the service call.
+     * @param {module:model/DatabaseCurrentMetric} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,7 +51,7 @@ export default class DatabaseMetricsApi {
      * Get current metric consumption of the database 
      * @param {String} databaseId Database ID
      * @param {module:api/DatabaseMetricsApi~getDatabaseCurrentMetricCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DatabaseCurrentMetricResponse}
+     * data is of type: {@link module:model/DatabaseCurrentMetric}
      */
     getDatabaseCurrentMetric(databaseId, callback) {
       let postBody = null;
@@ -73,7 +73,7 @@ export default class DatabaseMetricsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = DatabaseCurrentMetricResponse;
+      let returnType = DatabaseCurrentMetric;
       return this.apiClient.callApi(
         '/database/{databaseId}/currentMetric', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -230,7 +230,7 @@ export default class DatabaseMetricsApi {
      * Callback function to receive the result of the getDatabaseMetricRestart operation.
      * @callback module:api/DatabaseMetricsApi~getDatabaseMetricRestartCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/MetricRestartResponse} data The data returned by the service call.
+     * @param {module:model/MetricRestart} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -240,7 +240,7 @@ export default class DatabaseMetricsApi {
      * @param {String} databaseId Database ID
      * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
      * @param {module:api/DatabaseMetricsApi~getDatabaseMetricRestartCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MetricRestartResponse}
+     * data is of type: {@link module:model/MetricRestart}
      */
     getDatabaseMetricRestart(databaseId, lastSeconds, callback) {
       let postBody = null;
@@ -267,7 +267,7 @@ export default class DatabaseMetricsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = MetricRestartResponse;
+      let returnType = MetricRestart;
       return this.apiClient.callApi(
         '/database/{databaseId}/metric/restart', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

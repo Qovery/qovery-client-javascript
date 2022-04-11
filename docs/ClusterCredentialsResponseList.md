@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ClusterCredentialsResponse]**](ClusterCredentialsResponse.md) |  | [optional] 
+**results** | [**[ClusterCredentials]**](ClusterCredentials.md) |  | [optional] 
 
 

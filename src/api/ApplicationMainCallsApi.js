@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Application from '../model/Application';
 import ApplicationEditRequest from '../model/ApplicationEditRequest';
-import ApplicationResponse from '../model/ApplicationResponse';
 import CommitResponseList from '../model/CommitResponseList';
 import LinkResponseList from '../model/LinkResponseList';
 import Status from '../model/Status';
@@ -179,7 +179,7 @@ export default class ApplicationMainCallsApi {
      * Callback function to receive the result of the editApplication operation.
      * @callback module:api/ApplicationMainCallsApi~editApplicationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationResponse} data The data returned by the service call.
+     * @param {module:model/Application} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -190,7 +190,7 @@ export default class ApplicationMainCallsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ApplicationEditRequest} opts.applicationEditRequest 
      * @param {module:api/ApplicationMainCallsApi~editApplicationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationResponse}
+     * data is of type: {@link module:model/Application}
      */
     editApplication(applicationId, opts, callback) {
       opts = opts || {};
@@ -213,7 +213,7 @@ export default class ApplicationMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ApplicationResponse;
+      let returnType = Application;
       return this.apiClient.callApi(
         '/application/{applicationId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -225,7 +225,7 @@ export default class ApplicationMainCallsApi {
      * Callback function to receive the result of the getApplication operation.
      * @callback module:api/ApplicationMainCallsApi~getApplicationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationResponse} data The data returned by the service call.
+     * @param {module:model/Application} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -233,7 +233,7 @@ export default class ApplicationMainCallsApi {
      * Get application by ID
      * @param {String} applicationId Application ID
      * @param {module:api/ApplicationMainCallsApi~getApplicationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationResponse}
+     * data is of type: {@link module:model/Application}
      */
     getApplication(applicationId, callback) {
       let postBody = null;
@@ -255,7 +255,7 @@ export default class ApplicationMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ApplicationResponse;
+      let returnType = Application;
       return this.apiClient.callApi(
         '/application/{applicationId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

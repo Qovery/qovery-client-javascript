@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import CommitResponse from './CommitResponse';
+import Commit from './Commit';
 
 /**
  * The CommitPaginatedResponseListAllOf model module.
@@ -49,7 +49,7 @@ class CommitPaginatedResponseListAllOf {
             obj = obj || new CommitPaginatedResponseListAllOf();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [CommitResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Commit]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class CommitPaginatedResponseListAllOf {
 }
 
 /**
- * @member {Array.<module:model/CommitResponse>} results
+ * @member {Array.<module:model/Commit>} results
  */
 CommitPaginatedResponseListAllOf.prototype['results'] = undefined;
 

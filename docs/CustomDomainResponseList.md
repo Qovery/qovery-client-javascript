@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[CustomDomainResponse]**](CustomDomainResponse.md) |  | [optional] 
+**results** | [**[CustomDomain]**](CustomDomain.md) |  | [optional] 
 
 

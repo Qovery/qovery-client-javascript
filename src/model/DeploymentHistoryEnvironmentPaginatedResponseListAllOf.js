@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DeploymentHistoryEnvironmentResponse from './DeploymentHistoryEnvironmentResponse';
+import DeploymentHistoryEnvironment from './DeploymentHistoryEnvironment';
 
 /**
  * The DeploymentHistoryEnvironmentPaginatedResponseListAllOf model module.
@@ -49,7 +49,7 @@ class DeploymentHistoryEnvironmentPaginatedResponseListAllOf {
             obj = obj || new DeploymentHistoryEnvironmentPaginatedResponseListAllOf();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryEnvironmentResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryEnvironment]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class DeploymentHistoryEnvironmentPaginatedResponseListAllOf {
 }
 
 /**
- * @member {Array.<module:model/DeploymentHistoryEnvironmentResponse>} results
+ * @member {Array.<module:model/DeploymentHistoryEnvironment>} results
  */
 DeploymentHistoryEnvironmentPaginatedResponseListAllOf.prototype['results'] = undefined;
 

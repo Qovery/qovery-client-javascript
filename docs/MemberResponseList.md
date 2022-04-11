@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[MemberResponse]**](MemberResponse.md) |  | [optional] 
+**results** | [**[Member]**](Member.md) |  | [optional] 
 
 

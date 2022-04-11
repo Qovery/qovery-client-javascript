@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## createApplication
 
-> ApplicationResponse createApplication(environmentId, opts)
+> Application createApplication(environmentId, opts)
 
 Create an application
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationResponse**](ApplicationResponse.md)
+[**Application**](Application.md)
 
 ### Authorization
 

@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Environment from '../model/Environment';
 import EnvironmentEditRequest from '../model/EnvironmentEditRequest';
-import EnvironmentResponse from '../model/EnvironmentResponse';
 import LinkResponseList from '../model/LinkResponseList';
 import Status from '../model/Status';
 
@@ -83,7 +83,7 @@ export default class EnvironmentMainCallsApi {
      * Callback function to receive the result of the editEnvironment operation.
      * @callback module:api/EnvironmentMainCallsApi~editEnvironmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentResponse} data The data returned by the service call.
+     * @param {module:model/Environment} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,7 +94,7 @@ export default class EnvironmentMainCallsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/EnvironmentEditRequest} opts.environmentEditRequest 
      * @param {module:api/EnvironmentMainCallsApi~editEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentResponse}
+     * data is of type: {@link module:model/Environment}
      */
     editEnvironment(environmentId, opts, callback) {
       opts = opts || {};
@@ -117,7 +117,7 @@ export default class EnvironmentMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentResponse;
+      let returnType = Environment;
       return this.apiClient.callApi(
         '/environment/{environmentId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -129,7 +129,7 @@ export default class EnvironmentMainCallsApi {
      * Callback function to receive the result of the getEnvironment operation.
      * @callback module:api/EnvironmentMainCallsApi~getEnvironmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentResponse} data The data returned by the service call.
+     * @param {module:model/Environment} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -137,7 +137,7 @@ export default class EnvironmentMainCallsApi {
      * Get environment by ID
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentMainCallsApi~getEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentResponse}
+     * data is of type: {@link module:model/Environment}
      */
     getEnvironment(environmentId, callback) {
       let postBody = null;
@@ -159,7 +159,7 @@ export default class EnvironmentMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = EnvironmentResponse;
+      let returnType = Environment;
       return this.apiClient.callApi(
         '/environment/{environmentId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

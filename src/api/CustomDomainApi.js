@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import CustomDomain from '../model/CustomDomain';
 import CustomDomainRequest from '../model/CustomDomainRequest';
-import CustomDomainResponse from '../model/CustomDomainResponse';
 import CustomDomainResponseList from '../model/CustomDomainResponseList';
 
 /**
@@ -40,7 +40,7 @@ export default class CustomDomainApi {
      * Callback function to receive the result of the createApplicationCustomDomain operation.
      * @callback module:api/CustomDomainApi~createApplicationCustomDomainCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CustomDomainResponse} data The data returned by the service call.
+     * @param {module:model/CustomDomain} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,7 +51,7 @@ export default class CustomDomainApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomDomainRequest} opts.customDomainRequest 
      * @param {module:api/CustomDomainApi~createApplicationCustomDomainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomDomainResponse}
+     * data is of type: {@link module:model/CustomDomain}
      */
     createApplicationCustomDomain(applicationId, opts, callback) {
       opts = opts || {};
@@ -74,7 +74,7 @@ export default class CustomDomainApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CustomDomainResponse;
+      let returnType = CustomDomain;
       return this.apiClient.callApi(
         '/application/{applicationId}/customDomain', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -134,7 +134,7 @@ export default class CustomDomainApi {
      * Callback function to receive the result of the editCustomDomain operation.
      * @callback module:api/CustomDomainApi~editCustomDomainCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CustomDomainResponse} data The data returned by the service call.
+     * @param {module:model/CustomDomain} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -146,7 +146,7 @@ export default class CustomDomainApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/CustomDomainRequest} opts.customDomainRequest 
      * @param {module:api/CustomDomainApi~editCustomDomainCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomDomainResponse}
+     * data is of type: {@link module:model/CustomDomain}
      */
     editCustomDomain(applicationId, customDomainId, opts, callback) {
       opts = opts || {};
@@ -174,7 +174,7 @@ export default class CustomDomainApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CustomDomainResponse;
+      let returnType = CustomDomain;
       return this.apiClient.callApi(
         '/application/{applicationId}/customDomain/{customDomainId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -186,7 +186,7 @@ export default class CustomDomainApi {
      * Callback function to receive the result of the getCustomDomainStatus operation.
      * @callback module:api/CustomDomainApi~getCustomDomainStatusCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CustomDomainResponse} data The data returned by the service call.
+     * @param {module:model/CustomDomain} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -195,7 +195,7 @@ export default class CustomDomainApi {
      * @param {String} applicationId Application ID
      * @param {String} customDomainId Custom Domain ID
      * @param {module:api/CustomDomainApi~getCustomDomainStatusCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CustomDomainResponse}
+     * data is of type: {@link module:model/CustomDomain}
      */
     getCustomDomainStatus(applicationId, customDomainId, callback) {
       let postBody = null;
@@ -222,7 +222,7 @@ export default class CustomDomainApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = CustomDomainResponse;
+      let returnType = CustomDomain;
       return this.apiClient.callApi(
         '/application/{applicationId}/customDomain/{customDomainId}/status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

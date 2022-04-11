@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import DatabaseResponse from '../model/DatabaseResponse';
+import Database from '../model/Database';
 import DatabaseResponseList from '../model/DatabaseResponseList';
-import LogicalDatabaseResponse from '../model/LogicalDatabaseResponse';
+import LogicalDatabase from '../model/LogicalDatabase';
 import LogicalDatabaseResponseList from '../model/LogicalDatabaseResponseList';
 
 /**
@@ -41,7 +41,7 @@ export default class ApplicationDatabaseApi {
      * Callback function to receive the result of the attachDatabasetoApplication operation.
      * @callback module:api/ApplicationDatabaseApi~attachDatabasetoApplicationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DatabaseResponse} data The data returned by the service call.
+     * @param {module:model/Database} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,7 +50,7 @@ export default class ApplicationDatabaseApi {
      * @param {String} applicationId Application ID
      * @param {String} targetDatabaseId Target database ID
      * @param {module:api/ApplicationDatabaseApi~attachDatabasetoApplicationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DatabaseResponse}
+     * data is of type: {@link module:model/Database}
      */
     attachDatabasetoApplication(applicationId, targetDatabaseId, callback) {
       let postBody = null;
@@ -77,7 +77,7 @@ export default class ApplicationDatabaseApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = DatabaseResponse;
+      let returnType = Database;
       return this.apiClient.callApi(
         '/application/{applicationId}/database/{targetDatabaseId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +89,7 @@ export default class ApplicationDatabaseApi {
      * Callback function to receive the result of the attachLogicalDatabasetoApplication operation.
      * @callback module:api/ApplicationDatabaseApi~attachLogicalDatabasetoApplicationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LogicalDatabaseResponse} data The data returned by the service call.
+     * @param {module:model/LogicalDatabase} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -98,7 +98,7 @@ export default class ApplicationDatabaseApi {
      * @param {String} applicationId Application ID
      * @param {String} targetLogicalDatabaseId Target database ID
      * @param {module:api/ApplicationDatabaseApi~attachLogicalDatabasetoApplicationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LogicalDatabaseResponse}
+     * data is of type: {@link module:model/LogicalDatabase}
      */
     attachLogicalDatabasetoApplication(applicationId, targetLogicalDatabaseId, callback) {
       let postBody = null;
@@ -125,7 +125,7 @@ export default class ApplicationDatabaseApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = LogicalDatabaseResponse;
+      let returnType = LogicalDatabase;
       return this.apiClient.callApi(
         '/application/{applicationId}/logicalDatabase/{targetLogicalDatabaseId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

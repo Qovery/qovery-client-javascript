@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import AwsCredentialsRequest from '../model/AwsCredentialsRequest';
-import ClusterCredentialsResponse from '../model/ClusterCredentialsResponse';
+import ClusterCredentials from '../model/ClusterCredentials';
 import ClusterCredentialsResponseList from '../model/ClusterCredentialsResponseList';
 import DoCredentialsRequest from '../model/DoCredentialsRequest';
 import ScalewayCredentialsRequest from '../model/ScalewayCredentialsRequest';
@@ -42,7 +42,7 @@ export default class CloudProviderCredentialsApi {
      * Callback function to receive the result of the createAWSCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~createAWSCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCredentialsResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -52,7 +52,7 @@ export default class CloudProviderCredentialsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/AwsCredentialsRequest} opts.awsCredentialsRequest 
      * @param {module:api/CloudProviderCredentialsApi~createAWSCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCredentialsResponse}
+     * data is of type: {@link module:model/ClusterCredentials}
      */
     createAWSCredentials(organizationId, opts, callback) {
       opts = opts || {};
@@ -75,7 +75,7 @@ export default class CloudProviderCredentialsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterCredentialsResponse;
+      let returnType = ClusterCredentials;
       return this.apiClient.callApi(
         '/organization/{organizationId}/aws/credentials', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -87,7 +87,7 @@ export default class CloudProviderCredentialsApi {
      * Callback function to receive the result of the createDOCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~createDOCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCredentialsResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -97,7 +97,7 @@ export default class CloudProviderCredentialsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/DoCredentialsRequest} opts.doCredentialsRequest 
      * @param {module:api/CloudProviderCredentialsApi~createDOCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCredentialsResponse}
+     * data is of type: {@link module:model/ClusterCredentials}
      */
     createDOCredentials(organizationId, opts, callback) {
       opts = opts || {};
@@ -120,7 +120,7 @@ export default class CloudProviderCredentialsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterCredentialsResponse;
+      let returnType = ClusterCredentials;
       return this.apiClient.callApi(
         '/organization/{organizationId}/digitalOcean/credentials', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -132,7 +132,7 @@ export default class CloudProviderCredentialsApi {
      * Callback function to receive the result of the createScalewayCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~createScalewayCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCredentialsResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -142,7 +142,7 @@ export default class CloudProviderCredentialsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ScalewayCredentialsRequest} opts.scalewayCredentialsRequest 
      * @param {module:api/CloudProviderCredentialsApi~createScalewayCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCredentialsResponse}
+     * data is of type: {@link module:model/ClusterCredentials}
      */
     createScalewayCredentials(organizationId, opts, callback) {
       opts = opts || {};
@@ -165,7 +165,7 @@ export default class CloudProviderCredentialsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterCredentialsResponse;
+      let returnType = ClusterCredentials;
       return this.apiClient.callApi(
         '/organization/{organizationId}/scaleway/credentials', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -318,7 +318,7 @@ export default class CloudProviderCredentialsApi {
      * Callback function to receive the result of the editAWSCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~editAWSCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCredentialsResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -329,7 +329,7 @@ export default class CloudProviderCredentialsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/AwsCredentialsRequest} opts.awsCredentialsRequest 
      * @param {module:api/CloudProviderCredentialsApi~editAWSCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCredentialsResponse}
+     * data is of type: {@link module:model/ClusterCredentials}
      */
     editAWSCredentials(organizationId, credentialsId, opts, callback) {
       opts = opts || {};
@@ -357,7 +357,7 @@ export default class CloudProviderCredentialsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterCredentialsResponse;
+      let returnType = ClusterCredentials;
       return this.apiClient.callApi(
         '/organization/{organizationId}/aws/credentials/{credentialsId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -369,7 +369,7 @@ export default class CloudProviderCredentialsApi {
      * Callback function to receive the result of the editDOCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~editDOCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCredentialsResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -380,7 +380,7 @@ export default class CloudProviderCredentialsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/DoCredentialsRequest} opts.doCredentialsRequest 
      * @param {module:api/CloudProviderCredentialsApi~editDOCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCredentialsResponse}
+     * data is of type: {@link module:model/ClusterCredentials}
      */
     editDOCredentials(organizationId, credentialsId, opts, callback) {
       opts = opts || {};
@@ -408,7 +408,7 @@ export default class CloudProviderCredentialsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterCredentialsResponse;
+      let returnType = ClusterCredentials;
       return this.apiClient.callApi(
         '/organization/{organizationId}/digitalOcean/credentials/{credentialsId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -420,7 +420,7 @@ export default class CloudProviderCredentialsApi {
      * Callback function to receive the result of the editScalewayCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~editScalewayCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterCredentialsResponse} data The data returned by the service call.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -431,7 +431,7 @@ export default class CloudProviderCredentialsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ScalewayCredentialsRequest} opts.scalewayCredentialsRequest 
      * @param {module:api/CloudProviderCredentialsApi~editScalewayCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterCredentialsResponse}
+     * data is of type: {@link module:model/ClusterCredentials}
      */
     editScalewayCredentials(organizationId, credentialsId, opts, callback) {
       opts = opts || {};
@@ -459,7 +459,7 @@ export default class CloudProviderCredentialsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ClusterCredentialsResponse;
+      let returnType = ClusterCredentials;
       return this.apiClient.callApi(
         '/organization/{organizationId}/scaleway/credentials/{credentialsId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

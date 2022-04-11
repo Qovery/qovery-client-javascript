@@ -54,60 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.ClusterRequest);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cloudProvider (base name: "cloud_provider")', function() {
-      // uncomment below and update the code to test the property cloudProvider
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property region (base name: "region")', function() {
-      // uncomment below and update the code to test the property region
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property autoUpdate (base name: "auto_update")', function() {
-      // uncomment below and update the code to test the property autoUpdate
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cpu (base name: "cpu")', function() {
-      // uncomment below and update the code to test the property cpu
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property memory (base name: "memory")', function() {
-      // uncomment below and update the code to test the property memory
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property minRunningNodes (base name: "min_running_nodes")', function() {
-      // uncomment below and update the code to test the property minRunningNodes
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property maxRunningNodes (base name: "max_running_nodes")', function() {
-      // uncomment below and update the code to test the property maxRunningNodes
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property features (base name: "features")', function() {
       // uncomment below and update the code to test the property features
       //var instance = new QoveryApi.ClusterRequest();

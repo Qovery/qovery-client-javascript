@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createDatabase
 
-> DatabaseResponse createDatabase(environmentId, opts)
+> Database createDatabase(environmentId, opts)
 
 Create a database
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DatabaseResponse**](DatabaseResponse.md)
+[**Database**](Database.md)
 
 ### Authorization
 

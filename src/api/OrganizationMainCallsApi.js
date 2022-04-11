@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import Organization from '../model/Organization';
 import OrganizationEditRequest from '../model/OrganizationEditRequest';
 import OrganizationRequest from '../model/OrganizationRequest';
-import OrganizationResponse from '../model/OrganizationResponse';
 import OrganizationResponseList from '../model/OrganizationResponseList';
 
 /**
@@ -41,7 +41,7 @@ export default class OrganizationMainCallsApi {
      * Callback function to receive the result of the createOrganization operation.
      * @callback module:api/OrganizationMainCallsApi~createOrganizationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/OrganizationResponse} data The data returned by the service call.
+     * @param {module:model/Organization} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,7 +50,7 @@ export default class OrganizationMainCallsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/OrganizationRequest} opts.organizationRequest 
      * @param {module:api/OrganizationMainCallsApi~createOrganizationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/OrganizationResponse}
+     * data is of type: {@link module:model/Organization}
      */
     createOrganization(opts, callback) {
       opts = opts || {};
@@ -68,7 +68,7 @@ export default class OrganizationMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrganizationResponse;
+      let returnType = Organization;
       return this.apiClient.callApi(
         '/organization', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -122,7 +122,7 @@ export default class OrganizationMainCallsApi {
      * Callback function to receive the result of the editOrganization operation.
      * @callback module:api/OrganizationMainCallsApi~editOrganizationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/OrganizationResponse} data The data returned by the service call.
+     * @param {module:model/Organization} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -133,7 +133,7 @@ export default class OrganizationMainCallsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/OrganizationEditRequest} opts.organizationEditRequest 
      * @param {module:api/OrganizationMainCallsApi~editOrganizationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/OrganizationResponse}
+     * data is of type: {@link module:model/Organization}
      */
     editOrganization(organizationId, opts, callback) {
       opts = opts || {};
@@ -156,7 +156,7 @@ export default class OrganizationMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrganizationResponse;
+      let returnType = Organization;
       return this.apiClient.callApi(
         '/organization/{organizationId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -168,7 +168,7 @@ export default class OrganizationMainCallsApi {
      * Callback function to receive the result of the getOrganization operation.
      * @callback module:api/OrganizationMainCallsApi~getOrganizationCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/OrganizationResponse} data The data returned by the service call.
+     * @param {module:model/Organization} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -176,7 +176,7 @@ export default class OrganizationMainCallsApi {
      * Get organization by ID
      * @param {String} organizationId Organization ID
      * @param {module:api/OrganizationMainCallsApi~getOrganizationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/OrganizationResponse}
+     * data is of type: {@link module:model/Organization}
      */
     getOrganization(organizationId, callback) {
       let postBody = null;
@@ -198,7 +198,7 @@ export default class OrganizationMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = OrganizationResponse;
+      let returnType = Organization;
       return this.apiClient.callApi(
         '/organization/{organizationId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

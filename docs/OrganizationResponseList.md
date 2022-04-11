@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[OrganizationResponse]**](OrganizationResponse.md) |  | [optional] 
+**results** | [**[Organization]**](Organization.md) |  | [optional] 
 
 

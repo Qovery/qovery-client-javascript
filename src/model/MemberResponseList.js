@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import MemberResponse from './MemberResponse';
+import Member from './Member';
 
 /**
  * The MemberResponseList model module.
@@ -49,7 +49,7 @@ class MemberResponseList {
             obj = obj || new MemberResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [MemberResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Member]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class MemberResponseList {
 }
 
 /**
- * @member {Array.<module:model/MemberResponse>} results
+ * @member {Array.<module:model/Member>} results
  */
 MemberResponseList.prototype['results'] = undefined;
 

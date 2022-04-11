@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## editApplicationNetwork
 
-> ApplicationNetworkResponse editApplicationNetwork(applicationId, opts)
+> ApplicationNetwork editApplicationNetwork(applicationId, opts)
 
 Edit Application Network
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationNetworkResponse**](ApplicationNetworkResponse.md)
+[**ApplicationNetwork**](ApplicationNetwork.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## getApplicationNetwork
 
-> ApplicationNetworkResponse getApplicationNetwork(applicationId)
+> ApplicationNetwork getApplicationNetwork(applicationId)
 
 Get Application Network information
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationNetworkResponse**](ApplicationNetworkResponse.md)
+[**ApplicationNetwork**](ApplicationNetwork.md)
 
 ### Authorization
 

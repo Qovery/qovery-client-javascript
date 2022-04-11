@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import EnvironmentDeploymentRule from '../model/EnvironmentDeploymentRule';
 import EnvironmentDeploymentRuleEditRequest from '../model/EnvironmentDeploymentRuleEditRequest';
-import EnvironmentDeploymentRuleResponse from '../model/EnvironmentDeploymentRuleResponse';
 
 /**
 * EnvironmentDeploymentRule service.
@@ -39,7 +39,7 @@ export default class EnvironmentDeploymentRuleApi {
      * Callback function to receive the result of the editEnvironmentDeploymentRule operation.
      * @callback module:api/EnvironmentDeploymentRuleApi~editEnvironmentDeploymentRuleCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentDeploymentRuleResponse} data The data returned by the service call.
+     * @param {module:model/EnvironmentDeploymentRule} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,7 +50,7 @@ export default class EnvironmentDeploymentRuleApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/EnvironmentDeploymentRuleEditRequest} opts.environmentDeploymentRuleEditRequest 
      * @param {module:api/EnvironmentDeploymentRuleApi~editEnvironmentDeploymentRuleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentDeploymentRuleResponse}
+     * data is of type: {@link module:model/EnvironmentDeploymentRule}
      */
     editEnvironmentDeploymentRule(environmentId, deploymentRuleId, opts, callback) {
       opts = opts || {};
@@ -78,7 +78,7 @@ export default class EnvironmentDeploymentRuleApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentDeploymentRuleResponse;
+      let returnType = EnvironmentDeploymentRule;
       return this.apiClient.callApi(
         '/environment/{environmentId}/deploymentRule/{deploymentRuleId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -90,7 +90,7 @@ export default class EnvironmentDeploymentRuleApi {
      * Callback function to receive the result of the getEnvironmentDeploymentRule operation.
      * @callback module:api/EnvironmentDeploymentRuleApi~getEnvironmentDeploymentRuleCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentDeploymentRuleResponse} data The data returned by the service call.
+     * @param {module:model/EnvironmentDeploymentRule} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -98,7 +98,7 @@ export default class EnvironmentDeploymentRuleApi {
      * Get environment deployment rule
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentDeploymentRuleApi~getEnvironmentDeploymentRuleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentDeploymentRuleResponse}
+     * data is of type: {@link module:model/EnvironmentDeploymentRule}
      */
     getEnvironmentDeploymentRule(environmentId, callback) {
       let postBody = null;
@@ -120,7 +120,7 @@ export default class EnvironmentDeploymentRuleApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = EnvironmentDeploymentRuleResponse;
+      let returnType = EnvironmentDeploymentRule;
       return this.apiClient.callApi(
         '/environment/{environmentId}/deploymentRule', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -63,7 +63,7 @@ null (empty response body)
 
 ## editEnvironment
 
-> EnvironmentResponse editEnvironment(environmentId, opts)
+> Environment editEnvironment(environmentId, opts)
 
 Edit an environment
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentResponse**](EnvironmentResponse.md)
+[**Environment**](Environment.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ## getEnvironment
 
-> EnvironmentResponse getEnvironment(environmentId)
+> Environment getEnvironment(environmentId)
 
 Get environment by ID
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentResponse**](EnvironmentResponse.md)
+[**Environment**](Environment.md)
 
 ### Authorization
 

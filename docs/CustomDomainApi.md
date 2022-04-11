@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createApplicationCustomDomain
 
-> CustomDomainResponse createApplicationCustomDomain(applicationId, opts)
+> CustomDomain createApplicationCustomDomain(applicationId, opts)
 
 Add custom domain to the application.
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomDomainResponse**](CustomDomainResponse.md)
+[**CustomDomain**](CustomDomain.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ null (empty response body)
 
 ## editCustomDomain
 
-> CustomDomainResponse editCustomDomain(applicationId, customDomainId, opts)
+> CustomDomain editCustomDomain(applicationId, customDomainId, opts)
 
 Edit a Custom Domain
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomDomainResponse**](CustomDomainResponse.md)
+[**CustomDomain**](CustomDomain.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ## getCustomDomainStatus
 
-> CustomDomainResponse getCustomDomainStatus(applicationId, customDomainId)
+> CustomDomain getCustomDomainStatus(applicationId, customDomainId)
 
 Get Custom Domain status
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CustomDomainResponse**](CustomDomainResponse.md)
+[**CustomDomain**](CustomDomain.md)
 
 ### Authorization
 

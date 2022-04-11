@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InstanceResponse from './InstanceResponse';
+import Instance from './Instance';
 
 /**
  * The EnvironmentApplicationsInstanceResponseListResults model module.
@@ -24,7 +24,7 @@ class EnvironmentApplicationsInstanceResponseListResults {
      * Constructs a new <code>EnvironmentApplicationsInstanceResponseListResults</code>.
      * @alias module:model/EnvironmentApplicationsInstanceResponseListResults
      * @param application {String} 
-     * @param instances {Array.<module:model/InstanceResponse>} 
+     * @param instances {Array.<module:model/Instance>} 
      */
     constructor(application, instances) { 
         
@@ -56,7 +56,7 @@ class EnvironmentApplicationsInstanceResponseListResults {
                 obj['application'] = ApiClient.convertToType(data['application'], 'String');
             }
             if (data.hasOwnProperty('instances')) {
-                obj['instances'] = ApiClient.convertToType(data['instances'], [InstanceResponse]);
+                obj['instances'] = ApiClient.convertToType(data['instances'], [Instance]);
             }
         }
         return obj;
@@ -71,7 +71,7 @@ class EnvironmentApplicationsInstanceResponseListResults {
 EnvironmentApplicationsInstanceResponseListResults.prototype['application'] = undefined;
 
 /**
- * @member {Array.<module:model/InstanceResponse>} instances
+ * @member {Array.<module:model/Instance>} instances
  */
 EnvironmentApplicationsInstanceResponseListResults.prototype['instances'] = undefined;
 

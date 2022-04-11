@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[InvoiceResponse]**](InvoiceResponse.md) |  | [optional] 
+**results** | [**[Invoice]**](Invoice.md) |  | [optional] 
 
 

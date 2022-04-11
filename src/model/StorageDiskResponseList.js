@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import StorageDiskResponse from './StorageDiskResponse';
+import StorageDisk from './StorageDisk';
 
 /**
  * The StorageDiskResponseList model module.
@@ -49,7 +49,7 @@ class StorageDiskResponseList {
             obj = obj || new StorageDiskResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [StorageDiskResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [StorageDisk]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class StorageDiskResponseList {
 }
 
 /**
- * @member {Array.<module:model/StorageDiskResponse>} results
+ * @member {Array.<module:model/StorageDisk>} results
  */
 StorageDiskResponseList.prototype['results'] = undefined;
 

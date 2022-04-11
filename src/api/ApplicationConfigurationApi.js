@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import ApplicationNetwork from '../model/ApplicationNetwork';
 import ApplicationNetworkRequest from '../model/ApplicationNetworkRequest';
-import ApplicationNetworkResponse from '../model/ApplicationNetworkResponse';
 
 /**
 * ApplicationConfiguration service.
@@ -39,7 +39,7 @@ export default class ApplicationConfigurationApi {
      * Callback function to receive the result of the editApplicationNetwork operation.
      * @callback module:api/ApplicationConfigurationApi~editApplicationNetworkCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationNetworkResponse} data The data returned by the service call.
+     * @param {module:model/ApplicationNetwork} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,7 +50,7 @@ export default class ApplicationConfigurationApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ApplicationNetworkRequest} opts.applicationNetworkRequest 
      * @param {module:api/ApplicationConfigurationApi~editApplicationNetworkCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationNetworkResponse}
+     * data is of type: {@link module:model/ApplicationNetwork}
      */
     editApplicationNetwork(applicationId, opts, callback) {
       opts = opts || {};
@@ -73,7 +73,7 @@ export default class ApplicationConfigurationApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = ApplicationNetworkResponse;
+      let returnType = ApplicationNetwork;
       return this.apiClient.callApi(
         '/application/{applicationId}/network', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -85,7 +85,7 @@ export default class ApplicationConfigurationApi {
      * Callback function to receive the result of the getApplicationNetwork operation.
      * @callback module:api/ApplicationConfigurationApi~getApplicationNetworkCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationNetworkResponse} data The data returned by the service call.
+     * @param {module:model/ApplicationNetwork} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,7 +94,7 @@ export default class ApplicationConfigurationApi {
      * Get status of the application network settings.
      * @param {String} applicationId Application ID
      * @param {module:api/ApplicationConfigurationApi~getApplicationNetworkCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationNetworkResponse}
+     * data is of type: {@link module:model/ApplicationNetwork}
      */
     getApplicationNetwork(applicationId, callback) {
       let postBody = null;
@@ -116,7 +116,7 @@ export default class ApplicationConfigurationApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ApplicationNetworkResponse;
+      let returnType = ApplicationNetwork;
       return this.apiClient.callApi(
         '/application/{applicationId}/network', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

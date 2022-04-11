@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 ## createCluster
 
-> ClusterResponse createCluster(organizationId, opts)
+> Cluster createCluster(organizationId, opts)
 
 Create a cluster
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**Cluster**](Cluster.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ null (empty response body)
 
 ## deployCluster
 
-> ClusterStatusResponse deployCluster(organizationId, clusterId)
+> ClusterStatus deployCluster(organizationId, clusterId)
 
 Deploy a cluster
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterStatusResponse**](ClusterStatusResponse.md)
+[**ClusterStatus**](ClusterStatus.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ## editCluster
 
-> ClusterResponse editCluster(organizationId, clusterId, opts)
+> Cluster editCluster(organizationId, clusterId, opts)
 
 Edit a cluster
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**Cluster**](Cluster.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ## editRoutingTable
 
-> ClusterRoutingTableResponse editRoutingTable(organizationId, clusterId, opts)
+> ClusterRoutingTable editRoutingTable(organizationId, clusterId, opts)
 
 Edit routing table
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterRoutingTableResponse**](ClusterRoutingTableResponse.md)
+[**ClusterRoutingTable**](ClusterRoutingTable.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ## getClusterStatus
 
-> ClusterStatusResponse getClusterStatus(organizationId, clusterId)
+> ClusterStatus getClusterStatus(organizationId, clusterId)
 
 Get cluster status
 
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterStatusResponse**](ClusterStatusResponse.md)
+[**ClusterStatus**](ClusterStatus.md)
 
 ### Authorization
 
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationCloudProviderInfo
 
-> ClusterCloudProviderInfoResponse getOrganizationCloudProviderInfo(organizationId, clusterId)
+> ClusterCloudProviderInfo getOrganizationCloudProviderInfo(organizationId, clusterId)
 
 Get cluster cloud provider info and credentials
 
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCloudProviderInfoResponse**](ClusterCloudProviderInfoResponse.md)
+[**ClusterCloudProviderInfo**](ClusterCloudProviderInfo.md)
 
 ### Authorization
 
@@ -478,7 +478,7 @@ Name | Type | Description  | Notes
 
 ## getRoutingTable
 
-> ClusterRoutingTableResponse getRoutingTable(organizationId, clusterId)
+> ClusterRoutingTable getRoutingTable(organizationId, clusterId)
 
 Get routing table
 
@@ -515,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterRoutingTableResponse**](ClusterRoutingTableResponse.md)
+[**ClusterRoutingTable**](ClusterRoutingTable.md)
 
 ### Authorization
 
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 
 ## specifyClusterCloudProviderInfo
 
-> ClusterCloudProviderInfoResponse specifyClusterCloudProviderInfo(organizationId, clusterId, opts)
+> ClusterCloudProviderInfo specifyClusterCloudProviderInfo(organizationId, clusterId, opts)
 
 Specify cluster cloud provider info and credentials
 
@@ -615,7 +615,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCloudProviderInfoResponse**](ClusterCloudProviderInfoResponse.md)
+[**ClusterCloudProviderInfo**](ClusterCloudProviderInfo.md)
 
 ### Authorization
 
@@ -629,7 +629,7 @@ Name | Type | Description  | Notes
 
 ## stopCluster
 
-> ClusterStatusResponse stopCluster(organizationId, clusterId)
+> ClusterStatus stopCluster(organizationId, clusterId)
 
 Stop cluster
 
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterStatusResponse**](ClusterStatusResponse.md)
+[**ClusterStatus**](ClusterStatus.md)
 
 ### Authorization
 
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ## updateCluster
 
-> ClusterStatusResponse updateCluster(organizationId, clusterId)
+> ClusterStatus updateCluster(organizationId, clusterId)
 
 Update a cluster Version
 
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterStatusResponse**](ClusterStatusResponse.md)
+[**ClusterStatus**](ClusterStatus.md)
 
 ### Authorization
 

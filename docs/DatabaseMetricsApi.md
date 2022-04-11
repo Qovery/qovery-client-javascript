@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## getDatabaseCurrentMetric
 
-> DatabaseCurrentMetricResponse getDatabaseCurrentMetric(databaseId)
+> DatabaseCurrentMetric getDatabaseCurrentMetric(databaseId)
 
 Get current metric consumption of the database 
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DatabaseCurrentMetricResponse**](DatabaseCurrentMetricResponse.md)
+[**DatabaseCurrentMetric**](DatabaseCurrentMetric.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ## getDatabaseMetricRestart
 
-> MetricRestartResponse getDatabaseMetricRestart(databaseId, lastSeconds)
+> MetricRestart getDatabaseMetricRestart(databaseId, lastSeconds)
 
 List database restarts
 
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MetricRestartResponse**](MetricRestartResponse.md)
+[**MetricRestart**](MetricRestart.md)
 
 ### Authorization
 

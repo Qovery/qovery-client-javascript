@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import MetricCPUDatapointResponse from './MetricCPUDatapointResponse';
+import MetricCPUDatapoint from './MetricCPUDatapoint';
 
 /**
  * The MetricCPUDatapointResponseList model module.
@@ -49,7 +49,7 @@ class MetricCPUDatapointResponseList {
             obj = obj || new MetricCPUDatapointResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [MetricCPUDatapointResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [MetricCPUDatapoint]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class MetricCPUDatapointResponseList {
 }
 
 /**
- * @member {Array.<module:model/MetricCPUDatapointResponse>} results
+ * @member {Array.<module:model/MetricCPUDatapoint>} results
  */
 MetricCPUDatapointResponseList.prototype['results'] = undefined;
 

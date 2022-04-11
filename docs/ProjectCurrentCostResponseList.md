@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**projects** | [**[ProjectCurrentCostResponse]**](ProjectCurrentCostResponse.md) |  | [optional] 
+**projects** | [**[ProjectCurrentCost]**](ProjectCurrentCost.md) |  | [optional] 
 
 

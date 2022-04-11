@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentApplicationsCurrentScaleResponse from './EnvironmentApplicationsCurrentScaleResponse';
+import EnvironmentApplicationsCurrentScale from './EnvironmentApplicationsCurrentScale';
 
 /**
  * The EnvironmentApplicationsCurrentScaleResponseList model module.
@@ -49,7 +49,7 @@ class EnvironmentApplicationsCurrentScaleResponseList {
             obj = obj || new EnvironmentApplicationsCurrentScaleResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentApplicationsCurrentScaleResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentApplicationsCurrentScale]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentApplicationsCurrentScaleResponseList {
 }
 
 /**
- * @member {Array.<module:model/EnvironmentApplicationsCurrentScaleResponse>} results
+ * @member {Array.<module:model/EnvironmentApplicationsCurrentScale>} results
  */
 EnvironmentApplicationsCurrentScaleResponseList.prototype['results'] = undefined;
 

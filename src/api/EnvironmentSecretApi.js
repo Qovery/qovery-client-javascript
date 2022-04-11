@@ -14,9 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import Key from '../model/Key';
+import Secret from '../model/Secret';
 import SecretEditRequest from '../model/SecretEditRequest';
 import SecretRequest from '../model/SecretRequest';
-import SecretResponse from '../model/SecretResponse';
 import SecretResponseList from '../model/SecretResponseList';
 import Value from '../model/Value';
 
@@ -43,7 +43,7 @@ export default class EnvironmentSecretApi {
      * Callback function to receive the result of the createEnvironmentSecret operation.
      * @callback module:api/EnvironmentSecretApi~createEnvironmentSecretCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SecretResponse} data The data returned by the service call.
+     * @param {module:model/Secret} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -54,7 +54,7 @@ export default class EnvironmentSecretApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/SecretRequest} opts.secretRequest 
      * @param {module:api/EnvironmentSecretApi~createEnvironmentSecretCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SecretResponse}
+     * data is of type: {@link module:model/Secret}
      */
     createEnvironmentSecret(environmentId, opts, callback) {
       opts = opts || {};
@@ -77,7 +77,7 @@ export default class EnvironmentSecretApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SecretResponse;
+      let returnType = Secret;
       return this.apiClient.callApi(
         '/environment/{environmentId}/secret', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +89,7 @@ export default class EnvironmentSecretApi {
      * Callback function to receive the result of the createEnvironmentSecretAlias operation.
      * @callback module:api/EnvironmentSecretApi~createEnvironmentSecretAliasCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SecretResponse} data The data returned by the service call.
+     * @param {module:model/Secret} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -101,7 +101,7 @@ export default class EnvironmentSecretApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/Key} opts.key 
      * @param {module:api/EnvironmentSecretApi~createEnvironmentSecretAliasCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SecretResponse}
+     * data is of type: {@link module:model/Secret}
      */
     createEnvironmentSecretAlias(environmentId, secretId, opts, callback) {
       opts = opts || {};
@@ -129,7 +129,7 @@ export default class EnvironmentSecretApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SecretResponse;
+      let returnType = Secret;
       return this.apiClient.callApi(
         '/environment/{environmentId}/secret/{secretId}/alias', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -141,7 +141,7 @@ export default class EnvironmentSecretApi {
      * Callback function to receive the result of the createEnvironmentSecretOverride operation.
      * @callback module:api/EnvironmentSecretApi~createEnvironmentSecretOverrideCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SecretResponse} data The data returned by the service call.
+     * @param {module:model/Secret} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -153,7 +153,7 @@ export default class EnvironmentSecretApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/Value} opts.value 
      * @param {module:api/EnvironmentSecretApi~createEnvironmentSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SecretResponse}
+     * data is of type: {@link module:model/Secret}
      */
     createEnvironmentSecretOverride(environmentId, secretId, opts, callback) {
       opts = opts || {};
@@ -181,7 +181,7 @@ export default class EnvironmentSecretApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SecretResponse;
+      let returnType = Secret;
       return this.apiClient.callApi(
         '/environment/{environmentId}/secret/{secretId}/override', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -241,7 +241,7 @@ export default class EnvironmentSecretApi {
      * Callback function to receive the result of the editEnvironmentSecret operation.
      * @callback module:api/EnvironmentSecretApi~editEnvironmentSecretCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/SecretResponse} data The data returned by the service call.
+     * @param {module:model/Secret} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -252,7 +252,7 @@ export default class EnvironmentSecretApi {
      * @param {String} secretId Secret ID
      * @param {module:model/SecretEditRequest} secretEditRequest 
      * @param {module:api/EnvironmentSecretApi~editEnvironmentSecretCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SecretResponse}
+     * data is of type: {@link module:model/Secret}
      */
     editEnvironmentSecret(environmentId, secretId, secretEditRequest, callback) {
       let postBody = secretEditRequest;
@@ -283,7 +283,7 @@ export default class EnvironmentSecretApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = SecretResponse;
+      let returnType = Secret;
       return this.apiClient.callApi(
         '/environment/{environmentId}/secret/{secretId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

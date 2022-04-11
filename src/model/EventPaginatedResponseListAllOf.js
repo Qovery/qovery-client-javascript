@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EventResponse from './EventResponse';
+import Event from './Event';
 
 /**
  * The EventPaginatedResponseListAllOf model module.
@@ -49,7 +49,7 @@ class EventPaginatedResponseListAllOf {
             obj = obj || new EventPaginatedResponseListAllOf();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EventResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Event]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EventPaginatedResponseListAllOf {
 }
 
 /**
- * @member {Array.<module:model/EventResponse>} results
+ * @member {Array.<module:model/Event>} results
  */
 EventPaginatedResponseListAllOf.prototype['results'] = undefined;
 

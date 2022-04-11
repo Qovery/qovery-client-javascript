@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createEnvironmentSecret
 
-> SecretResponse createEnvironmentSecret(environmentId, opts)
+> Secret createEnvironmentSecret(environmentId, opts)
 
 Add a secret to the environment
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## createEnvironmentSecretAlias
 
-> SecretResponse createEnvironmentSecretAlias(environmentId, secretId, opts)
+> Secret createEnvironmentSecretAlias(environmentId, secretId, opts)
 
 Create a secret alias at the environment level
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## createEnvironmentSecretOverride
 
-> SecretResponse createEnvironmentSecretOverride(environmentId, secretId, opts)
+> Secret createEnvironmentSecretOverride(environmentId, secretId, opts)
 
 Create a secret override at the environment level
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ null (empty response body)
 
 ## editEnvironmentSecret
 
-> SecretResponse editEnvironmentSecret(environmentId, secretId, secretEditRequest)
+> Secret editEnvironmentSecret(environmentId, secretId, secretEditRequest)
 
 Edit a secret belonging to the environment
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SecretResponse**](SecretResponse.md)
+[**Secret**](Secret.md)
 
 ### Authorization
 

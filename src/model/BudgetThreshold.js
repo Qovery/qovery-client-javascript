@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import BudgetResponse from './BudgetResponse';
+import Budget from './Budget';
 
 /**
  * The BudgetThreshold model module.
@@ -23,10 +23,10 @@ class BudgetThreshold {
     /**
      * Constructs a new <code>BudgetThreshold</code>.
      * @alias module:model/BudgetThreshold
-     * @implements module:model/BudgetResponse
+     * @implements module:model/Budget
      */
     constructor() { 
-        BudgetResponse.initialize(this);
+        Budget.initialize(this);
         BudgetThreshold.initialize(this);
     }
 
@@ -48,7 +48,7 @@ class BudgetThreshold {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new BudgetThreshold();
-            BudgetResponse.constructFromObject(data, obj);
+            Budget.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('total_in_cents')) {
                 obj['total_in_cents'] = ApiClient.convertToType(data['total_in_cents'], 'Number');
@@ -82,19 +82,19 @@ BudgetThreshold.prototype['total'] = undefined;
 BudgetThreshold.prototype['currency_code'] = undefined;
 
 
-// Implement BudgetResponse interface:
+// Implement Budget interface:
 /**
  * @member {Number} total_in_cents
  */
-BudgetResponse.prototype['total_in_cents'] = undefined;
+Budget.prototype['total_in_cents'] = undefined;
 /**
  * @member {Number} total
  */
-BudgetResponse.prototype['total'] = undefined;
+Budget.prototype['total'] = undefined;
 /**
  * @member {String} currency_code
  */
-BudgetResponse.prototype['currency_code'] = undefined;
+Budget.prototype['currency_code'] = undefined;
 
 
 

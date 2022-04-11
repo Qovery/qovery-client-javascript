@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createApplicationEnvironmentVariable
 
-> EnvironmentVariableResponse createApplicationEnvironmentVariable(applicationId, opts)
+> EnvironmentVariable createApplicationEnvironmentVariable(applicationId, opts)
 
 Add an environment variable to the application
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ## createApplicationEnvironmentVariableAlias
 
-> EnvironmentVariableResponse createApplicationEnvironmentVariableAlias(applicationId, environmentVariableId, opts)
+> EnvironmentVariable createApplicationEnvironmentVariableAlias(applicationId, environmentVariableId, opts)
 
 Create an environment variable alias at the application level
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 ## createApplicationEnvironmentVariableOverride
 
-> EnvironmentVariableResponse createApplicationEnvironmentVariableOverride(applicationId, environmentVariableId, opts)
+> EnvironmentVariable createApplicationEnvironmentVariableOverride(applicationId, environmentVariableId, opts)
 
 Create an environment variable override at the application level
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ null (empty response body)
 
 ## editApplicationEnvironmentVariable
 
-> EnvironmentVariableResponse editApplicationEnvironmentVariable(applicationId, environmentVariableId, environmentVariableEditRequest)
+> EnvironmentVariable editApplicationEnvironmentVariable(applicationId, environmentVariableId, environmentVariableEditRequest)
 
 Edit an environment variable belonging to the application
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentVariableResponse**](EnvironmentVariableResponse.md)
+[**EnvironmentVariable**](EnvironmentVariable.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ## importEnvironmentVariable
 
-> VariableImportResponse importEnvironmentVariable(applicationId, opts)
+> VariableImport importEnvironmentVariable(applicationId, opts)
 
 Import variables
 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**VariableImportResponse**](VariableImportResponse.md)
+[**VariableImport**](VariableImport.md)
 
 ### Authorization
 

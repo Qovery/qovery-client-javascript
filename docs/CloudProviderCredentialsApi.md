@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## createAWSCredentials
 
-> ClusterCredentialsResponse createAWSCredentials(organizationId, opts)
+> ClusterCredentials createAWSCredentials(organizationId, opts)
 
 Create AWS credentials set
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCredentialsResponse**](ClusterCredentialsResponse.md)
+[**ClusterCredentials**](ClusterCredentials.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ## createDOCredentials
 
-> ClusterCredentialsResponse createDOCredentials(organizationId, opts)
+> ClusterCredentials createDOCredentials(organizationId, opts)
 
 Create Digital Ocean credentials set
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCredentialsResponse**](ClusterCredentialsResponse.md)
+[**ClusterCredentials**](ClusterCredentials.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## createScalewayCredentials
 
-> ClusterCredentialsResponse createScalewayCredentials(organizationId, opts)
+> ClusterCredentials createScalewayCredentials(organizationId, opts)
 
 Create Scaleway credentials set
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCredentialsResponse**](ClusterCredentialsResponse.md)
+[**ClusterCredentials**](ClusterCredentials.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ null (empty response body)
 
 ## editAWSCredentials
 
-> ClusterCredentialsResponse editAWSCredentials(organizationId, credentialsId, opts)
+> ClusterCredentials editAWSCredentials(organizationId, credentialsId, opts)
 
 Edit a set of AWS credentials
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCredentialsResponse**](ClusterCredentialsResponse.md)
+[**ClusterCredentials**](ClusterCredentials.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 
 ## editDOCredentials
 
-> ClusterCredentialsResponse editDOCredentials(organizationId, credentialsId, opts)
+> ClusterCredentials editDOCredentials(organizationId, credentialsId, opts)
 
 Edit a set of Digital Ocean credentials
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCredentialsResponse**](ClusterCredentialsResponse.md)
+[**ClusterCredentials**](ClusterCredentials.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 
 ## editScalewayCredentials
 
-> ClusterCredentialsResponse editScalewayCredentials(organizationId, credentialsId, opts)
+> ClusterCredentials editScalewayCredentials(organizationId, credentialsId, opts)
 
 Edit a set of Scaleway credentials
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterCredentialsResponse**](ClusterCredentialsResponse.md)
+[**ClusterCredentials**](ClusterCredentials.md)
 
 ### Authorization
 

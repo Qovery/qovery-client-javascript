@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import OrganizationApiTokenCreate from '../model/OrganizationApiTokenCreate';
 import OrganizationApiTokenCreateRequest from '../model/OrganizationApiTokenCreateRequest';
-import OrganizationApiTokenCreateResponse from '../model/OrganizationApiTokenCreateResponse';
 import OrganizationApiTokenResponseList from '../model/OrganizationApiTokenResponseList';
 
 /**
@@ -40,7 +40,7 @@ export default class OrganizationApiTokenApi {
      * Callback function to receive the result of the createOrganizationApiToken operation.
      * @callback module:api/OrganizationApiTokenApi~createOrganizationApiTokenCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/OrganizationApiTokenCreateResponse} data The data returned by the service call.
+     * @param {module:model/OrganizationApiTokenCreate} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,7 +51,7 @@ export default class OrganizationApiTokenApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/OrganizationApiTokenCreateRequest} opts.organizationApiTokenCreateRequest 
      * @param {module:api/OrganizationApiTokenApi~createOrganizationApiTokenCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/OrganizationApiTokenCreateResponse}
+     * data is of type: {@link module:model/OrganizationApiTokenCreate}
      */
     createOrganizationApiToken(organizationId, opts, callback) {
       opts = opts || {};
@@ -74,7 +74,7 @@ export default class OrganizationApiTokenApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = OrganizationApiTokenCreateResponse;
+      let returnType = OrganizationApiTokenCreate;
       return this.apiClient.callApi(
         '/organization/{organizationId}/apiToken', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

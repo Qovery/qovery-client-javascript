@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import GitRepositoryResponse from './GitRepositoryResponse';
+import GitRepository from './GitRepository';
 
 /**
  * The GitRepositoryResponseList model module.
@@ -49,7 +49,7 @@ class GitRepositoryResponseList {
             obj = obj || new GitRepositoryResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [GitRepositoryResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [GitRepository]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class GitRepositoryResponseList {
 }
 
 /**
- * @member {Array.<module:model/GitRepositoryResponse>} results
+ * @member {Array.<module:model/GitRepository>} results
  */
 GitRepositoryResponseList.prototype['results'] = undefined;
 

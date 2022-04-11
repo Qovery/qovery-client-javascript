@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import Backup from '../model/Backup';
 import BackupPaginatedResponseList from '../model/BackupPaginatedResponseList';
 import BackupRequest from '../model/BackupRequest';
-import BackupResponse from '../model/BackupResponse';
 
 /**
 * Backups service.
@@ -40,7 +40,7 @@ export default class BackupsApi {
      * Callback function to receive the result of the addBackupDatabase operation.
      * @callback module:api/BackupsApi~addBackupDatabaseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/BackupResponse} data The data returned by the service call.
+     * @param {module:model/Backup} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -50,7 +50,7 @@ export default class BackupsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/BackupRequest} opts.backupRequest 
      * @param {module:api/BackupsApi~addBackupDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BackupResponse}
+     * data is of type: {@link module:model/Backup}
      */
     addBackupDatabase(databaseId, opts, callback) {
       opts = opts || {};
@@ -73,7 +73,7 @@ export default class BackupsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = BackupResponse;
+      let returnType = Backup;
       return this.apiClient.callApi(
         '/database/{databaseId}/backup', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

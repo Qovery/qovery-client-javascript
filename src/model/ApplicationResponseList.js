@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationResponse from './ApplicationResponse';
+import Application from './Application';
 
 /**
  * The ApplicationResponseList model module.
@@ -49,7 +49,7 @@ class ApplicationResponseList {
             obj = obj || new ApplicationResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ApplicationResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Application]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ApplicationResponseList {
 }
 
 /**
- * @member {Array.<module:model/ApplicationResponse>} results
+ * @member {Array.<module:model/Application>} results
  */
 ApplicationResponseList.prototype['results'] = undefined;
 

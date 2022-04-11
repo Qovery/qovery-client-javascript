@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import EnvironmentVariable from '../model/EnvironmentVariable';
 import EnvironmentVariableEditRequest from '../model/EnvironmentVariableEditRequest';
 import EnvironmentVariableRequest from '../model/EnvironmentVariableRequest';
-import EnvironmentVariableResponse from '../model/EnvironmentVariableResponse';
 import EnvironmentVariableResponseList from '../model/EnvironmentVariableResponseList';
 import Key from '../model/Key';
 import Value from '../model/Value';
@@ -43,7 +43,7 @@ export default class EnvironmentVariableApi {
      * Callback function to receive the result of the createEnvironmentEnvironmentVariable operation.
      * @callback module:api/EnvironmentVariableApi~createEnvironmentEnvironmentVariableCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentVariableResponse} data The data returned by the service call.
+     * @param {module:model/EnvironmentVariable} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -54,7 +54,7 @@ export default class EnvironmentVariableApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/EnvironmentVariableRequest} opts.environmentVariableRequest 
      * @param {module:api/EnvironmentVariableApi~createEnvironmentEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentVariableResponse}
+     * data is of type: {@link module:model/EnvironmentVariable}
      */
     createEnvironmentEnvironmentVariable(environmentId, opts, callback) {
       opts = opts || {};
@@ -77,7 +77,7 @@ export default class EnvironmentVariableApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentVariableResponse;
+      let returnType = EnvironmentVariable;
       return this.apiClient.callApi(
         '/environment/{environmentId}/environmentVariable', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +89,7 @@ export default class EnvironmentVariableApi {
      * Callback function to receive the result of the createEnvironmentEnvironmentVariableAlias operation.
      * @callback module:api/EnvironmentVariableApi~createEnvironmentEnvironmentVariableAliasCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentVariableResponse} data The data returned by the service call.
+     * @param {module:model/EnvironmentVariable} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -101,7 +101,7 @@ export default class EnvironmentVariableApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/Key} opts.key 
      * @param {module:api/EnvironmentVariableApi~createEnvironmentEnvironmentVariableAliasCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentVariableResponse}
+     * data is of type: {@link module:model/EnvironmentVariable}
      */
     createEnvironmentEnvironmentVariableAlias(environmentId, environmentVariableId, opts, callback) {
       opts = opts || {};
@@ -129,7 +129,7 @@ export default class EnvironmentVariableApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentVariableResponse;
+      let returnType = EnvironmentVariable;
       return this.apiClient.callApi(
         '/environment/{environmentId}/environmentVariable/{environmentVariableId}/alias', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -141,7 +141,7 @@ export default class EnvironmentVariableApi {
      * Callback function to receive the result of the createEnvironmentEnvironmentVariableOverride operation.
      * @callback module:api/EnvironmentVariableApi~createEnvironmentEnvironmentVariableOverrideCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentVariableResponse} data The data returned by the service call.
+     * @param {module:model/EnvironmentVariable} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -153,7 +153,7 @@ export default class EnvironmentVariableApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/Value} opts.value 
      * @param {module:api/EnvironmentVariableApi~createEnvironmentEnvironmentVariableOverrideCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentVariableResponse}
+     * data is of type: {@link module:model/EnvironmentVariable}
      */
     createEnvironmentEnvironmentVariableOverride(environmentId, environmentVariableId, opts, callback) {
       opts = opts || {};
@@ -181,7 +181,7 @@ export default class EnvironmentVariableApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentVariableResponse;
+      let returnType = EnvironmentVariable;
       return this.apiClient.callApi(
         '/environment/{environmentId}/environmentVariable/{environmentVariableId}/override', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -241,7 +241,7 @@ export default class EnvironmentVariableApi {
      * Callback function to receive the result of the editEnvironmentEnvironmentVariable operation.
      * @callback module:api/EnvironmentVariableApi~editEnvironmentEnvironmentVariableCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentVariableResponse} data The data returned by the service call.
+     * @param {module:model/EnvironmentVariable} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -252,7 +252,7 @@ export default class EnvironmentVariableApi {
      * @param {String} environmentVariableId Environment Variable ID
      * @param {module:model/EnvironmentVariableEditRequest} environmentVariableEditRequest 
      * @param {module:api/EnvironmentVariableApi~editEnvironmentEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentVariableResponse}
+     * data is of type: {@link module:model/EnvironmentVariable}
      */
     editEnvironmentEnvironmentVariable(environmentId, environmentVariableId, environmentVariableEditRequest, callback) {
       let postBody = environmentVariableEditRequest;
@@ -283,7 +283,7 @@ export default class EnvironmentVariableApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentVariableResponse;
+      let returnType = EnvironmentVariable;
       return this.apiClient.callApi(
         '/environment/{environmentId}/environmentVariable/{environmentVariableId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

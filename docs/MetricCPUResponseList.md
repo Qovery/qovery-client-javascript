@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[MetricCPUResponse]**](MetricCPUResponse.md) |  | [optional] 
+**results** | [**[MetricCPU]**](MetricCPU.md) |  | [optional] 
 
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[LogResponse]**](LogResponse.md) |  | [optional] 
+**results** | [**[Log]**](Log.md) |  | [optional] 
 
 

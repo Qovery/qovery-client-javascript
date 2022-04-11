@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import CustomDomainResponse from './CustomDomainResponse';
+import CustomDomain from './CustomDomain';
 
 /**
  * The CustomDomainResponseList model module.
@@ -49,7 +49,7 @@ class CustomDomainResponseList {
             obj = obj || new CustomDomainResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [CustomDomainResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [CustomDomain]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class CustomDomainResponseList {
 }
 
 /**
- * @member {Array.<module:model/CustomDomainResponse>} results
+ * @member {Array.<module:model/CustomDomain>} results
  */
 CustomDomainResponseList.prototype['results'] = undefined;
 

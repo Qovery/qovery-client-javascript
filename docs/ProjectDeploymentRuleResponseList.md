@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ProjectDeploymentRuleResponse]**](ProjectDeploymentRuleResponse.md) |  | [optional] 
+**results** | [**[ProjectDeploymentRule]**](ProjectDeploymentRule.md) |  | [optional] 
 
 

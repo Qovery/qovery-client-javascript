@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import ReferralResponse from '../model/ReferralResponse';
-import RewardClaimResponse from '../model/RewardClaimResponse';
+import Referral from '../model/Referral';
+import RewardClaim from '../model/RewardClaim';
 
 /**
 * ReferralRewards service.
@@ -39,14 +39,14 @@ export default class ReferralRewardsApi {
      * Callback function to receive the result of the getAccountReferral operation.
      * @callback module:api/ReferralRewardsApi~getAccountReferralCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ReferralResponse} data The data returned by the service call.
+     * @param {module:model/Referral} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * Get your referral information
      * @param {module:api/ReferralRewardsApi~getAccountReferralCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ReferralResponse}
+     * data is of type: {@link module:model/Referral}
      */
     getAccountReferral(callback) {
       let postBody = null;
@@ -63,7 +63,7 @@ export default class ReferralRewardsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ReferralResponse;
+      let returnType = Referral;
       return this.apiClient.callApi(
         '/account/referral', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -83,12 +83,12 @@ export default class ReferralRewardsApi {
      * Claim a reward
      * A same code can be claimed only 3 times at max
      * @param {Object} opts Optional parameters
-     * @param {module:model/RewardClaimResponse} opts.rewardClaimResponse 
+     * @param {module:model/RewardClaim} opts.rewardClaim 
      * @param {module:api/ReferralRewardsApi~postAccountRewardClaimCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postAccountRewardClaim(opts, callback) {
       opts = opts || {};
-      let postBody = opts['rewardClaimResponse'];
+      let postBody = opts['rewardClaim'];
 
       let pathParams = {
       };

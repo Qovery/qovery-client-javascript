@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import BackupResponse from './BackupResponse';
+import Backup from './Backup';
 
 /**
  * The BackupResponseList model module.
@@ -49,7 +49,7 @@ class BackupResponseList {
             obj = obj || new BackupResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [BackupResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Backup]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class BackupResponseList {
 }
 
 /**
- * @member {Array.<module:model/BackupResponse>} results
+ * @member {Array.<module:model/Backup>} results
  */
 BackupResponseList.prototype['results'] = undefined;
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[EnvironmentLogResponse]**](EnvironmentLogResponse.md) |  | [optional] 
+**results** | [**[EnvironmentLog]**](EnvironmentLog.md) |  | [optional] 
 
 

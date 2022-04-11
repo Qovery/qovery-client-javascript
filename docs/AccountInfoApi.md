@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getAccountInformation
 
-> AccountInfoResponse getAccountInformation()
+> AccountInfo getAccountInformation()
 
 Get Account information
 
@@ -39,7 +39,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**AccountInfoResponse**](AccountInfoResponse.md)
+[**AccountInfo**](AccountInfo.md)
 
 ### Authorization
 

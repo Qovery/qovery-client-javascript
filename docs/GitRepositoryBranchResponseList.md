@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[GitRepositoryBranchResponse]**](GitRepositoryBranchResponse.md) |  | [optional] 
+**results** | [**[GitRepositoryBranch]**](GitRepositoryBranch.md) |  | [optional] 
 
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import CommitResponse from './CommitResponse';
+import Commit from './Commit';
 
 /**
  * The CommitResponseList model module.
@@ -49,7 +49,7 @@ class CommitResponseList {
             obj = obj || new CommitResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [CommitResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Commit]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class CommitResponseList {
 }
 
 /**
- * @member {Array.<module:model/CommitResponse>} results
+ * @member {Array.<module:model/Commit>} results
  */
 CommitResponseList.prototype['results'] = undefined;
 

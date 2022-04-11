@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
-import ApplicationCurrentScaleResponse from '../model/ApplicationCurrentScaleResponse';
+import ApplicationCurrentScale from '../model/ApplicationCurrentScale';
 import InstanceResponseList from '../model/InstanceResponseList';
 import MetricCPUResponseList from '../model/MetricCPUResponseList';
 import MetricGenericResponseList from '../model/MetricGenericResponseList';
 import MetricMemoryResponseList from '../model/MetricMemoryResponseList';
-import MetricRestartResponse from '../model/MetricRestartResponse';
+import MetricRestart from '../model/MetricRestart';
 import MetricStorageResponseList from '../model/MetricStorageResponseList';
 import StorageDiskResponseList from '../model/StorageDiskResponseList';
 
@@ -87,7 +87,7 @@ export default class ApplicationMetricsApi {
      * Callback function to receive the result of the getApplicationCurrentScale operation.
      * @callback module:api/ApplicationMetricsApi~getApplicationCurrentScaleCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationCurrentScaleResponse} data The data returned by the service call.
+     * @param {module:model/ApplicationCurrentScale} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -96,7 +96,7 @@ export default class ApplicationMetricsApi {
      * Returns min, max, and running number of instances of the application
      * @param {String} applicationId Application ID
      * @param {module:api/ApplicationMetricsApi~getApplicationCurrentScaleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationCurrentScaleResponse}
+     * data is of type: {@link module:model/ApplicationCurrentScale}
      */
     getApplicationCurrentScale(applicationId, callback) {
       let postBody = null;
@@ -118,7 +118,7 @@ export default class ApplicationMetricsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ApplicationCurrentScaleResponse;
+      let returnType = ApplicationCurrentScale;
       return this.apiClient.callApi(
         '/application/{applicationId}/currentScale', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -317,7 +317,7 @@ export default class ApplicationMetricsApi {
      * Callback function to receive the result of the getApplicationMetricRestart operation.
      * @callback module:api/ApplicationMetricsApi~getApplicationMetricRestartCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/MetricRestartResponse} data The data returned by the service call.
+     * @param {module:model/MetricRestart} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -327,7 +327,7 @@ export default class ApplicationMetricsApi {
      * @param {String} applicationId Application ID
      * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
      * @param {module:api/ApplicationMetricsApi~getApplicationMetricRestartCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MetricRestartResponse}
+     * data is of type: {@link module:model/MetricRestart}
      */
     getApplicationMetricRestart(applicationId, lastSeconds, callback) {
       let postBody = null;
@@ -354,7 +354,7 @@ export default class ApplicationMetricsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = MetricRestartResponse;
+      let returnType = MetricRestart;
       return this.apiClient.callApi(
         '/application/{applicationId}/metric/restart', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import CostResponse from './CostResponse';
+import Cost from './Cost';
 
 /**
  * The RemainingCredits model module.
@@ -23,13 +23,13 @@ class RemainingCredits {
     /**
      * Constructs a new <code>RemainingCredits</code>.
      * @alias module:model/RemainingCredits
-     * @implements module:model/CostResponse
+     * @implements module:model/Cost
      * @param totalInCents {Number} 
      * @param total {Number} 
      * @param currencyCode {String} 
      */
     constructor(totalInCents, total, currencyCode) { 
-        CostResponse.initialize(this, totalInCents, total, currencyCode);
+        Cost.initialize(this, totalInCents, total, currencyCode);
         RemainingCredits.initialize(this, totalInCents, total, currencyCode);
     }
 
@@ -54,7 +54,7 @@ class RemainingCredits {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new RemainingCredits();
-            CostResponse.constructFromObject(data, obj);
+            Cost.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('total_in_cents')) {
                 obj['total_in_cents'] = ApiClient.convertToType(data['total_in_cents'], 'Number');
@@ -88,19 +88,19 @@ RemainingCredits.prototype['total'] = undefined;
 RemainingCredits.prototype['currency_code'] = undefined;
 
 
-// Implement CostResponse interface:
+// Implement Cost interface:
 /**
  * @member {Number} total_in_cents
  */
-CostResponse.prototype['total_in_cents'] = undefined;
+Cost.prototype['total_in_cents'] = undefined;
 /**
  * @member {Number} total
  */
-CostResponse.prototype['total'] = undefined;
+Cost.prototype['total'] = undefined;
 /**
  * @member {String} currency_code
  */
-CostResponse.prototype['currency_code'] = undefined;
+Cost.prototype['currency_code'] = undefined;
 
 
 

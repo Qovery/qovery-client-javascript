@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## createLogicalDatabaseOnDatabase
 
-> LogicalDatabaseResponse createLogicalDatabaseOnDatabase(databaseId, opts)
+> LogicalDatabase createLogicalDatabaseOnDatabase(databaseId, opts)
 
 Create a logical database on the database
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LogicalDatabaseResponse**](LogicalDatabaseResponse.md)
+[**LogicalDatabase**](LogicalDatabase.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ null (empty response body)
 
 ## editLogicalDatabase
 
-> LogicalDatabaseResponse editLogicalDatabase(logicalDatabaseId, opts)
+> LogicalDatabase editLogicalDatabase(logicalDatabaseId, opts)
 
 Edit a logical database
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LogicalDatabaseResponse**](LogicalDatabaseResponse.md)
+[**LogicalDatabase**](LogicalDatabase.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ## editLogicalDatabaseCredentials
 
-> CredentialsResponse editLogicalDatabaseCredentials(logicalDatabaseId, opts)
+> Credentials editLogicalDatabaseCredentials(logicalDatabaseId, opts)
 
 Edit logical database credentials
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CredentialsResponse**](CredentialsResponse.md)
+[**Credentials**](Credentials.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ## getLogicalDatabase
 
-> LogicalDatabaseResponse getLogicalDatabase(logicalDatabaseId)
+> LogicalDatabase getLogicalDatabase(logicalDatabaseId)
 
 Get logical database by ID
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LogicalDatabaseResponse**](LogicalDatabaseResponse.md)
+[**LogicalDatabase**](LogicalDatabase.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ## getLogicalDatabaseCredentials
 
-> CredentialsResponse getLogicalDatabaseCredentials(logicalDatabaseId)
+> Credentials getLogicalDatabaseCredentials(logicalDatabaseId)
 
 Get  credentials of the logical database
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CredentialsResponse**](CredentialsResponse.md)
+[**Credentials**](Credentials.md)
 
 ### Authorization
 

@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import DeploymentHistoryEnvironment from './DeploymentHistoryEnvironment';
 import DeploymentHistoryEnvironmentPaginatedResponseListAllOf from './DeploymentHistoryEnvironmentPaginatedResponseListAllOf';
-import DeploymentHistoryEnvironmentResponse from './DeploymentHistoryEnvironmentResponse';
-import PaginationDataResponse from './PaginationDataResponse';
+import PaginationData from './PaginationData';
 
 /**
  * The DeploymentHistoryEnvironmentPaginatedResponseList model module.
@@ -25,13 +25,13 @@ class DeploymentHistoryEnvironmentPaginatedResponseList {
     /**
      * Constructs a new <code>DeploymentHistoryEnvironmentPaginatedResponseList</code>.
      * @alias module:model/DeploymentHistoryEnvironmentPaginatedResponseList
-     * @implements module:model/PaginationDataResponse
+     * @implements module:model/PaginationData
      * @implements module:model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);DeploymentHistoryEnvironmentPaginatedResponseListAllOf.initialize(this);
+        PaginationData.initialize(this, page, pageSize);DeploymentHistoryEnvironmentPaginatedResponseListAllOf.initialize(this);
         DeploymentHistoryEnvironmentPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -55,7 +55,7 @@ class DeploymentHistoryEnvironmentPaginatedResponseList {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new DeploymentHistoryEnvironmentPaginatedResponseList();
-            PaginationDataResponse.constructFromObject(data, obj);
+            PaginationData.constructFromObject(data, obj);
             DeploymentHistoryEnvironmentPaginatedResponseListAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
@@ -65,7 +65,7 @@ class DeploymentHistoryEnvironmentPaginatedResponseList {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryEnvironmentResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryEnvironment]);
             }
         }
         return obj;
@@ -85,23 +85,23 @@ DeploymentHistoryEnvironmentPaginatedResponseList.prototype['page'] = undefined;
 DeploymentHistoryEnvironmentPaginatedResponseList.prototype['page_size'] = undefined;
 
 /**
- * @member {Array.<module:model/DeploymentHistoryEnvironmentResponse>} results
+ * @member {Array.<module:model/DeploymentHistoryEnvironment>} results
  */
 DeploymentHistoryEnvironmentPaginatedResponseList.prototype['results'] = undefined;
 
 
-// Implement PaginationDataResponse interface:
+// Implement PaginationData interface:
 /**
  * @member {Number} page
  */
-PaginationDataResponse.prototype['page'] = undefined;
+PaginationData.prototype['page'] = undefined;
 /**
  * @member {Number} page_size
  */
-PaginationDataResponse.prototype['page_size'] = undefined;
+PaginationData.prototype['page_size'] = undefined;
 // Implement DeploymentHistoryEnvironmentPaginatedResponseListAllOf interface:
 /**
- * @member {Array.<module:model/DeploymentHistoryEnvironmentResponse>} results
+ * @member {Array.<module:model/DeploymentHistoryEnvironment>} results
  */
 DeploymentHistoryEnvironmentPaginatedResponseListAllOf.prototype['results'] = undefined;
 

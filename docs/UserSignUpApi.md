@@ -62,7 +62,7 @@ null (empty response body)
 
 ## getUserSignUp
 
-> BaseResponse getUserSignUp()
+> Base getUserSignUp()
 
 Get Sign up information
 
@@ -93,7 +93,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**BaseResponse**](BaseResponse.md)
+[**Base**](Base.md)
 
 ### Authorization
 

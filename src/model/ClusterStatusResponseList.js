@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterStatusResponse from './ClusterStatusResponse';
+import ClusterStatus from './ClusterStatus';
 
 /**
  * The ClusterStatusResponseList model module.
@@ -49,7 +49,7 @@ class ClusterStatusResponseList {
             obj = obj || new ClusterStatusResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ClusterStatusResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ClusterStatus]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ClusterStatusResponseList {
 }
 
 /**
- * @member {Array.<module:model/ClusterStatusResponse>} results
+ * @member {Array.<module:model/ClusterStatus>} results
  */
 ClusterStatusResponseList.prototype['results'] = undefined;
 

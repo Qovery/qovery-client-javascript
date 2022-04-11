@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[EnvironmentDatabasesCurrentMetricResponse]**](EnvironmentDatabasesCurrentMetricResponse.md) |  | [optional] 
+**results** | [**[EnvironmentDatabasesCurrentMetric]**](EnvironmentDatabasesCurrentMetric.md) |  | [optional] 
 
 

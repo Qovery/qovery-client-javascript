@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## attachDatabasetoApplication
 
-> DatabaseResponse attachDatabasetoApplication(applicationId, targetDatabaseId)
+> Database attachDatabasetoApplication(applicationId, targetDatabaseId)
 
 Link a database to the application
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DatabaseResponse**](DatabaseResponse.md)
+[**Database**](Database.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## attachLogicalDatabasetoApplication
 
-> LogicalDatabaseResponse attachLogicalDatabasetoApplication(applicationId, targetLogicalDatabaseId)
+> LogicalDatabase attachLogicalDatabasetoApplication(applicationId, targetLogicalDatabaseId)
 
 Link a logical database to the application
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LogicalDatabaseResponse**](LogicalDatabaseResponse.md)
+[**LogicalDatabase**](LogicalDatabase.md)
 
 ### Authorization
 

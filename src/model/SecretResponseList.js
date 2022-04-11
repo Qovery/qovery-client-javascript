@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import SecretResponse from './SecretResponse';
+import Secret from './Secret';
 
 /**
  * The SecretResponseList model module.
@@ -49,7 +49,7 @@ class SecretResponseList {
             obj = obj || new SecretResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [SecretResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Secret]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class SecretResponseList {
 }
 
 /**
- * @member {Array.<module:model/SecretResponse>} results
+ * @member {Array.<module:model/Secret>} results
  */
 SecretResponseList.prototype['results'] = undefined;
 

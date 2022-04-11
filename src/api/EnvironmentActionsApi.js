@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CloneRequest from '../model/CloneRequest';
-import EnvironmentResponse from '../model/EnvironmentResponse';
+import Environment from '../model/Environment';
 import EnvironmentRestartRequest from '../model/EnvironmentRestartRequest';
 import Status from '../model/Status';
 
@@ -84,7 +84,7 @@ export default class EnvironmentActionsApi {
      * Callback function to receive the result of the cloneEnvironment operation.
      * @callback module:api/EnvironmentActionsApi~cloneEnvironmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentResponse} data The data returned by the service call.
+     * @param {module:model/Environment} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -95,7 +95,7 @@ export default class EnvironmentActionsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/CloneRequest} opts.cloneRequest 
      * @param {module:api/EnvironmentActionsApi~cloneEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentResponse}
+     * data is of type: {@link module:model/Environment}
      */
     cloneEnvironment(environmentId, opts, callback) {
       opts = opts || {};
@@ -118,7 +118,7 @@ export default class EnvironmentActionsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EnvironmentResponse;
+      let returnType = Environment;
       return this.apiClient.callApi(
         '/environment/{environmentId}/clone', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

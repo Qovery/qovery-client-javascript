@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import CloudProviderResponse from './CloudProviderResponse';
+import CloudProvider from './CloudProvider';
 
 /**
  * The CloudProviderResponseList model module.
@@ -49,7 +49,7 @@ class CloudProviderResponseList {
             obj = obj || new CloudProviderResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [CloudProviderResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [CloudProvider]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class CloudProviderResponseList {
 }
 
 /**
- * @member {Array.<module:model/CloudProviderResponse>} results
+ * @member {Array.<module:model/CloudProvider>} results
  */
 CloudProviderResponseList.prototype['results'] = undefined;
 

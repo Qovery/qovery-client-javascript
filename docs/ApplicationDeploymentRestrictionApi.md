@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createApplicationDeploymentRestriction
 
-> BaseResponse createApplicationDeploymentRestriction(applicationId, opts)
+> Base createApplicationDeploymentRestriction(applicationId, opts)
 
 Create an application deployment restriction
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BaseResponse**](BaseResponse.md)
+[**Base**](Base.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ## getApplicationDeploymentRestrictions
 
-> ApplicationDeploymentRestrictionResponse getApplicationDeploymentRestrictions(applicationId)
+> ApplicationDeploymentRestriction getApplicationDeploymentRestrictions(applicationId)
 
 Get application deployment restrictions
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationDeploymentRestrictionResponse**](ApplicationDeploymentRestrictionResponse.md)
+[**ApplicationDeploymentRestriction**](ApplicationDeploymentRestriction.md)
 
 ### Authorization
 

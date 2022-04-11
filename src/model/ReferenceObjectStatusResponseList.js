@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ReferenceObjectStatusResponse from './ReferenceObjectStatusResponse';
+import ReferenceObjectStatus from './ReferenceObjectStatus';
 
 /**
  * The ReferenceObjectStatusResponseList model module.
@@ -49,7 +49,7 @@ class ReferenceObjectStatusResponseList {
             obj = obj || new ReferenceObjectStatusResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ReferenceObjectStatusResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ReferenceObjectStatus]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ReferenceObjectStatusResponseList {
 }
 
 /**
- * @member {Array.<module:model/ReferenceObjectStatusResponse>} results
+ * @member {Array.<module:model/ReferenceObjectStatus>} results
  */
 ReferenceObjectStatusResponseList.prototype['results'] = undefined;
 

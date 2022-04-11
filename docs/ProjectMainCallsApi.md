@@ -61,7 +61,7 @@ null (empty response body)
 
 ## editProject
 
-> ProjectResponse editProject(projectId, opts)
+> Project editProject(projectId, opts)
 
 Edit a project
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectResponse**](ProjectResponse.md)
+[**Project**](Project.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## getProject
 
-> ProjectResponse getProject(projectId)
+> Project getProject(projectId)
 
 Get project by ID
 
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectResponse**](ProjectResponse.md)
+[**Project**](Project.md)
 
 ### Authorization
 

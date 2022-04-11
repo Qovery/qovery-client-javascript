@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ## cloneEnvironment
 
-> EnvironmentResponse cloneEnvironment(environmentId, opts)
+> Environment cloneEnvironment(environmentId, opts)
 
 Clone environment
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**EnvironmentResponse**](EnvironmentResponse.md)
+[**Environment**](Environment.md)
 
 ### Authorization
 

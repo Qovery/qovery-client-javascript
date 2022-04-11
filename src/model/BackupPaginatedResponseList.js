@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
-import BackupResponse from './BackupResponse';
+import Backup from './Backup';
 import BackupResponseList from './BackupResponseList';
-import PaginationDataResponse from './PaginationDataResponse';
+import PaginationData from './PaginationData';
 
 /**
  * The BackupPaginatedResponseList model module.
@@ -25,13 +25,13 @@ class BackupPaginatedResponseList {
     /**
      * Constructs a new <code>BackupPaginatedResponseList</code>.
      * @alias module:model/BackupPaginatedResponseList
-     * @implements module:model/PaginationDataResponse
+     * @implements module:model/PaginationData
      * @implements module:model/BackupResponseList
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);BackupResponseList.initialize(this);
+        PaginationData.initialize(this, page, pageSize);BackupResponseList.initialize(this);
         BackupPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -55,7 +55,7 @@ class BackupPaginatedResponseList {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new BackupPaginatedResponseList();
-            PaginationDataResponse.constructFromObject(data, obj);
+            PaginationData.constructFromObject(data, obj);
             BackupResponseList.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
@@ -65,7 +65,7 @@ class BackupPaginatedResponseList {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [BackupResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Backup]);
             }
         }
         return obj;
@@ -85,23 +85,23 @@ BackupPaginatedResponseList.prototype['page'] = undefined;
 BackupPaginatedResponseList.prototype['page_size'] = undefined;
 
 /**
- * @member {Array.<module:model/BackupResponse>} results
+ * @member {Array.<module:model/Backup>} results
  */
 BackupPaginatedResponseList.prototype['results'] = undefined;
 
 
-// Implement PaginationDataResponse interface:
+// Implement PaginationData interface:
 /**
  * @member {Number} page
  */
-PaginationDataResponse.prototype['page'] = undefined;
+PaginationData.prototype['page'] = undefined;
 /**
  * @member {Number} page_size
  */
-PaginationDataResponse.prototype['page_size'] = undefined;
+PaginationData.prototype['page_size'] = undefined;
 // Implement BackupResponseList interface:
 /**
- * @member {Array.<module:model/BackupResponse>} results
+ * @member {Array.<module:model/Backup>} results
  */
 BackupResponseList.prototype['results'] = undefined;
 

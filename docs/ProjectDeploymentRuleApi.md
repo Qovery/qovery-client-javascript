@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createDeploymentRule
 
-> ProjectDeploymentRuleResponse createDeploymentRule(projectId, opts)
+> ProjectDeploymentRule createDeploymentRule(projectId, opts)
 
 Create a deployment rule
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectDeploymentRuleResponse**](ProjectDeploymentRuleResponse.md)
+[**ProjectDeploymentRule**](ProjectDeploymentRule.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ null (empty response body)
 
 ## editProjectDeployemtnRule
 
-> ProjectDeploymentRuleResponse editProjectDeployemtnRule(projectId, deploymentRuleId, opts)
+> ProjectDeploymentRule editProjectDeployemtnRule(projectId, deploymentRuleId, opts)
 
 Edit a project deployment rule
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectDeploymentRuleResponse**](ProjectDeploymentRuleResponse.md)
+[**ProjectDeploymentRule**](ProjectDeploymentRule.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ## getProjectDeploymentRule
 
-> ProjectDeploymentRuleResponse getProjectDeploymentRule(projectId, deploymentRuleId)
+> ProjectDeploymentRule getProjectDeploymentRule(projectId, deploymentRuleId)
 
 Get a project deployment rule
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ProjectDeploymentRuleResponse**](ProjectDeploymentRuleResponse.md)
+[**ProjectDeploymentRule**](ProjectDeploymentRule.md)
 
 ### Authorization
 

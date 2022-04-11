@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import UserResponse from './UserResponse';
+import User from './User';
 
 /**
  * The UserResponseList model module.
@@ -49,7 +49,7 @@ class UserResponseList {
             obj = obj || new UserResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [UserResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [User]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class UserResponseList {
 }
 
 /**
- * @member {Array.<module:model/UserResponse>} results
+ * @member {Array.<module:model/User>} results
  */
 UserResponseList.prototype['results'] = undefined;
 

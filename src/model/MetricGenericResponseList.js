@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import MetricGenericResponse from './MetricGenericResponse';
+import MetricGeneric from './MetricGeneric';
 
 /**
  * The MetricGenericResponseList model module.
@@ -49,7 +49,7 @@ class MetricGenericResponseList {
             obj = obj || new MetricGenericResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [MetricGenericResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [MetricGeneric]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class MetricGenericResponseList {
 }
 
 /**
- * @member {Array.<module:model/MetricGenericResponse>} results
+ * @member {Array.<module:model/MetricGeneric>} results
  */
 MetricGenericResponseList.prototype['results'] = undefined;
 

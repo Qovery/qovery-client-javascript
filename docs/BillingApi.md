@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 ## addCreditCard
 
-> CreditCardResponse addCreditCard(organizationId, opts)
+> CreditCard addCreditCard(organizationId, opts)
 
 Add credit card
 
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreditCardResponse**](CreditCardResponse.md)
+[**CreditCard**](CreditCard.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ null (empty response body)
 
 ## editOrganizationBillingInfo
 
-> BillingInfoResponse editOrganizationBillingInfo(organizationId, opts)
+> BillingInfo editOrganizationBillingInfo(organizationId, opts)
 
 Edit Organization Billing Info
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BillingInfoResponse**](BillingInfoResponse.md)
+[**BillingInfo**](BillingInfo.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## getClusterCurrentCost
 
-> CostRangeResponse getClusterCurrentCost(organizationId, clusterId)
+> CostRange getClusterCurrentCost(organizationId, clusterId)
 
 Get cluster current cost
 
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CostRangeResponse**](CostRangeResponse.md)
+[**CostRange**](CostRange.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationBillingInfo
 
-> BillingInfoResponse getOrganizationBillingInfo(organizationId)
+> BillingInfo getOrganizationBillingInfo(organizationId)
 
 Get organization billing info
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BillingInfoResponse**](BillingInfoResponse.md)
+[**BillingInfo**](BillingInfo.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationCurrentCost
 
-> OrganizationCurrentCostResponse getOrganizationCurrentCost(organizationId)
+> OrganizationCurrentCost getOrganizationCurrentCost(organizationId)
 
 Get organization current cost
 
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**OrganizationCurrentCostResponse**](OrganizationCurrentCostResponse.md)
+[**OrganizationCurrentCost**](OrganizationCurrentCost.md)
 
 ### Authorization
 
@@ -418,7 +418,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationInvoice
 
-> InvoiceResponse getOrganizationInvoice(organizationId, invoiceId)
+> Invoice getOrganizationInvoice(organizationId, invoiceId)
 
 Get organization invoice
 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InvoiceResponse**](InvoiceResponse.md)
+[**Invoice**](Invoice.md)
 
 ### Authorization
 
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationInvoicePDF
 
-> LinkResponse getOrganizationInvoicePDF(organizationId, invoiceId)
+> Link getOrganizationInvoicePDF(organizationId, invoiceId)
 
 Get invoice link
 
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LinkResponse**](LinkResponse.md)
+[**Link**](Link.md)
 
 ### Authorization
 

@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 
 **pageSize** | **Number** |  | 
-**results** | [**[DeploymentHistoryEnvironmentResponse]**](DeploymentHistoryEnvironmentResponse.md) |  | [optional] 
+**results** | [**[DeploymentHistoryEnvironment]**](DeploymentHistoryEnvironment.md) |  | [optional] 
 
 

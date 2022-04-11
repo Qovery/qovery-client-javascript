@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import Credentials from '../model/Credentials';
 import CredentialsRequest from '../model/CredentialsRequest';
-import CredentialsResponse from '../model/CredentialsResponse';
+import Database from '../model/Database';
 import DatabaseEditRequest from '../model/DatabaseEditRequest';
-import DatabaseResponse from '../model/DatabaseResponse';
 import Status from '../model/Status';
 import VersionResponseList from '../model/VersionResponseList';
 
@@ -85,7 +85,7 @@ export default class DatabaseMainCallsApi {
      * Callback function to receive the result of the editDatabase operation.
      * @callback module:api/DatabaseMainCallsApi~editDatabaseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DatabaseResponse} data The data returned by the service call.
+     * @param {module:model/Database} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -96,7 +96,7 @@ export default class DatabaseMainCallsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/DatabaseEditRequest} opts.databaseEditRequest 
      * @param {module:api/DatabaseMainCallsApi~editDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DatabaseResponse}
+     * data is of type: {@link module:model/Database}
      */
     editDatabase(databaseId, opts, callback) {
       opts = opts || {};
@@ -119,7 +119,7 @@ export default class DatabaseMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = DatabaseResponse;
+      let returnType = Database;
       return this.apiClient.callApi(
         '/database/{databaseId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -131,7 +131,7 @@ export default class DatabaseMainCallsApi {
      * Callback function to receive the result of the editDatabaseCredentials operation.
      * @callback module:api/DatabaseMainCallsApi~editDatabaseCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CredentialsResponse} data The data returned by the service call.
+     * @param {module:model/Credentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -141,7 +141,7 @@ export default class DatabaseMainCallsApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/CredentialsRequest} opts.credentialsRequest 
      * @param {module:api/DatabaseMainCallsApi~editDatabaseCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CredentialsResponse}
+     * data is of type: {@link module:model/Credentials}
      */
     editDatabaseCredentials(databaseId, opts, callback) {
       opts = opts || {};
@@ -164,7 +164,7 @@ export default class DatabaseMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = CredentialsResponse;
+      let returnType = Credentials;
       return this.apiClient.callApi(
         '/database/{databaseId}/masterCredentials', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -176,7 +176,7 @@ export default class DatabaseMainCallsApi {
      * Callback function to receive the result of the getDatabase operation.
      * @callback module:api/DatabaseMainCallsApi~getDatabaseCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DatabaseResponse} data The data returned by the service call.
+     * @param {module:model/Database} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -184,7 +184,7 @@ export default class DatabaseMainCallsApi {
      * Get database by ID
      * @param {String} databaseId Database ID
      * @param {module:api/DatabaseMainCallsApi~getDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DatabaseResponse}
+     * data is of type: {@link module:model/Database}
      */
     getDatabase(databaseId, callback) {
       let postBody = null;
@@ -206,7 +206,7 @@ export default class DatabaseMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = DatabaseResponse;
+      let returnType = Database;
       return this.apiClient.callApi(
         '/database/{databaseId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -218,7 +218,7 @@ export default class DatabaseMainCallsApi {
      * Callback function to receive the result of the getDatabaseMasterCredentials operation.
      * @callback module:api/DatabaseMainCallsApi~getDatabaseMasterCredentialsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CredentialsResponse} data The data returned by the service call.
+     * @param {module:model/Credentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -226,7 +226,7 @@ export default class DatabaseMainCallsApi {
      * Get master credentials of the database
      * @param {String} databaseId Database ID
      * @param {module:api/DatabaseMainCallsApi~getDatabaseMasterCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CredentialsResponse}
+     * data is of type: {@link module:model/Credentials}
      */
     getDatabaseMasterCredentials(databaseId, callback) {
       let postBody = null;
@@ -248,7 +248,7 @@ export default class DatabaseMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = CredentialsResponse;
+      let returnType = Credentials;
       return this.apiClient.callApi(
         '/database/{databaseId}/masterCredentials', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import Event from './Event';
 import EventPaginatedResponseListAllOf from './EventPaginatedResponseListAllOf';
-import EventResponse from './EventResponse';
-import PaginationDataResponse from './PaginationDataResponse';
+import PaginationData from './PaginationData';
 
 /**
  * The EventPaginatedResponseList model module.
@@ -25,13 +25,13 @@ class EventPaginatedResponseList {
     /**
      * Constructs a new <code>EventPaginatedResponseList</code>.
      * @alias module:model/EventPaginatedResponseList
-     * @implements module:model/PaginationDataResponse
+     * @implements module:model/PaginationData
      * @implements module:model/EventPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationDataResponse.initialize(this, page, pageSize);EventPaginatedResponseListAllOf.initialize(this);
+        PaginationData.initialize(this, page, pageSize);EventPaginatedResponseListAllOf.initialize(this);
         EventPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -55,7 +55,7 @@ class EventPaginatedResponseList {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new EventPaginatedResponseList();
-            PaginationDataResponse.constructFromObject(data, obj);
+            PaginationData.constructFromObject(data, obj);
             EventPaginatedResponseListAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
@@ -65,7 +65,7 @@ class EventPaginatedResponseList {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [EventResponse]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Event]);
             }
         }
         return obj;
@@ -85,23 +85,23 @@ EventPaginatedResponseList.prototype['page'] = undefined;
 EventPaginatedResponseList.prototype['page_size'] = undefined;
 
 /**
- * @member {Array.<module:model/EventResponse>} results
+ * @member {Array.<module:model/Event>} results
  */
 EventPaginatedResponseList.prototype['results'] = undefined;
 
 
-// Implement PaginationDataResponse interface:
+// Implement PaginationData interface:
 /**
  * @member {Number} page
  */
-PaginationDataResponse.prototype['page'] = undefined;
+PaginationData.prototype['page'] = undefined;
 /**
  * @member {Number} page_size
  */
-PaginationDataResponse.prototype['page_size'] = undefined;
+PaginationData.prototype['page_size'] = undefined;
 // Implement EventPaginatedResponseListAllOf interface:
 /**
- * @member {Array.<module:model/EventResponse>} results
+ * @member {Array.<module:model/Event>} results
  */
 EventPaginatedResponseListAllOf.prototype['results'] = undefined;
 

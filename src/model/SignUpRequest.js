@@ -12,25 +12,27 @@
  */
 
 import ApiClient from '../ApiClient';
+import CompanySizeEnum from './CompanySizeEnum';
+import TypeOfUseEnum from './TypeOfUseEnum';
 
 /**
- * The InlineObject2 model module.
- * @module model/InlineObject2
+ * The SignUpRequest model module.
+ * @module model/SignUpRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class InlineObject2 {
+class SignUpRequest {
     /**
-     * Constructs a new <code>InlineObject2</code>.
-     * @alias module:model/InlineObject2
+     * Constructs a new <code>SignUpRequest</code>.
+     * @alias module:model/SignUpRequest
      * @param firstName {String} 
      * @param lastName {String} 
      * @param userEmail {String} 
-     * @param typeOfUse {module:model/InlineObject2.TypeOfUseEnum} 
+     * @param typeOfUse {module:model/TypeOfUseEnum} 
      * @param qoveryUsage {String} 
      */
     constructor(firstName, lastName, userEmail, typeOfUse, qoveryUsage) { 
         
-        InlineObject2.initialize(this, firstName, lastName, userEmail, typeOfUse, qoveryUsage);
+        SignUpRequest.initialize(this, firstName, lastName, userEmail, typeOfUse, qoveryUsage);
     }
 
     /**
@@ -47,15 +49,15 @@ class InlineObject2 {
     }
 
     /**
-     * Constructs a <code>InlineObject2</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SignUpRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineObject2} obj Optional instance to populate.
-     * @return {module:model/InlineObject2} The populated <code>InlineObject2</code> instance.
+     * @param {module:model/SignUpRequest} obj Optional instance to populate.
+     * @return {module:model/SignUpRequest} The populated <code>SignUpRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new InlineObject2();
+            obj = obj || new SignUpRequest();
 
             if (data.hasOwnProperty('first_name')) {
                 obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
@@ -67,7 +69,7 @@ class InlineObject2 {
                 obj['user_email'] = ApiClient.convertToType(data['user_email'], 'String');
             }
             if (data.hasOwnProperty('type_of_use')) {
-                obj['type_of_use'] = ApiClient.convertToType(data['type_of_use'], 'String');
+                obj['type_of_use'] = TypeOfUseEnum.constructFromObject(data['type_of_use']);
             }
             if (data.hasOwnProperty('qovery_usage')) {
                 obj['qovery_usage'] = ApiClient.convertToType(data['qovery_usage'], 'String');
@@ -76,7 +78,7 @@ class InlineObject2 {
                 obj['company_name'] = ApiClient.convertToType(data['company_name'], 'String');
             }
             if (data.hasOwnProperty('company_size')) {
-                obj['company_size'] = ApiClient.convertToType(data['company_size'], 'String');
+                obj['company_size'] = CompanySizeEnum.constructFromObject(data['company_size']);
             }
             if (data.hasOwnProperty('user_role')) {
                 obj['user_role'] = ApiClient.convertToType(data['user_role'], 'String');
@@ -103,133 +105,67 @@ class InlineObject2 {
 /**
  * @member {String} first_name
  */
-InlineObject2.prototype['first_name'] = undefined;
+SignUpRequest.prototype['first_name'] = undefined;
 
 /**
  * @member {String} last_name
  */
-InlineObject2.prototype['last_name'] = undefined;
+SignUpRequest.prototype['last_name'] = undefined;
 
 /**
  * @member {String} user_email
  */
-InlineObject2.prototype['user_email'] = undefined;
+SignUpRequest.prototype['user_email'] = undefined;
 
 /**
- * @member {module:model/InlineObject2.TypeOfUseEnum} type_of_use
+ * @member {module:model/TypeOfUseEnum} type_of_use
  */
-InlineObject2.prototype['type_of_use'] = undefined;
+SignUpRequest.prototype['type_of_use'] = undefined;
 
 /**
  * @member {String} qovery_usage
  */
-InlineObject2.prototype['qovery_usage'] = undefined;
+SignUpRequest.prototype['qovery_usage'] = undefined;
 
 /**
  * @member {String} company_name
  */
-InlineObject2.prototype['company_name'] = undefined;
+SignUpRequest.prototype['company_name'] = undefined;
 
 /**
- * @member {module:model/InlineObject2.CompanySizeEnum} company_size
+ * @member {module:model/CompanySizeEnum} company_size
  */
-InlineObject2.prototype['company_size'] = undefined;
+SignUpRequest.prototype['company_size'] = undefined;
 
 /**
  * @member {String} user_role
  */
-InlineObject2.prototype['user_role'] = undefined;
+SignUpRequest.prototype['user_role'] = undefined;
 
 /**
  * @member {String} qovery_usage_other
  */
-InlineObject2.prototype['qovery_usage_other'] = undefined;
+SignUpRequest.prototype['qovery_usage_other'] = undefined;
 
 /**
  * @member {String} user_questions
  */
-InlineObject2.prototype['user_questions'] = undefined;
+SignUpRequest.prototype['user_questions'] = undefined;
 
 /**
  * @member {String} current_step
  */
-InlineObject2.prototype['current_step'] = undefined;
+SignUpRequest.prototype['current_step'] = undefined;
 
 /**
  * @member {Boolean} dx_auth
  */
-InlineObject2.prototype['dx_auth'] = undefined;
+SignUpRequest.prototype['dx_auth'] = undefined;
 
 
 
 
 
-/**
- * Allowed values for the <code>type_of_use</code> property.
- * @enum {String}
- * @readonly
- */
-InlineObject2['TypeOfUseEnum'] = {
 
-    /**
-     * value: "PERSONAL"
-     * @const
-     */
-    "PERSONAL": "PERSONAL",
-
-    /**
-     * value: "WORK"
-     * @const
-     */
-    "WORK": "WORK",
-
-    /**
-     * value: "SCHOOL"
-     * @const
-     */
-    "SCHOOL": "SCHOOL"
-};
-
-
-/**
- * Allowed values for the <code>company_size</code> property.
- * @enum {String}
- * @readonly
- */
-InlineObject2['CompanySizeEnum'] = {
-
-    /**
-     * value: "1-10"
-     * @const
-     */
-    "1-10": "1-10",
-
-    /**
-     * value: "11-50"
-     * @const
-     */
-    "11-50": "11-50",
-
-    /**
-     * value: "51-200"
-     * @const
-     */
-    "51-200": "51-200",
-
-    /**
-     * value: "201-500"
-     * @const
-     */
-    "201-500": "201-500",
-
-    /**
-     * value: "500+"
-     * @const
-     */
-    "500+": "500+"
-};
-
-
-
-export default InlineObject2;
+export default SignUpRequest;
 

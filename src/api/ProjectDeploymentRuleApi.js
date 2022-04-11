@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import InlineObject from '../model/InlineObject';
 import ProjectDeploymentRule from '../model/ProjectDeploymentRule';
 import ProjectDeploymentRuleRequest from '../model/ProjectDeploymentRuleRequest';
 import ProjectDeploymentRuleResponseList from '../model/ProjectDeploymentRuleResponseList';
+import ProjectDeploymentRulesPriorityOrderRequest from '../model/ProjectDeploymentRulesPriorityOrderRequest';
 
 /**
 * ProjectDeploymentRule service.
@@ -288,12 +288,12 @@ export default class ProjectDeploymentRuleApi {
      * Update deployment rules priority order
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject} opts.inlineObject 
+     * @param {module:model/ProjectDeploymentRulesPriorityOrderRequest} opts.projectDeploymentRulesPriorityOrderRequest 
      * @param {module:api/ProjectDeploymentRuleApi~updateDeploymentRulesPriorityOrderCallback} callback The callback function, accepting three arguments: error, data, response
      */
     updateDeploymentRulesPriorityOrder(projectId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject'];
+      let postBody = opts['projectDeploymentRulesPriorityOrderRequest'];
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
         throw new Error("Missing the required parameter 'projectId' when calling updateDeploymentRulesPriorityOrder");

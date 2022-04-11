@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentEnvironmentIdApplicationDeployApplications();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,23 +46,11 @@
       object[property] = value;
   }
 
-  describe('EnvironmentEnvironmentIdApplicationDeployApplications', function() {
-    it('should create an instance of EnvironmentEnvironmentIdApplicationDeployApplications', function() {
-      // uncomment below and update the code to test EnvironmentEnvironmentIdApplicationDeployApplications
-      //var instance = new QoveryApi.EnvironmentEnvironmentIdApplicationDeployApplications();
-      //expect(instance).to.be.a(QoveryApi.EnvironmentEnvironmentIdApplicationDeployApplications);
-    });
-
-    it('should have the property applicationId (base name: "application_id")', function() {
-      // uncomment below and update the code to test the property applicationId
-      //var instance = new QoveryApi.EnvironmentEnvironmentIdApplicationDeployApplications();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property gitCommitId (base name: "git_commit_id")', function() {
-      // uncomment below and update the code to test the property gitCommitId
-      //var instance = new QoveryApi.EnvironmentEnvironmentIdApplicationDeployApplications();
-      //expect(instance).to.be();
+  describe('TypeOfUseEnum', function() {
+    it('should create an instance of TypeOfUseEnum', function() {
+      // uncomment below and update the code to test TypeOfUseEnum
+      //var instance = new QoveryApi.TypeOfUseEnum();
+      //expect(instance).to.be.a(QoveryApi.TypeOfUseEnum);
     });
 
   });

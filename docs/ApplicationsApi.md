@@ -86,7 +86,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'inlineObject1': new QoveryApi.InlineObject1() // InlineObject1 | 
+  'deployAllRequest': new QoveryApi.DeployAllRequest() // DeployAllRequest | 
 };
 apiInstance.deployAllApplications(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -103,7 +103,7 @@ apiInstance.deployAllApplications(environmentId, opts, (error, data, response) =
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **environmentId** | **String**| Environment ID | 
- **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
+ **deployAllRequest** | [**DeployAllRequest**](DeployAllRequest.md)|  | [optional] 
 
 ### Return type
 

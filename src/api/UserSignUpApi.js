@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import Base from '../model/Base';
-import InlineObject2 from '../model/InlineObject2';
+import SignUp from '../model/SignUp';
+import SignUpRequest from '../model/SignUpRequest';
 
 /**
 * UserSignUp service.
@@ -47,12 +47,12 @@ export default class UserSignUpApi {
      * Send Sign Up request
      * Send a Sign Up request containing the user information
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject2} opts.inlineObject2 
+     * @param {module:model/SignUpRequest} opts.signUpRequest 
      * @param {module:api/UserSignUpApi~createUserSignUpCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createUserSignUp(opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject2'];
+      let postBody = opts['signUpRequest'];
 
       let pathParams = {
       };
@@ -78,7 +78,7 @@ export default class UserSignUpApi {
      * Callback function to receive the result of the getUserSignUp operation.
      * @callback module:api/UserSignUpApi~getUserSignUpCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Base} data The data returned by the service call.
+     * @param {module:model/SignUp} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -86,7 +86,7 @@ export default class UserSignUpApi {
      * Get Sign up information
      * Retrieve the Sign Up information of the user
      * @param {module:api/UserSignUpApi~getUserSignUpCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Base}
+     * data is of type: {@link module:model/SignUp}
      */
     getUserSignUp(callback) {
       let postBody = null;
@@ -103,7 +103,7 @@ export default class UserSignUpApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Base;
+      let returnType = SignUp;
       return this.apiClient.callApi(
         '/admin/userSignUp', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

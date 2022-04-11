@@ -1,50 +1,23 @@
-# QoveryApi.InlineObject2
+# QoveryApi.SignUp
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [readonly] 
+**createdAt** | **Date** |  | [readonly] 
+**updatedAt** | **Date** |  | [optional] [readonly] 
 **firstName** | **String** |  | 
 **lastName** | **String** |  | 
 **userEmail** | **String** |  | 
-**typeOfUse** | **String** |  | 
+**typeOfUse** | [**TypeOfUseEnum**](TypeOfUseEnum.md) |  | 
 **qoveryUsage** | **String** |  | 
 **companyName** | **String** |  | [optional] 
-**companySize** | **String** |  | [optional] 
+**companySize** | [**CompanySizeEnum**](CompanySizeEnum.md) |  | [optional] 
 **userRole** | **String** |  | [optional] 
 **qoveryUsageOther** | **String** |  | [optional] 
 **userQuestions** | **String** |  | [optional] 
 **currentStep** | **String** |  | [optional] 
 **dxAuth** | **Boolean** |  | [optional] 
-
-
-
-## Enum: TypeOfUseEnum
-
-
-* `PERSONAL` (value: `"PERSONAL"`)
-
-* `WORK` (value: `"WORK"`)
-
-* `SCHOOL` (value: `"SCHOOL"`)
-
-
-
-
-
-## Enum: CompanySizeEnum
-
-
-* `1-10` (value: `"1-10"`)
-
-* `11-50` (value: `"11-50"`)
-
-* `51-200` (value: `"51-200"`)
-
-* `201-500` (value: `"201-500"`)
-
-* `500+` (value: `"500+"`)
-
-
 
 

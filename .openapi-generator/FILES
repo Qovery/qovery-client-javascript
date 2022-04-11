@@ -99,6 +99,7 @@ docs/CommitPaginatedResponseList.md
 docs/CommitPaginatedResponseListAllOf.md
 docs/CommitResponseList.md
 docs/CommunityUsage.md
+docs/CompanySizeEnum.md
 docs/Cost.md
 docs/CostRange.md
 docs/Credentials.md
@@ -131,6 +132,8 @@ docs/DatabaseTypeEnum.md
 docs/DatabaseVersionMode.md
 docs/DatabasesApi.md
 docs/DependencyApi.md
+docs/DeployAllRequest.md
+docs/DeployAllRequestApplications.md
 docs/DeployRequest.md
 docs/DeploymentHistory.md
 docs/DeploymentHistoryAllOf.md
@@ -173,7 +176,6 @@ docs/EnvironmentDeploymentRuleAllOf.md
 docs/EnvironmentDeploymentRuleApi.md
 docs/EnvironmentDeploymentRuleEditRequest.md
 docs/EnvironmentEditRequest.md
-docs/EnvironmentEnvironmentIdApplicationDeployApplications.md
 docs/EnvironmentLog.md
 docs/EnvironmentLogPaginatedResponseList.md
 docs/EnvironmentLogPaginatedResponseListAllOf.md
@@ -216,9 +218,6 @@ docs/GitRepositoryBranchResponseList.md
 docs/GitRepositoryResponseList.md
 docs/GlobalDeploymentStatus.md
 docs/Healthcheck.md
-docs/InlineObject.md
-docs/InlineObject1.md
-docs/InlineObject2.md
 docs/Instance.md
 docs/InstanceResponseList.md
 docs/InviteMember.md
@@ -297,6 +296,7 @@ docs/ProjectDeploymentRuleAllOf.md
 docs/ProjectDeploymentRuleApi.md
 docs/ProjectDeploymentRuleRequest.md
 docs/ProjectDeploymentRuleResponseList.md
+docs/ProjectDeploymentRulesPriorityOrderRequest.md
 docs/ProjectEnvironmentVariableApi.md
 docs/ProjectMainCallsApi.md
 docs/ProjectRequest.md
@@ -324,6 +324,8 @@ docs/ServiceDeploymentStatusEnum.md
 docs/ServiceResponseList.md
 docs/ServiceTotalNumber.md
 docs/ServiceTypeEnum.md
+docs/SignUp.md
+docs/SignUpRequest.md
 docs/Status.md
 docs/StorageDisk.md
 docs/StorageDiskResponseList.md
@@ -333,6 +335,7 @@ docs/TagRequest.md
 docs/TagResponseList.md
 docs/ThresholdMetricStatusEnum.md
 docs/TransferOwnershipRequest.md
+docs/TypeOfUseEnum.md
 docs/UnexpectedError.md
 docs/User.md
 docs/UserResponseList.md
@@ -474,6 +477,7 @@ src/model/CommitPaginatedResponseList.js
 src/model/CommitPaginatedResponseListAllOf.js
 src/model/CommitResponseList.js
 src/model/CommunityUsage.js
+src/model/CompanySizeEnum.js
 src/model/Cost.js
 src/model/CostRange.js
 src/model/Credentials.js
@@ -498,6 +502,8 @@ src/model/DatabaseRequest.js
 src/model/DatabaseResponseList.js
 src/model/DatabaseTypeEnum.js
 src/model/DatabaseVersionMode.js
+src/model/DeployAllRequest.js
+src/model/DeployAllRequestApplications.js
 src/model/DeployRequest.js
 src/model/DeploymentHistory.js
 src/model/DeploymentHistoryAllOf.js
@@ -537,7 +543,6 @@ src/model/EnvironmentDeploymentRule.js
 src/model/EnvironmentDeploymentRuleAllOf.js
 src/model/EnvironmentDeploymentRuleEditRequest.js
 src/model/EnvironmentEditRequest.js
-src/model/EnvironmentEnvironmentIdApplicationDeployApplications.js
 src/model/EnvironmentLog.js
 src/model/EnvironmentLogPaginatedResponseList.js
 src/model/EnvironmentLogPaginatedResponseListAllOf.js
@@ -574,9 +579,6 @@ src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponseList.js
 src/model/GlobalDeploymentStatus.js
 src/model/Healthcheck.js
-src/model/InlineObject.js
-src/model/InlineObject1.js
-src/model/InlineObject2.js
 src/model/Instance.js
 src/model/InstanceResponseList.js
 src/model/InviteMember.js
@@ -650,6 +652,7 @@ src/model/ProjectDeploymentRule.js
 src/model/ProjectDeploymentRuleAllOf.js
 src/model/ProjectDeploymentRuleRequest.js
 src/model/ProjectDeploymentRuleResponseList.js
+src/model/ProjectDeploymentRulesPriorityOrderRequest.js
 src/model/ProjectRequest.js
 src/model/ProjectResponseList.js
 src/model/ProjectStats.js
@@ -672,6 +675,8 @@ src/model/ServiceDeploymentStatusEnum.js
 src/model/ServiceResponseList.js
 src/model/ServiceTotalNumber.js
 src/model/ServiceTypeEnum.js
+src/model/SignUp.js
+src/model/SignUpRequest.js
 src/model/Status.js
 src/model/StorageDisk.js
 src/model/StorageDiskResponseList.js
@@ -681,6 +686,7 @@ src/model/TagRequest.js
 src/model/TagResponseList.js
 src/model/ThresholdMetricStatusEnum.js
 src/model/TransferOwnershipRequest.js
+src/model/TypeOfUseEnum.js
 src/model/UnexpectedError.js
 src/model/User.js
 src/model/UserResponseList.js
@@ -816,6 +822,7 @@ test/model/CommitPaginatedResponseList.spec.js
 test/model/CommitPaginatedResponseListAllOf.spec.js
 test/model/CommitResponseList.spec.js
 test/model/CommunityUsage.spec.js
+test/model/CompanySizeEnum.spec.js
 test/model/Cost.spec.js
 test/model/CostRange.spec.js
 test/model/Credentials.spec.js
@@ -840,6 +847,8 @@ test/model/DatabaseRequest.spec.js
 test/model/DatabaseResponseList.spec.js
 test/model/DatabaseTypeEnum.spec.js
 test/model/DatabaseVersionMode.spec.js
+test/model/DeployAllRequest.spec.js
+test/model/DeployAllRequestApplications.spec.js
 test/model/DeployRequest.spec.js
 test/model/DeploymentHistory.spec.js
 test/model/DeploymentHistoryAllOf.spec.js
@@ -879,7 +888,6 @@ test/model/EnvironmentDeploymentRule.spec.js
 test/model/EnvironmentDeploymentRuleAllOf.spec.js
 test/model/EnvironmentDeploymentRuleEditRequest.spec.js
 test/model/EnvironmentEditRequest.spec.js
-test/model/EnvironmentEnvironmentIdApplicationDeployApplications.spec.js
 test/model/EnvironmentLog.spec.js
 test/model/EnvironmentLogPaginatedResponseList.spec.js
 test/model/EnvironmentLogPaginatedResponseListAllOf.spec.js
@@ -916,9 +924,6 @@ test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponseList.spec.js
 test/model/GlobalDeploymentStatus.spec.js
 test/model/Healthcheck.spec.js
-test/model/InlineObject.spec.js
-test/model/InlineObject1.spec.js
-test/model/InlineObject2.spec.js
 test/model/Instance.spec.js
 test/model/InstanceResponseList.spec.js
 test/model/InviteMember.spec.js
@@ -992,6 +997,7 @@ test/model/ProjectDeploymentRule.spec.js
 test/model/ProjectDeploymentRuleAllOf.spec.js
 test/model/ProjectDeploymentRuleRequest.spec.js
 test/model/ProjectDeploymentRuleResponseList.spec.js
+test/model/ProjectDeploymentRulesPriorityOrderRequest.spec.js
 test/model/ProjectRequest.spec.js
 test/model/ProjectResponseList.spec.js
 test/model/ProjectStats.spec.js
@@ -1014,6 +1020,8 @@ test/model/ServiceDeploymentStatusEnum.spec.js
 test/model/ServiceResponseList.spec.js
 test/model/ServiceTotalNumber.spec.js
 test/model/ServiceTypeEnum.spec.js
+test/model/SignUp.spec.js
+test/model/SignUpRequest.spec.js
 test/model/Status.spec.js
 test/model/StorageDisk.spec.js
 test/model/StorageDiskResponseList.spec.js
@@ -1023,6 +1031,7 @@ test/model/TagRequest.spec.js
 test/model/TagResponseList.spec.js
 test/model/ThresholdMetricStatusEnum.spec.js
 test/model/TransferOwnershipRequest.spec.js
+test/model/TypeOfUseEnum.spec.js
 test/model/UnexpectedError.spec.js
 test/model/User.spec.js
 test/model/UserResponseList.spec.js

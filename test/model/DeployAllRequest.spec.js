@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.InlineObject();
+    instance = new QoveryApi.DeployAllRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('InlineObject', function() {
-    it('should create an instance of InlineObject', function() {
-      // uncomment below and update the code to test InlineObject
-      //var instance = new QoveryApi.InlineObject();
-      //expect(instance).to.be.a(QoveryApi.InlineObject);
+  describe('DeployAllRequest', function() {
+    it('should create an instance of DeployAllRequest', function() {
+      // uncomment below and update the code to test DeployAllRequest
+      //var instance = new QoveryApi.DeployAllRequest();
+      //expect(instance).to.be.a(QoveryApi.DeployAllRequest);
     });
 
-    it('should have the property projectDeploymentRuleIdsInOrder (base name: "project_deployment_rule_ids_in_order")', function() {
-      // uncomment below and update the code to test the property projectDeploymentRuleIdsInOrder
-      //var instance = new QoveryApi.InlineObject();
+    it('should have the property applications (base name: "applications")', function() {
+      // uncomment below and update the code to test the property applications
+      //var instance = new QoveryApi.DeployAllRequest();
       //expect(instance).to.be();
     });
 

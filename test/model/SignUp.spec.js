@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.InlineObject2();
+    instance = new QoveryApi.SignUp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,82 +47,100 @@
       object[property] = value;
   }
 
-  describe('InlineObject2', function() {
-    it('should create an instance of InlineObject2', function() {
-      // uncomment below and update the code to test InlineObject2
-      //var instance = new QoveryApi.InlineObject2();
-      //expect(instance).to.be.a(QoveryApi.InlineObject2);
+  describe('SignUp', function() {
+    it('should create an instance of SignUp', function() {
+      // uncomment below and update the code to test SignUp
+      //var instance = new QoveryApi.SignUp();
+      //expect(instance).to.be.a(QoveryApi.SignUp);
+    });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.SignUp();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.SignUp();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.SignUp();
+      //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property userEmail (base name: "user_email")', function() {
       // uncomment below and update the code to test the property userEmail
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property typeOfUse (base name: "type_of_use")', function() {
       // uncomment below and update the code to test the property typeOfUse
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property qoveryUsage (base name: "qovery_usage")', function() {
       // uncomment below and update the code to test the property qoveryUsage
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property companyName (base name: "company_name")', function() {
       // uncomment below and update the code to test the property companyName
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property companySize (base name: "company_size")', function() {
       // uncomment below and update the code to test the property companySize
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property userRole (base name: "user_role")', function() {
       // uncomment below and update the code to test the property userRole
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property qoveryUsageOther (base name: "qovery_usage_other")', function() {
       // uncomment below and update the code to test the property qoveryUsageOther
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property userQuestions (base name: "user_questions")', function() {
       // uncomment below and update the code to test the property userQuestions
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property currentStep (base name: "current_step")', function() {
       // uncomment below and update the code to test the property currentStep
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 
     it('should have the property dxAuth (base name: "dx_auth")', function() {
       // uncomment below and update the code to test the property dxAuth
-      //var instance = new QoveryApi.InlineObject2();
+      //var instance = new QoveryApi.SignUp();
       //expect(instance).to.be();
     });
 

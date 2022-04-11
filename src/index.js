@@ -91,6 +91,7 @@ import CommitPaginatedResponseList from './model/CommitPaginatedResponseList';
 import CommitPaginatedResponseListAllOf from './model/CommitPaginatedResponseListAllOf';
 import CommitResponseList from './model/CommitResponseList';
 import CommunityUsage from './model/CommunityUsage';
+import CompanySizeEnum from './model/CompanySizeEnum';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
 import Credentials from './model/Credentials';
@@ -115,6 +116,8 @@ import DatabaseRequest from './model/DatabaseRequest';
 import DatabaseResponseList from './model/DatabaseResponseList';
 import DatabaseTypeEnum from './model/DatabaseTypeEnum';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
+import DeployAllRequest from './model/DeployAllRequest';
+import DeployAllRequestApplications from './model/DeployAllRequestApplications';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistory from './model/DeploymentHistory';
 import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
@@ -154,7 +157,6 @@ import EnvironmentDeploymentRule from './model/EnvironmentDeploymentRule';
 import EnvironmentDeploymentRuleAllOf from './model/EnvironmentDeploymentRuleAllOf';
 import EnvironmentDeploymentRuleEditRequest from './model/EnvironmentDeploymentRuleEditRequest';
 import EnvironmentEditRequest from './model/EnvironmentEditRequest';
-import EnvironmentEnvironmentIdApplicationDeployApplications from './model/EnvironmentEnvironmentIdApplicationDeployApplications';
 import EnvironmentLog from './model/EnvironmentLog';
 import EnvironmentLogPaginatedResponseList from './model/EnvironmentLogPaginatedResponseList';
 import EnvironmentLogPaginatedResponseListAllOf from './model/EnvironmentLogPaginatedResponseListAllOf';
@@ -191,9 +193,6 @@ import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponse
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import GlobalDeploymentStatus from './model/GlobalDeploymentStatus';
 import Healthcheck from './model/Healthcheck';
-import InlineObject from './model/InlineObject';
-import InlineObject1 from './model/InlineObject1';
-import InlineObject2 from './model/InlineObject2';
 import Instance from './model/Instance';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
@@ -267,6 +266,7 @@ import ProjectDeploymentRule from './model/ProjectDeploymentRule';
 import ProjectDeploymentRuleAllOf from './model/ProjectDeploymentRuleAllOf';
 import ProjectDeploymentRuleRequest from './model/ProjectDeploymentRuleRequest';
 import ProjectDeploymentRuleResponseList from './model/ProjectDeploymentRuleResponseList';
+import ProjectDeploymentRulesPriorityOrderRequest from './model/ProjectDeploymentRulesPriorityOrderRequest';
 import ProjectRequest from './model/ProjectRequest';
 import ProjectResponseList from './model/ProjectResponseList';
 import ProjectStats from './model/ProjectStats';
@@ -289,6 +289,8 @@ import ServiceDeploymentStatusEnum from './model/ServiceDeploymentStatusEnum';
 import ServiceResponseList from './model/ServiceResponseList';
 import ServiceTotalNumber from './model/ServiceTotalNumber';
 import ServiceTypeEnum from './model/ServiceTypeEnum';
+import SignUp from './model/SignUp';
+import SignUpRequest from './model/SignUpRequest';
 import Status from './model/Status';
 import StorageDisk from './model/StorageDisk';
 import StorageDiskResponseList from './model/StorageDiskResponseList';
@@ -298,6 +300,7 @@ import TagRequest from './model/TagRequest';
 import TagResponseList from './model/TagResponseList';
 import ThresholdMetricStatusEnum from './model/ThresholdMetricStatusEnum';
 import TransferOwnershipRequest from './model/TransferOwnershipRequest';
+import TypeOfUseEnum from './model/TypeOfUseEnum';
 import UnexpectedError from './model/UnexpectedError';
 import User from './model/User';
 import UserResponseList from './model/UserResponseList';
@@ -864,6 +867,12 @@ export {
     CommunityUsage,
 
     /**
+     * The CompanySizeEnum model constructor.
+     * @property {module:model/CompanySizeEnum}
+     */
+    CompanySizeEnum,
+
+    /**
      * The Cost model constructor.
      * @property {module:model/Cost}
      */
@@ -1006,6 +1015,18 @@ export {
      * @property {module:model/DatabaseVersionMode}
      */
     DatabaseVersionMode,
+
+    /**
+     * The DeployAllRequest model constructor.
+     * @property {module:model/DeployAllRequest}
+     */
+    DeployAllRequest,
+
+    /**
+     * The DeployAllRequestApplications model constructor.
+     * @property {module:model/DeployAllRequestApplications}
+     */
+    DeployAllRequestApplications,
 
     /**
      * The DeployRequest model constructor.
@@ -1242,12 +1263,6 @@ export {
     EnvironmentEditRequest,
 
     /**
-     * The EnvironmentEnvironmentIdApplicationDeployApplications model constructor.
-     * @property {module:model/EnvironmentEnvironmentIdApplicationDeployApplications}
-     */
-    EnvironmentEnvironmentIdApplicationDeployApplications,
-
-    /**
      * The EnvironmentLog model constructor.
      * @property {module:model/EnvironmentLog}
      */
@@ -1462,24 +1477,6 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
-
-    /**
-     * The InlineObject model constructor.
-     * @property {module:model/InlineObject}
-     */
-    InlineObject,
-
-    /**
-     * The InlineObject1 model constructor.
-     * @property {module:model/InlineObject1}
-     */
-    InlineObject1,
-
-    /**
-     * The InlineObject2 model constructor.
-     * @property {module:model/InlineObject2}
-     */
-    InlineObject2,
 
     /**
      * The Instance model constructor.
@@ -1920,6 +1917,12 @@ export {
     ProjectDeploymentRuleResponseList,
 
     /**
+     * The ProjectDeploymentRulesPriorityOrderRequest model constructor.
+     * @property {module:model/ProjectDeploymentRulesPriorityOrderRequest}
+     */
+    ProjectDeploymentRulesPriorityOrderRequest,
+
+    /**
      * The ProjectRequest model constructor.
      * @property {module:model/ProjectRequest}
      */
@@ -2052,6 +2055,18 @@ export {
     ServiceTypeEnum,
 
     /**
+     * The SignUp model constructor.
+     * @property {module:model/SignUp}
+     */
+    SignUp,
+
+    /**
+     * The SignUpRequest model constructor.
+     * @property {module:model/SignUpRequest}
+     */
+    SignUpRequest,
+
+    /**
      * The Status model constructor.
      * @property {module:model/Status}
      */
@@ -2104,6 +2119,12 @@ export {
      * @property {module:model/TransferOwnershipRequest}
      */
     TransferOwnershipRequest,
+
+    /**
+     * The TypeOfUseEnum model constructor.
+     * @property {module:model/TypeOfUseEnum}
+     */
+    TypeOfUseEnum,
 
     /**
      * The UnexpectedError model constructor.

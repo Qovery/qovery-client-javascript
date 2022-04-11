@@ -1,4 +1,4 @@
-# QoveryApi.InlineObject
+# QoveryApi.ProjectDeploymentRulesPriorityOrderRequest
 
 ## Properties
 

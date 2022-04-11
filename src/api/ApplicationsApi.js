@@ -16,11 +16,11 @@ import ApiClient from "../ApiClient";
 import Application from '../model/Application';
 import ApplicationRequest from '../model/ApplicationRequest';
 import ApplicationResponseList from '../model/ApplicationResponseList';
+import DeployAllRequest from '../model/DeployAllRequest';
 import EnvironmentApplicationsCurrentScaleResponseList from '../model/EnvironmentApplicationsCurrentScaleResponseList';
 import EnvironmentApplicationsInstanceResponseList from '../model/EnvironmentApplicationsInstanceResponseList';
 import EnvironmentApplicationsStorageResponseList from '../model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguageList from '../model/EnvironmentApplicationsSupportedLanguageList';
-import InlineObject1 from '../model/InlineObject1';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
 import Status from '../model/Status';
 
@@ -101,13 +101,13 @@ export default class ApplicationsApi {
      * Deploy to the last commit the applications you specified.
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/InlineObject1} opts.inlineObject1 
+     * @param {module:model/DeployAllRequest} opts.deployAllRequest 
      * @param {module:api/ApplicationsApi~deployAllApplicationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
     deployAllApplications(environmentId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject1'];
+      let postBody = opts['deployAllRequest'];
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
         throw new Error("Missing the required parameter 'environmentId' when calling deployAllApplications");

@@ -292,7 +292,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ProjectDeploymentRuleApi();
 let projectId = "projectId_example"; // String | Project ID
 let opts = {
-  'inlineObject': new QoveryApi.InlineObject() // InlineObject | 
+  'projectDeploymentRulesPriorityOrderRequest': new QoveryApi.ProjectDeploymentRulesPriorityOrderRequest() // ProjectDeploymentRulesPriorityOrderRequest | 
 };
 apiInstance.updateDeploymentRulesPriorityOrder(projectId, opts, (error, data, response) => {
   if (error) {
@@ -309,7 +309,7 @@ apiInstance.updateDeploymentRulesPriorityOrder(projectId, opts, (error, data, re
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectId** | **String**| Project ID | 
- **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
+ **projectDeploymentRulesPriorityOrderRequest** | [**ProjectDeploymentRulesPriorityOrderRequest**](ProjectDeploymentRulesPriorityOrderRequest.md)|  | [optional] 
 
 ### Return type
 

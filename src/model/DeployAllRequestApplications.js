@@ -14,20 +14,20 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The EnvironmentEnvironmentIdApplicationDeployApplications model module.
- * @module model/EnvironmentEnvironmentIdApplicationDeployApplications
+ * The DeployAllRequestApplications model module.
+ * @module model/DeployAllRequestApplications
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class EnvironmentEnvironmentIdApplicationDeployApplications {
+class DeployAllRequestApplications {
     /**
-     * Constructs a new <code>EnvironmentEnvironmentIdApplicationDeployApplications</code>.
-     * @alias module:model/EnvironmentEnvironmentIdApplicationDeployApplications
+     * Constructs a new <code>DeployAllRequestApplications</code>.
+     * @alias module:model/DeployAllRequestApplications
      * @param applicationId {String} id of the application to be deployed.
      * @param gitCommitId {String} Commit ID to deploy.
      */
     constructor(applicationId, gitCommitId) { 
         
-        EnvironmentEnvironmentIdApplicationDeployApplications.initialize(this, applicationId, gitCommitId);
+        DeployAllRequestApplications.initialize(this, applicationId, gitCommitId);
     }
 
     /**
@@ -41,15 +41,15 @@ class EnvironmentEnvironmentIdApplicationDeployApplications {
     }
 
     /**
-     * Constructs a <code>EnvironmentEnvironmentIdApplicationDeployApplications</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeployAllRequestApplications</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EnvironmentEnvironmentIdApplicationDeployApplications} obj Optional instance to populate.
-     * @return {module:model/EnvironmentEnvironmentIdApplicationDeployApplications} The populated <code>EnvironmentEnvironmentIdApplicationDeployApplications</code> instance.
+     * @param {module:model/DeployAllRequestApplications} obj Optional instance to populate.
+     * @return {module:model/DeployAllRequestApplications} The populated <code>DeployAllRequestApplications</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EnvironmentEnvironmentIdApplicationDeployApplications();
+            obj = obj || new DeployAllRequestApplications();
 
             if (data.hasOwnProperty('application_id')) {
                 obj['application_id'] = ApiClient.convertToType(data['application_id'], 'String');
@@ -68,18 +68,18 @@ class EnvironmentEnvironmentIdApplicationDeployApplications {
  * id of the application to be deployed.
  * @member {String} application_id
  */
-EnvironmentEnvironmentIdApplicationDeployApplications.prototype['application_id'] = undefined;
+DeployAllRequestApplications.prototype['application_id'] = undefined;
 
 /**
  * Commit ID to deploy.
  * @member {String} git_commit_id
  */
-EnvironmentEnvironmentIdApplicationDeployApplications.prototype['git_commit_id'] = undefined;
+DeployAllRequestApplications.prototype['git_commit_id'] = undefined;
 
 
 
 
 
 
-export default EnvironmentEnvironmentIdApplicationDeployApplications;
+export default DeployAllRequestApplications;
 

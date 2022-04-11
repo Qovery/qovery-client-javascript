@@ -12,20 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
+import DeployAllRequestApplications from './DeployAllRequestApplications';
 
 /**
- * The InlineObject model module.
- * @module model/InlineObject
+ * The DeployAllRequest model module.
+ * @module model/DeployAllRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class InlineObject {
+class DeployAllRequest {
     /**
-     * Constructs a new <code>InlineObject</code>.
-     * @alias module:model/InlineObject
+     * Constructs a new <code>DeployAllRequest</code>.
+     * @alias module:model/DeployAllRequest
      */
     constructor() { 
         
-        InlineObject.initialize(this);
+        DeployAllRequest.initialize(this);
     }
 
     /**
@@ -37,18 +38,18 @@ class InlineObject {
     }
 
     /**
-     * Constructs a <code>InlineObject</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeployAllRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineObject} obj Optional instance to populate.
-     * @return {module:model/InlineObject} The populated <code>InlineObject</code> instance.
+     * @param {module:model/DeployAllRequest} obj Optional instance to populate.
+     * @return {module:model/DeployAllRequest} The populated <code>DeployAllRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new InlineObject();
+            obj = obj || new DeployAllRequest();
 
-            if (data.hasOwnProperty('project_deployment_rule_ids_in_order')) {
-                obj['project_deployment_rule_ids_in_order'] = ApiClient.convertToType(data['project_deployment_rule_ids_in_order'], ['String']);
+            if (data.hasOwnProperty('applications')) {
+                obj['applications'] = ApiClient.convertToType(data['applications'], [DeployAllRequestApplications]);
             }
         }
         return obj;
@@ -58,14 +59,14 @@ class InlineObject {
 }
 
 /**
- * @member {Array.<String>} project_deployment_rule_ids_in_order
+ * @member {Array.<module:model/DeployAllRequestApplications>} applications
  */
-InlineObject.prototype['project_deployment_rule_ids_in_order'] = undefined;
+DeployAllRequest.prototype['applications'] = undefined;
 
 
 
 
 
 
-export default InlineObject;
+export default DeployAllRequest;
 

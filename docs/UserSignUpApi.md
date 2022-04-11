@@ -28,7 +28,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.UserSignUpApi();
 let opts = {
-  'inlineObject2': new QoveryApi.InlineObject2() // InlineObject2 | 
+  'signUpRequest': new QoveryApi.SignUpRequest() // SignUpRequest | 
 };
 apiInstance.createUserSignUp(opts, (error, data, response) => {
   if (error) {
@@ -44,7 +44,7 @@ apiInstance.createUserSignUp(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
+ **signUpRequest** | [**SignUpRequest**](SignUpRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -62,7 +62,7 @@ null (empty response body)
 
 ## getUserSignUp
 
-> Base getUserSignUp()
+> SignUp getUserSignUp()
 
 Get Sign up information
 
@@ -93,7 +93,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**Base**](Base.md)
+[**SignUp**](SignUp.md)
 
 ### Authorization
 

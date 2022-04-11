@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.InlineObject1();
+    instance = new QoveryApi.DeployAllRequestApplications();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,22 @@
       object[property] = value;
   }
 
-  describe('InlineObject1', function() {
-    it('should create an instance of InlineObject1', function() {
-      // uncomment below and update the code to test InlineObject1
-      //var instance = new QoveryApi.InlineObject1();
-      //expect(instance).to.be.a(QoveryApi.InlineObject1);
+  describe('DeployAllRequestApplications', function() {
+    it('should create an instance of DeployAllRequestApplications', function() {
+      // uncomment below and update the code to test DeployAllRequestApplications
+      //var instance = new QoveryApi.DeployAllRequestApplications();
+      //expect(instance).to.be.a(QoveryApi.DeployAllRequestApplications);
     });
 
-    it('should have the property applications (base name: "applications")', function() {
-      // uncomment below and update the code to test the property applications
-      //var instance = new QoveryApi.InlineObject1();
+    it('should have the property applicationId (base name: "application_id")', function() {
+      // uncomment below and update the code to test the property applicationId
+      //var instance = new QoveryApi.DeployAllRequestApplications();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property gitCommitId (base name: "git_commit_id")', function() {
+      // uncomment below and update the code to test the property gitCommitId
+      //var instance = new QoveryApi.DeployAllRequestApplications();
       //expect(instance).to.be();
     });
 

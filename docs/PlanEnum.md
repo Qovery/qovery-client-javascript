@@ -11,4 +11,6 @@
 
 * `BUSINESS` (value: `"BUSINESS"`)
 
+* `ENTERPRISE` (value: `"ENTERPRISE"`)
+
 

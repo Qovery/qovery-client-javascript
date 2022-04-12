@@ -47,6 +47,13 @@ export default class PlanEnum {
         "BUSINESS" = "BUSINESS";
 
     
+        /**
+         * value: "ENTERPRISE"
+         * @const
+         */
+        "ENTERPRISE" = "ENTERPRISE";
+
+    
 
     /**
     * Returns a <code>PlanEnum</code> enum value from a Javascript object name.

@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('listAWSInstanceType', function() {
+      it('should call listAWSInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listAWSInstanceType
+        //instance.listAWSInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listAWSRegions', function() {
       it('should call listAWSRegions successfully', function(done) {
         //uncomment below and update the code to test listAWSRegions
@@ -88,6 +98,16 @@
         done();
       });
     });
+    describe('listDOInstanceType', function() {
+      it('should call listDOInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listDOInstanceType
+        //instance.listDOInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listDORegions', function() {
       it('should call listDORegions successfully', function(done) {
         //uncomment below and update the code to test listDORegions
@@ -102,6 +122,16 @@
       it('should call listScalewayFeatures successfully', function(done) {
         //uncomment below and update the code to test listScalewayFeatures
         //instance.listScalewayFeatures(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listScalewayInstanceType', function() {
+      it('should call listScalewayInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listScalewayInstanceType
+        //instance.listScalewayInstanceType(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

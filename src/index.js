@@ -193,6 +193,8 @@ import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponse
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import GlobalDeploymentStatus from './model/GlobalDeploymentStatus';
 import Healthcheck from './model/Healthcheck';
+import InlineResponse200 from './model/InlineResponse200';
+import InlineResponse200Results from './model/InlineResponse200Results';
 import Instance from './model/Instance';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
@@ -1477,6 +1479,18 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
+
+    /**
+     * The InlineResponse200 model constructor.
+     * @property {module:model/InlineResponse200}
+     */
+    InlineResponse200,
+
+    /**
+     * The InlineResponse200Results model constructor.
+     * @property {module:model/InlineResponse200Results}
+     */
+    InlineResponse200Results,
 
     /**
      * The Instance model constructor.

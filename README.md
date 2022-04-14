@@ -201,11 +201,14 @@ Class | Method | HTTP request | Description
 *QoveryApi.BillingApi* | [**listOrganizationInvoice**](docs/BillingApi.md#listOrganizationInvoice) | **GET** /organization/{organizationId}/invoice | List organization invoices
 *QoveryApi.BillingApi* | [**organizationDownloadAllInvoices**](docs/BillingApi.md#organizationDownloadAllInvoices) | **POST** /organization/{organizationId}/downloadInvoices | Download all invoices
 *QoveryApi.CloudProviderApi* | [**listAWSFeatures**](docs/CloudProviderApi.md#listAWSFeatures) | **GET** /aws/clusterFeature | List AWS features available
+*QoveryApi.CloudProviderApi* | [**listAWSInstanceType**](docs/CloudProviderApi.md#listAWSInstanceType) | **GET** /aws/instanceType | List AWS available instance types
 *QoveryApi.CloudProviderApi* | [**listAWSRegions**](docs/CloudProviderApi.md#listAWSRegions) | **GET** /aws/region | List AWS regions
 *QoveryApi.CloudProviderApi* | [**listCloudProvider**](docs/CloudProviderApi.md#listCloudProvider) | **GET** /cloudProvider | List Cloud providers available
 *QoveryApi.CloudProviderApi* | [**listDOFeatures**](docs/CloudProviderApi.md#listDOFeatures) | **GET** /digitalOcean/clusterFeature | List DO features available
+*QoveryApi.CloudProviderApi* | [**listDOInstanceType**](docs/CloudProviderApi.md#listDOInstanceType) | **GET** /digitalOcean/instanceType | List DO available instance types
 *QoveryApi.CloudProviderApi* | [**listDORegions**](docs/CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
 *QoveryApi.CloudProviderApi* | [**listScalewayFeatures**](docs/CloudProviderApi.md#listScalewayFeatures) | **GET** /scaleway/clusterFeature | List Scaleway features available
+*QoveryApi.CloudProviderApi* | [**listScalewayInstanceType**](docs/CloudProviderApi.md#listScalewayInstanceType) | **GET** /scaleway/instanceType | List Scaleway available instance types
 *QoveryApi.CloudProviderApi* | [**listScalewayRegions**](docs/CloudProviderApi.md#listScalewayRegions) | **GET** /scaleway/region | List Scaleway regions
 *QoveryApi.CloudProviderCredentialsApi* | [**createAWSCredentials**](docs/CloudProviderCredentialsApi.md#createAWSCredentials) | **POST** /organization/{organizationId}/aws/credentials | Create AWS credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**createDOCredentials**](docs/CloudProviderCredentialsApi.md#createDOCredentials) | **POST** /organization/{organizationId}/digitalOcean/credentials | Create Digital Ocean credentials set
@@ -537,6 +540,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
  - [QoveryApi.GlobalDeploymentStatus](docs/GlobalDeploymentStatus.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
+ - [QoveryApi.InlineResponse200](docs/InlineResponse200.md)
+ - [QoveryApi.InlineResponse200Results](docs/InlineResponse200Results.md)
  - [QoveryApi.Instance](docs/Instance.md)
  - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
  - [QoveryApi.InviteMember](docs/InviteMember.md)

@@ -81,6 +81,9 @@ class ClusterAllOf {
             if (data.hasOwnProperty('max_running_nodes')) {
                 obj['max_running_nodes'] = ApiClient.convertToType(data['max_running_nodes'], 'Number');
             }
+            if (data.hasOwnProperty('instance_type')) {
+                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            }
         }
         return obj;
     }
@@ -139,6 +142,12 @@ ClusterAllOf.prototype['min_running_nodes'] = 1;
  * @default 1
  */
 ClusterAllOf.prototype['max_running_nodes'] = 1;
+
+/**
+ * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
+ * @member {String} instance_type
+ */
+ClusterAllOf.prototype['instance_type'] = undefined;
 
 
 

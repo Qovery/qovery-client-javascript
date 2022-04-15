@@ -108,6 +108,9 @@ class Cluster {
             if (data.hasOwnProperty('max_running_nodes')) {
                 obj['max_running_nodes'] = ApiClient.convertToType(data['max_running_nodes'], 'Number');
             }
+            if (data.hasOwnProperty('instance_type')) {
+                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -220,6 +223,12 @@ Cluster.prototype['min_running_nodes'] = 1;
  * @default 1
  */
 Cluster.prototype['max_running_nodes'] = 1;
+
+/**
+ * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
+ * @member {String} instance_type
+ */
+Cluster.prototype['instance_type'] = undefined;
 
 /**
  * @member {String} title
@@ -346,6 +355,11 @@ ClusterAllOf.prototype['min_running_nodes'] = 1;
  * @default 1
  */
 ClusterAllOf.prototype['max_running_nodes'] = 1;
+/**
+ * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
+ * @member {String} instance_type
+ */
+ClusterAllOf.prototype['instance_type'] = undefined;
 // Implement ClusterFeature interface:
 /**
  * @member {String} id

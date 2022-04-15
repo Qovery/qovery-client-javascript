@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **memory** | **Number** | unit is MB. 1024 MB &#x3D; 1GB | [optional] [default to 256]
 **minRunningNodes** | **Number** |  | [optional] [default to 1]
 **maxRunningNodes** | **Number** |  | [optional] [default to 1]
+**instanceType** | **String** | the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType | [optional] 
 **title** | **String** |  | [optional] 
 **costPerMonthInCents** | **Number** |  | [optional] 
 **costPerMonth** | **Number** |  | [optional] 

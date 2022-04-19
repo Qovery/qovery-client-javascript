@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property useBot (base name: "use_bot")', function() {
+      // uncomment below and update the code to test the property useBot
+      //var instance = new QoveryApi.GitAuthProvider();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

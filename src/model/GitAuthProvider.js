@@ -60,6 +60,9 @@ class GitAuthProvider {
             if (data.hasOwnProperty('owner')) {
                 obj['owner'] = ApiClient.convertToType(data['owner'], 'String');
             }
+            if (data.hasOwnProperty('use_bot')) {
+                obj['use_bot'] = ApiClient.convertToType(data['use_bot'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -81,6 +84,11 @@ GitAuthProvider.prototype['name'] = undefined;
  * @member {String} owner
  */
 GitAuthProvider.prototype['owner'] = undefined;
+
+/**
+ * @member {Boolean} use_bot
+ */
+GitAuthProvider.prototype['use_bot'] = undefined;
 
 
 

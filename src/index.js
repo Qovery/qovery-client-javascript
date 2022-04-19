@@ -351,6 +351,7 @@ import EnvironmentsApi from './api/EnvironmentsApi';
 import GitRepositoriesApi from './api/GitRepositoriesApi';
 import LogicalDatabaseApi from './api/LogicalDatabaseApi';
 import MembersApi from './api/MembersApi';
+import OrganizationAccountGitRepositoriesApi from './api/OrganizationAccountGitRepositoriesApi';
 import OrganizationApiTokenApi from './api/OrganizationApiTokenApi';
 import OrganizationMainCallsApi from './api/OrganizationMainCallsApi';
 import ProjectDeploymentRuleApi from './api/ProjectDeploymentRuleApi';
@@ -2427,6 +2428,12 @@ export {
     * @property {module:api/MembersApi}
     */
     MembersApi,
+
+    /**
+    * The OrganizationAccountGitRepositoriesApi service constructor.
+    * @property {module:api/OrganizationAccountGitRepositoriesApi}
+    */
+    OrganizationAccountGitRepositoriesApi,
 
     /**
     * The OrganizationApiTokenApi service constructor.

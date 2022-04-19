@@ -267,6 +267,7 @@ docs/MetricStorageDatapointResponseList.md
 docs/MetricStorageResponseList.md
 docs/Name.md
 docs/Organization.md
+docs/OrganizationAccountGitRepositoriesApi.md
 docs/OrganizationAllOf.md
 docs/OrganizationApiToken.md
 docs/OrganizationApiTokenAllOf.md
@@ -391,6 +392,7 @@ src/api/EnvironmentsApi.js
 src/api/GitRepositoriesApi.js
 src/api/LogicalDatabaseApi.js
 src/api/MembersApi.js
+src/api/OrganizationAccountGitRepositoriesApi.js
 src/api/OrganizationApiTokenApi.js
 src/api/OrganizationMainCallsApi.js
 src/api/ProjectDeploymentRuleApi.js
@@ -739,6 +741,7 @@ test/api/EnvironmentsApi.spec.js
 test/api/GitRepositoriesApi.spec.js
 test/api/LogicalDatabaseApi.spec.js
 test/api/MembersApi.spec.js
+test/api/OrganizationAccountGitRepositoriesApi.spec.js
 test/api/OrganizationApiTokenApi.spec.js
 test/api/OrganizationMainCallsApi.spec.js
 test/api/ProjectDeploymentRuleApi.spec.js

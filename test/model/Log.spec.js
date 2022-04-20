@@ -72,6 +72,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property podName (base name: "pod_name")', function() {
+      // uncomment below and update the code to test the property podName
+      //var instance = new QoveryApi.Log();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property applicationCommitId (base name: "application_commit_id")', function() {
+      // uncomment below and update the code to test the property applicationCommitId
+      //var instance = new QoveryApi.Log();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

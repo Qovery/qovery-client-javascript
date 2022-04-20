@@ -62,6 +62,12 @@ class Log {
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
+            if (data.hasOwnProperty('pod_name')) {
+                obj['pod_name'] = ApiClient.convertToType(data['pod_name'], 'String');
+            }
+            if (data.hasOwnProperty('application_commit_id')) {
+                obj['application_commit_id'] = ApiClient.convertToType(data['application_commit_id'], 'String');
+            }
         }
         return obj;
     }
@@ -83,6 +89,16 @@ Log.prototype['created_at'] = undefined;
  * @member {String} message
  */
 Log.prototype['message'] = undefined;
+
+/**
+ * @member {String} pod_name
+ */
+Log.prototype['pod_name'] = undefined;
+
+/**
+ * @member {String} application_commit_id
+ */
+Log.prototype['application_commit_id'] = undefined;
 
 
 

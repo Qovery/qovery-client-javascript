@@ -7,5 +7,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | 
 **createdAt** | **Date** |  | 
 **message** | **String** |  | 
+**podName** | **String** |  | [optional] 
+**applicationCommitId** | **String** |  | [optional] 
 
 

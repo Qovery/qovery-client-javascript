@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 Create an organization api token
 
-Create an organization api token
+Create an organization api token. You can use the generated token to interact in a programmatic way with our API.
 
 ### Example
 

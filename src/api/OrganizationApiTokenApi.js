@@ -46,7 +46,7 @@ export default class OrganizationApiTokenApi {
 
     /**
      * Create an organization api token
-     * Create an organization api token
+     * Create an organization api token. You can use the generated token to interact in a programmatic way with our API.
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
      * @param {module:model/OrganizationApiTokenCreateRequest} opts.organizationApiTokenCreateRequest 

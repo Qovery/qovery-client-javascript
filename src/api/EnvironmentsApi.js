@@ -17,7 +17,7 @@ import Environment from '../model/Environment';
 import EnvironmentRequest from '../model/EnvironmentRequest';
 import EnvironmentResponseList from '../model/EnvironmentResponseList';
 import EnvironmentStatsResponseList from '../model/EnvironmentStatsResponseList';
-import Status from '../model/Status';
+import EnvironmentStatusList from '../model/EnvironmentStatusList';
 
 /**
 * Environments service.
@@ -127,10 +127,10 @@ export default class EnvironmentsApi {
     }
 
     /**
-     * Callback function to receive the result of the getProjectEnvironmentStatus operation.
-     * @callback module:api/EnvironmentsApi~getProjectEnvironmentStatusCallback
+     * Callback function to receive the result of the getProjectEnvironmentsStatus operation.
+     * @callback module:api/EnvironmentsApi~getProjectEnvironmentsStatusCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
+     * @param {module:model/EnvironmentStatusList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -138,14 +138,14 @@ export default class EnvironmentsApi {
      * List environments statuses
      * Returns a list of environments with only their id and status.
      * @param {String} projectId Project ID
-     * @param {module:api/EnvironmentsApi~getProjectEnvironmentStatusCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
+     * @param {module:api/EnvironmentsApi~getProjectEnvironmentsStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EnvironmentStatusList}
      */
-    getProjectEnvironmentStatus(projectId, callback) {
+    getProjectEnvironmentsStatus(projectId, callback) {
       let postBody = null;
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling getProjectEnvironmentStatus");
+        throw new Error("Missing the required parameter 'projectId' when calling getProjectEnvironmentsStatus");
       }
 
       let pathParams = {
@@ -161,7 +161,7 @@ export default class EnvironmentsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Status;
+      let returnType = EnvironmentStatusList;
       return this.apiClient.callApi(
         '/project/{projectId}/environment/status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

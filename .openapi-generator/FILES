@@ -191,6 +191,7 @@ docs/EnvironmentRestartRequest.md
 docs/EnvironmentSecretApi.md
 docs/EnvironmentStats.md
 docs/EnvironmentStatsResponseList.md
+docs/EnvironmentStatusList.md
 docs/EnvironmentTotalNumber.md
 docs/EnvironmentVariable.md
 docs/EnvironmentVariableAllOf.md
@@ -559,6 +560,7 @@ src/model/EnvironmentResponseList.js
 src/model/EnvironmentRestartRequest.js
 src/model/EnvironmentStats.js
 src/model/EnvironmentStatsResponseList.js
+src/model/EnvironmentStatusList.js
 src/model/EnvironmentTotalNumber.js
 src/model/EnvironmentVariable.js
 src/model/EnvironmentVariableAllOf.js
@@ -907,6 +909,7 @@ test/model/EnvironmentResponseList.spec.js
 test/model/EnvironmentRestartRequest.spec.js
 test/model/EnvironmentStats.spec.js
 test/model/EnvironmentStatsResponseList.spec.js
+test/model/EnvironmentStatusList.spec.js
 test/model/EnvironmentTotalNumber.spec.js
 test/model/EnvironmentVariable.spec.js
 test/model/EnvironmentVariableAllOf.spec.js

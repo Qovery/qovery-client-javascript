@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createEnvironment**](EnvironmentsApi.md#createEnvironment) | **POST** /project/{projectId}/environment | Create an environment
 [**getProjectEnvironmentServiceNumber**](EnvironmentsApi.md#getProjectEnvironmentServiceNumber) | **GET** /project/{projectId}/environment/stats | List total number of services for each environment of the project
-[**getProjectEnvironmentStatus**](EnvironmentsApi.md#getProjectEnvironmentStatus) | **GET** /project/{projectId}/environment/status | List environments statuses
+[**getProjectEnvironmentsStatus**](EnvironmentsApi.md#getProjectEnvironmentsStatus) | **GET** /project/{projectId}/environment/status | List environments statuses
 [**listEnvironment**](EnvironmentsApi.md#listEnvironment) | **GET** /project/{projectId}/environment | List environments
 
 
@@ -111,9 +111,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## getProjectEnvironmentStatus
+## getProjectEnvironmentsStatus
 
-> Status getProjectEnvironmentStatus(projectId)
+> EnvironmentStatusList getProjectEnvironmentsStatus(projectId)
 
 List environments statuses
 
@@ -130,7 +130,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.EnvironmentsApi();
 let projectId = "projectId_example"; // String | Project ID
-apiInstance.getProjectEnvironmentStatus(projectId, (error, data, response) => {
+apiInstance.getProjectEnvironmentsStatus(projectId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**EnvironmentStatusList**](EnvironmentStatusList.md)
 
 ### Authorization
 

@@ -296,7 +296,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentVariableApi* | [**listEnvironmentEnvironmentVariable**](docs/EnvironmentVariableApi.md#listEnvironmentEnvironmentVariable) | **GET** /environment/{environmentId}/environmentVariable | List environment variables
 *QoveryApi.EnvironmentsApi* | [**createEnvironment**](docs/EnvironmentsApi.md#createEnvironment) | **POST** /project/{projectId}/environment | Create an environment
 *QoveryApi.EnvironmentsApi* | [**getProjectEnvironmentServiceNumber**](docs/EnvironmentsApi.md#getProjectEnvironmentServiceNumber) | **GET** /project/{projectId}/environment/stats | List total number of services for each environment of the project
-*QoveryApi.EnvironmentsApi* | [**getProjectEnvironmentStatus**](docs/EnvironmentsApi.md#getProjectEnvironmentStatus) | **GET** /project/{projectId}/environment/status | List environments statuses
+*QoveryApi.EnvironmentsApi* | [**getProjectEnvironmentsStatus**](docs/EnvironmentsApi.md#getProjectEnvironmentsStatus) | **GET** /project/{projectId}/environment/status | List environments statuses
 *QoveryApi.EnvironmentsApi* | [**listEnvironment**](docs/EnvironmentsApi.md#listEnvironment) | **GET** /project/{projectId}/environment | List environments
 *QoveryApi.GitRepositoriesApi* | [**getBitbucketRepositories**](docs/GitRepositoriesApi.md#getBitbucketRepositories) | **GET** /account/bitbucket/repository | Get bitbucket repositories of the connected user
 *QoveryApi.GitRepositoriesApi* | [**getBitbucketRepositoryBranches**](docs/GitRepositoriesApi.md#getBitbucketRepositoryBranches) | **GET** /account/bitbucket/repository/branch | Get bitbucket branches of the specified repository
@@ -523,6 +523,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentRestartRequest](docs/EnvironmentRestartRequest.md)
  - [QoveryApi.EnvironmentStats](docs/EnvironmentStats.md)
  - [QoveryApi.EnvironmentStatsResponseList](docs/EnvironmentStatsResponseList.md)
+ - [QoveryApi.EnvironmentStatusList](docs/EnvironmentStatusList.md)
  - [QoveryApi.EnvironmentTotalNumber](docs/EnvironmentTotalNumber.md)
  - [QoveryApi.EnvironmentVariable](docs/EnvironmentVariable.md)
  - [QoveryApi.EnvironmentVariableAllOf](docs/EnvironmentVariableAllOf.md)

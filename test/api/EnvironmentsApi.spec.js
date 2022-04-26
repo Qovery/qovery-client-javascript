@@ -68,10 +68,10 @@
         done();
       });
     });
-    describe('getProjectEnvironmentStatus', function() {
-      it('should call getProjectEnvironmentStatus successfully', function(done) {
-        //uncomment below and update the code to test getProjectEnvironmentStatus
-        //instance.getProjectEnvironmentStatus(function(error) {
+    describe('getProjectEnvironmentsStatus', function() {
+      it('should call getProjectEnvironmentsStatus successfully', function(done) {
+        //uncomment below and update the code to test getProjectEnvironmentsStatus
+        //instance.getProjectEnvironmentsStatus(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

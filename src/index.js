@@ -169,6 +169,7 @@ import EnvironmentResponseList from './model/EnvironmentResponseList';
 import EnvironmentRestartRequest from './model/EnvironmentRestartRequest';
 import EnvironmentStats from './model/EnvironmentStats';
 import EnvironmentStatsResponseList from './model/EnvironmentStatsResponseList';
+import EnvironmentStatusList from './model/EnvironmentStatusList';
 import EnvironmentTotalNumber from './model/EnvironmentTotalNumber';
 import EnvironmentVariable from './model/EnvironmentVariable';
 import EnvironmentVariableAllOf from './model/EnvironmentVariableAllOf';
@@ -1336,6 +1337,12 @@ export {
      * @property {module:model/EnvironmentStatsResponseList}
      */
     EnvironmentStatsResponseList,
+
+    /**
+     * The EnvironmentStatusList model constructor.
+     * @property {module:model/EnvironmentStatusList}
+     */
+    EnvironmentStatusList,
 
     /**
      * The EnvironmentTotalNumber model constructor.

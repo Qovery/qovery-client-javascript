@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import StorageTypeEnum from './StorageTypeEnum';
 
 /**
  * The ApplicationStorageRequestStorage model module.
@@ -22,7 +23,7 @@ class ApplicationStorageRequestStorage {
     /**
      * Constructs a new <code>ApplicationStorageRequestStorage</code>.
      * @alias module:model/ApplicationStorageRequestStorage
-     * @param type {module:model/ApplicationStorageRequestStorage.TypeEnum} 
+     * @param type {module:model/StorageTypeEnum} 
      * @param size {Number} unit is GB
      * @param mountPoint {String} 
      */
@@ -54,7 +55,7 @@ class ApplicationStorageRequestStorage {
             obj = obj || new ApplicationStorageRequestStorage();
 
             if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+                obj['type'] = StorageTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('size')) {
                 obj['size'] = ApiClient.convertToType(data['size'], 'Number');
@@ -70,7 +71,7 @@ class ApplicationStorageRequestStorage {
 }
 
 /**
- * @member {module:model/ApplicationStorageRequestStorage.TypeEnum} type
+ * @member {module:model/StorageTypeEnum} type
  */
 ApplicationStorageRequestStorage.prototype['type'] = undefined;
 
@@ -87,21 +88,6 @@ ApplicationStorageRequestStorage.prototype['mount_point'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>type</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationStorageRequestStorage['TypeEnum'] = {
-
-    /**
-     * value: "FAST_SSD"
-     * @const
-     */
-    "FAST_SSD": "FAST_SSD"
-};
 
 
 

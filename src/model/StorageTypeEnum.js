@@ -20,24 +20,10 @@ import ApiClient from '../ApiClient';
 export default class StorageTypeEnum {
     
         /**
-         * value: "AWS"
+         * value: "FAST_SSD"
          * @const
          */
-        "AWS" = "AWS";
-
-    
-        /**
-         * value: "DIGITAL_OCEAN"
-         * @const
-         */
-        "DIGITAL_OCEAN" = "DIGITAL_OCEAN";
-
-    
-        /**
-         * value: "SCALEWAY"
-         * @const
-         */
-        "SCALEWAY" = "SCALEWAY";
+        "FAST_SSD" = "FAST_SSD";
 
     
 

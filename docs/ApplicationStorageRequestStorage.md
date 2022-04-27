@@ -4,17 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | 
+**type** | [**StorageTypeEnum**](StorageTypeEnum.md) |  | 
 **size** | **Number** | unit is GB | 
 **mountPoint** | **String** |  | 
-
-
-
-## Enum: TypeEnum
-
-
-* `FAST_SSD` (value: `"FAST_SSD"`)
-
-
 
 

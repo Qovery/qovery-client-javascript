@@ -3,10 +3,6 @@
 ## Enum
 
 
-* `AWS` (value: `"AWS"`)
-
-* `DIGITAL_OCEAN` (value: `"DIGITAL_OCEAN"`)
-
-* `SCALEWAY` (value: `"SCALEWAY"`)
+* `FAST_SSD` (value: `"FAST_SSD"`)
 
 

@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ## listAWSInstanceType
 
-> InlineResponse200 listAWSInstanceType()
+> ClusterInstanceTypeResponseList listAWSInstanceType()
 
 List AWS available instance types
 
@@ -91,7 +91,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ClusterInstanceTypeResponseList**](ClusterInstanceTypeResponseList.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ This endpoint does not need any parameter.
 
 ## listDOInstanceType
 
-> Object listDOInstanceType()
+> ClusterInstanceTypeResponseList listDOInstanceType()
 
 List DO available instance types
 
@@ -263,7 +263,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**ClusterInstanceTypeResponseList**](ClusterInstanceTypeResponseList.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ This endpoint does not need any parameter.
 
 ## listScalewayInstanceType
 
-> Object listScalewayInstanceType()
+> ClusterInstanceTypeResponseList listScalewayInstanceType()
 
 List Scaleway available instance types
 
@@ -392,7 +392,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**ClusterInstanceTypeResponseList**](ClusterInstanceTypeResponseList.md)
 
 ### Authorization
 

@@ -54,8 +54,38 @@
       //expect(instance).to.be.a(QoveryApi.ApplicationDeploymentRestriction);
     });
 
-    it('should have the property deploymentRestrictions (base name: "deployment_restrictions")', function() {
-      // uncomment below and update the code to test the property deploymentRestrictions
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property mode (base name: "mode")', function() {
+      // uncomment below and update the code to test the property mode
+      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instance = new QoveryApi.ApplicationDeploymentRestriction();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
       //var instance = new QoveryApi.ApplicationDeploymentRestriction();
       //expect(instance).to.be();
     });

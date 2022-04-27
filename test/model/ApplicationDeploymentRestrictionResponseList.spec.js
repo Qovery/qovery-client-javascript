@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.InlineResponse200();
+    instance = new QoveryApi.ApplicationDeploymentRestrictionResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('InlineResponse200', function() {
-    it('should create an instance of InlineResponse200', function() {
-      // uncomment below and update the code to test InlineResponse200
-      //var instance = new QoveryApi.InlineResponse200();
-      //expect(instance).to.be.a(QoveryApi.InlineResponse200);
+  describe('ApplicationDeploymentRestrictionResponseList', function() {
+    it('should create an instance of ApplicationDeploymentRestrictionResponseList', function() {
+      // uncomment below and update the code to test ApplicationDeploymentRestrictionResponseList
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionResponseList();
+      //expect(instance).to.be.a(QoveryApi.ApplicationDeploymentRestrictionResponseList);
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.InlineResponse200();
+    it('should have the property deploymentRestrictions (base name: "deployment_restrictions")', function() {
+      // uncomment below and update the code to test the property deploymentRestrictions
+      //var instance = new QoveryApi.ApplicationDeploymentRestrictionResponseList();
       //expect(instance).to.be();
     });
 

@@ -14,14 +14,14 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The InlineResponse200Results model module.
- * @module model/InlineResponse200Results
+ * The ClusterInstanceTypeResponseListResults model module.
+ * @module model/ClusterInstanceTypeResponseListResults
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class InlineResponse200Results {
+class ClusterInstanceTypeResponseListResults {
     /**
-     * Constructs a new <code>InlineResponse200Results</code>.
-     * @alias module:model/InlineResponse200Results
+     * Constructs a new <code>ClusterInstanceTypeResponseListResults</code>.
+     * @alias module:model/ClusterInstanceTypeResponseListResults
      * @param type {String} 
      * @param name {String} 
      * @param cpu {Number} 
@@ -29,7 +29,7 @@ class InlineResponse200Results {
      */
     constructor(type, name, cpu, ramInGb) { 
         
-        InlineResponse200Results.initialize(this, type, name, cpu, ramInGb);
+        ClusterInstanceTypeResponseListResults.initialize(this, type, name, cpu, ramInGb);
     }
 
     /**
@@ -45,15 +45,15 @@ class InlineResponse200Results {
     }
 
     /**
-     * Constructs a <code>InlineResponse200Results</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterInstanceTypeResponseListResults</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineResponse200Results} obj Optional instance to populate.
-     * @return {module:model/InlineResponse200Results} The populated <code>InlineResponse200Results</code> instance.
+     * @param {module:model/ClusterInstanceTypeResponseListResults} obj Optional instance to populate.
+     * @return {module:model/ClusterInstanceTypeResponseListResults} The populated <code>ClusterInstanceTypeResponseListResults</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new InlineResponse200Results();
+            obj = obj || new ClusterInstanceTypeResponseListResults();
 
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -77,27 +77,27 @@ class InlineResponse200Results {
 /**
  * @member {String} type
  */
-InlineResponse200Results.prototype['type'] = undefined;
+ClusterInstanceTypeResponseListResults.prototype['type'] = undefined;
 
 /**
  * @member {String} name
  */
-InlineResponse200Results.prototype['name'] = undefined;
+ClusterInstanceTypeResponseListResults.prototype['name'] = undefined;
 
 /**
  * @member {Number} cpu
  */
-InlineResponse200Results.prototype['cpu'] = undefined;
+ClusterInstanceTypeResponseListResults.prototype['cpu'] = undefined;
 
 /**
  * @member {Number} ram_in_gb
  */
-InlineResponse200Results.prototype['ram_in_gb'] = undefined;
+ClusterInstanceTypeResponseListResults.prototype['ram_in_gb'] = undefined;
 
 
 
 
 
 
-export default InlineResponse200Results;
+export default ClusterInstanceTypeResponseListResults;
 

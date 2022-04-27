@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.InlineResponse200Results();
+    instance = new QoveryApi.ClusterInstanceTypeResponseListResults();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,34 @@
       object[property] = value;
   }
 
-  describe('InlineResponse200Results', function() {
-    it('should create an instance of InlineResponse200Results', function() {
-      // uncomment below and update the code to test InlineResponse200Results
-      //var instance = new QoveryApi.InlineResponse200Results();
-      //expect(instance).to.be.a(QoveryApi.InlineResponse200Results);
+  describe('ClusterInstanceTypeResponseListResults', function() {
+    it('should create an instance of ClusterInstanceTypeResponseListResults', function() {
+      // uncomment below and update the code to test ClusterInstanceTypeResponseListResults
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResults();
+      //expect(instance).to.be.a(QoveryApi.ClusterInstanceTypeResponseListResults);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new QoveryApi.InlineResponse200Results();
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResults();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.InlineResponse200Results();
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResults();
       //expect(instance).to.be();
     });
 
     it('should have the property cpu (base name: "cpu")', function() {
       // uncomment below and update the code to test the property cpu
-      //var instance = new QoveryApi.InlineResponse200Results();
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResults();
       //expect(instance).to.be();
     });
 
     it('should have the property ramInGb (base name: "ram_in_gb")', function() {
       // uncomment below and update the code to test the property ramInGb
-      //var instance = new QoveryApi.InlineResponse200Results();
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResults();
       //expect(instance).to.be();
     });
 

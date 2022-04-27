@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import ApplicationDeploymentRestriction from '../model/ApplicationDeploymentRestriction';
 import ApplicationDeploymentRestrictionRequest from '../model/ApplicationDeploymentRestrictionRequest';
-import Base from '../model/Base';
+import ApplicationDeploymentRestrictionResponseList from '../model/ApplicationDeploymentRestrictionResponseList';
 
 /**
 * ApplicationDeploymentRestriction service.
@@ -40,7 +40,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * Callback function to receive the result of the createApplicationDeploymentRestriction operation.
      * @callback module:api/ApplicationDeploymentRestrictionApi~createApplicationDeploymentRestrictionCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Base} data The data returned by the service call.
+     * @param {module:model/ApplicationDeploymentRestriction} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,7 +51,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ApplicationDeploymentRestrictionRequest} opts.applicationDeploymentRestrictionRequest 
      * @param {module:api/ApplicationDeploymentRestrictionApi~createApplicationDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Base}
+     * data is of type: {@link module:model/ApplicationDeploymentRestriction}
      */
     createApplicationDeploymentRestriction(applicationId, opts, callback) {
       opts = opts || {};
@@ -74,7 +74,7 @@ export default class ApplicationDeploymentRestrictionApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Base;
+      let returnType = ApplicationDeploymentRestriction;
       return this.apiClient.callApi(
         '/application/{applicationId}/deploymentRestriction', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -128,7 +128,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * Callback function to receive the result of the editApplicationDeploymentRestriction operation.
      * @callback module:api/ApplicationDeploymentRestrictionApi~editApplicationDeploymentRestrictionCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/ApplicationDeploymentRestriction} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -140,7 +140,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/ApplicationDeploymentRestrictionRequest} opts.applicationDeploymentRestrictionRequest 
      * @param {module:api/ApplicationDeploymentRestrictionApi~editApplicationDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/ApplicationDeploymentRestriction}
      */
     editApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, opts, callback) {
       opts = opts || {};
@@ -168,7 +168,7 @@ export default class ApplicationDeploymentRestrictionApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = ApplicationDeploymentRestriction;
       return this.apiClient.callApi(
         '/application/{applicationId}/deploymentRestriction/{deploymentRestrictionId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -180,7 +180,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * Callback function to receive the result of the getApplicationDeploymentRestrictions operation.
      * @callback module:api/ApplicationDeploymentRestrictionApi~getApplicationDeploymentRestrictionsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ApplicationDeploymentRestriction} data The data returned by the service call.
+     * @param {module:model/ApplicationDeploymentRestrictionResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -189,7 +189,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * Get application deployment restrictions
      * @param {String} applicationId Application ID
      * @param {module:api/ApplicationDeploymentRestrictionApi~getApplicationDeploymentRestrictionsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ApplicationDeploymentRestriction}
+     * data is of type: {@link module:model/ApplicationDeploymentRestrictionResponseList}
      */
     getApplicationDeploymentRestrictions(applicationId, callback) {
       let postBody = null;
@@ -211,7 +211,7 @@ export default class ApplicationDeploymentRestrictionApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ApplicationDeploymentRestriction;
+      let returnType = ApplicationDeploymentRestrictionResponseList;
       return this.apiClient.callApi(
         '/application/{applicationId}/deploymentRestriction', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

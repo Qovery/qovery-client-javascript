@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## createApplicationDeploymentRestriction
 
-> Base createApplicationDeploymentRestriction(applicationId, opts)
+> ApplicationDeploymentRestriction createApplicationDeploymentRestriction(applicationId, opts)
 
 Create an application deployment restriction
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Base**](Base.md)
+[**ApplicationDeploymentRestriction**](ApplicationDeploymentRestriction.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ null (empty response body)
 
 ## editApplicationDeploymentRestriction
 
-> Object editApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, opts)
+> ApplicationDeploymentRestriction editApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, opts)
 
 Edit an application deployment restriction
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**ApplicationDeploymentRestriction**](ApplicationDeploymentRestriction.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ## getApplicationDeploymentRestrictions
 
-> ApplicationDeploymentRestriction getApplicationDeploymentRestrictions(applicationId)
+> ApplicationDeploymentRestrictionResponseList getApplicationDeploymentRestrictions(applicationId)
 
 Get application deployment restrictions
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApplicationDeploymentRestriction**](ApplicationDeploymentRestriction.md)
+[**ApplicationDeploymentRestrictionResponseList**](ApplicationDeploymentRestrictionResponseList.md)
 
 ### Authorization
 

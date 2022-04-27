@@ -22,6 +22,7 @@ import ApplicationCurrentScale from './model/ApplicationCurrentScale';
 import ApplicationDependencyRequest from './model/ApplicationDependencyRequest';
 import ApplicationDeploymentRestriction from './model/ApplicationDeploymentRestriction';
 import ApplicationDeploymentRestrictionRequest from './model/ApplicationDeploymentRestrictionRequest';
+import ApplicationDeploymentRestrictionResponseList from './model/ApplicationDeploymentRestrictionResponseList';
 import ApplicationEditRequest from './model/ApplicationEditRequest';
 import ApplicationEditRequestAllOf from './model/ApplicationEditRequestAllOf';
 import ApplicationGitRepository from './model/ApplicationGitRepository';
@@ -74,6 +75,8 @@ import ClusterFeature from './model/ClusterFeature';
 import ClusterFeatureRequest from './model/ClusterFeatureRequest';
 import ClusterFeatureRequestFeatures from './model/ClusterFeatureRequestFeatures';
 import ClusterFeatureResponseList from './model/ClusterFeatureResponseList';
+import ClusterInstanceTypeResponseList from './model/ClusterInstanceTypeResponseList';
+import ClusterInstanceTypeResponseListResults from './model/ClusterInstanceTypeResponseListResults';
 import ClusterReadinessStatus from './model/ClusterReadinessStatus';
 import ClusterRegion from './model/ClusterRegion';
 import ClusterRegionResponseList from './model/ClusterRegionResponseList';
@@ -194,8 +197,6 @@ import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponse
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import GlobalDeploymentStatus from './model/GlobalDeploymentStatus';
 import Healthcheck from './model/Healthcheck';
-import InlineResponse200 from './model/InlineResponse200';
-import InlineResponse200Results from './model/InlineResponse200Results';
 import Instance from './model/Instance';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
@@ -455,6 +456,12 @@ export {
      * @property {module:model/ApplicationDeploymentRestrictionRequest}
      */
     ApplicationDeploymentRestrictionRequest,
+
+    /**
+     * The ApplicationDeploymentRestrictionResponseList model constructor.
+     * @property {module:model/ApplicationDeploymentRestrictionResponseList}
+     */
+    ApplicationDeploymentRestrictionResponseList,
 
     /**
      * The ApplicationEditRequest model constructor.
@@ -767,6 +774,18 @@ export {
      * @property {module:model/ClusterFeatureResponseList}
      */
     ClusterFeatureResponseList,
+
+    /**
+     * The ClusterInstanceTypeResponseList model constructor.
+     * @property {module:model/ClusterInstanceTypeResponseList}
+     */
+    ClusterInstanceTypeResponseList,
+
+    /**
+     * The ClusterInstanceTypeResponseListResults model constructor.
+     * @property {module:model/ClusterInstanceTypeResponseListResults}
+     */
+    ClusterInstanceTypeResponseListResults,
 
     /**
      * The ClusterReadinessStatus model constructor.
@@ -1487,18 +1506,6 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
-
-    /**
-     * The InlineResponse200 model constructor.
-     * @property {module:model/InlineResponse200}
-     */
-    InlineResponse200,
-
-    /**
-     * The InlineResponse200Results model constructor.
-     * @property {module:model/InlineResponse200Results}
-     */
-    InlineResponse200Results,
 
     /**
      * The Instance model constructor.

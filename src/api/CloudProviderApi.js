@@ -15,8 +15,8 @@
 import ApiClient from "../ApiClient";
 import CloudProviderResponseList from '../model/CloudProviderResponseList';
 import ClusterFeatureResponseList from '../model/ClusterFeatureResponseList';
+import ClusterInstanceTypeResponseList from '../model/ClusterInstanceTypeResponseList';
 import ClusterRegionResponseList from '../model/ClusterRegionResponseList';
-import InlineResponse200 from '../model/InlineResponse200';
 
 /**
 * CloudProvider service.
@@ -77,14 +77,14 @@ export default class CloudProviderApi {
      * Callback function to receive the result of the listAWSInstanceType operation.
      * @callback module:api/CloudProviderApi~listAWSInstanceTypeCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {module:model/ClusterInstanceTypeResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * List AWS available instance types
      * @param {module:api/CloudProviderApi~listAWSInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
+     * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
      */
     listAWSInstanceType(callback) {
       let postBody = null;
@@ -101,7 +101,7 @@ export default class CloudProviderApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse200;
+      let returnType = ClusterInstanceTypeResponseList;
       return this.apiClient.callApi(
         '/aws/instanceType', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -221,14 +221,14 @@ export default class CloudProviderApi {
      * Callback function to receive the result of the listDOInstanceType operation.
      * @callback module:api/CloudProviderApi~listDOInstanceTypeCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/ClusterInstanceTypeResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * List DO available instance types
      * @param {module:api/CloudProviderApi~listDOInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
      */
     listDOInstanceType(callback) {
       let postBody = null;
@@ -245,7 +245,7 @@ export default class CloudProviderApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = ClusterInstanceTypeResponseList;
       return this.apiClient.callApi(
         '/digitalOcean/instanceType', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -329,14 +329,14 @@ export default class CloudProviderApi {
      * Callback function to receive the result of the listScalewayInstanceType operation.
      * @callback module:api/CloudProviderApi~listScalewayInstanceTypeCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/ClusterInstanceTypeResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * List Scaleway available instance types
      * @param {module:api/CloudProviderApi~listScalewayInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
      */
     listScalewayInstanceType(callback) {
       let postBody = null;
@@ -353,7 +353,7 @@ export default class CloudProviderApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = ClusterInstanceTypeResponseList;
       return this.apiClient.callApi(
         '/scaleway/instanceType', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

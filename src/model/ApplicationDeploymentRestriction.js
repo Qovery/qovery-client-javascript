@@ -12,6 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApplicationDeploymentRestrictionRequest from './ApplicationDeploymentRestrictionRequest';
+import Base from './Base';
+import DeploymentRestrictionModeEnum from './DeploymentRestrictionModeEnum';
+import DeploymentRestrictionTypeEnum from './DeploymentRestrictionTypeEnum';
 
 /**
  * The ApplicationDeploymentRestriction model module.
@@ -22,10 +26,17 @@ class ApplicationDeploymentRestriction {
     /**
      * Constructs a new <code>ApplicationDeploymentRestriction</code>.
      * @alias module:model/ApplicationDeploymentRestriction
+     * @implements module:model/Base
+     * @implements module:model/ApplicationDeploymentRestrictionRequest
+     * @param id {String} 
+     * @param createdAt {Date} 
+     * @param mode {module:model/DeploymentRestrictionModeEnum} 
+     * @param type {module:model/DeploymentRestrictionTypeEnum} 
+     * @param value {String} For `PATH` restrictions, the value must not start with `/`
      */
-    constructor() { 
-        
-        ApplicationDeploymentRestriction.initialize(this);
+    constructor(id, createdAt, mode, type, value) { 
+        Base.initialize(this, id, createdAt);ApplicationDeploymentRestrictionRequest.initialize(this, mode, type, value);
+        ApplicationDeploymentRestriction.initialize(this, id, createdAt, mode, type, value);
     }
 
     /**
@@ -33,7 +44,12 @@ class ApplicationDeploymentRestriction {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, createdAt, mode, type, value) { 
+        obj['id'] = id;
+        obj['created_at'] = createdAt;
+        obj['mode'] = mode;
+        obj['type'] = type;
+        obj['value'] = value;
     }
 
     /**
@@ -46,9 +62,26 @@ class ApplicationDeploymentRestriction {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ApplicationDeploymentRestriction();
+            Base.constructFromObject(data, obj);
+            ApplicationDeploymentRestrictionRequest.constructFromObject(data, obj);
 
-            if (data.hasOwnProperty('deployment_restrictions')) {
-                obj['deployment_restrictions'] = ApiClient.convertToType(data['deployment_restrictions'], [Object]);
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
+            if (data.hasOwnProperty('mode')) {
+                obj['mode'] = DeploymentRestrictionModeEnum.constructFromObject(data['mode']);
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = DeploymentRestrictionTypeEnum.constructFromObject(data['type']);
+            }
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
         }
         return obj;
@@ -58,11 +91,64 @@ class ApplicationDeploymentRestriction {
 }
 
 /**
- * @member {Array.<Object>} deployment_restrictions
+ * @member {String} id
  */
-ApplicationDeploymentRestriction.prototype['deployment_restrictions'] = undefined;
+ApplicationDeploymentRestriction.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+ApplicationDeploymentRestriction.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+ApplicationDeploymentRestriction.prototype['updated_at'] = undefined;
+
+/**
+ * @member {module:model/DeploymentRestrictionModeEnum} mode
+ */
+ApplicationDeploymentRestriction.prototype['mode'] = undefined;
+
+/**
+ * @member {module:model/DeploymentRestrictionTypeEnum} type
+ */
+ApplicationDeploymentRestriction.prototype['type'] = undefined;
+
+/**
+ * For `PATH` restrictions, the value must not start with `/`
+ * @member {String} value
+ */
+ApplicationDeploymentRestriction.prototype['value'] = undefined;
 
 
+// Implement Base interface:
+/**
+ * @member {String} id
+ */
+Base.prototype['id'] = undefined;
+/**
+ * @member {Date} created_at
+ */
+Base.prototype['created_at'] = undefined;
+/**
+ * @member {Date} updated_at
+ */
+Base.prototype['updated_at'] = undefined;
+// Implement ApplicationDeploymentRestrictionRequest interface:
+/**
+ * @member {module:model/DeploymentRestrictionModeEnum} mode
+ */
+ApplicationDeploymentRestrictionRequest.prototype['mode'] = undefined;
+/**
+ * @member {module:model/DeploymentRestrictionTypeEnum} type
+ */
+ApplicationDeploymentRestrictionRequest.prototype['type'] = undefined;
+/**
+ * For `PATH` restrictions, the value must not start with `/`
+ * @member {String} value
+ */
+ApplicationDeploymentRestrictionRequest.prototype['value'] = undefined;
 
 
 

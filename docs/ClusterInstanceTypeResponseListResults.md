@@ -1,4 +1,4 @@
-# QoveryApi.InlineResponse200Results
+# QoveryApi.ClusterInstanceTypeResponseListResults
 
 ## Properties
 

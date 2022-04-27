@@ -18,6 +18,7 @@ docs/ApplicationDeploymentHistoryApi.md
 docs/ApplicationDeploymentRestriction.md
 docs/ApplicationDeploymentRestrictionApi.md
 docs/ApplicationDeploymentRestrictionRequest.md
+docs/ApplicationDeploymentRestrictionResponseList.md
 docs/ApplicationEditRequest.md
 docs/ApplicationEditRequestAllOf.md
 docs/ApplicationEnvironmentVariableApi.md
@@ -81,6 +82,8 @@ docs/ClusterFeature.md
 docs/ClusterFeatureRequest.md
 docs/ClusterFeatureRequestFeatures.md
 docs/ClusterFeatureResponseList.md
+docs/ClusterInstanceTypeResponseList.md
+docs/ClusterInstanceTypeResponseListResults.md
 docs/ClusterReadinessStatus.md
 docs/ClusterRegion.md
 docs/ClusterRegionResponseList.md
@@ -219,8 +222,6 @@ docs/GitRepositoryBranchResponseList.md
 docs/GitRepositoryResponseList.md
 docs/GlobalDeploymentStatus.md
 docs/Healthcheck.md
-docs/InlineResponse200.md
-docs/InlineResponse200Results.md
 docs/Instance.md
 docs/InstanceResponseList.md
 docs/InviteMember.md
@@ -413,6 +414,7 @@ src/model/ApplicationCurrentScale.js
 src/model/ApplicationDependencyRequest.js
 src/model/ApplicationDeploymentRestriction.js
 src/model/ApplicationDeploymentRestrictionRequest.js
+src/model/ApplicationDeploymentRestrictionResponseList.js
 src/model/ApplicationEditRequest.js
 src/model/ApplicationEditRequestAllOf.js
 src/model/ApplicationGitRepository.js
@@ -465,6 +467,8 @@ src/model/ClusterFeature.js
 src/model/ClusterFeatureRequest.js
 src/model/ClusterFeatureRequestFeatures.js
 src/model/ClusterFeatureResponseList.js
+src/model/ClusterInstanceTypeResponseList.js
+src/model/ClusterInstanceTypeResponseListResults.js
 src/model/ClusterReadinessStatus.js
 src/model/ClusterRegion.js
 src/model/ClusterRegionResponseList.js
@@ -585,8 +589,6 @@ src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponseList.js
 src/model/GlobalDeploymentStatus.js
 src/model/Healthcheck.js
-src/model/InlineResponse200.js
-src/model/InlineResponse200Results.js
 src/model/Instance.js
 src/model/InstanceResponseList.js
 src/model/InviteMember.js
@@ -762,6 +764,7 @@ test/model/ApplicationCurrentScale.spec.js
 test/model/ApplicationDependencyRequest.spec.js
 test/model/ApplicationDeploymentRestriction.spec.js
 test/model/ApplicationDeploymentRestrictionRequest.spec.js
+test/model/ApplicationDeploymentRestrictionResponseList.spec.js
 test/model/ApplicationEditRequest.spec.js
 test/model/ApplicationEditRequestAllOf.spec.js
 test/model/ApplicationGitRepository.spec.js
@@ -814,6 +817,8 @@ test/model/ClusterFeature.spec.js
 test/model/ClusterFeatureRequest.spec.js
 test/model/ClusterFeatureRequestFeatures.spec.js
 test/model/ClusterFeatureResponseList.spec.js
+test/model/ClusterInstanceTypeResponseList.spec.js
+test/model/ClusterInstanceTypeResponseListResults.spec.js
 test/model/ClusterReadinessStatus.spec.js
 test/model/ClusterRegion.spec.js
 test/model/ClusterRegionResponseList.spec.js
@@ -934,8 +939,6 @@ test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponseList.spec.js
 test/model/GlobalDeploymentStatus.spec.js
 test/model/Healthcheck.spec.js
-test/model/InlineResponse200.spec.js
-test/model/InlineResponse200Results.spec.js
 test/model/Instance.spec.js
 test/model/InstanceResponseList.spec.js
 test/model/InviteMember.spec.js

@@ -70,7 +70,7 @@ class ClusterFeature {
                 obj['value_type'] = ApiClient.convertToType(data['value_type'], 'String');
             }
             if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'String');
+                obj['value'] = ApiClient.convertToType(data['value'], OneOfstringboolean);
             }
             if (data.hasOwnProperty('is_value_updatable')) {
                 obj['is_value_updatable'] = ApiClient.convertToType(data['is_value_updatable'], 'Boolean');
@@ -121,7 +121,7 @@ ClusterFeature.prototype['currency_code'] = undefined;
 ClusterFeature.prototype['value_type'] = undefined;
 
 /**
- * @member {String} value
+ * @member {module:model/OneOfstringboolean} value
  */
 ClusterFeature.prototype['value'] = undefined;
 

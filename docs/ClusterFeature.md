@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **costPerMonth** | **Number** |  | [optional] 
 **currencyCode** | **String** |  | [optional] 
 **valueType** | **String** |  | [optional] 
-**value** | **String** |  | [optional] 
+**value** | [**OneOfstringboolean**](OneOfstringboolean.md) |  | [optional] 
 **isValueUpdatable** | **Boolean** |  | [optional] [default to false]
 **acceptedValues** | [**[OneOfstringboolean]**](OneOfstringboolean.md) |  | [optional] 
 

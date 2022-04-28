@@ -27,17 +27,17 @@ export default class StateEnum {
 
     
         /**
-         * value: "BUILD_ERROR"
+         * value: "CANCELED"
          * @const
          */
-        "BUILD_ERROR" = "BUILD_ERROR";
+        "CANCELED" = "CANCELED";
 
     
         /**
-         * value: "BUILT"
+         * value: "CANCELING"
          * @const
          */
-        "BUILT" = "BUILT";
+        "CANCELING" = "CANCELING";
 
     
         /**
@@ -90,6 +90,13 @@ export default class StateEnum {
 
     
         /**
+         * value: "DEPLOYMENT_QUEUED"
+         * @const
+         */
+        "DEPLOYMENT_QUEUED" = "DEPLOYMENT_QUEUED";
+
+    
+        /**
          * value: "QUEUED"
          * @const
          */
@@ -108,13 +115,6 @@ export default class StateEnum {
          * @const
          */
         "RUNNING" = "RUNNING";
-
-    
-        /**
-         * value: "RUNNING_ERROR"
-         * @const
-         */
-        "RUNNING_ERROR" = "RUNNING_ERROR";
 
     
         /**

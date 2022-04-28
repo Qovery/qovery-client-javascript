@@ -56,7 +56,7 @@ class ClusterAllOf {
                 obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('features')) {
-                obj['features'] = ClusterFeature.constructFromObject(data['features']);
+                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeature]);
             }
             if (data.hasOwnProperty('has_access')) {
                 obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
@@ -86,7 +86,7 @@ ClusterAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
 ClusterAllOf.prototype['status'] = undefined;
 
 /**
- * @member {module:model/ClusterFeature} features
+ * @member {Array.<module:model/ClusterFeature>} features
  */
 ClusterAllOf.prototype['features'] = undefined;
 

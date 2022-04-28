@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Commit from './Commit';
-import GlobalDeploymentStatus from './GlobalDeploymentStatus';
+import StateEnum from './StateEnum';
 
 /**
  * The DeploymentHistoryApplicationAllOf model module.
@@ -56,7 +56,7 @@ class DeploymentHistoryApplicationAllOf {
                 obj['commit'] = Commit.constructFromObject(data['commit']);
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = GlobalDeploymentStatus.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -76,7 +76,7 @@ DeploymentHistoryApplicationAllOf.prototype['name'] = undefined;
 DeploymentHistoryApplicationAllOf.prototype['commit'] = undefined;
 
 /**
- * @member {module:model/GlobalDeploymentStatus} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryApplicationAllOf.prototype['status'] = undefined;
 

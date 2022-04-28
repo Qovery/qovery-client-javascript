@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import GlobalDeploymentStatus from './GlobalDeploymentStatus';
 import ServiceDeploymentStatusEnum from './ServiceDeploymentStatusEnum';
+import StateEnum from './StateEnum';
 
 /**
  * The Status model module.
@@ -24,7 +24,7 @@ class Status {
     /**
      * Constructs a new <code>Status</code>.
      * @alias module:model/Status
-     * @param state {module:model/GlobalDeploymentStatus} 
+     * @param state {module:model/StateEnum} 
      */
     constructor(state) { 
         
@@ -55,7 +55,7 @@ class Status {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('state')) {
-                obj['state'] = GlobalDeploymentStatus.constructFromObject(data['state']);
+                obj['state'] = StateEnum.constructFromObject(data['state']);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
@@ -76,7 +76,7 @@ class Status {
 Status.prototype['id'] = undefined;
 
 /**
- * @member {module:model/GlobalDeploymentStatus} state
+ * @member {module:model/StateEnum} state
  */
 Status.prototype['state'] = undefined;
 

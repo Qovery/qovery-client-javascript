@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**state** | [**GlobalDeploymentStatus**](GlobalDeploymentStatus.md) |  | 
+**state** | [**StateEnum**](StateEnum.md) |  | 
 **message** | **String** | message related to the state | [optional] 
 **serviceDeploymentStatus** | [**ServiceDeploymentStatusEnum**](ServiceDeploymentStatusEnum.md) |  | [optional] 
 

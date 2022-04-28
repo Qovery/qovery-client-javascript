@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class InviteStatusEnum {
     
         /**
-         * value: "PENDING"
-         * @const
-         */
-        "PENDING" = "PENDING";
-
-    
-        /**
          * value: "EXPIRED"
          * @const
          */
         "EXPIRED" = "EXPIRED";
+
+    
+        /**
+         * value: "PENDING"
+         * @const
+         */
+        "PENDING" = "PENDING";
 
     
 

@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import EnvironmentLogScope from './EnvironmentLogScope';
-import GlobalDeploymentStatus from './GlobalDeploymentStatus';
+import StatusKindEnum from './StatusKindEnum';
 
 /**
  * The EnvironmentLog model module.
@@ -65,7 +65,7 @@ class EnvironmentLog {
                 obj['scope'] = EnvironmentLogScope.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('state')) {
-                obj['state'] = GlobalDeploymentStatus.constructFromObject(data['state']);
+                obj['state'] = StatusKindEnum.constructFromObject(data['state']);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
@@ -99,7 +99,7 @@ EnvironmentLog.prototype['created_at'] = undefined;
 EnvironmentLog.prototype['scope'] = undefined;
 
 /**
- * @member {module:model/GlobalDeploymentStatus} state
+ * @member {module:model/StatusKindEnum} state
  */
 EnvironmentLog.prototype['state'] = undefined;
 

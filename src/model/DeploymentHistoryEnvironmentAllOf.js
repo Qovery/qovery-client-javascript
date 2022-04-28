@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import DeploymentHistoryApplication from './DeploymentHistoryApplication';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
-import GlobalDeploymentStatus from './GlobalDeploymentStatus';
+import StateEnum from './StateEnum';
 
 /**
  * The DeploymentHistoryEnvironmentAllOf model module.
@@ -51,7 +51,7 @@ class DeploymentHistoryEnvironmentAllOf {
             obj = obj || new DeploymentHistoryEnvironmentAllOf();
 
             if (data.hasOwnProperty('status')) {
-                obj['status'] = GlobalDeploymentStatus.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [DeploymentHistoryApplication]);
@@ -67,7 +67,7 @@ class DeploymentHistoryEnvironmentAllOf {
 }
 
 /**
- * @member {module:model/GlobalDeploymentStatus} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryEnvironmentAllOf.prototype['status'] = undefined;
 

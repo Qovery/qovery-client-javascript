@@ -70,7 +70,6 @@ import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoReq
 import ClusterCloudProviderInfoRequestCredentials from './model/ClusterCloudProviderInfoRequestCredentials';
 import ClusterCredentials from './model/ClusterCredentials';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
-import ClusterDeploymentStatusEnum from './model/ClusterDeploymentStatusEnum';
 import ClusterFeature from './model/ClusterFeature';
 import ClusterFeatureRequest from './model/ClusterFeatureRequest';
 import ClusterFeatureRequestFeatures from './model/ClusterFeatureRequestFeatures';
@@ -87,7 +86,6 @@ import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
 import ClusterRoutingTableRequestRoutes from './model/ClusterRoutingTableRequestRoutes';
 import ClusterRoutingTableResults from './model/ClusterRoutingTableResults';
 import ClusterStatus from './model/ClusterStatus';
-import ClusterStatusEnum from './model/ClusterStatusEnum';
 import ClusterStatusResponseList from './model/ClusterStatusResponseList';
 import Commit from './model/Commit';
 import CommitPaginatedResponseList from './model/CommitPaginatedResponseList';
@@ -195,7 +193,6 @@ import GitRepository from './model/GitRepository';
 import GitRepositoryBranch from './model/GitRepositoryBranch';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
-import GlobalDeploymentStatus from './model/GlobalDeploymentStatus';
 import Healthcheck from './model/Healthcheck';
 import Instance from './model/Instance';
 import InstanceResponseList from './model/InstanceResponseList';
@@ -295,7 +292,9 @@ import ServiceTotalNumber from './model/ServiceTotalNumber';
 import ServiceTypeEnum from './model/ServiceTypeEnum';
 import SignUp from './model/SignUp';
 import SignUpRequest from './model/SignUpRequest';
+import StateEnum from './model/StateEnum';
 import Status from './model/Status';
+import StatusKindEnum from './model/StatusKindEnum';
 import StorageDisk from './model/StorageDisk';
 import StorageDiskResponseList from './model/StorageDiskResponseList';
 import StorageTypeEnum from './model/StorageTypeEnum';
@@ -746,12 +745,6 @@ export {
     ClusterCredentialsResponseList,
 
     /**
-     * The ClusterDeploymentStatusEnum model constructor.
-     * @property {module:model/ClusterDeploymentStatusEnum}
-     */
-    ClusterDeploymentStatusEnum,
-
-    /**
      * The ClusterFeature model constructor.
      * @property {module:model/ClusterFeature}
      */
@@ -846,12 +839,6 @@ export {
      * @property {module:model/ClusterStatus}
      */
     ClusterStatus,
-
-    /**
-     * The ClusterStatusEnum model constructor.
-     * @property {module:model/ClusterStatusEnum}
-     */
-    ClusterStatusEnum,
 
     /**
      * The ClusterStatusResponseList model constructor.
@@ -1496,12 +1483,6 @@ export {
     GitRepositoryResponseList,
 
     /**
-     * The GlobalDeploymentStatus model constructor.
-     * @property {module:model/GlobalDeploymentStatus}
-     */
-    GlobalDeploymentStatus,
-
-    /**
      * The Healthcheck model constructor.
      * @property {module:model/Healthcheck}
      */
@@ -2096,10 +2077,22 @@ export {
     SignUpRequest,
 
     /**
+     * The StateEnum model constructor.
+     * @property {module:model/StateEnum}
+     */
+    StateEnum,
+
+    /**
      * The Status model constructor.
      * @property {module:model/Status}
      */
     Status,
+
+    /**
+     * The StatusKindEnum model constructor.
+     * @property {module:model/StatusKindEnum}
+     */
+    StatusKindEnum,
 
     /**
      * The StorageDisk model constructor.

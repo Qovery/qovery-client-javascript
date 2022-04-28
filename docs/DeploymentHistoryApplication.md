@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** |  | [optional] 
 **commit** | [**Commit**](Commit.md) |  | [optional] 
-**status** | [**GlobalDeploymentStatus**](GlobalDeploymentStatus.md) |  | [optional] 
+**status** | [**StateEnum**](StateEnum.md) |  | [optional] 
 
 

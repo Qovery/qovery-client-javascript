@@ -3,8 +3,8 @@
 ## Enum
 
 
-* `MANAGED` (value: `"MANAGED"`)
-
 * `CONTAINER` (value: `"CONTAINER"`)
+
+* `MANAGED` (value: `"MANAGED"`)
 
 

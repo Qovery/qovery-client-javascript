@@ -20,10 +20,10 @@ import ApiClient from '../ApiClient';
 export default class DatabaseTypeEnum {
     
         /**
-         * value: "POSTGRESQL"
+         * value: "MONGODB"
          * @const
          */
-        "POSTGRESQL" = "POSTGRESQL";
+        "MONGODB" = "MONGODB";
 
     
         /**
@@ -34,10 +34,10 @@ export default class DatabaseTypeEnum {
 
     
         /**
-         * value: "MONGODB"
+         * value: "POSTGRESQL"
          * @const
          */
-        "MONGODB" = "MONGODB";
+        "POSTGRESQL" = "POSTGRESQL";
 
     
         /**

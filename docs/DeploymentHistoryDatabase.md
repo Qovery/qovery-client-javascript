@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** |  | [optional] 
-**status** | [**GlobalDeploymentStatus**](GlobalDeploymentStatus.md) |  | [optional] 
+**status** | [**StateEnum**](StateEnum.md) |  | [optional] 
 
 

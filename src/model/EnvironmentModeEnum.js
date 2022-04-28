@@ -20,13 +20,6 @@ import ApiClient from '../ApiClient';
 export default class EnvironmentModeEnum {
     
         /**
-         * value: "PRODUCTION"
-         * @const
-         */
-        "PRODUCTION" = "PRODUCTION";
-
-    
-        /**
          * value: "DEVELOPMENT"
          * @const
          */
@@ -34,17 +27,24 @@ export default class EnvironmentModeEnum {
 
     
         /**
-         * value: "STAGING"
-         * @const
-         */
-        "STAGING" = "STAGING";
-
-    
-        /**
          * value: "PREVIEW"
          * @const
          */
         "PREVIEW" = "PREVIEW";
+
+    
+        /**
+         * value: "PRODUCTION"
+         * @const
+         */
+        "PRODUCTION" = "PRODUCTION";
+
+    
+        /**
+         * value: "STAGING"
+         * @const
+         */
+        "STAGING" = "STAGING";
 
     
 

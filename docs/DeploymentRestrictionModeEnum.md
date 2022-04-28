@@ -3,8 +3,8 @@
 ## Enum
 
 
-* `MATCH` (value: `"MATCH"`)
-
 * `EXCLUDE` (value: `"EXCLUDE"`)
+
+* `MATCH` (value: `"MATCH"`)
 
 

@@ -5,8 +5,8 @@
 
 * `PERSONAL` (value: `"PERSONAL"`)
 
-* `WORK` (value: `"WORK"`)
-
 * `SCHOOL` (value: `"SCHOOL"`)
+
+* `WORK` (value: `"WORK"`)
 
 

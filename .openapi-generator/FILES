@@ -77,7 +77,6 @@ docs/ClusterCloudProviderInfoRequest.md
 docs/ClusterCloudProviderInfoRequestCredentials.md
 docs/ClusterCredentials.md
 docs/ClusterCredentialsResponseList.md
-docs/ClusterDeploymentStatusEnum.md
 docs/ClusterFeature.md
 docs/ClusterFeatureRequest.md
 docs/ClusterFeatureRequestFeatures.md
@@ -94,7 +93,6 @@ docs/ClusterRoutingTableRequest.md
 docs/ClusterRoutingTableRequestRoutes.md
 docs/ClusterRoutingTableResults.md
 docs/ClusterStatus.md
-docs/ClusterStatusEnum.md
 docs/ClusterStatusResponseList.md
 docs/ClustersApi.md
 docs/Commit.md
@@ -220,7 +218,6 @@ docs/GitRepository.md
 docs/GitRepositoryBranch.md
 docs/GitRepositoryBranchResponseList.md
 docs/GitRepositoryResponseList.md
-docs/GlobalDeploymentStatus.md
 docs/Healthcheck.md
 docs/Instance.md
 docs/InstanceResponseList.md
@@ -331,7 +328,9 @@ docs/ServiceTotalNumber.md
 docs/ServiceTypeEnum.md
 docs/SignUp.md
 docs/SignUpRequest.md
+docs/StateEnum.md
 docs/Status.md
+docs/StatusKindEnum.md
 docs/StorageDisk.md
 docs/StorageDiskResponseList.md
 docs/StorageTypeEnum.md
@@ -462,7 +461,6 @@ src/model/ClusterCloudProviderInfoRequest.js
 src/model/ClusterCloudProviderInfoRequestCredentials.js
 src/model/ClusterCredentials.js
 src/model/ClusterCredentialsResponseList.js
-src/model/ClusterDeploymentStatusEnum.js
 src/model/ClusterFeature.js
 src/model/ClusterFeatureRequest.js
 src/model/ClusterFeatureRequestFeatures.js
@@ -479,7 +477,6 @@ src/model/ClusterRoutingTableRequest.js
 src/model/ClusterRoutingTableRequestRoutes.js
 src/model/ClusterRoutingTableResults.js
 src/model/ClusterStatus.js
-src/model/ClusterStatusEnum.js
 src/model/ClusterStatusResponseList.js
 src/model/Commit.js
 src/model/CommitPaginatedResponseList.js
@@ -587,7 +584,6 @@ src/model/GitRepository.js
 src/model/GitRepositoryBranch.js
 src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponseList.js
-src/model/GlobalDeploymentStatus.js
 src/model/Healthcheck.js
 src/model/Instance.js
 src/model/InstanceResponseList.js
@@ -687,7 +683,9 @@ src/model/ServiceTotalNumber.js
 src/model/ServiceTypeEnum.js
 src/model/SignUp.js
 src/model/SignUpRequest.js
+src/model/StateEnum.js
 src/model/Status.js
+src/model/StatusKindEnum.js
 src/model/StorageDisk.js
 src/model/StorageDiskResponseList.js
 src/model/StorageTypeEnum.js
@@ -812,7 +810,6 @@ test/model/ClusterCloudProviderInfoRequest.spec.js
 test/model/ClusterCloudProviderInfoRequestCredentials.spec.js
 test/model/ClusterCredentials.spec.js
 test/model/ClusterCredentialsResponseList.spec.js
-test/model/ClusterDeploymentStatusEnum.spec.js
 test/model/ClusterFeature.spec.js
 test/model/ClusterFeatureRequest.spec.js
 test/model/ClusterFeatureRequestFeatures.spec.js
@@ -829,7 +826,6 @@ test/model/ClusterRoutingTableRequest.spec.js
 test/model/ClusterRoutingTableRequestRoutes.spec.js
 test/model/ClusterRoutingTableResults.spec.js
 test/model/ClusterStatus.spec.js
-test/model/ClusterStatusEnum.spec.js
 test/model/ClusterStatusResponseList.spec.js
 test/model/Commit.spec.js
 test/model/CommitPaginatedResponseList.spec.js
@@ -937,7 +933,6 @@ test/model/GitRepository.spec.js
 test/model/GitRepositoryBranch.spec.js
 test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponseList.spec.js
-test/model/GlobalDeploymentStatus.spec.js
 test/model/Healthcheck.spec.js
 test/model/Instance.spec.js
 test/model/InstanceResponseList.spec.js
@@ -1037,7 +1032,9 @@ test/model/ServiceTotalNumber.spec.js
 test/model/ServiceTypeEnum.spec.js
 test/model/SignUp.spec.js
 test/model/SignUpRequest.spec.js
+test/model/StateEnum.spec.js
 test/model/Status.spec.js
+test/model/StatusKindEnum.spec.js
 test/model/StorageDisk.spec.js
 test/model/StorageDiskResponseList.spec.js
 test/model/StorageTypeEnum.spec.js

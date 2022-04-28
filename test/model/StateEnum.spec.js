@@ -46,11 +46,11 @@
       object[property] = value;
   }
 
-  describe('ClusterDeploymentStatusEnum', function() {
-    it('should create an instance of ClusterDeploymentStatusEnum', function() {
-      // uncomment below and update the code to test ClusterDeploymentStatusEnum
-      //var instance = new QoveryApi.ClusterDeploymentStatusEnum();
-      //expect(instance).to.be.a(QoveryApi.ClusterDeploymentStatusEnum);
+  describe('StateEnum', function() {
+    it('should create an instance of StateEnum', function() {
+      // uncomment below and update the code to test StateEnum
+      //var instance = new QoveryApi.StateEnum();
+      //expect(instance).to.be.a(QoveryApi.StateEnum);
     });
 
   });

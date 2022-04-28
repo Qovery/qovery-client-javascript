@@ -17,7 +17,7 @@ import CloudProviderEnum from './CloudProviderEnum';
 import ClusterAllOf from './ClusterAllOf';
 import ClusterBase from './ClusterBase';
 import ClusterFeature from './ClusterFeature';
-import ClusterStatusEnum from './ClusterStatusEnum';
+import StateEnum from './StateEnum';
 
 /**
  * The Cluster model module.
@@ -112,7 +112,7 @@ class Cluster {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ClusterStatusEnum.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('features')) {
                 obj['features'] = ClusterFeature.constructFromObject(data['features']);
@@ -213,7 +213,7 @@ Cluster.prototype['instance_type'] = undefined;
 Cluster.prototype['estimated_cloud_provider_cost'] = undefined;
 
 /**
- * @member {module:model/ClusterStatusEnum} status
+ * @member {module:model/StateEnum} status
  */
 Cluster.prototype['status'] = undefined;
 
@@ -307,7 +307,7 @@ ClusterBase.prototype['instance_type'] = undefined;
  */
 ClusterAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
 /**
- * @member {module:model/ClusterStatusEnum} status
+ * @member {module:model/StateEnum} status
  */
 ClusterAllOf.prototype['status'] = undefined;
 /**

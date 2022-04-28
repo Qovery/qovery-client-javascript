@@ -3,18 +3,18 @@
 ## Enum
 
 
-* `PAID` (value: `"PAID"`)
+* `NOT_PAID` (value: `"NOT_PAID"`)
 
-* `POSTED` (value: `"POSTED"`)
+* `PAID` (value: `"PAID"`)
 
 * `PAYMENT_DUE` (value: `"PAYMENT_DUE"`)
 
-* `NOT_PAID` (value: `"NOT_PAID"`)
-
-* `VOIDED` (value: `"VOIDED"`)
-
 * `PENDING` (value: `"PENDING"`)
 
+* `POSTED` (value: `"POSTED"`)
+
 * `UNKNOWN` (value: `"UNKNOWN"`)
+
+* `VOIDED` (value: `"VOIDED"`)
 
 

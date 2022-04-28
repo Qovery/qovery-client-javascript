@@ -27,17 +27,17 @@ export default class TypeOfUseEnum {
 
     
         /**
-         * value: "WORK"
-         * @const
-         */
-        "WORK" = "WORK";
-
-    
-        /**
          * value: "SCHOOL"
          * @const
          */
         "SCHOOL" = "SCHOOL";
+
+    
+        /**
+         * value: "WORK"
+         * @const
+         */
+        "WORK" = "WORK";
 
     
 

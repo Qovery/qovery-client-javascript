@@ -16,7 +16,7 @@ import Base from './Base';
 import DeploymentHistoryApplication from './DeploymentHistoryApplication';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
 import DeploymentHistoryEnvironmentAllOf from './DeploymentHistoryEnvironmentAllOf';
-import GlobalDeploymentStatus from './GlobalDeploymentStatus';
+import StateEnum from './StateEnum';
 
 /**
  * The DeploymentHistoryEnvironment model module.
@@ -70,7 +70,7 @@ class DeploymentHistoryEnvironment {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = GlobalDeploymentStatus.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [DeploymentHistoryApplication]);
@@ -101,7 +101,7 @@ DeploymentHistoryEnvironment.prototype['created_at'] = undefined;
 DeploymentHistoryEnvironment.prototype['updated_at'] = undefined;
 
 /**
- * @member {module:model/GlobalDeploymentStatus} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryEnvironment.prototype['status'] = undefined;
 
@@ -131,7 +131,7 @@ Base.prototype['created_at'] = undefined;
 Base.prototype['updated_at'] = undefined;
 // Implement DeploymentHistoryEnvironmentAllOf interface:
 /**
- * @member {module:model/GlobalDeploymentStatus} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryEnvironmentAllOf.prototype['status'] = undefined;
 /**

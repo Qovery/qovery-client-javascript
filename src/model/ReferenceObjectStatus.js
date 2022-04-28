@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
-import GlobalDeploymentStatus from './GlobalDeploymentStatus';
 import ReferenceObject from './ReferenceObject';
 import ServiceDeploymentStatusEnum from './ServiceDeploymentStatusEnum';
+import StateEnum from './StateEnum';
 import Status from './Status';
 
 /**
@@ -29,7 +29,7 @@ class ReferenceObjectStatus {
      * @implements module:model/ReferenceObject
      * @implements module:model/Status
      * @param id {String} 
-     * @param state {module:model/GlobalDeploymentStatus} 
+     * @param state {module:model/StateEnum} 
      */
     constructor(id, state) { 
         ReferenceObject.initialize(this, id);Status.initialize(this, state);
@@ -63,7 +63,7 @@ class ReferenceObjectStatus {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('state')) {
-                obj['state'] = GlobalDeploymentStatus.constructFromObject(data['state']);
+                obj['state'] = StateEnum.constructFromObject(data['state']);
             }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
@@ -84,7 +84,7 @@ class ReferenceObjectStatus {
 ReferenceObjectStatus.prototype['id'] = undefined;
 
 /**
- * @member {module:model/GlobalDeploymentStatus} state
+ * @member {module:model/StateEnum} state
  */
 ReferenceObjectStatus.prototype['state'] = undefined;
 
@@ -111,7 +111,7 @@ ReferenceObject.prototype['id'] = undefined;
  */
 Status.prototype['id'] = undefined;
 /**
- * @member {module:model/GlobalDeploymentStatus} state
+ * @member {module:model/StateEnum} state
  */
 Status.prototype['state'] = undefined;
 /**

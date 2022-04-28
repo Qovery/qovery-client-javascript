@@ -3,8 +3,8 @@
 ## Enum
 
 
-* `PUBLIC` (value: `"PUBLIC"`)
-
 * `PRIVATE` (value: `"PRIVATE"`)
+
+* `PUBLIC` (value: `"PUBLIC"`)
 
 

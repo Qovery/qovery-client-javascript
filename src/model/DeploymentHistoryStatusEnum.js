@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class DeploymentHistoryStatusEnum {
     
         /**
-         * value: "SUCCESS"
-         * @const
-         */
-        "SUCCESS" = "SUCCESS";
-
-    
-        /**
          * value: "FAILED"
          * @const
          */
         "FAILED" = "FAILED";
+
+    
+        /**
+         * value: "SUCCESS"
+         * @const
+         */
+        "SUCCESS" = "SUCCESS";
 
     
 

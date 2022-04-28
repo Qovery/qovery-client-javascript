@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class DatabaseAccessibilityEnum {
     
         /**
-         * value: "PUBLIC"
-         * @const
-         */
-        "PUBLIC" = "PUBLIC";
-
-    
-        /**
          * value: "PRIVATE"
          * @const
          */
         "PRIVATE" = "PRIVATE";
+
+    
+        /**
+         * value: "PUBLIC"
+         * @const
+         */
+        "PUBLIC" = "PUBLIC";
 
     
 

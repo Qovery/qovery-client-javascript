@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class DatabaseModeEnum {
     
         /**
-         * value: "MANAGED"
-         * @const
-         */
-        "MANAGED" = "MANAGED";
-
-    
-        /**
          * value: "CONTAINER"
          * @const
          */
         "CONTAINER" = "CONTAINER";
+
+    
+        /**
+         * value: "MANAGED"
+         * @const
+         */
+        "MANAGED" = "MANAGED";
 
     
 

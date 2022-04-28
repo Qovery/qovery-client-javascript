@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import DeploymentHistoryDatabaseAllOf from './DeploymentHistoryDatabaseAllOf';
-import GlobalDeploymentStatus from './GlobalDeploymentStatus';
+import StateEnum from './StateEnum';
 
 /**
  * The DeploymentHistoryDatabase model module.
@@ -71,7 +71,7 @@ class DeploymentHistoryDatabase {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = GlobalDeploymentStatus.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -101,7 +101,7 @@ DeploymentHistoryDatabase.prototype['updated_at'] = undefined;
 DeploymentHistoryDatabase.prototype['name'] = undefined;
 
 /**
- * @member {module:model/GlobalDeploymentStatus} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryDatabase.prototype['status'] = undefined;
 
@@ -125,7 +125,7 @@ Base.prototype['updated_at'] = undefined;
  */
 DeploymentHistoryDatabaseAllOf.prototype['name'] = undefined;
 /**
- * @member {module:model/GlobalDeploymentStatus} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryDatabaseAllOf.prototype['status'] = undefined;
 

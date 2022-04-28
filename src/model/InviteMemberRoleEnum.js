@@ -20,13 +20,6 @@ import ApiClient from '../ApiClient';
 export default class InviteMemberRoleEnum {
     
         /**
-         * value: "OWNER"
-         * @const
-         */
-        "OWNER" = "OWNER";
-
-    
-        /**
          * value: "ADMIN"
          * @const
          */
@@ -38,6 +31,13 @@ export default class InviteMemberRoleEnum {
          * @const
          */
         "DEVELOPER" = "DEVELOPER";
+
+    
+        /**
+         * value: "OWNER"
+         * @const
+         */
+        "OWNER" = "OWNER";
 
     
         /**

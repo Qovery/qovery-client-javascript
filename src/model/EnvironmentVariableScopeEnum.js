@@ -20,6 +20,13 @@ import ApiClient from '../ApiClient';
 export default class EnvironmentVariableScopeEnum {
     
         /**
+         * value: "APPLICATION"
+         * @const
+         */
+        "APPLICATION" = "APPLICATION";
+
+    
+        /**
          * value: "BUILT_IN"
          * @const
          */
@@ -38,13 +45,6 @@ export default class EnvironmentVariableScopeEnum {
          * @const
          */
         "PROJECT" = "PROJECT";
-
-    
-        /**
-         * value: "APPLICATION"
-         * @const
-         */
-        "APPLICATION" = "APPLICATION";
 
     
 

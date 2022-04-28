@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **clusterId** | **String** |  | [optional] 
-**status** | [**ClusterDeploymentStatusEnum**](ClusterDeploymentStatusEnum.md) |  | [optional] 
+**status** | [**StateEnum**](StateEnum.md) |  | [optional] 
 **isDeployed** | **Boolean** |  | [optional] 
 
 

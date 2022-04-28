@@ -3,8 +3,8 @@
 ## Enum
 
 
-* `PENDING` (value: `"PENDING"`)
-
 * `EXPIRED` (value: `"EXPIRED"`)
+
+* `PENDING` (value: `"PENDING"`)
 
 

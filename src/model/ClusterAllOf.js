@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ClusterFeature from './ClusterFeature';
-import ClusterStatusEnum from './ClusterStatusEnum';
+import StateEnum from './StateEnum';
 
 /**
  * The ClusterAllOf model module.
@@ -53,7 +53,7 @@ class ClusterAllOf {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ClusterStatusEnum.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('features')) {
                 obj['features'] = ClusterFeature.constructFromObject(data['features']);
@@ -81,7 +81,7 @@ class ClusterAllOf {
 ClusterAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
 
 /**
- * @member {module:model/ClusterStatusEnum} status
+ * @member {module:model/StateEnum} status
  */
 ClusterAllOf.prototype['status'] = undefined;
 

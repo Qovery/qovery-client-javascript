@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class InvoiceStatusEnum {
     
         /**
+         * value: "NOT_PAID"
+         * @const
+         */
+        "NOT_PAID" = "NOT_PAID";
+
+    
+        /**
          * value: "PAID"
          * @const
          */
         "PAID" = "PAID";
-
-    
-        /**
-         * value: "POSTED"
-         * @const
-         */
-        "POSTED" = "POSTED";
 
     
         /**
@@ -41,20 +41,6 @@ export default class InvoiceStatusEnum {
 
     
         /**
-         * value: "NOT_PAID"
-         * @const
-         */
-        "NOT_PAID" = "NOT_PAID";
-
-    
-        /**
-         * value: "VOIDED"
-         * @const
-         */
-        "VOIDED" = "VOIDED";
-
-    
-        /**
          * value: "PENDING"
          * @const
          */
@@ -62,10 +48,24 @@ export default class InvoiceStatusEnum {
 
     
         /**
+         * value: "POSTED"
+         * @const
+         */
+        "POSTED" = "POSTED";
+
+    
+        /**
          * value: "UNKNOWN"
          * @const
          */
         "UNKNOWN" = "UNKNOWN";
+
+    
+        /**
+         * value: "VOIDED"
+         * @const
+         */
+        "VOIDED" = "VOIDED";
 
     
 

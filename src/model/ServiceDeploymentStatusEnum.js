@@ -27,17 +27,17 @@ export default class ServiceDeploymentStatusEnum {
 
     
         /**
-         * value: "UP_TO_DATE"
-         * @const
-         */
-        "UP_TO_DATE" = "UP_TO_DATE";
-
-    
-        /**
          * value: "OUT_OF_DATE"
          * @const
          */
         "OUT_OF_DATE" = "OUT_OF_DATE";
+
+    
+        /**
+         * value: "UP_TO_DATE"
+         * @const
+         */
+        "UP_TO_DATE" = "UP_TO_DATE";
 
     
 

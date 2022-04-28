@@ -13,39 +13,11 @@
 
 import ApiClient from '../ApiClient';
 /**
-* Enum class GlobalDeploymentStatus.
+* Enum class StateEnum.
 * @enum {}
 * @readonly
 */
-export default class GlobalDeploymentStatus {
-    
-        /**
-         * value: "READY"
-         * @const
-         */
-        "READY" = "READY";
-
-    
-        /**
-         * value: "QUEUED"
-         * @const
-         */
-        "QUEUED" = "QUEUED";
-
-    
-        /**
-         * value: "STOP_QUEUED"
-         * @const
-         */
-        "STOP_QUEUED" = "STOP_QUEUED";
-
-    
-        /**
-         * value: "DELETE_QUEUED"
-         * @const
-         */
-        "DELETE_QUEUED" = "DELETE_QUEUED";
-
+export default class StateEnum {
     
         /**
          * value: "BUILDING"
@@ -69,6 +41,41 @@ export default class GlobalDeploymentStatus {
 
     
         /**
+         * value: "DELETED"
+         * @const
+         */
+        "DELETED" = "DELETED";
+
+    
+        /**
+         * value: "DELETE_ERROR"
+         * @const
+         */
+        "DELETE_ERROR" = "DELETE_ERROR";
+
+    
+        /**
+         * value: "DELETE_QUEUED"
+         * @const
+         */
+        "DELETE_QUEUED" = "DELETE_QUEUED";
+
+    
+        /**
+         * value: "DELETING"
+         * @const
+         */
+        "DELETING" = "DELETING";
+
+    
+        /**
+         * value: "DEPLOYED"
+         * @const
+         */
+        "DEPLOYED" = "DEPLOYED";
+
+    
+        /**
          * value: "DEPLOYING"
          * @const
          */
@@ -83,10 +90,38 @@ export default class GlobalDeploymentStatus {
 
     
         /**
-         * value: "DEPLOYED"
+         * value: "QUEUED"
          * @const
          */
-        "DEPLOYED" = "DEPLOYED";
+        "QUEUED" = "QUEUED";
+
+    
+        /**
+         * value: "READY"
+         * @const
+         */
+        "READY" = "READY";
+
+    
+        /**
+         * value: "RUNNING"
+         * @const
+         */
+        "RUNNING" = "RUNNING";
+
+    
+        /**
+         * value: "RUNNING_ERROR"
+         * @const
+         */
+        "RUNNING_ERROR" = "RUNNING_ERROR";
+
+    
+        /**
+         * value: "STOPPED"
+         * @const
+         */
+        "STOPPED" = "STOPPED";
 
     
         /**
@@ -104,52 +139,17 @@ export default class GlobalDeploymentStatus {
 
     
         /**
-         * value: "STOPPED"
+         * value: "STOP_QUEUED"
          * @const
          */
-        "STOPPED" = "STOPPED";
-
-    
-        /**
-         * value: "DELETING"
-         * @const
-         */
-        "DELETING" = "DELETING";
-
-    
-        /**
-         * value: "DELETE_ERROR"
-         * @const
-         */
-        "DELETE_ERROR" = "DELETE_ERROR";
-
-    
-        /**
-         * value: "DELETED"
-         * @const
-         */
-        "DELETED" = "DELETED";
-
-    
-        /**
-         * value: "RUNNING"
-         * @const
-         */
-        "RUNNING" = "RUNNING";
-
-    
-        /**
-         * value: "RUNNING_ERROR"
-         * @const
-         */
-        "RUNNING_ERROR" = "RUNNING_ERROR";
+        "STOP_QUEUED" = "STOP_QUEUED";
 
     
 
     /**
-    * Returns a <code>GlobalDeploymentStatus</code> enum value from a Javascript object name.
+    * Returns a <code>StateEnum</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/GlobalDeploymentStatus} The enum <code>GlobalDeploymentStatus</code> value.
+    * @return {module:model/StateEnum} The enum <code>StateEnum</code> value.
     */
     static constructFromObject(object) {
         return object;

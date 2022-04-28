@@ -3,12 +3,12 @@
 ## Enum
 
 
-* `PRODUCTION` (value: `"PRODUCTION"`)
-
 * `DEVELOPMENT` (value: `"DEVELOPMENT"`)
 
-* `STAGING` (value: `"STAGING"`)
-
 * `PREVIEW` (value: `"PREVIEW"`)
+
+* `PRODUCTION` (value: `"PRODUCTION"`)
+
+* `STAGING` (value: `"STAGING"`)
 
 

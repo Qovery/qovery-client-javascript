@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class BuildModeEnum {
     
         /**
-         * value: "DOCKER"
-         * @const
-         */
-        "DOCKER" = "DOCKER";
-
-    
-        /**
          * value: "BUILDPACKS"
          * @const
          */
         "BUILDPACKS" = "BUILDPACKS";
+
+    
+        /**
+         * value: "DOCKER"
+         * @const
+         */
+        "DOCKER" = "DOCKER";
 
     
 

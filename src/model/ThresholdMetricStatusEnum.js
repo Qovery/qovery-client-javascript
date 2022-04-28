@@ -20,6 +20,13 @@ import ApiClient from '../ApiClient';
 export default class ThresholdMetricStatusEnum {
     
         /**
+         * value: "Alert"
+         * @const
+         */
+        "Alert" = "Alert";
+
+    
+        /**
          * value: "OK"
          * @const
          */
@@ -31,13 +38,6 @@ export default class ThresholdMetricStatusEnum {
          * @const
          */
         "Warning" = "Warning";
-
-    
-        /**
-         * value: "Alert"
-         * @const
-         */
-        "Alert" = "Alert";
 
     
 

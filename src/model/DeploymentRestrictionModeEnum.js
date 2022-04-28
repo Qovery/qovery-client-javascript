@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class DeploymentRestrictionModeEnum {
     
         /**
-         * value: "MATCH"
-         * @const
-         */
-        "MATCH" = "MATCH";
-
-    
-        /**
          * value: "EXCLUDE"
          * @const
          */
         "EXCLUDE" = "EXCLUDE";
+
+    
+        /**
+         * value: "MATCH"
+         * @const
+         */
+        "MATCH" = "MATCH";
 
     
 

@@ -3,10 +3,10 @@
 ## Enum
 
 
+* `Alert` (value: `"Alert"`)
+
 * `OK` (value: `"OK"`)
 
 * `Warning` (value: `"Warning"`)
-
-* `Alert` (value: `"Alert"`)
 
 

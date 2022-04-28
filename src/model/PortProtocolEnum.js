@@ -20,17 +20,17 @@ import ApiClient from '../ApiClient';
 export default class PortProtocolEnum {
     
         /**
-         * value: "HTTPS"
-         * @const
-         */
-        "HTTPS" = "HTTPS";
-
-    
-        /**
          * value: "HTTP"
          * @const
          */
         "HTTP" = "HTTP";
+
+    
+        /**
+         * value: "HTTPS"
+         * @const
+         */
+        "HTTPS" = "HTTPS";
 
     
         /**

@@ -20,6 +20,13 @@ import ApiClient from '../ApiClient';
 export default class GitProviderEnum {
     
         /**
+         * value: "BITBUCKET"
+         * @const
+         */
+        "BITBUCKET" = "BITBUCKET";
+
+    
+        /**
          * value: "GITHUB"
          * @const
          */

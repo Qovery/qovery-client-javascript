@@ -3,8 +3,8 @@
 ## Enum
 
 
-* `SUCCESS` (value: `"SUCCESS"`)
-
 * `FAILED` (value: `"FAILED"`)
+
+* `SUCCESS` (value: `"SUCCESS"`)
 
 

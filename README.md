@@ -418,7 +418,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CluserCredentials](docs/CluserCredentials.md)
  - [QoveryApi.Cluster](docs/Cluster.md)
  - [QoveryApi.ClusterAllOf](docs/ClusterAllOf.md)
- - [QoveryApi.ClusterAllOf1](docs/ClusterAllOf1.md)
+ - [QoveryApi.ClusterBase](docs/ClusterBase.md)
  - [QoveryApi.ClusterCloudProviderInfo](docs/ClusterCloudProviderInfo.md)
  - [QoveryApi.ClusterCloudProviderInfoRequest](docs/ClusterCloudProviderInfoRequest.md)
  - [QoveryApi.ClusterCloudProviderInfoRequestCredentials](docs/ClusterCloudProviderInfoRequestCredentials.md)

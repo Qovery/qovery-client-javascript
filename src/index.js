@@ -64,7 +64,7 @@ import CloudProviderResponseList from './model/CloudProviderResponseList';
 import CluserCredentials from './model/CluserCredentials';
 import Cluster from './model/Cluster';
 import ClusterAllOf from './model/ClusterAllOf';
-import ClusterAllOf1 from './model/ClusterAllOf1';
+import ClusterBase from './model/ClusterBase';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
 import ClusterCloudProviderInfoRequestCredentials from './model/ClusterCloudProviderInfoRequestCredentials';
@@ -710,10 +710,10 @@ export {
     ClusterAllOf,
 
     /**
-     * The ClusterAllOf1 model constructor.
-     * @property {module:model/ClusterAllOf1}
+     * The ClusterBase model constructor.
+     * @property {module:model/ClusterBase}
      */
-    ClusterAllOf1,
+    ClusterBase,
 
     /**
      * The ClusterCloudProviderInfo model constructor.

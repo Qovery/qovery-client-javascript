@@ -15,10 +15,9 @@ import ApiClient from '../ApiClient';
 import Base from './Base';
 import CloudProviderEnum from './CloudProviderEnum';
 import ClusterAllOf from './ClusterAllOf';
-import ClusterAllOf1 from './ClusterAllOf1';
+import ClusterBase from './ClusterBase';
 import ClusterFeature from './ClusterFeature';
 import ClusterStatusEnum from './ClusterStatusEnum';
-import OneOfstringboolean from './OneOfstringboolean';
 
 /**
  * The Cluster model module.
@@ -30,9 +29,8 @@ class Cluster {
      * Constructs a new <code>Cluster</code>.
      * @alias module:model/Cluster
      * @implements module:model/Base
+     * @implements module:model/ClusterBase
      * @implements module:model/ClusterAllOf
-     * @implements module:model/ClusterFeature
-     * @implements module:model/ClusterAllOf1
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case-insensitive
@@ -40,7 +38,7 @@ class Cluster {
      * @param region {String} 
      */
     constructor(id, createdAt, name, cloudProvider, region) { 
-        Base.initialize(this, id, createdAt);ClusterAllOf.initialize(this, name, cloudProvider, region);ClusterFeature.initialize(this);ClusterAllOf1.initialize(this);
+        Base.initialize(this, id, createdAt);ClusterBase.initialize(this, name, cloudProvider, region);ClusterAllOf.initialize(this);
         Cluster.initialize(this, id, createdAt, name, cloudProvider, region);
     }
 
@@ -68,9 +66,8 @@ class Cluster {
         if (data) {
             obj = obj || new Cluster();
             Base.constructFromObject(data, obj);
+            ClusterBase.constructFromObject(data, obj);
             ClusterAllOf.constructFromObject(data, obj);
-            ClusterFeature.constructFromObject(data, obj);
-            ClusterAllOf1.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -111,35 +108,14 @@ class Cluster {
             if (data.hasOwnProperty('instance_type')) {
                 obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
             }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('cost_per_month_in_cents')) {
-                obj['cost_per_month_in_cents'] = ApiClient.convertToType(data['cost_per_month_in_cents'], 'Number');
-            }
-            if (data.hasOwnProperty('cost_per_month')) {
-                obj['cost_per_month'] = ApiClient.convertToType(data['cost_per_month'], 'Number');
-            }
-            if (data.hasOwnProperty('currency_code')) {
-                obj['currency_code'] = ApiClient.convertToType(data['currency_code'], 'String');
-            }
-            if (data.hasOwnProperty('value_type')) {
-                obj['value_type'] = ApiClient.convertToType(data['value_type'], 'String');
-            }
-            if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], 'String');
-            }
-            if (data.hasOwnProperty('is_value_updatable')) {
-                obj['is_value_updatable'] = ApiClient.convertToType(data['is_value_updatable'], 'Boolean');
-            }
-            if (data.hasOwnProperty('accepted_values')) {
-                obj['accepted_values'] = ApiClient.convertToType(data['accepted_values'], [OneOfstringboolean]);
-            }
             if (data.hasOwnProperty('estimated_cloud_provider_cost')) {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ClusterStatusEnum.constructFromObject(data['status']);
+            }
+            if (data.hasOwnProperty('features')) {
+                obj['features'] = ClusterFeature.constructFromObject(data['features']);
             }
             if (data.hasOwnProperty('has_access')) {
                 obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
@@ -231,47 +207,6 @@ Cluster.prototype['max_running_nodes'] = 1;
 Cluster.prototype['instance_type'] = undefined;
 
 /**
- * @member {String} title
- */
-Cluster.prototype['title'] = undefined;
-
-/**
- * @member {Number} cost_per_month_in_cents
- */
-Cluster.prototype['cost_per_month_in_cents'] = undefined;
-
-/**
- * @member {Number} cost_per_month
- */
-Cluster.prototype['cost_per_month'] = undefined;
-
-/**
- * @member {String} currency_code
- */
-Cluster.prototype['currency_code'] = undefined;
-
-/**
- * @member {module:model/Cluster.ValueTypeEnum} value_type
- */
-Cluster.prototype['value_type'] = undefined;
-
-/**
- * @member {String} value
- */
-Cluster.prototype['value'] = undefined;
-
-/**
- * @member {Boolean} is_value_updatable
- * @default false
- */
-Cluster.prototype['is_value_updatable'] = false;
-
-/**
- * @member {Array.<module:model/OneOfstringboolean>} accepted_values
- */
-Cluster.prototype['accepted_values'] = undefined;
-
-/**
  * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
  * @member {Number} estimated_cloud_provider_cost
  */
@@ -281,6 +216,11 @@ Cluster.prototype['estimated_cloud_provider_cost'] = undefined;
  * @member {module:model/ClusterStatusEnum} status
  */
 Cluster.prototype['status'] = undefined;
+
+/**
+ * @member {module:model/ClusterFeature} features
+ */
+Cluster.prototype['features'] = undefined;
 
 /**
  * @member {Boolean} has_access
@@ -311,135 +251,82 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement ClusterAllOf interface:
+// Implement ClusterBase interface:
 /**
  * name is case-insensitive
  * @member {String} name
  */
-ClusterAllOf.prototype['name'] = undefined;
+ClusterBase.prototype['name'] = undefined;
 /**
  * @member {String} description
  */
-ClusterAllOf.prototype['description'] = undefined;
+ClusterBase.prototype['description'] = undefined;
 /**
  * @member {module:model/CloudProviderEnum} cloud_provider
  */
-ClusterAllOf.prototype['cloud_provider'] = undefined;
+ClusterBase.prototype['cloud_provider'] = undefined;
 /**
  * @member {String} region
  */
-ClusterAllOf.prototype['region'] = undefined;
+ClusterBase.prototype['region'] = undefined;
 /**
  * @member {Boolean} auto_update
  */
-ClusterAllOf.prototype['auto_update'] = undefined;
+ClusterBase.prototype['auto_update'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
  * @default 250
  */
-ClusterAllOf.prototype['cpu'] = 250;
+ClusterBase.prototype['cpu'] = 250;
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
  * @default 256
  */
-ClusterAllOf.prototype['memory'] = 256;
+ClusterBase.prototype['memory'] = 256;
 /**
  * @member {Number} min_running_nodes
  * @default 1
  */
-ClusterAllOf.prototype['min_running_nodes'] = 1;
+ClusterBase.prototype['min_running_nodes'] = 1;
 /**
  * @member {Number} max_running_nodes
  * @default 1
  */
-ClusterAllOf.prototype['max_running_nodes'] = 1;
+ClusterBase.prototype['max_running_nodes'] = 1;
 /**
  * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
  * @member {String} instance_type
  */
-ClusterAllOf.prototype['instance_type'] = undefined;
-// Implement ClusterFeature interface:
-/**
- * @member {String} id
- */
-ClusterFeature.prototype['id'] = undefined;
-/**
- * @member {String} title
- */
-ClusterFeature.prototype['title'] = undefined;
-/**
- * @member {String} description
- */
-ClusterFeature.prototype['description'] = undefined;
-/**
- * @member {Number} cost_per_month_in_cents
- */
-ClusterFeature.prototype['cost_per_month_in_cents'] = undefined;
-/**
- * @member {Number} cost_per_month
- */
-ClusterFeature.prototype['cost_per_month'] = undefined;
-/**
- * @member {String} currency_code
- */
-ClusterFeature.prototype['currency_code'] = undefined;
-/**
- * @member {module:model/ClusterFeature.ValueTypeEnum} value_type
- */
-ClusterFeature.prototype['value_type'] = undefined;
-/**
- * @member {String} value
- */
-ClusterFeature.prototype['value'] = undefined;
-/**
- * @member {Boolean} is_value_updatable
- * @default false
- */
-ClusterFeature.prototype['is_value_updatable'] = false;
-/**
- * @member {Array.<module:model/OneOfstringboolean>} accepted_values
- */
-ClusterFeature.prototype['accepted_values'] = undefined;
-// Implement ClusterAllOf1 interface:
+ClusterBase.prototype['instance_type'] = undefined;
+// Implement ClusterAllOf interface:
 /**
  * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
  * @member {Number} estimated_cloud_provider_cost
  */
-ClusterAllOf1.prototype['estimated_cloud_provider_cost'] = undefined;
+ClusterAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
 /**
  * @member {module:model/ClusterStatusEnum} status
  */
-ClusterAllOf1.prototype['status'] = undefined;
+ClusterAllOf.prototype['status'] = undefined;
+/**
+ * @member {module:model/ClusterFeature} features
+ */
+ClusterAllOf.prototype['features'] = undefined;
 /**
  * @member {Boolean} has_access
  */
-ClusterAllOf1.prototype['has_access'] = undefined;
+ClusterAllOf.prototype['has_access'] = undefined;
 /**
  * @member {String} version
  */
-ClusterAllOf1.prototype['version'] = undefined;
+ClusterAllOf.prototype['version'] = undefined;
 /**
  * @member {Boolean} is_default
  */
-ClusterAllOf1.prototype['is_default'] = undefined;
+ClusterAllOf.prototype['is_default'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>value_type</code> property.
- * @enum {String}
- * @readonly
- */
-Cluster['ValueTypeEnum'] = {
-
-    /**
-     * value: "BOOLEAN"
-     * @const
-     */
-    "BOOLEAN": "BOOLEAN"
-};
 
 
 

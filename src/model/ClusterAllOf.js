@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import CloudProviderEnum from './CloudProviderEnum';
+import ClusterFeature from './ClusterFeature';
+import ClusterStatusEnum from './ClusterStatusEnum';
 
 /**
  * The ClusterAllOf model module.
@@ -23,13 +24,10 @@ class ClusterAllOf {
     /**
      * Constructs a new <code>ClusterAllOf</code>.
      * @alias module:model/ClusterAllOf
-     * @param name {String} name is case-insensitive
-     * @param cloudProvider {module:model/CloudProviderEnum} 
-     * @param region {String} 
      */
-    constructor(name, cloudProvider, region) { 
+    constructor() { 
         
-        ClusterAllOf.initialize(this, name, cloudProvider, region);
+        ClusterAllOf.initialize(this);
     }
 
     /**
@@ -37,10 +35,7 @@ class ClusterAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, cloudProvider, region) { 
-        obj['name'] = name;
-        obj['cloud_provider'] = cloudProvider;
-        obj['region'] = region;
+    static initialize(obj) { 
     }
 
     /**
@@ -54,35 +49,23 @@ class ClusterAllOf {
         if (data) {
             obj = obj || new ClusterAllOf();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('estimated_cloud_provider_cost')) {
+                obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ClusterStatusEnum.constructFromObject(data['status']);
             }
-            if (data.hasOwnProperty('cloud_provider')) {
-                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
+            if (data.hasOwnProperty('features')) {
+                obj['features'] = ClusterFeature.constructFromObject(data['features']);
             }
-            if (data.hasOwnProperty('region')) {
-                obj['region'] = ApiClient.convertToType(data['region'], 'String');
+            if (data.hasOwnProperty('has_access')) {
+                obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
             }
-            if (data.hasOwnProperty('auto_update')) {
-                obj['auto_update'] = ApiClient.convertToType(data['auto_update'], 'Boolean');
+            if (data.hasOwnProperty('version')) {
+                obj['version'] = ApiClient.convertToType(data['version'], 'String');
             }
-            if (data.hasOwnProperty('cpu')) {
-                obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
-            }
-            if (data.hasOwnProperty('memory')) {
-                obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
-            }
-            if (data.hasOwnProperty('min_running_nodes')) {
-                obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
-            }
-            if (data.hasOwnProperty('max_running_nodes')) {
-                obj['max_running_nodes'] = ApiClient.convertToType(data['max_running_nodes'], 'Number');
-            }
-            if (data.hasOwnProperty('instance_type')) {
-                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            if (data.hasOwnProperty('is_default')) {
+                obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
             }
         }
         return obj;
@@ -92,62 +75,35 @@ class ClusterAllOf {
 }
 
 /**
- * name is case-insensitive
- * @member {String} name
+ * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
+ * @member {Number} estimated_cloud_provider_cost
  */
-ClusterAllOf.prototype['name'] = undefined;
+ClusterAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
 
 /**
- * @member {String} description
+ * @member {module:model/ClusterStatusEnum} status
  */
-ClusterAllOf.prototype['description'] = undefined;
+ClusterAllOf.prototype['status'] = undefined;
 
 /**
- * @member {module:model/CloudProviderEnum} cloud_provider
+ * @member {module:model/ClusterFeature} features
  */
-ClusterAllOf.prototype['cloud_provider'] = undefined;
+ClusterAllOf.prototype['features'] = undefined;
 
 /**
- * @member {String} region
+ * @member {Boolean} has_access
  */
-ClusterAllOf.prototype['region'] = undefined;
+ClusterAllOf.prototype['has_access'] = undefined;
 
 /**
- * @member {Boolean} auto_update
+ * @member {String} version
  */
-ClusterAllOf.prototype['auto_update'] = undefined;
+ClusterAllOf.prototype['version'] = undefined;
 
 /**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 250
+ * @member {Boolean} is_default
  */
-ClusterAllOf.prototype['cpu'] = 250;
-
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 256
- */
-ClusterAllOf.prototype['memory'] = 256;
-
-/**
- * @member {Number} min_running_nodes
- * @default 1
- */
-ClusterAllOf.prototype['min_running_nodes'] = 1;
-
-/**
- * @member {Number} max_running_nodes
- * @default 1
- */
-ClusterAllOf.prototype['max_running_nodes'] = 1;
-
-/**
- * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
- * @member {String} instance_type
- */
-ClusterAllOf.prototype['instance_type'] = undefined;
+ClusterAllOf.prototype['is_default'] = undefined;
 
 
 

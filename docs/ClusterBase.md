@@ -1,12 +1,9 @@
-# QoveryApi.Cluster
+# QoveryApi.ClusterBase
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [readonly] 
-**createdAt** | **Date** |  | [readonly] 
-**updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** | name is case-insensitive | 
 **description** | **String** |  | [optional] 
 **cloudProvider** | [**CloudProviderEnum**](CloudProviderEnum.md) |  | 
@@ -17,11 +14,5 @@ Name | Type | Description | Notes
 **minRunningNodes** | **Number** |  | [optional] [default to 1]
 **maxRunningNodes** | **Number** |  | [optional] [default to 1]
 **instanceType** | **String** | the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType | [optional] 
-**estimatedCloudProviderCost** | **Number** | This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration | [optional] 
-**status** | [**ClusterStatusEnum**](ClusterStatusEnum.md) |  | [optional] 
-**features** | [**ClusterFeature**](ClusterFeature.md) |  | [optional] 
-**hasAccess** | **Boolean** |  | [optional] 
-**version** | **String** |  | [optional] 
-**isDefault** | **Boolean** |  | [optional] 
 
 

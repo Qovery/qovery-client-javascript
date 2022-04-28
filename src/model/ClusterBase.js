@@ -13,28 +13,23 @@
 
 import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
-import ClusterBase from './ClusterBase';
-import ClusterFeatureRequest from './ClusterFeatureRequest';
-import ClusterFeatureRequestFeatures from './ClusterFeatureRequestFeatures';
 
 /**
- * The ClusterRequest model module.
- * @module model/ClusterRequest
+ * The ClusterBase model module.
+ * @module model/ClusterBase
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ClusterRequest {
+class ClusterBase {
     /**
-     * Constructs a new <code>ClusterRequest</code>.
-     * @alias module:model/ClusterRequest
-     * @implements module:model/ClusterBase
-     * @implements module:model/ClusterFeatureRequest
+     * Constructs a new <code>ClusterBase</code>.
+     * @alias module:model/ClusterBase
      * @param name {String} name is case-insensitive
      * @param cloudProvider {module:model/CloudProviderEnum} 
      * @param region {String} 
      */
     constructor(name, cloudProvider, region) { 
-        ClusterBase.initialize(this, name, cloudProvider, region);ClusterFeatureRequest.initialize(this);
-        ClusterRequest.initialize(this, name, cloudProvider, region);
+        
+        ClusterBase.initialize(this, name, cloudProvider, region);
     }
 
     /**
@@ -49,17 +44,15 @@ class ClusterRequest {
     }
 
     /**
-     * Constructs a <code>ClusterRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterBase</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ClusterRequest} obj Optional instance to populate.
-     * @return {module:model/ClusterRequest} The populated <code>ClusterRequest</code> instance.
+     * @param {module:model/ClusterBase} obj Optional instance to populate.
+     * @return {module:model/ClusterBase} The populated <code>ClusterBase</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ClusterRequest();
-            ClusterBase.constructFromObject(data, obj);
-            ClusterFeatureRequest.constructFromObject(data, obj);
+            obj = obj || new ClusterBase();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -91,9 +84,6 @@ class ClusterRequest {
             if (data.hasOwnProperty('instance_type')) {
                 obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
             }
-            if (data.hasOwnProperty('features')) {
-                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeatures]);
-            }
         }
         return obj;
     }
@@ -105,123 +95,64 @@ class ClusterRequest {
  * name is case-insensitive
  * @member {String} name
  */
-ClusterRequest.prototype['name'] = undefined;
-
-/**
- * @member {String} description
- */
-ClusterRequest.prototype['description'] = undefined;
-
-/**
- * @member {module:model/CloudProviderEnum} cloud_provider
- */
-ClusterRequest.prototype['cloud_provider'] = undefined;
-
-/**
- * @member {String} region
- */
-ClusterRequest.prototype['region'] = undefined;
-
-/**
- * @member {Boolean} auto_update
- */
-ClusterRequest.prototype['auto_update'] = undefined;
-
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 250
- */
-ClusterRequest.prototype['cpu'] = 250;
-
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 256
- */
-ClusterRequest.prototype['memory'] = 256;
-
-/**
- * @member {Number} min_running_nodes
- * @default 1
- */
-ClusterRequest.prototype['min_running_nodes'] = 1;
-
-/**
- * @member {Number} max_running_nodes
- * @default 1
- */
-ClusterRequest.prototype['max_running_nodes'] = 1;
-
-/**
- * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
- * @member {String} instance_type
- */
-ClusterRequest.prototype['instance_type'] = undefined;
-
-/**
- * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features
- */
-ClusterRequest.prototype['features'] = undefined;
-
-
-// Implement ClusterBase interface:
-/**
- * name is case-insensitive
- * @member {String} name
- */
 ClusterBase.prototype['name'] = undefined;
+
 /**
  * @member {String} description
  */
 ClusterBase.prototype['description'] = undefined;
+
 /**
  * @member {module:model/CloudProviderEnum} cloud_provider
  */
 ClusterBase.prototype['cloud_provider'] = undefined;
+
 /**
  * @member {String} region
  */
 ClusterBase.prototype['region'] = undefined;
+
 /**
  * @member {Boolean} auto_update
  */
 ClusterBase.prototype['auto_update'] = undefined;
+
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
  * @default 250
  */
 ClusterBase.prototype['cpu'] = 250;
+
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
  * @default 256
  */
 ClusterBase.prototype['memory'] = 256;
+
 /**
  * @member {Number} min_running_nodes
  * @default 1
  */
 ClusterBase.prototype['min_running_nodes'] = 1;
+
 /**
  * @member {Number} max_running_nodes
  * @default 1
  */
 ClusterBase.prototype['max_running_nodes'] = 1;
+
 /**
  * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
  * @member {String} instance_type
  */
 ClusterBase.prototype['instance_type'] = undefined;
-// Implement ClusterFeatureRequest interface:
-/**
- * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features
- */
-ClusterFeatureRequest.prototype['features'] = undefined;
 
 
 
 
-export default ClusterRequest;
+
+
+export default ClusterBase;
 

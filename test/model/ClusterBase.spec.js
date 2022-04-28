@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ClusterRequest();
+    instance = new QoveryApi.ClusterBase();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,76 +47,70 @@
       object[property] = value;
   }
 
-  describe('ClusterRequest', function() {
-    it('should create an instance of ClusterRequest', function() {
-      // uncomment below and update the code to test ClusterRequest
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be.a(QoveryApi.ClusterRequest);
+  describe('ClusterBase', function() {
+    it('should create an instance of ClusterBase', function() {
+      // uncomment below and update the code to test ClusterBase
+      //var instance = new QoveryApi.ClusterBase();
+      //expect(instance).to.be.a(QoveryApi.ClusterBase);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property cloudProvider (base name: "cloud_provider")', function() {
       // uncomment below and update the code to test the property cloudProvider
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property autoUpdate (base name: "auto_update")', function() {
       // uncomment below and update the code to test the property autoUpdate
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property cpu (base name: "cpu")', function() {
       // uncomment below and update the code to test the property cpu
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property memory (base name: "memory")', function() {
       // uncomment below and update the code to test the property memory
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property minRunningNodes (base name: "min_running_nodes")', function() {
       // uncomment below and update the code to test the property minRunningNodes
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property maxRunningNodes (base name: "max_running_nodes")', function() {
       // uncomment below and update the code to test the property maxRunningNodes
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 
     it('should have the property instanceType (base name: "instance_type")', function() {
       // uncomment below and update the code to test the property instanceType
-      //var instance = new QoveryApi.ClusterRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property features (base name: "features")', function() {
-      // uncomment below and update the code to test the property features
-      //var instance = new QoveryApi.ClusterRequest();
+      //var instance = new QoveryApi.ClusterBase();
       //expect(instance).to.be();
     });
 

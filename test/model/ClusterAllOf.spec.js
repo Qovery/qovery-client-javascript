@@ -54,62 +54,38 @@
       //expect(instance).to.be.a(QoveryApi.ClusterAllOf);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
+    it('should have the property estimatedCloudProviderCost (base name: "estimated_cloud_provider_cost")', function() {
+      // uncomment below and update the code to test the property estimatedCloudProviderCost
       //var instance = new QoveryApi.ClusterAllOf();
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
       //var instance = new QoveryApi.ClusterAllOf();
       //expect(instance).to.be();
     });
 
-    it('should have the property cloudProvider (base name: "cloud_provider")', function() {
-      // uncomment below and update the code to test the property cloudProvider
+    it('should have the property features (base name: "features")', function() {
+      // uncomment below and update the code to test the property features
       //var instance = new QoveryApi.ClusterAllOf();
       //expect(instance).to.be();
     });
 
-    it('should have the property region (base name: "region")', function() {
-      // uncomment below and update the code to test the property region
+    it('should have the property hasAccess (base name: "has_access")', function() {
+      // uncomment below and update the code to test the property hasAccess
       //var instance = new QoveryApi.ClusterAllOf();
       //expect(instance).to.be();
     });
 
-    it('should have the property autoUpdate (base name: "auto_update")', function() {
-      // uncomment below and update the code to test the property autoUpdate
+    it('should have the property version (base name: "version")', function() {
+      // uncomment below and update the code to test the property version
       //var instance = new QoveryApi.ClusterAllOf();
       //expect(instance).to.be();
     });
 
-    it('should have the property cpu (base name: "cpu")', function() {
-      // uncomment below and update the code to test the property cpu
-      //var instance = new QoveryApi.ClusterAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property memory (base name: "memory")', function() {
-      // uncomment below and update the code to test the property memory
-      //var instance = new QoveryApi.ClusterAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property minRunningNodes (base name: "min_running_nodes")', function() {
-      // uncomment below and update the code to test the property minRunningNodes
-      //var instance = new QoveryApi.ClusterAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property maxRunningNodes (base name: "max_running_nodes")', function() {
-      // uncomment below and update the code to test the property maxRunningNodes
-      //var instance = new QoveryApi.ClusterAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property instanceType (base name: "instance_type")', function() {
-      // uncomment below and update the code to test the property instanceType
+    it('should have the property isDefault (base name: "is_default")', function() {
+      // uncomment below and update the code to test the property isDefault
       //var instance = new QoveryApi.ClusterAllOf();
       //expect(instance).to.be();
     });

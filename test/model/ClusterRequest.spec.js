@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property diskSize (base name: "disk_size")', function() {
+      // uncomment below and update the code to test the property diskSize
+      //var instance = new QoveryApi.ClusterRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property features (base name: "features")', function() {
       // uncomment below and update the code to test the property features
       //var instance = new QoveryApi.ClusterRequest();

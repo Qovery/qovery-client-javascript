@@ -84,6 +84,9 @@ class ClusterBase {
             if (data.hasOwnProperty('instance_type')) {
                 obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
             }
+            if (data.hasOwnProperty('disk_size')) {
+                obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
+            }
         }
         return obj;
     }
@@ -148,6 +151,13 @@ ClusterBase.prototype['max_running_nodes'] = 1;
  * @member {String} instance_type
  */
 ClusterBase.prototype['instance_type'] = undefined;
+
+/**
+ * the disk size to be used for the node configuration
+ * @member {Number} disk_size
+ * @default 20
+ */
+ClusterBase.prototype['disk_size'] = 20;
 
 
 

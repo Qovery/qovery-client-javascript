@@ -91,6 +91,9 @@ class ClusterRequest {
             if (data.hasOwnProperty('instance_type')) {
                 obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
             }
+            if (data.hasOwnProperty('disk_size')) {
+                obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
+            }
             if (data.hasOwnProperty('features')) {
                 obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeatures]);
             }
@@ -160,6 +163,13 @@ ClusterRequest.prototype['max_running_nodes'] = 1;
 ClusterRequest.prototype['instance_type'] = undefined;
 
 /**
+ * the disk size to be used for the node configuration
+ * @member {Number} disk_size
+ * @default 20
+ */
+ClusterRequest.prototype['disk_size'] = 20;
+
+/**
  * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features
  */
 ClusterRequest.prototype['features'] = undefined;
@@ -214,6 +224,12 @@ ClusterBase.prototype['max_running_nodes'] = 1;
  * @member {String} instance_type
  */
 ClusterBase.prototype['instance_type'] = undefined;
+/**
+ * the disk size to be used for the node configuration
+ * @member {Number} disk_size
+ * @default 20
+ */
+ClusterBase.prototype['disk_size'] = 20;
 // Implement ClusterFeatureRequest interface:
 /**
  * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features

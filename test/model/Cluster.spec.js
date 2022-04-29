@@ -132,6 +132,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property diskSize (base name: "disk_size")', function() {
+      // uncomment below and update the code to test the property diskSize
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
     it('should have the property estimatedCloudProviderCost (base name: "estimated_cloud_provider_cost")', function() {
       // uncomment below and update the code to test the property estimatedCloudProviderCost
       //var instance = new QoveryApi.Cluster();

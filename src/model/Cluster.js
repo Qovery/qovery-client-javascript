@@ -108,6 +108,9 @@ class Cluster {
             if (data.hasOwnProperty('instance_type')) {
                 obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
             }
+            if (data.hasOwnProperty('disk_size')) {
+                obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
+            }
             if (data.hasOwnProperty('estimated_cloud_provider_cost')) {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
@@ -207,6 +210,13 @@ Cluster.prototype['max_running_nodes'] = 1;
 Cluster.prototype['instance_type'] = undefined;
 
 /**
+ * the disk size to be used for the node configuration
+ * @member {Number} disk_size
+ * @default 20
+ */
+Cluster.prototype['disk_size'] = 20;
+
+/**
  * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
  * @member {Number} estimated_cloud_provider_cost
  */
@@ -300,6 +310,12 @@ ClusterBase.prototype['max_running_nodes'] = 1;
  * @member {String} instance_type
  */
 ClusterBase.prototype['instance_type'] = undefined;
+/**
+ * the disk size to be used for the node configuration
+ * @member {Number} disk_size
+ * @default 20
+ */
+ClusterBase.prototype['disk_size'] = 20;
 // Implement ClusterAllOf interface:
 /**
  * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration

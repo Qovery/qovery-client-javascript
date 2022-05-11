@@ -48,10 +48,30 @@
   }
 
   describe('ApplicationConfigurationApi', function() {
+    describe('editAdvancedSettings', function() {
+      it('should call editAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test editAdvancedSettings
+        //instance.editAdvancedSettings(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editApplicationNetwork', function() {
       it('should call editApplicationNetwork successfully', function(done) {
         //uncomment below and update the code to test editApplicationNetwork
         //instance.editApplicationNetwork(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getAdvancedSettings', function() {
+      it('should call getAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test getAdvancedSettings
+        //instance.getAdvancedSettings(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

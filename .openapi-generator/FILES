@@ -219,6 +219,7 @@ docs/GitRepositoryBranch.md
 docs/GitRepositoryBranchResponseList.md
 docs/GitRepositoryResponseList.md
 docs/Healthcheck.md
+docs/InlineResponse200.md
 docs/Instance.md
 docs/InstanceResponseList.md
 docs/InviteMember.md
@@ -585,6 +586,7 @@ src/model/GitRepositoryBranch.js
 src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponseList.js
 src/model/Healthcheck.js
+src/model/InlineResponse200.js
 src/model/Instance.js
 src/model/InstanceResponseList.js
 src/model/InviteMember.js
@@ -934,6 +936,7 @@ test/model/GitRepositoryBranch.spec.js
 test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponseList.spec.js
 test/model/Healthcheck.spec.js
+test/model/InlineResponse200.spec.js
 test/model/Instance.spec.js
 test/model/InstanceResponseList.spec.js
 test/model/InviteMember.spec.js

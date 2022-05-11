@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import ApplicationNetwork from '../model/ApplicationNetwork';
 import ApplicationNetworkRequest from '../model/ApplicationNetworkRequest';
+import InlineResponse200 from '../model/InlineResponse200';
 
 /**
 * ApplicationConfiguration service.
@@ -34,6 +35,52 @@ export default class ApplicationConfigurationApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the editAdvancedSettings operation.
+     * @callback module:api/ApplicationConfigurationApi~editAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit advanced settings
+     * Edit advanced settings by returning table of advanced settings.
+     * @param {String} applicationId Application ID
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/InlineResponse200>} opts.inlineResponse200 
+     * @param {module:api/ApplicationConfigurationApi~editAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    editAdvancedSettings(applicationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['inlineResponse200'];
+      // verify the required parameter 'applicationId' is set
+      if (applicationId === undefined || applicationId === null) {
+        throw new Error("Missing the required parameter 'applicationId' when calling editAdvancedSettings");
+      }
+
+      let pathParams = {
+        'applicationId': applicationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/application/{applicationId}/advancedSettings', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the editApplicationNetwork operation.
@@ -76,6 +123,49 @@ export default class ApplicationConfigurationApi {
       let returnType = ApplicationNetwork;
       return this.apiClient.callApi(
         '/application/{applicationId}/network', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAdvancedSettings operation.
+     * @callback module:api/ApplicationConfigurationApi~getAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/InlineResponse200>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get advanced settings
+     * Get list and values of the advanced settings of the application.
+     * @param {String} applicationId Application ID
+     * @param {module:api/ApplicationConfigurationApi~getAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/InlineResponse200>}
+     */
+    getAdvancedSettings(applicationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'applicationId' is set
+      if (applicationId === undefined || applicationId === null) {
+        throw new Error("Missing the required parameter 'applicationId' when calling getAdvancedSettings");
+      }
+
+      let pathParams = {
+        'applicationId': applicationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [InlineResponse200];
+      return this.apiClient.callApi(
+        '/application/{applicationId}/advancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

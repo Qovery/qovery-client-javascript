@@ -130,7 +130,9 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationActionsApi* | [**deployApplication**](docs/ApplicationActionsApi.md#deployApplication) | **POST** /application/{applicationId}/deploy | Deploy application
 *QoveryApi.ApplicationActionsApi* | [**restartApplication**](docs/ApplicationActionsApi.md#restartApplication) | **POST** /application/{applicationId}/restart | Restart application
 *QoveryApi.ApplicationActionsApi* | [**stopApplication**](docs/ApplicationActionsApi.md#stopApplication) | **POST** /application/{applicationId}/stop | Stop application
+*QoveryApi.ApplicationConfigurationApi* | [**editAdvancedSettings**](docs/ApplicationConfigurationApi.md#editAdvancedSettings) | **PUT** /application/{applicationId}/advancedSettings | Edit advanced settings
 *QoveryApi.ApplicationConfigurationApi* | [**editApplicationNetwork**](docs/ApplicationConfigurationApi.md#editApplicationNetwork) | **PUT** /application/{applicationId}/network | Edit Application Network
+*QoveryApi.ApplicationConfigurationApi* | [**getAdvancedSettings**](docs/ApplicationConfigurationApi.md#getAdvancedSettings) | **GET** /application/{applicationId}/advancedSettings | Get advanced settings
 *QoveryApi.ApplicationConfigurationApi* | [**getApplicationNetwork**](docs/ApplicationConfigurationApi.md#getApplicationNetwork) | **GET** /application/{applicationId}/network | Get Application Network information
 *QoveryApi.ApplicationDatabaseApi* | [**attachDatabasetoApplication**](docs/ApplicationDatabaseApi.md#attachDatabasetoApplication) | **POST** /application/{applicationId}/database/{targetDatabaseId} | Link a database to the application
 *QoveryApi.ApplicationDatabaseApi* | [**attachLogicalDatabasetoApplication**](docs/ApplicationDatabaseApi.md#attachLogicalDatabasetoApplication) | **POST** /application/{applicationId}/logicalDatabase/{targetLogicalDatabaseId} | Link a logical database to the application
@@ -548,6 +550,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryBranchResponseList](docs/GitRepositoryBranchResponseList.md)
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
+ - [QoveryApi.InlineResponse200](docs/InlineResponse200.md)
  - [QoveryApi.Instance](docs/Instance.md)
  - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
  - [QoveryApi.InviteMember](docs/InviteMember.md)

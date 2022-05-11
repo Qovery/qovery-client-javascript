@@ -4,9 +4,64 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**editAdvancedSettings**](ApplicationConfigurationApi.md#editAdvancedSettings) | **PUT** /application/{applicationId}/advancedSettings | Edit advanced settings
 [**editApplicationNetwork**](ApplicationConfigurationApi.md#editApplicationNetwork) | **PUT** /application/{applicationId}/network | Edit Application Network
+[**getAdvancedSettings**](ApplicationConfigurationApi.md#getAdvancedSettings) | **GET** /application/{applicationId}/advancedSettings | Get advanced settings
 [**getApplicationNetwork**](ApplicationConfigurationApi.md#getApplicationNetwork) | **GET** /application/{applicationId}/network | Get Application Network information
 
+
+
+## editAdvancedSettings
+
+> Object editAdvancedSettings(applicationId, opts)
+
+Edit advanced settings
+
+Edit advanced settings by returning table of advanced settings.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ApplicationConfigurationApi();
+let applicationId = "applicationId_example"; // String | Application ID
+let opts = {
+  'inlineResponse200': [new QoveryApi.InlineResponse200()] // [InlineResponse200] | 
+};
+apiInstance.editAdvancedSettings(applicationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+ **inlineResponse200** | [**[InlineResponse200]**](InlineResponse200.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## editApplicationNetwork
@@ -59,6 +114,55 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getAdvancedSettings
+
+> [InlineResponse200] getAdvancedSettings(applicationId)
+
+Get advanced settings
+
+Get list and values of the advanced settings of the application.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ApplicationConfigurationApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.getAdvancedSettings(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**[InlineResponse200]**](InlineResponse200.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

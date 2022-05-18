@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.InlineResponse200();
+    instance = new QoveryApi.ApplicationAdvancedSettings();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('InlineResponse200', function() {
-    it('should create an instance of InlineResponse200', function() {
-      // uncomment below and update the code to test InlineResponse200
-      //var instance = new QoveryApi.InlineResponse200();
-      //expect(instance).to.be.a(QoveryApi.InlineResponse200);
+  describe('ApplicationAdvancedSettings', function() {
+    it('should create an instance of ApplicationAdvancedSettings', function() {
+      // uncomment below and update the code to test ApplicationAdvancedSettings
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be.a(QoveryApi.ApplicationAdvancedSettings);
     });
 
     it('should have the property deploymentDelayStartTimeSec (base name: "deployment.delay_start_time_sec")', function() {
       // uncomment below and update the code to test the property deploymentDelayStartTimeSec
-      //var instance = new QoveryApi.InlineResponse200();
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
       //expect(instance).to.be();
     });
 
     it('should have the property buildTimeoutMaxSec (base name: "build.timeout_max_sec")', function() {
       // uncomment below and update the code to test the property buildTimeoutMaxSec
-      //var instance = new QoveryApi.InlineResponse200();
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
       //expect(instance).to.be();
     });
 

@@ -17,6 +17,7 @@ import AccountInfo from './model/AccountInfo';
 import AccountInfoEditRequest from './model/AccountInfoEditRequest';
 import AliasedSecret from './model/AliasedSecret';
 import Application from './model/Application';
+import ApplicationAdvancedSettings from './model/ApplicationAdvancedSettings';
 import ApplicationAllOf from './model/ApplicationAllOf';
 import ApplicationCurrentScale from './model/ApplicationCurrentScale';
 import ApplicationDependencyRequest from './model/ApplicationDependencyRequest';
@@ -194,7 +195,6 @@ import GitRepositoryBranch from './model/GitRepositoryBranch';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import Healthcheck from './model/Healthcheck';
-import InlineResponse200 from './model/InlineResponse200';
 import Instance from './model/Instance';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
@@ -426,6 +426,12 @@ export {
      * @property {module:model/Application}
      */
     Application,
+
+    /**
+     * The ApplicationAdvancedSettings model constructor.
+     * @property {module:model/ApplicationAdvancedSettings}
+     */
+    ApplicationAdvancedSettings,
 
     /**
      * The ApplicationAllOf model constructor.
@@ -1488,12 +1494,6 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
-
-    /**
-     * The InlineResponse200 model constructor.
-     * @property {module:model/InlineResponse200}
-     */
-    InlineResponse200,
 
     /**
      * The Instance model constructor.

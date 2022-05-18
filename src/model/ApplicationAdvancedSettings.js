@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The InlineResponse200 model module.
- * @module model/InlineResponse200
+ * The ApplicationAdvancedSettings model module.
+ * @module model/ApplicationAdvancedSettings
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class InlineResponse200 {
+class ApplicationAdvancedSettings {
     /**
-     * Constructs a new <code>InlineResponse200</code>.
-     * @alias module:model/InlineResponse200
+     * Constructs a new <code>ApplicationAdvancedSettings</code>.
+     * @alias module:model/ApplicationAdvancedSettings
      */
     constructor() { 
         
-        InlineResponse200.initialize(this);
+        ApplicationAdvancedSettings.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class InlineResponse200 {
     }
 
     /**
-     * Constructs a <code>InlineResponse200</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ApplicationAdvancedSettings</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineResponse200} obj Optional instance to populate.
-     * @return {module:model/InlineResponse200} The populated <code>InlineResponse200</code> instance.
+     * @param {module:model/ApplicationAdvancedSettings} obj Optional instance to populate.
+     * @return {module:model/ApplicationAdvancedSettings} The populated <code>ApplicationAdvancedSettings</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new InlineResponse200();
+            obj = obj || new ApplicationAdvancedSettings();
 
             if (data.hasOwnProperty('deployment.delay_start_time_sec')) {
                 obj['deployment.delay_start_time_sec'] = ApiClient.convertToType(data['deployment.delay_start_time_sec'], 'Number');
@@ -63,17 +63,17 @@ class InlineResponse200 {
 /**
  * @member {Number} deployment.delay_start_time_sec
  */
-InlineResponse200.prototype['deployment.delay_start_time_sec'] = undefined;
+ApplicationAdvancedSettings.prototype['deployment.delay_start_time_sec'] = undefined;
 
 /**
  * @member {Number} build.timeout_max_sec
  */
-InlineResponse200.prototype['build.timeout_max_sec'] = undefined;
+ApplicationAdvancedSettings.prototype['build.timeout_max_sec'] = undefined;
 
 
 
 
 
 
-export default InlineResponse200;
+export default ApplicationAdvancedSettings;
 

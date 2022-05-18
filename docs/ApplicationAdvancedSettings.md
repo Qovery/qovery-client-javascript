@@ -1,4 +1,4 @@
-# QoveryApi.InlineResponse200
+# QoveryApi.ApplicationAdvancedSettings
 
 ## Properties
 

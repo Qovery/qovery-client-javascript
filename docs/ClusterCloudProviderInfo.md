@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cloudProvider** | [**CloudProviderEnum**](CloudProviderEnum.md) |  | [optional] 
-**credentials** | [**ClusterCloudProviderInfoRequestCredentials**](ClusterCloudProviderInfoRequestCredentials.md) |  | [optional] 
+**credentials** | [**ClusterCloudProviderInfoCredentials**](ClusterCloudProviderInfoCredentials.md) |  | [optional] 
 **region** | **String** |  | [optional] 
 
 

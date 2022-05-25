@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**storage** | [**[ApplicationStorageStorage]**](ApplicationStorageStorage.md) |  | [optional] 
+**storage** | [**[ContainerStorageStorage]**](ContainerStorageStorage.md) |  | [optional] 
 **ports** | [**[ApplicationPortPorts]**](ApplicationPortPorts.md) |  | [optional] 
 **name** | **String** | name is case insensitive | [optional] 
 **description** | **String** | give a description to this application | [optional] 

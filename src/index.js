@@ -20,7 +20,6 @@ import Application from './model/Application';
 import ApplicationAdvancedSettings from './model/ApplicationAdvancedSettings';
 import ApplicationAllOf from './model/ApplicationAllOf';
 import ApplicationCurrentScale from './model/ApplicationCurrentScale';
-import ApplicationDependencyRequest from './model/ApplicationDependencyRequest';
 import ApplicationDeploymentRestriction from './model/ApplicationDeploymentRestriction';
 import ApplicationDeploymentRestrictionRequest from './model/ApplicationDeploymentRestrictionRequest';
 import ApplicationDeploymentRestrictionResponseList from './model/ApplicationDeploymentRestrictionResponseList';
@@ -37,10 +36,9 @@ import ApplicationPortRequestPorts from './model/ApplicationPortRequestPorts';
 import ApplicationRequest from './model/ApplicationRequest';
 import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
-import ApplicationStorage from './model/ApplicationStorage';
 import ApplicationStorageRequest from './model/ApplicationStorageRequest';
 import ApplicationStorageRequestStorage from './model/ApplicationStorageRequestStorage';
-import ApplicationStorageStorage from './model/ApplicationStorageStorage';
+import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import Backup from './model/Backup';
 import BackupAllOf from './model/BackupAllOf';
@@ -67,8 +65,8 @@ import Cluster from './model/Cluster';
 import ClusterAllOf from './model/ClusterAllOf';
 import ClusterBase from './model/ClusterBase';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
+import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
-import ClusterCloudProviderInfoRequestCredentials from './model/ClusterCloudProviderInfoRequestCredentials';
 import ClusterCredentials from './model/ClusterCredentials';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
 import ClusterFeature from './model/ClusterFeature';
@@ -94,6 +92,28 @@ import CommitPaginatedResponseListAllOf from './model/CommitPaginatedResponseLis
 import CommitResponseList from './model/CommitResponseList';
 import CommunityUsage from './model/CommunityUsage';
 import CompanySizeEnum from './model/CompanySizeEnum';
+import ContainerAdvancedSettings from './model/ContainerAdvancedSettings';
+import ContainerAdvancedSettingsResponse from './model/ContainerAdvancedSettingsResponse';
+import ContainerCurrentScale from './model/ContainerCurrentScale';
+import ContainerDependencyRequest from './model/ContainerDependencyRequest';
+import ContainerDeployRequest from './model/ContainerDeployRequest';
+import ContainerDeploymentRestriction from './model/ContainerDeploymentRestriction';
+import ContainerDeploymentRestrictionRequest from './model/ContainerDeploymentRestrictionRequest';
+import ContainerDeploymentRestrictionResponseList from './model/ContainerDeploymentRestrictionResponseList';
+import ContainerEditRequest from './model/ContainerEditRequest';
+import ContainerEditRequestAllOf from './model/ContainerEditRequestAllOf';
+import ContainerNetwork from './model/ContainerNetwork';
+import ContainerNetworkRequest from './model/ContainerNetworkRequest';
+import ContainerRegistryKind from './model/ContainerRegistryKind';
+import ContainerRegistryRequest from './model/ContainerRegistryRequest';
+import ContainerRegistryResponse from './model/ContainerRegistryResponse';
+import ContainerRequest from './model/ContainerRequest';
+import ContainerRequestAllOf from './model/ContainerRequestAllOf';
+import ContainerResponse from './model/ContainerResponse';
+import ContainerResponseAllOf from './model/ContainerResponseAllOf';
+import ContainerResponseList from './model/ContainerResponseList';
+import ContainerStorage from './model/ContainerStorage';
+import ContainerStorageStorage from './model/ContainerStorageStorage';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
 import Credentials from './model/Credentials';
@@ -112,6 +132,9 @@ import DatabaseAllOf from './model/DatabaseAllOf';
 import DatabaseConfiguration from './model/DatabaseConfiguration';
 import DatabaseConfigurationResponseList from './model/DatabaseConfigurationResponseList';
 import DatabaseCurrentMetric from './model/DatabaseCurrentMetric';
+import DatabaseCurrentMetricCpu from './model/DatabaseCurrentMetricCpu';
+import DatabaseCurrentMetricMemory from './model/DatabaseCurrentMetricMemory';
+import DatabaseCurrentMetricStorage from './model/DatabaseCurrentMetricStorage';
 import DatabaseEditRequest from './model/DatabaseEditRequest';
 import DatabaseModeEnum from './model/DatabaseModeEnum';
 import DatabaseRequest from './model/DatabaseRequest';
@@ -145,16 +168,16 @@ import EnvironmentAllOfCloudProvider from './model/EnvironmentAllOfCloudProvider
 import EnvironmentApplicationsCurrentScale from './model/EnvironmentApplicationsCurrentScale';
 import EnvironmentApplicationsCurrentScaleResponseList from './model/EnvironmentApplicationsCurrentScaleResponseList';
 import EnvironmentApplicationsInstanceResponseList from './model/EnvironmentApplicationsInstanceResponseList';
-import EnvironmentApplicationsInstanceResponseListResults from './model/EnvironmentApplicationsInstanceResponseListResults';
 import EnvironmentApplicationsStorage from './model/EnvironmentApplicationsStorage';
 import EnvironmentApplicationsStorageResponseList from './model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguage from './model/EnvironmentApplicationsSupportedLanguage';
 import EnvironmentApplicationsSupportedLanguageList from './model/EnvironmentApplicationsSupportedLanguageList';
+import EnvironmentContainersCurrentScale from './model/EnvironmentContainersCurrentScale';
+import EnvironmentContainersCurrentScaleResponseList from './model/EnvironmentContainersCurrentScaleResponseList';
+import EnvironmentContainersStorage from './model/EnvironmentContainersStorage';
+import EnvironmentContainersStorageResponseList from './model/EnvironmentContainersStorageResponseList';
 import EnvironmentDatabasesCurrentMetric from './model/EnvironmentDatabasesCurrentMetric';
-import EnvironmentDatabasesCurrentMetricCpu from './model/EnvironmentDatabasesCurrentMetricCpu';
-import EnvironmentDatabasesCurrentMetricMemory from './model/EnvironmentDatabasesCurrentMetricMemory';
 import EnvironmentDatabasesCurrentMetricResponseList from './model/EnvironmentDatabasesCurrentMetricResponseList';
-import EnvironmentDatabasesCurrentMetricStorage from './model/EnvironmentDatabasesCurrentMetricStorage';
 import EnvironmentDeploymentRule from './model/EnvironmentDeploymentRule';
 import EnvironmentDeploymentRuleAllOf from './model/EnvironmentDeploymentRuleAllOf';
 import EnvironmentDeploymentRuleEditRequest from './model/EnvironmentDeploymentRuleEditRequest';
@@ -195,6 +218,10 @@ import GitRepositoryBranch from './model/GitRepositoryBranch';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import Healthcheck from './model/Healthcheck';
+import InlineResponse200 from './model/InlineResponse200';
+import InlineResponse2001 from './model/InlineResponse2001';
+import InlineResponse2001Results from './model/InlineResponse2001Results';
+import InlineResponse2002 from './model/InlineResponse2002';
 import Instance from './model/Instance';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
@@ -252,6 +279,7 @@ import OrganizationCreditCodeRequest from './model/OrganizationCreditCodeRequest
 import OrganizationCurrentCost from './model/OrganizationCurrentCost';
 import OrganizationCurrentCostAllOf from './model/OrganizationCurrentCostAllOf';
 import OrganizationEditRequest from './model/OrganizationEditRequest';
+import OrganizationGithubAppConnectRequest from './model/OrganizationGithubAppConnectRequest';
 import OrganizationRequest from './model/OrganizationRequest';
 import OrganizationResponseList from './model/OrganizationResponseList';
 import OverriddenSecret from './model/OverriddenSecret';
@@ -334,9 +362,25 @@ import BillingApi from './api/BillingApi';
 import CloudProviderApi from './api/CloudProviderApi';
 import CloudProviderCredentialsApi from './api/CloudProviderCredentialsApi';
 import ClustersApi from './api/ClustersApi';
+import ContainerActionsApi from './api/ContainerActionsApi';
+import ContainerConfigurationApi from './api/ContainerConfigurationApi';
+import ContainerCustomDomainApi from './api/ContainerCustomDomainApi';
+import ContainerDatabaseApi from './api/ContainerDatabaseApi';
+import ContainerDependencyApi from './api/ContainerDependencyApi';
+import ContainerDeploymentRestrictionApi from './api/ContainerDeploymentRestrictionApi';
+import ContainerEnvironmentVariableApi from './api/ContainerEnvironmentVariableApi';
+import ContainerEventApi from './api/ContainerEventApi';
+import ContainerLogsApi from './api/ContainerLogsApi';
+import ContainerMainCallsApi from './api/ContainerMainCallsApi';
+import ContainerMetricsApi from './api/ContainerMetricsApi';
+import ContainerRegistriesApi from './api/ContainerRegistriesApi';
+import ContainerRegistryApi from './api/ContainerRegistryApi';
+import ContainerSecretApi from './api/ContainerSecretApi';
+import ContainersApi from './api/ContainersApi';
 import CustomDomainApi from './api/CustomDomainApi';
 import DatabaseActionsApi from './api/DatabaseActionsApi';
 import DatabaseApplicationApi from './api/DatabaseApplicationApi';
+import DatabaseContainerApi from './api/DatabaseContainerApi';
 import DatabaseEventApi from './api/DatabaseEventApi';
 import DatabaseMainCallsApi from './api/DatabaseMainCallsApi';
 import DatabaseMetricsApi from './api/DatabaseMetricsApi';
@@ -351,6 +395,7 @@ import EnvironmentSecretApi from './api/EnvironmentSecretApi';
 import EnvironmentVariableApi from './api/EnvironmentVariableApi';
 import EnvironmentsApi from './api/EnvironmentsApi';
 import GitRepositoriesApi from './api/GitRepositoriesApi';
+import GithubAppApi from './api/GithubAppApi';
 import LogicalDatabaseApi from './api/LogicalDatabaseApi';
 import MembersApi from './api/MembersApi';
 import OrganizationAccountGitRepositoriesApi from './api/OrganizationAccountGitRepositoriesApi';
@@ -444,12 +489,6 @@ export {
      * @property {module:model/ApplicationCurrentScale}
      */
     ApplicationCurrentScale,
-
-    /**
-     * The ApplicationDependencyRequest model constructor.
-     * @property {module:model/ApplicationDependencyRequest}
-     */
-    ApplicationDependencyRequest,
 
     /**
      * The ApplicationDeploymentRestriction model constructor.
@@ -548,12 +587,6 @@ export {
     ApplicationResponseList,
 
     /**
-     * The ApplicationStorage model constructor.
-     * @property {module:model/ApplicationStorage}
-     */
-    ApplicationStorage,
-
-    /**
      * The ApplicationStorageRequest model constructor.
      * @property {module:model/ApplicationStorageRequest}
      */
@@ -566,10 +599,10 @@ export {
     ApplicationStorageRequestStorage,
 
     /**
-     * The ApplicationStorageStorage model constructor.
-     * @property {module:model/ApplicationStorageStorage}
+     * The AvailableContainerRegistryResponse model constructor.
+     * @property {module:model/AvailableContainerRegistryResponse}
      */
-    ApplicationStorageStorage,
+    AvailableContainerRegistryResponse,
 
     /**
      * The AwsCredentialsRequest model constructor.
@@ -728,16 +761,16 @@ export {
     ClusterCloudProviderInfo,
 
     /**
+     * The ClusterCloudProviderInfoCredentials model constructor.
+     * @property {module:model/ClusterCloudProviderInfoCredentials}
+     */
+    ClusterCloudProviderInfoCredentials,
+
+    /**
      * The ClusterCloudProviderInfoRequest model constructor.
      * @property {module:model/ClusterCloudProviderInfoRequest}
      */
     ClusterCloudProviderInfoRequest,
-
-    /**
-     * The ClusterCloudProviderInfoRequestCredentials model constructor.
-     * @property {module:model/ClusterCloudProviderInfoRequestCredentials}
-     */
-    ClusterCloudProviderInfoRequestCredentials,
 
     /**
      * The ClusterCredentials model constructor.
@@ -890,6 +923,138 @@ export {
     CompanySizeEnum,
 
     /**
+     * The ContainerAdvancedSettings model constructor.
+     * @property {module:model/ContainerAdvancedSettings}
+     */
+    ContainerAdvancedSettings,
+
+    /**
+     * The ContainerAdvancedSettingsResponse model constructor.
+     * @property {module:model/ContainerAdvancedSettingsResponse}
+     */
+    ContainerAdvancedSettingsResponse,
+
+    /**
+     * The ContainerCurrentScale model constructor.
+     * @property {module:model/ContainerCurrentScale}
+     */
+    ContainerCurrentScale,
+
+    /**
+     * The ContainerDependencyRequest model constructor.
+     * @property {module:model/ContainerDependencyRequest}
+     */
+    ContainerDependencyRequest,
+
+    /**
+     * The ContainerDeployRequest model constructor.
+     * @property {module:model/ContainerDeployRequest}
+     */
+    ContainerDeployRequest,
+
+    /**
+     * The ContainerDeploymentRestriction model constructor.
+     * @property {module:model/ContainerDeploymentRestriction}
+     */
+    ContainerDeploymentRestriction,
+
+    /**
+     * The ContainerDeploymentRestrictionRequest model constructor.
+     * @property {module:model/ContainerDeploymentRestrictionRequest}
+     */
+    ContainerDeploymentRestrictionRequest,
+
+    /**
+     * The ContainerDeploymentRestrictionResponseList model constructor.
+     * @property {module:model/ContainerDeploymentRestrictionResponseList}
+     */
+    ContainerDeploymentRestrictionResponseList,
+
+    /**
+     * The ContainerEditRequest model constructor.
+     * @property {module:model/ContainerEditRequest}
+     */
+    ContainerEditRequest,
+
+    /**
+     * The ContainerEditRequestAllOf model constructor.
+     * @property {module:model/ContainerEditRequestAllOf}
+     */
+    ContainerEditRequestAllOf,
+
+    /**
+     * The ContainerNetwork model constructor.
+     * @property {module:model/ContainerNetwork}
+     */
+    ContainerNetwork,
+
+    /**
+     * The ContainerNetworkRequest model constructor.
+     * @property {module:model/ContainerNetworkRequest}
+     */
+    ContainerNetworkRequest,
+
+    /**
+     * The ContainerRegistryKind model constructor.
+     * @property {module:model/ContainerRegistryKind}
+     */
+    ContainerRegistryKind,
+
+    /**
+     * The ContainerRegistryRequest model constructor.
+     * @property {module:model/ContainerRegistryRequest}
+     */
+    ContainerRegistryRequest,
+
+    /**
+     * The ContainerRegistryResponse model constructor.
+     * @property {module:model/ContainerRegistryResponse}
+     */
+    ContainerRegistryResponse,
+
+    /**
+     * The ContainerRequest model constructor.
+     * @property {module:model/ContainerRequest}
+     */
+    ContainerRequest,
+
+    /**
+     * The ContainerRequestAllOf model constructor.
+     * @property {module:model/ContainerRequestAllOf}
+     */
+    ContainerRequestAllOf,
+
+    /**
+     * The ContainerResponse model constructor.
+     * @property {module:model/ContainerResponse}
+     */
+    ContainerResponse,
+
+    /**
+     * The ContainerResponseAllOf model constructor.
+     * @property {module:model/ContainerResponseAllOf}
+     */
+    ContainerResponseAllOf,
+
+    /**
+     * The ContainerResponseList model constructor.
+     * @property {module:model/ContainerResponseList}
+     */
+    ContainerResponseList,
+
+    /**
+     * The ContainerStorage model constructor.
+     * @property {module:model/ContainerStorage}
+     */
+    ContainerStorage,
+
+    /**
+     * The ContainerStorageStorage model constructor.
+     * @property {module:model/ContainerStorageStorage}
+     */
+    ContainerStorageStorage,
+
+    /**
      * The Cost model constructor.
      * @property {module:model/Cost}
      */
@@ -996,6 +1161,24 @@ export {
      * @property {module:model/DatabaseCurrentMetric}
      */
     DatabaseCurrentMetric,
+
+    /**
+     * The DatabaseCurrentMetricCpu model constructor.
+     * @property {module:model/DatabaseCurrentMetricCpu}
+     */
+    DatabaseCurrentMetricCpu,
+
+    /**
+     * The DatabaseCurrentMetricMemory model constructor.
+     * @property {module:model/DatabaseCurrentMetricMemory}
+     */
+    DatabaseCurrentMetricMemory,
+
+    /**
+     * The DatabaseCurrentMetricStorage model constructor.
+     * @property {module:model/DatabaseCurrentMetricStorage}
+     */
+    DatabaseCurrentMetricStorage,
 
     /**
      * The DatabaseEditRequest model constructor.
@@ -1196,12 +1379,6 @@ export {
     EnvironmentApplicationsInstanceResponseList,
 
     /**
-     * The EnvironmentApplicationsInstanceResponseListResults model constructor.
-     * @property {module:model/EnvironmentApplicationsInstanceResponseListResults}
-     */
-    EnvironmentApplicationsInstanceResponseListResults,
-
-    /**
      * The EnvironmentApplicationsStorage model constructor.
      * @property {module:model/EnvironmentApplicationsStorage}
      */
@@ -1226,34 +1403,40 @@ export {
     EnvironmentApplicationsSupportedLanguageList,
 
     /**
+     * The EnvironmentContainersCurrentScale model constructor.
+     * @property {module:model/EnvironmentContainersCurrentScale}
+     */
+    EnvironmentContainersCurrentScale,
+
+    /**
+     * The EnvironmentContainersCurrentScaleResponseList model constructor.
+     * @property {module:model/EnvironmentContainersCurrentScaleResponseList}
+     */
+    EnvironmentContainersCurrentScaleResponseList,
+
+    /**
+     * The EnvironmentContainersStorage model constructor.
+     * @property {module:model/EnvironmentContainersStorage}
+     */
+    EnvironmentContainersStorage,
+
+    /**
+     * The EnvironmentContainersStorageResponseList model constructor.
+     * @property {module:model/EnvironmentContainersStorageResponseList}
+     */
+    EnvironmentContainersStorageResponseList,
+
+    /**
      * The EnvironmentDatabasesCurrentMetric model constructor.
      * @property {module:model/EnvironmentDatabasesCurrentMetric}
      */
     EnvironmentDatabasesCurrentMetric,
 
     /**
-     * The EnvironmentDatabasesCurrentMetricCpu model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetricCpu}
-     */
-    EnvironmentDatabasesCurrentMetricCpu,
-
-    /**
-     * The EnvironmentDatabasesCurrentMetricMemory model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetricMemory}
-     */
-    EnvironmentDatabasesCurrentMetricMemory,
-
-    /**
      * The EnvironmentDatabasesCurrentMetricResponseList model constructor.
      * @property {module:model/EnvironmentDatabasesCurrentMetricResponseList}
      */
     EnvironmentDatabasesCurrentMetricResponseList,
-
-    /**
-     * The EnvironmentDatabasesCurrentMetricStorage model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetricStorage}
-     */
-    EnvironmentDatabasesCurrentMetricStorage,
 
     /**
      * The EnvironmentDeploymentRule model constructor.
@@ -1494,6 +1677,30 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
+
+    /**
+     * The InlineResponse200 model constructor.
+     * @property {module:model/InlineResponse200}
+     */
+    InlineResponse200,
+
+    /**
+     * The InlineResponse2001 model constructor.
+     * @property {module:model/InlineResponse2001}
+     */
+    InlineResponse2001,
+
+    /**
+     * The InlineResponse2001Results model constructor.
+     * @property {module:model/InlineResponse2001Results}
+     */
+    InlineResponse2001Results,
+
+    /**
+     * The InlineResponse2002 model constructor.
+     * @property {module:model/InlineResponse2002}
+     */
+    InlineResponse2002,
 
     /**
      * The Instance model constructor.
@@ -1836,6 +2043,12 @@ export {
      * @property {module:model/OrganizationEditRequest}
      */
     OrganizationEditRequest,
+
+    /**
+     * The OrganizationGithubAppConnectRequest model constructor.
+     * @property {module:model/OrganizationGithubAppConnectRequest}
+     */
+    OrganizationGithubAppConnectRequest,
 
     /**
      * The OrganizationRequest model constructor.
@@ -2330,6 +2543,96 @@ export {
     ClustersApi,
 
     /**
+    * The ContainerActionsApi service constructor.
+    * @property {module:api/ContainerActionsApi}
+    */
+    ContainerActionsApi,
+
+    /**
+    * The ContainerConfigurationApi service constructor.
+    * @property {module:api/ContainerConfigurationApi}
+    */
+    ContainerConfigurationApi,
+
+    /**
+    * The ContainerCustomDomainApi service constructor.
+    * @property {module:api/ContainerCustomDomainApi}
+    */
+    ContainerCustomDomainApi,
+
+    /**
+    * The ContainerDatabaseApi service constructor.
+    * @property {module:api/ContainerDatabaseApi}
+    */
+    ContainerDatabaseApi,
+
+    /**
+    * The ContainerDependencyApi service constructor.
+    * @property {module:api/ContainerDependencyApi}
+    */
+    ContainerDependencyApi,
+
+    /**
+    * The ContainerDeploymentRestrictionApi service constructor.
+    * @property {module:api/ContainerDeploymentRestrictionApi}
+    */
+    ContainerDeploymentRestrictionApi,
+
+    /**
+    * The ContainerEnvironmentVariableApi service constructor.
+    * @property {module:api/ContainerEnvironmentVariableApi}
+    */
+    ContainerEnvironmentVariableApi,
+
+    /**
+    * The ContainerEventApi service constructor.
+    * @property {module:api/ContainerEventApi}
+    */
+    ContainerEventApi,
+
+    /**
+    * The ContainerLogsApi service constructor.
+    * @property {module:api/ContainerLogsApi}
+    */
+    ContainerLogsApi,
+
+    /**
+    * The ContainerMainCallsApi service constructor.
+    * @property {module:api/ContainerMainCallsApi}
+    */
+    ContainerMainCallsApi,
+
+    /**
+    * The ContainerMetricsApi service constructor.
+    * @property {module:api/ContainerMetricsApi}
+    */
+    ContainerMetricsApi,
+
+    /**
+    * The ContainerRegistriesApi service constructor.
+    * @property {module:api/ContainerRegistriesApi}
+    */
+    ContainerRegistriesApi,
+
+    /**
+    * The ContainerRegistryApi service constructor.
+    * @property {module:api/ContainerRegistryApi}
+    */
+    ContainerRegistryApi,
+
+    /**
+    * The ContainerSecretApi service constructor.
+    * @property {module:api/ContainerSecretApi}
+    */
+    ContainerSecretApi,
+
+    /**
+    * The ContainersApi service constructor.
+    * @property {module:api/ContainersApi}
+    */
+    ContainersApi,
+
+    /**
     * The CustomDomainApi service constructor.
     * @property {module:api/CustomDomainApi}
     */
@@ -2346,6 +2649,12 @@ export {
     * @property {module:api/DatabaseApplicationApi}
     */
     DatabaseApplicationApi,
+
+    /**
+    * The DatabaseContainerApi service constructor.
+    * @property {module:api/DatabaseContainerApi}
+    */
+    DatabaseContainerApi,
 
     /**
     * The DatabaseEventApi service constructor.
@@ -2430,6 +2739,12 @@ export {
     * @property {module:api/GitRepositoriesApi}
     */
     GitRepositoriesApi,
+
+    /**
+    * The GithubAppApi service constructor.
+    * @property {module:api/GithubAppApi}
+    */
+    GithubAppApi,
 
     /**
     * The LogicalDatabaseApi service constructor.

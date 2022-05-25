@@ -118,6 +118,16 @@
         done();
       });
     });
+    describe('listLogicalDatabaseContainer', function() {
+      it('should call listLogicalDatabaseContainer successfully', function(done) {
+        //uncomment below and update the code to test listLogicalDatabaseContainer
+        //instance.listLogicalDatabaseContainer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listLogicalDatabaseDatabase', function() {
       it('should call listLogicalDatabaseDatabase successfully', function(done) {
         //uncomment below and update the code to test listLogicalDatabaseDatabase

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[EnvironmentApplicationsInstanceResponseListResults]**](EnvironmentApplicationsInstanceResponseListResults.md) |  | [optional] 
+**results** | [**[InlineResponse2001Results]**](InlineResponse2001Results.md) |  | [optional] 
 
 

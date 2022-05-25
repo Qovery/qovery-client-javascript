@@ -175,6 +175,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecret**](docs/ApplicationSecretApi.md#createApplicationSecret) | **POST** /application/{applicationId}/secret | Add a secret to the application
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecretAlias**](docs/ApplicationSecretApi.md#createApplicationSecretAlias) | **POST** /application/{applicationId}/secret/{secretId}/alias | Create a secret alias at the application level
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecretOverride**](docs/ApplicationSecretApi.md#createApplicationSecretOverride) | **POST** /application/{applicationId}/secret/{secretId}/override | Create a secret override at the application level
+*QoveryApi.ApplicationSecretApi* | [**createContainerSecretOverride**](docs/ApplicationSecretApi.md#createContainerSecretOverride) | **POST** /container/{containerId}/secret/{secretId}/override | Create a secret override at the container level
 *QoveryApi.ApplicationSecretApi* | [**deleteApplicationSecret**](docs/ApplicationSecretApi.md#deleteApplicationSecret) | **DELETE** /application/{applicationId}/secret/{secretId} | Delete a secret from an application
 *QoveryApi.ApplicationSecretApi* | [**editApplicationSecret**](docs/ApplicationSecretApi.md#editApplicationSecret) | **PUT** /application/{applicationId}/secret/{secretId} | Edit a secret belonging to the application
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
@@ -238,6 +239,76 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**specifyClusterCloudProviderInfo**](docs/ClustersApi.md#specifyClusterCloudProviderInfo) | **POST** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Specify cluster cloud provider info and credentials
 *QoveryApi.ClustersApi* | [**stopCluster**](docs/ClustersApi.md#stopCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/stop | Stop cluster
 *QoveryApi.ClustersApi* | [**updateCluster**](docs/ClustersApi.md#updateCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/update | Update a cluster Version
+*QoveryApi.ContainerActionsApi* | [**deployContainer**](docs/ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | Deploy container
+*QoveryApi.ContainerActionsApi* | [**previewEnvironmentContainer**](docs/ContainerActionsApi.md#previewEnvironmentContainer) | **POST** /container/{containerId}/previewEnvironment | Deploy a preview environment with your container application
+*QoveryApi.ContainerActionsApi* | [**restartContainer**](docs/ContainerActionsApi.md#restartContainer) | **POST** /container/{containerId}/restart | Restart container
+*QoveryApi.ContainerActionsApi* | [**stopContainer**](docs/ContainerActionsApi.md#stopContainer) | **POST** /container/{containerId}/stop | Stop container
+*QoveryApi.ContainerConfigurationApi* | [**editContainerAdvancedSettings**](docs/ContainerConfigurationApi.md#editContainerAdvancedSettings) | **PUT** /container/{containerId}/advancedSettings | Edit advanced settings
+*QoveryApi.ContainerConfigurationApi* | [**editContainerNetwork**](docs/ContainerConfigurationApi.md#editContainerNetwork) | **PUT** /container/{containerId}/network | Edit Container Network
+*QoveryApi.ContainerConfigurationApi* | [**getContainerAdvancedSettings**](docs/ContainerConfigurationApi.md#getContainerAdvancedSettings) | **GET** /container/{containerId}/advancedSettings | Get advanced settings
+*QoveryApi.ContainerConfigurationApi* | [**getContainerNetwork**](docs/ContainerConfigurationApi.md#getContainerNetwork) | **GET** /container/{containerId}/network | Get Container Network information
+*QoveryApi.ContainerCustomDomainApi* | [**createContainerCustomDomain**](docs/ContainerCustomDomainApi.md#createContainerCustomDomain) | **POST** /container/{containerId}/customDomain | Add custom domain to the container.
+*QoveryApi.ContainerCustomDomainApi* | [**deleteContainerCustomDomain**](docs/ContainerCustomDomainApi.md#deleteContainerCustomDomain) | **DELETE** /container/{containerId}/customDomain/{customDomainId} | Delete a Custom Domain
+*QoveryApi.ContainerCustomDomainApi* | [**editContainerCustomDomain**](docs/ContainerCustomDomainApi.md#editContainerCustomDomain) | **PUT** /container/{containerId}/customDomain/{customDomainId} | Edit a Custom Domain
+*QoveryApi.ContainerCustomDomainApi* | [**getContainerCustomDomainStatus**](docs/ContainerCustomDomainApi.md#getContainerCustomDomainStatus) | **GET** /container/{containerId}/customDomain/{customDomainId}/status | Get Custom Domain status
+*QoveryApi.ContainerCustomDomainApi* | [**listContainerCustomDomain**](docs/ContainerCustomDomainApi.md#listContainerCustomDomain) | **GET** /container/{containerId}/customDomain | List container custom domains
+*QoveryApi.ContainerDatabaseApi* | [**attachDatabaseToContainer**](docs/ContainerDatabaseApi.md#attachDatabaseToContainer) | **POST** /container/{containerId}/database/{targetDatabaseId} | Link a database to the container
+*QoveryApi.ContainerDatabaseApi* | [**attachLogicalDatabaseToContainer**](docs/ContainerDatabaseApi.md#attachLogicalDatabaseToContainer) | **POST** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | Link a logical database to the container
+*QoveryApi.ContainerDatabaseApi* | [**listContainerDatabase**](docs/ContainerDatabaseApi.md#listContainerDatabase) | **GET** /container/{containerId}/database | List linked databases
+*QoveryApi.ContainerDatabaseApi* | [**listContainerLogicalDatabase**](docs/ContainerDatabaseApi.md#listContainerLogicalDatabase) | **GET** /container/{containerId}/logicalDatabase | List linked logical databases
+*QoveryApi.ContainerDatabaseApi* | [**removeDatabaseFromContainer**](docs/ContainerDatabaseApi.md#removeDatabaseFromContainer) | **DELETE** /container/{containerId}/database/{targetDatabaseId} | Remove database link to this container.
+*QoveryApi.ContainerDatabaseApi* | [**removeLogicalDatabaseFromContainer**](docs/ContainerDatabaseApi.md#removeLogicalDatabaseFromContainer) | **DELETE** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | Remove logical database link to this container.
+*QoveryApi.ContainerDependencyApi* | [**createContainerDependency**](docs/ContainerDependencyApi.md#createContainerDependency) | **POST** /container/{containerId}/dependency/{targetContainerId} | Add container dependency to this application.
+*QoveryApi.ContainerDependencyApi* | [**listContainerDependency**](docs/ContainerDependencyApi.md#listContainerDependency) | **GET** /container/{containerId}/dependency | List container dependencies
+*QoveryApi.ContainerDependencyApi* | [**removeContainerDependency**](docs/ContainerDependencyApi.md#removeContainerDependency) | **DELETE** /container/{containerId}/dependency/{targetContainerId} | Remove container dependency to this container.
+*QoveryApi.ContainerDeploymentRestrictionApi* | [**createContainerDeploymentRestriction**](docs/ContainerDeploymentRestrictionApi.md#createContainerDeploymentRestriction) | **POST** /container/{containerId}/deploymentRestriction | Create an container deployment restriction
+*QoveryApi.ContainerDeploymentRestrictionApi* | [**deleteContainerDeploymentRestriction**](docs/ContainerDeploymentRestrictionApi.md#deleteContainerDeploymentRestriction) | **DELETE** /container/{containerId}/deploymentRestriction/{deploymentRestrictionId} | Delete a container deployment restriction
+*QoveryApi.ContainerDeploymentRestrictionApi* | [**editContainerDeploymentRestriction**](docs/ContainerDeploymentRestrictionApi.md#editContainerDeploymentRestriction) | **PUT** /container/{containerId}/deploymentRestriction/{deploymentRestrictionId} | Edit a container deployment restriction
+*QoveryApi.ContainerDeploymentRestrictionApi* | [**getContainerDeploymentRestrictions**](docs/ContainerDeploymentRestrictionApi.md#getContainerDeploymentRestrictions) | **GET** /container/{containerId}/deploymentRestriction | Get container deployment restrictions
+*QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable | Add an environment variable to the container
+*QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariableAlias**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableAlias) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the container level
+*QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariableOverride**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableOverride) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/override | Create an environment variable override at the container level
+*QoveryApi.ContainerEnvironmentVariableApi* | [**deleteContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#deleteContainerEnvironmentVariable) | **DELETE** /container/{containerId}/environmentVariable/{environmentVariableId} | Delete an environment variable from a container
+*QoveryApi.ContainerEnvironmentVariableApi* | [**editContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#editContainerEnvironmentVariable) | **PUT** /container/{containerId}/environmentVariable/{environmentVariableId} | Edit an environment variable belonging to the container
+*QoveryApi.ContainerEnvironmentVariableApi* | [**importContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#importContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable/import | Import variables
+*QoveryApi.ContainerEnvironmentVariableApi* | [**listContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#listContainerEnvironmentVariable) | **GET** /container/{containerId}/environmentVariable | List environment variables
+*QoveryApi.ContainerEventApi* | [**listContainerEvent**](docs/ContainerEventApi.md#listContainerEvent) | **GET** /container/{containerId}/event | List container events
+*QoveryApi.ContainerLogsApi* | [**listContainerLog**](docs/ContainerLogsApi.md#listContainerLog) | **GET** /container/{containerId}/log | List logs
+*QoveryApi.ContainerMainCallsApi* | [**createContainerTag**](docs/ContainerMainCallsApi.md#createContainerTag) | **POST** /container/{containerId}/tag | Add container tag
+*QoveryApi.ContainerMainCallsApi* | [**deleteContainer**](docs/ContainerMainCallsApi.md#deleteContainer) | **DELETE** /container/{containerId} | Delete container
+*QoveryApi.ContainerMainCallsApi* | [**deleteContainerTag**](docs/ContainerMainCallsApi.md#deleteContainerTag) | **DELETE** /container/{containerId}/tag/{tagId} | Delete container tag
+*QoveryApi.ContainerMainCallsApi* | [**editContainer**](docs/ContainerMainCallsApi.md#editContainer) | **PUT** /container/{containerId} | Edit container
+*QoveryApi.ContainerMainCallsApi* | [**getContainer**](docs/ContainerMainCallsApi.md#getContainer) | **GET** /container/{containerId} | Get container by ID
+*QoveryApi.ContainerMainCallsApi* | [**getContainerStatus**](docs/ContainerMainCallsApi.md#getContainerStatus) | **GET** /container/{containerId}/status | Get container status
+*QoveryApi.ContainerMainCallsApi* | [**getContainerTags**](docs/ContainerMainCallsApi.md#getContainerTags) | **GET** /container/{containerId}/tagHistory | List image tags
+*QoveryApi.ContainerMainCallsApi* | [**listContainerContributor**](docs/ContainerMainCallsApi.md#listContainerContributor) | **GET** /container/{containerId}/contributor | List contributors
+*QoveryApi.ContainerMainCallsApi* | [**listContainerLinks**](docs/ContainerMainCallsApi.md#listContainerLinks) | **GET** /container/{containerId}/link | List all URLs of the container
+*QoveryApi.ContainerMainCallsApi* | [**listContainerTag**](docs/ContainerMainCallsApi.md#listContainerTag) | **GET** /container/{containerId}/tag | List tags
+*QoveryApi.ContainerMetricsApi* | [**getContainerCurrentInstance**](docs/ContainerMetricsApi.md#getContainerCurrentInstance) | **GET** /container/{containerId}/instance | List currently running instances of the container with their CPU and RAM metrics
+*QoveryApi.ContainerMetricsApi* | [**getContainerCurrentScale**](docs/ContainerMetricsApi.md#getContainerCurrentScale) | **GET** /container/{containerId}/currentScale | Get current scaling of the container
+*QoveryApi.ContainerMetricsApi* | [**getContainerCurrentStorageDisk**](docs/ContainerMetricsApi.md#getContainerCurrentStorageDisk) | **GET** /container/{containerId}/currentStorage | List current storage disk usage
+*QoveryApi.ContainerMetricsApi* | [**getContainerMetricCpu**](docs/ContainerMetricsApi.md#getContainerMetricCpu) | **GET** /container/{containerId}/metric/cpu | Get CPU consumption metric over time for the container
+*QoveryApi.ContainerMetricsApi* | [**getContainerMetricHealthCheck**](docs/ContainerMetricsApi.md#getContainerMetricHealthCheck) | **GET** /container/{containerId}/metric/healthCheck | Get Health Check latency  metric over time for the container
+*QoveryApi.ContainerMetricsApi* | [**getContainerMetricMemory**](docs/ContainerMetricsApi.md#getContainerMetricMemory) | **GET** /container/{containerId}/metric/memory | Get Memory consumption metric over time for the container
+*QoveryApi.ContainerMetricsApi* | [**getContainerMetricRestart**](docs/ContainerMetricsApi.md#getContainerMetricRestart) | **GET** /container/{containerId}/metric/restart | List container restarts
+*QoveryApi.ContainerMetricsApi* | [**getContainerMetricStorage**](docs/ContainerMetricsApi.md#getContainerMetricStorage) | **GET** /container/{containerId}/metric/storage | Get Storage consumption metric over time for the container 
+*QoveryApi.ContainerRegistriesApi* | [**createContainerRegistry**](docs/ContainerRegistriesApi.md#createContainerRegistry) | **POST** /organization/{organizationId}/containerRegistry | Create a container registry
+*QoveryApi.ContainerRegistriesApi* | [**deleteContainerRegistry**](docs/ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Delete a container registry
+*QoveryApi.ContainerRegistriesApi* | [**listAvailableContainerRegistry**](docs/ContainerRegistriesApi.md#listAvailableContainerRegistry) | **GET** /organization/{organizationId}/availableContainerRegistry | List supported container registries
+*QoveryApi.ContainerRegistriesApi* | [**listContainerRegistry**](docs/ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | List organization container registries
+*QoveryApi.ContainerRegistryApi* | [**editContainerRegistry**](docs/ContainerRegistryApi.md#editContainerRegistry) | **PUT** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Edit a container registry
+*QoveryApi.ContainerSecretApi* | [**createContainerSecret**](docs/ContainerSecretApi.md#createContainerSecret) | **POST** /container/{containerId}/secret | Add a secret to the container
+*QoveryApi.ContainerSecretApi* | [**createContainerSecretAlias**](docs/ContainerSecretApi.md#createContainerSecretAlias) | **POST** /container/{containerId}/secret/{secretId}/alias | Create a secret alias at the container level
+*QoveryApi.ContainerSecretApi* | [**deleteContainerSecret**](docs/ContainerSecretApi.md#deleteContainerSecret) | **DELETE** /container/{containerId}/secret/{secretId} | Delete a secret from an container
+*QoveryApi.ContainerSecretApi* | [**editContainerSecret**](docs/ContainerSecretApi.md#editContainerSecret) | **PUT** /container/{containerId}/secret/{secretId} | Edit a secret belonging to the container
+*QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets
+*QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
+*QoveryApi.ContainersApi* | [**deployAllContainers**](docs/ContainersApi.md#deployAllContainers) | **POST** /environment/{environmentId}/container/deploy | Deploy containers
+*QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentInstance**](docs/ContainersApi.md#getEnvironmentContainerCurrentInstance) | **GET** /environment/{environmentId}/container/instance | List running instances with CPU and RAM usage for each container
+*QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentScale**](docs/ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
+*QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentStorage**](docs/ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
+*QoveryApi.ContainersApi* | [**getEnvironmentContainerStatus**](docs/ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
+*QoveryApi.ContainersApi* | [**listContainer**](docs/ContainersApi.md#listContainer) | **GET** /environment/{environmentId}/container | List containers
 *QoveryApi.CustomDomainApi* | [**createApplicationCustomDomain**](docs/CustomDomainApi.md#createApplicationCustomDomain) | **POST** /application/{applicationId}/customDomain | Add custom domain to the application.
 *QoveryApi.CustomDomainApi* | [**deleteCustomDomain**](docs/CustomDomainApi.md#deleteCustomDomain) | **DELETE** /application/{applicationId}/customDomain/{customDomainId} | Delete a Custom Domain
 *QoveryApi.CustomDomainApi* | [**editCustomDomain**](docs/CustomDomainApi.md#editCustomDomain) | **PUT** /application/{applicationId}/customDomain/{customDomainId} | Edit a Custom Domain
@@ -248,6 +319,8 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabaseActionsApi* | [**stopDatabase**](docs/DatabaseActionsApi.md#stopDatabase) | **POST** /database/{databaseId}/stop | Stop database
 *QoveryApi.DatabaseApplicationApi* | [**listDatabaseApplication**](docs/DatabaseApplicationApi.md#listDatabaseApplication) | **GET** /database/{databaseId}/application | List applications using the database
 *QoveryApi.DatabaseApplicationApi* | [**removeApplicationFromDatabase**](docs/DatabaseApplicationApi.md#removeApplicationFromDatabase) | **DELETE** /database/{databaseId}/application/{targetApplicationId} | Remove an application from this database 
+*QoveryApi.DatabaseContainerApi* | [**listDatabaseContainer**](docs/DatabaseContainerApi.md#listDatabaseContainer) | **GET** /database/{databaseId}/container | List container using the database
+*QoveryApi.DatabaseContainerApi* | [**removeContainerFromDatabase**](docs/DatabaseContainerApi.md#removeContainerFromDatabase) | **DELETE** /database/{databaseId}/container/{targetContainerId} | Remove an container from this database 
 *QoveryApi.DatabaseEventApi* | [**listDatabaseEvent**](docs/DatabaseEventApi.md#listDatabaseEvent) | **GET** /database/{databaseId}/event | List database  events
 *QoveryApi.DatabaseMainCallsApi* | [**deleteDatabase**](docs/DatabaseMainCallsApi.md#deleteDatabase) | **DELETE** /database/{databaseId} | Delete a database 
 *QoveryApi.DatabaseMainCallsApi* | [**editDatabase**](docs/DatabaseMainCallsApi.md#editDatabase) | **PUT** /database/{databaseId} | Edit a database 
@@ -307,6 +380,8 @@ Class | Method | HTTP request | Description
 *QoveryApi.GitRepositoriesApi* | [**getGithubRepositoryBranches**](docs/GitRepositoriesApi.md#getGithubRepositoryBranches) | **GET** /account/github/repository/branch | Get github branches of the specified repository
 *QoveryApi.GitRepositoriesApi* | [**getGitlabRepositories**](docs/GitRepositoriesApi.md#getGitlabRepositories) | **GET** /account/gitlab/repository | Get gitlab repositories of the connected user
 *QoveryApi.GitRepositoriesApi* | [**getGitlabRepositoryBranches**](docs/GitRepositoriesApi.md#getGitlabRepositoryBranches) | **GET** /account/gitlab/repository/branch | Get gitlab branches of the specified repository
+*QoveryApi.GithubAppApi* | [**organizationGithubAppConnect**](docs/GithubAppApi.md#organizationGithubAppConnect) | **POST** /organization/{organizationId}/github/connect | Connect a github account to an organization
+*QoveryApi.GithubAppApi* | [**organizationGithubAppDisconnect**](docs/GithubAppApi.md#organizationGithubAppDisconnect) | **DELETE** /organization/{organizationId}/github/disconnect | Disconnect a github account from an organization
 *QoveryApi.LogicalDatabaseApi* | [**createLogicalDatabaseOnDatabase**](docs/LogicalDatabaseApi.md#createLogicalDatabaseOnDatabase) | **POST** /database/{databaseId}/logicalDatabase | Create a logical database on the database
 *QoveryApi.LogicalDatabaseApi* | [**deleteLogicalDatabase**](docs/LogicalDatabaseApi.md#deleteLogicalDatabase) | **DELETE** /logicalDatabase/{logicalDatabaseId} | Delete a Logical database
 *QoveryApi.LogicalDatabaseApi* | [**editLogicalDatabase**](docs/LogicalDatabaseApi.md#editLogicalDatabase) | **PUT** /logicalDatabase/{logicalDatabaseId} | Edit a logical database
@@ -314,6 +389,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.LogicalDatabaseApi* | [**getLogicalDatabase**](docs/LogicalDatabaseApi.md#getLogicalDatabase) | **GET** /logicalDatabase/{logicalDatabaseId} | Get logical database by ID
 *QoveryApi.LogicalDatabaseApi* | [**getLogicalDatabaseCredentials**](docs/LogicalDatabaseApi.md#getLogicalDatabaseCredentials) | **GET** /logicalDatabase/{logicalDatabaseId}/credentials | Get  credentials of the logical database
 *QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseApplication**](docs/LogicalDatabaseApi.md#listLogicalDatabaseApplication) | **GET** /logicalDatabase/{logicalDatabaseId}/application | List linked applications
+*QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseContainer**](docs/LogicalDatabaseApi.md#listLogicalDatabaseContainer) | **GET** /logicalDatabase/{logicalDatabaseId}/container | List linked containers
 *QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseDatabase**](docs/LogicalDatabaseApi.md#listLogicalDatabaseDatabase) | **GET** /database/{databaseId}/logicalDatabase | List logical databases of a database
 *QoveryApi.MembersApi* | [**deleteInviteMember**](docs/MembersApi.md#deleteInviteMember) | **DELETE** /organization/{organizationId}/inviteMember/{inviteId} | Remove an invited member
 *QoveryApi.MembersApi* | [**deleteMember**](docs/MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member/{userId} | Remove a member
@@ -376,7 +452,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ApplicationAdvancedSettings](docs/ApplicationAdvancedSettings.md)
  - [QoveryApi.ApplicationAllOf](docs/ApplicationAllOf.md)
  - [QoveryApi.ApplicationCurrentScale](docs/ApplicationCurrentScale.md)
- - [QoveryApi.ApplicationDependencyRequest](docs/ApplicationDependencyRequest.md)
  - [QoveryApi.ApplicationDeploymentRestriction](docs/ApplicationDeploymentRestriction.md)
  - [QoveryApi.ApplicationDeploymentRestrictionRequest](docs/ApplicationDeploymentRestrictionRequest.md)
  - [QoveryApi.ApplicationDeploymentRestrictionResponseList](docs/ApplicationDeploymentRestrictionResponseList.md)
@@ -393,10 +468,9 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ApplicationRequest](docs/ApplicationRequest.md)
  - [QoveryApi.ApplicationRequestAllOf](docs/ApplicationRequestAllOf.md)
  - [QoveryApi.ApplicationResponseList](docs/ApplicationResponseList.md)
- - [QoveryApi.ApplicationStorage](docs/ApplicationStorage.md)
  - [QoveryApi.ApplicationStorageRequest](docs/ApplicationStorageRequest.md)
  - [QoveryApi.ApplicationStorageRequestStorage](docs/ApplicationStorageRequestStorage.md)
- - [QoveryApi.ApplicationStorageStorage](docs/ApplicationStorageStorage.md)
+ - [QoveryApi.AvailableContainerRegistryResponse](docs/AvailableContainerRegistryResponse.md)
  - [QoveryApi.AwsCredentialsRequest](docs/AwsCredentialsRequest.md)
  - [QoveryApi.Backup](docs/Backup.md)
  - [QoveryApi.BackupAllOf](docs/BackupAllOf.md)
@@ -423,8 +497,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterAllOf](docs/ClusterAllOf.md)
  - [QoveryApi.ClusterBase](docs/ClusterBase.md)
  - [QoveryApi.ClusterCloudProviderInfo](docs/ClusterCloudProviderInfo.md)
+ - [QoveryApi.ClusterCloudProviderInfoCredentials](docs/ClusterCloudProviderInfoCredentials.md)
  - [QoveryApi.ClusterCloudProviderInfoRequest](docs/ClusterCloudProviderInfoRequest.md)
- - [QoveryApi.ClusterCloudProviderInfoRequestCredentials](docs/ClusterCloudProviderInfoRequestCredentials.md)
  - [QoveryApi.ClusterCredentials](docs/ClusterCredentials.md)
  - [QoveryApi.ClusterCredentialsResponseList](docs/ClusterCredentialsResponseList.md)
  - [QoveryApi.ClusterFeature](docs/ClusterFeature.md)
@@ -450,6 +524,28 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CommitResponseList](docs/CommitResponseList.md)
  - [QoveryApi.CommunityUsage](docs/CommunityUsage.md)
  - [QoveryApi.CompanySizeEnum](docs/CompanySizeEnum.md)
+ - [QoveryApi.ContainerAdvancedSettings](docs/ContainerAdvancedSettings.md)
+ - [QoveryApi.ContainerAdvancedSettingsResponse](docs/ContainerAdvancedSettingsResponse.md)
+ - [QoveryApi.ContainerCurrentScale](docs/ContainerCurrentScale.md)
+ - [QoveryApi.ContainerDependencyRequest](docs/ContainerDependencyRequest.md)
+ - [QoveryApi.ContainerDeployRequest](docs/ContainerDeployRequest.md)
+ - [QoveryApi.ContainerDeploymentRestriction](docs/ContainerDeploymentRestriction.md)
+ - [QoveryApi.ContainerDeploymentRestrictionRequest](docs/ContainerDeploymentRestrictionRequest.md)
+ - [QoveryApi.ContainerDeploymentRestrictionResponseList](docs/ContainerDeploymentRestrictionResponseList.md)
+ - [QoveryApi.ContainerEditRequest](docs/ContainerEditRequest.md)
+ - [QoveryApi.ContainerEditRequestAllOf](docs/ContainerEditRequestAllOf.md)
+ - [QoveryApi.ContainerNetwork](docs/ContainerNetwork.md)
+ - [QoveryApi.ContainerNetworkRequest](docs/ContainerNetworkRequest.md)
+ - [QoveryApi.ContainerRegistryKind](docs/ContainerRegistryKind.md)
+ - [QoveryApi.ContainerRegistryRequest](docs/ContainerRegistryRequest.md)
+ - [QoveryApi.ContainerRegistryResponse](docs/ContainerRegistryResponse.md)
+ - [QoveryApi.ContainerRequest](docs/ContainerRequest.md)
+ - [QoveryApi.ContainerRequestAllOf](docs/ContainerRequestAllOf.md)
+ - [QoveryApi.ContainerResponse](docs/ContainerResponse.md)
+ - [QoveryApi.ContainerResponseAllOf](docs/ContainerResponseAllOf.md)
+ - [QoveryApi.ContainerResponseList](docs/ContainerResponseList.md)
+ - [QoveryApi.ContainerStorage](docs/ContainerStorage.md)
+ - [QoveryApi.ContainerStorageStorage](docs/ContainerStorageStorage.md)
  - [QoveryApi.Cost](docs/Cost.md)
  - [QoveryApi.CostRange](docs/CostRange.md)
  - [QoveryApi.Credentials](docs/Credentials.md)
@@ -468,6 +564,9 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DatabaseConfiguration](docs/DatabaseConfiguration.md)
  - [QoveryApi.DatabaseConfigurationResponseList](docs/DatabaseConfigurationResponseList.md)
  - [QoveryApi.DatabaseCurrentMetric](docs/DatabaseCurrentMetric.md)
+ - [QoveryApi.DatabaseCurrentMetricCpu](docs/DatabaseCurrentMetricCpu.md)
+ - [QoveryApi.DatabaseCurrentMetricMemory](docs/DatabaseCurrentMetricMemory.md)
+ - [QoveryApi.DatabaseCurrentMetricStorage](docs/DatabaseCurrentMetricStorage.md)
  - [QoveryApi.DatabaseEditRequest](docs/DatabaseEditRequest.md)
  - [QoveryApi.DatabaseModeEnum](docs/DatabaseModeEnum.md)
  - [QoveryApi.DatabaseRequest](docs/DatabaseRequest.md)
@@ -501,16 +600,16 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentApplicationsCurrentScale](docs/EnvironmentApplicationsCurrentScale.md)
  - [QoveryApi.EnvironmentApplicationsCurrentScaleResponseList](docs/EnvironmentApplicationsCurrentScaleResponseList.md)
  - [QoveryApi.EnvironmentApplicationsInstanceResponseList](docs/EnvironmentApplicationsInstanceResponseList.md)
- - [QoveryApi.EnvironmentApplicationsInstanceResponseListResults](docs/EnvironmentApplicationsInstanceResponseListResults.md)
  - [QoveryApi.EnvironmentApplicationsStorage](docs/EnvironmentApplicationsStorage.md)
  - [QoveryApi.EnvironmentApplicationsStorageResponseList](docs/EnvironmentApplicationsStorageResponseList.md)
  - [QoveryApi.EnvironmentApplicationsSupportedLanguage](docs/EnvironmentApplicationsSupportedLanguage.md)
  - [QoveryApi.EnvironmentApplicationsSupportedLanguageList](docs/EnvironmentApplicationsSupportedLanguageList.md)
+ - [QoveryApi.EnvironmentContainersCurrentScale](docs/EnvironmentContainersCurrentScale.md)
+ - [QoveryApi.EnvironmentContainersCurrentScaleResponseList](docs/EnvironmentContainersCurrentScaleResponseList.md)
+ - [QoveryApi.EnvironmentContainersStorage](docs/EnvironmentContainersStorage.md)
+ - [QoveryApi.EnvironmentContainersStorageResponseList](docs/EnvironmentContainersStorageResponseList.md)
  - [QoveryApi.EnvironmentDatabasesCurrentMetric](docs/EnvironmentDatabasesCurrentMetric.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetricCpu](docs/EnvironmentDatabasesCurrentMetricCpu.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetricMemory](docs/EnvironmentDatabasesCurrentMetricMemory.md)
  - [QoveryApi.EnvironmentDatabasesCurrentMetricResponseList](docs/EnvironmentDatabasesCurrentMetricResponseList.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetricStorage](docs/EnvironmentDatabasesCurrentMetricStorage.md)
  - [QoveryApi.EnvironmentDeploymentRule](docs/EnvironmentDeploymentRule.md)
  - [QoveryApi.EnvironmentDeploymentRuleAllOf](docs/EnvironmentDeploymentRuleAllOf.md)
  - [QoveryApi.EnvironmentDeploymentRuleEditRequest](docs/EnvironmentDeploymentRuleEditRequest.md)
@@ -551,6 +650,10 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryBranchResponseList](docs/GitRepositoryBranchResponseList.md)
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
+ - [QoveryApi.InlineResponse200](docs/InlineResponse200.md)
+ - [QoveryApi.InlineResponse2001](docs/InlineResponse2001.md)
+ - [QoveryApi.InlineResponse2001Results](docs/InlineResponse2001Results.md)
+ - [QoveryApi.InlineResponse2002](docs/InlineResponse2002.md)
  - [QoveryApi.Instance](docs/Instance.md)
  - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
  - [QoveryApi.InviteMember](docs/InviteMember.md)
@@ -608,6 +711,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.OrganizationCurrentCost](docs/OrganizationCurrentCost.md)
  - [QoveryApi.OrganizationCurrentCostAllOf](docs/OrganizationCurrentCostAllOf.md)
  - [QoveryApi.OrganizationEditRequest](docs/OrganizationEditRequest.md)
+ - [QoveryApi.OrganizationGithubAppConnectRequest](docs/OrganizationGithubAppConnectRequest.md)
  - [QoveryApi.OrganizationRequest](docs/OrganizationRequest.md)
  - [QoveryApi.OrganizationResponseList](docs/OrganizationResponseList.md)
  - [QoveryApi.OverriddenSecret](docs/OverriddenSecret.md)

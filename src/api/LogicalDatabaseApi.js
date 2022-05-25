@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import ApplicationResponseList from '../model/ApplicationResponseList';
+import ContainerResponseList from '../model/ContainerResponseList';
 import Credentials from '../model/Credentials';
 import CredentialsRequest from '../model/CredentialsRequest';
 import LogicalDatabase from '../model/LogicalDatabase';
@@ -339,6 +340,48 @@ export default class LogicalDatabaseApi {
       let returnType = ApplicationResponseList;
       return this.apiClient.callApi(
         '/logicalDatabase/{logicalDatabaseId}/application', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listLogicalDatabaseContainer operation.
+     * @callback module:api/LogicalDatabaseApi~listLogicalDatabaseContainerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContainerResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List linked containers
+     * @param {String} logicalDatabaseId Logical Database ID
+     * @param {module:api/LogicalDatabaseApi~listLogicalDatabaseContainerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ContainerResponseList}
+     */
+    listLogicalDatabaseContainer(logicalDatabaseId, callback) {
+      let postBody = null;
+      // verify the required parameter 'logicalDatabaseId' is set
+      if (logicalDatabaseId === undefined || logicalDatabaseId === null) {
+        throw new Error("Missing the required parameter 'logicalDatabaseId' when calling listLogicalDatabaseContainer");
+      }
+
+      let pathParams = {
+        'logicalDatabaseId': logicalDatabaseId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ContainerResponseList;
+      return this.apiClient.callApi(
+        '/logicalDatabase/{logicalDatabaseId}/container', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

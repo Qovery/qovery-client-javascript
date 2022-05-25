@@ -358,13 +358,10 @@ export default class ApplicationsApi {
     /**
      * List applications
      * @param {String} environmentId Environment ID
-     * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.toUpdate return (or not) results that must be updated (default to false)
      * @param {module:api/ApplicationsApi~listApplicationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApplicationResponseList}
      */
-    listApplication(environmentId, opts, callback) {
-      opts = opts || {};
+    listApplication(environmentId, callback) {
       let postBody = null;
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
@@ -375,7 +372,6 @@ export default class ApplicationsApi {
         'environmentId': environmentId
       };
       let queryParams = {
-        'toUpdate': opts['toUpdate']
       };
       let headerParams = {
       };

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getLogicalDatabase**](LogicalDatabaseApi.md#getLogicalDatabase) | **GET** /logicalDatabase/{logicalDatabaseId} | Get logical database by ID
 [**getLogicalDatabaseCredentials**](LogicalDatabaseApi.md#getLogicalDatabaseCredentials) | **GET** /logicalDatabase/{logicalDatabaseId}/credentials | Get  credentials of the logical database
 [**listLogicalDatabaseApplication**](LogicalDatabaseApi.md#listLogicalDatabaseApplication) | **GET** /logicalDatabase/{logicalDatabaseId}/application | List linked applications
+[**listLogicalDatabaseContainer**](LogicalDatabaseApi.md#listLogicalDatabaseContainer) | **GET** /logicalDatabase/{logicalDatabaseId}/container | List linked containers
 [**listLogicalDatabaseDatabase**](LogicalDatabaseApi.md#listLogicalDatabaseDatabase) | **GET** /database/{databaseId}/logicalDatabase | List logical databases of a database
 
 
@@ -351,6 +352,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApplicationResponseList**](ApplicationResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listLogicalDatabaseContainer
+
+> ContainerResponseList listLogicalDatabaseContainer(logicalDatabaseId)
+
+List linked containers
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.LogicalDatabaseApi();
+let logicalDatabaseId = "logicalDatabaseId_example"; // String | Logical Database ID
+apiInstance.listLogicalDatabaseContainer(logicalDatabaseId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **logicalDatabaseId** | **String**| Logical Database ID | 
+
+### Return type
+
+[**ContainerResponseList**](ContainerResponseList.md)
 
 ### Authorization
 

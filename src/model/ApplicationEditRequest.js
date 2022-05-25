@@ -16,10 +16,10 @@ import ApplicationEditRequestAllOf from './ApplicationEditRequestAllOf';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import ApplicationPort from './ApplicationPort';
 import ApplicationPortPorts from './ApplicationPortPorts';
-import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorage from './ApplicationStorageStorage';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
+import ContainerStorage from './ContainerStorage';
+import ContainerStorageStorage from './ContainerStorageStorage';
 import Healthcheck from './Healthcheck';
 
 /**
@@ -31,12 +31,12 @@ class ApplicationEditRequest {
     /**
      * Constructs a new <code>ApplicationEditRequest</code>.
      * @alias module:model/ApplicationEditRequest
-     * @implements module:model/ApplicationStorage
+     * @implements module:model/ContainerStorage
      * @implements module:model/ApplicationPort
      * @implements module:model/ApplicationEditRequestAllOf
      */
     constructor() { 
-        ApplicationStorage.initialize(this);ApplicationPort.initialize(this);ApplicationEditRequestAllOf.initialize(this);
+        ContainerStorage.initialize(this);ApplicationPort.initialize(this);ApplicationEditRequestAllOf.initialize(this);
         ApplicationEditRequest.initialize(this);
     }
 
@@ -58,12 +58,12 @@ class ApplicationEditRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ApplicationEditRequest();
-            ApplicationStorage.constructFromObject(data, obj);
+            ContainerStorage.constructFromObject(data, obj);
             ApplicationPort.constructFromObject(data, obj);
             ApplicationEditRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ContainerStorageStorage]);
             }
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
@@ -115,7 +115,7 @@ class ApplicationEditRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ContainerStorageStorage>} storage
  */
 ApplicationEditRequest.prototype['storage'] = undefined;
 
@@ -205,11 +205,11 @@ ApplicationEditRequest.prototype['auto_preview'] = true;
 ApplicationEditRequest.prototype['sticky_session'] = false;
 
 
-// Implement ApplicationStorage interface:
+// Implement ContainerStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ContainerStorageStorage>} storage
  */
-ApplicationStorage.prototype['storage'] = undefined;
+ContainerStorage.prototype['storage'] = undefined;
 // Implement ApplicationPort interface:
 /**
  * @member {Array.<module:model/ApplicationPortPorts>} ports

@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentDatabasesCurrentMetricCpu from './EnvironmentDatabasesCurrentMetricCpu';
-import EnvironmentDatabasesCurrentMetricMemory from './EnvironmentDatabasesCurrentMetricMemory';
+import DatabaseCurrentMetricCpu from './DatabaseCurrentMetricCpu';
+import DatabaseCurrentMetricMemory from './DatabaseCurrentMetricMemory';
 
 /**
  * The Instance model module.
@@ -56,10 +56,10 @@ class Instance {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
-                obj['cpu'] = EnvironmentDatabasesCurrentMetricCpu.constructFromObject(data['cpu']);
+                obj['cpu'] = DatabaseCurrentMetricCpu.constructFromObject(data['cpu']);
             }
             if (data.hasOwnProperty('memory')) {
-                obj['memory'] = EnvironmentDatabasesCurrentMetricMemory.constructFromObject(data['memory']);
+                obj['memory'] = DatabaseCurrentMetricMemory.constructFromObject(data['memory']);
             }
         }
         return obj;
@@ -79,12 +79,12 @@ Instance.prototype['created_at'] = undefined;
 Instance.prototype['name'] = undefined;
 
 /**
- * @member {module:model/EnvironmentDatabasesCurrentMetricCpu} cpu
+ * @member {module:model/DatabaseCurrentMetricCpu} cpu
  */
 Instance.prototype['cpu'] = undefined;
 
 /**
- * @member {module:model/EnvironmentDatabasesCurrentMetricMemory} memory
+ * @member {module:model/DatabaseCurrentMetricMemory} memory
  */
 Instance.prototype['memory'] = undefined;
 

@@ -115,7 +115,7 @@ null (empty response body)
 
 ## editApplicationDeploymentRestriction
 
-> ApplicationDeploymentRestriction editApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, opts)
+> ApplicationDeploymentRestriction editApplicationDeploymentRestriction(applicationId, opts)
 
 Edit an application deployment restriction
 
@@ -132,11 +132,10 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ApplicationDeploymentRestrictionApi();
 let applicationId = "applicationId_example"; // String | Application ID
-let deploymentRestrictionId = "deploymentRestrictionId_example"; // String | Deployment Restriction ID
 let opts = {
   'applicationDeploymentRestrictionRequest': new QoveryApi.ApplicationDeploymentRestrictionRequest() // ApplicationDeploymentRestrictionRequest | 
 };
-apiInstance.editApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, opts, (error, data, response) => {
+apiInstance.editApplicationDeploymentRestriction(applicationId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -151,7 +150,6 @@ apiInstance.editApplicationDeploymentRestriction(applicationId, deploymentRestri
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **applicationId** | **String**| Application ID | 
- **deploymentRestrictionId** | **String**| Deployment Restriction ID | 
  **applicationDeploymentRestrictionRequest** | [**ApplicationDeploymentRestrictionRequest**](ApplicationDeploymentRestrictionRequest.md)|  | [optional] 
 
 ### Return type

@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 
 ## listApplication
 
-> ApplicationResponseList listApplication(environmentId, opts)
+> ApplicationResponseList listApplication(environmentId)
 
 List applications
 
@@ -377,10 +377,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ApplicationsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
-let opts = {
-  'toUpdate': false // Boolean | return (or not) results that must be updated
-};
-apiInstance.listApplication(environmentId, opts, (error, data, response) => {
+apiInstance.listApplication(environmentId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -395,7 +392,6 @@ apiInstance.listApplication(environmentId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **environmentId** | **String**| Environment ID | 
- **toUpdate** | **Boolean**| return (or not) results that must be updated | [optional] [default to false]
 
 ### Return type
 

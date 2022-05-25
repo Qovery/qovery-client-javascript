@@ -136,27 +136,21 @@ export default class ApplicationDeploymentRestrictionApi {
      * Edit an application deployment restriction
      * Edit an application deployment restriction
      * @param {String} applicationId Application ID
-     * @param {String} deploymentRestrictionId Deployment Restriction ID
      * @param {Object} opts Optional parameters
      * @param {module:model/ApplicationDeploymentRestrictionRequest} opts.applicationDeploymentRestrictionRequest 
      * @param {module:api/ApplicationDeploymentRestrictionApi~editApplicationDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApplicationDeploymentRestriction}
      */
-    editApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, opts, callback) {
+    editApplicationDeploymentRestriction(applicationId, opts, callback) {
       opts = opts || {};
       let postBody = opts['applicationDeploymentRestrictionRequest'];
       // verify the required parameter 'applicationId' is set
       if (applicationId === undefined || applicationId === null) {
         throw new Error("Missing the required parameter 'applicationId' when calling editApplicationDeploymentRestriction");
       }
-      // verify the required parameter 'deploymentRestrictionId' is set
-      if (deploymentRestrictionId === undefined || deploymentRestrictionId === null) {
-        throw new Error("Missing the required parameter 'deploymentRestrictionId' when calling editApplicationDeploymentRestriction");
-      }
 
       let pathParams = {
-        'applicationId': applicationId,
-        'deploymentRestrictionId': deploymentRestrictionId
+        'applicationId': applicationId
       };
       let queryParams = {
       };

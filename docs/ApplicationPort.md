@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ports** | [**[ApplicationPortPorts]**](ApplicationPortPorts.md) |  | [optional] 
+**ports** | [**[ApplicationPortPortsInner]**](ApplicationPortPortsInner.md) |  | [optional] 
 
 

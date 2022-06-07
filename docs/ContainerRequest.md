@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**storage** | [**[ApplicationStorageRequestStorage]**](ApplicationStorageRequestStorage.md) |  | [optional] 
-**ports** | [**[ApplicationPortRequestPorts]**](ApplicationPortRequestPorts.md) |  | [optional] 
+**storage** | [**[ApplicationStorageRequestStorageInner]**](ApplicationStorageRequestStorageInner.md) |  | [optional] 
+**ports** | [**[ApplicationPortRequestPortsInner]**](ApplicationPortRequestPortsInner.md) |  | [optional] 
 **name** | **String** | name is case insensitive | 
 **description** | **String** | give a description to this container | [optional] 
 **registryId** | **String** | id of the linked registry | 

@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## listContainerRegistry
 
-> InlineResponse200 listContainerRegistry(organizationId)
+> ListContainerRegistry200Response listContainerRegistry(organizationId)
 
 List organization container registries
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**ListContainerRegistry200Response**](ListContainerRegistry200Response.md)
 
 ### Authorization
 

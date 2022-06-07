@@ -15,7 +15,7 @@
 import ApiClient from "../ApiClient";
 import ContainerEditRequest from '../model/ContainerEditRequest';
 import ContainerResponse from '../model/ContainerResponse';
-import InlineResponse2002 from '../model/InlineResponse2002';
+import GetContainerTags200Response from '../model/GetContainerTags200Response';
 import LinkResponseList from '../model/LinkResponseList';
 import Status from '../model/Status';
 import TagRequest from '../model/TagRequest';
@@ -309,7 +309,7 @@ export default class ContainerMainCallsApi {
      * Callback function to receive the result of the getContainerTags operation.
      * @callback module:api/ContainerMainCallsApi~getContainerTagsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
+     * @param {module:model/GetContainerTags200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -318,7 +318,7 @@ export default class ContainerMainCallsApi {
      * List all image container tags already deployed in the Qovery environment.
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMainCallsApi~getContainerTagsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
+     * data is of type: {@link module:model/GetContainerTags200Response}
      */
     getContainerTags(containerId, callback) {
       let postBody = null;
@@ -340,7 +340,7 @@ export default class ContainerMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = GetContainerTags200Response;
       return this.apiClient.callApi(
         '/container/{containerId}/tagHistory', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

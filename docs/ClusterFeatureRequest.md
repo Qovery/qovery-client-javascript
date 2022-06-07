@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**features** | [**[ClusterFeatureRequestFeatures]**](ClusterFeatureRequestFeatures.md) |  | [optional] 
+**features** | [**[ClusterFeatureRequestFeaturesInner]**](ClusterFeatureRequestFeaturesInner.md) |  | [optional] 
 
 

@@ -13,9 +13,9 @@
 
 import ApiClient from '../ApiClient';
 import ApplicationPort from './ApplicationPort';
-import ApplicationPortPorts from './ApplicationPortPorts';
+import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorage from './ApplicationStorageStorage';
+import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import Base from './Base';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
 import Healthcheck from './Healthcheck';
@@ -77,10 +77,10 @@ class ContainerResponse {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
@@ -144,12 +144,12 @@ ContainerResponse.prototype['created_at'] = undefined;
 ContainerResponse.prototype['updated_at'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ContainerResponse.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ContainerResponse.prototype['ports'] = undefined;
 
@@ -250,12 +250,12 @@ Base.prototype['created_at'] = undefined;
 Base.prototype['updated_at'] = undefined;
 // Implement ApplicationStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
 // Implement ApplicationPort interface:
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ApplicationPort.prototype['ports'] = undefined;
 // Implement ContainerResponseAllOf interface:

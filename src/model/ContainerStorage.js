@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorage from './ApplicationStorageStorage';
+import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 
 /**
  * The ContainerStorage model module.
@@ -52,7 +52,7 @@ class ContainerStorage {
             ApplicationStorage.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
         }
         return obj;
@@ -62,14 +62,14 @@ class ContainerStorage {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ContainerStorage.prototype['storage'] = undefined;
 
 
 // Implement ApplicationStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
 

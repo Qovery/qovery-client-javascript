@@ -30,16 +30,16 @@ import ApplicationGitRepositoryRequest from './model/ApplicationGitRepositoryReq
 import ApplicationNetwork from './model/ApplicationNetwork';
 import ApplicationNetworkRequest from './model/ApplicationNetworkRequest';
 import ApplicationPort from './model/ApplicationPort';
-import ApplicationPortPorts from './model/ApplicationPortPorts';
+import ApplicationPortPortsInner from './model/ApplicationPortPortsInner';
 import ApplicationPortRequest from './model/ApplicationPortRequest';
-import ApplicationPortRequestPorts from './model/ApplicationPortRequestPorts';
+import ApplicationPortRequestPortsInner from './model/ApplicationPortRequestPortsInner';
 import ApplicationRequest from './model/ApplicationRequest';
 import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
 import ApplicationStorage from './model/ApplicationStorage';
 import ApplicationStorageRequest from './model/ApplicationStorageRequest';
-import ApplicationStorageRequestStorage from './model/ApplicationStorageRequestStorage';
-import ApplicationStorageStorage from './model/ApplicationStorageStorage';
+import ApplicationStorageRequestStorageInner from './model/ApplicationStorageRequestStorageInner';
+import ApplicationStorageStorageInner from './model/ApplicationStorageStorageInner';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import Backup from './model/Backup';
@@ -72,11 +72,13 @@ import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoReq
 import ClusterCredentials from './model/ClusterCredentials';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
 import ClusterFeature from './model/ClusterFeature';
+import ClusterFeatureAcceptedValuesInner from './model/ClusterFeatureAcceptedValuesInner';
 import ClusterFeatureRequest from './model/ClusterFeatureRequest';
-import ClusterFeatureRequestFeatures from './model/ClusterFeatureRequestFeatures';
+import ClusterFeatureRequestFeaturesInner from './model/ClusterFeatureRequestFeaturesInner';
 import ClusterFeatureResponseList from './model/ClusterFeatureResponseList';
+import ClusterFeatureValue from './model/ClusterFeatureValue';
 import ClusterInstanceTypeResponseList from './model/ClusterInstanceTypeResponseList';
-import ClusterInstanceTypeResponseListResults from './model/ClusterInstanceTypeResponseListResults';
+import ClusterInstanceTypeResponseListResultsInner from './model/ClusterInstanceTypeResponseListResultsInner';
 import ClusterReadinessStatus from './model/ClusterReadinessStatus';
 import ClusterRegion from './model/ClusterRegion';
 import ClusterRegionResponseList from './model/ClusterRegionResponseList';
@@ -84,8 +86,8 @@ import ClusterRequest from './model/ClusterRequest';
 import ClusterResponseList from './model/ClusterResponseList';
 import ClusterRoutingTable from './model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
-import ClusterRoutingTableRequestRoutes from './model/ClusterRoutingTableRequestRoutes';
-import ClusterRoutingTableResults from './model/ClusterRoutingTableResults';
+import ClusterRoutingTableRequestRoutesInner from './model/ClusterRoutingTableRequestRoutesInner';
+import ClusterRoutingTableResultsInner from './model/ClusterRoutingTableResultsInner';
 import ClusterStatus from './model/ClusterStatus';
 import ClusterStatusResponseList from './model/ClusterStatusResponseList';
 import Commit from './model/Commit';
@@ -143,7 +145,7 @@ import DatabaseResponseList from './model/DatabaseResponseList';
 import DatabaseTypeEnum from './model/DatabaseTypeEnum';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
 import DeployAllRequest from './model/DeployAllRequest';
-import DeployAllRequestApplications from './model/DeployAllRequestApplications';
+import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistory from './model/DeploymentHistory';
 import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
@@ -211,6 +213,9 @@ import EventPaginatedResponseList from './model/EventPaginatedResponseList';
 import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListAllOf';
 import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
+import GetContainerTags200Response from './model/GetContainerTags200Response';
+import GetEnvironmentContainerCurrentInstance200Response from './model/GetEnvironmentContainerCurrentInstance200Response';
+import GetEnvironmentContainerCurrentInstance200ResponseResultsInner from './model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
 import GitProviderEnum from './model/GitProviderEnum';
@@ -219,10 +224,6 @@ import GitRepositoryBranch from './model/GitRepositoryBranch';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import Healthcheck from './model/Healthcheck';
-import InlineResponse200 from './model/InlineResponse200';
-import InlineResponse2001 from './model/InlineResponse2001';
-import InlineResponse2001Results from './model/InlineResponse2001Results';
-import InlineResponse2002 from './model/InlineResponse2002';
 import Instance from './model/Instance';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
@@ -238,6 +239,7 @@ import InvoiceStatusEnum from './model/InvoiceStatusEnum';
 import Key from './model/Key';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
+import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
@@ -261,7 +263,7 @@ import MetricMemoryDatapoint from './model/MetricMemoryDatapoint';
 import MetricMemoryDatapointResponseList from './model/MetricMemoryDatapointResponseList';
 import MetricMemoryResponseList from './model/MetricMemoryResponseList';
 import MetricRestart from './model/MetricRestart';
-import MetricRestartResults from './model/MetricRestartResults';
+import MetricRestartResultsInner from './model/MetricRestartResultsInner';
 import MetricStorage from './model/MetricStorage';
 import MetricStorageDatapoint from './model/MetricStorageDatapoint';
 import MetricStorageDatapointResponseList from './model/MetricStorageDatapointResponseList';
@@ -340,8 +342,8 @@ import UserResponseList from './model/UserResponseList';
 import Value from './model/Value';
 import VariableImport from './model/VariableImport';
 import VariableImportRequest from './model/VariableImportRequest';
-import VariableImportRequestVars from './model/VariableImportRequestVars';
-import VariableImportSuccessfulImportedVariables from './model/VariableImportSuccessfulImportedVariables';
+import VariableImportRequestVarsInner from './model/VariableImportRequestVarsInner';
+import VariableImportSuccessfulImportedVariablesInner from './model/VariableImportSuccessfulImportedVariablesInner';
 import Version from './model/Version';
 import VersionResponseList from './model/VersionResponseList';
 import WeekdayEnum from './model/WeekdayEnum';
@@ -552,10 +554,10 @@ export {
     ApplicationPort,
 
     /**
-     * The ApplicationPortPorts model constructor.
-     * @property {module:model/ApplicationPortPorts}
+     * The ApplicationPortPortsInner model constructor.
+     * @property {module:model/ApplicationPortPortsInner}
      */
-    ApplicationPortPorts,
+    ApplicationPortPortsInner,
 
     /**
      * The ApplicationPortRequest model constructor.
@@ -564,10 +566,10 @@ export {
     ApplicationPortRequest,
 
     /**
-     * The ApplicationPortRequestPorts model constructor.
-     * @property {module:model/ApplicationPortRequestPorts}
+     * The ApplicationPortRequestPortsInner model constructor.
+     * @property {module:model/ApplicationPortRequestPortsInner}
      */
-    ApplicationPortRequestPorts,
+    ApplicationPortRequestPortsInner,
 
     /**
      * The ApplicationRequest model constructor.
@@ -600,16 +602,16 @@ export {
     ApplicationStorageRequest,
 
     /**
-     * The ApplicationStorageRequestStorage model constructor.
-     * @property {module:model/ApplicationStorageRequestStorage}
+     * The ApplicationStorageRequestStorageInner model constructor.
+     * @property {module:model/ApplicationStorageRequestStorageInner}
      */
-    ApplicationStorageRequestStorage,
+    ApplicationStorageRequestStorageInner,
 
     /**
-     * The ApplicationStorageStorage model constructor.
-     * @property {module:model/ApplicationStorageStorage}
+     * The ApplicationStorageStorageInner model constructor.
+     * @property {module:model/ApplicationStorageStorageInner}
      */
-    ApplicationStorageStorage,
+    ApplicationStorageStorageInner,
 
     /**
      * The AvailableContainerRegistryResponse model constructor.
@@ -804,16 +806,22 @@ export {
     ClusterFeature,
 
     /**
+     * The ClusterFeatureAcceptedValuesInner model constructor.
+     * @property {module:model/ClusterFeatureAcceptedValuesInner}
+     */
+    ClusterFeatureAcceptedValuesInner,
+
+    /**
      * The ClusterFeatureRequest model constructor.
      * @property {module:model/ClusterFeatureRequest}
      */
     ClusterFeatureRequest,
 
     /**
-     * The ClusterFeatureRequestFeatures model constructor.
-     * @property {module:model/ClusterFeatureRequestFeatures}
+     * The ClusterFeatureRequestFeaturesInner model constructor.
+     * @property {module:model/ClusterFeatureRequestFeaturesInner}
      */
-    ClusterFeatureRequestFeatures,
+    ClusterFeatureRequestFeaturesInner,
 
     /**
      * The ClusterFeatureResponseList model constructor.
@@ -822,16 +830,22 @@ export {
     ClusterFeatureResponseList,
 
     /**
+     * The ClusterFeatureValue model constructor.
+     * @property {module:model/ClusterFeatureValue}
+     */
+    ClusterFeatureValue,
+
+    /**
      * The ClusterInstanceTypeResponseList model constructor.
      * @property {module:model/ClusterInstanceTypeResponseList}
      */
     ClusterInstanceTypeResponseList,
 
     /**
-     * The ClusterInstanceTypeResponseListResults model constructor.
-     * @property {module:model/ClusterInstanceTypeResponseListResults}
+     * The ClusterInstanceTypeResponseListResultsInner model constructor.
+     * @property {module:model/ClusterInstanceTypeResponseListResultsInner}
      */
-    ClusterInstanceTypeResponseListResults,
+    ClusterInstanceTypeResponseListResultsInner,
 
     /**
      * The ClusterReadinessStatus model constructor.
@@ -876,16 +890,16 @@ export {
     ClusterRoutingTableRequest,
 
     /**
-     * The ClusterRoutingTableRequestRoutes model constructor.
-     * @property {module:model/ClusterRoutingTableRequestRoutes}
+     * The ClusterRoutingTableRequestRoutesInner model constructor.
+     * @property {module:model/ClusterRoutingTableRequestRoutesInner}
      */
-    ClusterRoutingTableRequestRoutes,
+    ClusterRoutingTableRequestRoutesInner,
 
     /**
-     * The ClusterRoutingTableResults model constructor.
-     * @property {module:model/ClusterRoutingTableResults}
+     * The ClusterRoutingTableResultsInner model constructor.
+     * @property {module:model/ClusterRoutingTableResultsInner}
      */
-    ClusterRoutingTableResults,
+    ClusterRoutingTableResultsInner,
 
     /**
      * The ClusterStatus model constructor.
@@ -1230,10 +1244,10 @@ export {
     DeployAllRequest,
 
     /**
-     * The DeployAllRequestApplications model constructor.
-     * @property {module:model/DeployAllRequestApplications}
+     * The DeployAllRequestApplicationsInner model constructor.
+     * @property {module:model/DeployAllRequestApplicationsInner}
      */
-    DeployAllRequestApplications,
+    DeployAllRequestApplicationsInner,
 
     /**
      * The DeployRequest model constructor.
@@ -1638,6 +1652,24 @@ export {
     GenericObjectCurrentCost,
 
     /**
+     * The GetContainerTags200Response model constructor.
+     * @property {module:model/GetContainerTags200Response}
+     */
+    GetContainerTags200Response,
+
+    /**
+     * The GetEnvironmentContainerCurrentInstance200Response model constructor.
+     * @property {module:model/GetEnvironmentContainerCurrentInstance200Response}
+     */
+    GetEnvironmentContainerCurrentInstance200Response,
+
+    /**
+     * The GetEnvironmentContainerCurrentInstance200ResponseResultsInner model constructor.
+     * @property {module:model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner}
+     */
+    GetEnvironmentContainerCurrentInstance200ResponseResultsInner,
+
+    /**
      * The GitAuthProvider model constructor.
      * @property {module:model/GitAuthProvider}
      */
@@ -1684,30 +1716,6 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
-
-    /**
-     * The InlineResponse200 model constructor.
-     * @property {module:model/InlineResponse200}
-     */
-    InlineResponse200,
-
-    /**
-     * The InlineResponse2001 model constructor.
-     * @property {module:model/InlineResponse2001}
-     */
-    InlineResponse2001,
-
-    /**
-     * The InlineResponse2001Results model constructor.
-     * @property {module:model/InlineResponse2001Results}
-     */
-    InlineResponse2001Results,
-
-    /**
-     * The InlineResponse2002 model constructor.
-     * @property {module:model/InlineResponse2002}
-     */
-    InlineResponse2002,
 
     /**
      * The Instance model constructor.
@@ -1798,6 +1806,12 @@ export {
      * @property {module:model/LinkResponseList}
      */
     LinkResponseList,
+
+    /**
+     * The ListContainerRegistry200Response model constructor.
+     * @property {module:model/ListContainerRegistry200Response}
+     */
+    ListContainerRegistry200Response,
 
     /**
      * The Log model constructor.
@@ -1938,10 +1952,10 @@ export {
     MetricRestart,
 
     /**
-     * The MetricRestartResults model constructor.
-     * @property {module:model/MetricRestartResults}
+     * The MetricRestartResultsInner model constructor.
+     * @property {module:model/MetricRestartResultsInner}
      */
-    MetricRestartResults,
+    MetricRestartResultsInner,
 
     /**
      * The MetricStorage model constructor.
@@ -2412,16 +2426,16 @@ export {
     VariableImportRequest,
 
     /**
-     * The VariableImportRequestVars model constructor.
-     * @property {module:model/VariableImportRequestVars}
+     * The VariableImportRequestVarsInner model constructor.
+     * @property {module:model/VariableImportRequestVarsInner}
      */
-    VariableImportRequestVars,
+    VariableImportRequestVarsInner,
 
     /**
-     * The VariableImportSuccessfulImportedVariables model constructor.
-     * @property {module:model/VariableImportSuccessfulImportedVariables}
+     * The VariableImportSuccessfulImportedVariablesInner model constructor.
+     * @property {module:model/VariableImportSuccessfulImportedVariablesInner}
      */
-    VariableImportSuccessfulImportedVariables,
+    VariableImportSuccessfulImportedVariablesInner,
 
     /**
      * The Version model constructor.

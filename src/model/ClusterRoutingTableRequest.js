@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterRoutingTableRequestRoutes from './ClusterRoutingTableRequestRoutes';
+import ClusterRoutingTableRequestRoutesInner from './ClusterRoutingTableRequestRoutesInner';
 
 /**
  * The ClusterRoutingTableRequest model module.
@@ -23,7 +23,7 @@ class ClusterRoutingTableRequest {
     /**
      * Constructs a new <code>ClusterRoutingTableRequest</code>.
      * @alias module:model/ClusterRoutingTableRequest
-     * @param routes {Array.<module:model/ClusterRoutingTableRequestRoutes>} 
+     * @param routes {Array.<module:model/ClusterRoutingTableRequestRoutesInner>} 
      */
     constructor(routes) { 
         
@@ -51,7 +51,7 @@ class ClusterRoutingTableRequest {
             obj = obj || new ClusterRoutingTableRequest();
 
             if (data.hasOwnProperty('routes')) {
-                obj['routes'] = ApiClient.convertToType(data['routes'], [ClusterRoutingTableRequestRoutes]);
+                obj['routes'] = ApiClient.convertToType(data['routes'], [ClusterRoutingTableRequestRoutesInner]);
             }
         }
         return obj;
@@ -61,7 +61,7 @@ class ClusterRoutingTableRequest {
 }
 
 /**
- * @member {Array.<module:model/ClusterRoutingTableRequestRoutes>} routes
+ * @member {Array.<module:model/ClusterRoutingTableRequestRoutesInner>} routes
  */
 ClusterRoutingTableRequest.prototype['routes'] = undefined;
 

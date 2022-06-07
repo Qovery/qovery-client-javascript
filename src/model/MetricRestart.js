@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import MetricRestartResults from './MetricRestartResults';
+import MetricRestartResultsInner from './MetricRestartResultsInner';
 
 /**
  * The MetricRestart model module.
@@ -49,7 +49,7 @@ class MetricRestart {
             obj = obj || new MetricRestart();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [MetricRestartResults]);
+                obj['results'] = ApiClient.convertToType(data['results'], [MetricRestartResultsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class MetricRestart {
 }
 
 /**
- * @member {Array.<module:model/MetricRestartResults>} results
+ * @member {Array.<module:model/MetricRestartResultsInner>} results
  */
 MetricRestart.prototype['results'] = undefined;
 

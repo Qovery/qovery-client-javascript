@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterRoutingTableResults from './ClusterRoutingTableResults';
+import ClusterRoutingTableResultsInner from './ClusterRoutingTableResultsInner';
 
 /**
  * The ClusterRoutingTable model module.
@@ -49,7 +49,7 @@ class ClusterRoutingTable {
             obj = obj || new ClusterRoutingTable();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ClusterRoutingTableResults]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ClusterRoutingTableResultsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ClusterRoutingTable {
 }
 
 /**
- * @member {Array.<module:model/ClusterRoutingTableResults>} results
+ * @member {Array.<module:model/ClusterRoutingTableResultsInner>} results
  */
 ClusterRoutingTable.prototype['results'] = undefined;
 

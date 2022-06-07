@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterInstanceTypeResponseListResults from './ClusterInstanceTypeResponseListResults';
+import ClusterInstanceTypeResponseListResultsInner from './ClusterInstanceTypeResponseListResultsInner';
 
 /**
  * The ClusterInstanceTypeResponseList model module.
@@ -49,7 +49,7 @@ class ClusterInstanceTypeResponseList {
             obj = obj || new ClusterInstanceTypeResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ClusterInstanceTypeResponseListResults]);
+                obj['results'] = ApiClient.convertToType(data['results'], [ClusterInstanceTypeResponseListResultsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ClusterInstanceTypeResponseList {
 }
 
 /**
- * @member {Array.<module:model/ClusterInstanceTypeResponseListResults>} results
+ * @member {Array.<module:model/ClusterInstanceTypeResponseListResultsInner>} results
  */
 ClusterInstanceTypeResponseList.prototype['results'] = undefined;
 

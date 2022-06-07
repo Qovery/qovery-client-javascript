@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**storage** | [**[ApplicationStorageRequestStorage]**](ApplicationStorageRequestStorage.md) |  | [optional] 
+**storage** | [**[ApplicationStorageRequestStorageInner]**](ApplicationStorageRequestStorageInner.md) |  | [optional] 
 
 

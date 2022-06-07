@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **costPerMonth** | **Number** |  | [optional] 
 **currencyCode** | **String** |  | [optional] 
 **valueType** | **String** |  | [optional] 
-**value** | [**OneOfstringboolean**](OneOfstringboolean.md) |  | [optional] 
+**value** | [**ClusterFeatureValue**](ClusterFeatureValue.md) |  | [optional] 
 **isValueUpdatable** | **Boolean** |  | [optional] [default to false]
-**acceptedValues** | [**[OneOfstringboolean]**](OneOfstringboolean.md) |  | [optional] 
+**acceptedValues** | [**[ClusterFeatureAcceptedValuesInner]**](ClusterFeatureAcceptedValuesInner.md) |  | [optional] 
 
 
 

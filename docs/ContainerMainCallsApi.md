@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ## getContainerTags
 
-> InlineResponse2002 getContainerTags(containerId)
+> GetContainerTags200Response getContainerTags(containerId)
 
 List image tags
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**GetContainerTags200Response**](GetContainerTags200Response.md)
 
 ### Authorization
 

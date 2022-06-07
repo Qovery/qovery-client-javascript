@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationStorageRequestStorage from './ApplicationStorageRequestStorage';
+import ApplicationStorageRequestStorageInner from './ApplicationStorageRequestStorageInner';
 
 /**
  * The ApplicationStorageRequest model module.
@@ -49,7 +49,7 @@ class ApplicationStorageRequest {
             obj = obj || new ApplicationStorageRequest();
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorageInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ApplicationStorageRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageRequestStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageRequestStorageInner>} storage
  */
 ApplicationStorageRequest.prototype['storage'] = undefined;
 

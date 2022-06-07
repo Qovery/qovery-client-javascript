@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**routes** | [**[ClusterRoutingTableRequestRoutes]**](ClusterRoutingTableRequestRoutes.md) |  | 
+**routes** | [**[ClusterRoutingTableRequestRoutesInner]**](ClusterRoutingTableRequestRoutesInner.md) |  | 
 
 

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[MetricRestartResults]**](MetricRestartResults.md) |  | [optional] 
+**results** | [**[MetricRestartResultsInner]**](MetricRestartResultsInner.md) |  | [optional] 
 
 

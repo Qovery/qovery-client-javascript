@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ClusterRoutingTableResults]**](ClusterRoutingTableResults.md) |  | [optional] 
+**results** | [**[ClusterRoutingTableResultsInner]**](ClusterRoutingTableResultsInner.md) |  | [optional] 
 
 

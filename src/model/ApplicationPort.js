@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationPortPorts from './ApplicationPortPorts';
+import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 
 /**
  * The ApplicationPort model module.
@@ -49,7 +49,7 @@ class ApplicationPort {
             obj = obj || new ApplicationPort();
 
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ApplicationPort {
 }
 
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ApplicationPort.prototype['ports'] = undefined;
 

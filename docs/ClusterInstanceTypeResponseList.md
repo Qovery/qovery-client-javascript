@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ClusterInstanceTypeResponseListResults]**](ClusterInstanceTypeResponseListResults.md) |  | [optional] 
+**results** | [**[ClusterInstanceTypeResponseListResultsInner]**](ClusterInstanceTypeResponseListResultsInner.md) |  | [optional] 
 
 

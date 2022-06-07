@@ -14,10 +14,10 @@
 import ApiClient from '../ApiClient';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import ApplicationPortRequest from './ApplicationPortRequest';
-import ApplicationPortRequestPorts from './ApplicationPortRequestPorts';
+import ApplicationPortRequestPortsInner from './ApplicationPortRequestPortsInner';
 import ApplicationRequestAllOf from './ApplicationRequestAllOf';
 import ApplicationStorageRequest from './ApplicationStorageRequest';
-import ApplicationStorageRequestStorage from './ApplicationStorageRequestStorage';
+import ApplicationStorageRequestStorageInner from './ApplicationStorageRequestStorageInner';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
@@ -67,10 +67,10 @@ class ApplicationRequest {
             ApplicationRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -116,12 +116,12 @@ class ApplicationRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageRequestStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageRequestStorageInner>} storage
  */
 ApplicationRequest.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortRequestPorts>} ports
+ * @member {Array.<module:model/ApplicationPortRequestPortsInner>} ports
  */
 ApplicationRequest.prototype['ports'] = undefined;
 
@@ -201,12 +201,12 @@ ApplicationRequest.prototype['auto_preview'] = true;
 
 // Implement ApplicationStorageRequest interface:
 /**
- * @member {Array.<module:model/ApplicationStorageRequestStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageRequestStorageInner>} storage
  */
 ApplicationStorageRequest.prototype['storage'] = undefined;
 // Implement ApplicationPortRequest interface:
 /**
- * @member {Array.<module:model/ApplicationPortRequestPorts>} ports
+ * @member {Array.<module:model/ApplicationPortRequestPortsInner>} ports
  */
 ApplicationPortRequest.prototype['ports'] = undefined;
 // Implement ApplicationRequestAllOf interface:

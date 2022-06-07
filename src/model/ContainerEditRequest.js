@@ -13,9 +13,9 @@
 
 import ApiClient from '../ApiClient';
 import ApplicationPort from './ApplicationPort';
-import ApplicationPortPorts from './ApplicationPortPorts';
+import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorage from './ApplicationStorageStorage';
+import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import ContainerEditRequestAllOf from './ContainerEditRequestAllOf';
 import Healthcheck from './Healthcheck';
 
@@ -60,10 +60,10 @@ class ContainerEditRequest {
             ContainerEditRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -106,12 +106,12 @@ class ContainerEditRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ContainerEditRequest.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ContainerEditRequest.prototype['ports'] = undefined;
 
@@ -187,12 +187,12 @@ ContainerEditRequest.prototype['sticky_session'] = false;
 
 // Implement ApplicationStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
 // Implement ApplicationPort interface:
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ApplicationPort.prototype['ports'] = undefined;
 // Implement ContainerEditRequestAllOf interface:

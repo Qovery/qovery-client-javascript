@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **overwrite** | **Boolean** |  | [default to false]
-**vars** | [**[VariableImportRequestVars]**](VariableImportRequestVars.md) |  | 
+**vars** | [**[VariableImportRequestVarsInner]**](VariableImportRequestVarsInner.md) |  | 
 
 

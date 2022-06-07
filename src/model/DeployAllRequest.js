@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DeployAllRequestApplications from './DeployAllRequestApplications';
+import DeployAllRequestApplicationsInner from './DeployAllRequestApplicationsInner';
 
 /**
  * The DeployAllRequest model module.
@@ -49,7 +49,7 @@ class DeployAllRequest {
             obj = obj || new DeployAllRequest();
 
             if (data.hasOwnProperty('applications')) {
-                obj['applications'] = ApiClient.convertToType(data['applications'], [DeployAllRequestApplications]);
+                obj['applications'] = ApiClient.convertToType(data['applications'], [DeployAllRequestApplicationsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class DeployAllRequest {
 }
 
 /**
- * @member {Array.<module:model/DeployAllRequestApplications>} applications
+ * @member {Array.<module:model/DeployAllRequestApplicationsInner>} applications
  */
 DeployAllRequest.prototype['applications'] = undefined;
 

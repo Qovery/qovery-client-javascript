@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import OneOfstringboolean from './OneOfstringboolean';
+import ClusterFeatureAcceptedValuesInner from './ClusterFeatureAcceptedValuesInner';
+import ClusterFeatureValue from './ClusterFeatureValue';
 
 /**
  * The ClusterFeature model module.
@@ -70,13 +71,13 @@ class ClusterFeature {
                 obj['value_type'] = ApiClient.convertToType(data['value_type'], 'String');
             }
             if (data.hasOwnProperty('value')) {
-                obj['value'] = ApiClient.convertToType(data['value'], OneOfstringboolean);
+                obj['value'] = ClusterFeatureValue.constructFromObject(data['value']);
             }
             if (data.hasOwnProperty('is_value_updatable')) {
                 obj['is_value_updatable'] = ApiClient.convertToType(data['is_value_updatable'], 'Boolean');
             }
             if (data.hasOwnProperty('accepted_values')) {
-                obj['accepted_values'] = ApiClient.convertToType(data['accepted_values'], [OneOfstringboolean]);
+                obj['accepted_values'] = ApiClient.convertToType(data['accepted_values'], [ClusterFeatureAcceptedValuesInner]);
             }
         }
         return obj;
@@ -121,7 +122,7 @@ ClusterFeature.prototype['currency_code'] = undefined;
 ClusterFeature.prototype['value_type'] = undefined;
 
 /**
- * @member {module:model/OneOfstringboolean} value
+ * @member {module:model/ClusterFeatureValue} value
  */
 ClusterFeature.prototype['value'] = undefined;
 
@@ -132,7 +133,7 @@ ClusterFeature.prototype['value'] = undefined;
 ClusterFeature.prototype['is_value_updatable'] = false;
 
 /**
- * @member {Array.<module:model/OneOfstringboolean>} accepted_values
+ * @member {Array.<module:model/ClusterFeatureAcceptedValuesInner>} accepted_values
  */
 ClusterFeature.prototype['accepted_values'] = undefined;
 

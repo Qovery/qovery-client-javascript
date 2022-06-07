@@ -15,9 +15,9 @@ import ApiClient from '../ApiClient';
 import ApplicationAllOf from './ApplicationAllOf';
 import ApplicationGitRepository from './ApplicationGitRepository';
 import ApplicationPort from './ApplicationPort';
-import ApplicationPortPorts from './ApplicationPortPorts';
+import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorage from './ApplicationStorageStorage';
+import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import Base from './Base';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
@@ -80,10 +80,10 @@ class Application {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
@@ -153,12 +153,12 @@ Application.prototype['created_at'] = undefined;
 Application.prototype['updated_at'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 Application.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 Application.prototype['ports'] = undefined;
 
@@ -270,12 +270,12 @@ Base.prototype['created_at'] = undefined;
 Base.prototype['updated_at'] = undefined;
 // Implement ApplicationStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
 // Implement ApplicationPort interface:
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ApplicationPort.prototype['ports'] = undefined;
 // Implement ApplicationAllOf interface:

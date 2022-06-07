@@ -15,9 +15,9 @@ import ApiClient from '../ApiClient';
 import ApplicationEditRequestAllOf from './ApplicationEditRequestAllOf';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import ApplicationPort from './ApplicationPort';
-import ApplicationPortPorts from './ApplicationPortPorts';
+import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorage from './ApplicationStorageStorage';
+import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
@@ -63,10 +63,10 @@ class ApplicationEditRequest {
             ApplicationEditRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -115,12 +115,12 @@ class ApplicationEditRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationEditRequest.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ApplicationEditRequest.prototype['ports'] = undefined;
 
@@ -207,12 +207,12 @@ ApplicationEditRequest.prototype['sticky_session'] = false;
 
 // Implement ApplicationStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
 // Implement ApplicationPort interface:
 /**
- * @member {Array.<module:model/ApplicationPortPorts>} ports
+ * @member {Array.<module:model/ApplicationPortPortsInner>} ports
  */
 ApplicationPort.prototype['ports'] = undefined;
 // Implement ApplicationEditRequestAllOf interface:

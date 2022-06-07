@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ## getEnvironmentContainerCurrentInstance
 
-> InlineResponse2001 getEnvironmentContainerCurrentInstance(environmentId)
+> GetEnvironmentContainerCurrentInstance200Response getEnvironmentContainerCurrentInstance(environmentId)
 
 List running instances with CPU and RAM usage for each container
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetEnvironmentContainerCurrentInstance200Response**](GetEnvironmentContainerCurrentInstance200Response.md)
 
 ### Authorization
 

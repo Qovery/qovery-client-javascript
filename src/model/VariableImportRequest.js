@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import VariableImportRequestVars from './VariableImportRequestVars';
+import VariableImportRequestVarsInner from './VariableImportRequestVarsInner';
 
 /**
  * The VariableImportRequest model module.
@@ -24,7 +24,7 @@ class VariableImportRequest {
      * Constructs a new <code>VariableImportRequest</code>.
      * @alias module:model/VariableImportRequest
      * @param overwrite {Boolean} 
-     * @param vars {Array.<module:model/VariableImportRequestVars>} 
+     * @param vars {Array.<module:model/VariableImportRequestVarsInner>} 
      */
     constructor(overwrite, vars) { 
         
@@ -56,7 +56,7 @@ class VariableImportRequest {
                 obj['overwrite'] = ApiClient.convertToType(data['overwrite'], 'Boolean');
             }
             if (data.hasOwnProperty('vars')) {
-                obj['vars'] = ApiClient.convertToType(data['vars'], [VariableImportRequestVars]);
+                obj['vars'] = ApiClient.convertToType(data['vars'], [VariableImportRequestVarsInner]);
             }
         }
         return obj;
@@ -72,7 +72,7 @@ class VariableImportRequest {
 VariableImportRequest.prototype['overwrite'] = false;
 
 /**
- * @member {Array.<module:model/VariableImportRequestVars>} vars
+ * @member {Array.<module:model/VariableImportRequestVarsInner>} vars
  */
 VariableImportRequest.prototype['vars'] = undefined;
 

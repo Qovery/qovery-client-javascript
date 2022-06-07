@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **totalVariablesToImport** | **Number** |  | 
-**successfulImportedVariables** | [**[VariableImportSuccessfulImportedVariables]**](VariableImportSuccessfulImportedVariables.md) |  | 
+**successfulImportedVariables** | [**[VariableImportSuccessfulImportedVariablesInner]**](VariableImportSuccessfulImportedVariablesInner.md) |  | 
 
 

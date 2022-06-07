@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2001Results from './InlineResponse2001Results';
+import GetEnvironmentContainerCurrentInstance200ResponseResultsInner from './GetEnvironmentContainerCurrentInstance200ResponseResultsInner';
 
 /**
  * The EnvironmentApplicationsInstanceResponseList model module.
@@ -49,7 +49,7 @@ class EnvironmentApplicationsInstanceResponseList {
             obj = obj || new EnvironmentApplicationsInstanceResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [InlineResponse2001Results]);
+                obj['results'] = ApiClient.convertToType(data['results'], [GetEnvironmentContainerCurrentInstance200ResponseResultsInner]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentApplicationsInstanceResponseList {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse2001Results>} results
+ * @member {Array.<module:model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner>} results
  */
 EnvironmentApplicationsInstanceResponseList.prototype['results'] = undefined;
 

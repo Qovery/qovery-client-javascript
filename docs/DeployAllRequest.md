@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**applications** | [**[DeployAllRequestApplications]**](DeployAllRequestApplications.md) |  | [optional] 
+**applications** | [**[DeployAllRequestApplicationsInner]**](DeployAllRequestApplicationsInner.md) |  | [optional] 
 
 

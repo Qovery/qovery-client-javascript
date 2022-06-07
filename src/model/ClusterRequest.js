@@ -15,7 +15,7 @@ import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
 import ClusterBase from './ClusterBase';
 import ClusterFeatureRequest from './ClusterFeatureRequest';
-import ClusterFeatureRequestFeatures from './ClusterFeatureRequestFeatures';
+import ClusterFeatureRequestFeaturesInner from './ClusterFeatureRequestFeaturesInner';
 
 /**
  * The ClusterRequest model module.
@@ -95,7 +95,7 @@ class ClusterRequest {
                 obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
             }
             if (data.hasOwnProperty('features')) {
-                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeatures]);
+                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeaturesInner]);
             }
         }
         return obj;
@@ -170,7 +170,7 @@ ClusterRequest.prototype['instance_type'] = undefined;
 ClusterRequest.prototype['disk_size'] = 20;
 
 /**
- * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features
+ * @member {Array.<module:model/ClusterFeatureRequestFeaturesInner>} features
  */
 ClusterRequest.prototype['features'] = undefined;
 
@@ -232,7 +232,7 @@ ClusterBase.prototype['instance_type'] = undefined;
 ClusterBase.prototype['disk_size'] = 20;
 // Implement ClusterFeatureRequest interface:
 /**
- * @member {Array.<module:model/ClusterFeatureRequestFeatures>} features
+ * @member {Array.<module:model/ClusterFeatureRequestFeaturesInner>} features
  */
 ClusterFeatureRequest.prototype['features'] = undefined;
 

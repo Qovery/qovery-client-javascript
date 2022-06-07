@@ -19,7 +19,7 @@ import ContainerResponseList from '../model/ContainerResponseList';
 import DeployAllRequest from '../model/DeployAllRequest';
 import EnvironmentContainersCurrentScaleResponseList from '../model/EnvironmentContainersCurrentScaleResponseList';
 import EnvironmentContainersStorageResponseList from '../model/EnvironmentContainersStorageResponseList';
-import InlineResponse2001 from '../model/InlineResponse2001';
+import GetEnvironmentContainerCurrentInstance200Response from '../model/GetEnvironmentContainerCurrentInstance200Response';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
 import Status from '../model/Status';
 
@@ -137,7 +137,7 @@ export default class ContainersApi {
      * Callback function to receive the result of the getEnvironmentContainerCurrentInstance operation.
      * @callback module:api/ContainersApi~getEnvironmentContainerCurrentInstanceCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
+     * @param {module:model/GetEnvironmentContainerCurrentInstance200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -145,7 +145,7 @@ export default class ContainersApi {
      * List running instances with CPU and RAM usage for each container
      * @param {String} environmentId Environment ID
      * @param {module:api/ContainersApi~getEnvironmentContainerCurrentInstanceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
+     * data is of type: {@link module:model/GetEnvironmentContainerCurrentInstance200Response}
      */
     getEnvironmentContainerCurrentInstance(environmentId, callback) {
       let postBody = null;
@@ -167,7 +167,7 @@ export default class ContainersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = GetEnvironmentContainerCurrentInstance200Response;
       return this.apiClient.callApi(
         '/environment/{environmentId}/container/instance', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

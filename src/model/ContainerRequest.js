@@ -13,9 +13,9 @@
 
 import ApiClient from '../ApiClient';
 import ApplicationPortRequest from './ApplicationPortRequest';
-import ApplicationPortRequestPorts from './ApplicationPortRequestPorts';
+import ApplicationPortRequestPortsInner from './ApplicationPortRequestPortsInner';
 import ApplicationStorageRequest from './ApplicationStorageRequest';
-import ApplicationStorageRequestStorage from './ApplicationStorageRequestStorage';
+import ApplicationStorageRequestStorageInner from './ApplicationStorageRequestStorageInner';
 import ContainerRequestAllOf from './ContainerRequestAllOf';
 import Healthcheck from './Healthcheck';
 
@@ -66,10 +66,10 @@ class ContainerRequest {
             ContainerRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPorts]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -109,12 +109,12 @@ class ContainerRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageRequestStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageRequestStorageInner>} storage
  */
 ContainerRequest.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortRequestPorts>} ports
+ * @member {Array.<module:model/ApplicationPortRequestPortsInner>} ports
  */
 ContainerRequest.prototype['ports'] = undefined;
 
@@ -183,12 +183,12 @@ ContainerRequest.prototype['healthcheck'] = undefined;
 
 // Implement ApplicationStorageRequest interface:
 /**
- * @member {Array.<module:model/ApplicationStorageRequestStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageRequestStorageInner>} storage
  */
 ApplicationStorageRequest.prototype['storage'] = undefined;
 // Implement ApplicationPortRequest interface:
 /**
- * @member {Array.<module:model/ApplicationPortRequestPorts>} ports
+ * @member {Array.<module:model/ApplicationPortRequestPortsInner>} ports
  */
 ApplicationPortRequest.prototype['ports'] = undefined;
 // Implement ContainerRequestAllOf interface:

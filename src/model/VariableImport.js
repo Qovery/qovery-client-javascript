@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import VariableImportSuccessfulImportedVariables from './VariableImportSuccessfulImportedVariables';
+import VariableImportSuccessfulImportedVariablesInner from './VariableImportSuccessfulImportedVariablesInner';
 
 /**
  * The VariableImport model module.
@@ -24,7 +24,7 @@ class VariableImport {
      * Constructs a new <code>VariableImport</code>.
      * @alias module:model/VariableImport
      * @param totalVariablesToImport {Number} 
-     * @param successfulImportedVariables {Array.<module:model/VariableImportSuccessfulImportedVariables>} 
+     * @param successfulImportedVariables {Array.<module:model/VariableImportSuccessfulImportedVariablesInner>} 
      */
     constructor(totalVariablesToImport, successfulImportedVariables) { 
         
@@ -56,7 +56,7 @@ class VariableImport {
                 obj['total_variables_to_import'] = ApiClient.convertToType(data['total_variables_to_import'], 'Number');
             }
             if (data.hasOwnProperty('successful_imported_variables')) {
-                obj['successful_imported_variables'] = ApiClient.convertToType(data['successful_imported_variables'], [VariableImportSuccessfulImportedVariables]);
+                obj['successful_imported_variables'] = ApiClient.convertToType(data['successful_imported_variables'], [VariableImportSuccessfulImportedVariablesInner]);
             }
         }
         return obj;
@@ -71,7 +71,7 @@ class VariableImport {
 VariableImport.prototype['total_variables_to_import'] = undefined;
 
 /**
- * @member {Array.<module:model/VariableImportSuccessfulImportedVariables>} successful_imported_variables
+ * @member {Array.<module:model/VariableImportSuccessfulImportedVariablesInner>} successful_imported_variables
  */
 VariableImport.prototype['successful_imported_variables'] = undefined;
 

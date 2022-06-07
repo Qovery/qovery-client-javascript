@@ -16,7 +16,7 @@ import ApiClient from "../ApiClient";
 import AvailableContainerRegistryResponse from '../model/AvailableContainerRegistryResponse';
 import ContainerRegistryRequest from '../model/ContainerRegistryRequest';
 import ContainerRegistryResponse from '../model/ContainerRegistryResponse';
-import InlineResponse200 from '../model/InlineResponse200';
+import ListContainerRegistry200Response from '../model/ListContainerRegistry200Response';
 
 /**
 * ContainerRegistries service.
@@ -170,7 +170,7 @@ export default class ContainerRegistriesApi {
      * Callback function to receive the result of the listContainerRegistry operation.
      * @callback module:api/ContainerRegistriesApi~listContainerRegistryCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
+     * @param {module:model/ListContainerRegistry200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -178,7 +178,7 @@ export default class ContainerRegistriesApi {
      * List organization container registries
      * @param {String} organizationId Organization ID
      * @param {module:api/ContainerRegistriesApi~listContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
+     * data is of type: {@link module:model/ListContainerRegistry200Response}
      */
     listContainerRegistry(organizationId, callback) {
       let postBody = null;
@@ -200,7 +200,7 @@ export default class ContainerRegistriesApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse200;
+      let returnType = ListContainerRegistry200Response;
       return this.apiClient.callApi(
         '/organization/{organizationId}/containerRegistry', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

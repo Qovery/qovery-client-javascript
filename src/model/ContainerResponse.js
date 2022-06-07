@@ -14,10 +14,10 @@
 import ApiClient from '../ApiClient';
 import ApplicationPort from './ApplicationPort';
 import ApplicationPortPorts from './ApplicationPortPorts';
+import ApplicationStorage from './ApplicationStorage';
+import ApplicationStorageStorage from './ApplicationStorageStorage';
 import Base from './Base';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
-import ContainerStorage from './ContainerStorage';
-import ContainerStorageStorage from './ContainerStorageStorage';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 
@@ -31,14 +31,14 @@ class ContainerResponse {
      * Constructs a new <code>ContainerResponse</code>.
      * @alias module:model/ContainerResponse
      * @implements module:model/Base
-     * @implements module:model/ContainerStorage
+     * @implements module:model/ApplicationStorage
      * @implements module:model/ApplicationPort
      * @implements module:model/ContainerResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ContainerStorage.initialize(this);ApplicationPort.initialize(this);ContainerResponseAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ApplicationPort.initialize(this);ContainerResponseAllOf.initialize(this);
         ContainerResponse.initialize(this, id, createdAt);
     }
 
@@ -63,7 +63,7 @@ class ContainerResponse {
         if (data) {
             obj = obj || new ContainerResponse();
             Base.constructFromObject(data, obj);
-            ContainerStorage.constructFromObject(data, obj);
+            ApplicationStorage.constructFromObject(data, obj);
             ApplicationPort.constructFromObject(data, obj);
             ContainerResponseAllOf.constructFromObject(data, obj);
 
@@ -77,7 +77,7 @@ class ContainerResponse {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ContainerStorageStorage]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
             }
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPorts]);
@@ -144,7 +144,7 @@ ContainerResponse.prototype['created_at'] = undefined;
 ContainerResponse.prototype['updated_at'] = undefined;
 
 /**
- * @member {Array.<module:model/ContainerStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorage>} storage
  */
 ContainerResponse.prototype['storage'] = undefined;
 
@@ -248,11 +248,11 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement ContainerStorage interface:
+// Implement ApplicationStorage interface:
 /**
- * @member {Array.<module:model/ContainerStorageStorage>} storage
+ * @member {Array.<module:model/ApplicationStorageStorage>} storage
  */
-ContainerStorage.prototype['storage'] = undefined;
+ApplicationStorage.prototype['storage'] = undefined;
 // Implement ApplicationPort interface:
 /**
  * @member {Array.<module:model/ApplicationPortPorts>} ports

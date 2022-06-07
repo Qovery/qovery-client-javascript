@@ -1,4 +1,4 @@
-# QoveryApi.ContainerStorage
+# QoveryApi.ApplicationStorage
 
 ## Properties
 

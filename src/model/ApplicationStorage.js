@@ -12,23 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationStorage from './ApplicationStorage';
 import ApplicationStorageStorage from './ApplicationStorageStorage';
 
 /**
- * The ContainerStorage model module.
- * @module model/ContainerStorage
+ * The ApplicationStorage model module.
+ * @module model/ApplicationStorage
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ContainerStorage {
+class ApplicationStorage {
     /**
-     * Constructs a new <code>ContainerStorage</code>.
-     * @alias module:model/ContainerStorage
-     * @implements module:model/ApplicationStorage
+     * Constructs a new <code>ApplicationStorage</code>.
+     * @alias module:model/ApplicationStorage
      */
     constructor() { 
+        
         ApplicationStorage.initialize(this);
-        ContainerStorage.initialize(this);
     }
 
     /**
@@ -40,16 +38,15 @@ class ContainerStorage {
     }
 
     /**
-     * Constructs a <code>ContainerStorage</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ApplicationStorage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ContainerStorage} obj Optional instance to populate.
-     * @return {module:model/ContainerStorage} The populated <code>ContainerStorage</code> instance.
+     * @param {module:model/ApplicationStorage} obj Optional instance to populate.
+     * @return {module:model/ApplicationStorage} The populated <code>ApplicationStorage</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ContainerStorage();
-            ApplicationStorage.constructFromObject(data, obj);
+            obj = obj || new ApplicationStorage();
 
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorage]);
@@ -64,17 +61,12 @@ class ContainerStorage {
 /**
  * @member {Array.<module:model/ApplicationStorageStorage>} storage
  */
-ContainerStorage.prototype['storage'] = undefined;
-
-
-// Implement ApplicationStorage interface:
-/**
- * @member {Array.<module:model/ApplicationStorageStorage>} storage
- */
 ApplicationStorage.prototype['storage'] = undefined;
 
 
 
 
-export default ContainerStorage;
+
+
+export default ApplicationStorage;
 

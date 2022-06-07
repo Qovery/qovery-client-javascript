@@ -38,8 +38,10 @@ docs/ApplicationRequest.md
 docs/ApplicationRequestAllOf.md
 docs/ApplicationResponseList.md
 docs/ApplicationSecretApi.md
+docs/ApplicationStorage.md
 docs/ApplicationStorageRequest.md
 docs/ApplicationStorageRequestStorage.md
+docs/ApplicationStorageStorage.md
 docs/ApplicationsApi.md
 docs/AvailableContainerRegistryResponse.md
 docs/AwsCredentialsRequest.md
@@ -135,7 +137,6 @@ docs/ContainerResponseAllOf.md
 docs/ContainerResponseList.md
 docs/ContainerSecretApi.md
 docs/ContainerStorage.md
-docs/ContainerStorageStorage.md
 docs/ContainersApi.md
 docs/Cost.md
 docs/CostRange.md
@@ -490,8 +491,10 @@ src/model/ApplicationPortRequestPorts.js
 src/model/ApplicationRequest.js
 src/model/ApplicationRequestAllOf.js
 src/model/ApplicationResponseList.js
+src/model/ApplicationStorage.js
 src/model/ApplicationStorageRequest.js
 src/model/ApplicationStorageRequestStorage.js
+src/model/ApplicationStorageStorage.js
 src/model/AvailableContainerRegistryResponse.js
 src/model/AwsCredentialsRequest.js
 src/model/Backup.js
@@ -567,7 +570,6 @@ src/model/ContainerResponse.js
 src/model/ContainerResponseAllOf.js
 src/model/ContainerResponseList.js
 src/model/ContainerStorage.js
-src/model/ContainerStorageStorage.js
 src/model/Cost.js
 src/model/CostRange.js
 src/model/Credentials.js
@@ -885,8 +887,10 @@ test/model/ApplicationPortRequestPorts.spec.js
 test/model/ApplicationRequest.spec.js
 test/model/ApplicationRequestAllOf.spec.js
 test/model/ApplicationResponseList.spec.js
+test/model/ApplicationStorage.spec.js
 test/model/ApplicationStorageRequest.spec.js
 test/model/ApplicationStorageRequestStorage.spec.js
+test/model/ApplicationStorageStorage.spec.js
 test/model/AvailableContainerRegistryResponse.spec.js
 test/model/AwsCredentialsRequest.spec.js
 test/model/Backup.spec.js
@@ -962,7 +966,6 @@ test/model/ContainerResponse.spec.js
 test/model/ContainerResponseAllOf.spec.js
 test/model/ContainerResponseList.spec.js
 test/model/ContainerStorage.spec.js
-test/model/ContainerStorageStorage.spec.js
 test/model/Cost.spec.js
 test/model/CostRange.spec.js
 test/model/Credentials.spec.js

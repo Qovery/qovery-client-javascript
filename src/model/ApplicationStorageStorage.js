@@ -15,21 +15,21 @@ import ApiClient from '../ApiClient';
 import StorageTypeEnum from './StorageTypeEnum';
 
 /**
- * The ContainerStorageStorage model module.
- * @module model/ContainerStorageStorage
+ * The ApplicationStorageStorage model module.
+ * @module model/ApplicationStorageStorage
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ContainerStorageStorage {
+class ApplicationStorageStorage {
     /**
-     * Constructs a new <code>ContainerStorageStorage</code>.
-     * @alias module:model/ContainerStorageStorage
+     * Constructs a new <code>ApplicationStorageStorage</code>.
+     * @alias module:model/ApplicationStorageStorage
      * @param type {module:model/StorageTypeEnum} 
      * @param size {Number} unit is GB
      * @param mountPoint {String} 
      */
     constructor(type, size, mountPoint) { 
         
-        ContainerStorageStorage.initialize(this, type, size, mountPoint);
+        ApplicationStorageStorage.initialize(this, type, size, mountPoint);
     }
 
     /**
@@ -44,15 +44,15 @@ class ContainerStorageStorage {
     }
 
     /**
-     * Constructs a <code>ContainerStorageStorage</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ApplicationStorageStorage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ContainerStorageStorage} obj Optional instance to populate.
-     * @return {module:model/ContainerStorageStorage} The populated <code>ContainerStorageStorage</code> instance.
+     * @param {module:model/ApplicationStorageStorage} obj Optional instance to populate.
+     * @return {module:model/ApplicationStorageStorage} The populated <code>ApplicationStorageStorage</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ContainerStorageStorage();
+            obj = obj || new ApplicationStorageStorage();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -76,28 +76,28 @@ class ContainerStorageStorage {
 /**
  * @member {String} id
  */
-ContainerStorageStorage.prototype['id'] = undefined;
+ApplicationStorageStorage.prototype['id'] = undefined;
 
 /**
  * @member {module:model/StorageTypeEnum} type
  */
-ContainerStorageStorage.prototype['type'] = undefined;
+ApplicationStorageStorage.prototype['type'] = undefined;
 
 /**
  * unit is GB
  * @member {Number} size
  */
-ContainerStorageStorage.prototype['size'] = undefined;
+ApplicationStorageStorage.prototype['size'] = undefined;
 
 /**
  * @member {String} mount_point
  */
-ContainerStorageStorage.prototype['mount_point'] = undefined;
+ApplicationStorageStorage.prototype['mount_point'] = undefined;
 
 
 
 
 
 
-export default ContainerStorageStorage;
+export default ApplicationStorageStorage;
 

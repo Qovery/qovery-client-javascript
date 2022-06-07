@@ -36,8 +36,10 @@ import ApplicationPortRequestPorts from './model/ApplicationPortRequestPorts';
 import ApplicationRequest from './model/ApplicationRequest';
 import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
+import ApplicationStorage from './model/ApplicationStorage';
 import ApplicationStorageRequest from './model/ApplicationStorageRequest';
 import ApplicationStorageRequestStorage from './model/ApplicationStorageRequestStorage';
+import ApplicationStorageStorage from './model/ApplicationStorageStorage';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import Backup from './model/Backup';
@@ -113,7 +115,6 @@ import ContainerResponse from './model/ContainerResponse';
 import ContainerResponseAllOf from './model/ContainerResponseAllOf';
 import ContainerResponseList from './model/ContainerResponseList';
 import ContainerStorage from './model/ContainerStorage';
-import ContainerStorageStorage from './model/ContainerStorageStorage';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
 import Credentials from './model/Credentials';
@@ -587,6 +588,12 @@ export {
     ApplicationResponseList,
 
     /**
+     * The ApplicationStorage model constructor.
+     * @property {module:model/ApplicationStorage}
+     */
+    ApplicationStorage,
+
+    /**
      * The ApplicationStorageRequest model constructor.
      * @property {module:model/ApplicationStorageRequest}
      */
@@ -597,6 +604,12 @@ export {
      * @property {module:model/ApplicationStorageRequestStorage}
      */
     ApplicationStorageRequestStorage,
+
+    /**
+     * The ApplicationStorageStorage model constructor.
+     * @property {module:model/ApplicationStorageStorage}
+     */
+    ApplicationStorageStorage,
 
     /**
      * The AvailableContainerRegistryResponse model constructor.
@@ -1047,12 +1060,6 @@ export {
      * @property {module:model/ContainerStorage}
      */
     ContainerStorage,
-
-    /**
-     * The ContainerStorageStorage model constructor.
-     * @property {module:model/ContainerStorageStorage}
-     */
-    ContainerStorageStorage,
 
     /**
      * The Cost model constructor.

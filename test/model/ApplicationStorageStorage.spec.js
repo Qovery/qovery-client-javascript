@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ContainerStorageStorage();
+    instance = new QoveryApi.ApplicationStorageStorage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,34 @@
       object[property] = value;
   }
 
-  describe('ContainerStorageStorage', function() {
-    it('should create an instance of ContainerStorageStorage', function() {
-      // uncomment below and update the code to test ContainerStorageStorage
-      //var instance = new QoveryApi.ContainerStorageStorage();
-      //expect(instance).to.be.a(QoveryApi.ContainerStorageStorage);
+  describe('ApplicationStorageStorage', function() {
+    it('should create an instance of ApplicationStorageStorage', function() {
+      // uncomment below and update the code to test ApplicationStorageStorage
+      //var instance = new QoveryApi.ApplicationStorageStorage();
+      //expect(instance).to.be.a(QoveryApi.ApplicationStorageStorage);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ContainerStorageStorage();
+      //var instance = new QoveryApi.ApplicationStorageStorage();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new QoveryApi.ContainerStorageStorage();
+      //var instance = new QoveryApi.ApplicationStorageStorage();
       //expect(instance).to.be();
     });
 
     it('should have the property size (base name: "size")', function() {
       // uncomment below and update the code to test the property size
-      //var instance = new QoveryApi.ContainerStorageStorage();
+      //var instance = new QoveryApi.ApplicationStorageStorage();
       //expect(instance).to.be();
     });
 
     it('should have the property mountPoint (base name: "mount_point")', function() {
       // uncomment below and update the code to test the property mountPoint
-      //var instance = new QoveryApi.ContainerStorageStorage();
+      //var instance = new QoveryApi.ApplicationStorageStorage();
       //expect(instance).to.be();
     });
 

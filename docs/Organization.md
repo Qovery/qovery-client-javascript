@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **repository** | **String** |  | [optional] 
 **logoUrl** | **String** |  | [optional] 
 **iconUrl** | **String** |  | [optional] 
+**adminEmails** | **[String]** |  | [optional] 
 **owner** | **String** | uuid of the user owning the organization | [optional] 
 
 

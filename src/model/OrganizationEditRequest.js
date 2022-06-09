@@ -67,6 +67,9 @@ class OrganizationEditRequest {
             if (data.hasOwnProperty('icon_url')) {
                 obj['icon_url'] = ApiClient.convertToType(data['icon_url'], 'String');
             }
+            if (data.hasOwnProperty('admin_emails')) {
+                obj['admin_emails'] = ApiClient.convertToType(data['admin_emails'], ['String']);
+            }
         }
         return obj;
     }
@@ -104,6 +107,11 @@ OrganizationEditRequest.prototype['logo_url'] = undefined;
  * @member {String} icon_url
  */
 OrganizationEditRequest.prototype['icon_url'] = undefined;
+
+/**
+ * @member {Array.<String>} admin_emails
+ */
+OrganizationEditRequest.prototype['admin_emails'] = undefined;
 
 
 

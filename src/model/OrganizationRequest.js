@@ -73,6 +73,9 @@ class OrganizationRequest {
             if (data.hasOwnProperty('icon_url')) {
                 obj['icon_url'] = ApiClient.convertToType(data['icon_url'], 'String');
             }
+            if (data.hasOwnProperty('admin_emails')) {
+                obj['admin_emails'] = ApiClient.convertToType(data['admin_emails'], ['String']);
+            }
         }
         return obj;
     }
@@ -115,6 +118,11 @@ OrganizationRequest.prototype['logo_url'] = undefined;
  * @member {String} icon_url
  */
 OrganizationRequest.prototype['icon_url'] = undefined;
+
+/**
+ * @member {Array.<String>} admin_emails
+ */
+OrganizationRequest.prototype['admin_emails'] = undefined;
 
 
 

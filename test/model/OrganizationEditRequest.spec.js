@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property adminEmails (base name: "admin_emails")', function() {
+      // uncomment below and update the code to test the property adminEmails
+      //var instance = new QoveryApi.OrganizationEditRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

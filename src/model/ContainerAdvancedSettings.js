@@ -50,8 +50,68 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('deployment.delay_start_time_sec')) {
                 obj['deployment.delay_start_time_sec'] = ApiClient.convertToType(data['deployment.delay_start_time_sec'], 'Number');
             }
+            if (data.hasOwnProperty('deployment.custom_domain_check_enabled')) {
+                obj['deployment.custom_domain_check_enabled'] = ApiClient.convertToType(data['deployment.custom_domain_check_enabled'], 'Boolean');
+            }
             if (data.hasOwnProperty('build.timeout_max_sec')) {
                 obj['build.timeout_max_sec'] = ApiClient.convertToType(data['build.timeout_max_sec'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.proxy_body_size_mb')) {
+                obj['network.ingress.proxy_body_size_mb'] = ApiClient.convertToType(data['network.ingress.proxy_body_size_mb'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.enable_cors')) {
+                obj['network.ingress.enable_cors'] = ApiClient.convertToType(data['network.ingress.enable_cors'], 'Boolean');
+            }
+            if (data.hasOwnProperty('network.ingress.cors_allow_origin')) {
+                obj['network.ingress.cors_allow_origin'] = ApiClient.convertToType(data['network.ingress.cors_allow_origin'], 'String');
+            }
+            if (data.hasOwnProperty('network.ingress.cors_allow_methods')) {
+                obj['network.ingress.cors_allow_methods'] = ApiClient.convertToType(data['network.ingress.cors_allow_methods'], 'String');
+            }
+            if (data.hasOwnProperty('network.ingress.cors_allow_headers')) {
+                obj['network.ingress.cors_allow_headers'] = ApiClient.convertToType(data['network.ingress.cors_allow_headers'], 'String');
+            }
+            if (data.hasOwnProperty('readiness_probe.type')) {
+                obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
+            }
+            if (data.hasOwnProperty('readiness_probe.http_get.path')) {
+                obj['readiness_probe.http_get.path'] = ApiClient.convertToType(data['readiness_probe.http_get.path'], 'String');
+            }
+            if (data.hasOwnProperty('readiness_probe.initial_delay_seconds')) {
+                obj['readiness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['readiness_probe.initial_delay_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('readiness_probe.period_seconds')) {
+                obj['readiness_probe.period_seconds'] = ApiClient.convertToType(data['readiness_probe.period_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('readiness_probe.timeout_seconds')) {
+                obj['readiness_probe.timeout_seconds'] = ApiClient.convertToType(data['readiness_probe.timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('readiness_probe.success_threshold')) {
+                obj['readiness_probe.success_threshold'] = ApiClient.convertToType(data['readiness_probe.success_threshold'], 'Number');
+            }
+            if (data.hasOwnProperty('readiness_probe.failure_threshold')) {
+                obj['readiness_probe.failure_threshold'] = ApiClient.convertToType(data['readiness_probe.failure_threshold'], 'Number');
+            }
+            if (data.hasOwnProperty('liveness_probe.type')) {
+                obj['liveness_probe.type'] = ApiClient.convertToType(data['liveness_probe.type'], 'String');
+            }
+            if (data.hasOwnProperty('liveness_probe.http_get.path')) {
+                obj['liveness_probe.http_get.path'] = ApiClient.convertToType(data['liveness_probe.http_get.path'], 'String');
+            }
+            if (data.hasOwnProperty('liveness_probe.initial_delay_seconds')) {
+                obj['liveness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['liveness_probe.initial_delay_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('liveness_probe.period_seconds')) {
+                obj['liveness_probe.period_seconds'] = ApiClient.convertToType(data['liveness_probe.period_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('liveness_probe.timeout_seconds')) {
+                obj['liveness_probe.timeout_seconds'] = ApiClient.convertToType(data['liveness_probe.timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('liveness_probe.success_threshold')) {
+                obj['liveness_probe.success_threshold'] = ApiClient.convertToType(data['liveness_probe.success_threshold'], 'Number');
+            }
+            if (data.hasOwnProperty('liveness_probe.failure_threshold')) {
+                obj['liveness_probe.failure_threshold'] = ApiClient.convertToType(data['liveness_probe.failure_threshold'], 'Number');
             }
         }
         return obj;
@@ -66,12 +126,183 @@ class ContainerAdvancedSettings {
 ContainerAdvancedSettings.prototype['deployment.delay_start_time_sec'] = undefined;
 
 /**
+ * disable custom domain check when deploying an application
+ * @member {Boolean} deployment.custom_domain_check_enabled
+ */
+ContainerAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = undefined;
+
+/**
  * @member {Number} build.timeout_max_sec
  */
 ContainerAdvancedSettings.prototype['build.timeout_max_sec'] = undefined;
 
+/**
+ * @member {Number} network.ingress.proxy_body_size_mb
+ */
+ContainerAdvancedSettings.prototype['network.ingress.proxy_body_size_mb'] = undefined;
+
+/**
+ * @member {Boolean} network.ingress.enable_cors
+ */
+ContainerAdvancedSettings.prototype['network.ingress.enable_cors'] = undefined;
+
+/**
+ * @member {String} network.ingress.cors_allow_origin
+ */
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_origin'] = undefined;
+
+/**
+ * @member {String} network.ingress.cors_allow_methods
+ */
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_methods'] = undefined;
+
+/**
+ * @member {String} network.ingress.cors_allow_headers
+ */
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = undefined;
+
+/**
+ * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 
+ * @member {module:model/ContainerAdvancedSettings.ReadinessProbeTypeEnum} readiness_probe.type
+ */
+ContainerAdvancedSettings.prototype['readiness_probe.type'] = undefined;
+
+/**
+ * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
+ * @member {String} readiness_probe.http_get.path
+ * @default '/'
+ */
+ContainerAdvancedSettings.prototype['readiness_probe.http_get.path'] = '/';
+
+/**
+ * Delay before liveness probe is initiated
+ * @member {Number} readiness_probe.initial_delay_seconds
+ */
+ContainerAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = undefined;
+
+/**
+ * How often to perform the probe
+ * @member {Number} readiness_probe.period_seconds
+ */
+ContainerAdvancedSettings.prototype['readiness_probe.period_seconds'] = undefined;
+
+/**
+ * When the probe times out
+ * @member {Number} readiness_probe.timeout_seconds
+ */
+ContainerAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = undefined;
+
+/**
+ * Minimum consecutive successes for the probe to be considered successful after having failed.
+ * @member {Number} readiness_probe.success_threshold
+ */
+ContainerAdvancedSettings.prototype['readiness_probe.success_threshold'] = undefined;
+
+/**
+ * Minimum consecutive failures for the probe to be considered failed after having succeeded.
+ * @member {Number} readiness_probe.failure_threshold
+ */
+ContainerAdvancedSettings.prototype['readiness_probe.failure_threshold'] = undefined;
+
+/**
+ * `NONE` disable liveness probe `TCP` enable TCP liveness probe `HTTP` enable HTTP liveness probe 
+ * @member {module:model/ContainerAdvancedSettings.LivenessProbeTypeEnum} liveness_probe.type
+ */
+ContainerAdvancedSettings.prototype['liveness_probe.type'] = undefined;
+
+/**
+ * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
+ * @member {String} liveness_probe.http_get.path
+ * @default '/'
+ */
+ContainerAdvancedSettings.prototype['liveness_probe.http_get.path'] = '/';
+
+/**
+ * Delay before liveness probe is initiated
+ * @member {Number} liveness_probe.initial_delay_seconds
+ */
+ContainerAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = undefined;
+
+/**
+ * How often to perform the probe
+ * @member {Number} liveness_probe.period_seconds
+ */
+ContainerAdvancedSettings.prototype['liveness_probe.period_seconds'] = undefined;
+
+/**
+ * When the probe times out
+ * @member {Number} liveness_probe.timeout_seconds
+ */
+ContainerAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = undefined;
+
+/**
+ * Minimum consecutive successes for the probe to be considered successful after having failed.
+ * @member {Number} liveness_probe.success_threshold
+ */
+ContainerAdvancedSettings.prototype['liveness_probe.success_threshold'] = undefined;
+
+/**
+ * Minimum consecutive failures for the probe to be considered failed after having succeeded.
+ * @member {Number} liveness_probe.failure_threshold
+ */
+ContainerAdvancedSettings.prototype['liveness_probe.failure_threshold'] = undefined;
 
 
+
+
+
+/**
+ * Allowed values for the <code>readiness_probe.type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ContainerAdvancedSettings['ReadinessProbeTypeEnum'] = {
+
+    /**
+     * value: "NONE"
+     * @const
+     */
+    "NONE": "NONE",
+
+    /**
+     * value: "TCP"
+     * @const
+     */
+    "TCP": "TCP",
+
+    /**
+     * value: "HTTP"
+     * @const
+     */
+    "HTTP": "HTTP"
+};
+
+
+/**
+ * Allowed values for the <code>liveness_probe.type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ContainerAdvancedSettings['LivenessProbeTypeEnum'] = {
+
+    /**
+     * value: "NONE"
+     * @const
+     */
+    "NONE": "NONE",
+
+    /**
+     * value: "TCP"
+     * @const
+     */
+    "TCP": "TCP",
+
+    /**
+     * value: "HTTP"
+     * @const
+     */
+    "HTTP": "HTTP"
+};
 
 
 

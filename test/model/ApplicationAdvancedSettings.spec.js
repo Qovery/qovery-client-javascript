@@ -60,8 +60,128 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deploymentCustomDomainCheckEnabled (base name: "deployment.custom_domain_check_enabled")', function() {
+      // uncomment below and update the code to test the property deploymentCustomDomainCheckEnabled
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property buildTimeoutMaxSec (base name: "build.timeout_max_sec")', function() {
       // uncomment below and update the code to test the property buildTimeoutMaxSec
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressProxyBodySizeMb (base name: "network.ingress.proxy_body_size_mb")', function() {
+      // uncomment below and update the code to test the property networkIngressProxyBodySizeMb
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressEnableCors (base name: "network.ingress.enable_cors")', function() {
+      // uncomment below and update the code to test the property networkIngressEnableCors
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressCorsAllowOrigin (base name: "network.ingress.cors_allow_origin")', function() {
+      // uncomment below and update the code to test the property networkIngressCorsAllowOrigin
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressCorsAllowMethods (base name: "network.ingress.cors_allow_methods")', function() {
+      // uncomment below and update the code to test the property networkIngressCorsAllowMethods
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressCorsAllowHeaders (base name: "network.ingress.cors_allow_headers")', function() {
+      // uncomment below and update the code to test the property networkIngressCorsAllowHeaders
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property readinessProbeType (base name: "readiness_probe.type")', function() {
+      // uncomment below and update the code to test the property readinessProbeType
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property readinessProbeHttpGetPath (base name: "readiness_probe.http_get.path")', function() {
+      // uncomment below and update the code to test the property readinessProbeHttpGetPath
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property readinessProbeInitialDelaySeconds (base name: "readiness_probe.initial_delay_seconds")', function() {
+      // uncomment below and update the code to test the property readinessProbeInitialDelaySeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property readinessProbePeriodSeconds (base name: "readiness_probe.period_seconds")', function() {
+      // uncomment below and update the code to test the property readinessProbePeriodSeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property readinessProbeTimeoutSeconds (base name: "readiness_probe.timeout_seconds")', function() {
+      // uncomment below and update the code to test the property readinessProbeTimeoutSeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property readinessProbeSuccessThreshold (base name: "readiness_probe.success_threshold")', function() {
+      // uncomment below and update the code to test the property readinessProbeSuccessThreshold
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property readinessProbeFailureThreshold (base name: "readiness_probe.failure_threshold")', function() {
+      // uncomment below and update the code to test the property readinessProbeFailureThreshold
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property livenessProbeType (base name: "liveness_probe.type")', function() {
+      // uncomment below and update the code to test the property livenessProbeType
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property livenessProbeHttpGetPath (base name: "liveness_probe.http_get.path")', function() {
+      // uncomment below and update the code to test the property livenessProbeHttpGetPath
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property livenessProbeInitialDelaySeconds (base name: "liveness_probe.initial_delay_seconds")', function() {
+      // uncomment below and update the code to test the property livenessProbeInitialDelaySeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property livenessProbePeriodSeconds (base name: "liveness_probe.period_seconds")', function() {
+      // uncomment below and update the code to test the property livenessProbePeriodSeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property livenessProbeTimeoutSeconds (base name: "liveness_probe.timeout_seconds")', function() {
+      // uncomment below and update the code to test the property livenessProbeTimeoutSeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property livenessProbeSuccessThreshold (base name: "liveness_probe.success_threshold")', function() {
+      // uncomment below and update the code to test the property livenessProbeSuccessThreshold
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property livenessProbeFailureThreshold (base name: "liveness_probe.failure_threshold")', function() {
+      // uncomment below and update the code to test the property livenessProbeFailureThreshold
       //var instance = new QoveryApi.ApplicationAdvancedSettings();
       //expect(instance).to.be();
     });

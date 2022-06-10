@@ -113,6 +113,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('liveness_probe.failure_threshold')) {
                 obj['liveness_probe.failure_threshold'] = ApiClient.convertToType(data['liveness_probe.failure_threshold'], 'Number');
             }
+            if (data.hasOwnProperty('hpa.cpu.average_utilization_percent')) {
+                obj['hpa.cpu.average_utilization_percent'] = ApiClient.convertToType(data['hpa.cpu.average_utilization_percent'], 'Number');
+            }
         }
         return obj;
     }
@@ -267,6 +270,13 @@ ApplicationAdvancedSettings.prototype['liveness_probe.success_threshold'] = 1;
  * @default 3
  */
 ApplicationAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
+
+/**
+ * Percentage value of cpu usage at which point pods should scale up.
+ * @member {Number} hpa.cpu.average_utilization_percent
+ * @default 60
+ */
+ApplicationAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = 60;
 
 
 

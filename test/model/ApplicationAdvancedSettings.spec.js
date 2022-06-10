@@ -186,6 +186,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property hpaCpuAverageUtilizationPercent (base name: "hpa.cpu.average_utilization_percent")', function() {
+      // uncomment below and update the code to test the property hpaCpuAverageUtilizationPercent
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

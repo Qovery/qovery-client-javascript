@@ -121,51 +121,61 @@ class ContainerAdvancedSettings {
 }
 
 /**
+ * please use `readiness_probe.initial_delay_seconds` and `liveness_probe.initial_delay_seconds` instead
  * @member {Number} deployment.delay_start_time_sec
+ * @default 30
  */
-ContainerAdvancedSettings.prototype['deployment.delay_start_time_sec'] = undefined;
+ContainerAdvancedSettings.prototype['deployment.delay_start_time_sec'] = 30;
 
 /**
  * disable custom domain check when deploying an application
  * @member {Boolean} deployment.custom_domain_check_enabled
+ * @default true
  */
-ContainerAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = undefined;
+ContainerAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = true;
 
 /**
  * @member {Number} build.timeout_max_sec
+ * @default 1800
  */
-ContainerAdvancedSettings.prototype['build.timeout_max_sec'] = undefined;
+ContainerAdvancedSettings.prototype['build.timeout_max_sec'] = 1800;
 
 /**
  * @member {Number} network.ingress.proxy_body_size_mb
+ * @default 100
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_body_size_mb'] = undefined;
+ContainerAdvancedSettings.prototype['network.ingress.proxy_body_size_mb'] = 100;
 
 /**
  * @member {Boolean} network.ingress.enable_cors
+ * @default false
  */
-ContainerAdvancedSettings.prototype['network.ingress.enable_cors'] = undefined;
+ContainerAdvancedSettings.prototype['network.ingress.enable_cors'] = false;
 
 /**
  * @member {String} network.ingress.cors_allow_origin
+ * @default '*'
  */
-ContainerAdvancedSettings.prototype['network.ingress.cors_allow_origin'] = undefined;
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_origin'] = '*';
 
 /**
  * @member {String} network.ingress.cors_allow_methods
+ * @default 'GET, PUT, POST, DELETE, PATCH, OPTIONS'
  */
-ContainerAdvancedSettings.prototype['network.ingress.cors_allow_methods'] = undefined;
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_methods'] = 'GET, PUT, POST, DELETE, PATCH, OPTIONS';
 
 /**
  * @member {String} network.ingress.cors_allow_headers
+ * @default 'DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization'
  */
-ContainerAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = undefined;
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = 'DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization';
 
 /**
  * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 
  * @member {module:model/ContainerAdvancedSettings.ReadinessProbeTypeEnum} readiness_probe.type
+ * @default 'TCP'
  */
-ContainerAdvancedSettings.prototype['readiness_probe.type'] = undefined;
+ContainerAdvancedSettings.prototype['readiness_probe.type'] = 'TCP';
 
 /**
  * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
@@ -177,38 +187,44 @@ ContainerAdvancedSettings.prototype['readiness_probe.http_get.path'] = '/';
 /**
  * Delay before liveness probe is initiated
  * @member {Number} readiness_probe.initial_delay_seconds
+ * @default 30
  */
-ContainerAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = undefined;
+ContainerAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = 30;
 
 /**
  * How often to perform the probe
  * @member {Number} readiness_probe.period_seconds
+ * @default 10
  */
-ContainerAdvancedSettings.prototype['readiness_probe.period_seconds'] = undefined;
+ContainerAdvancedSettings.prototype['readiness_probe.period_seconds'] = 10;
 
 /**
  * When the probe times out
  * @member {Number} readiness_probe.timeout_seconds
+ * @default 1
  */
-ContainerAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = undefined;
+ContainerAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = 1;
 
 /**
  * Minimum consecutive successes for the probe to be considered successful after having failed.
  * @member {Number} readiness_probe.success_threshold
+ * @default 1
  */
-ContainerAdvancedSettings.prototype['readiness_probe.success_threshold'] = undefined;
+ContainerAdvancedSettings.prototype['readiness_probe.success_threshold'] = 1;
 
 /**
  * Minimum consecutive failures for the probe to be considered failed after having succeeded.
  * @member {Number} readiness_probe.failure_threshold
+ * @default 3
  */
-ContainerAdvancedSettings.prototype['readiness_probe.failure_threshold'] = undefined;
+ContainerAdvancedSettings.prototype['readiness_probe.failure_threshold'] = 3;
 
 /**
  * `NONE` disable liveness probe `TCP` enable TCP liveness probe `HTTP` enable HTTP liveness probe 
  * @member {module:model/ContainerAdvancedSettings.LivenessProbeTypeEnum} liveness_probe.type
+ * @default 'TCP'
  */
-ContainerAdvancedSettings.prototype['liveness_probe.type'] = undefined;
+ContainerAdvancedSettings.prototype['liveness_probe.type'] = 'TCP';
 
 /**
  * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
@@ -220,32 +236,37 @@ ContainerAdvancedSettings.prototype['liveness_probe.http_get.path'] = '/';
 /**
  * Delay before liveness probe is initiated
  * @member {Number} liveness_probe.initial_delay_seconds
+ * @default 30
  */
-ContainerAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = undefined;
+ContainerAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = 30;
 
 /**
  * How often to perform the probe
  * @member {Number} liveness_probe.period_seconds
+ * @default 10
  */
-ContainerAdvancedSettings.prototype['liveness_probe.period_seconds'] = undefined;
+ContainerAdvancedSettings.prototype['liveness_probe.period_seconds'] = 10;
 
 /**
  * When the probe times out
  * @member {Number} liveness_probe.timeout_seconds
+ * @default 5
  */
-ContainerAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = undefined;
+ContainerAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = 5;
 
 /**
  * Minimum consecutive successes for the probe to be considered successful after having failed.
  * @member {Number} liveness_probe.success_threshold
+ * @default 1
  */
-ContainerAdvancedSettings.prototype['liveness_probe.success_threshold'] = undefined;
+ContainerAdvancedSettings.prototype['liveness_probe.success_threshold'] = 1;
 
 /**
  * Minimum consecutive failures for the probe to be considered failed after having succeeded.
  * @member {Number} liveness_probe.failure_threshold
+ * @default 3
  */
-ContainerAdvancedSettings.prototype['liveness_probe.failure_threshold'] = undefined;
+ContainerAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
 
 
 

@@ -186,11 +186,11 @@ Database.prototype['cpu'] = 250;
 Database.prototype['memory'] = 256;
 
 /**
- * unit is MB
+ * unit is GB
  * @member {Number} storage
- * @default 10240
+ * @default 10
  */
-Database.prototype['storage'] = 10240;
+Database.prototype['storage'] = 10;
 
 /**
  * @member {module:model/ReferenceObject} environment
@@ -276,11 +276,11 @@ DatabaseRequest.prototype['cpu'] = 250;
  */
 DatabaseRequest.prototype['memory'] = 256;
 /**
- * unit is MB
+ * unit is GB
  * @member {Number} storage
- * @default 10240
+ * @default 10
  */
-DatabaseRequest.prototype['storage'] = 10240;
+DatabaseRequest.prototype['storage'] = 10;
 // Implement DatabaseAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment

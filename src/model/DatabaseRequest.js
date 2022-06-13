@@ -130,11 +130,11 @@ DatabaseRequest.prototype['cpu'] = 250;
 DatabaseRequest.prototype['memory'] = 256;
 
 /**
- * unit is MB
+ * unit is GB
  * @member {Number} storage
- * @default 10240
+ * @default 10
  */
-DatabaseRequest.prototype['storage'] = 10240;
+DatabaseRequest.prototype['storage'] = 10;
 
 
 

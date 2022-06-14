@@ -142,6 +142,9 @@ docs/ContainerStorage.md
 docs/ContainersApi.md
 docs/Cost.md
 docs/CostRange.md
+docs/CreateOrganizationWebhook201Response.md
+docs/CreateOrganizationWebhook201ResponseAllOf.md
+docs/CreateOrganizationWebhookRequest.md
 docs/Credentials.md
 docs/CredentialsRequest.md
 docs/CreditCard.md
@@ -282,6 +285,7 @@ docs/Key.md
 docs/Link.md
 docs/LinkResponseList.md
 docs/ListContainerRegistry200Response.md
+docs/ListOrganizationWebHooks200Response.md
 docs/Log.md
 docs/LogPaginatedResponseList.md
 docs/LogPaginatedResponseListAllOf.md
@@ -332,6 +336,7 @@ docs/OrganizationGithubAppConnectRequest.md
 docs/OrganizationMainCallsApi.md
 docs/OrganizationRequest.md
 docs/OrganizationResponseList.md
+docs/OrganizationWebhookApi.md
 docs/OverriddenSecret.md
 docs/PaginationData.md
 docs/PaidUsage.md
@@ -462,6 +467,7 @@ src/api/MembersApi.js
 src/api/OrganizationAccountGitRepositoriesApi.js
 src/api/OrganizationApiTokenApi.js
 src/api/OrganizationMainCallsApi.js
+src/api/OrganizationWebhookApi.js
 src/api/ProjectDeploymentRuleApi.js
 src/api/ProjectEnvironmentVariableApi.js
 src/api/ProjectMainCallsApi.js
@@ -576,6 +582,9 @@ src/model/ContainerResponseList.js
 src/model/ContainerStorage.js
 src/model/Cost.js
 src/model/CostRange.js
+src/model/CreateOrganizationWebhook201Response.js
+src/model/CreateOrganizationWebhook201ResponseAllOf.js
+src/model/CreateOrganizationWebhookRequest.js
 src/model/Credentials.js
 src/model/CredentialsRequest.js
 src/model/CreditCard.js
@@ -697,6 +706,7 @@ src/model/Key.js
 src/model/Link.js
 src/model/LinkResponseList.js
 src/model/ListContainerRegistry200Response.js
+src/model/ListOrganizationWebHooks200Response.js
 src/model/Log.js
 src/model/LogPaginatedResponseList.js
 src/model/LogPaginatedResponseListAllOf.js
@@ -861,6 +871,7 @@ test/api/MembersApi.spec.js
 test/api/OrganizationAccountGitRepositoriesApi.spec.js
 test/api/OrganizationApiTokenApi.spec.js
 test/api/OrganizationMainCallsApi.spec.js
+test/api/OrganizationWebhookApi.spec.js
 test/api/ProjectDeploymentRuleApi.spec.js
 test/api/ProjectEnvironmentVariableApi.spec.js
 test/api/ProjectMainCallsApi.spec.js
@@ -974,6 +985,9 @@ test/model/ContainerResponseList.spec.js
 test/model/ContainerStorage.spec.js
 test/model/Cost.spec.js
 test/model/CostRange.spec.js
+test/model/CreateOrganizationWebhook201Response.spec.js
+test/model/CreateOrganizationWebhook201ResponseAllOf.spec.js
+test/model/CreateOrganizationWebhookRequest.spec.js
 test/model/Credentials.spec.js
 test/model/CredentialsRequest.spec.js
 test/model/CreditCard.spec.js
@@ -1095,6 +1109,7 @@ test/model/Key.spec.js
 test/model/Link.spec.js
 test/model/LinkResponseList.spec.js
 test/model/ListContainerRegistry200Response.spec.js
+test/model/ListOrganizationWebHooks200Response.spec.js
 test/model/Log.spec.js
 test/model/LogPaginatedResponseList.spec.js
 test/model/LogPaginatedResponseListAllOf.spec.js

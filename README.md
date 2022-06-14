@@ -413,6 +413,11 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationMainCallsApi* | [**editOrganization**](docs/OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
 *QoveryApi.OrganizationMainCallsApi* | [**getOrganization**](docs/OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganization**](docs/OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
+*QoveryApi.OrganizationWebhookApi* | [**createOrganizationWebhook**](docs/OrganizationWebhookApi.md#createOrganizationWebhook) | **POST** /organization/{organizationId}/webhook | Create an organization webhook
+*QoveryApi.OrganizationWebhookApi* | [**deleteOrganizationWebhook**](docs/OrganizationWebhookApi.md#deleteOrganizationWebhook) | **DELETE** /organization/{organizationId}/webhook/{webhookId} | Delete organization webhook
+*QoveryApi.OrganizationWebhookApi* | [**editOrganizationWebhook**](docs/OrganizationWebhookApi.md#editOrganizationWebhook) | **PUT** /organization/{organizationId}/webhook/{webhookId} | Edit an organization webhook
+*QoveryApi.OrganizationWebhookApi* | [**getOrganizationWebhook**](docs/OrganizationWebhookApi.md#getOrganizationWebhook) | **GET** /organization/{organizationId}/webhook/{webhookId} | Get an Organization webhook
+*QoveryApi.OrganizationWebhookApi* | [**listOrganizationWebHooks**](docs/OrganizationWebhookApi.md#listOrganizationWebHooks) | **GET** /organization/{organizationId}/webhook | List organization webhooks
 *QoveryApi.ProjectDeploymentRuleApi* | [**createDeploymentRule**](docs/ProjectDeploymentRuleApi.md#createDeploymentRule) | **POST** /project/{projectId}/deploymentRule | Create a deployment rule
 *QoveryApi.ProjectDeploymentRuleApi* | [**deleteProjectDeploymentRule**](docs/ProjectDeploymentRuleApi.md#deleteProjectDeploymentRule) | **DELETE** /project/{projectId}/deploymentRule/{deploymentRuleId} | Delete a project deployment rule
 *QoveryApi.ProjectDeploymentRuleApi* | [**editProjectDeployemtnRule**](docs/ProjectDeploymentRuleApi.md#editProjectDeployemtnRule) | **PUT** /project/{projectId}/deploymentRule/{deploymentRuleId} | Edit a project deployment rule
@@ -551,6 +556,9 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ContainerStorage](docs/ContainerStorage.md)
  - [QoveryApi.Cost](docs/Cost.md)
  - [QoveryApi.CostRange](docs/CostRange.md)
+ - [QoveryApi.CreateOrganizationWebhook201Response](docs/CreateOrganizationWebhook201Response.md)
+ - [QoveryApi.CreateOrganizationWebhook201ResponseAllOf](docs/CreateOrganizationWebhook201ResponseAllOf.md)
+ - [QoveryApi.CreateOrganizationWebhookRequest](docs/CreateOrganizationWebhookRequest.md)
  - [QoveryApi.Credentials](docs/Credentials.md)
  - [QoveryApi.CredentialsRequest](docs/CredentialsRequest.md)
  - [QoveryApi.CreditCard](docs/CreditCard.md)
@@ -672,6 +680,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Link](docs/Link.md)
  - [QoveryApi.LinkResponseList](docs/LinkResponseList.md)
  - [QoveryApi.ListContainerRegistry200Response](docs/ListContainerRegistry200Response.md)
+ - [QoveryApi.ListOrganizationWebHooks200Response](docs/ListOrganizationWebHooks200Response.md)
  - [QoveryApi.Log](docs/Log.md)
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)
  - [QoveryApi.LogPaginatedResponseListAllOf](docs/LogPaginatedResponseListAllOf.md)

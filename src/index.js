@@ -119,6 +119,9 @@ import ContainerResponseList from './model/ContainerResponseList';
 import ContainerStorage from './model/ContainerStorage';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
+import CreateOrganizationWebhook201Response from './model/CreateOrganizationWebhook201Response';
+import CreateOrganizationWebhook201ResponseAllOf from './model/CreateOrganizationWebhook201ResponseAllOf';
+import CreateOrganizationWebhookRequest from './model/CreateOrganizationWebhookRequest';
 import Credentials from './model/Credentials';
 import CredentialsRequest from './model/CredentialsRequest';
 import CreditCard from './model/CreditCard';
@@ -240,6 +243,7 @@ import Key from './model/Key';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
+import ListOrganizationWebHooks200Response from './model/ListOrganizationWebHooks200Response';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
@@ -404,6 +408,7 @@ import MembersApi from './api/MembersApi';
 import OrganizationAccountGitRepositoriesApi from './api/OrganizationAccountGitRepositoriesApi';
 import OrganizationApiTokenApi from './api/OrganizationApiTokenApi';
 import OrganizationMainCallsApi from './api/OrganizationMainCallsApi';
+import OrganizationWebhookApi from './api/OrganizationWebhookApi';
 import ProjectDeploymentRuleApi from './api/ProjectDeploymentRuleApi';
 import ProjectEnvironmentVariableApi from './api/ProjectEnvironmentVariableApi';
 import ProjectMainCallsApi from './api/ProjectMainCallsApi';
@@ -1086,6 +1091,24 @@ export {
      * @property {module:model/CostRange}
      */
     CostRange,
+
+    /**
+     * The CreateOrganizationWebhook201Response model constructor.
+     * @property {module:model/CreateOrganizationWebhook201Response}
+     */
+    CreateOrganizationWebhook201Response,
+
+    /**
+     * The CreateOrganizationWebhook201ResponseAllOf model constructor.
+     * @property {module:model/CreateOrganizationWebhook201ResponseAllOf}
+     */
+    CreateOrganizationWebhook201ResponseAllOf,
+
+    /**
+     * The CreateOrganizationWebhookRequest model constructor.
+     * @property {module:model/CreateOrganizationWebhookRequest}
+     */
+    CreateOrganizationWebhookRequest,
 
     /**
      * The Credentials model constructor.
@@ -1812,6 +1835,12 @@ export {
      * @property {module:model/ListContainerRegistry200Response}
      */
     ListContainerRegistry200Response,
+
+    /**
+     * The ListOrganizationWebHooks200Response model constructor.
+     * @property {module:model/ListOrganizationWebHooks200Response}
+     */
+    ListOrganizationWebHooks200Response,
 
     /**
      * The Log model constructor.
@@ -2796,6 +2825,12 @@ export {
     * @property {module:api/OrganizationMainCallsApi}
     */
     OrganizationMainCallsApi,
+
+    /**
+    * The OrganizationWebhookApi service constructor.
+    * @property {module:api/OrganizationWebhookApi}
+    */
+    OrganizationWebhookApi,
 
     /**
     * The ProjectDeploymentRuleApi service constructor.

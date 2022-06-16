@@ -40,7 +40,7 @@ export default class ApplicationConfigurationApi {
      * Callback function to receive the result of the editAdvancedSettings operation.
      * @callback module:api/ApplicationConfigurationApi~editAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ApplicationAdvancedSettings>} data The data returned by the service call.
+     * @param {module:model/ApplicationAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,9 +49,9 @@ export default class ApplicationConfigurationApi {
      * Edit advanced settings by returning table of advanced settings.
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/ApplicationAdvancedSettings>} opts.applicationAdvancedSettings 
+     * @param {module:model/ApplicationAdvancedSettings} opts.applicationAdvancedSettings 
      * @param {module:api/ApplicationConfigurationApi~editAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ApplicationAdvancedSettings>}
+     * data is of type: {@link module:model/ApplicationAdvancedSettings}
      */
     editAdvancedSettings(applicationId, opts, callback) {
       opts = opts || {};
@@ -74,7 +74,7 @@ export default class ApplicationConfigurationApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = [ApplicationAdvancedSettings];
+      let returnType = ApplicationAdvancedSettings;
       return this.apiClient.callApi(
         '/application/{applicationId}/advancedSettings', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -132,7 +132,7 @@ export default class ApplicationConfigurationApi {
      * Callback function to receive the result of the getAdvancedSettings operation.
      * @callback module:api/ApplicationConfigurationApi~getAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ApplicationAdvancedSettings>} data The data returned by the service call.
+     * @param {module:model/ApplicationAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -141,7 +141,7 @@ export default class ApplicationConfigurationApi {
      * Get list and values of the advanced settings of the application.
      * @param {String} applicationId Application ID
      * @param {module:api/ApplicationConfigurationApi~getAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ApplicationAdvancedSettings>}
+     * data is of type: {@link module:model/ApplicationAdvancedSettings}
      */
     getAdvancedSettings(applicationId, callback) {
       let postBody = null;
@@ -163,7 +163,7 @@ export default class ApplicationConfigurationApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [ApplicationAdvancedSettings];
+      let returnType = ApplicationAdvancedSettings;
       return this.apiClient.callApi(
         '/application/{applicationId}/advancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

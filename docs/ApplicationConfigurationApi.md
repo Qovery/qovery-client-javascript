@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## editAdvancedSettings
 
-> [ApplicationAdvancedSettings] editAdvancedSettings(applicationId, opts)
+> ApplicationAdvancedSettings editAdvancedSettings(applicationId, opts)
 
 Edit advanced settings
 
@@ -31,7 +31,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ApplicationConfigurationApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
-  'applicationAdvancedSettings': [new QoveryApi.ApplicationAdvancedSettings()] // [ApplicationAdvancedSettings] | 
+  'applicationAdvancedSettings': new QoveryApi.ApplicationAdvancedSettings() // ApplicationAdvancedSettings | 
 };
 apiInstance.editAdvancedSettings(applicationId, opts, (error, data, response) => {
   if (error) {
@@ -48,11 +48,11 @@ apiInstance.editAdvancedSettings(applicationId, opts, (error, data, response) =>
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **applicationId** | **String**| Application ID | 
- **applicationAdvancedSettings** | [**[ApplicationAdvancedSettings]**](ApplicationAdvancedSettings.md)|  | [optional] 
+ **applicationAdvancedSettings** | [**ApplicationAdvancedSettings**](ApplicationAdvancedSettings.md)|  | [optional] 
 
 ### Return type
 
-[**[ApplicationAdvancedSettings]**](ApplicationAdvancedSettings.md)
+[**ApplicationAdvancedSettings**](ApplicationAdvancedSettings.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ## getAdvancedSettings
 
-> [ApplicationAdvancedSettings] getAdvancedSettings(applicationId)
+> ApplicationAdvancedSettings getAdvancedSettings(applicationId)
 
 Get advanced settings
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ApplicationAdvancedSettings]**](ApplicationAdvancedSettings.md)
+[**ApplicationAdvancedSettings**](ApplicationAdvancedSettings.md)
 
 ### Authorization
 

@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import ThresholdMetricStatusEnum from './ThresholdMetricStatusEnum';
 
 /**
- * The StorageDisk model module.
- * @module model/StorageDisk
+ * The InstanceMemory model module.
+ * @module model/InstanceMemory
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class StorageDisk {
+class InstanceMemory {
     /**
-     * Constructs a new <code>StorageDisk</code>.
-     * @alias module:model/StorageDisk
+     * Constructs a new <code>InstanceMemory</code>.
+     * @alias module:model/InstanceMemory
      */
     constructor() { 
         
-        StorageDisk.initialize(this);
+        InstanceMemory.initialize(this);
     }
 
     /**
@@ -38,27 +38,21 @@ class StorageDisk {
     }
 
     /**
-     * Constructs a <code>StorageDisk</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>InstanceMemory</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StorageDisk} obj Optional instance to populate.
-     * @return {module:model/StorageDisk} The populated <code>StorageDisk</code> instance.
+     * @param {module:model/InstanceMemory} obj Optional instance to populate.
+     * @return {module:model/InstanceMemory} The populated <code>InstanceMemory</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StorageDisk();
+            obj = obj || new InstanceMemory();
 
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            if (data.hasOwnProperty('requested_in_mb')) {
+                obj['requested_in_mb'] = ApiClient.convertToType(data['requested_in_mb'], 'Number');
             }
-            if (data.hasOwnProperty('storage_id')) {
-                obj['storage_id'] = ApiClient.convertToType(data['storage_id'], 'String');
-            }
-            if (data.hasOwnProperty('requested_in_gb')) {
-                obj['requested_in_gb'] = ApiClient.convertToType(data['requested_in_gb'], 'Number');
-            }
-            if (data.hasOwnProperty('consumed_in_gb')) {
-                obj['consumed_in_gb'] = ApiClient.convertToType(data['consumed_in_gb'], 'Number');
+            if (data.hasOwnProperty('consumed_in_mb')) {
+                obj['consumed_in_mb'] = ApiClient.convertToType(data['consumed_in_mb'], 'Number');
             }
             if (data.hasOwnProperty('consumed_in_percent')) {
                 obj['consumed_in_percent'] = ApiClient.convertToType(data['consumed_in_percent'], 'Number');
@@ -80,51 +74,41 @@ class StorageDisk {
 }
 
 /**
- * @member {Date} created_at
+ * unit is MB. 1024 MB = 1GB.
+ * @member {Number} requested_in_mb
  */
-StorageDisk.prototype['created_at'] = undefined;
+InstanceMemory.prototype['requested_in_mb'] = undefined;
 
 /**
- * @member {String} storage_id
+ * unit is MB. 1024 MB = 1GB.
+ * @member {Number} consumed_in_mb
  */
-StorageDisk.prototype['storage_id'] = undefined;
-
-/**
- * Unit is in GB.
- * @member {Number} requested_in_gb
- */
-StorageDisk.prototype['requested_in_gb'] = undefined;
-
-/**
- * Unit is in GB.
- * @member {Number} consumed_in_gb
- */
-StorageDisk.prototype['consumed_in_gb'] = undefined;
+InstanceMemory.prototype['consumed_in_mb'] = undefined;
 
 /**
  * @member {Number} consumed_in_percent
  */
-StorageDisk.prototype['consumed_in_percent'] = undefined;
+InstanceMemory.prototype['consumed_in_percent'] = undefined;
 
 /**
  * @member {Number} warning_threshold_in_percent
  */
-StorageDisk.prototype['warning_threshold_in_percent'] = undefined;
+InstanceMemory.prototype['warning_threshold_in_percent'] = undefined;
 
 /**
  * @member {Number} alert_threshold_in_percent
  */
-StorageDisk.prototype['alert_threshold_in_percent'] = undefined;
+InstanceMemory.prototype['alert_threshold_in_percent'] = undefined;
 
 /**
  * @member {module:model/ThresholdMetricStatusEnum} status
  */
-StorageDisk.prototype['status'] = undefined;
+InstanceMemory.prototype['status'] = undefined;
 
 
 
 
 
 
-export default StorageDisk;
+export default InstanceMemory;
 

@@ -153,7 +153,7 @@ ClusterBase.prototype['max_running_nodes'] = 1;
 ClusterBase.prototype['instance_type'] = undefined;
 
 /**
- * the disk size to be used for the node configuration
+ * Unit is in GB. The disk size to be used for the node configuration
  * @member {Number} disk_size
  * @default 20
  */

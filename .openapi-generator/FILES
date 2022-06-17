@@ -216,7 +216,10 @@ docs/EnvironmentContainersCurrentScaleResponseList.md
 docs/EnvironmentContainersStorage.md
 docs/EnvironmentContainersStorageResponseList.md
 docs/EnvironmentDatabasesCurrentMetric.md
+docs/EnvironmentDatabasesCurrentMetricCpu.md
+docs/EnvironmentDatabasesCurrentMetricMemory.md
 docs/EnvironmentDatabasesCurrentMetricResponseList.md
+docs/EnvironmentDatabasesCurrentMetricStorage.md
 docs/EnvironmentDeploymentHistoryApi.md
 docs/EnvironmentDeploymentRule.md
 docs/EnvironmentDeploymentRuleAllOf.md
@@ -270,6 +273,7 @@ docs/GitRepositoryResponseList.md
 docs/GithubAppApi.md
 docs/Healthcheck.md
 docs/Instance.md
+docs/InstanceMemory.md
 docs/InstanceResponseList.md
 docs/InviteMember.md
 docs/InviteMemberAllOf.md
@@ -646,7 +650,10 @@ src/model/EnvironmentContainersCurrentScaleResponseList.js
 src/model/EnvironmentContainersStorage.js
 src/model/EnvironmentContainersStorageResponseList.js
 src/model/EnvironmentDatabasesCurrentMetric.js
+src/model/EnvironmentDatabasesCurrentMetricCpu.js
+src/model/EnvironmentDatabasesCurrentMetricMemory.js
 src/model/EnvironmentDatabasesCurrentMetricResponseList.js
+src/model/EnvironmentDatabasesCurrentMetricStorage.js
 src/model/EnvironmentDeploymentRule.js
 src/model/EnvironmentDeploymentRuleAllOf.js
 src/model/EnvironmentDeploymentRuleEditRequest.js
@@ -691,6 +698,7 @@ src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponseList.js
 src/model/Healthcheck.js
 src/model/Instance.js
+src/model/InstanceMemory.js
 src/model/InstanceResponseList.js
 src/model/InviteMember.js
 src/model/InviteMemberAllOf.js
@@ -1049,7 +1057,10 @@ test/model/EnvironmentContainersCurrentScaleResponseList.spec.js
 test/model/EnvironmentContainersStorage.spec.js
 test/model/EnvironmentContainersStorageResponseList.spec.js
 test/model/EnvironmentDatabasesCurrentMetric.spec.js
+test/model/EnvironmentDatabasesCurrentMetricCpu.spec.js
+test/model/EnvironmentDatabasesCurrentMetricMemory.spec.js
 test/model/EnvironmentDatabasesCurrentMetricResponseList.spec.js
+test/model/EnvironmentDatabasesCurrentMetricStorage.spec.js
 test/model/EnvironmentDeploymentRule.spec.js
 test/model/EnvironmentDeploymentRuleAllOf.spec.js
 test/model/EnvironmentDeploymentRuleEditRequest.spec.js
@@ -1094,6 +1105,7 @@ test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponseList.spec.js
 test/model/Healthcheck.spec.js
 test/model/Instance.spec.js
+test/model/InstanceMemory.spec.js
 test/model/InstanceResponseList.spec.js
 test/model/InviteMember.spec.js
 test/model/InviteMemberAllOf.spec.js

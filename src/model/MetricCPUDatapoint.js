@@ -23,7 +23,7 @@ class MetricCPUDatapoint {
      * Constructs a new <code>MetricCPUDatapoint</code>.
      * @alias module:model/MetricCPUDatapoint
      * @param createdAt {Date} 
-     * @param consumedInNumber {Number} 
+     * @param consumedInNumber {Number} unit is millicores (m). 1000m = 1 cpu
      * @param consumedInPercent {Number} 
      */
     constructor(createdAt, consumedInNumber, consumedInPercent) { 
@@ -78,11 +78,13 @@ class MetricCPUDatapoint {
 MetricCPUDatapoint.prototype['created_at'] = undefined;
 
 /**
+ * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} requested_in_number
  */
 MetricCPUDatapoint.prototype['requested_in_number'] = undefined;
 
 /**
+ * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} consumed_in_number
  */
 MetricCPUDatapoint.prototype['consumed_in_number'] = undefined;

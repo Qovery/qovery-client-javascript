@@ -62,7 +62,7 @@ null (empty response body)
 
 ## organizationGithubAppDisconnect
 
-> organizationGithubAppDisconnect(organizationId)
+> organizationGithubAppDisconnect(organizationId, opts)
 
 Disconnect a github account from an organization
 
@@ -77,7 +77,10 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.GithubAppApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-apiInstance.organizationGithubAppDisconnect(organizationId, (error, data, response) => {
+let opts = {
+  'force': true // Boolean | Indicates if the github app should be disconnected despite github applications linked to organization
+};
+apiInstance.organizationGithubAppDisconnect(organizationId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -92,6 +95,7 @@ apiInstance.organizationGithubAppDisconnect(organizationId, (error, data, respon
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **force** | **Boolean**| Indicates if the github app should be disconnected despite github applications linked to organization | [optional] 
 
 ### Return type
 

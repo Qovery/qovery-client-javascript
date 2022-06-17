@@ -23,8 +23,8 @@ class MetricMemoryDatapoint {
      * Constructs a new <code>MetricMemoryDatapoint</code>.
      * @alias module:model/MetricMemoryDatapoint
      * @param createdAt {Date} 
-     * @param requestedInMb {Number} 
-     * @param consumedInMb {Number} 
+     * @param requestedInMb {Number} unit is MB. 1024 MB = 1GB
+     * @param consumedInMb {Number} unit is MB. 1024 MB = 1GB
      * @param consumedInPercent {Number} 
      */
     constructor(createdAt, requestedInMb, consumedInMb, consumedInPercent) { 
@@ -80,11 +80,13 @@ class MetricMemoryDatapoint {
 MetricMemoryDatapoint.prototype['created_at'] = undefined;
 
 /**
+ * unit is MB. 1024 MB = 1GB
  * @member {Number} requested_in_mb
  */
 MetricMemoryDatapoint.prototype['requested_in_mb'] = undefined;
 
 /**
+ * unit is MB. 1024 MB = 1GB
  * @member {Number} consumed_in_mb
  */
 MetricMemoryDatapoint.prototype['consumed_in_mb'] = undefined;

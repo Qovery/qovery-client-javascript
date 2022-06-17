@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **minRunningNodes** | **Number** |  | [optional] [default to 1]
 **maxRunningNodes** | **Number** |  | [optional] [default to 1]
 **instanceType** | **String** | the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType | [optional] 
-**diskSize** | **Number** | the disk size to be used for the node configuration | [optional] [default to 20]
+**diskSize** | **Number** | Unit is in GB. The disk size to be used for the node configuration | [optional] [default to 20]
 
 

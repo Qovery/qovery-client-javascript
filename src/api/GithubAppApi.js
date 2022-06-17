@@ -89,9 +89,12 @@ export default class GithubAppApi {
     /**
      * Disconnect a github account from an organization
      * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.force Indicates if the github app should be disconnected despite github applications linked to organization
      * @param {module:api/GithubAppApi~organizationGithubAppDisconnectCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    organizationGithubAppDisconnect(organizationId, callback) {
+    organizationGithubAppDisconnect(organizationId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
@@ -102,6 +105,7 @@ export default class GithubAppApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'force': opts['force']
       };
       let headerParams = {
       };

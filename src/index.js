@@ -183,7 +183,10 @@ import EnvironmentContainersCurrentScaleResponseList from './model/EnvironmentCo
 import EnvironmentContainersStorage from './model/EnvironmentContainersStorage';
 import EnvironmentContainersStorageResponseList from './model/EnvironmentContainersStorageResponseList';
 import EnvironmentDatabasesCurrentMetric from './model/EnvironmentDatabasesCurrentMetric';
+import EnvironmentDatabasesCurrentMetricCpu from './model/EnvironmentDatabasesCurrentMetricCpu';
+import EnvironmentDatabasesCurrentMetricMemory from './model/EnvironmentDatabasesCurrentMetricMemory';
 import EnvironmentDatabasesCurrentMetricResponseList from './model/EnvironmentDatabasesCurrentMetricResponseList';
+import EnvironmentDatabasesCurrentMetricStorage from './model/EnvironmentDatabasesCurrentMetricStorage';
 import EnvironmentDeploymentRule from './model/EnvironmentDeploymentRule';
 import EnvironmentDeploymentRuleAllOf from './model/EnvironmentDeploymentRuleAllOf';
 import EnvironmentDeploymentRuleEditRequest from './model/EnvironmentDeploymentRuleEditRequest';
@@ -228,6 +231,7 @@ import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponse
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
 import Healthcheck from './model/Healthcheck';
 import Instance from './model/Instance';
+import InstanceMemory from './model/InstanceMemory';
 import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
 import InviteMemberAllOf from './model/InviteMemberAllOf';
@@ -1477,10 +1481,28 @@ export {
     EnvironmentDatabasesCurrentMetric,
 
     /**
+     * The EnvironmentDatabasesCurrentMetricCpu model constructor.
+     * @property {module:model/EnvironmentDatabasesCurrentMetricCpu}
+     */
+    EnvironmentDatabasesCurrentMetricCpu,
+
+    /**
+     * The EnvironmentDatabasesCurrentMetricMemory model constructor.
+     * @property {module:model/EnvironmentDatabasesCurrentMetricMemory}
+     */
+    EnvironmentDatabasesCurrentMetricMemory,
+
+    /**
      * The EnvironmentDatabasesCurrentMetricResponseList model constructor.
      * @property {module:model/EnvironmentDatabasesCurrentMetricResponseList}
      */
     EnvironmentDatabasesCurrentMetricResponseList,
+
+    /**
+     * The EnvironmentDatabasesCurrentMetricStorage model constructor.
+     * @property {module:model/EnvironmentDatabasesCurrentMetricStorage}
+     */
+    EnvironmentDatabasesCurrentMetricStorage,
 
     /**
      * The EnvironmentDeploymentRule model constructor.
@@ -1745,6 +1767,12 @@ export {
      * @property {module:model/Instance}
      */
     Instance,
+
+    /**
+     * The InstanceMemory model constructor.
+     * @property {module:model/InstanceMemory}
+     */
+    InstanceMemory,
 
     /**
      * The InstanceResponseList model constructor.

@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import ThresholdMetricStatusEnum from './ThresholdMetricStatusEnum';
 
 /**
- * The StorageDisk model module.
- * @module model/StorageDisk
+ * The EnvironmentDatabasesCurrentMetricStorage model module.
+ * @module model/EnvironmentDatabasesCurrentMetricStorage
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class StorageDisk {
+class EnvironmentDatabasesCurrentMetricStorage {
     /**
-     * Constructs a new <code>StorageDisk</code>.
-     * @alias module:model/StorageDisk
+     * Constructs a new <code>EnvironmentDatabasesCurrentMetricStorage</code>.
+     * @alias module:model/EnvironmentDatabasesCurrentMetricStorage
      */
     constructor() { 
         
-        StorageDisk.initialize(this);
+        EnvironmentDatabasesCurrentMetricStorage.initialize(this);
     }
 
     /**
@@ -38,22 +38,16 @@ class StorageDisk {
     }
 
     /**
-     * Constructs a <code>StorageDisk</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentDatabasesCurrentMetricStorage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StorageDisk} obj Optional instance to populate.
-     * @return {module:model/StorageDisk} The populated <code>StorageDisk</code> instance.
+     * @param {module:model/EnvironmentDatabasesCurrentMetricStorage} obj Optional instance to populate.
+     * @return {module:model/EnvironmentDatabasesCurrentMetricStorage} The populated <code>EnvironmentDatabasesCurrentMetricStorage</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StorageDisk();
+            obj = obj || new EnvironmentDatabasesCurrentMetricStorage();
 
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
-            }
-            if (data.hasOwnProperty('storage_id')) {
-                obj['storage_id'] = ApiClient.convertToType(data['storage_id'], 'String');
-            }
             if (data.hasOwnProperty('requested_in_gb')) {
                 obj['requested_in_gb'] = ApiClient.convertToType(data['requested_in_gb'], 'Number');
             }
@@ -80,51 +74,41 @@ class StorageDisk {
 }
 
 /**
- * @member {Date} created_at
- */
-StorageDisk.prototype['created_at'] = undefined;
-
-/**
- * @member {String} storage_id
- */
-StorageDisk.prototype['storage_id'] = undefined;
-
-/**
  * Unit is in GB.
  * @member {Number} requested_in_gb
  */
-StorageDisk.prototype['requested_in_gb'] = undefined;
+EnvironmentDatabasesCurrentMetricStorage.prototype['requested_in_gb'] = undefined;
 
 /**
  * Unit is in GB.
  * @member {Number} consumed_in_gb
  */
-StorageDisk.prototype['consumed_in_gb'] = undefined;
+EnvironmentDatabasesCurrentMetricStorage.prototype['consumed_in_gb'] = undefined;
 
 /**
  * @member {Number} consumed_in_percent
  */
-StorageDisk.prototype['consumed_in_percent'] = undefined;
+EnvironmentDatabasesCurrentMetricStorage.prototype['consumed_in_percent'] = undefined;
 
 /**
  * @member {Number} warning_threshold_in_percent
  */
-StorageDisk.prototype['warning_threshold_in_percent'] = undefined;
+EnvironmentDatabasesCurrentMetricStorage.prototype['warning_threshold_in_percent'] = undefined;
 
 /**
  * @member {Number} alert_threshold_in_percent
  */
-StorageDisk.prototype['alert_threshold_in_percent'] = undefined;
+EnvironmentDatabasesCurrentMetricStorage.prototype['alert_threshold_in_percent'] = undefined;
 
 /**
  * @member {module:model/ThresholdMetricStatusEnum} status
  */
-StorageDisk.prototype['status'] = undefined;
+EnvironmentDatabasesCurrentMetricStorage.prototype['status'] = undefined;
 
 
 
 
 
 
-export default StorageDisk;
+export default EnvironmentDatabasesCurrentMetricStorage;
 

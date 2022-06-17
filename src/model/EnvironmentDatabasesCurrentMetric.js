@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
-import DatabaseCurrentMetricCpu from './DatabaseCurrentMetricCpu';
-import DatabaseCurrentMetricMemory from './DatabaseCurrentMetricMemory';
-import DatabaseCurrentMetricStorage from './DatabaseCurrentMetricStorage';
+import EnvironmentDatabasesCurrentMetricCpu from './EnvironmentDatabasesCurrentMetricCpu';
+import EnvironmentDatabasesCurrentMetricMemory from './EnvironmentDatabasesCurrentMetricMemory';
+import EnvironmentDatabasesCurrentMetricStorage from './EnvironmentDatabasesCurrentMetricStorage';
 
 /**
  * The EnvironmentDatabasesCurrentMetric model module.
@@ -54,13 +54,13 @@ class EnvironmentDatabasesCurrentMetric {
                 obj['database'] = ApiClient.convertToType(data['database'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
-                obj['cpu'] = DatabaseCurrentMetricCpu.constructFromObject(data['cpu']);
+                obj['cpu'] = EnvironmentDatabasesCurrentMetricCpu.constructFromObject(data['cpu']);
             }
             if (data.hasOwnProperty('memory')) {
-                obj['memory'] = DatabaseCurrentMetricMemory.constructFromObject(data['memory']);
+                obj['memory'] = EnvironmentDatabasesCurrentMetricMemory.constructFromObject(data['memory']);
             }
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = DatabaseCurrentMetricStorage.constructFromObject(data['storage']);
+                obj['storage'] = EnvironmentDatabasesCurrentMetricStorage.constructFromObject(data['storage']);
             }
         }
         return obj;
@@ -75,17 +75,17 @@ class EnvironmentDatabasesCurrentMetric {
 EnvironmentDatabasesCurrentMetric.prototype['database'] = undefined;
 
 /**
- * @member {module:model/DatabaseCurrentMetricCpu} cpu
+ * @member {module:model/EnvironmentDatabasesCurrentMetricCpu} cpu
  */
 EnvironmentDatabasesCurrentMetric.prototype['cpu'] = undefined;
 
 /**
- * @member {module:model/DatabaseCurrentMetricMemory} memory
+ * @member {module:model/EnvironmentDatabasesCurrentMetricMemory} memory
  */
 EnvironmentDatabasesCurrentMetric.prototype['memory'] = undefined;
 
 /**
- * @member {module:model/DatabaseCurrentMetricStorage} storage
+ * @member {module:model/EnvironmentDatabasesCurrentMetricStorage} storage
  */
 EnvironmentDatabasesCurrentMetric.prototype['storage'] = undefined;
 

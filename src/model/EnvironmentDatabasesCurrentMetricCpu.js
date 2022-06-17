@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import ThresholdMetricStatusEnum from './ThresholdMetricStatusEnum';
 
 /**
- * The StorageDisk model module.
- * @module model/StorageDisk
+ * The EnvironmentDatabasesCurrentMetricCpu model module.
+ * @module model/EnvironmentDatabasesCurrentMetricCpu
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class StorageDisk {
+class EnvironmentDatabasesCurrentMetricCpu {
     /**
-     * Constructs a new <code>StorageDisk</code>.
-     * @alias module:model/StorageDisk
+     * Constructs a new <code>EnvironmentDatabasesCurrentMetricCpu</code>.
+     * @alias module:model/EnvironmentDatabasesCurrentMetricCpu
      */
     constructor() { 
         
-        StorageDisk.initialize(this);
+        EnvironmentDatabasesCurrentMetricCpu.initialize(this);
     }
 
     /**
@@ -38,27 +38,21 @@ class StorageDisk {
     }
 
     /**
-     * Constructs a <code>StorageDisk</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentDatabasesCurrentMetricCpu</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/StorageDisk} obj Optional instance to populate.
-     * @return {module:model/StorageDisk} The populated <code>StorageDisk</code> instance.
+     * @param {module:model/EnvironmentDatabasesCurrentMetricCpu} obj Optional instance to populate.
+     * @return {module:model/EnvironmentDatabasesCurrentMetricCpu} The populated <code>EnvironmentDatabasesCurrentMetricCpu</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new StorageDisk();
+            obj = obj || new EnvironmentDatabasesCurrentMetricCpu();
 
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            if (data.hasOwnProperty('requested_in_float')) {
+                obj['requested_in_float'] = ApiClient.convertToType(data['requested_in_float'], 'Number');
             }
-            if (data.hasOwnProperty('storage_id')) {
-                obj['storage_id'] = ApiClient.convertToType(data['storage_id'], 'String');
-            }
-            if (data.hasOwnProperty('requested_in_gb')) {
-                obj['requested_in_gb'] = ApiClient.convertToType(data['requested_in_gb'], 'Number');
-            }
-            if (data.hasOwnProperty('consumed_in_gb')) {
-                obj['consumed_in_gb'] = ApiClient.convertToType(data['consumed_in_gb'], 'Number');
+            if (data.hasOwnProperty('consumed_in_number')) {
+                obj['consumed_in_number'] = ApiClient.convertToType(data['consumed_in_number'], 'Number');
             }
             if (data.hasOwnProperty('consumed_in_percent')) {
                 obj['consumed_in_percent'] = ApiClient.convertToType(data['consumed_in_percent'], 'Number');
@@ -80,51 +74,41 @@ class StorageDisk {
 }
 
 /**
- * @member {Date} created_at
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} requested_in_float
  */
-StorageDisk.prototype['created_at'] = undefined;
+EnvironmentDatabasesCurrentMetricCpu.prototype['requested_in_float'] = undefined;
 
 /**
- * @member {String} storage_id
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} consumed_in_number
  */
-StorageDisk.prototype['storage_id'] = undefined;
-
-/**
- * Unit is in GB.
- * @member {Number} requested_in_gb
- */
-StorageDisk.prototype['requested_in_gb'] = undefined;
-
-/**
- * Unit is in GB.
- * @member {Number} consumed_in_gb
- */
-StorageDisk.prototype['consumed_in_gb'] = undefined;
+EnvironmentDatabasesCurrentMetricCpu.prototype['consumed_in_number'] = undefined;
 
 /**
  * @member {Number} consumed_in_percent
  */
-StorageDisk.prototype['consumed_in_percent'] = undefined;
+EnvironmentDatabasesCurrentMetricCpu.prototype['consumed_in_percent'] = undefined;
 
 /**
  * @member {Number} warning_threshold_in_percent
  */
-StorageDisk.prototype['warning_threshold_in_percent'] = undefined;
+EnvironmentDatabasesCurrentMetricCpu.prototype['warning_threshold_in_percent'] = undefined;
 
 /**
  * @member {Number} alert_threshold_in_percent
  */
-StorageDisk.prototype['alert_threshold_in_percent'] = undefined;
+EnvironmentDatabasesCurrentMetricCpu.prototype['alert_threshold_in_percent'] = undefined;
 
 /**
  * @member {module:model/ThresholdMetricStatusEnum} status
  */
-StorageDisk.prototype['status'] = undefined;
+EnvironmentDatabasesCurrentMetricCpu.prototype['status'] = undefined;
 
 
 
 
 
 
-export default StorageDisk;
+export default EnvironmentDatabasesCurrentMetricCpu;
 

@@ -76,11 +76,13 @@ class MetricStorageDatapoint {
 MetricStorageDatapoint.prototype['created_at'] = undefined;
 
 /**
+ * Unit is in GB.
  * @member {Number} requested_in_gb
  */
 MetricStorageDatapoint.prototype['requested_in_gb'] = undefined;
 
 /**
+ * Unit is in GB.
  * @member {Number} consumed_in_gb
  */
 MetricStorageDatapoint.prototype['consumed_in_gb'] = undefined;

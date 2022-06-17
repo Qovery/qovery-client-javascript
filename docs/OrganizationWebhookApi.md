@@ -116,7 +116,7 @@ null (empty response body)
 
 ## editOrganizationWebhook
 
-> Object editOrganizationWebhook(projectId, opts)
+> Object editOrganizationWebhook(organizationId, opts)
 
 Edit an organization webhook
 
@@ -132,11 +132,11 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.OrganizationWebhookApi();
-let projectId = "projectId_example"; // String | Project ID
+let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
   'body': null // Object | 
 };
-apiInstance.editOrganizationWebhook(projectId, opts, (error, data, response) => {
+apiInstance.editOrganizationWebhook(organizationId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -150,7 +150,7 @@ apiInstance.editOrganizationWebhook(projectId, opts, (error, data, response) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **String**| Project ID | 
+ **organizationId** | **String**| Organization ID | 
  **body** | **Object**|  | [optional] 
 
 ### Return type
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationWebhook
 
-> CreateOrganizationWebhook201Response getOrganizationWebhook(projectId, webhookId)
+> CreateOrganizationWebhook201Response getOrganizationWebhook(organizationId, webhookId)
 
 Get an Organization webhook
 
@@ -185,9 +185,9 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.OrganizationWebhookApi();
-let projectId = "projectId_example"; // String | Project ID
+let organizationId = "organizationId_example"; // String | Organization ID
 let webhookId = "webhookId_example"; // String | Webhook ID
-apiInstance.getOrganizationWebhook(projectId, webhookId, (error, data, response) => {
+apiInstance.getOrganizationWebhook(organizationId, webhookId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -201,7 +201,7 @@ apiInstance.getOrganizationWebhook(projectId, webhookId, (error, data, response)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **String**| Project ID | 
+ **organizationId** | **String**| Organization ID | 
  **webhookId** | **String**| Webhook ID | 
 
 ### Return type

@@ -135,22 +135,22 @@ export default class OrganizationWebhookApi {
     /**
      * Edit an organization webhook
      * Edit an organization webhook
-     * @param {String} projectId Project ID
+     * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
      * @param {Object} opts.body 
      * @param {module:api/OrganizationWebhookApi~editOrganizationWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
-    editOrganizationWebhook(projectId, opts, callback) {
+    editOrganizationWebhook(organizationId, opts, callback) {
       opts = opts || {};
       let postBody = opts['body'];
-      // verify the required parameter 'projectId' is set
-      if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling editOrganizationWebhook");
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling editOrganizationWebhook");
       }
 
       let pathParams = {
-        'projectId': projectId
+        'organizationId': organizationId
       };
       let queryParams = {
       };
@@ -181,16 +181,16 @@ export default class OrganizationWebhookApi {
     /**
      * Get an Organization webhook
      * Get an Organization webhook
-     * @param {String} projectId Project ID
+     * @param {String} organizationId Organization ID
      * @param {String} webhookId Webhook ID
      * @param {module:api/OrganizationWebhookApi~getOrganizationWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CreateOrganizationWebhook201Response}
      */
-    getOrganizationWebhook(projectId, webhookId, callback) {
+    getOrganizationWebhook(organizationId, webhookId, callback) {
       let postBody = null;
-      // verify the required parameter 'projectId' is set
-      if (projectId === undefined || projectId === null) {
-        throw new Error("Missing the required parameter 'projectId' when calling getOrganizationWebhook");
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationWebhook");
       }
       // verify the required parameter 'webhookId' is set
       if (webhookId === undefined || webhookId === null) {
@@ -198,7 +198,7 @@ export default class OrganizationWebhookApi {
       }
 
       let pathParams = {
-        'projectId': projectId,
+        'organizationId': organizationId,
         'webhookId': webhookId
       };
       let queryParams = {

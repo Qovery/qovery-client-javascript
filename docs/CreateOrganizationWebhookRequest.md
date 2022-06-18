@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **enabled** | **Boolean** | Turn on or off your endpoint. | [optional] 
 **events** | **[String]** |  | 
+**projectIdFilter** | **[String]** |  | [optional] 
+**environmentTypesFilter** | [**[EnvironmentModeEnum]**](EnvironmentModeEnum.md) |  | [optional] 
 
 
 

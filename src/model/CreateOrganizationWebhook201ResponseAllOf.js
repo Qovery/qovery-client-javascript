@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
 
 /**
  * The CreateOrganizationWebhook201ResponseAllOf model module.
@@ -65,6 +66,12 @@ class CreateOrganizationWebhook201ResponseAllOf {
             if (data.hasOwnProperty('events')) {
                 obj['events'] = ApiClient.convertToType(data['events'], [Object]);
             }
+            if (data.hasOwnProperty('project_id_filter')) {
+                obj['project_id_filter'] = ApiClient.convertToType(data['project_id_filter'], ['String']);
+            }
+            if (data.hasOwnProperty('environment_types_filter')) {
+                obj['environment_types_filter'] = ApiClient.convertToType(data['environment_types_filter'], [EnvironmentModeEnum]);
+            }
         }
         return obj;
     }
@@ -103,6 +110,16 @@ CreateOrganizationWebhook201ResponseAllOf.prototype['enabled'] = undefined;
  * @member {Array.<Object>} events
  */
 CreateOrganizationWebhook201ResponseAllOf.prototype['events'] = undefined;
+
+/**
+ * @member {Array.<String>} project_id_filter
+ */
+CreateOrganizationWebhook201ResponseAllOf.prototype['project_id_filter'] = undefined;
+
+/**
+ * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
+ */
+CreateOrganizationWebhook201ResponseAllOf.prototype['environment_types_filter'] = undefined;
 
 
 

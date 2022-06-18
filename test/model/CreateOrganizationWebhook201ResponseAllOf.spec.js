@@ -90,6 +90,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property projectIdFilter (base name: "project_id_filter")', function() {
+      // uncomment below and update the code to test the property projectIdFilter
+      //var instance = new QoveryApi.CreateOrganizationWebhook201ResponseAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property environmentTypesFilter (base name: "environment_types_filter")', function() {
+      // uncomment below and update the code to test the property environmentTypesFilter
+      //var instance = new QoveryApi.CreateOrganizationWebhook201ResponseAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

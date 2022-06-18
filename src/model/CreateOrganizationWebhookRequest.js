@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentModeEnum from './EnvironmentModeEnum';
 
 /**
  * The CreateOrganizationWebhookRequest model module.
@@ -71,6 +72,12 @@ class CreateOrganizationWebhookRequest {
             if (data.hasOwnProperty('events')) {
                 obj['events'] = ApiClient.convertToType(data['events'], ['String']);
             }
+            if (data.hasOwnProperty('project_id_filter')) {
+                obj['project_id_filter'] = ApiClient.convertToType(data['project_id_filter'], ['String']);
+            }
+            if (data.hasOwnProperty('environment_types_filter')) {
+                obj['environment_types_filter'] = ApiClient.convertToType(data['environment_types_filter'], [EnvironmentModeEnum]);
+            }
         }
         return obj;
     }
@@ -111,6 +118,16 @@ CreateOrganizationWebhookRequest.prototype['enabled'] = undefined;
  * @member {Array.<module:model/CreateOrganizationWebhookRequest.EventsEnum>} events
  */
 CreateOrganizationWebhookRequest.prototype['events'] = undefined;
+
+/**
+ * @member {Array.<String>} project_id_filter
+ */
+CreateOrganizationWebhookRequest.prototype['project_id_filter'] = undefined;
+
+/**
+ * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
+ */
+CreateOrganizationWebhookRequest.prototype['environment_types_filter'] = undefined;
 
 
 

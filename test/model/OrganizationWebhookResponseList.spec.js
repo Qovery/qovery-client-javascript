@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListOrganizationWebHooks200Response();
+    instance = new QoveryApi.OrganizationWebhookResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ListOrganizationWebHooks200Response', function() {
-    it('should create an instance of ListOrganizationWebHooks200Response', function() {
-      // uncomment below and update the code to test ListOrganizationWebHooks200Response
-      //var instance = new QoveryApi.ListOrganizationWebHooks200Response();
-      //expect(instance).to.be.a(QoveryApi.ListOrganizationWebHooks200Response);
+  describe('OrganizationWebhookResponseList', function() {
+    it('should create an instance of OrganizationWebhookResponseList', function() {
+      // uncomment below and update the code to test OrganizationWebhookResponseList
+      //var instance = new QoveryApi.OrganizationWebhookResponseList();
+      //expect(instance).to.be.a(QoveryApi.OrganizationWebhookResponseList);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ListOrganizationWebHooks200Response();
+      //var instance = new QoveryApi.OrganizationWebhookResponseList();
       //expect(instance).to.be();
     });
 

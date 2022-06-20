@@ -120,9 +120,6 @@ import ContainerResponseList from './model/ContainerResponseList';
 import ContainerStorage from './model/ContainerStorage';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
-import CreateOrganizationWebhook201Response from './model/CreateOrganizationWebhook201Response';
-import CreateOrganizationWebhook201ResponseAllOf from './model/CreateOrganizationWebhook201ResponseAllOf';
-import CreateOrganizationWebhookRequest from './model/CreateOrganizationWebhookRequest';
 import Credentials from './model/Credentials';
 import CredentialsRequest from './model/CredentialsRequest';
 import CreditCard from './model/CreditCard';
@@ -249,7 +246,6 @@ import KubernetesEnum from './model/KubernetesEnum';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
-import ListOrganizationWebHooks200Response from './model/ListOrganizationWebHooks200Response';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
@@ -295,6 +291,11 @@ import OrganizationEditRequest from './model/OrganizationEditRequest';
 import OrganizationGithubAppConnectRequest from './model/OrganizationGithubAppConnectRequest';
 import OrganizationRequest from './model/OrganizationRequest';
 import OrganizationResponseList from './model/OrganizationResponseList';
+import OrganizationWebhookCreateRequest from './model/OrganizationWebhookCreateRequest';
+import OrganizationWebhookCreateResponse from './model/OrganizationWebhookCreateResponse';
+import OrganizationWebhookCreateResponseAllOf from './model/OrganizationWebhookCreateResponseAllOf';
+import OrganizationWebhookResponse from './model/OrganizationWebhookResponse';
+import OrganizationWebhookResponseList from './model/OrganizationWebhookResponseList';
 import OverriddenSecret from './model/OverriddenSecret';
 import PaginationData from './model/PaginationData';
 import PaidUsage from './model/PaidUsage';
@@ -1105,24 +1106,6 @@ export {
     CostRange,
 
     /**
-     * The CreateOrganizationWebhook201Response model constructor.
-     * @property {module:model/CreateOrganizationWebhook201Response}
-     */
-    CreateOrganizationWebhook201Response,
-
-    /**
-     * The CreateOrganizationWebhook201ResponseAllOf model constructor.
-     * @property {module:model/CreateOrganizationWebhook201ResponseAllOf}
-     */
-    CreateOrganizationWebhook201ResponseAllOf,
-
-    /**
-     * The CreateOrganizationWebhookRequest model constructor.
-     * @property {module:model/CreateOrganizationWebhookRequest}
-     */
-    CreateOrganizationWebhookRequest,
-
-    /**
      * The Credentials model constructor.
      * @property {module:model/Credentials}
      */
@@ -1879,12 +1862,6 @@ export {
     ListContainerRegistry200Response,
 
     /**
-     * The ListOrganizationWebHooks200Response model constructor.
-     * @property {module:model/ListOrganizationWebHooks200Response}
-     */
-    ListOrganizationWebHooks200Response,
-
-    /**
      * The Log model constructor.
      * @property {module:model/Log}
      */
@@ -2153,6 +2130,36 @@ export {
      * @property {module:model/OrganizationResponseList}
      */
     OrganizationResponseList,
+
+    /**
+     * The OrganizationWebhookCreateRequest model constructor.
+     * @property {module:model/OrganizationWebhookCreateRequest}
+     */
+    OrganizationWebhookCreateRequest,
+
+    /**
+     * The OrganizationWebhookCreateResponse model constructor.
+     * @property {module:model/OrganizationWebhookCreateResponse}
+     */
+    OrganizationWebhookCreateResponse,
+
+    /**
+     * The OrganizationWebhookCreateResponseAllOf model constructor.
+     * @property {module:model/OrganizationWebhookCreateResponseAllOf}
+     */
+    OrganizationWebhookCreateResponseAllOf,
+
+    /**
+     * The OrganizationWebhookResponse model constructor.
+     * @property {module:model/OrganizationWebhookResponse}
+     */
+    OrganizationWebhookResponse,
+
+    /**
+     * The OrganizationWebhookResponseList model constructor.
+     * @property {module:model/OrganizationWebhookResponseList}
+     */
+    OrganizationWebhookResponseList,
 
     /**
      * The OverriddenSecret model constructor.

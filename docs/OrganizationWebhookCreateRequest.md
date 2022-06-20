@@ -1,4 +1,4 @@
-# QoveryApi.CreateOrganizationWebhookRequest
+# QoveryApi.OrganizationWebhookCreateRequest
 
 ## Properties
 

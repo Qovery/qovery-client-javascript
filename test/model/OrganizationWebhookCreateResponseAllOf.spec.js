@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.CreateOrganizationWebhook201Response();
+    instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,76 +47,58 @@
       object[property] = value;
   }
 
-  describe('CreateOrganizationWebhook201Response', function() {
-    it('should create an instance of CreateOrganizationWebhook201Response', function() {
-      // uncomment below and update the code to test CreateOrganizationWebhook201Response
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
-      //expect(instance).to.be.a(QoveryApi.CreateOrganizationWebhook201Response);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
-      //expect(instance).to.be();
+  describe('OrganizationWebhookCreateResponseAllOf', function() {
+    it('should create an instance of OrganizationWebhookCreateResponseAllOf', function() {
+      // uncomment below and update the code to test OrganizationWebhookCreateResponseAllOf
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
+      //expect(instance).to.be.a(QoveryApi.OrganizationWebhookCreateResponseAllOf);
     });
 
     it('should have the property kind (base name: "kind")', function() {
       // uncomment below and update the code to test the property kind
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property targetUrl (base name: "target_url")', function() {
       // uncomment below and update the code to test the property targetUrl
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property targetSecretSet (base name: "target_secret_set")', function() {
       // uncomment below and update the code to test the property targetSecretSet
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property enabled (base name: "enabled")', function() {
       // uncomment below and update the code to test the property enabled
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property events (base name: "events")', function() {
       // uncomment below and update the code to test the property events
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property projectIdFilter (base name: "project_id_filter")', function() {
       // uncomment below and update the code to test the property projectIdFilter
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property environmentTypesFilter (base name: "environment_types_filter")', function() {
       // uncomment below and update the code to test the property environmentTypesFilter
-      //var instance = new QoveryApi.CreateOrganizationWebhook201Response();
+      //var instance = new QoveryApi.OrganizationWebhookCreateResponseAllOf();
       //expect(instance).to.be();
     });
 

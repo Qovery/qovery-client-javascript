@@ -13,20 +13,22 @@
 
 import ApiClient from '../ApiClient';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
+import Items from './Items';
+import Kind from './Kind';
 
 /**
- * The CreateOrganizationWebhook201ResponseAllOf model module.
- * @module model/CreateOrganizationWebhook201ResponseAllOf
+ * The OrganizationWebhookCreateResponseAllOf model module.
+ * @module model/OrganizationWebhookCreateResponseAllOf
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class CreateOrganizationWebhook201ResponseAllOf {
+class OrganizationWebhookCreateResponseAllOf {
     /**
-     * Constructs a new <code>CreateOrganizationWebhook201ResponseAllOf</code>.
-     * @alias module:model/CreateOrganizationWebhook201ResponseAllOf
+     * Constructs a new <code>OrganizationWebhookCreateResponseAllOf</code>.
+     * @alias module:model/OrganizationWebhookCreateResponseAllOf
      */
     constructor() { 
         
-        CreateOrganizationWebhook201ResponseAllOf.initialize(this);
+        OrganizationWebhookCreateResponseAllOf.initialize(this);
     }
 
     /**
@@ -38,18 +40,18 @@ class CreateOrganizationWebhook201ResponseAllOf {
     }
 
     /**
-     * Constructs a <code>CreateOrganizationWebhook201ResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationWebhookCreateResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/CreateOrganizationWebhook201ResponseAllOf} obj Optional instance to populate.
-     * @return {module:model/CreateOrganizationWebhook201ResponseAllOf} The populated <code>CreateOrganizationWebhook201ResponseAllOf</code> instance.
+     * @param {module:model/OrganizationWebhookCreateResponseAllOf} obj Optional instance to populate.
+     * @return {module:model/OrganizationWebhookCreateResponseAllOf} The populated <code>OrganizationWebhookCreateResponseAllOf</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CreateOrganizationWebhook201ResponseAllOf();
+            obj = obj || new OrganizationWebhookCreateResponseAllOf();
 
             if (data.hasOwnProperty('kind')) {
-                obj['kind'] = Object.constructFromObject(data['kind']);
+                obj['kind'] = Kind.constructFromObject(data['kind']);
             }
             if (data.hasOwnProperty('target_url')) {
                 obj['target_url'] = ApiClient.convertToType(data['target_url'], 'String');
@@ -64,7 +66,7 @@ class CreateOrganizationWebhook201ResponseAllOf {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
             }
             if (data.hasOwnProperty('events')) {
-                obj['events'] = ApiClient.convertToType(data['events'], [Object]);
+                obj['events'] = ApiClient.convertToType(data['events'], [Items]);
             }
             if (data.hasOwnProperty('project_id_filter')) {
                 obj['project_id_filter'] = ApiClient.convertToType(data['project_id_filter'], ['String']);
@@ -80,51 +82,51 @@ class CreateOrganizationWebhook201ResponseAllOf {
 }
 
 /**
- * @member {Object} kind
+ * @member {module:model/Kind} kind
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['kind'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['kind'] = undefined;
 
 /**
  * Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with `http://` or `https://` 
  * @member {String} target_url
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['target_url'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['target_url'] = undefined;
 
 /**
  * @member {Boolean} target_secret_set
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['target_secret_set'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['target_secret_set'] = undefined;
 
 /**
  * @member {String} description
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['description'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['description'] = undefined;
 
 /**
  * Turn on or off your endpoint.
  * @member {Boolean} enabled
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['enabled'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['enabled'] = undefined;
 
 /**
- * @member {Array.<Object>} events
+ * @member {Array.<module:model/Items>} events
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['events'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['events'] = undefined;
 
 /**
  * @member {Array.<String>} project_id_filter
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['project_id_filter'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['project_id_filter'] = undefined;
 
 /**
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
-CreateOrganizationWebhook201ResponseAllOf.prototype['environment_types_filter'] = undefined;
+OrganizationWebhookCreateResponseAllOf.prototype['environment_types_filter'] = undefined;
 
 
 
 
 
 
-export default CreateOrganizationWebhook201ResponseAllOf;
+export default OrganizationWebhookCreateResponseAllOf;
 

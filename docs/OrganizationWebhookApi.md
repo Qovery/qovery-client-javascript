@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## createOrganizationWebhook
 
-> CreateOrganizationWebhook201Response createOrganizationWebhook(organizationId, opts)
+> OrganizationWebhookCreateResponse createOrganizationWebhook(organizationId, opts)
 
 Create an organization webhook
 
@@ -32,7 +32,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationWebhookApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'createOrganizationWebhookRequest': new QoveryApi.CreateOrganizationWebhookRequest() // CreateOrganizationWebhookRequest | 
+  'organizationWebhookCreateRequest': new QoveryApi.OrganizationWebhookCreateRequest() // OrganizationWebhookCreateRequest | 
 };
 apiInstance.createOrganizationWebhook(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -49,11 +49,11 @@ apiInstance.createOrganizationWebhook(organizationId, opts, (error, data, respon
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **createOrganizationWebhookRequest** | [**CreateOrganizationWebhookRequest**](CreateOrganizationWebhookRequest.md)|  | [optional] 
+ **organizationWebhookCreateRequest** | [**OrganizationWebhookCreateRequest**](OrganizationWebhookCreateRequest.md)|  | [optional] 
 
 ### Return type
 
-[**CreateOrganizationWebhook201Response**](CreateOrganizationWebhook201Response.md)
+[**OrganizationWebhookCreateResponse**](OrganizationWebhookCreateResponse.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ null (empty response body)
 
 ## editOrganizationWebhook
 
-> Object editOrganizationWebhook(organizationId, opts)
+> OrganizationWebhookCreateResponse editOrganizationWebhook(organizationId, opts)
 
 Edit an organization webhook
 
@@ -134,7 +134,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationWebhookApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'body': null // Object | 
+  'organizationWebhookCreateRequest': new QoveryApi.OrganizationWebhookCreateRequest() // OrganizationWebhookCreateRequest | 
 };
 apiInstance.editOrganizationWebhook(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -151,11 +151,11 @@ apiInstance.editOrganizationWebhook(organizationId, opts, (error, data, response
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **body** | **Object**|  | [optional] 
+ **organizationWebhookCreateRequest** | [**OrganizationWebhookCreateRequest**](OrganizationWebhookCreateRequest.md)|  | [optional] 
 
 ### Return type
 
-**Object**
+[**OrganizationWebhookCreateResponse**](OrganizationWebhookCreateResponse.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ## getOrganizationWebhook
 
-> CreateOrganizationWebhook201Response getOrganizationWebhook(organizationId, webhookId)
+> OrganizationWebhookResponse getOrganizationWebhook(organizationId, webhookId)
 
 Get an Organization webhook
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateOrganizationWebhook201Response**](CreateOrganizationWebhook201Response.md)
+[**OrganizationWebhookResponse**](OrganizationWebhookResponse.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ## listOrganizationWebHooks
 
-> ListOrganizationWebHooks200Response listOrganizationWebHooks(organizationId)
+> OrganizationWebhookResponseList listOrganizationWebHooks(organizationId)
 
 List organization webhooks
 
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListOrganizationWebHooks200Response**](ListOrganizationWebHooks200Response.md)
+[**OrganizationWebhookResponseList**](OrganizationWebhookResponseList.md)
 
 ### Authorization
 

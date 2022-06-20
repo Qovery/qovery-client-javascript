@@ -12,20 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
+import OrganizationWebhookResponse from './OrganizationWebhookResponse';
 
 /**
- * The ListOrganizationWebHooks200Response model module.
- * @module model/ListOrganizationWebHooks200Response
+ * The OrganizationWebhookResponseList model module.
+ * @module model/OrganizationWebhookResponseList
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListOrganizationWebHooks200Response {
+class OrganizationWebhookResponseList {
     /**
-     * Constructs a new <code>ListOrganizationWebHooks200Response</code>.
-     * @alias module:model/ListOrganizationWebHooks200Response
+     * Constructs a new <code>OrganizationWebhookResponseList</code>.
+     * @alias module:model/OrganizationWebhookResponseList
      */
     constructor() { 
         
-        ListOrganizationWebHooks200Response.initialize(this);
+        OrganizationWebhookResponseList.initialize(this);
     }
 
     /**
@@ -37,18 +38,18 @@ class ListOrganizationWebHooks200Response {
     }
 
     /**
-     * Constructs a <code>ListOrganizationWebHooks200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationWebhookResponseList</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListOrganizationWebHooks200Response} obj Optional instance to populate.
-     * @return {module:model/ListOrganizationWebHooks200Response} The populated <code>ListOrganizationWebHooks200Response</code> instance.
+     * @param {module:model/OrganizationWebhookResponseList} obj Optional instance to populate.
+     * @return {module:model/OrganizationWebhookResponseList} The populated <code>OrganizationWebhookResponseList</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListOrganizationWebHooks200Response();
+            obj = obj || new OrganizationWebhookResponseList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Object]);
+                obj['results'] = ApiClient.convertToType(data['results'], [OrganizationWebhookResponse]);
             }
         }
         return obj;
@@ -58,14 +59,14 @@ class ListOrganizationWebHooks200Response {
 }
 
 /**
- * @member {Array.<Object>} results
+ * @member {Array.<module:model/OrganizationWebhookResponse>} results
  */
-ListOrganizationWebHooks200Response.prototype['results'] = undefined;
+OrganizationWebhookResponseList.prototype['results'] = undefined;
 
 
 
 
 
 
-export default ListOrganizationWebHooks200Response;
+export default OrganizationWebhookResponseList;
 

@@ -15,21 +15,21 @@ import ApiClient from '../ApiClient';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
 
 /**
- * The CreateOrganizationWebhookRequest model module.
- * @module model/CreateOrganizationWebhookRequest
+ * The OrganizationWebhookCreateRequest model module.
+ * @module model/OrganizationWebhookCreateRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class CreateOrganizationWebhookRequest {
+class OrganizationWebhookCreateRequest {
     /**
-     * Constructs a new <code>CreateOrganizationWebhookRequest</code>.
-     * @alias module:model/CreateOrganizationWebhookRequest
-     * @param kind {module:model/CreateOrganizationWebhookRequest.KindEnum} Define the type of the webhook. `SLACK` is a special webhook type to push notifications directly to slack. The `target_url` must be a Slack compatible endpoint.
+     * Constructs a new <code>OrganizationWebhookCreateRequest</code>.
+     * @alias module:model/OrganizationWebhookCreateRequest
+     * @param kind {module:model/OrganizationWebhookCreateRequest.KindEnum} Define the type of the webhook. `SLACK` is a special webhook type to push notifications directly to slack. The `target_url` must be a Slack compatible endpoint.
      * @param targetUrl {String} Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with `http://` or `https://` 
-     * @param events {Array.<module:model/CreateOrganizationWebhookRequest.EventsEnum>} 
+     * @param events {Array.<module:model/OrganizationWebhookCreateRequest.EventsEnum>} 
      */
     constructor(kind, targetUrl, events) { 
         
-        CreateOrganizationWebhookRequest.initialize(this, kind, targetUrl, events);
+        OrganizationWebhookCreateRequest.initialize(this, kind, targetUrl, events);
     }
 
     /**
@@ -44,15 +44,15 @@ class CreateOrganizationWebhookRequest {
     }
 
     /**
-     * Constructs a <code>CreateOrganizationWebhookRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationWebhookCreateRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/CreateOrganizationWebhookRequest} obj Optional instance to populate.
-     * @return {module:model/CreateOrganizationWebhookRequest} The populated <code>CreateOrganizationWebhookRequest</code> instance.
+     * @param {module:model/OrganizationWebhookCreateRequest} obj Optional instance to populate.
+     * @return {module:model/OrganizationWebhookCreateRequest} The populated <code>OrganizationWebhookCreateRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CreateOrganizationWebhookRequest();
+            obj = obj || new OrganizationWebhookCreateRequest();
 
             if (data.hasOwnProperty('kind')) {
                 obj['kind'] = ApiClient.convertToType(data['kind'], 'String');
@@ -87,47 +87,47 @@ class CreateOrganizationWebhookRequest {
 
 /**
  * Define the type of the webhook. `SLACK` is a special webhook type to push notifications directly to slack. The `target_url` must be a Slack compatible endpoint.
- * @member {module:model/CreateOrganizationWebhookRequest.KindEnum} kind
+ * @member {module:model/OrganizationWebhookCreateRequest.KindEnum} kind
  */
-CreateOrganizationWebhookRequest.prototype['kind'] = undefined;
+OrganizationWebhookCreateRequest.prototype['kind'] = undefined;
 
 /**
  * Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with `http://` or `https://` 
  * @member {String} target_url
  */
-CreateOrganizationWebhookRequest.prototype['target_url'] = undefined;
+OrganizationWebhookCreateRequest.prototype['target_url'] = undefined;
 
 /**
  * Make sure you receive a payload to sign the Qovery request with your secret. Qovery will add a HTTP header `Qovery-Signature: <Your Secret>` to every webhook requests sent to your target URL. 
  * @member {String} target_secret
  */
-CreateOrganizationWebhookRequest.prototype['target_secret'] = undefined;
+OrganizationWebhookCreateRequest.prototype['target_secret'] = undefined;
 
 /**
  * @member {String} description
  */
-CreateOrganizationWebhookRequest.prototype['description'] = undefined;
+OrganizationWebhookCreateRequest.prototype['description'] = undefined;
 
 /**
  * Turn on or off your endpoint.
  * @member {Boolean} enabled
  */
-CreateOrganizationWebhookRequest.prototype['enabled'] = undefined;
+OrganizationWebhookCreateRequest.prototype['enabled'] = undefined;
 
 /**
- * @member {Array.<module:model/CreateOrganizationWebhookRequest.EventsEnum>} events
+ * @member {Array.<module:model/OrganizationWebhookCreateRequest.EventsEnum>} events
  */
-CreateOrganizationWebhookRequest.prototype['events'] = undefined;
+OrganizationWebhookCreateRequest.prototype['events'] = undefined;
 
 /**
  * @member {Array.<String>} project_id_filter
  */
-CreateOrganizationWebhookRequest.prototype['project_id_filter'] = undefined;
+OrganizationWebhookCreateRequest.prototype['project_id_filter'] = undefined;
 
 /**
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
-CreateOrganizationWebhookRequest.prototype['environment_types_filter'] = undefined;
+OrganizationWebhookCreateRequest.prototype['environment_types_filter'] = undefined;
 
 
 
@@ -138,7 +138,7 @@ CreateOrganizationWebhookRequest.prototype['environment_types_filter'] = undefin
  * @enum {String}
  * @readonly
  */
-CreateOrganizationWebhookRequest['KindEnum'] = {
+OrganizationWebhookCreateRequest['KindEnum'] = {
 
     /**
      * value: "STANDARD"
@@ -159,7 +159,7 @@ CreateOrganizationWebhookRequest['KindEnum'] = {
  * @enum {String}
  * @readonly
  */
-CreateOrganizationWebhookRequest['EventsEnum'] = {
+OrganizationWebhookCreateRequest['EventsEnum'] = {
 
     /**
      * value: "DEPLOYMENT_STARTED"
@@ -188,5 +188,5 @@ CreateOrganizationWebhookRequest['EventsEnum'] = {
 
 
 
-export default CreateOrganizationWebhookRequest;
+export default OrganizationWebhookCreateRequest;
 

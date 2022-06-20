@@ -73,6 +73,7 @@ docs/CluserCredentials.md
 docs/Cluster.md
 docs/ClusterAllOf.md
 docs/ClusterBase.md
+docs/ClusterBaseSshKey.md
 docs/ClusterCloudProviderInfo.md
 docs/ClusterCloudProviderInfoCredentials.md
 docs/ClusterCloudProviderInfoRequest.md
@@ -129,7 +130,7 @@ docs/ContainerNetwork.md
 docs/ContainerNetworkRequest.md
 docs/ContainerRegistriesApi.md
 docs/ContainerRegistryApi.md
-docs/ContainerRegistryKind.md
+docs/ContainerRegistryKindEnum.md
 docs/ContainerRegistryRequest.md
 docs/ContainerRegistryResponse.md
 docs/ContainerRequest.md
@@ -286,6 +287,7 @@ docs/InvoiceAllOf.md
 docs/InvoiceResponseList.md
 docs/InvoiceStatusEnum.md
 docs/Key.md
+docs/KubernetesEnum.md
 docs/Link.md
 docs/LinkResponseList.md
 docs/ListContainerRegistry200Response.md
@@ -533,6 +535,7 @@ src/model/CluserCredentials.js
 src/model/Cluster.js
 src/model/ClusterAllOf.js
 src/model/ClusterBase.js
+src/model/ClusterBaseSshKey.js
 src/model/ClusterCloudProviderInfo.js
 src/model/ClusterCloudProviderInfoCredentials.js
 src/model/ClusterCloudProviderInfoRequest.js
@@ -575,7 +578,7 @@ src/model/ContainerEditRequest.js
 src/model/ContainerEditRequestAllOf.js
 src/model/ContainerNetwork.js
 src/model/ContainerNetworkRequest.js
-src/model/ContainerRegistryKind.js
+src/model/ContainerRegistryKindEnum.js
 src/model/ContainerRegistryRequest.js
 src/model/ContainerRegistryResponse.js
 src/model/ContainerRequest.js
@@ -711,6 +714,7 @@ src/model/InvoiceAllOf.js
 src/model/InvoiceResponseList.js
 src/model/InvoiceStatusEnum.js
 src/model/Key.js
+src/model/KubernetesEnum.js
 src/model/Link.js
 src/model/LinkResponseList.js
 src/model/ListContainerRegistry200Response.js
@@ -940,6 +944,7 @@ test/model/CluserCredentials.spec.js
 test/model/Cluster.spec.js
 test/model/ClusterAllOf.spec.js
 test/model/ClusterBase.spec.js
+test/model/ClusterBaseSshKey.spec.js
 test/model/ClusterCloudProviderInfo.spec.js
 test/model/ClusterCloudProviderInfoCredentials.spec.js
 test/model/ClusterCloudProviderInfoRequest.spec.js
@@ -982,7 +987,7 @@ test/model/ContainerEditRequest.spec.js
 test/model/ContainerEditRequestAllOf.spec.js
 test/model/ContainerNetwork.spec.js
 test/model/ContainerNetworkRequest.spec.js
-test/model/ContainerRegistryKind.spec.js
+test/model/ContainerRegistryKindEnum.spec.js
 test/model/ContainerRegistryRequest.spec.js
 test/model/ContainerRegistryResponse.spec.js
 test/model/ContainerRequest.spec.js
@@ -1118,6 +1123,7 @@ test/model/InvoiceAllOf.spec.js
 test/model/InvoiceResponseList.spec.js
 test/model/InvoiceStatusEnum.spec.js
 test/model/Key.spec.js
+test/model/KubernetesEnum.spec.js
 test/model/Link.spec.js
 test/model/LinkResponseList.spec.js
 test/model/ListContainerRegistry200Response.spec.js

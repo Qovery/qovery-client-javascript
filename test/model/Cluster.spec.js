@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property kubernetes (base name: "kubernetes")', function() {
+      // uncomment below and update the code to test the property kubernetes
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
     it('should have the property minRunningNodes (base name: "min_running_nodes")', function() {
       // uncomment below and update the code to test the property minRunningNodes
       //var instance = new QoveryApi.Cluster();
@@ -134,6 +140,12 @@
 
     it('should have the property diskSize (base name: "disk_size")', function() {
       // uncomment below and update the code to test the property diskSize
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sshKey (base name: "ssh_key")', function() {
+      // uncomment below and update the code to test the property sshKey
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });

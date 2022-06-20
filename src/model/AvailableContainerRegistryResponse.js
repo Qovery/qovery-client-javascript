@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ContainerRegistryKind from './ContainerRegistryKind';
+import ContainerRegistryKindEnum from './ContainerRegistryKindEnum';
 
 /**
  * The AvailableContainerRegistryResponse model module.
@@ -49,7 +49,7 @@ class AvailableContainerRegistryResponse {
             obj = obj || new AvailableContainerRegistryResponse();
 
             if (data.hasOwnProperty('kind')) {
-                obj['kind'] = ContainerRegistryKind.constructFromObject(data['kind']);
+                obj['kind'] = ContainerRegistryKindEnum.constructFromObject(data['kind']);
             }
             if (data.hasOwnProperty('required_config')) {
                 obj['required_config'] = ApiClient.convertToType(data['required_config'], {'String': Object});
@@ -62,7 +62,7 @@ class AvailableContainerRegistryResponse {
 }
 
 /**
- * @member {module:model/ContainerRegistryKind} kind
+ * @member {module:model/ContainerRegistryKindEnum} kind
  */
 AvailableContainerRegistryResponse.prototype['kind'] = undefined;
 

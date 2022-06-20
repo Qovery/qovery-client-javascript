@@ -46,11 +46,11 @@
       object[property] = value;
   }
 
-  describe('ContainerRegistryKind', function() {
-    it('should create an instance of ContainerRegistryKind', function() {
-      // uncomment below and update the code to test ContainerRegistryKind
-      //var instance = new QoveryApi.ContainerRegistryKind();
-      //expect(instance).to.be.a(QoveryApi.ContainerRegistryKind);
+  describe('KubernetesEnum', function() {
+    it('should create an instance of KubernetesEnum', function() {
+      // uncomment below and update the code to test KubernetesEnum
+      //var instance = new QoveryApi.KubernetesEnum();
+      //expect(instance).to.be.a(QoveryApi.KubernetesEnum);
     });
 
   });

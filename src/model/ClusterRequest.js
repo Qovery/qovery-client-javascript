@@ -14,8 +14,10 @@
 import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
 import ClusterBase from './ClusterBase';
+import ClusterBaseSshKey from './ClusterBaseSshKey';
 import ClusterFeatureRequest from './ClusterFeatureRequest';
 import ClusterFeatureRequestFeaturesInner from './ClusterFeatureRequestFeaturesInner';
+import KubernetesEnum from './KubernetesEnum';
 
 /**
  * The ClusterRequest model module.
@@ -31,10 +33,11 @@ class ClusterRequest {
      * @param name {String} name is case-insensitive
      * @param cloudProvider {module:model/CloudProviderEnum} 
      * @param region {String} 
+     * @param kubernetes {module:model/KubernetesEnum} 
      */
-    constructor(name, cloudProvider, region) { 
-        ClusterBase.initialize(this, name, cloudProvider, region);ClusterFeatureRequest.initialize(this);
-        ClusterRequest.initialize(this, name, cloudProvider, region);
+    constructor(name, cloudProvider, region, kubernetes) { 
+        ClusterBase.initialize(this, name, cloudProvider, region, kubernetes);ClusterFeatureRequest.initialize(this);
+        ClusterRequest.initialize(this, name, cloudProvider, region, kubernetes);
     }
 
     /**
@@ -42,10 +45,11 @@ class ClusterRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, cloudProvider, region) { 
+    static initialize(obj, name, cloudProvider, region, kubernetes) { 
         obj['name'] = name;
         obj['cloud_provider'] = cloudProvider;
         obj['region'] = region;
+        obj['kubernetes'] = kubernetes;
     }
 
     /**
@@ -82,6 +86,9 @@ class ClusterRequest {
             if (data.hasOwnProperty('memory')) {
                 obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
             }
+            if (data.hasOwnProperty('kubernetes')) {
+                obj['kubernetes'] = KubernetesEnum.constructFromObject(data['kubernetes']);
+            }
             if (data.hasOwnProperty('min_running_nodes')) {
                 obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
             }
@@ -93,6 +100,9 @@ class ClusterRequest {
             }
             if (data.hasOwnProperty('disk_size')) {
                 obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
+            }
+            if (data.hasOwnProperty('ssh_key')) {
+                obj['ssh_key'] = ClusterBaseSshKey.constructFromObject(data['ssh_key']);
             }
             if (data.hasOwnProperty('features')) {
                 obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeaturesInner]);
@@ -145,6 +155,11 @@ ClusterRequest.prototype['cpu'] = 250;
 ClusterRequest.prototype['memory'] = 256;
 
 /**
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+ClusterRequest.prototype['kubernetes'] = undefined;
+
+/**
  * @member {Number} min_running_nodes
  * @default 1
  */
@@ -168,6 +183,11 @@ ClusterRequest.prototype['instance_type'] = undefined;
  * @default 20
  */
 ClusterRequest.prototype['disk_size'] = 20;
+
+/**
+ * @member {module:model/ClusterBaseSshKey} ssh_key
+ */
+ClusterRequest.prototype['ssh_key'] = undefined;
 
 /**
  * @member {Array.<module:model/ClusterFeatureRequestFeaturesInner>} features
@@ -210,6 +230,10 @@ ClusterBase.prototype['cpu'] = 250;
  */
 ClusterBase.prototype['memory'] = 256;
 /**
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+ClusterBase.prototype['kubernetes'] = undefined;
+/**
  * @member {Number} min_running_nodes
  * @default 1
  */
@@ -230,6 +254,10 @@ ClusterBase.prototype['instance_type'] = undefined;
  * @default 20
  */
 ClusterBase.prototype['disk_size'] = 20;
+/**
+ * @member {module:model/ClusterBaseSshKey} ssh_key
+ */
+ClusterBase.prototype['ssh_key'] = undefined;
 // Implement ClusterFeatureRequest interface:
 /**
  * @member {Array.<module:model/ClusterFeatureRequestFeaturesInner>} features

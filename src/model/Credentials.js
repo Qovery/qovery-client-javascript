@@ -22,12 +22,14 @@ class Credentials {
     /**
      * Constructs a new <code>Credentials</code>.
      * @alias module:model/Credentials
+     * @param host {String} 
+     * @param port {Number} 
      * @param login {String} 
      * @param password {String} 
      */
-    constructor(login, password) { 
+    constructor(host, port, login, password) { 
         
-        Credentials.initialize(this, login, password);
+        Credentials.initialize(this, host, port, login, password);
     }
 
     /**
@@ -35,7 +37,9 @@ class Credentials {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, login, password) { 
+    static initialize(obj, host, port, login, password) { 
+        obj['host'] = host;
+        obj['port'] = port;
         obj['login'] = login;
         obj['password'] = password;
     }
@@ -51,6 +55,12 @@ class Credentials {
         if (data) {
             obj = obj || new Credentials();
 
+            if (data.hasOwnProperty('host')) {
+                obj['host'] = ApiClient.convertToType(data['host'], 'String');
+            }
+            if (data.hasOwnProperty('port')) {
+                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
+            }
             if (data.hasOwnProperty('login')) {
                 obj['login'] = ApiClient.convertToType(data['login'], 'String');
             }
@@ -63,6 +73,16 @@ class Credentials {
 
 
 }
+
+/**
+ * @member {String} host
+ */
+Credentials.prototype['host'] = undefined;
+
+/**
+ * @member {Number} port
+ */
+Credentials.prototype['port'] = undefined;
 
 /**
  * @member {String} login

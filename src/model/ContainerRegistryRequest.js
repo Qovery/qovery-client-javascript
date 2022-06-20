@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ContainerRegistryKind from './ContainerRegistryKind';
+import ContainerRegistryKindEnum from './ContainerRegistryKindEnum';
 
 /**
  * The ContainerRegistryRequest model module.
@@ -24,7 +24,7 @@ class ContainerRegistryRequest {
      * Constructs a new <code>ContainerRegistryRequest</code>.
      * @alias module:model/ContainerRegistryRequest
      * @param name {String} 
-     * @param kind {module:model/ContainerRegistryKind} 
+     * @param kind {module:model/ContainerRegistryKindEnum} 
      * @param url {String} URL of the container registry
      * @param config {Object.<String, Object>} authentification configuration
      */
@@ -60,7 +60,7 @@ class ContainerRegistryRequest {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('kind')) {
-                obj['kind'] = ContainerRegistryKind.constructFromObject(data['kind']);
+                obj['kind'] = ContainerRegistryKindEnum.constructFromObject(data['kind']);
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -84,7 +84,7 @@ class ContainerRegistryRequest {
 ContainerRegistryRequest.prototype['name'] = undefined;
 
 /**
- * @member {module:model/ContainerRegistryKind} kind
+ * @member {module:model/ContainerRegistryKindEnum} kind
  */
 ContainerRegistryRequest.prototype['kind'] = undefined;
 

@@ -1,4 +1,4 @@
-# QoveryApi.ContainerRegistryKind
+# QoveryApi.ContainerRegistryKindEnum
 
 ## Enum
 

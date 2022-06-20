@@ -16,7 +16,9 @@ import Base from './Base';
 import CloudProviderEnum from './CloudProviderEnum';
 import ClusterAllOf from './ClusterAllOf';
 import ClusterBase from './ClusterBase';
+import ClusterBaseSshKey from './ClusterBaseSshKey';
 import ClusterFeature from './ClusterFeature';
+import KubernetesEnum from './KubernetesEnum';
 import StateEnum from './StateEnum';
 
 /**
@@ -36,10 +38,11 @@ class Cluster {
      * @param name {String} name is case-insensitive
      * @param cloudProvider {module:model/CloudProviderEnum} 
      * @param region {String} 
+     * @param kubernetes {module:model/KubernetesEnum} 
      */
-    constructor(id, createdAt, name, cloudProvider, region) { 
-        Base.initialize(this, id, createdAt);ClusterBase.initialize(this, name, cloudProvider, region);ClusterAllOf.initialize(this);
-        Cluster.initialize(this, id, createdAt, name, cloudProvider, region);
+    constructor(id, createdAt, name, cloudProvider, region, kubernetes) { 
+        Base.initialize(this, id, createdAt);ClusterBase.initialize(this, name, cloudProvider, region, kubernetes);ClusterAllOf.initialize(this);
+        Cluster.initialize(this, id, createdAt, name, cloudProvider, region, kubernetes);
     }
 
     /**
@@ -47,12 +50,13 @@ class Cluster {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, name, cloudProvider, region) { 
+    static initialize(obj, id, createdAt, name, cloudProvider, region, kubernetes) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['name'] = name;
         obj['cloud_provider'] = cloudProvider;
         obj['region'] = region;
+        obj['kubernetes'] = kubernetes;
     }
 
     /**
@@ -99,6 +103,9 @@ class Cluster {
             if (data.hasOwnProperty('memory')) {
                 obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
             }
+            if (data.hasOwnProperty('kubernetes')) {
+                obj['kubernetes'] = KubernetesEnum.constructFromObject(data['kubernetes']);
+            }
             if (data.hasOwnProperty('min_running_nodes')) {
                 obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
             }
@@ -110,6 +117,9 @@ class Cluster {
             }
             if (data.hasOwnProperty('disk_size')) {
                 obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
+            }
+            if (data.hasOwnProperty('ssh_key')) {
+                obj['ssh_key'] = ClusterBaseSshKey.constructFromObject(data['ssh_key']);
             }
             if (data.hasOwnProperty('estimated_cloud_provider_cost')) {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
@@ -192,6 +202,11 @@ Cluster.prototype['cpu'] = 250;
 Cluster.prototype['memory'] = 256;
 
 /**
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+Cluster.prototype['kubernetes'] = undefined;
+
+/**
  * @member {Number} min_running_nodes
  * @default 1
  */
@@ -215,6 +230,11 @@ Cluster.prototype['instance_type'] = undefined;
  * @default 20
  */
 Cluster.prototype['disk_size'] = 20;
+
+/**
+ * @member {module:model/ClusterBaseSshKey} ssh_key
+ */
+Cluster.prototype['ssh_key'] = undefined;
 
 /**
  * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
@@ -296,6 +316,10 @@ ClusterBase.prototype['cpu'] = 250;
  */
 ClusterBase.prototype['memory'] = 256;
 /**
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+ClusterBase.prototype['kubernetes'] = undefined;
+/**
  * @member {Number} min_running_nodes
  * @default 1
  */
@@ -316,6 +340,10 @@ ClusterBase.prototype['instance_type'] = undefined;
  * @default 20
  */
 ClusterBase.prototype['disk_size'] = 20;
+/**
+ * @member {module:model/ClusterBaseSshKey} ssh_key
+ */
+ClusterBase.prototype['ssh_key'] = undefined;
 // Implement ClusterAllOf interface:
 /**
  * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration

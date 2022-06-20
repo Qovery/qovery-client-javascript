@@ -13,11 +13,11 @@
 
 import ApiClient from '../ApiClient';
 /**
-* Enum class ContainerRegistryKind.
+* Enum class ContainerRegistryKindEnum.
 * @enum {}
 * @readonly
 */
-export default class ContainerRegistryKind {
+export default class ContainerRegistryKindEnum {
     
         /**
          * value: "ECR"
@@ -56,9 +56,9 @@ export default class ContainerRegistryKind {
     
 
     /**
-    * Returns a <code>ContainerRegistryKind</code> enum value from a Javascript object name.
+    * Returns a <code>ContainerRegistryKindEnum</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/ContainerRegistryKind} The enum <code>ContainerRegistryKind</code> value.
+    * @return {module:model/ContainerRegistryKindEnum} The enum <code>ContainerRegistryKindEnum</code> value.
     */
     static constructFromObject(object) {
         return object;

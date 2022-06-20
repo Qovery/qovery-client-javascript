@@ -13,6 +13,8 @@
 
 import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
+import ClusterBaseSshKey from './ClusterBaseSshKey';
+import KubernetesEnum from './KubernetesEnum';
 
 /**
  * The ClusterBase model module.
@@ -26,10 +28,11 @@ class ClusterBase {
      * @param name {String} name is case-insensitive
      * @param cloudProvider {module:model/CloudProviderEnum} 
      * @param region {String} 
+     * @param kubernetes {module:model/KubernetesEnum} 
      */
-    constructor(name, cloudProvider, region) { 
+    constructor(name, cloudProvider, region, kubernetes) { 
         
-        ClusterBase.initialize(this, name, cloudProvider, region);
+        ClusterBase.initialize(this, name, cloudProvider, region, kubernetes);
     }
 
     /**
@@ -37,10 +40,11 @@ class ClusterBase {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, cloudProvider, region) { 
+    static initialize(obj, name, cloudProvider, region, kubernetes) { 
         obj['name'] = name;
         obj['cloud_provider'] = cloudProvider;
         obj['region'] = region;
+        obj['kubernetes'] = kubernetes;
     }
 
     /**
@@ -75,6 +79,9 @@ class ClusterBase {
             if (data.hasOwnProperty('memory')) {
                 obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
             }
+            if (data.hasOwnProperty('kubernetes')) {
+                obj['kubernetes'] = KubernetesEnum.constructFromObject(data['kubernetes']);
+            }
             if (data.hasOwnProperty('min_running_nodes')) {
                 obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
             }
@@ -86,6 +93,9 @@ class ClusterBase {
             }
             if (data.hasOwnProperty('disk_size')) {
                 obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
+            }
+            if (data.hasOwnProperty('ssh_key')) {
+                obj['ssh_key'] = ClusterBaseSshKey.constructFromObject(data['ssh_key']);
             }
         }
         return obj;
@@ -135,6 +145,11 @@ ClusterBase.prototype['cpu'] = 250;
 ClusterBase.prototype['memory'] = 256;
 
 /**
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+ClusterBase.prototype['kubernetes'] = undefined;
+
+/**
  * @member {Number} min_running_nodes
  * @default 1
  */
@@ -158,6 +173,11 @@ ClusterBase.prototype['instance_type'] = undefined;
  * @default 20
  */
 ClusterBase.prototype['disk_size'] = 20;
+
+/**
+ * @member {module:model/ClusterBaseSshKey} ssh_key
+ */
+ClusterBase.prototype['ssh_key'] = undefined;
 
 
 

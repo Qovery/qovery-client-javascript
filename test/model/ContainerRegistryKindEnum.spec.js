@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.Credentials();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,35 +46,11 @@
       object[property] = value;
   }
 
-  describe('Credentials', function() {
-    it('should create an instance of Credentials', function() {
-      // uncomment below and update the code to test Credentials
-      //var instance = new QoveryApi.Credentials();
-      //expect(instance).to.be.a(QoveryApi.Credentials);
-    });
-
-    it('should have the property host (base name: "host")', function() {
-      // uncomment below and update the code to test the property host
-      //var instance = new QoveryApi.Credentials();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property port (base name: "port")', function() {
-      // uncomment below and update the code to test the property port
-      //var instance = new QoveryApi.Credentials();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property login (base name: "login")', function() {
-      // uncomment below and update the code to test the property login
-      //var instance = new QoveryApi.Credentials();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property password (base name: "password")', function() {
-      // uncomment below and update the code to test the property password
-      //var instance = new QoveryApi.Credentials();
-      //expect(instance).to.be();
+  describe('ContainerRegistryKindEnum', function() {
+    it('should create an instance of ContainerRegistryKindEnum', function() {
+      // uncomment below and update the code to test ContainerRegistryKindEnum
+      //var instance = new QoveryApi.ContainerRegistryKindEnum();
+      //expect(instance).to.be.a(QoveryApi.ContainerRegistryKindEnum);
     });
 
   });

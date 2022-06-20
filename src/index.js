@@ -66,6 +66,7 @@ import CluserCredentials from './model/CluserCredentials';
 import Cluster from './model/Cluster';
 import ClusterAllOf from './model/ClusterAllOf';
 import ClusterBase from './model/ClusterBase';
+import ClusterBaseSshKey from './model/ClusterBaseSshKey';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
@@ -108,7 +109,7 @@ import ContainerEditRequest from './model/ContainerEditRequest';
 import ContainerEditRequestAllOf from './model/ContainerEditRequestAllOf';
 import ContainerNetwork from './model/ContainerNetwork';
 import ContainerNetworkRequest from './model/ContainerNetworkRequest';
-import ContainerRegistryKind from './model/ContainerRegistryKind';
+import ContainerRegistryKindEnum from './model/ContainerRegistryKindEnum';
 import ContainerRegistryRequest from './model/ContainerRegistryRequest';
 import ContainerRegistryResponse from './model/ContainerRegistryResponse';
 import ContainerRequest from './model/ContainerRequest';
@@ -244,6 +245,7 @@ import InvoiceAllOf from './model/InvoiceAllOf';
 import InvoiceResponseList from './model/InvoiceResponseList';
 import InvoiceStatusEnum from './model/InvoiceStatusEnum';
 import Key from './model/Key';
+import KubernetesEnum from './model/KubernetesEnum';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
@@ -779,6 +781,12 @@ export {
     ClusterBase,
 
     /**
+     * The ClusterBaseSshKey model constructor.
+     * @property {module:model/ClusterBaseSshKey}
+     */
+    ClusterBaseSshKey,
+
+    /**
      * The ClusterCloudProviderInfo model constructor.
      * @property {module:model/ClusterCloudProviderInfo}
      */
@@ -1031,10 +1039,10 @@ export {
     ContainerNetworkRequest,
 
     /**
-     * The ContainerRegistryKind model constructor.
-     * @property {module:model/ContainerRegistryKind}
+     * The ContainerRegistryKindEnum model constructor.
+     * @property {module:model/ContainerRegistryKindEnum}
      */
-    ContainerRegistryKind,
+    ContainerRegistryKindEnum,
 
     /**
      * The ContainerRegistryRequest model constructor.
@@ -1845,6 +1853,12 @@ export {
      * @property {module:model/Key}
      */
     Key,
+
+    /**
+     * The KubernetesEnum model constructor.
+     * @property {module:model/KubernetesEnum}
+     */
+    KubernetesEnum,
 
     /**
      * The Link model constructor.

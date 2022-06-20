@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kind** | [**ContainerRegistryKind**](ContainerRegistryKind.md) |  | [optional] 
+**kind** | [**ContainerRegistryKindEnum**](ContainerRegistryKindEnum.md) |  | [optional] 
 **requiredConfig** | **{String: Object}** |  | [optional] 
 
 

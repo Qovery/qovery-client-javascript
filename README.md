@@ -235,6 +235,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**getOrganizationCloudProviderInfo**](docs/ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
 *QoveryApi.ClustersApi* | [**getOrganizationClusterStatus**](docs/ClustersApi.md#getOrganizationClusterStatus) | **GET** /organization/{organizationId}/cluster/status | List all clusters statuses
 *QoveryApi.ClustersApi* | [**getRoutingTable**](docs/ClustersApi.md#getRoutingTable) | **GET** /organization/{organizationId}/cluster/{clusterId}/routingTable | Get routing table
+*QoveryApi.ClustersApi* | [**listClusterLogs**](docs/ClustersApi.md#listClusterLogs) | **GET** /organization/{organizationId}/cluster/{clusterId}/logs | List Cluster Logs
 *QoveryApi.ClustersApi* | [**listOrganizationCluster**](docs/ClustersApi.md#listOrganizationCluster) | **GET** /organization/{organizationId}/cluster | List organization clusters
 *QoveryApi.ClustersApi* | [**specifyClusterCloudProviderInfo**](docs/ClustersApi.md#specifyClusterCloudProviderInfo) | **POST** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Specify cluster cloud provider info and credentials
 *QoveryApi.ClustersApi* | [**stopCluster**](docs/ClustersApi.md#stopCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/stop | Stop cluster
@@ -515,6 +516,13 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterFeatureValue](docs/ClusterFeatureValue.md)
  - [QoveryApi.ClusterInstanceTypeResponseList](docs/ClusterInstanceTypeResponseList.md)
  - [QoveryApi.ClusterInstanceTypeResponseListResultsInner](docs/ClusterInstanceTypeResponseListResultsInner.md)
+ - [QoveryApi.ClusterLogs](docs/ClusterLogs.md)
+ - [QoveryApi.ClusterLogsDetails](docs/ClusterLogsDetails.md)
+ - [QoveryApi.ClusterLogsError](docs/ClusterLogsError.md)
+ - [QoveryApi.ClusterLogsErrorEventDetails](docs/ClusterLogsErrorEventDetails.md)
+ - [QoveryApi.ClusterLogsErrorEventDetailsTransmitter](docs/ClusterLogsErrorEventDetailsTransmitter.md)
+ - [QoveryApi.ClusterLogsErrorEventDetailsUnderlyingError](docs/ClusterLogsErrorEventDetailsUnderlyingError.md)
+ - [QoveryApi.ClusterLogsMessage](docs/ClusterLogsMessage.md)
  - [QoveryApi.ClusterReadinessStatus](docs/ClusterReadinessStatus.md)
  - [QoveryApi.ClusterRegion](docs/ClusterRegion.md)
  - [QoveryApi.ClusterRegionResponseList](docs/ClusterRegionResponseList.md)
@@ -682,6 +690,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.KubernetesEnum](docs/KubernetesEnum.md)
  - [QoveryApi.Link](docs/Link.md)
  - [QoveryApi.LinkResponseList](docs/LinkResponseList.md)
+ - [QoveryApi.ListClusterLogs200Response](docs/ListClusterLogs200Response.md)
  - [QoveryApi.ListContainerRegistry200Response](docs/ListContainerRegistry200Response.md)
  - [QoveryApi.Log](docs/Log.md)
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)

@@ -148,6 +148,16 @@
         done();
       });
     });
+    describe('listClusterLogs', function() {
+      it('should call listClusterLogs successfully', function(done) {
+        //uncomment below and update the code to test listClusterLogs
+        //instance.listClusterLogs(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listOrganizationCluster', function() {
       it('should call listOrganizationCluster successfully', function(done) {
         //uncomment below and update the code to test listOrganizationCluster

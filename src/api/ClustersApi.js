@@ -23,6 +23,7 @@ import ClusterRoutingTable from '../model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from '../model/ClusterRoutingTableRequest';
 import ClusterStatus from '../model/ClusterStatus';
 import ClusterStatusResponseList from '../model/ClusterStatusResponseList';
+import ListClusterLogs200Response from '../model/ListClusterLogs200Response';
 
 /**
 * Clusters service.
@@ -518,6 +519,55 @@ export default class ClustersApi {
       let returnType = ClusterRoutingTable;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/routingTable', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listClusterLogs operation.
+     * @callback module:api/ClustersApi~listClusterLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ListClusterLogs200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List Cluster Logs
+     * List Cluster Logs
+     * @param {String} organizationId Organization ID
+     * @param {String} clusterId Cluster ID
+     * @param {module:api/ClustersApi~listClusterLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ListClusterLogs200Response}
+     */
+    listClusterLogs(organizationId, clusterId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling listClusterLogs");
+      }
+      // verify the required parameter 'clusterId' is set
+      if (clusterId === undefined || clusterId === null) {
+        throw new Error("Missing the required parameter 'clusterId' when calling listClusterLogs");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'clusterId': clusterId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ListClusterLogs200Response;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/cluster/{clusterId}/logs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

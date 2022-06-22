@@ -78,6 +78,13 @@ import ClusterFeatureResponseList from './model/ClusterFeatureResponseList';
 import ClusterFeatureValue from './model/ClusterFeatureValue';
 import ClusterInstanceTypeResponseList from './model/ClusterInstanceTypeResponseList';
 import ClusterInstanceTypeResponseListResultsInner from './model/ClusterInstanceTypeResponseListResultsInner';
+import ClusterLogs from './model/ClusterLogs';
+import ClusterLogsDetails from './model/ClusterLogsDetails';
+import ClusterLogsError from './model/ClusterLogsError';
+import ClusterLogsErrorEventDetails from './model/ClusterLogsErrorEventDetails';
+import ClusterLogsErrorEventDetailsTransmitter from './model/ClusterLogsErrorEventDetailsTransmitter';
+import ClusterLogsErrorEventDetailsUnderlyingError from './model/ClusterLogsErrorEventDetailsUnderlyingError';
+import ClusterLogsMessage from './model/ClusterLogsMessage';
 import ClusterReadinessStatus from './model/ClusterReadinessStatus';
 import ClusterRegion from './model/ClusterRegion';
 import ClusterRegionResponseList from './model/ClusterRegionResponseList';
@@ -245,6 +252,7 @@ import Key from './model/Key';
 import KubernetesEnum from './model/KubernetesEnum';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
+import ListClusterLogs200Response from './model/ListClusterLogs200Response';
 import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
@@ -852,6 +860,48 @@ export {
      * @property {module:model/ClusterInstanceTypeResponseListResultsInner}
      */
     ClusterInstanceTypeResponseListResultsInner,
+
+    /**
+     * The ClusterLogs model constructor.
+     * @property {module:model/ClusterLogs}
+     */
+    ClusterLogs,
+
+    /**
+     * The ClusterLogsDetails model constructor.
+     * @property {module:model/ClusterLogsDetails}
+     */
+    ClusterLogsDetails,
+
+    /**
+     * The ClusterLogsError model constructor.
+     * @property {module:model/ClusterLogsError}
+     */
+    ClusterLogsError,
+
+    /**
+     * The ClusterLogsErrorEventDetails model constructor.
+     * @property {module:model/ClusterLogsErrorEventDetails}
+     */
+    ClusterLogsErrorEventDetails,
+
+    /**
+     * The ClusterLogsErrorEventDetailsTransmitter model constructor.
+     * @property {module:model/ClusterLogsErrorEventDetailsTransmitter}
+     */
+    ClusterLogsErrorEventDetailsTransmitter,
+
+    /**
+     * The ClusterLogsErrorEventDetailsUnderlyingError model constructor.
+     * @property {module:model/ClusterLogsErrorEventDetailsUnderlyingError}
+     */
+    ClusterLogsErrorEventDetailsUnderlyingError,
+
+    /**
+     * The ClusterLogsMessage model constructor.
+     * @property {module:model/ClusterLogsMessage}
+     */
+    ClusterLogsMessage,
 
     /**
      * The ClusterReadinessStatus model constructor.
@@ -1854,6 +1904,12 @@ export {
      * @property {module:model/LinkResponseList}
      */
     LinkResponseList,
+
+    /**
+     * The ListClusterLogs200Response model constructor.
+     * @property {module:model/ListClusterLogs200Response}
+     */
+    ListClusterLogs200Response,
 
     /**
      * The ListContainerRegistry200Response model constructor.

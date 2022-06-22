@@ -85,6 +85,13 @@ docs/ClusterFeatureResponseList.md
 docs/ClusterFeatureValue.md
 docs/ClusterInstanceTypeResponseList.md
 docs/ClusterInstanceTypeResponseListResultsInner.md
+docs/ClusterLogs.md
+docs/ClusterLogsDetails.md
+docs/ClusterLogsError.md
+docs/ClusterLogsErrorEventDetails.md
+docs/ClusterLogsErrorEventDetailsTransmitter.md
+docs/ClusterLogsErrorEventDetailsUnderlyingError.md
+docs/ClusterLogsMessage.md
 docs/ClusterReadinessStatus.md
 docs/ClusterRegion.md
 docs/ClusterRegionResponseList.md
@@ -287,6 +294,7 @@ docs/Key.md
 docs/KubernetesEnum.md
 docs/Link.md
 docs/LinkResponseList.md
+docs/ListClusterLogs200Response.md
 docs/ListContainerRegistry200Response.md
 docs/Log.md
 docs/LogPaginatedResponseList.md
@@ -548,6 +556,13 @@ src/model/ClusterFeatureResponseList.js
 src/model/ClusterFeatureValue.js
 src/model/ClusterInstanceTypeResponseList.js
 src/model/ClusterInstanceTypeResponseListResultsInner.js
+src/model/ClusterLogs.js
+src/model/ClusterLogsDetails.js
+src/model/ClusterLogsError.js
+src/model/ClusterLogsErrorEventDetails.js
+src/model/ClusterLogsErrorEventDetailsTransmitter.js
+src/model/ClusterLogsErrorEventDetailsUnderlyingError.js
+src/model/ClusterLogsMessage.js
 src/model/ClusterReadinessStatus.js
 src/model/ClusterRegion.js
 src/model/ClusterRegionResponseList.js
@@ -715,6 +730,7 @@ src/model/Key.js
 src/model/KubernetesEnum.js
 src/model/Link.js
 src/model/LinkResponseList.js
+src/model/ListClusterLogs200Response.js
 src/model/ListContainerRegistry200Response.js
 src/model/Log.js
 src/model/LogPaginatedResponseList.js
@@ -958,6 +974,13 @@ test/model/ClusterFeatureResponseList.spec.js
 test/model/ClusterFeatureValue.spec.js
 test/model/ClusterInstanceTypeResponseList.spec.js
 test/model/ClusterInstanceTypeResponseListResultsInner.spec.js
+test/model/ClusterLogs.spec.js
+test/model/ClusterLogsDetails.spec.js
+test/model/ClusterLogsError.spec.js
+test/model/ClusterLogsErrorEventDetails.spec.js
+test/model/ClusterLogsErrorEventDetailsTransmitter.spec.js
+test/model/ClusterLogsErrorEventDetailsUnderlyingError.spec.js
+test/model/ClusterLogsMessage.spec.js
 test/model/ClusterReadinessStatus.spec.js
 test/model/ClusterRegion.spec.js
 test/model/ClusterRegionResponseList.spec.js
@@ -1125,6 +1148,7 @@ test/model/Key.spec.js
 test/model/KubernetesEnum.spec.js
 test/model/Link.spec.js
 test/model/LinkResponseList.spec.js
+test/model/ListClusterLogs200Response.spec.js
 test/model/ListContainerRegistry200Response.spec.js
 test/model/Log.spec.js
 test/model/LogPaginatedResponseList.spec.js

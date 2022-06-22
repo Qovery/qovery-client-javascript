@@ -72,8 +72,8 @@ docs/CloudProviderResponseList.md
 docs/CluserCredentials.md
 docs/Cluster.md
 docs/ClusterAllOf.md
-docs/ClusterBase.md
-docs/ClusterBaseSshKey.md
+docs/ClusterAllOfFeatures.md
+docs/ClusterAllOfSshKeys.md
 docs/ClusterCloudProviderInfo.md
 docs/ClusterCloudProviderInfoCredentials.md
 docs/ClusterCloudProviderInfoRequest.md
@@ -81,8 +81,6 @@ docs/ClusterCredentials.md
 docs/ClusterCredentialsResponseList.md
 docs/ClusterFeature.md
 docs/ClusterFeatureAcceptedValuesInner.md
-docs/ClusterFeatureRequest.md
-docs/ClusterFeatureRequestFeaturesInner.md
 docs/ClusterFeatureResponseList.md
 docs/ClusterFeatureValue.md
 docs/ClusterInstanceTypeResponseList.md
@@ -91,6 +89,8 @@ docs/ClusterReadinessStatus.md
 docs/ClusterRegion.md
 docs/ClusterRegionResponseList.md
 docs/ClusterRequest.md
+docs/ClusterRequestFeatures.md
+docs/ClusterRequestFeaturesFeaturesInner.md
 docs/ClusterResponseList.md
 docs/ClusterRoutingTable.md
 docs/ClusterRoutingTableRequest.md
@@ -535,8 +535,8 @@ src/model/CloudProviderResponseList.js
 src/model/CluserCredentials.js
 src/model/Cluster.js
 src/model/ClusterAllOf.js
-src/model/ClusterBase.js
-src/model/ClusterBaseSshKey.js
+src/model/ClusterAllOfFeatures.js
+src/model/ClusterAllOfSshKeys.js
 src/model/ClusterCloudProviderInfo.js
 src/model/ClusterCloudProviderInfoCredentials.js
 src/model/ClusterCloudProviderInfoRequest.js
@@ -544,8 +544,6 @@ src/model/ClusterCredentials.js
 src/model/ClusterCredentialsResponseList.js
 src/model/ClusterFeature.js
 src/model/ClusterFeatureAcceptedValuesInner.js
-src/model/ClusterFeatureRequest.js
-src/model/ClusterFeatureRequestFeaturesInner.js
 src/model/ClusterFeatureResponseList.js
 src/model/ClusterFeatureValue.js
 src/model/ClusterInstanceTypeResponseList.js
@@ -554,6 +552,8 @@ src/model/ClusterReadinessStatus.js
 src/model/ClusterRegion.js
 src/model/ClusterRegionResponseList.js
 src/model/ClusterRequest.js
+src/model/ClusterRequestFeatures.js
+src/model/ClusterRequestFeaturesFeaturesInner.js
 src/model/ClusterResponseList.js
 src/model/ClusterRoutingTable.js
 src/model/ClusterRoutingTableRequest.js
@@ -945,8 +945,8 @@ test/model/CloudProviderResponseList.spec.js
 test/model/CluserCredentials.spec.js
 test/model/Cluster.spec.js
 test/model/ClusterAllOf.spec.js
-test/model/ClusterBase.spec.js
-test/model/ClusterBaseSshKey.spec.js
+test/model/ClusterAllOfFeatures.spec.js
+test/model/ClusterAllOfSshKeys.spec.js
 test/model/ClusterCloudProviderInfo.spec.js
 test/model/ClusterCloudProviderInfoCredentials.spec.js
 test/model/ClusterCloudProviderInfoRequest.spec.js
@@ -954,8 +954,6 @@ test/model/ClusterCredentials.spec.js
 test/model/ClusterCredentialsResponseList.spec.js
 test/model/ClusterFeature.spec.js
 test/model/ClusterFeatureAcceptedValuesInner.spec.js
-test/model/ClusterFeatureRequest.spec.js
-test/model/ClusterFeatureRequestFeaturesInner.spec.js
 test/model/ClusterFeatureResponseList.spec.js
 test/model/ClusterFeatureValue.spec.js
 test/model/ClusterInstanceTypeResponseList.spec.js
@@ -964,6 +962,8 @@ test/model/ClusterReadinessStatus.spec.js
 test/model/ClusterRegion.spec.js
 test/model/ClusterRegionResponseList.spec.js
 test/model/ClusterRequest.spec.js
+test/model/ClusterRequestFeatures.spec.js
+test/model/ClusterRequestFeaturesFeaturesInner.spec.js
 test/model/ClusterResponseList.spec.js
 test/model/ClusterRoutingTable.spec.js
 test/model/ClusterRoutingTableRequest.spec.js

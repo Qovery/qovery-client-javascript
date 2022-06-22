@@ -13,10 +13,8 @@
 
 import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
-import ClusterBase from './ClusterBase';
-import ClusterBaseSshKey from './ClusterBaseSshKey';
-import ClusterFeatureRequest from './ClusterFeatureRequest';
-import ClusterFeatureRequestFeaturesInner from './ClusterFeatureRequestFeaturesInner';
+import ClusterAllOfSshKeys from './ClusterAllOfSshKeys';
+import ClusterRequestFeatures from './ClusterRequestFeatures';
 import KubernetesEnum from './KubernetesEnum';
 
 /**
@@ -28,16 +26,13 @@ class ClusterRequest {
     /**
      * Constructs a new <code>ClusterRequest</code>.
      * @alias module:model/ClusterRequest
-     * @implements module:model/ClusterBase
-     * @implements module:model/ClusterFeatureRequest
      * @param name {String} name is case-insensitive
-     * @param cloudProvider {module:model/CloudProviderEnum} 
      * @param region {String} 
-     * @param kubernetes {module:model/KubernetesEnum} 
+     * @param cloudProvider {module:model/CloudProviderEnum} 
      */
-    constructor(name, cloudProvider, region, kubernetes) { 
-        ClusterBase.initialize(this, name, cloudProvider, region, kubernetes);ClusterFeatureRequest.initialize(this);
-        ClusterRequest.initialize(this, name, cloudProvider, region, kubernetes);
+    constructor(name, region, cloudProvider) { 
+        
+        ClusterRequest.initialize(this, name, region, cloudProvider);
     }
 
     /**
@@ -45,11 +40,10 @@ class ClusterRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, cloudProvider, region, kubernetes) { 
+    static initialize(obj, name, region, cloudProvider) { 
         obj['name'] = name;
-        obj['cloud_provider'] = cloudProvider;
         obj['region'] = region;
-        obj['kubernetes'] = kubernetes;
+        obj['cloud_provider'] = cloudProvider;
     }
 
     /**
@@ -62,8 +56,6 @@ class ClusterRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ClusterRequest();
-            ClusterBase.constructFromObject(data, obj);
-            ClusterFeatureRequest.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -71,23 +63,11 @@ class ClusterRequest {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('cloud_provider')) {
-                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
-            }
             if (data.hasOwnProperty('region')) {
                 obj['region'] = ApiClient.convertToType(data['region'], 'String');
             }
-            if (data.hasOwnProperty('auto_update')) {
-                obj['auto_update'] = ApiClient.convertToType(data['auto_update'], 'Boolean');
-            }
-            if (data.hasOwnProperty('cpu')) {
-                obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
-            }
-            if (data.hasOwnProperty('memory')) {
-                obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
-            }
-            if (data.hasOwnProperty('kubernetes')) {
-                obj['kubernetes'] = KubernetesEnum.constructFromObject(data['kubernetes']);
+            if (data.hasOwnProperty('cloud_provider')) {
+                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
             }
             if (data.hasOwnProperty('min_running_nodes')) {
                 obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
@@ -95,17 +75,20 @@ class ClusterRequest {
             if (data.hasOwnProperty('max_running_nodes')) {
                 obj['max_running_nodes'] = ApiClient.convertToType(data['max_running_nodes'], 'Number');
             }
-            if (data.hasOwnProperty('instance_type')) {
-                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
-            }
             if (data.hasOwnProperty('disk_size')) {
                 obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
             }
-            if (data.hasOwnProperty('ssh_key')) {
-                obj['ssh_key'] = ClusterBaseSshKey.constructFromObject(data['ssh_key']);
+            if (data.hasOwnProperty('instance_type')) {
+                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            }
+            if (data.hasOwnProperty('kubernetes')) {
+                obj['kubernetes'] = KubernetesEnum.constructFromObject(data['kubernetes']);
+            }
+            if (data.hasOwnProperty('ssh_keys')) {
+                obj['ssh_keys'] = ClusterAllOfSshKeys.constructFromObject(data['ssh_keys']);
             }
             if (data.hasOwnProperty('features')) {
-                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeaturesInner]);
+                obj['features'] = ClusterRequestFeatures.constructFromObject(data['features']);
             }
         }
         return obj;
@@ -126,38 +109,14 @@ ClusterRequest.prototype['name'] = undefined;
 ClusterRequest.prototype['description'] = undefined;
 
 /**
- * @member {module:model/CloudProviderEnum} cloud_provider
- */
-ClusterRequest.prototype['cloud_provider'] = undefined;
-
-/**
  * @member {String} region
  */
 ClusterRequest.prototype['region'] = undefined;
 
 /**
- * @member {Boolean} auto_update
+ * @member {module:model/CloudProviderEnum} cloud_provider
  */
-ClusterRequest.prototype['auto_update'] = undefined;
-
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 250
- */
-ClusterRequest.prototype['cpu'] = 250;
-
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 256
- */
-ClusterRequest.prototype['memory'] = 256;
-
-/**
- * @member {module:model/KubernetesEnum} kubernetes
- */
-ClusterRequest.prototype['kubernetes'] = undefined;
+ClusterRequest.prototype['cloud_provider'] = undefined;
 
 /**
  * @member {Number} min_running_nodes
@@ -172,12 +131,6 @@ ClusterRequest.prototype['min_running_nodes'] = 1;
 ClusterRequest.prototype['max_running_nodes'] = 1;
 
 /**
- * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
- * @member {String} instance_type
- */
-ClusterRequest.prototype['instance_type'] = undefined;
-
-/**
  * Unit is in GB. The disk size to be used for the node configuration
  * @member {Number} disk_size
  * @default 20
@@ -185,84 +138,27 @@ ClusterRequest.prototype['instance_type'] = undefined;
 ClusterRequest.prototype['disk_size'] = 20;
 
 /**
- * @member {module:model/ClusterBaseSshKey} ssh_key
+ * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
+ * @member {String} instance_type
  */
-ClusterRequest.prototype['ssh_key'] = undefined;
+ClusterRequest.prototype['instance_type'] = undefined;
 
 /**
- * @member {Array.<module:model/ClusterFeatureRequestFeaturesInner>} features
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+ClusterRequest.prototype['kubernetes'] = undefined;
+
+/**
+ * @member {module:model/ClusterAllOfSshKeys} ssh_keys
+ */
+ClusterRequest.prototype['ssh_keys'] = undefined;
+
+/**
+ * @member {module:model/ClusterRequestFeatures} features
  */
 ClusterRequest.prototype['features'] = undefined;
 
 
-// Implement ClusterBase interface:
-/**
- * name is case-insensitive
- * @member {String} name
- */
-ClusterBase.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-ClusterBase.prototype['description'] = undefined;
-/**
- * @member {module:model/CloudProviderEnum} cloud_provider
- */
-ClusterBase.prototype['cloud_provider'] = undefined;
-/**
- * @member {String} region
- */
-ClusterBase.prototype['region'] = undefined;
-/**
- * @member {Boolean} auto_update
- */
-ClusterBase.prototype['auto_update'] = undefined;
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 250
- */
-ClusterBase.prototype['cpu'] = 250;
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 256
- */
-ClusterBase.prototype['memory'] = 256;
-/**
- * @member {module:model/KubernetesEnum} kubernetes
- */
-ClusterBase.prototype['kubernetes'] = undefined;
-/**
- * @member {Number} min_running_nodes
- * @default 1
- */
-ClusterBase.prototype['min_running_nodes'] = 1;
-/**
- * @member {Number} max_running_nodes
- * @default 1
- */
-ClusterBase.prototype['max_running_nodes'] = 1;
-/**
- * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
- * @member {String} instance_type
- */
-ClusterBase.prototype['instance_type'] = undefined;
-/**
- * Unit is in GB. The disk size to be used for the node configuration
- * @member {Number} disk_size
- * @default 20
- */
-ClusterBase.prototype['disk_size'] = 20;
-/**
- * @member {module:model/ClusterBaseSshKey} ssh_key
- */
-ClusterBase.prototype['ssh_key'] = undefined;
-// Implement ClusterFeatureRequest interface:
-/**
- * @member {Array.<module:model/ClusterFeatureRequestFeaturesInner>} features
- */
-ClusterFeatureRequest.prototype['features'] = undefined;
 
 
 

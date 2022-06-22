@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterFeatureRequestFeaturesInner from './ClusterFeatureRequestFeaturesInner';
 
 /**
- * The ClusterFeatureRequest model module.
- * @module model/ClusterFeatureRequest
+ * The ClusterAllOfSshKeys model module.
+ * @module model/ClusterAllOfSshKeys
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ClusterFeatureRequest {
+class ClusterAllOfSshKeys {
     /**
-     * Constructs a new <code>ClusterFeatureRequest</code>.
-     * @alias module:model/ClusterFeatureRequest
+     * Constructs a new <code>ClusterAllOfSshKeys</code>.
+     * Indicate your public ssh_key to remotely connect to your EC2 instance.
+     * @alias module:model/ClusterAllOfSshKeys
      */
     constructor() { 
         
-        ClusterFeatureRequest.initialize(this);
+        ClusterAllOfSshKeys.initialize(this);
     }
 
     /**
@@ -38,18 +38,18 @@ class ClusterFeatureRequest {
     }
 
     /**
-     * Constructs a <code>ClusterFeatureRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterAllOfSshKeys</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ClusterFeatureRequest} obj Optional instance to populate.
-     * @return {module:model/ClusterFeatureRequest} The populated <code>ClusterFeatureRequest</code> instance.
+     * @param {module:model/ClusterAllOfSshKeys} obj Optional instance to populate.
+     * @return {module:model/ClusterAllOfSshKeys} The populated <code>ClusterAllOfSshKeys</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ClusterFeatureRequest();
+            obj = obj || new ClusterAllOfSshKeys();
 
-            if (data.hasOwnProperty('features')) {
-                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeatureRequestFeaturesInner]);
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], ['String']);
             }
         }
         return obj;
@@ -59,14 +59,14 @@ class ClusterFeatureRequest {
 }
 
 /**
- * @member {Array.<module:model/ClusterFeatureRequestFeaturesInner>} features
+ * @member {Array.<String>} results
  */
-ClusterFeatureRequest.prototype['features'] = undefined;
+ClusterAllOfSshKeys.prototype['results'] = undefined;
 
 
 
 
 
 
-export default ClusterFeatureRequest;
+export default ClusterAllOfSshKeys;
 

@@ -1,4 +1,4 @@
-# QoveryApi.ClusterFeatureRequestFeaturesInner
+# QoveryApi.ClusterRequestFeaturesFeaturesInner
 
 ## Properties
 

@@ -84,38 +84,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property cloudProvider (base name: "cloud_provider")', function() {
-      // uncomment below and update the code to test the property cloudProvider
-      //var instance = new QoveryApi.Cluster();
-      //expect(instance).to.be();
-    });
-
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });
 
-    it('should have the property autoUpdate (base name: "auto_update")', function() {
-      // uncomment below and update the code to test the property autoUpdate
-      //var instance = new QoveryApi.Cluster();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cpu (base name: "cpu")', function() {
-      // uncomment below and update the code to test the property cpu
-      //var instance = new QoveryApi.Cluster();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property memory (base name: "memory")', function() {
-      // uncomment below and update the code to test the property memory
-      //var instance = new QoveryApi.Cluster();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property kubernetes (base name: "kubernetes")', function() {
-      // uncomment below and update the code to test the property kubernetes
+    it('should have the property cloudProvider (base name: "cloud_provider")', function() {
+      // uncomment below and update the code to test the property cloudProvider
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });
@@ -132,20 +108,32 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property instanceType (base name: "instance_type")', function() {
-      // uncomment below and update the code to test the property instanceType
-      //var instance = new QoveryApi.Cluster();
-      //expect(instance).to.be();
-    });
-
     it('should have the property diskSize (base name: "disk_size")', function() {
       // uncomment below and update the code to test the property diskSize
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });
 
-    it('should have the property sshKey (base name: "ssh_key")', function() {
-      // uncomment below and update the code to test the property sshKey
+    it('should have the property instanceType (base name: "instance_type")', function() {
+      // uncomment below and update the code to test the property instanceType
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property kubernetes (base name: "kubernetes")', function() {
+      // uncomment below and update the code to test the property kubernetes
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cpu (base name: "cpu")', function() {
+      // uncomment below and update the code to test the property cpu
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property memory (base name: "memory")', function() {
+      // uncomment below and update the code to test the property memory
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });
@@ -158,12 +146,6 @@
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.Cluster();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property features (base name: "features")', function() {
-      // uncomment below and update the code to test the property features
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });
@@ -182,6 +164,18 @@
 
     it('should have the property isDefault (base name: "is_default")', function() {
       // uncomment below and update the code to test the property isDefault
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property sshKeys (base name: "ssh_keys")', function() {
+      // uncomment below and update the code to test the property sshKeys
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property features (base name: "features")', function() {
+      // uncomment below and update the code to test the property features
       //var instance = new QoveryApi.Cluster();
       //expect(instance).to.be();
     });

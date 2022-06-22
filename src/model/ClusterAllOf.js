@@ -12,7 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterFeature from './ClusterFeature';
+import CloudProviderEnum from './CloudProviderEnum';
+import ClusterAllOfFeatures from './ClusterAllOfFeatures';
+import ClusterAllOfSshKeys from './ClusterAllOfSshKeys';
+import KubernetesEnum from './KubernetesEnum';
 import StateEnum from './StateEnum';
 
 /**
@@ -24,10 +27,13 @@ class ClusterAllOf {
     /**
      * Constructs a new <code>ClusterAllOf</code>.
      * @alias module:model/ClusterAllOf
+     * @param name {String} name is case-insensitive
+     * @param region {String} 
+     * @param cloudProvider {module:model/CloudProviderEnum} 
      */
-    constructor() { 
+    constructor(name, region, cloudProvider) { 
         
-        ClusterAllOf.initialize(this);
+        ClusterAllOf.initialize(this, name, region, cloudProvider);
     }
 
     /**
@@ -35,7 +41,10 @@ class ClusterAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, name, region, cloudProvider) { 
+        obj['name'] = name;
+        obj['region'] = region;
+        obj['cloud_provider'] = cloudProvider;
     }
 
     /**
@@ -49,14 +58,44 @@ class ClusterAllOf {
         if (data) {
             obj = obj || new ClusterAllOf();
 
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('region')) {
+                obj['region'] = ApiClient.convertToType(data['region'], 'String');
+            }
+            if (data.hasOwnProperty('cloud_provider')) {
+                obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
+            }
+            if (data.hasOwnProperty('min_running_nodes')) {
+                obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
+            }
+            if (data.hasOwnProperty('max_running_nodes')) {
+                obj['max_running_nodes'] = ApiClient.convertToType(data['max_running_nodes'], 'Number');
+            }
+            if (data.hasOwnProperty('disk_size')) {
+                obj['disk_size'] = ApiClient.convertToType(data['disk_size'], 'Number');
+            }
+            if (data.hasOwnProperty('instance_type')) {
+                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            }
+            if (data.hasOwnProperty('kubernetes')) {
+                obj['kubernetes'] = KubernetesEnum.constructFromObject(data['kubernetes']);
+            }
+            if (data.hasOwnProperty('cpu')) {
+                obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
+            }
+            if (data.hasOwnProperty('memory')) {
+                obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
+            }
             if (data.hasOwnProperty('estimated_cloud_provider_cost')) {
                 obj['estimated_cloud_provider_cost'] = ApiClient.convertToType(data['estimated_cloud_provider_cost'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = StateEnum.constructFromObject(data['status']);
-            }
-            if (data.hasOwnProperty('features')) {
-                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeature]);
             }
             if (data.hasOwnProperty('has_access')) {
                 obj['has_access'] = ApiClient.convertToType(data['has_access'], 'Boolean');
@@ -67,12 +106,81 @@ class ClusterAllOf {
             if (data.hasOwnProperty('is_default')) {
                 obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
             }
+            if (data.hasOwnProperty('ssh_keys')) {
+                obj['ssh_keys'] = ClusterAllOfSshKeys.constructFromObject(data['ssh_keys']);
+            }
+            if (data.hasOwnProperty('features')) {
+                obj['features'] = ApiClient.convertToType(data['features'], [ClusterAllOfFeatures]);
+            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * name is case-insensitive
+ * @member {String} name
+ */
+ClusterAllOf.prototype['name'] = undefined;
+
+/**
+ * @member {String} description
+ */
+ClusterAllOf.prototype['description'] = undefined;
+
+/**
+ * @member {String} region
+ */
+ClusterAllOf.prototype['region'] = undefined;
+
+/**
+ * @member {module:model/CloudProviderEnum} cloud_provider
+ */
+ClusterAllOf.prototype['cloud_provider'] = undefined;
+
+/**
+ * @member {Number} min_running_nodes
+ * @default 1
+ */
+ClusterAllOf.prototype['min_running_nodes'] = 1;
+
+/**
+ * @member {Number} max_running_nodes
+ * @default 1
+ */
+ClusterAllOf.prototype['max_running_nodes'] = 1;
+
+/**
+ * Unit is in GB. The disk size to be used for the node configuration
+ * @member {Number} disk_size
+ * @default 20
+ */
+ClusterAllOf.prototype['disk_size'] = 20;
+
+/**
+ * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
+ * @member {String} instance_type
+ */
+ClusterAllOf.prototype['instance_type'] = undefined;
+
+/**
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+ClusterAllOf.prototype['kubernetes'] = undefined;
+
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ */
+ClusterAllOf.prototype['cpu'] = undefined;
+
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ */
+ClusterAllOf.prototype['memory'] = undefined;
 
 /**
  * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
@@ -84,11 +192,6 @@ ClusterAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
  * @member {module:model/StateEnum} status
  */
 ClusterAllOf.prototype['status'] = undefined;
-
-/**
- * @member {Array.<module:model/ClusterFeature>} features
- */
-ClusterAllOf.prototype['features'] = undefined;
 
 /**
  * @member {Boolean} has_access
@@ -104,6 +207,16 @@ ClusterAllOf.prototype['version'] = undefined;
  * @member {Boolean} is_default
  */
 ClusterAllOf.prototype['is_default'] = undefined;
+
+/**
+ * @member {module:model/ClusterAllOfSshKeys} ssh_keys
+ */
+ClusterAllOf.prototype['ssh_keys'] = undefined;
+
+/**
+ * @member {Array.<module:model/ClusterAllOfFeatures>} features
+ */
+ClusterAllOf.prototype['features'] = undefined;
 
 
 

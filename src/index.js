@@ -65,8 +65,8 @@ import CloudProviderResponseList from './model/CloudProviderResponseList';
 import CluserCredentials from './model/CluserCredentials';
 import Cluster from './model/Cluster';
 import ClusterAllOf from './model/ClusterAllOf';
-import ClusterBase from './model/ClusterBase';
-import ClusterBaseSshKey from './model/ClusterBaseSshKey';
+import ClusterAllOfFeatures from './model/ClusterAllOfFeatures';
+import ClusterAllOfSshKeys from './model/ClusterAllOfSshKeys';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
@@ -74,8 +74,6 @@ import ClusterCredentials from './model/ClusterCredentials';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
 import ClusterFeature from './model/ClusterFeature';
 import ClusterFeatureAcceptedValuesInner from './model/ClusterFeatureAcceptedValuesInner';
-import ClusterFeatureRequest from './model/ClusterFeatureRequest';
-import ClusterFeatureRequestFeaturesInner from './model/ClusterFeatureRequestFeaturesInner';
 import ClusterFeatureResponseList from './model/ClusterFeatureResponseList';
 import ClusterFeatureValue from './model/ClusterFeatureValue';
 import ClusterInstanceTypeResponseList from './model/ClusterInstanceTypeResponseList';
@@ -84,6 +82,8 @@ import ClusterReadinessStatus from './model/ClusterReadinessStatus';
 import ClusterRegion from './model/ClusterRegion';
 import ClusterRegionResponseList from './model/ClusterRegionResponseList';
 import ClusterRequest from './model/ClusterRequest';
+import ClusterRequestFeatures from './model/ClusterRequestFeatures';
+import ClusterRequestFeaturesFeaturesInner from './model/ClusterRequestFeaturesFeaturesInner';
 import ClusterResponseList from './model/ClusterResponseList';
 import ClusterRoutingTable from './model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
@@ -776,16 +776,16 @@ export {
     ClusterAllOf,
 
     /**
-     * The ClusterBase model constructor.
-     * @property {module:model/ClusterBase}
+     * The ClusterAllOfFeatures model constructor.
+     * @property {module:model/ClusterAllOfFeatures}
      */
-    ClusterBase,
+    ClusterAllOfFeatures,
 
     /**
-     * The ClusterBaseSshKey model constructor.
-     * @property {module:model/ClusterBaseSshKey}
+     * The ClusterAllOfSshKeys model constructor.
+     * @property {module:model/ClusterAllOfSshKeys}
      */
-    ClusterBaseSshKey,
+    ClusterAllOfSshKeys,
 
     /**
      * The ClusterCloudProviderInfo model constructor.
@@ -828,18 +828,6 @@ export {
      * @property {module:model/ClusterFeatureAcceptedValuesInner}
      */
     ClusterFeatureAcceptedValuesInner,
-
-    /**
-     * The ClusterFeatureRequest model constructor.
-     * @property {module:model/ClusterFeatureRequest}
-     */
-    ClusterFeatureRequest,
-
-    /**
-     * The ClusterFeatureRequestFeaturesInner model constructor.
-     * @property {module:model/ClusterFeatureRequestFeaturesInner}
-     */
-    ClusterFeatureRequestFeaturesInner,
 
     /**
      * The ClusterFeatureResponseList model constructor.
@@ -888,6 +876,18 @@ export {
      * @property {module:model/ClusterRequest}
      */
     ClusterRequest,
+
+    /**
+     * The ClusterRequestFeatures model constructor.
+     * @property {module:model/ClusterRequestFeatures}
+     */
+    ClusterRequestFeatures,
+
+    /**
+     * The ClusterRequestFeaturesFeaturesInner model constructor.
+     * @property {module:model/ClusterRequestFeaturesFeaturesInner}
+     */
+    ClusterRequestFeaturesFeaturesInner,
 
     /**
      * The ClusterResponseList model constructor.

@@ -1,4 +1,4 @@
-# QoveryApi.ClusterBaseSshKey
+# QoveryApi.ClusterAllOfSshKeys
 
 ## Properties
 

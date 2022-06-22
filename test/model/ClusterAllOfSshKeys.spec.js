@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ClusterBaseSshKey();
+    instance = new QoveryApi.ClusterAllOfSshKeys();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ClusterBaseSshKey', function() {
-    it('should create an instance of ClusterBaseSshKey', function() {
-      // uncomment below and update the code to test ClusterBaseSshKey
-      //var instance = new QoveryApi.ClusterBaseSshKey();
-      //expect(instance).to.be.a(QoveryApi.ClusterBaseSshKey);
+  describe('ClusterAllOfSshKeys', function() {
+    it('should create an instance of ClusterAllOfSshKeys', function() {
+      // uncomment below and update the code to test ClusterAllOfSshKeys
+      //var instance = new QoveryApi.ClusterAllOfSshKeys();
+      //expect(instance).to.be.a(QoveryApi.ClusterAllOfSshKeys);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ClusterBaseSshKey();
+      //var instance = new QoveryApi.ClusterAllOfSshKeys();
       //expect(instance).to.be();
     });
 

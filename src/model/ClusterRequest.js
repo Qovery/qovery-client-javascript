@@ -84,6 +84,9 @@ class ClusterRequest {
             if (data.hasOwnProperty('kubernetes')) {
                 obj['kubernetes'] = KubernetesEnum.constructFromObject(data['kubernetes']);
             }
+            if (data.hasOwnProperty('production')) {
+                obj['production'] = ApiClient.convertToType(data['production'], 'Boolean');
+            }
             if (data.hasOwnProperty('ssh_keys')) {
                 obj['ssh_keys'] = ClusterAllOfSshKeys.constructFromObject(data['ssh_keys']);
             }
@@ -147,6 +150,12 @@ ClusterRequest.prototype['instance_type'] = undefined;
  * @member {module:model/KubernetesEnum} kubernetes
  */
 ClusterRequest.prototype['kubernetes'] = undefined;
+
+/**
+ * specific flag to indicate that this cluster is a production one
+ * @member {Boolean} production
+ */
+ClusterRequest.prototype['production'] = undefined;
 
 /**
  * @member {module:model/ClusterAllOfSshKeys} ssh_keys

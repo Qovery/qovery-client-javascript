@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **hasAccess** | **Boolean** |  | [optional] 
 **version** | **String** |  | [optional] 
 **isDefault** | **Boolean** |  | [optional] 
+**production** | **Boolean** | specific flag to indicate that this cluster is a production one | [optional] 
 **sshKeys** | [**ClusterAllOfSshKeys**](ClusterAllOfSshKeys.md) |  | [optional] 
 **features** | [**[ClusterAllOfFeatures]**](ClusterAllOfFeatures.md) |  | [optional] 
 

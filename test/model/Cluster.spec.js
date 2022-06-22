@@ -168,6 +168,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property production (base name: "production")', function() {
+      // uncomment below and update the code to test the property production
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
     it('should have the property sshKeys (base name: "ssh_keys")', function() {
       // uncomment below and update the code to test the property sshKeys
       //var instance = new QoveryApi.Cluster();

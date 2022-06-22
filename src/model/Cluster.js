@@ -125,6 +125,9 @@ class Cluster {
             if (data.hasOwnProperty('is_default')) {
                 obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
             }
+            if (data.hasOwnProperty('production')) {
+                obj['production'] = ApiClient.convertToType(data['production'], 'Boolean');
+            }
             if (data.hasOwnProperty('ssh_keys')) {
                 obj['ssh_keys'] = ClusterAllOfSshKeys.constructFromObject(data['ssh_keys']);
             }
@@ -243,6 +246,12 @@ Cluster.prototype['version'] = undefined;
 Cluster.prototype['is_default'] = undefined;
 
 /**
+ * specific flag to indicate that this cluster is a production one
+ * @member {Boolean} production
+ */
+Cluster.prototype['production'] = undefined;
+
+/**
  * @member {module:model/ClusterAllOfSshKeys} ssh_keys
  */
 Cluster.prototype['ssh_keys'] = undefined;
@@ -340,6 +349,11 @@ ClusterAllOf.prototype['version'] = undefined;
  * @member {Boolean} is_default
  */
 ClusterAllOf.prototype['is_default'] = undefined;
+/**
+ * specific flag to indicate that this cluster is a production one
+ * @member {Boolean} production
+ */
+ClusterAllOf.prototype['production'] = undefined;
 /**
  * @member {module:model/ClusterAllOfSshKeys} ssh_keys
  */

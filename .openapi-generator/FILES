@@ -72,7 +72,6 @@ docs/CloudProviderResponseList.md
 docs/CluserCredentials.md
 docs/Cluster.md
 docs/ClusterAllOf.md
-docs/ClusterAllOfSshKeys.md
 docs/ClusterCloudProviderInfo.md
 docs/ClusterCloudProviderInfoCredentials.md
 docs/ClusterCloudProviderInfoRequest.md
@@ -546,7 +545,6 @@ src/model/CloudProviderResponseList.js
 src/model/CluserCredentials.js
 src/model/Cluster.js
 src/model/ClusterAllOf.js
-src/model/ClusterAllOfSshKeys.js
 src/model/ClusterCloudProviderInfo.js
 src/model/ClusterCloudProviderInfoCredentials.js
 src/model/ClusterCloudProviderInfoRequest.js
@@ -967,7 +965,6 @@ test/model/CloudProviderResponseList.spec.js
 test/model/CluserCredentials.spec.js
 test/model/Cluster.spec.js
 test/model/ClusterAllOf.spec.js
-test/model/ClusterAllOfSshKeys.spec.js
 test/model/ClusterCloudProviderInfo.spec.js
 test/model/ClusterCloudProviderInfoCredentials.spec.js
 test/model/ClusterCloudProviderInfoRequest.spec.js

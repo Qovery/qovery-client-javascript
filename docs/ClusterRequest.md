@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **instanceType** | **String** | the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType | [optional] 
 **kubernetes** | [**KubernetesEnum**](KubernetesEnum.md) |  | [optional] 
 **production** | **Boolean** | specific flag to indicate that this cluster is a production one | [optional] 
-**sshKeys** | [**ClusterAllOfSshKeys**](ClusterAllOfSshKeys.md) |  | [optional] 
+**sshKeys** | **[String]** | Indicate your public ssh_key to remotely connect to your EC2 instance. | [optional] 
 **features** | [**ClusterRequestFeatures**](ClusterRequestFeatures.md) |  | [optional] 
 
 

@@ -15,7 +15,6 @@ import ApiClient from '../ApiClient';
 import Base from './Base';
 import CloudProviderEnum from './CloudProviderEnum';
 import ClusterAllOf from './ClusterAllOf';
-import ClusterAllOfSshKeys from './ClusterAllOfSshKeys';
 import ClusterFeature from './ClusterFeature';
 import KubernetesEnum from './KubernetesEnum';
 import StateEnum from './StateEnum';
@@ -129,7 +128,7 @@ class Cluster {
                 obj['production'] = ApiClient.convertToType(data['production'], 'Boolean');
             }
             if (data.hasOwnProperty('ssh_keys')) {
-                obj['ssh_keys'] = ClusterAllOfSshKeys.constructFromObject(data['ssh_keys']);
+                obj['ssh_keys'] = ApiClient.convertToType(data['ssh_keys'], ['String']);
             }
             if (data.hasOwnProperty('features')) {
                 obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeature]);
@@ -252,7 +251,8 @@ Cluster.prototype['is_default'] = undefined;
 Cluster.prototype['production'] = undefined;
 
 /**
- * @member {module:model/ClusterAllOfSshKeys} ssh_keys
+ * Indicate your public ssh_key to remotely connect to your EC2 instance.
+ * @member {Array.<String>} ssh_keys
  */
 Cluster.prototype['ssh_keys'] = undefined;
 
@@ -355,7 +355,8 @@ ClusterAllOf.prototype['is_default'] = undefined;
  */
 ClusterAllOf.prototype['production'] = undefined;
 /**
- * @member {module:model/ClusterAllOfSshKeys} ssh_keys
+ * Indicate your public ssh_key to remotely connect to your EC2 instance.
+ * @member {Array.<String>} ssh_keys
  */
 ClusterAllOf.prototype['ssh_keys'] = undefined;
 /**

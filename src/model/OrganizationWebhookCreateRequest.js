@@ -13,6 +13,8 @@
 
 import ApiClient from '../ApiClient';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
+import OrganizationWebhookEventEnum from './OrganizationWebhookEventEnum';
+import OrganizationWebhookKindEnum from './OrganizationWebhookKindEnum';
 
 /**
  * The OrganizationWebhookCreateRequest model module.
@@ -23,9 +25,9 @@ class OrganizationWebhookCreateRequest {
     /**
      * Constructs a new <code>OrganizationWebhookCreateRequest</code>.
      * @alias module:model/OrganizationWebhookCreateRequest
-     * @param kind {module:model/OrganizationWebhookCreateRequest.KindEnum} Define the type of the webhook. `SLACK` is a special webhook type to push notifications directly to slack. The `target_url` must be a Slack compatible endpoint.
+     * @param kind {module:model/OrganizationWebhookKindEnum} 
      * @param targetUrl {String} Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with `http://` or `https://` 
-     * @param events {Array.<module:model/OrganizationWebhookCreateRequest.EventsEnum>} 
+     * @param events {Array.<module:model/OrganizationWebhookEventEnum>} 
      */
     constructor(kind, targetUrl, events) { 
         
@@ -55,7 +57,7 @@ class OrganizationWebhookCreateRequest {
             obj = obj || new OrganizationWebhookCreateRequest();
 
             if (data.hasOwnProperty('kind')) {
-                obj['kind'] = ApiClient.convertToType(data['kind'], 'String');
+                obj['kind'] = OrganizationWebhookKindEnum.constructFromObject(data['kind']);
             }
             if (data.hasOwnProperty('target_url')) {
                 obj['target_url'] = ApiClient.convertToType(data['target_url'], 'String');
@@ -70,7 +72,7 @@ class OrganizationWebhookCreateRequest {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
             }
             if (data.hasOwnProperty('events')) {
-                obj['events'] = ApiClient.convertToType(data['events'], ['String']);
+                obj['events'] = ApiClient.convertToType(data['events'], [OrganizationWebhookEventEnum]);
             }
             if (data.hasOwnProperty('project_id_filter')) {
                 obj['project_id_filter'] = ApiClient.convertToType(data['project_id_filter'], ['String']);
@@ -86,8 +88,7 @@ class OrganizationWebhookCreateRequest {
 }
 
 /**
- * Define the type of the webhook. `SLACK` is a special webhook type to push notifications directly to slack. The `target_url` must be a Slack compatible endpoint.
- * @member {module:model/OrganizationWebhookCreateRequest.KindEnum} kind
+ * @member {module:model/OrganizationWebhookKindEnum} kind
  */
 OrganizationWebhookCreateRequest.prototype['kind'] = undefined;
 
@@ -115,7 +116,7 @@ OrganizationWebhookCreateRequest.prototype['description'] = undefined;
 OrganizationWebhookCreateRequest.prototype['enabled'] = undefined;
 
 /**
- * @member {Array.<module:model/OrganizationWebhookCreateRequest.EventsEnum>} events
+ * @member {Array.<module:model/OrganizationWebhookEventEnum>} events
  */
 OrganizationWebhookCreateRequest.prototype['events'] = undefined;
 
@@ -125,66 +126,13 @@ OrganizationWebhookCreateRequest.prototype['events'] = undefined;
 OrganizationWebhookCreateRequest.prototype['project_id_filter'] = undefined;
 
 /**
+ * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
 OrganizationWebhookCreateRequest.prototype['environment_types_filter'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>kind</code> property.
- * @enum {String}
- * @readonly
- */
-OrganizationWebhookCreateRequest['KindEnum'] = {
-
-    /**
-     * value: "STANDARD"
-     * @const
-     */
-    "STANDARD": "STANDARD",
-
-    /**
-     * value: "SLACK"
-     * @const
-     */
-    "SLACK": "SLACK"
-};
-
-
-/**
- * Allowed values for the <code>events</code> property.
- * @enum {String}
- * @readonly
- */
-OrganizationWebhookCreateRequest['EventsEnum'] = {
-
-    /**
-     * value: "DEPLOYMENT_STARTED"
-     * @const
-     */
-    "STARTED": "DEPLOYMENT_STARTED",
-
-    /**
-     * value: "DEPLOYMENT_CANCELLED"
-     * @const
-     */
-    "CANCELLED": "DEPLOYMENT_CANCELLED",
-
-    /**
-     * value: "DEPLOYMENT_FAILURE"
-     * @const
-     */
-    "FAILURE": "DEPLOYMENT_FAILURE",
-
-    /**
-     * value: "DEPLOYMENT_SUCCESSFUL"
-     * @const
-     */
-    "SUCCESSFUL": "DEPLOYMENT_SUCCESSFUL"
-};
 
 
 

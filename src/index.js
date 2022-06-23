@@ -303,7 +303,10 @@ import OrganizationResponseList from './model/OrganizationResponseList';
 import OrganizationWebhookCreateRequest from './model/OrganizationWebhookCreateRequest';
 import OrganizationWebhookCreateResponse from './model/OrganizationWebhookCreateResponse';
 import OrganizationWebhookCreateResponseAllOf from './model/OrganizationWebhookCreateResponseAllOf';
+import OrganizationWebhookEventEnum from './model/OrganizationWebhookEventEnum';
+import OrganizationWebhookKindEnum from './model/OrganizationWebhookKindEnum';
 import OrganizationWebhookResponse from './model/OrganizationWebhookResponse';
+import OrganizationWebhookResponseAllOf from './model/OrganizationWebhookResponseAllOf';
 import OrganizationWebhookResponseList from './model/OrganizationWebhookResponseList';
 import OverriddenSecret from './model/OverriddenSecret';
 import PaginationData from './model/PaginationData';
@@ -2213,10 +2216,28 @@ export {
     OrganizationWebhookCreateResponseAllOf,
 
     /**
+     * The OrganizationWebhookEventEnum model constructor.
+     * @property {module:model/OrganizationWebhookEventEnum}
+     */
+    OrganizationWebhookEventEnum,
+
+    /**
+     * The OrganizationWebhookKindEnum model constructor.
+     * @property {module:model/OrganizationWebhookKindEnum}
+     */
+    OrganizationWebhookKindEnum,
+
+    /**
      * The OrganizationWebhookResponse model constructor.
      * @property {module:model/OrganizationWebhookResponse}
      */
     OrganizationWebhookResponse,
+
+    /**
+     * The OrganizationWebhookResponseAllOf model constructor.
+     * @property {module:model/OrganizationWebhookResponseAllOf}
+     */
+    OrganizationWebhookResponseAllOf,
 
     /**
      * The OrganizationWebhookResponseList model constructor.

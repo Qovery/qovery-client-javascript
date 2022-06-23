@@ -14,9 +14,9 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
-import Items from './Items';
-import Kind from './Kind';
-import OrganizationWebhookCreateResponseAllOf from './OrganizationWebhookCreateResponseAllOf';
+import OrganizationWebhookEventEnum from './OrganizationWebhookEventEnum';
+import OrganizationWebhookKindEnum from './OrganizationWebhookKindEnum';
+import OrganizationWebhookResponseAllOf from './OrganizationWebhookResponseAllOf';
 
 /**
  * The OrganizationWebhookResponse model module.
@@ -28,12 +28,12 @@ class OrganizationWebhookResponse {
      * Constructs a new <code>OrganizationWebhookResponse</code>.
      * @alias module:model/OrganizationWebhookResponse
      * @implements module:model/Base
-     * @implements module:model/OrganizationWebhookCreateResponseAllOf
+     * @implements module:model/OrganizationWebhookResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);OrganizationWebhookCreateResponseAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);OrganizationWebhookResponseAllOf.initialize(this);
         OrganizationWebhookResponse.initialize(this, id, createdAt);
     }
 
@@ -58,7 +58,7 @@ class OrganizationWebhookResponse {
         if (data) {
             obj = obj || new OrganizationWebhookResponse();
             Base.constructFromObject(data, obj);
-            OrganizationWebhookCreateResponseAllOf.constructFromObject(data, obj);
+            OrganizationWebhookResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -70,7 +70,7 @@ class OrganizationWebhookResponse {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('kind')) {
-                obj['kind'] = Kind.constructFromObject(data['kind']);
+                obj['kind'] = OrganizationWebhookKindEnum.constructFromObject(data['kind']);
             }
             if (data.hasOwnProperty('target_url')) {
                 obj['target_url'] = ApiClient.convertToType(data['target_url'], 'String');
@@ -85,7 +85,7 @@ class OrganizationWebhookResponse {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
             }
             if (data.hasOwnProperty('events')) {
-                obj['events'] = ApiClient.convertToType(data['events'], [Items]);
+                obj['events'] = ApiClient.convertToType(data['events'], [OrganizationWebhookEventEnum]);
             }
             if (data.hasOwnProperty('project_id_filter')) {
                 obj['project_id_filter'] = ApiClient.convertToType(data['project_id_filter'], ['String']);
@@ -116,7 +116,7 @@ OrganizationWebhookResponse.prototype['created_at'] = undefined;
 OrganizationWebhookResponse.prototype['updated_at'] = undefined;
 
 /**
- * @member {module:model/Kind} kind
+ * @member {module:model/OrganizationWebhookKindEnum} kind
  */
 OrganizationWebhookResponse.prototype['kind'] = undefined;
 
@@ -143,7 +143,7 @@ OrganizationWebhookResponse.prototype['description'] = undefined;
 OrganizationWebhookResponse.prototype['enabled'] = undefined;
 
 /**
- * @member {Array.<module:model/Items>} events
+ * @member {Array.<module:model/OrganizationWebhookEventEnum>} events
  */
 OrganizationWebhookResponse.prototype['events'] = undefined;
 
@@ -153,6 +153,7 @@ OrganizationWebhookResponse.prototype['events'] = undefined;
 OrganizationWebhookResponse.prototype['project_id_filter'] = undefined;
 
 /**
+ * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
 OrganizationWebhookResponse.prototype['environment_types_filter'] = undefined;
@@ -171,41 +172,42 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement OrganizationWebhookCreateResponseAllOf interface:
+// Implement OrganizationWebhookResponseAllOf interface:
 /**
- * @member {module:model/Kind} kind
+ * @member {module:model/OrganizationWebhookKindEnum} kind
  */
-OrganizationWebhookCreateResponseAllOf.prototype['kind'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['kind'] = undefined;
 /**
  * Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with `http://` or `https://` 
  * @member {String} target_url
  */
-OrganizationWebhookCreateResponseAllOf.prototype['target_url'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['target_url'] = undefined;
 /**
  * @member {Boolean} target_secret_set
  */
-OrganizationWebhookCreateResponseAllOf.prototype['target_secret_set'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['target_secret_set'] = undefined;
 /**
  * @member {String} description
  */
-OrganizationWebhookCreateResponseAllOf.prototype['description'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['description'] = undefined;
 /**
  * Turn on or off your endpoint.
  * @member {Boolean} enabled
  */
-OrganizationWebhookCreateResponseAllOf.prototype['enabled'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['enabled'] = undefined;
 /**
- * @member {Array.<module:model/Items>} events
+ * @member {Array.<module:model/OrganizationWebhookEventEnum>} events
  */
-OrganizationWebhookCreateResponseAllOf.prototype['events'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['events'] = undefined;
 /**
  * @member {Array.<String>} project_id_filter
  */
-OrganizationWebhookCreateResponseAllOf.prototype['project_id_filter'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['project_id_filter'] = undefined;
 /**
+ * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
-OrganizationWebhookCreateResponseAllOf.prototype['environment_types_filter'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['environment_types_filter'] = undefined;
 
 
 

@@ -14,9 +14,9 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
-import Items from './Items';
-import Kind from './Kind';
 import OrganizationWebhookCreateResponseAllOf from './OrganizationWebhookCreateResponseAllOf';
+import OrganizationWebhookEventEnum from './OrganizationWebhookEventEnum';
+import OrganizationWebhookKindEnum from './OrganizationWebhookKindEnum';
 
 /**
  * The OrganizationWebhookCreateResponse model module.
@@ -70,7 +70,7 @@ class OrganizationWebhookCreateResponse {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('kind')) {
-                obj['kind'] = Kind.constructFromObject(data['kind']);
+                obj['kind'] = OrganizationWebhookKindEnum.constructFromObject(data['kind']);
             }
             if (data.hasOwnProperty('target_url')) {
                 obj['target_url'] = ApiClient.convertToType(data['target_url'], 'String');
@@ -85,7 +85,7 @@ class OrganizationWebhookCreateResponse {
                 obj['enabled'] = ApiClient.convertToType(data['enabled'], 'Boolean');
             }
             if (data.hasOwnProperty('events')) {
-                obj['events'] = ApiClient.convertToType(data['events'], [Items]);
+                obj['events'] = ApiClient.convertToType(data['events'], [OrganizationWebhookEventEnum]);
             }
             if (data.hasOwnProperty('project_id_filter')) {
                 obj['project_id_filter'] = ApiClient.convertToType(data['project_id_filter'], ['String']);
@@ -116,7 +116,7 @@ OrganizationWebhookCreateResponse.prototype['created_at'] = undefined;
 OrganizationWebhookCreateResponse.prototype['updated_at'] = undefined;
 
 /**
- * @member {module:model/Kind} kind
+ * @member {module:model/OrganizationWebhookKindEnum} kind
  */
 OrganizationWebhookCreateResponse.prototype['kind'] = undefined;
 
@@ -143,7 +143,7 @@ OrganizationWebhookCreateResponse.prototype['description'] = undefined;
 OrganizationWebhookCreateResponse.prototype['enabled'] = undefined;
 
 /**
- * @member {Array.<module:model/Items>} events
+ * @member {Array.<module:model/OrganizationWebhookEventEnum>} events
  */
 OrganizationWebhookCreateResponse.prototype['events'] = undefined;
 
@@ -153,6 +153,7 @@ OrganizationWebhookCreateResponse.prototype['events'] = undefined;
 OrganizationWebhookCreateResponse.prototype['project_id_filter'] = undefined;
 
 /**
+ * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
 OrganizationWebhookCreateResponse.prototype['environment_types_filter'] = undefined;
@@ -173,7 +174,7 @@ Base.prototype['created_at'] = undefined;
 Base.prototype['updated_at'] = undefined;
 // Implement OrganizationWebhookCreateResponseAllOf interface:
 /**
- * @member {module:model/Kind} kind
+ * @member {module:model/OrganizationWebhookKindEnum} kind
  */
 OrganizationWebhookCreateResponseAllOf.prototype['kind'] = undefined;
 /**
@@ -195,7 +196,7 @@ OrganizationWebhookCreateResponseAllOf.prototype['description'] = undefined;
  */
 OrganizationWebhookCreateResponseAllOf.prototype['enabled'] = undefined;
 /**
- * @member {Array.<module:model/Items>} events
+ * @member {Array.<module:model/OrganizationWebhookEventEnum>} events
  */
 OrganizationWebhookCreateResponseAllOf.prototype['events'] = undefined;
 /**
@@ -203,6 +204,7 @@ OrganizationWebhookCreateResponseAllOf.prototype['events'] = undefined;
  */
 OrganizationWebhookCreateResponseAllOf.prototype['project_id_filter'] = undefined;
 /**
+ * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
 OrganizationWebhookCreateResponseAllOf.prototype['environment_types_filter'] = undefined;

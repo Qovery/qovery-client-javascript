@@ -351,7 +351,10 @@ docs/OrganizationWebhookApi.md
 docs/OrganizationWebhookCreateRequest.md
 docs/OrganizationWebhookCreateResponse.md
 docs/OrganizationWebhookCreateResponseAllOf.md
+docs/OrganizationWebhookEventEnum.md
+docs/OrganizationWebhookKindEnum.md
 docs/OrganizationWebhookResponse.md
+docs/OrganizationWebhookResponseAllOf.md
 docs/OrganizationWebhookResponseList.md
 docs/OverriddenSecret.md
 docs/PaginationData.md
@@ -782,7 +785,10 @@ src/model/OrganizationResponseList.js
 src/model/OrganizationWebhookCreateRequest.js
 src/model/OrganizationWebhookCreateResponse.js
 src/model/OrganizationWebhookCreateResponseAllOf.js
+src/model/OrganizationWebhookEventEnum.js
+src/model/OrganizationWebhookKindEnum.js
 src/model/OrganizationWebhookResponse.js
+src/model/OrganizationWebhookResponseAllOf.js
 src/model/OrganizationWebhookResponseList.js
 src/model/OverriddenSecret.js
 src/model/PaginationData.js
@@ -1201,7 +1207,10 @@ test/model/OrganizationResponseList.spec.js
 test/model/OrganizationWebhookCreateRequest.spec.js
 test/model/OrganizationWebhookCreateResponse.spec.js
 test/model/OrganizationWebhookCreateResponseAllOf.spec.js
+test/model/OrganizationWebhookEventEnum.spec.js
+test/model/OrganizationWebhookKindEnum.spec.js
 test/model/OrganizationWebhookResponse.spec.js
+test/model/OrganizationWebhookResponseAllOf.spec.js
 test/model/OrganizationWebhookResponseList.spec.js
 test/model/OverriddenSecret.spec.js
 test/model/PaginationData.spec.js

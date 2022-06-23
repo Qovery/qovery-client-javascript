@@ -17,18 +17,18 @@ import OrganizationWebhookEventEnum from './OrganizationWebhookEventEnum';
 import OrganizationWebhookKindEnum from './OrganizationWebhookKindEnum';
 
 /**
- * The OrganizationWebhookCreateResponseAllOf model module.
- * @module model/OrganizationWebhookCreateResponseAllOf
+ * The OrganizationWebhookResponseAllOf model module.
+ * @module model/OrganizationWebhookResponseAllOf
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class OrganizationWebhookCreateResponseAllOf {
+class OrganizationWebhookResponseAllOf {
     /**
-     * Constructs a new <code>OrganizationWebhookCreateResponseAllOf</code>.
-     * @alias module:model/OrganizationWebhookCreateResponseAllOf
+     * Constructs a new <code>OrganizationWebhookResponseAllOf</code>.
+     * @alias module:model/OrganizationWebhookResponseAllOf
      */
     constructor() { 
         
-        OrganizationWebhookCreateResponseAllOf.initialize(this);
+        OrganizationWebhookResponseAllOf.initialize(this);
     }
 
     /**
@@ -40,15 +40,15 @@ class OrganizationWebhookCreateResponseAllOf {
     }
 
     /**
-     * Constructs a <code>OrganizationWebhookCreateResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationWebhookResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/OrganizationWebhookCreateResponseAllOf} obj Optional instance to populate.
-     * @return {module:model/OrganizationWebhookCreateResponseAllOf} The populated <code>OrganizationWebhookCreateResponseAllOf</code> instance.
+     * @param {module:model/OrganizationWebhookResponseAllOf} obj Optional instance to populate.
+     * @return {module:model/OrganizationWebhookResponseAllOf} The populated <code>OrganizationWebhookResponseAllOf</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OrganizationWebhookCreateResponseAllOf();
+            obj = obj || new OrganizationWebhookResponseAllOf();
 
             if (data.hasOwnProperty('kind')) {
                 obj['kind'] = OrganizationWebhookKindEnum.constructFromObject(data['kind']);
@@ -84,50 +84,50 @@ class OrganizationWebhookCreateResponseAllOf {
 /**
  * @member {module:model/OrganizationWebhookKindEnum} kind
  */
-OrganizationWebhookCreateResponseAllOf.prototype['kind'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['kind'] = undefined;
 
 /**
  * Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with `http://` or `https://` 
  * @member {String} target_url
  */
-OrganizationWebhookCreateResponseAllOf.prototype['target_url'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['target_url'] = undefined;
 
 /**
  * @member {Boolean} target_secret_set
  */
-OrganizationWebhookCreateResponseAllOf.prototype['target_secret_set'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['target_secret_set'] = undefined;
 
 /**
  * @member {String} description
  */
-OrganizationWebhookCreateResponseAllOf.prototype['description'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['description'] = undefined;
 
 /**
  * Turn on or off your endpoint.
  * @member {Boolean} enabled
  */
-OrganizationWebhookCreateResponseAllOf.prototype['enabled'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['enabled'] = undefined;
 
 /**
  * @member {Array.<module:model/OrganizationWebhookEventEnum>} events
  */
-OrganizationWebhookCreateResponseAllOf.prototype['events'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['events'] = undefined;
 
 /**
  * @member {Array.<String>} project_id_filter
  */
-OrganizationWebhookCreateResponseAllOf.prototype['project_id_filter'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['project_id_filter'] = undefined;
 
 /**
  * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 
  * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
  */
-OrganizationWebhookCreateResponseAllOf.prototype['environment_types_filter'] = undefined;
+OrganizationWebhookResponseAllOf.prototype['environment_types_filter'] = undefined;
 
 
 
 
 
 
-export default OrganizationWebhookCreateResponseAllOf;
+export default OrganizationWebhookResponseAllOf;
 

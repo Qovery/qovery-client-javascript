@@ -1,12 +1,9 @@
-# QoveryApi.OrganizationWebhookCreateResponse
+# QoveryApi.OrganizationWebhookResponseAllOf
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [readonly] 
-**createdAt** | **Date** |  | [readonly] 
-**updatedAt** | **Date** |  | [optional] [readonly] 
 **kind** | [**OrganizationWebhookKindEnum**](OrganizationWebhookKindEnum.md) |  | [optional] 
 **targetUrl** | **String** | Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with &#x60;http://&#x60; or &#x60;https://&#x60;  | [optional] 
 **targetSecretSet** | **Boolean** |  | [optional] 

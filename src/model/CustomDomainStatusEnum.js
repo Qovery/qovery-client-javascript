@@ -20,31 +20,10 @@ import ApiClient from '../ApiClient';
 export default class CustomDomainStatusEnum {
     
         /**
-         * value: "deploying"
+         * value: "VALIDATION_PENDING"
          * @const
          */
-        "deploying" = "deploying";
-
-    
-        /**
-         * value: "checking"
-         * @const
-         */
-        "checking" = "checking";
-
-    
-        /**
-         * value: "ready"
-         * @const
-         */
-        "ready" = "ready";
-
-    
-        /**
-         * value: "error"
-         * @const
-         */
-        "error" = "error";
+        "VALIDATION_PENDING" = "VALIDATION_PENDING";
 
     
 

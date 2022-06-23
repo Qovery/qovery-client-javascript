@@ -3,12 +3,6 @@
 ## Enum
 
 
-* `deploying` (value: `"deploying"`)
-
-* `checking` (value: `"checking"`)
-
-* `ready` (value: `"ready"`)
-
-* `error` (value: `"error"`)
+* `VALIDATION_PENDING` (value: `"VALIDATION_PENDING"`)
 
 

@@ -161,6 +161,7 @@ docs/CustomDomainAllOf.md
 docs/CustomDomainApi.md
 docs/CustomDomainRequest.md
 docs/CustomDomainResponseList.md
+docs/CustomDomainStatusEnum.md
 docs/Database.md
 docs/DatabaseAccessibilityEnum.md
 docs/DatabaseActionsApi.md
@@ -615,6 +616,7 @@ src/model/CustomDomain.js
 src/model/CustomDomainAllOf.js
 src/model/CustomDomainRequest.js
 src/model/CustomDomainResponseList.js
+src/model/CustomDomainStatusEnum.js
 src/model/Database.js
 src/model/DatabaseAccessibilityEnum.js
 src/model/DatabaseAllOf.js
@@ -1033,6 +1035,7 @@ test/model/CustomDomain.spec.js
 test/model/CustomDomainAllOf.spec.js
 test/model/CustomDomainRequest.spec.js
 test/model/CustomDomainResponseList.spec.js
+test/model/CustomDomainStatusEnum.spec.js
 test/model/Database.spec.js
 test/model/DatabaseAccessibilityEnum.spec.js
 test/model/DatabaseAllOf.spec.js

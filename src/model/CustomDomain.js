@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import Base from './Base';
 import CustomDomainAllOf from './CustomDomainAllOf';
 import CustomDomainRequest from './CustomDomainRequest';
+import CustomDomainStatusEnum from './CustomDomainStatusEnum';
 
 /**
  * The CustomDomain model module.
@@ -78,7 +79,7 @@ class CustomDomain {
                 obj['validation_domain'] = ApiClient.convertToType(data['validation_domain'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+                obj['status'] = CustomDomainStatusEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -115,7 +116,7 @@ CustomDomain.prototype['domain'] = undefined;
 CustomDomain.prototype['validation_domain'] = undefined;
 
 /**
- * @member {module:model/CustomDomain.StatusEnum} status
+ * @member {module:model/CustomDomainStatusEnum} status
  */
 CustomDomain.prototype['status'] = undefined;
 
@@ -146,43 +147,10 @@ CustomDomainRequest.prototype['domain'] = undefined;
  */
 CustomDomainAllOf.prototype['validation_domain'] = undefined;
 /**
- * @member {module:model/CustomDomainAllOf.StatusEnum} status
+ * @member {module:model/CustomDomainStatusEnum} status
  */
 CustomDomainAllOf.prototype['status'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-CustomDomain['StatusEnum'] = {
-
-    /**
-     * value: "deploying"
-     * @const
-     */
-    "deploying": "deploying",
-
-    /**
-     * value: "checking"
-     * @const
-     */
-    "checking": "checking",
-
-    /**
-     * value: "ready"
-     * @const
-     */
-    "ready": "ready",
-
-    /**
-     * value: "error"
-     * @const
-     */
-    "error": "error"
-};
 
 
 

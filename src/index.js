@@ -137,6 +137,7 @@ import CustomDomain from './model/CustomDomain';
 import CustomDomainAllOf from './model/CustomDomainAllOf';
 import CustomDomainRequest from './model/CustomDomainRequest';
 import CustomDomainResponseList from './model/CustomDomainResponseList';
+import CustomDomainStatusEnum from './model/CustomDomainStatusEnum';
 import Database from './model/Database';
 import DatabaseAccessibilityEnum from './model/DatabaseAccessibilityEnum';
 import DatabaseAllOf from './model/DatabaseAllOf';
@@ -1214,6 +1215,12 @@ export {
      * @property {module:model/CustomDomainResponseList}
      */
     CustomDomainResponseList,
+
+    /**
+     * The CustomDomainStatusEnum model constructor.
+     * @property {module:model/CustomDomainStatusEnum}
+     */
+    CustomDomainStatusEnum,
 
     /**
      * The Database model constructor.

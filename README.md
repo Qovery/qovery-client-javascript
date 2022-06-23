@@ -575,6 +575,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CustomDomainAllOf](docs/CustomDomainAllOf.md)
  - [QoveryApi.CustomDomainRequest](docs/CustomDomainRequest.md)
  - [QoveryApi.CustomDomainResponseList](docs/CustomDomainResponseList.md)
+ - [QoveryApi.CustomDomainStatusEnum](docs/CustomDomainStatusEnum.md)
  - [QoveryApi.Database](docs/Database.md)
  - [QoveryApi.DatabaseAccessibilityEnum](docs/DatabaseAccessibilityEnum.md)
  - [QoveryApi.DatabaseAllOf](docs/DatabaseAllOf.md)

@@ -65,7 +65,6 @@ import CloudProviderResponseList from './model/CloudProviderResponseList';
 import CluserCredentials from './model/CluserCredentials';
 import Cluster from './model/Cluster';
 import ClusterAllOf from './model/ClusterAllOf';
-import ClusterAllOfFeatures from './model/ClusterAllOfFeatures';
 import ClusterAllOfSshKeys from './model/ClusterAllOfSshKeys';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
@@ -786,12 +785,6 @@ export {
      * @property {module:model/ClusterAllOf}
      */
     ClusterAllOf,
-
-    /**
-     * The ClusterAllOfFeatures model constructor.
-     * @property {module:model/ClusterAllOfFeatures}
-     */
-    ClusterAllOfFeatures,
 
     /**
      * The ClusterAllOfSshKeys model constructor.

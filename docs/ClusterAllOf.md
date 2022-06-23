@@ -22,6 +22,6 @@ Name | Type | Description | Notes
 **isDefault** | **Boolean** |  | [optional] 
 **production** | **Boolean** | specific flag to indicate that this cluster is a production one | [optional] 
 **sshKeys** | [**ClusterAllOfSshKeys**](ClusterAllOfSshKeys.md) |  | [optional] 
-**features** | [**[ClusterAllOfFeatures]**](ClusterAllOfFeatures.md) |  | [optional] 
+**features** | [**[ClusterFeature]**](ClusterFeature.md) |  | [optional] 
 
 

@@ -15,8 +15,8 @@ import ApiClient from '../ApiClient';
 import Base from './Base';
 import CloudProviderEnum from './CloudProviderEnum';
 import ClusterAllOf from './ClusterAllOf';
-import ClusterAllOfFeatures from './ClusterAllOfFeatures';
 import ClusterAllOfSshKeys from './ClusterAllOfSshKeys';
+import ClusterFeature from './ClusterFeature';
 import KubernetesEnum from './KubernetesEnum';
 import StateEnum from './StateEnum';
 
@@ -132,7 +132,7 @@ class Cluster {
                 obj['ssh_keys'] = ClusterAllOfSshKeys.constructFromObject(data['ssh_keys']);
             }
             if (data.hasOwnProperty('features')) {
-                obj['features'] = ApiClient.convertToType(data['features'], [ClusterAllOfFeatures]);
+                obj['features'] = ApiClient.convertToType(data['features'], [ClusterFeature]);
             }
         }
         return obj;
@@ -257,7 +257,7 @@ Cluster.prototype['production'] = undefined;
 Cluster.prototype['ssh_keys'] = undefined;
 
 /**
- * @member {Array.<module:model/ClusterAllOfFeatures>} features
+ * @member {Array.<module:model/ClusterFeature>} features
  */
 Cluster.prototype['features'] = undefined;
 
@@ -359,7 +359,7 @@ ClusterAllOf.prototype['production'] = undefined;
  */
 ClusterAllOf.prototype['ssh_keys'] = undefined;
 /**
- * @member {Array.<module:model/ClusterAllOfFeatures>} features
+ * @member {Array.<module:model/ClusterFeature>} features
  */
 ClusterAllOf.prototype['features'] = undefined;
 

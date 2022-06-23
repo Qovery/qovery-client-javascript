@@ -503,7 +503,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CluserCredentials](docs/CluserCredentials.md)
  - [QoveryApi.Cluster](docs/Cluster.md)
  - [QoveryApi.ClusterAllOf](docs/ClusterAllOf.md)
- - [QoveryApi.ClusterAllOfFeatures](docs/ClusterAllOfFeatures.md)
  - [QoveryApi.ClusterAllOfSshKeys](docs/ClusterAllOfSshKeys.md)
  - [QoveryApi.ClusterCloudProviderInfo](docs/ClusterCloudProviderInfo.md)
  - [QoveryApi.ClusterCloudProviderInfoCredentials](docs/ClusterCloudProviderInfoCredentials.md)

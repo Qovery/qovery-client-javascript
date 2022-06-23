@@ -74,8 +74,8 @@ class OrganizationWebhookCreateRequest {
             if (data.hasOwnProperty('events')) {
                 obj['events'] = ApiClient.convertToType(data['events'], [OrganizationWebhookEventEnum]);
             }
-            if (data.hasOwnProperty('project_id_filter')) {
-                obj['project_id_filter'] = ApiClient.convertToType(data['project_id_filter'], ['String']);
+            if (data.hasOwnProperty('project_names_filter')) {
+                obj['project_names_filter'] = ApiClient.convertToType(data['project_names_filter'], ['String']);
             }
             if (data.hasOwnProperty('environment_types_filter')) {
                 obj['environment_types_filter'] = ApiClient.convertToType(data['environment_types_filter'], [EnvironmentModeEnum]);
@@ -121,9 +121,9 @@ OrganizationWebhookCreateRequest.prototype['enabled'] = undefined;
 OrganizationWebhookCreateRequest.prototype['events'] = undefined;
 
 /**
- * @member {Array.<String>} project_id_filter
+ * @member {Array.<String>} project_names_filter
  */
-OrganizationWebhookCreateRequest.prototype['project_id_filter'] = undefined;
+OrganizationWebhookCreateRequest.prototype['project_names_filter'] = undefined;
 
 /**
  * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 

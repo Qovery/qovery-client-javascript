@@ -742,7 +742,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.OrganizationWebhookEventEnum](docs/OrganizationWebhookEventEnum.md)
  - [QoveryApi.OrganizationWebhookKindEnum](docs/OrganizationWebhookKindEnum.md)
  - [QoveryApi.OrganizationWebhookResponse](docs/OrganizationWebhookResponse.md)
- - [QoveryApi.OrganizationWebhookResponseAllOf](docs/OrganizationWebhookResponseAllOf.md)
  - [QoveryApi.OrganizationWebhookResponseList](docs/OrganizationWebhookResponseList.md)
  - [QoveryApi.OverriddenSecret](docs/OverriddenSecret.md)
  - [QoveryApi.PaginationData](docs/PaginationData.md)

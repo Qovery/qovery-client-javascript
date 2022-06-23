@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **enabled** | **Boolean** | Turn on or off your endpoint. | [optional] 
 **events** | [**[OrganizationWebhookEventEnum]**](OrganizationWebhookEventEnum.md) |  | 
-**projectIdFilter** | **[String]** |  | [optional] 
+**projectNamesFilter** | **[String]** |  | [optional] 
 **environmentTypesFilter** | [**[EnvironmentModeEnum]**](EnvironmentModeEnum.md) | Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode.  | [optional] 
 
 

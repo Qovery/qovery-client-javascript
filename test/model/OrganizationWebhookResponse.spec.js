@@ -108,8 +108,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property projectIdFilter (base name: "project_id_filter")', function() {
-      // uncomment below and update the code to test the property projectIdFilter
+    it('should have the property projectNamesFilter (base name: "project_names_filter")', function() {
+      // uncomment below and update the code to test the property projectNamesFilter
       //var instance = new QoveryApi.OrganizationWebhookResponse();
       //expect(instance).to.be();
     });

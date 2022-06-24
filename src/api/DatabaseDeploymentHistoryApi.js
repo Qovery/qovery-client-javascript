@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import DeploymentHistoryPaginatedResponseList from '../model/DeploymentHistoryPaginatedResponseList';
+import ListDatabaseDeploymentHistory200Response from '../model/ListDatabaseDeploymentHistory200Response';
 
 /**
 * DatabaseDeploymentHistory service.
@@ -38,7 +38,7 @@ export default class DatabaseDeploymentHistoryApi {
      * Callback function to receive the result of the listDatabaseDeploymentHistory operation.
      * @callback module:api/DatabaseDeploymentHistoryApi~listDatabaseDeploymentHistoryCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DeploymentHistoryPaginatedResponseList} data The data returned by the service call.
+     * @param {module:model/ListDatabaseDeploymentHistory200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,7 +47,7 @@ export default class DatabaseDeploymentHistoryApi {
      * By default it returns the 20 last results. The response is paginated.
      * @param {String} databaseId Database ID
      * @param {module:api/DatabaseDeploymentHistoryApi~listDatabaseDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DeploymentHistoryPaginatedResponseList}
+     * data is of type: {@link module:model/ListDatabaseDeploymentHistory200Response}
      */
     listDatabaseDeploymentHistory(databaseId, callback) {
       let postBody = null;
@@ -69,7 +69,7 @@ export default class DatabaseDeploymentHistoryApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = DeploymentHistoryPaginatedResponseList;
+      let returnType = ListDatabaseDeploymentHistory200Response;
       return this.apiClient.callApi(
         '/database/{databaseId}/deploymentHistory', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

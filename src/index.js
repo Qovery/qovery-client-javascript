@@ -253,6 +253,8 @@ import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import ListClusterLogs200Response from './model/ListClusterLogs200Response';
 import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
+import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
+import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
@@ -1912,6 +1914,18 @@ export {
      * @property {module:model/ListContainerRegistry200Response}
      */
     ListContainerRegistry200Response,
+
+    /**
+     * The ListDatabaseDeploymentHistory200Response model constructor.
+     * @property {module:model/ListDatabaseDeploymentHistory200Response}
+     */
+    ListDatabaseDeploymentHistory200Response,
+
+    /**
+     * The ListDatabaseDeploymentHistory200ResponseAllOf model constructor.
+     * @property {module:model/ListDatabaseDeploymentHistory200ResponseAllOf}
+     */
+    ListDatabaseDeploymentHistory200ResponseAllOf,
 
     /**
      * The Log model constructor.

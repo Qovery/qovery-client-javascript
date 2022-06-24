@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## listDatabaseDeploymentHistory
 
-> DeploymentHistoryPaginatedResponseList listDatabaseDeploymentHistory(databaseId)
+> ListDatabaseDeploymentHistory200Response listDatabaseDeploymentHistory(databaseId)
 
 List database deploys
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeploymentHistoryPaginatedResponseList**](DeploymentHistoryPaginatedResponseList.md)
+[**ListDatabaseDeploymentHistory200Response**](ListDatabaseDeploymentHistory200Response.md)
 
 ### Authorization
 

@@ -296,6 +296,8 @@ docs/Link.md
 docs/LinkResponseList.md
 docs/ListClusterLogs200Response.md
 docs/ListContainerRegistry200Response.md
+docs/ListDatabaseDeploymentHistory200Response.md
+docs/ListDatabaseDeploymentHistory200ResponseAllOf.md
 docs/Log.md
 docs/LogPaginatedResponseList.md
 docs/LogPaginatedResponseListAllOf.md
@@ -734,6 +736,8 @@ src/model/Link.js
 src/model/LinkResponseList.js
 src/model/ListClusterLogs200Response.js
 src/model/ListContainerRegistry200Response.js
+src/model/ListDatabaseDeploymentHistory200Response.js
+src/model/ListDatabaseDeploymentHistory200ResponseAllOf.js
 src/model/Log.js
 src/model/LogPaginatedResponseList.js
 src/model/LogPaginatedResponseListAllOf.js
@@ -1154,6 +1158,8 @@ test/model/Link.spec.js
 test/model/LinkResponseList.spec.js
 test/model/ListClusterLogs200Response.spec.js
 test/model/ListContainerRegistry200Response.spec.js
+test/model/ListDatabaseDeploymentHistory200Response.spec.js
+test/model/ListDatabaseDeploymentHistory200ResponseAllOf.spec.js
 test/model/Log.spec.js
 test/model/LogPaginatedResponseList.spec.js
 test/model/LogPaginatedResponseListAllOf.spec.js

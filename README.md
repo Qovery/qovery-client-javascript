@@ -692,6 +692,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.LinkResponseList](docs/LinkResponseList.md)
  - [QoveryApi.ListClusterLogs200Response](docs/ListClusterLogs200Response.md)
  - [QoveryApi.ListContainerRegistry200Response](docs/ListContainerRegistry200Response.md)
+ - [QoveryApi.ListDatabaseDeploymentHistory200Response](docs/ListDatabaseDeploymentHistory200Response.md)
+ - [QoveryApi.ListDatabaseDeploymentHistory200ResponseAllOf](docs/ListDatabaseDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.Log](docs/Log.md)
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)
  - [QoveryApi.LogPaginatedResponseListAllOf](docs/LogPaginatedResponseListAllOf.md)

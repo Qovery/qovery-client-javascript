@@ -46,10 +46,13 @@ export default class DatabaseDeploymentHistoryApi {
      * List database deploys
      * By default it returns the 20 last results. The response is paginated.
      * @param {String} databaseId Database ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.startId Starting point after which to return results
      * @param {module:api/DatabaseDeploymentHistoryApi~listDatabaseDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListDatabaseDeploymentHistory200Response}
      */
-    listDatabaseDeploymentHistory(databaseId, callback) {
+    listDatabaseDeploymentHistory(databaseId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'databaseId' is set
       if (databaseId === undefined || databaseId === null) {
@@ -60,6 +63,7 @@ export default class DatabaseDeploymentHistoryApi {
         'databaseId': databaseId
       };
       let queryParams = {
+        'startId': opts['startId']
       };
       let headerParams = {
       };

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## listDatabaseDeploymentHistory
 
-> ListDatabaseDeploymentHistory200Response listDatabaseDeploymentHistory(databaseId)
+> ListDatabaseDeploymentHistory200Response listDatabaseDeploymentHistory(databaseId, opts)
 
 List database deploys
 
@@ -27,7 +27,10 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.DatabaseDeploymentHistoryApi();
 let databaseId = "databaseId_example"; // String | Database ID
-apiInstance.listDatabaseDeploymentHistory(databaseId, (error, data, response) => {
+let opts = {
+  'startId': "startId_example" // String | Starting point after which to return results
+};
+apiInstance.listDatabaseDeploymentHistory(databaseId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -42,6 +45,7 @@ apiInstance.listDatabaseDeploymentHistory(databaseId, (error, data, response) =>
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **databaseId** | **String**| Database ID | 
+ **startId** | **String**| Starting point after which to return results | [optional] 
 
 ### Return type
 

@@ -404,6 +404,7 @@ import CustomDomainApi from './api/CustomDomainApi';
 import DatabaseActionsApi from './api/DatabaseActionsApi';
 import DatabaseApplicationApi from './api/DatabaseApplicationApi';
 import DatabaseContainerApi from './api/DatabaseContainerApi';
+import DatabaseDeploymentHistoryApi from './api/DatabaseDeploymentHistoryApi';
 import DatabaseEventApi from './api/DatabaseEventApi';
 import DatabaseMainCallsApi from './api/DatabaseMainCallsApi';
 import DatabaseMetricsApi from './api/DatabaseMetricsApi';
@@ -2817,6 +2818,12 @@ export {
     * @property {module:api/DatabaseContainerApi}
     */
     DatabaseContainerApi,
+
+    /**
+    * The DatabaseDeploymentHistoryApi service constructor.
+    * @property {module:api/DatabaseDeploymentHistoryApi}
+    */
+    DatabaseDeploymentHistoryApi,
 
     /**
     * The DatabaseEventApi service constructor.

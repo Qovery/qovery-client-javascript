@@ -49,6 +49,9 @@ class DeploymentHistoryAllOf {
         if (data) {
             obj = obj || new DeploymentHistoryAllOf();
 
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
             if (data.hasOwnProperty('commit')) {
                 obj['commit'] = Commit.constructFromObject(data['commit']);
             }
@@ -61,6 +64,12 @@ class DeploymentHistoryAllOf {
 
 
 }
+
+/**
+ * name of the service
+ * @member {String} name
+ */
+DeploymentHistoryAllOf.prototype['name'] = undefined;
 
 /**
  * @member {module:model/Commit} commit

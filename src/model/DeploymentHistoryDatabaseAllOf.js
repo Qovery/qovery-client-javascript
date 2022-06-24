@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import StateEnum from './StateEnum';
+import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
 
 /**
  * The DeploymentHistoryDatabaseAllOf model module.
@@ -52,7 +52,7 @@ class DeploymentHistoryDatabaseAllOf {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = StateEnum.constructFromObject(data['status']);
+                obj['status'] = DeploymentHistoryStatusEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -62,12 +62,13 @@ class DeploymentHistoryDatabaseAllOf {
 }
 
 /**
+ * name of the service
  * @member {String} name
  */
 DeploymentHistoryDatabaseAllOf.prototype['name'] = undefined;
 
 /**
- * @member {module:model/StateEnum} status
+ * @member {module:model/DeploymentHistoryStatusEnum} status
  */
 DeploymentHistoryDatabaseAllOf.prototype['status'] = undefined;
 

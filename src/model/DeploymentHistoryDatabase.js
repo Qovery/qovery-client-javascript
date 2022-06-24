@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import DeploymentHistoryDatabaseAllOf from './DeploymentHistoryDatabaseAllOf';
-import StateEnum from './StateEnum';
+import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
 
 /**
  * The DeploymentHistoryDatabase model module.
@@ -71,7 +71,7 @@ class DeploymentHistoryDatabase {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = StateEnum.constructFromObject(data['status']);
+                obj['status'] = DeploymentHistoryStatusEnum.constructFromObject(data['status']);
             }
         }
         return obj;
@@ -96,12 +96,13 @@ DeploymentHistoryDatabase.prototype['created_at'] = undefined;
 DeploymentHistoryDatabase.prototype['updated_at'] = undefined;
 
 /**
+ * name of the service
  * @member {String} name
  */
 DeploymentHistoryDatabase.prototype['name'] = undefined;
 
 /**
- * @member {module:model/StateEnum} status
+ * @member {module:model/DeploymentHistoryStatusEnum} status
  */
 DeploymentHistoryDatabase.prototype['status'] = undefined;
 
@@ -121,11 +122,12 @@ Base.prototype['created_at'] = undefined;
 Base.prototype['updated_at'] = undefined;
 // Implement DeploymentHistoryDatabaseAllOf interface:
 /**
+ * name of the service
  * @member {String} name
  */
 DeploymentHistoryDatabaseAllOf.prototype['name'] = undefined;
 /**
- * @member {module:model/StateEnum} status
+ * @member {module:model/DeploymentHistoryStatusEnum} status
  */
 DeploymentHistoryDatabaseAllOf.prototype['status'] = undefined;
 

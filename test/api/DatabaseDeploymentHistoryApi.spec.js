@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.DeploymentHistoryAllOf();
+    instance = new QoveryApi.DatabaseDeploymentHistoryApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,31 +47,17 @@
       object[property] = value;
   }
 
-  describe('DeploymentHistoryAllOf', function() {
-    it('should create an instance of DeploymentHistoryAllOf', function() {
-      // uncomment below and update the code to test DeploymentHistoryAllOf
-      //var instance = new QoveryApi.DeploymentHistoryAllOf();
-      //expect(instance).to.be.a(QoveryApi.DeploymentHistoryAllOf);
+  describe('DatabaseDeploymentHistoryApi', function() {
+    describe('listDatabaseDeploymentHistory', function() {
+      it('should call listDatabaseDeploymentHistory successfully', function(done) {
+        //uncomment below and update the code to test listDatabaseDeploymentHistory
+        //instance.listDatabaseDeploymentHistory(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.DeploymentHistoryAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property commit (base name: "commit")', function() {
-      // uncomment below and update the code to test the property commit
-      //var instance = new QoveryApi.DeploymentHistoryAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property status (base name: "status")', function() {
-      // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.DeploymentHistoryAllOf();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

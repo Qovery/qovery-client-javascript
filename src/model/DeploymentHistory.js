@@ -68,6 +68,9 @@ class DeploymentHistory {
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
             if (data.hasOwnProperty('commit')) {
                 obj['commit'] = Commit.constructFromObject(data['commit']);
             }
@@ -97,6 +100,12 @@ DeploymentHistory.prototype['created_at'] = undefined;
 DeploymentHistory.prototype['updated_at'] = undefined;
 
 /**
+ * name of the service
+ * @member {String} name
+ */
+DeploymentHistory.prototype['name'] = undefined;
+
+/**
  * @member {module:model/Commit} commit
  */
 DeploymentHistory.prototype['commit'] = undefined;
@@ -121,6 +130,11 @@ Base.prototype['created_at'] = undefined;
  */
 Base.prototype['updated_at'] = undefined;
 // Implement DeploymentHistoryAllOf interface:
+/**
+ * name of the service
+ * @member {String} name
+ */
+DeploymentHistoryAllOf.prototype['name'] = undefined;
 /**
  * @member {module:model/Commit} commit
  */

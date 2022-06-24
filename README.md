@@ -322,6 +322,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabaseApplicationApi* | [**removeApplicationFromDatabase**](docs/DatabaseApplicationApi.md#removeApplicationFromDatabase) | **DELETE** /database/{databaseId}/application/{targetApplicationId} | Remove an application from this database 
 *QoveryApi.DatabaseContainerApi* | [**listDatabaseContainer**](docs/DatabaseContainerApi.md#listDatabaseContainer) | **GET** /database/{databaseId}/container | List container using the database
 *QoveryApi.DatabaseContainerApi* | [**removeContainerFromDatabase**](docs/DatabaseContainerApi.md#removeContainerFromDatabase) | **DELETE** /database/{databaseId}/container/{targetContainerId} | Remove an container from this database 
+*QoveryApi.DatabaseDeploymentHistoryApi* | [**listDatabaseDeploymentHistory**](docs/DatabaseDeploymentHistoryApi.md#listDatabaseDeploymentHistory) | **GET** /database/{databaseId}/deploymentHistory | List database deploys
 *QoveryApi.DatabaseEventApi* | [**listDatabaseEvent**](docs/DatabaseEventApi.md#listDatabaseEvent) | **GET** /database/{databaseId}/event | List database  events
 *QoveryApi.DatabaseMainCallsApi* | [**deleteDatabase**](docs/DatabaseMainCallsApi.md#deleteDatabase) | **DELETE** /database/{databaseId} | Delete a database 
 *QoveryApi.DatabaseMainCallsApi* | [**editDatabase**](docs/DatabaseMainCallsApi.md#editDatabase) | **PUT** /database/{databaseId} | Edit a database 

@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new QoveryApi.DeploymentHistory();
+      //expect(instance).to.be();
+    });
+
     it('should have the property commit (base name: "commit")', function() {
       // uncomment below and update the code to test the property commit
       //var instance = new QoveryApi.DeploymentHistory();

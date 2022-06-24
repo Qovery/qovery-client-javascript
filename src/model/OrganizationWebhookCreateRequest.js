@@ -121,6 +121,7 @@ OrganizationWebhookCreateRequest.prototype['enabled'] = undefined;
 OrganizationWebhookCreateRequest.prototype['events'] = undefined;
 
 /**
+ * Specify the project names you want to filter to.  This webhook will be triggered only if the event is coming from the specified Project IDs. Notes: 1. Wildcard is accepted E.g. `product*`. 2. Name is case insensitive. 
  * @member {Array.<String>} project_names_filter
  */
 OrganizationWebhookCreateRequest.prototype['project_names_filter'] = undefined;

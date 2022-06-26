@@ -5,6 +5,5 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **paidUsage** | [**PaidUsage**](PaidUsage.md) |  | [optional] 
-**communityUsage** | [**CommunityUsage**](CommunityUsage.md) |  | [optional] 
 
 

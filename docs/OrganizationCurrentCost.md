@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **remainingCredits** | [**RemainingCredits**](RemainingCredits.md) |  | [optional] 
 **cost** | [**Cost**](Cost.md) |  | [optional] 
 **paidUsage** | [**PaidUsage**](PaidUsage.md) |  | [optional] 
-**communityUsage** | [**CommunityUsage**](CommunityUsage.md) |  | [optional] 
 
 

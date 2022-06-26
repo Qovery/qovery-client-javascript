@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property communityUsage (base name: "community_usage")', function() {
-      // uncomment below and update the code to test the property communityUsage
-      //var instance = new QoveryApi.OrganizationCurrentCostAllOf();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

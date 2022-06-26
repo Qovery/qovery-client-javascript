@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import CommunityUsage from './CommunityUsage';
 import Cost from './Cost';
 import CurrentCost from './CurrentCost';
 import OrganizationCurrentCostAllOf from './OrganizationCurrentCostAllOf';
@@ -73,9 +72,6 @@ class OrganizationCurrentCost {
             if (data.hasOwnProperty('paid_usage')) {
                 obj['paid_usage'] = PaidUsage.constructFromObject(data['paid_usage']);
             }
-            if (data.hasOwnProperty('community_usage')) {
-                obj['community_usage'] = CommunityUsage.constructFromObject(data['community_usage']);
-            }
         }
         return obj;
     }
@@ -109,11 +105,6 @@ OrganizationCurrentCost.prototype['cost'] = undefined;
  */
 OrganizationCurrentCost.prototype['paid_usage'] = undefined;
 
-/**
- * @member {module:model/CommunityUsage} community_usage
- */
-OrganizationCurrentCost.prototype['community_usage'] = undefined;
-
 
 // Implement CurrentCost interface:
 /**
@@ -138,10 +129,6 @@ CurrentCost.prototype['cost'] = undefined;
  * @member {module:model/PaidUsage} paid_usage
  */
 OrganizationCurrentCostAllOf.prototype['paid_usage'] = undefined;
-/**
- * @member {module:model/CommunityUsage} community_usage
- */
-OrganizationCurrentCostAllOf.prototype['community_usage'] = undefined;
 
 
 

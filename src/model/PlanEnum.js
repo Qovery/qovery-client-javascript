@@ -20,27 +20,6 @@ import ApiClient from '../ApiClient';
 export default class PlanEnum {
     
         /**
-         * value: "BUSINESS"
-         * @const
-         */
-        "BUSINESS" = "BUSINESS";
-
-    
-        /**
-         * value: "COMMUNITY"
-         * @const
-         */
-        "COMMUNITY" = "COMMUNITY";
-
-    
-        /**
-         * value: "ENTERPRISE"
-         * @const
-         */
-        "ENTERPRISE" = "ENTERPRISE";
-
-    
-        /**
          * value: "FREE"
          * @const
          */
@@ -52,6 +31,20 @@ export default class PlanEnum {
          * @const
          */
         "PROFESSIONAL" = "PROFESSIONAL";
+
+    
+        /**
+         * value: "BUSINESS"
+         * @const
+         */
+        "BUSINESS" = "BUSINESS";
+
+    
+        /**
+         * value: "ENTERPRISE"
+         * @const
+         */
+        "ENTERPRISE" = "ENTERPRISE";
 
     
 

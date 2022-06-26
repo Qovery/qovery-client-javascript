@@ -3,14 +3,12 @@
 ## Enum
 
 
-* `BUSINESS` (value: `"BUSINESS"`)
-
-* `COMMUNITY` (value: `"COMMUNITY"`)
-
-* `ENTERPRISE` (value: `"ENTERPRISE"`)
-
 * `FREE` (value: `"FREE"`)
 
 * `PROFESSIONAL` (value: `"PROFESSIONAL"`)
+
+* `BUSINESS` (value: `"BUSINESS"`)
+
+* `ENTERPRISE` (value: `"ENTERPRISE"`)
 
 

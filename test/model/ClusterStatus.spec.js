@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lastExecutionId (base name: "last_execution_id")', function() {
+      // uncomment below and update the code to test the property lastExecutionId
+      //var instance = new QoveryApi.ClusterStatus();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

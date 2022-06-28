@@ -57,6 +57,9 @@ class ClusterStatus {
             if (data.hasOwnProperty('is_deployed')) {
                 obj['is_deployed'] = ApiClient.convertToType(data['is_deployed'], 'Boolean');
             }
+            if (data.hasOwnProperty('last_execution_id')) {
+                obj['last_execution_id'] = ApiClient.convertToType(data['last_execution_id'], 'String');
+            }
         }
         return obj;
     }
@@ -78,6 +81,11 @@ ClusterStatus.prototype['status'] = undefined;
  * @member {Boolean} is_deployed
  */
 ClusterStatus.prototype['is_deployed'] = undefined;
+
+/**
+ * @member {String} last_execution_id
+ */
+ClusterStatus.prototype['last_execution_id'] = undefined;
 
 
 

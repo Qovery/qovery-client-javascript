@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ClusterLogsErrorEventDetailsUnderlyingError model module.
- * @module model/ClusterLogsErrorEventDetailsUnderlyingError
+ * The ClusterLogsErrorUnderlyingError model module.
+ * @module model/ClusterLogsErrorUnderlyingError
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ClusterLogsErrorEventDetailsUnderlyingError {
+class ClusterLogsErrorUnderlyingError {
     /**
-     * Constructs a new <code>ClusterLogsErrorEventDetailsUnderlyingError</code>.
-     * @alias module:model/ClusterLogsErrorEventDetailsUnderlyingError
+     * Constructs a new <code>ClusterLogsErrorUnderlyingError</code>.
+     * @alias module:model/ClusterLogsErrorUnderlyingError
      */
     constructor() { 
         
-        ClusterLogsErrorEventDetailsUnderlyingError.initialize(this);
+        ClusterLogsErrorUnderlyingError.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ClusterLogsErrorEventDetailsUnderlyingError {
     }
 
     /**
-     * Constructs a <code>ClusterLogsErrorEventDetailsUnderlyingError</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterLogsErrorUnderlyingError</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ClusterLogsErrorEventDetailsUnderlyingError} obj Optional instance to populate.
-     * @return {module:model/ClusterLogsErrorEventDetailsUnderlyingError} The populated <code>ClusterLogsErrorEventDetailsUnderlyingError</code> instance.
+     * @param {module:model/ClusterLogsErrorUnderlyingError} obj Optional instance to populate.
+     * @return {module:model/ClusterLogsErrorUnderlyingError} The populated <code>ClusterLogsErrorUnderlyingError</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ClusterLogsErrorEventDetailsUnderlyingError();
+            obj = obj || new ClusterLogsErrorUnderlyingError();
 
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
@@ -61,12 +61,12 @@ class ClusterLogsErrorEventDetailsUnderlyingError {
  * technical details about the error
  * @member {String} message
  */
-ClusterLogsErrorEventDetailsUnderlyingError.prototype['message'] = undefined;
+ClusterLogsErrorUnderlyingError.prototype['message'] = undefined;
 
 
 
 
 
 
-export default ClusterLogsErrorEventDetailsUnderlyingError;
+export default ClusterLogsErrorUnderlyingError;
 

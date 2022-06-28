@@ -81,7 +81,7 @@ import ClusterLogsDetails from './model/ClusterLogsDetails';
 import ClusterLogsError from './model/ClusterLogsError';
 import ClusterLogsErrorEventDetails from './model/ClusterLogsErrorEventDetails';
 import ClusterLogsErrorEventDetailsTransmitter from './model/ClusterLogsErrorEventDetailsTransmitter';
-import ClusterLogsErrorEventDetailsUnderlyingError from './model/ClusterLogsErrorEventDetailsUnderlyingError';
+import ClusterLogsErrorUnderlyingError from './model/ClusterLogsErrorUnderlyingError';
 import ClusterLogsMessage from './model/ClusterLogsMessage';
 import ClusterReadinessStatus from './model/ClusterReadinessStatus';
 import ClusterRegion from './model/ClusterRegion';
@@ -884,10 +884,10 @@ export {
     ClusterLogsErrorEventDetailsTransmitter,
 
     /**
-     * The ClusterLogsErrorEventDetailsUnderlyingError model constructor.
-     * @property {module:model/ClusterLogsErrorEventDetailsUnderlyingError}
+     * The ClusterLogsErrorUnderlyingError model constructor.
+     * @property {module:model/ClusterLogsErrorUnderlyingError}
      */
-    ClusterLogsErrorEventDetailsUnderlyingError,
+    ClusterLogsErrorUnderlyingError,
 
     /**
      * The ClusterLogsMessage model constructor.

@@ -520,7 +520,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterLogsError](docs/ClusterLogsError.md)
  - [QoveryApi.ClusterLogsErrorEventDetails](docs/ClusterLogsErrorEventDetails.md)
  - [QoveryApi.ClusterLogsErrorEventDetailsTransmitter](docs/ClusterLogsErrorEventDetailsTransmitter.md)
- - [QoveryApi.ClusterLogsErrorEventDetailsUnderlyingError](docs/ClusterLogsErrorEventDetailsUnderlyingError.md)
+ - [QoveryApi.ClusterLogsErrorUnderlyingError](docs/ClusterLogsErrorUnderlyingError.md)
  - [QoveryApi.ClusterLogsMessage](docs/ClusterLogsMessage.md)
  - [QoveryApi.ClusterReadinessStatus](docs/ClusterReadinessStatus.md)
  - [QoveryApi.ClusterRegion](docs/ClusterRegion.md)

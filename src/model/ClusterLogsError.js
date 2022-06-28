@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ClusterLogsErrorEventDetails from './ClusterLogsErrorEventDetails';
+import ClusterLogsErrorUnderlyingError from './ClusterLogsErrorUnderlyingError';
 
 /**
  * The ClusterLogsError model module.
@@ -64,6 +65,9 @@ class ClusterLogsError {
             if (data.hasOwnProperty('event_details')) {
                 obj['event_details'] = ClusterLogsErrorEventDetails.constructFromObject(data['event_details']);
             }
+            if (data.hasOwnProperty('underlying_error')) {
+                obj['underlying_error'] = ClusterLogsErrorUnderlyingError.constructFromObject(data['underlying_error']);
+            }
         }
         return obj;
     }
@@ -99,6 +103,11 @@ ClusterLogsError.prototype['hint_message'] = undefined;
  * @member {module:model/ClusterLogsErrorEventDetails} event_details
  */
 ClusterLogsError.prototype['event_details'] = undefined;
+
+/**
+ * @member {module:model/ClusterLogsErrorUnderlyingError} underlying_error
+ */
+ClusterLogsError.prototype['underlying_error'] = undefined;
 
 
 

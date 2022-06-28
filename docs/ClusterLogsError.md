@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **link** | **String** | link to our documentation | [optional] 
 **hintMessage** | **String** | hint the user can follow | [optional] 
 **eventDetails** | [**ClusterLogsErrorEventDetails**](ClusterLogsErrorEventDetails.md) |  | [optional] 
+**underlyingError** | [**ClusterLogsErrorUnderlyingError**](ClusterLogsErrorUnderlyingError.md) |  | [optional] 
 
 

@@ -1,4 +1,4 @@
-# QoveryApi.ClusterLogsErrorEventDetailsUnderlyingError
+# QoveryApi.ClusterLogsErrorUnderlyingError
 
 ## Properties
 

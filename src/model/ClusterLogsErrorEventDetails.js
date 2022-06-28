@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import ClusterLogsErrorEventDetailsTransmitter from './ClusterLogsErrorEventDetailsTransmitter';
-import ClusterLogsErrorEventDetailsUnderlyingError from './ClusterLogsErrorEventDetailsUnderlyingError';
 
 /**
  * The ClusterLogsErrorEventDetails model module.
@@ -58,9 +57,6 @@ class ClusterLogsErrorEventDetails {
             if (data.hasOwnProperty('transmitter')) {
                 obj['transmitter'] = ClusterLogsErrorEventDetailsTransmitter.constructFromObject(data['transmitter']);
             }
-            if (data.hasOwnProperty('underlying_error')) {
-                obj['underlying_error'] = ClusterLogsErrorEventDetailsUnderlyingError.constructFromObject(data['underlying_error']);
-            }
         }
         return obj;
     }
@@ -83,11 +79,6 @@ ClusterLogsErrorEventDetails.prototype['region'] = undefined;
  * @member {module:model/ClusterLogsErrorEventDetailsTransmitter} transmitter
  */
 ClusterLogsErrorEventDetails.prototype['transmitter'] = undefined;
-
-/**
- * @member {module:model/ClusterLogsErrorEventDetailsUnderlyingError} underlying_error
- */
-ClusterLogsErrorEventDetails.prototype['underlying_error'] = undefined;
 
 
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ClusterLogsErrorEventDetailsUnderlyingError();
+    instance = new QoveryApi.ClusterLogsErrorUnderlyingError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ClusterLogsErrorEventDetailsUnderlyingError', function() {
-    it('should create an instance of ClusterLogsErrorEventDetailsUnderlyingError', function() {
-      // uncomment below and update the code to test ClusterLogsErrorEventDetailsUnderlyingError
-      //var instance = new QoveryApi.ClusterLogsErrorEventDetailsUnderlyingError();
-      //expect(instance).to.be.a(QoveryApi.ClusterLogsErrorEventDetailsUnderlyingError);
+  describe('ClusterLogsErrorUnderlyingError', function() {
+    it('should create an instance of ClusterLogsErrorUnderlyingError', function() {
+      // uncomment below and update the code to test ClusterLogsErrorUnderlyingError
+      //var instance = new QoveryApi.ClusterLogsErrorUnderlyingError();
+      //expect(instance).to.be.a(QoveryApi.ClusterLogsErrorUnderlyingError);
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instance = new QoveryApi.ClusterLogsErrorEventDetailsUnderlyingError();
+      //var instance = new QoveryApi.ClusterLogsErrorUnderlyingError();
       //expect(instance).to.be();
     });
 

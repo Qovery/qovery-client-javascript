@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property underlyingError (base name: "underlying_error")', function() {
-      // uncomment below and update the code to test the property underlyingError
-      //var instance = new QoveryApi.ClusterLogsErrorEventDetails();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

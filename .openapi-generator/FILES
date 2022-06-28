@@ -88,7 +88,7 @@ docs/ClusterLogsDetails.md
 docs/ClusterLogsError.md
 docs/ClusterLogsErrorEventDetails.md
 docs/ClusterLogsErrorEventDetailsTransmitter.md
-docs/ClusterLogsErrorEventDetailsUnderlyingError.md
+docs/ClusterLogsErrorUnderlyingError.md
 docs/ClusterLogsMessage.md
 docs/ClusterReadinessStatus.md
 docs/ClusterRegion.md
@@ -564,7 +564,7 @@ src/model/ClusterLogsDetails.js
 src/model/ClusterLogsError.js
 src/model/ClusterLogsErrorEventDetails.js
 src/model/ClusterLogsErrorEventDetailsTransmitter.js
-src/model/ClusterLogsErrorEventDetailsUnderlyingError.js
+src/model/ClusterLogsErrorUnderlyingError.js
 src/model/ClusterLogsMessage.js
 src/model/ClusterReadinessStatus.js
 src/model/ClusterRegion.js
@@ -986,7 +986,7 @@ test/model/ClusterLogsDetails.spec.js
 test/model/ClusterLogsError.spec.js
 test/model/ClusterLogsErrorEventDetails.spec.js
 test/model/ClusterLogsErrorEventDetailsTransmitter.spec.js
-test/model/ClusterLogsErrorEventDetailsUnderlyingError.spec.js
+test/model/ClusterLogsErrorUnderlyingError.spec.js
 test/model/ClusterLogsMessage.spec.js
 test/model/ClusterReadinessStatus.spec.js
 test/model/ClusterRegion.spec.js

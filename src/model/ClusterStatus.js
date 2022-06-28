@@ -83,6 +83,7 @@ ClusterStatus.prototype['status'] = undefined;
 ClusterStatus.prototype['is_deployed'] = undefined;
 
 /**
+ * Only set for /organization/{organizationId}/cluster/status
  * @member {String} last_execution_id
  */
 ClusterStatus.prototype['last_execution_id'] = undefined;

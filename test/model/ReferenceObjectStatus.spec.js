@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lastDeploymentDate (base name: "last_deployment_date")', function() {
+      // uncomment below and update the code to test the property lastDeploymentDate
+      //var instance = new QoveryApi.ReferenceObjectStatus();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

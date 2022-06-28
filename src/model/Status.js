@@ -63,6 +63,9 @@ class Status {
             if (data.hasOwnProperty('service_deployment_status')) {
                 obj['service_deployment_status'] = ServiceDeploymentStatusEnum.constructFromObject(data['service_deployment_status']);
             }
+            if (data.hasOwnProperty('last_deployment_date')) {
+                obj['last_deployment_date'] = ApiClient.convertToType(data['last_deployment_date'], 'Date');
+            }
         }
         return obj;
     }
@@ -90,6 +93,11 @@ Status.prototype['message'] = undefined;
  * @member {module:model/ServiceDeploymentStatusEnum} service_deployment_status
  */
 Status.prototype['service_deployment_status'] = undefined;
+
+/**
+ * @member {Date} last_deployment_date
+ */
+Status.prototype['last_deployment_date'] = undefined;
 
 
 

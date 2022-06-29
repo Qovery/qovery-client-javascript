@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import StateEnum from './StateEnum';
 
 /**
- * The ClusterStatus model module.
- * @module model/ClusterStatus
+ * The ClusterStatusGet model module.
+ * @module model/ClusterStatusGet
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ClusterStatus {
+class ClusterStatusGet {
     /**
-     * Constructs a new <code>ClusterStatus</code>.
-     * @alias module:model/ClusterStatus
+     * Constructs a new <code>ClusterStatusGet</code>.
+     * @alias module:model/ClusterStatusGet
      */
     constructor() { 
         
-        ClusterStatus.initialize(this);
+        ClusterStatusGet.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class ClusterStatus {
     }
 
     /**
-     * Constructs a <code>ClusterStatus</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterStatusGet</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ClusterStatus} obj Optional instance to populate.
-     * @return {module:model/ClusterStatus} The populated <code>ClusterStatus</code> instance.
+     * @param {module:model/ClusterStatusGet} obj Optional instance to populate.
+     * @return {module:model/ClusterStatusGet} The populated <code>ClusterStatusGet</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ClusterStatus();
+            obj = obj || new ClusterStatusGet();
 
             if (data.hasOwnProperty('cluster_id')) {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
@@ -56,6 +56,9 @@ class ClusterStatus {
             }
             if (data.hasOwnProperty('is_deployed')) {
                 obj['is_deployed'] = ApiClient.convertToType(data['is_deployed'], 'Boolean');
+            }
+            if (data.hasOwnProperty('last_execution_id')) {
+                obj['last_execution_id'] = ApiClient.convertToType(data['last_execution_id'], 'String');
             }
         }
         return obj;
@@ -67,22 +70,27 @@ class ClusterStatus {
 /**
  * @member {String} cluster_id
  */
-ClusterStatus.prototype['cluster_id'] = undefined;
+ClusterStatusGet.prototype['cluster_id'] = undefined;
 
 /**
  * @member {module:model/StateEnum} status
  */
-ClusterStatus.prototype['status'] = undefined;
+ClusterStatusGet.prototype['status'] = undefined;
 
 /**
  * @member {Boolean} is_deployed
  */
-ClusterStatus.prototype['is_deployed'] = undefined;
+ClusterStatusGet.prototype['is_deployed'] = undefined;
+
+/**
+ * @member {String} last_execution_id
+ */
+ClusterStatusGet.prototype['last_execution_id'] = undefined;
 
 
 
 
 
 
-export default ClusterStatus;
+export default ClusterStatusGet;
 

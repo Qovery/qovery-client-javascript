@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 ## getClusterStatus
 
-> ClusterStatus getClusterStatus(organizationId, clusterId)
+> ClusterStatusGet getClusterStatus(organizationId, clusterId)
 
 Get cluster status
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ClusterStatus**](ClusterStatus.md)
+[**ClusterStatusGet**](ClusterStatusGet.md)
 
 ### Authorization
 

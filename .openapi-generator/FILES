@@ -102,6 +102,7 @@ docs/ClusterRoutingTableRequest.md
 docs/ClusterRoutingTableRequestRoutesInner.md
 docs/ClusterRoutingTableResultsInner.md
 docs/ClusterStatus.md
+docs/ClusterStatusGet.md
 docs/ClusterStatusResponseList.md
 docs/ClustersApi.md
 docs/Commit.md
@@ -578,6 +579,7 @@ src/model/ClusterRoutingTableRequest.js
 src/model/ClusterRoutingTableRequestRoutesInner.js
 src/model/ClusterRoutingTableResultsInner.js
 src/model/ClusterStatus.js
+src/model/ClusterStatusGet.js
 src/model/ClusterStatusResponseList.js
 src/model/Commit.js
 src/model/CommitPaginatedResponseList.js
@@ -1000,6 +1002,7 @@ test/model/ClusterRoutingTableRequest.spec.js
 test/model/ClusterRoutingTableRequestRoutesInner.spec.js
 test/model/ClusterRoutingTableResultsInner.spec.js
 test/model/ClusterStatus.spec.js
+test/model/ClusterStatusGet.spec.js
 test/model/ClusterStatusResponseList.spec.js
 test/model/Commit.spec.js
 test/model/CommitPaginatedResponseList.spec.js

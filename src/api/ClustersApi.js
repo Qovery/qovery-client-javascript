@@ -22,6 +22,7 @@ import ClusterResponseList from '../model/ClusterResponseList';
 import ClusterRoutingTable from '../model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from '../model/ClusterRoutingTableRequest';
 import ClusterStatus from '../model/ClusterStatus';
+import ClusterStatusGet from '../model/ClusterStatusGet';
 import ClusterStatusResponseList from '../model/ClusterStatusResponseList';
 import ListClusterLogs200Response from '../model/ListClusterLogs200Response';
 
@@ -340,7 +341,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the getClusterStatus operation.
      * @callback module:api/ClustersApi~getClusterStatusCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ClusterStatus} data The data returned by the service call.
+     * @param {module:model/ClusterStatusGet} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -349,7 +350,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~getClusterStatusCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterStatus}
+     * data is of type: {@link module:model/ClusterStatusGet}
      */
     getClusterStatus(organizationId, clusterId, callback) {
       let postBody = null;
@@ -376,7 +377,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ClusterStatus;
+      let returnType = ClusterStatusGet;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

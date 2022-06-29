@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ClusterStatus]**](ClusterStatus.md) |  | [optional] 
+**results** | [**[ClusterStatusGet]**](ClusterStatusGet.md) |  | [optional] 
 
 

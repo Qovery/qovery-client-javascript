@@ -534,6 +534,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterRoutingTableRequestRoutesInner](docs/ClusterRoutingTableRequestRoutesInner.md)
  - [QoveryApi.ClusterRoutingTableResultsInner](docs/ClusterRoutingTableResultsInner.md)
  - [QoveryApi.ClusterStatus](docs/ClusterStatus.md)
+ - [QoveryApi.ClusterStatusGet](docs/ClusterStatusGet.md)
  - [QoveryApi.ClusterStatusResponseList](docs/ClusterStatusResponseList.md)
  - [QoveryApi.Commit](docs/Commit.md)
  - [QoveryApi.CommitPaginatedResponseList](docs/CommitPaginatedResponseList.md)

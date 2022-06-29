@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ClusterStatus();
+    instance = new QoveryApi.ClusterStatusGet();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,34 @@
       object[property] = value;
   }
 
-  describe('ClusterStatus', function() {
-    it('should create an instance of ClusterStatus', function() {
-      // uncomment below and update the code to test ClusterStatus
-      //var instance = new QoveryApi.ClusterStatus();
-      //expect(instance).to.be.a(QoveryApi.ClusterStatus);
+  describe('ClusterStatusGet', function() {
+    it('should create an instance of ClusterStatusGet', function() {
+      // uncomment below and update the code to test ClusterStatusGet
+      //var instance = new QoveryApi.ClusterStatusGet();
+      //expect(instance).to.be.a(QoveryApi.ClusterStatusGet);
     });
 
     it('should have the property clusterId (base name: "cluster_id")', function() {
       // uncomment below and update the code to test the property clusterId
-      //var instance = new QoveryApi.ClusterStatus();
+      //var instance = new QoveryApi.ClusterStatusGet();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.ClusterStatus();
+      //var instance = new QoveryApi.ClusterStatusGet();
       //expect(instance).to.be();
     });
 
     it('should have the property isDeployed (base name: "is_deployed")', function() {
       // uncomment below and update the code to test the property isDeployed
-      //var instance = new QoveryApi.ClusterStatus();
+      //var instance = new QoveryApi.ClusterStatusGet();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property lastExecutionId (base name: "last_execution_id")', function() {
+      // uncomment below and update the code to test the property lastExecutionId
+      //var instance = new QoveryApi.ClusterStatusGet();
       //expect(instance).to.be();
     });
 

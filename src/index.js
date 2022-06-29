@@ -95,6 +95,7 @@ import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
 import ClusterRoutingTableRequestRoutesInner from './model/ClusterRoutingTableRequestRoutesInner';
 import ClusterRoutingTableResultsInner from './model/ClusterRoutingTableResultsInner';
 import ClusterStatus from './model/ClusterStatus';
+import ClusterStatusGet from './model/ClusterStatusGet';
 import ClusterStatusResponseList from './model/ClusterStatusResponseList';
 import Commit from './model/Commit';
 import CommitPaginatedResponseList from './model/CommitPaginatedResponseList';
@@ -966,6 +967,12 @@ export {
      * @property {module:model/ClusterStatus}
      */
     ClusterStatus,
+
+    /**
+     * The ClusterStatusGet model constructor.
+     * @property {module:model/ClusterStatusGet}
+     */
+    ClusterStatusGet,
 
     /**
      * The ClusterStatusResponseList model constructor.

@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
-import ClusterRequestFeatures from './ClusterRequestFeatures';
+import ClusterRequestFeaturesInner from './ClusterRequestFeaturesInner';
 import KubernetesEnum from './KubernetesEnum';
 
 /**
@@ -90,7 +90,7 @@ class ClusterRequest {
                 obj['ssh_keys'] = ApiClient.convertToType(data['ssh_keys'], ['String']);
             }
             if (data.hasOwnProperty('features')) {
-                obj['features'] = ClusterRequestFeatures.constructFromObject(data['features']);
+                obj['features'] = ApiClient.convertToType(data['features'], [ClusterRequestFeaturesInner]);
             }
         }
         return obj;
@@ -163,7 +163,7 @@ ClusterRequest.prototype['production'] = undefined;
 ClusterRequest.prototype['ssh_keys'] = undefined;
 
 /**
- * @member {module:model/ClusterRequestFeatures} features
+ * @member {Array.<module:model/ClusterRequestFeaturesInner>} features
  */
 ClusterRequest.prototype['features'] = undefined;
 

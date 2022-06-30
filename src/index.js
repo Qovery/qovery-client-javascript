@@ -87,8 +87,7 @@ import ClusterReadinessStatus from './model/ClusterReadinessStatus';
 import ClusterRegion from './model/ClusterRegion';
 import ClusterRegionResponseList from './model/ClusterRegionResponseList';
 import ClusterRequest from './model/ClusterRequest';
-import ClusterRequestFeatures from './model/ClusterRequestFeatures';
-import ClusterRequestFeaturesFeaturesInner from './model/ClusterRequestFeaturesFeaturesInner';
+import ClusterRequestFeaturesInner from './model/ClusterRequestFeaturesInner';
 import ClusterResponseList from './model/ClusterResponseList';
 import ClusterRoutingTable from './model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
@@ -921,16 +920,10 @@ export {
     ClusterRequest,
 
     /**
-     * The ClusterRequestFeatures model constructor.
-     * @property {module:model/ClusterRequestFeatures}
+     * The ClusterRequestFeaturesInner model constructor.
+     * @property {module:model/ClusterRequestFeaturesInner}
      */
-    ClusterRequestFeatures,
-
-    /**
-     * The ClusterRequestFeaturesFeaturesInner model constructor.
-     * @property {module:model/ClusterRequestFeaturesFeaturesInner}
-     */
-    ClusterRequestFeaturesFeaturesInner,
+    ClusterRequestFeaturesInner,
 
     /**
      * The ClusterResponseList model constructor.

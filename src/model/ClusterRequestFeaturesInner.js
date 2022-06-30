@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ClusterRequestFeaturesFeaturesInner model module.
- * @module model/ClusterRequestFeaturesFeaturesInner
+ * The ClusterRequestFeaturesInner model module.
+ * @module model/ClusterRequestFeaturesInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ClusterRequestFeaturesFeaturesInner {
+class ClusterRequestFeaturesInner {
     /**
-     * Constructs a new <code>ClusterRequestFeaturesFeaturesInner</code>.
-     * @alias module:model/ClusterRequestFeaturesFeaturesInner
+     * Constructs a new <code>ClusterRequestFeaturesInner</code>.
+     * @alias module:model/ClusterRequestFeaturesInner
      */
     constructor() { 
         
-        ClusterRequestFeaturesFeaturesInner.initialize(this);
+        ClusterRequestFeaturesInner.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ClusterRequestFeaturesFeaturesInner {
     }
 
     /**
-     * Constructs a <code>ClusterRequestFeaturesFeaturesInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterRequestFeaturesInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ClusterRequestFeaturesFeaturesInner} obj Optional instance to populate.
-     * @return {module:model/ClusterRequestFeaturesFeaturesInner} The populated <code>ClusterRequestFeaturesFeaturesInner</code> instance.
+     * @param {module:model/ClusterRequestFeaturesInner} obj Optional instance to populate.
+     * @return {module:model/ClusterRequestFeaturesInner} The populated <code>ClusterRequestFeaturesInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ClusterRequestFeaturesFeaturesInner();
+            obj = obj || new ClusterRequestFeaturesInner();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -63,17 +63,17 @@ class ClusterRequestFeaturesFeaturesInner {
 /**
  * @member {String} id
  */
-ClusterRequestFeaturesFeaturesInner.prototype['id'] = undefined;
+ClusterRequestFeaturesInner.prototype['id'] = undefined;
 
 /**
  * @member {String} value
  */
-ClusterRequestFeaturesFeaturesInner.prototype['value'] = undefined;
+ClusterRequestFeaturesInner.prototype['value'] = undefined;
 
 
 
 
 
 
-export default ClusterRequestFeaturesFeaturesInner;
+export default ClusterRequestFeaturesInner;
 

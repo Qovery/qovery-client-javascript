@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ClusterRequestFeaturesFeaturesInner();
+    instance = new QoveryApi.ClusterRequestFeaturesInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('ClusterRequestFeaturesFeaturesInner', function() {
-    it('should create an instance of ClusterRequestFeaturesFeaturesInner', function() {
-      // uncomment below and update the code to test ClusterRequestFeaturesFeaturesInner
-      //var instance = new QoveryApi.ClusterRequestFeaturesFeaturesInner();
-      //expect(instance).to.be.a(QoveryApi.ClusterRequestFeaturesFeaturesInner);
+  describe('ClusterRequestFeaturesInner', function() {
+    it('should create an instance of ClusterRequestFeaturesInner', function() {
+      // uncomment below and update the code to test ClusterRequestFeaturesInner
+      //var instance = new QoveryApi.ClusterRequestFeaturesInner();
+      //expect(instance).to.be.a(QoveryApi.ClusterRequestFeaturesInner);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ClusterRequestFeaturesFeaturesInner();
+      //var instance = new QoveryApi.ClusterRequestFeaturesInner();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new QoveryApi.ClusterRequestFeaturesFeaturesInner();
+      //var instance = new QoveryApi.ClusterRequestFeaturesInner();
       //expect(instance).to.be();
     });
 

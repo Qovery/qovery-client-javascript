@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addCreditCard**](BillingApi.md#addCreditCard) | **POST** /organization/{organizationId}/creditCard | Add credit card
 [**addCreditCode**](BillingApi.md#addCreditCode) | **POST** /organization/{organizationId}/creditCode | Add credit code
+[**changePlan**](BillingApi.md#changePlan) | **POST** /organization/{organizationId}/changePlan | Change organization plan
 [**deleteCreditCard**](BillingApi.md#deleteCreditCard) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 [**editOrganizationBillingInfo**](BillingApi.md#editOrganizationBillingInfo) | **PUT** /organization/{organizationId}/billingInfo | Edit Organization Billing Info
 [**getClusterCurrentCost**](BillingApi.md#getClusterCurrentCost) | **GET** /organization/{organizationId}/cluster/{clusterId}/currentCost | Get cluster current cost
@@ -120,6 +121,57 @@ null (empty response body)
 
 - **Content-Type**: application/json
 - **Accept**: Not defined
+
+
+## changePlan
+
+> Organization changePlan(organizationId, opts)
+
+Change organization plan
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.BillingApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let opts = {
+  'changePlanRequest': new QoveryApi.ChangePlanRequest() // ChangePlanRequest | 
+};
+apiInstance.changePlan(organizationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **changePlanRequest** | [**ChangePlanRequest**](ChangePlanRequest.md)|  | [optional] 
+
+### Return type
+
+[**Organization**](Organization.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## deleteCreditCard

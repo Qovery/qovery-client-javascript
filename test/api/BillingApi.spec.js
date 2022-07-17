@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('changePlan', function() {
+      it('should call changePlan successfully', function(done) {
+        //uncomment below and update the code to test changePlan
+        //instance.changePlan(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteCreditCard', function() {
       it('should call deleteCreditCard successfully', function(done) {
         //uncomment below and update the code to test deleteCreditCard

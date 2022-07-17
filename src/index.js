@@ -58,6 +58,7 @@ import Budget from './model/Budget';
 import BudgetThreshold from './model/BudgetThreshold';
 import BuildModeEnum from './model/BuildModeEnum';
 import BuildPackLanguageEnum from './model/BuildPackLanguageEnum';
+import ChangePlanRequest from './model/ChangePlanRequest';
 import CloneRequest from './model/CloneRequest';
 import CloudProvider from './model/CloudProvider';
 import CloudProviderEnum from './model/CloudProviderEnum';
@@ -744,6 +745,12 @@ export {
      * @property {module:model/BuildPackLanguageEnum}
      */
     BuildPackLanguageEnum,
+
+    /**
+     * The ChangePlanRequest model constructor.
+     * @property {module:model/ChangePlanRequest}
+     */
+    ChangePlanRequest,
 
     /**
      * The CloneRequest model constructor.

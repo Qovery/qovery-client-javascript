@@ -63,6 +63,7 @@ docs/Budget.md
 docs/BudgetThreshold.md
 docs/BuildModeEnum.md
 docs/BuildPackLanguageEnum.md
+docs/ChangePlanRequest.md
 docs/CloneRequest.md
 docs/CloudProvider.md
 docs/CloudProviderApi.md
@@ -541,6 +542,7 @@ src/model/Budget.js
 src/model/BudgetThreshold.js
 src/model/BuildModeEnum.js
 src/model/BuildPackLanguageEnum.js
+src/model/ChangePlanRequest.js
 src/model/CloneRequest.js
 src/model/CloudProvider.js
 src/model/CloudProviderEnum.js
@@ -963,6 +965,7 @@ test/model/Budget.spec.js
 test/model/BudgetThreshold.spec.js
 test/model/BuildModeEnum.spec.js
 test/model/BuildPackLanguageEnum.spec.js
+test/model/ChangePlanRequest.spec.js
 test/model/CloneRequest.spec.js
 test/model/CloudProvider.spec.js
 test/model/CloudProviderEnum.spec.js

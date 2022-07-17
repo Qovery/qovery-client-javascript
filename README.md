@@ -192,6 +192,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.BackupsApi* | [**removeDatabaseBackup**](docs/BackupsApi.md#removeDatabaseBackup) | **DELETE** /database/{databaseId}/backup/{backupId} | Remove database  backup
 *QoveryApi.BillingApi* | [**addCreditCard**](docs/BillingApi.md#addCreditCard) | **POST** /organization/{organizationId}/creditCard | Add credit card
 *QoveryApi.BillingApi* | [**addCreditCode**](docs/BillingApi.md#addCreditCode) | **POST** /organization/{organizationId}/creditCode | Add credit code
+*QoveryApi.BillingApi* | [**changePlan**](docs/BillingApi.md#changePlan) | **POST** /organization/{organizationId}/changePlan | Change organization plan
 *QoveryApi.BillingApi* | [**deleteCreditCard**](docs/BillingApi.md#deleteCreditCard) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 *QoveryApi.BillingApi* | [**editOrganizationBillingInfo**](docs/BillingApi.md#editOrganizationBillingInfo) | **PUT** /organization/{organizationId}/billingInfo | Edit Organization Billing Info
 *QoveryApi.BillingApi* | [**getClusterCurrentCost**](docs/BillingApi.md#getClusterCurrentCost) | **GET** /organization/{organizationId}/cluster/{clusterId}/currentCost | Get cluster current cost
@@ -497,6 +498,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.BudgetThreshold](docs/BudgetThreshold.md)
  - [QoveryApi.BuildModeEnum](docs/BuildModeEnum.md)
  - [QoveryApi.BuildPackLanguageEnum](docs/BuildPackLanguageEnum.md)
+ - [QoveryApi.ChangePlanRequest](docs/ChangePlanRequest.md)
  - [QoveryApi.CloneRequest](docs/CloneRequest.md)
  - [QoveryApi.CloudProvider](docs/CloudProvider.md)
  - [QoveryApi.CloudProviderEnum](docs/CloudProviderEnum.md)

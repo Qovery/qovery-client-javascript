@@ -102,8 +102,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property serviceId (base name: "service_id")', function() {
+      // uncomment below and update the code to test the property serviceId
+      //var instance = new QoveryApi.EnvironmentVariable();
+      //expect(instance).to.be();
+    });
+
     it('should have the property serviceName (base name: "service_name")', function() {
       // uncomment below and update the code to test the property serviceName
+      //var instance = new QoveryApi.EnvironmentVariable();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property serviceType (base name: "service_type")', function() {
+      // uncomment below and update the code to test the property serviceType
       //var instance = new QoveryApi.EnvironmentVariable();
       //expect(instance).to.be();
     });

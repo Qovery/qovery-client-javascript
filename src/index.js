@@ -118,6 +118,7 @@ import ContainerNetworkRequest from './model/ContainerNetworkRequest';
 import ContainerRegistryKindEnum from './model/ContainerRegistryKindEnum';
 import ContainerRegistryRequest from './model/ContainerRegistryRequest';
 import ContainerRegistryResponse from './model/ContainerRegistryResponse';
+import ContainerRegistryResponseAllOf from './model/ContainerRegistryResponseAllOf';
 import ContainerRequest from './model/ContainerRequest';
 import ContainerRequestAllOf from './model/ContainerRequestAllOf';
 import ContainerResponse from './model/ContainerResponse';
@@ -1105,6 +1106,12 @@ export {
      * @property {module:model/ContainerRegistryResponse}
      */
     ContainerRegistryResponse,
+
+    /**
+     * The ContainerRegistryResponseAllOf model constructor.
+     * @property {module:model/ContainerRegistryResponseAllOf}
+     */
+    ContainerRegistryResponseAllOf,
 
     /**
      * The ContainerRequest model constructor.

@@ -558,6 +558,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ContainerRegistryKindEnum](docs/ContainerRegistryKindEnum.md)
  - [QoveryApi.ContainerRegistryRequest](docs/ContainerRegistryRequest.md)
  - [QoveryApi.ContainerRegistryResponse](docs/ContainerRegistryResponse.md)
+ - [QoveryApi.ContainerRegistryResponseAllOf](docs/ContainerRegistryResponseAllOf.md)
  - [QoveryApi.ContainerRequest](docs/ContainerRequest.md)
  - [QoveryApi.ContainerRequestAllOf](docs/ContainerRequestAllOf.md)
  - [QoveryApi.ContainerResponse](docs/ContainerResponse.md)

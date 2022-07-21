@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ContainerRegistryResponse();
+    instance = new QoveryApi.ContainerRegistryResponseAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,58 +47,40 @@
       object[property] = value;
   }
 
-  describe('ContainerRegistryResponse', function() {
-    it('should create an instance of ContainerRegistryResponse', function() {
-      // uncomment below and update the code to test ContainerRegistryResponse
-      //var instance = new QoveryApi.ContainerRegistryResponse();
-      //expect(instance).to.be.a(QoveryApi.ContainerRegistryResponse);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ContainerRegistryResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.ContainerRegistryResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
-      //var instance = new QoveryApi.ContainerRegistryResponse();
-      //expect(instance).to.be();
+  describe('ContainerRegistryResponseAllOf', function() {
+    it('should create an instance of ContainerRegistryResponseAllOf', function() {
+      // uncomment below and update the code to test ContainerRegistryResponseAllOf
+      //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
+      //expect(instance).to.be.a(QoveryApi.ContainerRegistryResponseAllOf);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ContainerRegistryResponse();
+      //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property kind (base name: "kind")', function() {
       // uncomment below and update the code to test the property kind
-      //var instance = new QoveryApi.ContainerRegistryResponse();
+      //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.ContainerRegistryResponse();
+      //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instance = new QoveryApi.ContainerRegistryResponse();
+      //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property config (base name: "config")', function() {
       // uncomment below and update the code to test the property config
-      //var instance = new QoveryApi.ContainerRegistryResponse();
+      //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
       //expect(instance).to.be();
     });
 

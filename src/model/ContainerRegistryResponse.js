@@ -12,7 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import Base from './Base';
 import ContainerRegistryKindEnum from './ContainerRegistryKindEnum';
+import ContainerRegistryResponseAllOf from './ContainerRegistryResponseAllOf';
 
 /**
  * The ContainerRegistryResponse model module.
@@ -23,10 +25,14 @@ class ContainerRegistryResponse {
     /**
      * Constructs a new <code>ContainerRegistryResponse</code>.
      * @alias module:model/ContainerRegistryResponse
+     * @implements module:model/Base
+     * @implements module:model/ContainerRegistryResponseAllOf
+     * @param id {String} 
+     * @param createdAt {Date} 
      */
-    constructor() { 
-        
-        ContainerRegistryResponse.initialize(this);
+    constructor(id, createdAt) { 
+        Base.initialize(this, id, createdAt);ContainerRegistryResponseAllOf.initialize(this);
+        ContainerRegistryResponse.initialize(this, id, createdAt);
     }
 
     /**
@@ -34,7 +40,9 @@ class ContainerRegistryResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, createdAt) { 
+        obj['id'] = id;
+        obj['created_at'] = createdAt;
     }
 
     /**
@@ -47,7 +55,18 @@ class ContainerRegistryResponse {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ContainerRegistryResponse();
+            Base.constructFromObject(data, obj);
+            ContainerRegistryResponseAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -69,6 +88,21 @@ class ContainerRegistryResponse {
 
 
 }
+
+/**
+ * @member {String} id
+ */
+ContainerRegistryResponse.prototype['id'] = undefined;
+
+/**
+ * @member {Date} created_at
+ */
+ContainerRegistryResponse.prototype['created_at'] = undefined;
+
+/**
+ * @member {Date} updated_at
+ */
+ContainerRegistryResponse.prototype['updated_at'] = undefined;
 
 /**
  * @member {String} name
@@ -98,6 +132,42 @@ ContainerRegistryResponse.prototype['url'] = undefined;
 ContainerRegistryResponse.prototype['config'] = undefined;
 
 
+// Implement Base interface:
+/**
+ * @member {String} id
+ */
+Base.prototype['id'] = undefined;
+/**
+ * @member {Date} created_at
+ */
+Base.prototype['created_at'] = undefined;
+/**
+ * @member {Date} updated_at
+ */
+Base.prototype['updated_at'] = undefined;
+// Implement ContainerRegistryResponseAllOf interface:
+/**
+ * @member {String} name
+ */
+ContainerRegistryResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {module:model/ContainerRegistryKindEnum} kind
+ */
+ContainerRegistryResponseAllOf.prototype['kind'] = undefined;
+/**
+ * @member {String} description
+ */
+ContainerRegistryResponseAllOf.prototype['description'] = undefined;
+/**
+ * URL of the container registry
+ * @member {String} url
+ */
+ContainerRegistryResponseAllOf.prototype['url'] = undefined;
+/**
+ * authentification configuration
+ * @member {String} config
+ */
+ContainerRegistryResponseAllOf.prototype['config'] = undefined;
 
 
 

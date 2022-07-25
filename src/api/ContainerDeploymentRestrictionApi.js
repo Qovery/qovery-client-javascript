@@ -45,7 +45,7 @@ export default class ContainerDeploymentRestrictionApi {
      */
 
     /**
-     * Create an container deployment restriction
+     * NOT YET IMPLEMENTED - Create an container deployment restriction
      * Create an container deployment restriction
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
@@ -91,7 +91,7 @@ export default class ContainerDeploymentRestrictionApi {
      */
 
     /**
-     * Delete a container deployment restriction
+     * NOT YET IMPLEMENTED - Delete a container deployment restriction
      * Delete a container deployment restriction
      * @param {String} containerId Container ID
      * @param {module:api/ContainerDeploymentRestrictionApi~deleteContainerDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
@@ -133,7 +133,7 @@ export default class ContainerDeploymentRestrictionApi {
      */
 
     /**
-     * Edit a container deployment restriction
+     * NOT YET IMPLEMENTED - Edit a container deployment restriction
      * Edit a container deployment restriction
      * @param {String} containerId Container ID
      * @param {String} deploymentRestrictionId Deployment Restriction ID
@@ -185,7 +185,7 @@ export default class ContainerDeploymentRestrictionApi {
      */
 
     /**
-     * Get container deployment restrictions
+     * NOT YET IMPLEMENTED - Get container deployment restrictions
      * Get container deployment restrictions
      * @param {String} containerId Container ID
      * @param {module:api/ContainerDeploymentRestrictionApi~getContainerDeploymentRestrictionsCallback} callback The callback function, accepting three arguments: error, data, response

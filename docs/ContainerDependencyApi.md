@@ -4,9 +4,9 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createContainerDependency**](ContainerDependencyApi.md#createContainerDependency) | **POST** /container/{containerId}/dependency/{targetContainerId} | Add container dependency to this application.
-[**listContainerDependency**](ContainerDependencyApi.md#listContainerDependency) | **GET** /container/{containerId}/dependency | List container dependencies
-[**removeContainerDependency**](ContainerDependencyApi.md#removeContainerDependency) | **DELETE** /container/{containerId}/dependency/{targetContainerId} | Remove container dependency to this container.
+[**createContainerDependency**](ContainerDependencyApi.md#createContainerDependency) | **POST** /container/{containerId}/dependency/{targetContainerId} | NOT YET IMPLEMENTED - Add container dependency to this application.
+[**listContainerDependency**](ContainerDependencyApi.md#listContainerDependency) | **GET** /container/{containerId}/dependency | NOT YET IMPLEMENTED - List container dependencies
+[**removeContainerDependency**](ContainerDependencyApi.md#removeContainerDependency) | **DELETE** /container/{containerId}/dependency/{targetContainerId} | NOT YET IMPLEMENTED - Remove container dependency to this container.
 
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 > ContainerResponse createContainerDependency(containerId)
 
-Add container dependency to this application.
+NOT YET IMPLEMENTED - Add container dependency to this application.
 
 Add container dependency to this container to prevent this container starting before the linked dependencies
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 > ContainerResponseList listContainerDependency(containerId)
 
-List container dependencies
+NOT YET IMPLEMENTED - List container dependencies
 
 ### Example
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 > removeContainerDependency(containerId)
 
-Remove container dependency to this container.
+NOT YET IMPLEMENTED - Remove container dependency to this container.
 
 ### Example
 

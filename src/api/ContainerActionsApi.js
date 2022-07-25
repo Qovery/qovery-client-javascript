@@ -44,7 +44,7 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * Deploy container
+     * NOT YET IMPLEMENTED - Deploy container
      * You must provide a git commit id
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
@@ -90,7 +90,7 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * Deploy a preview environment with your container application
+     * NOT YET IMPLEMENTED - Deploy a preview environment with your container application
      * You must provide the image tag.
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
@@ -136,7 +136,7 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * Restart container
+     * NOT YET IMPLEMENTED - Restart container
      * @param {String} containerId Container ID
      * @param {module:api/ContainerActionsApi~restartContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
@@ -178,7 +178,7 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * Stop container
+     * NOT YET IMPLEMENTED - Stop container
      * @param {String} containerId Container ID
      * @param {module:api/ContainerActionsApi~stopContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}

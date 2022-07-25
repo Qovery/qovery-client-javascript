@@ -4,7 +4,7 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listContainerEvent**](ContainerEventApi.md#listContainerEvent) | **GET** /container/{containerId}/event | List container events
+[**listContainerEvent**](ContainerEventApi.md#listContainerEvent) | **GET** /container/{containerId}/event | NOT YET IMPLEMENTED - List container events
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > EventPaginatedResponseList listContainerEvent(containerId, opts)
 
-List container events
+NOT YET IMPLEMENTED - List container events
 
 By default it returns the 20 last results. The response is paginated. In order to request the next page, you can use the startId query parameter
 

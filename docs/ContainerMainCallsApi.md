@@ -4,16 +4,16 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createContainerTag**](ContainerMainCallsApi.md#createContainerTag) | **POST** /container/{containerId}/tag | Add container tag
-[**deleteContainer**](ContainerMainCallsApi.md#deleteContainer) | **DELETE** /container/{containerId} | Delete container
-[**deleteContainerTag**](ContainerMainCallsApi.md#deleteContainerTag) | **DELETE** /container/{containerId}/tag/{tagId} | Delete container tag
-[**editContainer**](ContainerMainCallsApi.md#editContainer) | **PUT** /container/{containerId} | Edit container
-[**getContainer**](ContainerMainCallsApi.md#getContainer) | **GET** /container/{containerId} | Get container by ID
-[**getContainerStatus**](ContainerMainCallsApi.md#getContainerStatus) | **GET** /container/{containerId}/status | Get container status
-[**getContainerTags**](ContainerMainCallsApi.md#getContainerTags) | **GET** /container/{containerId}/tagHistory | List image tags
-[**listContainerContributor**](ContainerMainCallsApi.md#listContainerContributor) | **GET** /container/{containerId}/contributor | List contributors
-[**listContainerLinks**](ContainerMainCallsApi.md#listContainerLinks) | **GET** /container/{containerId}/link | List all URLs of the container
-[**listContainerTag**](ContainerMainCallsApi.md#listContainerTag) | **GET** /container/{containerId}/tag | List tags
+[**createContainerTag**](ContainerMainCallsApi.md#createContainerTag) | **POST** /container/{containerId}/tag | NOT YET IMPLEMENTED - Add container tag
+[**deleteContainer**](ContainerMainCallsApi.md#deleteContainer) | **DELETE** /container/{containerId} | NOT YET IMPLEMENTED - Delete container
+[**deleteContainerTag**](ContainerMainCallsApi.md#deleteContainerTag) | **DELETE** /container/{containerId}/tag/{tagId} | NOT YET IMPLEMENTED - Delete container tag
+[**editContainer**](ContainerMainCallsApi.md#editContainer) | **PUT** /container/{containerId} | NOT YET IMPLEMENTED - Edit container
+[**getContainer**](ContainerMainCallsApi.md#getContainer) | **GET** /container/{containerId} | NOT YET IMPLEMENTED - Get container by ID
+[**getContainerStatus**](ContainerMainCallsApi.md#getContainerStatus) | **GET** /container/{containerId}/status | NOT YET IMPLEMENTED - Get container status
+[**getContainerTags**](ContainerMainCallsApi.md#getContainerTags) | **GET** /container/{containerId}/tagHistory | NOT YET IMPLEMENTED - List image tags
+[**listContainerContributor**](ContainerMainCallsApi.md#listContainerContributor) | **GET** /container/{containerId}/contributor | NOT YET IMPLEMENTED -List contributors
+[**listContainerLinks**](ContainerMainCallsApi.md#listContainerLinks) | **GET** /container/{containerId}/link | NOT YET IMPLEMENTED - List all URLs of the container
+[**listContainerTag**](ContainerMainCallsApi.md#listContainerTag) | **GET** /container/{containerId}/tag | NOT YET IMPLEMENTED - List tags
 
 
 
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 > TagResponseList createContainerTag(containerId, opts)
 
-Add container tag
+NOT YET IMPLEMENTED - Add container tag
 
 ### Example
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 > deleteContainer(containerId)
 
-Delete container
+NOT YET IMPLEMENTED - Delete container
 
 To delete the container you must have the admin permission
 
@@ -121,7 +121,7 @@ null (empty response body)
 
 > deleteContainerTag(containerId, tagId)
 
-Delete container tag
+NOT YET IMPLEMENTED - Delete container tag
 
 ### Example
 
@@ -170,7 +170,7 @@ null (empty response body)
 
 > ContainerResponse editContainer(containerId, opts)
 
-Edit container
+NOT YET IMPLEMENTED - Edit container
 
 - To edit the container you must have the admin permission. - For port edition, if you provide a port id, we will update the corresponding port. If you don&#39;t we will create a new one. If you remove a port from the payload, we will delete it. - For storage edition, if you provide a storage id, we will update the corresponding storage. If you don&#39;t we will create a new one. If you remove a storage from the payload, we will delete it. 
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 > ContainerResponse getContainer(containerId)
 
-Get container by ID
+NOT YET IMPLEMENTED - Get container by ID
 
 ### Example
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 > Status getContainerStatus(containerId)
 
-Get container status
+NOT YET IMPLEMENTED - Get container status
 
 ### Example
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 > GetContainerTags200Response getContainerTags(containerId)
 
-List image tags
+NOT YET IMPLEMENTED - List image tags
 
 List all image container tags already deployed in the Qovery environment.
 
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 > UserResponseList listContainerContributor(containerId)
 
-List contributors
+NOT YET IMPLEMENTED -List contributors
 
 ### Example
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 > LinkResponseList listContainerLinks(containerId)
 
-List all URLs of the container
+NOT YET IMPLEMENTED - List all URLs of the container
 
 This will return all the custom domains and Qovery autogenerated domain for the given application
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 
 > TagResponseList listContainerTag(containerId)
 
-List tags
+NOT YET IMPLEMENTED - List tags
 
 ### Example
 

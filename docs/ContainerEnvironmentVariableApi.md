@@ -5,12 +5,12 @@ All URIs are relative to *https://api.qovery.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable | Add an environment variable to the container
-[**createContainerEnvironmentVariableAlias**](ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableAlias) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the container level
-[**createContainerEnvironmentVariableOverride**](ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableOverride) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/override | Create an environment variable override at the container level
-[**deleteContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#deleteContainerEnvironmentVariable) | **DELETE** /container/{containerId}/environmentVariable/{environmentVariableId} | Delete an environment variable from a container
-[**editContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#editContainerEnvironmentVariable) | **PUT** /container/{containerId}/environmentVariable/{environmentVariableId} | Edit an environment variable belonging to the container
-[**importContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#importContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable/import | Import variables
-[**listContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#listContainerEnvironmentVariable) | **GET** /container/{containerId}/environmentVariable | List environment variables
+[**createContainerEnvironmentVariableAlias**](ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableAlias) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/alias | NOT YET IMPLEMENTED - Create an environment variable alias at the container level
+[**createContainerEnvironmentVariableOverride**](ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableOverride) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/override | NOT YET IMPLEMENTED - Create an environment variable override at the container level
+[**deleteContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#deleteContainerEnvironmentVariable) | **DELETE** /container/{containerId}/environmentVariable/{environmentVariableId} | NOT YET IMPLEMENTED - Delete an environment variable from a container
+[**editContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#editContainerEnvironmentVariable) | **PUT** /container/{containerId}/environmentVariable/{environmentVariableId} | NOT YET IMPLEMENTED - Edit an environment variable belonging to the container
+[**importContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#importContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable/import | NOT YET IMPLEMENTED - Import variables
+[**listContainerEnvironmentVariable**](ContainerEnvironmentVariableApi.md#listContainerEnvironmentVariable) | **GET** /container/{containerId}/environmentVariable | NOT YET IMPLEMENTED - List environment variables
 
 
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 > EnvironmentVariable createContainerEnvironmentVariableAlias(containerId, environmentVariableId, opts)
 
-Create an environment variable alias at the container level
+NOT YET IMPLEMENTED - Create an environment variable alias at the container level
 
 - Allows you to add an alias at container level on an existing environment variable having higher scope, in order to customize its key. - You only have to specify a key in the request body - The system will create a new environment variable at container level with the same value as the one corresponding to the variable id in the path - The response body will contain the newly created variable - Information regarding the aliased_variable will be exposed in the \&quot;aliased_variable\&quot; field of the newly created variable - Only 1 alias level is allowed. You can&#39;t create an alias on an alias 
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 > EnvironmentVariable createContainerEnvironmentVariableOverride(containerId, environmentVariableId, opts)
 
-Create an environment variable override at the container level
+NOT YET IMPLEMENTED - Create an environment variable override at the container level
 
 - Allows you to override at container level an environment variable that has a higher scope. - You only have to specify a value in the request body - The system will create a new environment variable at container level with the same key as the one corresponding to the variable id in the path - The response body will contain the newly created variable - Information regarding the overridden_variable will be exposed in the \&quot;overridden_variable\&quot; field of the newly created variable 
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 > deleteContainerEnvironmentVariable(containerId, environmentVariableId)
 
-Delete an environment variable from a container
+NOT YET IMPLEMENTED - Delete an environment variable from a container
 
 - To delete an environment variable from an container you must have the project user permission - You can&#39;t delete a BUILT_IN variable - If you delete a variable having override or alias, the associated override/alias will be deleted as well 
 
@@ -232,7 +232,7 @@ null (empty response body)
 
 > EnvironmentVariable editContainerEnvironmentVariable(containerId, environmentVariableId, environmentVariableEditRequest)
 
-Edit an environment variable belonging to the container
+NOT YET IMPLEMENTED - Edit an environment variable belonging to the container
 
 - You can&#39;t edit a BUILT_IN variable - For an override, you can&#39;t edit the key - For an alias, you can&#39;t edit the value - An override can only have a scope lower to the variable it is overriding (hierarchy is BUILT_IN &gt; PROJECT &gt; ENVIRONMENT &gt; CONTAINER) 
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 > VariableImport importContainerEnvironmentVariable(containerId, opts)
 
-Import variables
+NOT YET IMPLEMENTED - Import variables
 
 Import environment variables in a defined scope, with a defined visibility.
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 > EnvironmentVariableResponseList listContainerEnvironmentVariable(containerId)
 
-List environment variables
+NOT YET IMPLEMENTED - List environment variables
 
 ### Example
 

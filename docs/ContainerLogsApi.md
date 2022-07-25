@@ -4,7 +4,7 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listContainerLog**](ContainerLogsApi.md#listContainerLog) | **GET** /container/{containerId}/log | List logs
+[**listContainerLog**](ContainerLogsApi.md#listContainerLog) | **GET** /container/{containerId}/log | NOT YET IMPLEMENTED - List logs
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > LogResponseList listContainerLog(containerId)
 
-List logs
+NOT YET IMPLEMENTED - List logs
 
 This will list the last 1000 logs of the container
 

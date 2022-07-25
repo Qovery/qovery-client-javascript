@@ -4,14 +4,14 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getContainerCurrentInstance**](ContainerMetricsApi.md#getContainerCurrentInstance) | **GET** /container/{containerId}/instance | List currently running instances of the container with their CPU and RAM metrics
-[**getContainerCurrentScale**](ContainerMetricsApi.md#getContainerCurrentScale) | **GET** /container/{containerId}/currentScale | Get current scaling of the container
-[**getContainerCurrentStorageDisk**](ContainerMetricsApi.md#getContainerCurrentStorageDisk) | **GET** /container/{containerId}/currentStorage | List current storage disk usage
-[**getContainerMetricCpu**](ContainerMetricsApi.md#getContainerMetricCpu) | **GET** /container/{containerId}/metric/cpu | Get CPU consumption metric over time for the container
-[**getContainerMetricHealthCheck**](ContainerMetricsApi.md#getContainerMetricHealthCheck) | **GET** /container/{containerId}/metric/healthCheck | Get Health Check latency  metric over time for the container
-[**getContainerMetricMemory**](ContainerMetricsApi.md#getContainerMetricMemory) | **GET** /container/{containerId}/metric/memory | Get Memory consumption metric over time for the container
-[**getContainerMetricRestart**](ContainerMetricsApi.md#getContainerMetricRestart) | **GET** /container/{containerId}/metric/restart | List container restarts
-[**getContainerMetricStorage**](ContainerMetricsApi.md#getContainerMetricStorage) | **GET** /container/{containerId}/metric/storage | Get Storage consumption metric over time for the container 
+[**getContainerCurrentInstance**](ContainerMetricsApi.md#getContainerCurrentInstance) | **GET** /container/{containerId}/instance | NOT YET IMPLEMENTED - List currently running instances of the container with their CPU and RAM metrics
+[**getContainerCurrentScale**](ContainerMetricsApi.md#getContainerCurrentScale) | **GET** /container/{containerId}/currentScale | NOT YET IMPLEMENTED - Get current scaling of the container
+[**getContainerCurrentStorageDisk**](ContainerMetricsApi.md#getContainerCurrentStorageDisk) | **GET** /container/{containerId}/currentStorage | NOT YET IMPLEMENTED - List current storage disk usage
+[**getContainerMetricCpu**](ContainerMetricsApi.md#getContainerMetricCpu) | **GET** /container/{containerId}/metric/cpu | NOT YET IMPLEMENTED - Get CPU consumption metric over time for the container
+[**getContainerMetricHealthCheck**](ContainerMetricsApi.md#getContainerMetricHealthCheck) | **GET** /container/{containerId}/metric/healthCheck | NOT YET IMPLEMENTED - Get Health Check latency  metric over time for the container
+[**getContainerMetricMemory**](ContainerMetricsApi.md#getContainerMetricMemory) | **GET** /container/{containerId}/metric/memory | NOT YET IMPLEMENTED - Get Memory consumption metric over time for the container
+[**getContainerMetricRestart**](ContainerMetricsApi.md#getContainerMetricRestart) | **GET** /container/{containerId}/metric/restart | NOT YET IMPLEMENTED - List container restarts
+[**getContainerMetricStorage**](ContainerMetricsApi.md#getContainerMetricStorage) | **GET** /container/{containerId}/metric/storage | NOT YET IMPLEMENTED - Get Storage consumption metric over time for the container 
 
 
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 > InstanceResponseList getContainerCurrentInstance(containerId)
 
-List currently running instances of the container with their CPU and RAM metrics
+NOT YET IMPLEMENTED - List currently running instances of the container with their CPU and RAM metrics
 
 ### Example
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 > ContainerCurrentScale getContainerCurrentScale(containerId)
 
-Get current scaling of the container
+NOT YET IMPLEMENTED - Get current scaling of the container
 
 Returns min, max, and running number of instances of the application
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 > StorageDiskResponseList getContainerCurrentStorageDisk(containerId)
 
-List current storage disk usage
+NOT YET IMPLEMENTED - List current storage disk usage
 
 ### Example
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 > MetricCPUResponseList getContainerMetricCpu(containerId, lastSeconds)
 
-Get CPU consumption metric over time for the container
+NOT YET IMPLEMENTED - Get CPU consumption metric over time for the container
 
 ### Example
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 > MetricGenericResponseList getContainerMetricHealthCheck(containerId, lastSeconds)
 
-Get Health Check latency  metric over time for the container
+NOT YET IMPLEMENTED - Get Health Check latency  metric over time for the container
 
 The value returned corresponds to the 95th centile
 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 
 > MetricMemoryResponseList getContainerMetricMemory(containerId, lastSeconds)
 
-Get Memory consumption metric over time for the container
+NOT YET IMPLEMENTED - Get Memory consumption metric over time for the container
 
 ### Example
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 > MetricRestart getContainerMetricRestart(containerId, lastSeconds)
 
-List container restarts
+NOT YET IMPLEMENTED - List container restarts
 
 Get container restart message and timestamp.
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 
 > MetricStorageResponseList getContainerMetricStorage(containerId, lastSeconds)
 
-Get Storage consumption metric over time for the container 
+NOT YET IMPLEMENTED - Get Storage consumption metric over time for the container 
 
 ### Example
 

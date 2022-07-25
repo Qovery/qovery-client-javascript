@@ -43,7 +43,7 @@ export default class ContainerEventApi {
      */
 
     /**
-     * List container events
+     * NOT YET IMPLEMENTED - List container events
      * By default it returns the 20 last results. The response is paginated. In order to request the next page, you can use the startId query parameter
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters

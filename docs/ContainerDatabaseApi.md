@@ -4,12 +4,12 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**attachDatabaseToContainer**](ContainerDatabaseApi.md#attachDatabaseToContainer) | **POST** /container/{containerId}/database/{targetDatabaseId} | Link a database to the container
-[**attachLogicalDatabaseToContainer**](ContainerDatabaseApi.md#attachLogicalDatabaseToContainer) | **POST** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | Link a logical database to the container
-[**listContainerDatabase**](ContainerDatabaseApi.md#listContainerDatabase) | **GET** /container/{containerId}/database | List linked databases
-[**listContainerLogicalDatabase**](ContainerDatabaseApi.md#listContainerLogicalDatabase) | **GET** /container/{containerId}/logicalDatabase | List linked logical databases
-[**removeDatabaseFromContainer**](ContainerDatabaseApi.md#removeDatabaseFromContainer) | **DELETE** /container/{containerId}/database/{targetDatabaseId} | Remove database link to this container.
-[**removeLogicalDatabaseFromContainer**](ContainerDatabaseApi.md#removeLogicalDatabaseFromContainer) | **DELETE** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | Remove logical database link to this container.
+[**attachDatabaseToContainer**](ContainerDatabaseApi.md#attachDatabaseToContainer) | **POST** /container/{containerId}/database/{targetDatabaseId} | NOT YET IMPLEMENTED - Link a database to the container
+[**attachLogicalDatabaseToContainer**](ContainerDatabaseApi.md#attachLogicalDatabaseToContainer) | **POST** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | NOT YET IMPLEMENTED - Link a logical database to the container
+[**listContainerDatabase**](ContainerDatabaseApi.md#listContainerDatabase) | **GET** /container/{containerId}/database | NOT YET IMPLEMENTED - List linked databases
+[**listContainerLogicalDatabase**](ContainerDatabaseApi.md#listContainerLogicalDatabase) | **GET** /container/{containerId}/logicalDatabase | NOT YET IMPLEMENTED - List linked logical databases
+[**removeDatabaseFromContainer**](ContainerDatabaseApi.md#removeDatabaseFromContainer) | **DELETE** /container/{containerId}/database/{targetDatabaseId} | NOT YET IMPLEMENTED - Remove database link to this container.
+[**removeLogicalDatabaseFromContainer**](ContainerDatabaseApi.md#removeLogicalDatabaseFromContainer) | **DELETE** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | NOT YET IMPLEMENTED - Remove logical database link to this container.
 
 
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 > Database attachDatabaseToContainer(containerId, targetDatabaseId)
 
-Link a database to the container
+NOT YET IMPLEMENTED - Link a database to the container
 
 ### Example
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 > LogicalDatabase attachLogicalDatabaseToContainer(containerId, targetLogicalDatabaseId)
 
-Link a logical database to the container
+NOT YET IMPLEMENTED - Link a logical database to the container
 
 ### Example
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 > DatabaseResponseList listContainerDatabase(containerId)
 
-List linked databases
+NOT YET IMPLEMENTED - List linked databases
 
 ### Example
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 > LogicalDatabaseResponseList listContainerLogicalDatabase(containerId)
 
-List linked logical databases
+NOT YET IMPLEMENTED - List linked logical databases
 
 ### Example
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 > removeDatabaseFromContainer(containerId, targetDatabaseId)
 
-Remove database link to this container.
+NOT YET IMPLEMENTED - Remove database link to this container.
 
 ### Example
 
@@ -258,7 +258,7 @@ null (empty response body)
 
 > removeLogicalDatabaseFromContainer(containerId, targetLogicalDatabaseId)
 
-Remove logical database link to this container.
+NOT YET IMPLEMENTED - Remove logical database link to this container.
 
 ### Example
 

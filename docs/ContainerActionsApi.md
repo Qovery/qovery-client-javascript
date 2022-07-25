@@ -4,10 +4,10 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deployContainer**](ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | Deploy container
-[**previewEnvironmentContainer**](ContainerActionsApi.md#previewEnvironmentContainer) | **POST** /container/{containerId}/previewEnvironment | Deploy a preview environment with your container application
-[**restartContainer**](ContainerActionsApi.md#restartContainer) | **POST** /container/{containerId}/restart | Restart container
-[**stopContainer**](ContainerActionsApi.md#stopContainer) | **POST** /container/{containerId}/stop | Stop container
+[**deployContainer**](ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | NOT YET IMPLEMENTED - Deploy container
+[**previewEnvironmentContainer**](ContainerActionsApi.md#previewEnvironmentContainer) | **POST** /container/{containerId}/previewEnvironment | NOT YET IMPLEMENTED - Deploy a preview environment with your container application
+[**restartContainer**](ContainerActionsApi.md#restartContainer) | **POST** /container/{containerId}/restart | NOT YET IMPLEMENTED - Restart container
+[**stopContainer**](ContainerActionsApi.md#stopContainer) | **POST** /container/{containerId}/stop | NOT YET IMPLEMENTED - Stop container
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 > Status deployContainer(containerId, opts)
 
-Deploy container
+NOT YET IMPLEMENTED - Deploy container
 
 You must provide a git commit id
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 > Status previewEnvironmentContainer(containerId, opts)
 
-Deploy a preview environment with your container application
+NOT YET IMPLEMENTED - Deploy a preview environment with your container application
 
 You must provide the image tag.
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 > Status restartContainer(containerId)
 
-Restart container
+NOT YET IMPLEMENTED - Restart container
 
 ### Example
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 > Status stopContainer(containerId)
 
-Stop container
+NOT YET IMPLEMENTED - Stop container
 
 ### Example
 

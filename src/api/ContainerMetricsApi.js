@@ -50,7 +50,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * List currently running instances of the container with their CPU and RAM metrics
+     * NOT YET IMPLEMENTED - List currently running instances of the container with their CPU and RAM metrics
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMetricsApi~getContainerCurrentInstanceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InstanceResponseList}
@@ -92,7 +92,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * Get current scaling of the container
+     * NOT YET IMPLEMENTED - Get current scaling of the container
      * Returns min, max, and running number of instances of the application
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMetricsApi~getContainerCurrentScaleCallback} callback The callback function, accepting three arguments: error, data, response
@@ -135,7 +135,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * List current storage disk usage
+     * NOT YET IMPLEMENTED - List current storage disk usage
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMetricsApi~getContainerCurrentStorageDiskCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/StorageDiskResponseList}
@@ -177,7 +177,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * Get CPU consumption metric over time for the container
+     * NOT YET IMPLEMENTED - Get CPU consumption metric over time for the container
      * @param {String} containerId Container ID
      * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
      * @param {module:api/ContainerMetricsApi~getContainerMetricCpuCallback} callback The callback function, accepting three arguments: error, data, response
@@ -225,7 +225,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * Get Health Check latency  metric over time for the container
+     * NOT YET IMPLEMENTED - Get Health Check latency  metric over time for the container
      * The value returned corresponds to the 95th centile
      * @param {String} containerId Container ID
      * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
@@ -274,7 +274,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * Get Memory consumption metric over time for the container
+     * NOT YET IMPLEMENTED - Get Memory consumption metric over time for the container
      * @param {String} containerId Container ID
      * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
      * @param {module:api/ContainerMetricsApi~getContainerMetricMemoryCallback} callback The callback function, accepting three arguments: error, data, response
@@ -322,7 +322,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * List container restarts
+     * NOT YET IMPLEMENTED - List container restarts
      * Get container restart message and timestamp.
      * @param {String} containerId Container ID
      * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
@@ -371,7 +371,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * Get Storage consumption metric over time for the container 
+     * NOT YET IMPLEMENTED - Get Storage consumption metric over time for the container 
      * @param {String} containerId Container ID
      * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
      * @param {module:api/ContainerMetricsApi~getContainerMetricStorageCallback} callback The callback function, accepting three arguments: error, data, response

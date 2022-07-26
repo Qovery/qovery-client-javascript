@@ -60,9 +60,6 @@ class ContainerRegistryResponseAllOf {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('config')) {
-                obj['config'] = ApiClient.convertToType(data['config'], 'String');
-            }
         }
         return obj;
     }
@@ -90,12 +87,6 @@ ContainerRegistryResponseAllOf.prototype['description'] = undefined;
  * @member {String} url
  */
 ContainerRegistryResponseAllOf.prototype['url'] = undefined;
-
-/**
- * authentification configuration
- * @member {String} config
- */
-ContainerRegistryResponseAllOf.prototype['config'] = undefined;
 
 
 

@@ -79,9 +79,6 @@ class ContainerRegistryResponse {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('config')) {
-                obj['config'] = ApiClient.convertToType(data['config'], 'String');
-            }
         }
         return obj;
     }
@@ -125,12 +122,6 @@ ContainerRegistryResponse.prototype['description'] = undefined;
  */
 ContainerRegistryResponse.prototype['url'] = undefined;
 
-/**
- * authentification configuration
- * @member {String} config
- */
-ContainerRegistryResponse.prototype['config'] = undefined;
-
 
 // Implement Base interface:
 /**
@@ -163,11 +154,6 @@ ContainerRegistryResponseAllOf.prototype['description'] = undefined;
  * @member {String} url
  */
 ContainerRegistryResponseAllOf.prototype['url'] = undefined;
-/**
- * authentification configuration
- * @member {String} config
- */
-ContainerRegistryResponseAllOf.prototype['config'] = undefined;
 
 
 

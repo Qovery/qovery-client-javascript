@@ -78,12 +78,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property config (base name: "config")', function() {
-      // uncomment below and update the code to test the property config
-      //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

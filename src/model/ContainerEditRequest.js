@@ -12,12 +12,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationPort from './ApplicationPort';
-import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 import ApplicationStorage from './ApplicationStorage';
 import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import ContainerEditRequestAllOf from './ContainerEditRequestAllOf';
-import Healthcheck from './Healthcheck';
+import ServicePort from './ServicePort';
+import ServicePortPortsInner from './ServicePortPortsInner';
 
 /**
  * The ContainerEditRequest model module.
@@ -29,12 +28,16 @@ class ContainerEditRequest {
      * Constructs a new <code>ContainerEditRequest</code>.
      * @alias module:model/ContainerEditRequest
      * @implements module:model/ApplicationStorage
-     * @implements module:model/ApplicationPort
+     * @implements module:model/ServicePort
      * @implements module:model/ContainerEditRequestAllOf
+     * @param name {String} name is case insensitive
+     * @param registryId {String} id of the linked registry
+     * @param imageName {String} name of the image container
+     * @param tag {String} tag of the image container
      */
-    constructor() { 
-        ApplicationStorage.initialize(this);ApplicationPort.initialize(this);ContainerEditRequestAllOf.initialize(this);
-        ContainerEditRequest.initialize(this);
+    constructor(name, registryId, imageName, tag) { 
+        ApplicationStorage.initialize(this);ServicePort.initialize(this);ContainerEditRequestAllOf.initialize(this, name, registryId, imageName, tag);
+        ContainerEditRequest.initialize(this, name, registryId, imageName, tag);
     }
 
     /**
@@ -42,7 +45,11 @@ class ContainerEditRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, name, registryId, imageName, tag) { 
+        obj['name'] = name;
+        obj['registry_id'] = registryId;
+        obj['image_name'] = imageName;
+        obj['tag'] = tag;
     }
 
     /**
@@ -56,20 +63,17 @@ class ContainerEditRequest {
         if (data) {
             obj = obj || new ContainerEditRequest();
             ApplicationStorage.constructFromObject(data, obj);
-            ApplicationPort.constructFromObject(data, obj);
+            ServicePort.constructFromObject(data, obj);
             ContainerEditRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('registry_id')) {
                 obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
@@ -77,8 +81,14 @@ class ContainerEditRequest {
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
             }
+            if (data.hasOwnProperty('tag')) {
+                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            }
             if (data.hasOwnProperty('arguments')) {
-                obj['arguments'] = ApiClient.convertToType(data['arguments'], 'String');
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -91,12 +101,6 @@ class ContainerEditRequest {
             }
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
-            }
-            if (data.hasOwnProperty('healthcheck')) {
-                obj['healthcheck'] = Healthcheck.constructFromObject(data['healthcheck']);
-            }
-            if (data.hasOwnProperty('sticky_session')) {
-                obj['sticky_session'] = ApiClient.convertToType(data['sticky_session'], 'Boolean');
             }
         }
         return obj;
@@ -111,7 +115,7 @@ class ContainerEditRequest {
 ContainerEditRequest.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortPortsInner>} ports
+ * @member {Array.<module:model/ServicePortPortsInner>} ports
  */
 ContainerEditRequest.prototype['ports'] = undefined;
 
@@ -120,12 +124,6 @@ ContainerEditRequest.prototype['ports'] = undefined;
  * @member {String} name
  */
 ContainerEditRequest.prototype['name'] = undefined;
-
-/**
- * give a description to this application
- * @member {String} description
- */
-ContainerEditRequest.prototype['description'] = undefined;
 
 /**
  * id of the linked registry
@@ -140,23 +138,35 @@ ContainerEditRequest.prototype['registry_id'] = undefined;
 ContainerEditRequest.prototype['image_name'] = undefined;
 
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerEditRequest.prototype['tag'] = undefined;
+
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerEditRequest.prototype['arguments'] = undefined;
 
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerEditRequest.prototype['entrypoint'] = undefined;
+
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ContainerEditRequest.prototype['cpu'] = 250;
+ContainerEditRequest.prototype['cpu'] = 500;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ContainerEditRequest.prototype['memory'] = 256;
+ContainerEditRequest.prototype['memory'] = 512;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
@@ -172,40 +182,23 @@ ContainerEditRequest.prototype['min_running_instances'] = 1;
  */
 ContainerEditRequest.prototype['max_running_instances'] = 1;
 
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerEditRequest.prototype['healthcheck'] = undefined;
-
-/**
- * Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application. 
- * @member {Boolean} sticky_session
- * @default false
- */
-ContainerEditRequest.prototype['sticky_session'] = false;
-
 
 // Implement ApplicationStorage interface:
 /**
  * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
-// Implement ApplicationPort interface:
+// Implement ServicePort interface:
 /**
- * @member {Array.<module:model/ApplicationPortPortsInner>} ports
+ * @member {Array.<module:model/ServicePortPortsInner>} ports
  */
-ApplicationPort.prototype['ports'] = undefined;
+ServicePort.prototype['ports'] = undefined;
 // Implement ContainerEditRequestAllOf interface:
 /**
  * name is case insensitive
  * @member {String} name
  */
 ContainerEditRequestAllOf.prototype['name'] = undefined;
-/**
- * give a description to this application
- * @member {String} description
- */
-ContainerEditRequestAllOf.prototype['description'] = undefined;
 /**
  * id of the linked registry
  * @member {String} registry_id
@@ -217,21 +210,31 @@ ContainerEditRequestAllOf.prototype['registry_id'] = undefined;
  */
 ContainerEditRequestAllOf.prototype['image_name'] = undefined;
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerEditRequestAllOf.prototype['tag'] = undefined;
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerEditRequestAllOf.prototype['arguments'] = undefined;
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerEditRequestAllOf.prototype['entrypoint'] = undefined;
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ContainerEditRequestAllOf.prototype['cpu'] = 250;
+ContainerEditRequestAllOf.prototype['cpu'] = 500;
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ContainerEditRequestAllOf.prototype['memory'] = 256;
+ContainerEditRequestAllOf.prototype['memory'] = 512;
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
  * @member {Number} min_running_instances
@@ -244,16 +247,6 @@ ContainerEditRequestAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerEditRequestAllOf.prototype['max_running_instances'] = 1;
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerEditRequestAllOf.prototype['healthcheck'] = undefined;
-/**
- * Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application. 
- * @member {Boolean} sticky_session
- * @default false
- */
-ContainerEditRequestAllOf.prototype['sticky_session'] = false;
 
 
 

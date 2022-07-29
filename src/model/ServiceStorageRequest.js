@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationPortRequestPortsInner from './ApplicationPortRequestPortsInner';
+import ServiceStorageRequestStorageInner from './ServiceStorageRequestStorageInner';
 
 /**
- * The ApplicationPortRequest model module.
- * @module model/ApplicationPortRequest
+ * The ServiceStorageRequest model module.
+ * @module model/ServiceStorageRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ApplicationPortRequest {
+class ServiceStorageRequest {
     /**
-     * Constructs a new <code>ApplicationPortRequest</code>.
-     * @alias module:model/ApplicationPortRequest
+     * Constructs a new <code>ServiceStorageRequest</code>.
+     * @alias module:model/ServiceStorageRequest
      */
     constructor() { 
         
-        ApplicationPortRequest.initialize(this);
+        ServiceStorageRequest.initialize(this);
     }
 
     /**
@@ -38,18 +38,18 @@ class ApplicationPortRequest {
     }
 
     /**
-     * Constructs a <code>ApplicationPortRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ServiceStorageRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApplicationPortRequest} obj Optional instance to populate.
-     * @return {module:model/ApplicationPortRequest} The populated <code>ApplicationPortRequest</code> instance.
+     * @param {module:model/ServiceStorageRequest} obj Optional instance to populate.
+     * @return {module:model/ServiceStorageRequest} The populated <code>ServiceStorageRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApplicationPortRequest();
+            obj = obj || new ServiceStorageRequest();
 
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPortsInner]);
+            if (data.hasOwnProperty('storage')) {
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageRequestStorageInner]);
             }
         }
         return obj;
@@ -59,14 +59,14 @@ class ApplicationPortRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationPortRequestPortsInner>} ports
+ * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
-ApplicationPortRequest.prototype['ports'] = undefined;
+ServiceStorageRequest.prototype['storage'] = undefined;
 
 
 
 
 
 
-export default ApplicationPortRequest;
+export default ServiceStorageRequest;
 

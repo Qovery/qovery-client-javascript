@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationStorageRequest();
+    instance = new QoveryApi.ServiceStorageRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ApplicationStorageRequest', function() {
-    it('should create an instance of ApplicationStorageRequest', function() {
-      // uncomment below and update the code to test ApplicationStorageRequest
-      //var instance = new QoveryApi.ApplicationStorageRequest();
-      //expect(instance).to.be.a(QoveryApi.ApplicationStorageRequest);
+  describe('ServiceStorageRequest', function() {
+    it('should create an instance of ServiceStorageRequest', function() {
+      // uncomment below and update the code to test ServiceStorageRequest
+      //var instance = new QoveryApi.ServiceStorageRequest();
+      //expect(instance).to.be.a(QoveryApi.ServiceStorageRequest);
     });
 
     it('should have the property storage (base name: "storage")', function() {
       // uncomment below and update the code to test the property storage
-      //var instance = new QoveryApi.ApplicationStorageRequest();
+      //var instance = new QoveryApi.ServiceStorageRequest();
       //expect(instance).to.be();
     });
 

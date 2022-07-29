@@ -15,20 +15,20 @@ import ApiClient from '../ApiClient';
 import PortProtocolEnum from './PortProtocolEnum';
 
 /**
- * The ApplicationPortRequestPortsInner model module.
- * @module model/ApplicationPortRequestPortsInner
+ * The ServicePortRequestPortsInner model module.
+ * @module model/ServicePortRequestPortsInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ApplicationPortRequestPortsInner {
+class ServicePortRequestPortsInner {
     /**
-     * Constructs a new <code>ApplicationPortRequestPortsInner</code>.
-     * @alias module:model/ApplicationPortRequestPortsInner
-     * @param internalPort {Number} The listening port of your application
+     * Constructs a new <code>ServicePortRequestPortsInner</code>.
+     * @alias module:model/ServicePortRequestPortsInner
+     * @param internalPort {Number} The listening port of your service.
      * @param publiclyAccessible {Boolean} Expose the port to the world
      */
     constructor(internalPort, publiclyAccessible) { 
         
-        ApplicationPortRequestPortsInner.initialize(this, internalPort, publiclyAccessible);
+        ServicePortRequestPortsInner.initialize(this, internalPort, publiclyAccessible);
     }
 
     /**
@@ -42,15 +42,15 @@ class ApplicationPortRequestPortsInner {
     }
 
     /**
-     * Constructs a <code>ApplicationPortRequestPortsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ServicePortRequestPortsInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApplicationPortRequestPortsInner} obj Optional instance to populate.
-     * @return {module:model/ApplicationPortRequestPortsInner} The populated <code>ApplicationPortRequestPortsInner</code> instance.
+     * @param {module:model/ServicePortRequestPortsInner} obj Optional instance to populate.
+     * @return {module:model/ServicePortRequestPortsInner} The populated <code>ServicePortRequestPortsInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApplicationPortRequestPortsInner();
+            obj = obj || new ServicePortRequestPortsInner();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -77,35 +77,35 @@ class ApplicationPortRequestPortsInner {
 /**
  * @member {String} name
  */
-ApplicationPortRequestPortsInner.prototype['name'] = undefined;
+ServicePortRequestPortsInner.prototype['name'] = undefined;
 
 /**
- * The listening port of your application
+ * The listening port of your service.
  * @member {Number} internal_port
  */
-ApplicationPortRequestPortsInner.prototype['internal_port'] = undefined;
+ServicePortRequestPortsInner.prototype['internal_port'] = undefined;
 
 /**
- * The exposed port for your application. This is optional. If not set a default port will be used.
+ * The exposed port for your service. This is optional. If not set a default port will be used.
  * @member {Number} external_port
  */
-ApplicationPortRequestPortsInner.prototype['external_port'] = undefined;
+ServicePortRequestPortsInner.prototype['external_port'] = undefined;
 
 /**
  * Expose the port to the world
  * @member {Boolean} publicly_accessible
  */
-ApplicationPortRequestPortsInner.prototype['publicly_accessible'] = undefined;
+ServicePortRequestPortsInner.prototype['publicly_accessible'] = undefined;
 
 /**
  * @member {module:model/PortProtocolEnum} protocol
  */
-ApplicationPortRequestPortsInner.prototype['protocol'] = undefined;
+ServicePortRequestPortsInner.prototype['protocol'] = undefined;
 
 
 
 
 
 
-export default ApplicationPortRequestPortsInner;
+export default ServicePortRequestPortsInner;
 

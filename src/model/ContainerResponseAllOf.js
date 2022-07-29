@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -52,6 +51,9 @@ class ContainerResponseAllOf {
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
+            if (data.hasOwnProperty('registry')) {
+                obj['registry'] = ReferenceObject.constructFromObject(data['registry']);
+            }
             if (data.hasOwnProperty('maximum_cpu')) {
                 obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
             }
@@ -61,17 +63,17 @@ class ContainerResponseAllOf {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('registry_id')) {
-                obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
-            }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
             }
+            if (data.hasOwnProperty('tag')) {
+                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            }
             if (data.hasOwnProperty('arguments')) {
-                obj['arguments'] = ApiClient.convertToType(data['arguments'], 'String');
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -84,9 +86,6 @@ class ContainerResponseAllOf {
             }
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
-            }
-            if (data.hasOwnProperty('healthcheck')) {
-                obj['healthcheck'] = Healthcheck.constructFromObject(data['healthcheck']);
             }
         }
         return obj;
@@ -101,18 +100,21 @@ class ContainerResponseAllOf {
 ContainerResponseAllOf.prototype['environment'] = undefined;
 
 /**
+ * @member {module:model/ReferenceObject} registry
+ */
+ContainerResponseAllOf.prototype['registry'] = undefined;
+
+/**
  * Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-ContainerResponseAllOf.prototype['maximum_cpu'] = 250;
+ContainerResponseAllOf.prototype['maximum_cpu'] = undefined;
 
 /**
  * Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-ContainerResponseAllOf.prototype['maximum_memory'] = 256;
+ContainerResponseAllOf.prototype['maximum_memory'] = undefined;
 
 /**
  * name is case insensitive
@@ -121,41 +123,39 @@ ContainerResponseAllOf.prototype['maximum_memory'] = 256;
 ContainerResponseAllOf.prototype['name'] = undefined;
 
 /**
- * give a description to this container
- * @member {String} description
- */
-ContainerResponseAllOf.prototype['description'] = undefined;
-
-/**
- * id of the linked registry
- * @member {String} registry_id
- */
-ContainerResponseAllOf.prototype['registry_id'] = undefined;
-
-/**
  * name of the image container
  * @member {String} image_name
  */
 ContainerResponseAllOf.prototype['image_name'] = undefined;
 
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerResponseAllOf.prototype['tag'] = undefined;
+
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerResponseAllOf.prototype['arguments'] = undefined;
 
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerResponseAllOf.prototype['entrypoint'] = undefined;
+
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
  */
-ContainerResponseAllOf.prototype['cpu'] = 250;
+ContainerResponseAllOf.prototype['cpu'] = undefined;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
  */
-ContainerResponseAllOf.prototype['memory'] = 256;
+ContainerResponseAllOf.prototype['memory'] = undefined;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
@@ -170,11 +170,6 @@ ContainerResponseAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerResponseAllOf.prototype['max_running_instances'] = 1;
-
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerResponseAllOf.prototype['healthcheck'] = undefined;
 
 
 

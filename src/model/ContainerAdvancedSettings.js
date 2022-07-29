@@ -47,14 +47,8 @@ class ContainerAdvancedSettings {
         if (data) {
             obj = obj || new ContainerAdvancedSettings();
 
-            if (data.hasOwnProperty('deployment.delay_start_time_sec')) {
-                obj['deployment.delay_start_time_sec'] = ApiClient.convertToType(data['deployment.delay_start_time_sec'], 'Number');
-            }
             if (data.hasOwnProperty('deployment.custom_domain_check_enabled')) {
                 obj['deployment.custom_domain_check_enabled'] = ApiClient.convertToType(data['deployment.custom_domain_check_enabled'], 'Boolean');
-            }
-            if (data.hasOwnProperty('build.timeout_max_sec')) {
-                obj['build.timeout_max_sec'] = ApiClient.convertToType(data['build.timeout_max_sec'], 'Number');
             }
             if (data.hasOwnProperty('network.ingress.proxy_body_size_mb')) {
                 obj['network.ingress.proxy_body_size_mb'] = ApiClient.convertToType(data['network.ingress.proxy_body_size_mb'], 'Number');
@@ -121,24 +115,11 @@ class ContainerAdvancedSettings {
 }
 
 /**
- * please use `readiness_probe.initial_delay_seconds` and `liveness_probe.initial_delay_seconds` instead
- * @member {Number} deployment.delay_start_time_sec
- * @default 30
- */
-ContainerAdvancedSettings.prototype['deployment.delay_start_time_sec'] = 30;
-
-/**
  * disable custom domain check when deploying an application
  * @member {Boolean} deployment.custom_domain_check_enabled
  * @default true
  */
 ContainerAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = true;
-
-/**
- * @member {Number} build.timeout_max_sec
- * @default 1800
- */
-ContainerAdvancedSettings.prototype['build.timeout_max_sec'] = 1800;
 
 /**
  * @member {Number} network.ingress.proxy_body_size_mb

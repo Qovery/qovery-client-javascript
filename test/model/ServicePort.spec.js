@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationStorageRequestStorageInner();
+    instance = new QoveryApi.ServicePort();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,16 @@
       object[property] = value;
   }
 
-  describe('ApplicationStorageRequestStorageInner', function() {
-    it('should create an instance of ApplicationStorageRequestStorageInner', function() {
-      // uncomment below and update the code to test ApplicationStorageRequestStorageInner
-      //var instance = new QoveryApi.ApplicationStorageRequestStorageInner();
-      //expect(instance).to.be.a(QoveryApi.ApplicationStorageRequestStorageInner);
+  describe('ServicePort', function() {
+    it('should create an instance of ServicePort', function() {
+      // uncomment below and update the code to test ServicePort
+      //var instance = new QoveryApi.ServicePort();
+      //expect(instance).to.be.a(QoveryApi.ServicePort);
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new QoveryApi.ApplicationStorageRequestStorageInner();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property size (base name: "size")', function() {
-      // uncomment below and update the code to test the property size
-      //var instance = new QoveryApi.ApplicationStorageRequestStorageInner();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property mountPoint (base name: "mount_point")', function() {
-      // uncomment below and update the code to test the property mountPoint
-      //var instance = new QoveryApi.ApplicationStorageRequestStorageInner();
+    it('should have the property ports (base name: "ports")', function() {
+      // uncomment below and update the code to test the property ports
+      //var instance = new QoveryApi.ServicePort();
       //expect(instance).to.be();
     });
 

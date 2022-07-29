@@ -321,8 +321,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabaseActionsApi* | [**stopDatabase**](docs/DatabaseActionsApi.md#stopDatabase) | **POST** /database/{databaseId}/stop | Stop database
 *QoveryApi.DatabaseApplicationApi* | [**listDatabaseApplication**](docs/DatabaseApplicationApi.md#listDatabaseApplication) | **GET** /database/{databaseId}/application | List applications using the database
 *QoveryApi.DatabaseApplicationApi* | [**removeApplicationFromDatabase**](docs/DatabaseApplicationApi.md#removeApplicationFromDatabase) | **DELETE** /database/{databaseId}/application/{targetApplicationId} | Remove an application from this database 
-*QoveryApi.DatabaseContainerApi* | [**listDatabaseContainer**](docs/DatabaseContainerApi.md#listDatabaseContainer) | **GET** /database/{databaseId}/container | List container using the database
-*QoveryApi.DatabaseContainerApi* | [**removeContainerFromDatabase**](docs/DatabaseContainerApi.md#removeContainerFromDatabase) | **DELETE** /database/{databaseId}/container/{targetContainerId} | Remove an container from this database 
 *QoveryApi.DatabaseDeploymentHistoryApi* | [**listDatabaseDeploymentHistory**](docs/DatabaseDeploymentHistoryApi.md#listDatabaseDeploymentHistory) | **GET** /database/{databaseId}/deploymentHistory | List database deploys
 *QoveryApi.DatabaseEventApi* | [**listDatabaseEvent**](docs/DatabaseEventApi.md#listDatabaseEvent) | **GET** /database/{databaseId}/event | List database  events
 *QoveryApi.DatabaseMainCallsApi* | [**deleteDatabase**](docs/DatabaseMainCallsApi.md#deleteDatabase) | **DELETE** /database/{databaseId} | Delete a database 
@@ -469,16 +467,10 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ApplicationGitRepositoryRequest](docs/ApplicationGitRepositoryRequest.md)
  - [QoveryApi.ApplicationNetwork](docs/ApplicationNetwork.md)
  - [QoveryApi.ApplicationNetworkRequest](docs/ApplicationNetworkRequest.md)
- - [QoveryApi.ApplicationPort](docs/ApplicationPort.md)
- - [QoveryApi.ApplicationPortPortsInner](docs/ApplicationPortPortsInner.md)
- - [QoveryApi.ApplicationPortRequest](docs/ApplicationPortRequest.md)
- - [QoveryApi.ApplicationPortRequestPortsInner](docs/ApplicationPortRequestPortsInner.md)
  - [QoveryApi.ApplicationRequest](docs/ApplicationRequest.md)
  - [QoveryApi.ApplicationRequestAllOf](docs/ApplicationRequestAllOf.md)
  - [QoveryApi.ApplicationResponseList](docs/ApplicationResponseList.md)
  - [QoveryApi.ApplicationStorage](docs/ApplicationStorage.md)
- - [QoveryApi.ApplicationStorageRequest](docs/ApplicationStorageRequest.md)
- - [QoveryApi.ApplicationStorageRequestStorageInner](docs/ApplicationStorageRequestStorageInner.md)
  - [QoveryApi.ApplicationStorageStorageInner](docs/ApplicationStorageStorageInner.md)
  - [QoveryApi.AvailableContainerRegistryResponse](docs/AvailableContainerRegistryResponse.md)
  - [QoveryApi.AwsCredentialsRequest](docs/AwsCredentialsRequest.md)
@@ -544,7 +536,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CommunityUsage](docs/CommunityUsage.md)
  - [QoveryApi.CompanySizeEnum](docs/CompanySizeEnum.md)
  - [QoveryApi.ContainerAdvancedSettings](docs/ContainerAdvancedSettings.md)
- - [QoveryApi.ContainerAdvancedSettingsResponse](docs/ContainerAdvancedSettingsResponse.md)
  - [QoveryApi.ContainerCurrentScale](docs/ContainerCurrentScale.md)
  - [QoveryApi.ContainerDependencyRequest](docs/ContainerDependencyRequest.md)
  - [QoveryApi.ContainerDeployRequest](docs/ContainerDeployRequest.md)
@@ -783,7 +774,13 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Service](docs/Service.md)
  - [QoveryApi.ServiceAllOf](docs/ServiceAllOf.md)
  - [QoveryApi.ServiceDeploymentStatusEnum](docs/ServiceDeploymentStatusEnum.md)
+ - [QoveryApi.ServicePort](docs/ServicePort.md)
+ - [QoveryApi.ServicePortPortsInner](docs/ServicePortPortsInner.md)
+ - [QoveryApi.ServicePortRequest](docs/ServicePortRequest.md)
+ - [QoveryApi.ServicePortRequestPortsInner](docs/ServicePortRequestPortsInner.md)
  - [QoveryApi.ServiceResponseList](docs/ServiceResponseList.md)
+ - [QoveryApi.ServiceStorageRequest](docs/ServiceStorageRequest.md)
+ - [QoveryApi.ServiceStorageRequestStorageInner](docs/ServiceStorageRequestStorageInner.md)
  - [QoveryApi.ServiceTotalNumber](docs/ServiceTotalNumber.md)
  - [QoveryApi.ServiceTypeEnum](docs/ServiceTypeEnum.md)
  - [QoveryApi.SignUp](docs/SignUp.md)

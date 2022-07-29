@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationPortRequestPortsInner();
+    instance = new QoveryApi.ServicePortRequestPortsInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,40 @@
       object[property] = value;
   }
 
-  describe('ApplicationPortRequestPortsInner', function() {
-    it('should create an instance of ApplicationPortRequestPortsInner', function() {
-      // uncomment below and update the code to test ApplicationPortRequestPortsInner
-      //var instance = new QoveryApi.ApplicationPortRequestPortsInner();
-      //expect(instance).to.be.a(QoveryApi.ApplicationPortRequestPortsInner);
+  describe('ServicePortRequestPortsInner', function() {
+    it('should create an instance of ServicePortRequestPortsInner', function() {
+      // uncomment below and update the code to test ServicePortRequestPortsInner
+      //var instance = new QoveryApi.ServicePortRequestPortsInner();
+      //expect(instance).to.be.a(QoveryApi.ServicePortRequestPortsInner);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ApplicationPortRequestPortsInner();
+      //var instance = new QoveryApi.ServicePortRequestPortsInner();
       //expect(instance).to.be();
     });
 
     it('should have the property internalPort (base name: "internal_port")', function() {
       // uncomment below and update the code to test the property internalPort
-      //var instance = new QoveryApi.ApplicationPortRequestPortsInner();
+      //var instance = new QoveryApi.ServicePortRequestPortsInner();
       //expect(instance).to.be();
     });
 
     it('should have the property externalPort (base name: "external_port")', function() {
       // uncomment below and update the code to test the property externalPort
-      //var instance = new QoveryApi.ApplicationPortRequestPortsInner();
+      //var instance = new QoveryApi.ServicePortRequestPortsInner();
       //expect(instance).to.be();
     });
 
     it('should have the property publiclyAccessible (base name: "publicly_accessible")', function() {
       // uncomment below and update the code to test the property publiclyAccessible
-      //var instance = new QoveryApi.ApplicationPortRequestPortsInner();
+      //var instance = new QoveryApi.ServicePortRequestPortsInner();
       //expect(instance).to.be();
     });
 
     it('should have the property protocol (base name: "protocol")', function() {
       // uncomment below and update the code to test the property protocol
-      //var instance = new QoveryApi.ApplicationPortRequestPortsInner();
+      //var instance = new QoveryApi.ServicePortRequestPortsInner();
       //expect(instance).to.be();
     });
 

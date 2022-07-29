@@ -29,16 +29,10 @@ import ApplicationGitRepository from './model/ApplicationGitRepository';
 import ApplicationGitRepositoryRequest from './model/ApplicationGitRepositoryRequest';
 import ApplicationNetwork from './model/ApplicationNetwork';
 import ApplicationNetworkRequest from './model/ApplicationNetworkRequest';
-import ApplicationPort from './model/ApplicationPort';
-import ApplicationPortPortsInner from './model/ApplicationPortPortsInner';
-import ApplicationPortRequest from './model/ApplicationPortRequest';
-import ApplicationPortRequestPortsInner from './model/ApplicationPortRequestPortsInner';
 import ApplicationRequest from './model/ApplicationRequest';
 import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
 import ApplicationStorage from './model/ApplicationStorage';
-import ApplicationStorageRequest from './model/ApplicationStorageRequest';
-import ApplicationStorageRequestStorageInner from './model/ApplicationStorageRequestStorageInner';
 import ApplicationStorageStorageInner from './model/ApplicationStorageStorageInner';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
@@ -104,7 +98,6 @@ import CommitResponseList from './model/CommitResponseList';
 import CommunityUsage from './model/CommunityUsage';
 import CompanySizeEnum from './model/CompanySizeEnum';
 import ContainerAdvancedSettings from './model/ContainerAdvancedSettings';
-import ContainerAdvancedSettingsResponse from './model/ContainerAdvancedSettingsResponse';
 import ContainerCurrentScale from './model/ContainerCurrentScale';
 import ContainerDependencyRequest from './model/ContainerDependencyRequest';
 import ContainerDeployRequest from './model/ContainerDeployRequest';
@@ -343,7 +336,13 @@ import SecretResponseList from './model/SecretResponseList';
 import Service from './model/Service';
 import ServiceAllOf from './model/ServiceAllOf';
 import ServiceDeploymentStatusEnum from './model/ServiceDeploymentStatusEnum';
+import ServicePort from './model/ServicePort';
+import ServicePortPortsInner from './model/ServicePortPortsInner';
+import ServicePortRequest from './model/ServicePortRequest';
+import ServicePortRequestPortsInner from './model/ServicePortRequestPortsInner';
 import ServiceResponseList from './model/ServiceResponseList';
+import ServiceStorageRequest from './model/ServiceStorageRequest';
+import ServiceStorageRequestStorageInner from './model/ServiceStorageRequestStorageInner';
 import ServiceTotalNumber from './model/ServiceTotalNumber';
 import ServiceTypeEnum from './model/ServiceTypeEnum';
 import SignUp from './model/SignUp';
@@ -407,7 +406,6 @@ import ContainersApi from './api/ContainersApi';
 import CustomDomainApi from './api/CustomDomainApi';
 import DatabaseActionsApi from './api/DatabaseActionsApi';
 import DatabaseApplicationApi from './api/DatabaseApplicationApi';
-import DatabaseContainerApi from './api/DatabaseContainerApi';
 import DatabaseDeploymentHistoryApi from './api/DatabaseDeploymentHistoryApi';
 import DatabaseEventApi from './api/DatabaseEventApi';
 import DatabaseMainCallsApi from './api/DatabaseMainCallsApi';
@@ -574,30 +572,6 @@ export {
     ApplicationNetworkRequest,
 
     /**
-     * The ApplicationPort model constructor.
-     * @property {module:model/ApplicationPort}
-     */
-    ApplicationPort,
-
-    /**
-     * The ApplicationPortPortsInner model constructor.
-     * @property {module:model/ApplicationPortPortsInner}
-     */
-    ApplicationPortPortsInner,
-
-    /**
-     * The ApplicationPortRequest model constructor.
-     * @property {module:model/ApplicationPortRequest}
-     */
-    ApplicationPortRequest,
-
-    /**
-     * The ApplicationPortRequestPortsInner model constructor.
-     * @property {module:model/ApplicationPortRequestPortsInner}
-     */
-    ApplicationPortRequestPortsInner,
-
-    /**
      * The ApplicationRequest model constructor.
      * @property {module:model/ApplicationRequest}
      */
@@ -620,18 +594,6 @@ export {
      * @property {module:model/ApplicationStorage}
      */
     ApplicationStorage,
-
-    /**
-     * The ApplicationStorageRequest model constructor.
-     * @property {module:model/ApplicationStorageRequest}
-     */
-    ApplicationStorageRequest,
-
-    /**
-     * The ApplicationStorageRequestStorageInner model constructor.
-     * @property {module:model/ApplicationStorageRequestStorageInner}
-     */
-    ApplicationStorageRequestStorageInner,
 
     /**
      * The ApplicationStorageStorageInner model constructor.
@@ -1022,12 +984,6 @@ export {
      * @property {module:model/ContainerAdvancedSettings}
      */
     ContainerAdvancedSettings,
-
-    /**
-     * The ContainerAdvancedSettingsResponse model constructor.
-     * @property {module:model/ContainerAdvancedSettingsResponse}
-     */
-    ContainerAdvancedSettingsResponse,
 
     /**
      * The ContainerCurrentScale model constructor.
@@ -2458,10 +2414,46 @@ export {
     ServiceDeploymentStatusEnum,
 
     /**
+     * The ServicePort model constructor.
+     * @property {module:model/ServicePort}
+     */
+    ServicePort,
+
+    /**
+     * The ServicePortPortsInner model constructor.
+     * @property {module:model/ServicePortPortsInner}
+     */
+    ServicePortPortsInner,
+
+    /**
+     * The ServicePortRequest model constructor.
+     * @property {module:model/ServicePortRequest}
+     */
+    ServicePortRequest,
+
+    /**
+     * The ServicePortRequestPortsInner model constructor.
+     * @property {module:model/ServicePortRequestPortsInner}
+     */
+    ServicePortRequestPortsInner,
+
+    /**
      * The ServiceResponseList model constructor.
      * @property {module:model/ServiceResponseList}
      */
     ServiceResponseList,
+
+    /**
+     * The ServiceStorageRequest model constructor.
+     * @property {module:model/ServiceStorageRequest}
+     */
+    ServiceStorageRequest,
+
+    /**
+     * The ServiceStorageRequestStorageInner model constructor.
+     * @property {module:model/ServiceStorageRequestStorageInner}
+     */
+    ServiceStorageRequestStorageInner,
 
     /**
      * The ServiceTotalNumber model constructor.
@@ -2840,12 +2832,6 @@ export {
     * @property {module:api/DatabaseApplicationApi}
     */
     DatabaseApplicationApi,
-
-    /**
-    * The DatabaseContainerApi service constructor.
-    * @property {module:api/DatabaseContainerApi}
-    */
-    DatabaseContainerApi,
 
     /**
     * The DatabaseDeploymentHistoryApi service constructor.

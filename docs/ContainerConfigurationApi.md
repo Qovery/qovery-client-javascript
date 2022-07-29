@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## editContainerAdvancedSettings
 
-> ContainerAdvancedSettingsResponse editContainerAdvancedSettings(containerId, opts)
+> [ContainerAdvancedSettings] editContainerAdvancedSettings(containerId, opts)
 
 NOT YET IMPLEMENTED - Edit advanced settings
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ContainerAdvancedSettingsResponse**](ContainerAdvancedSettingsResponse.md)
+[**[ContainerAdvancedSettings]**](ContainerAdvancedSettings.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ## getContainerAdvancedSettings
 
-> ContainerAdvancedSettingsResponse getContainerAdvancedSettings(containerId)
+> [ContainerAdvancedSettings] getContainerAdvancedSettings(containerId)
 
 NOT YET IMPLEMENTED - Get advanced settings
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ContainerAdvancedSettingsResponse**](ContainerAdvancedSettingsResponse.md)
+[**[ContainerAdvancedSettings]**](ContainerAdvancedSettings.md)
 
 ### Authorization
 

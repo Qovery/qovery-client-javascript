@@ -14,8 +14,6 @@
 import ApiClient from '../ApiClient';
 import ApplicationAllOf from './ApplicationAllOf';
 import ApplicationGitRepository from './ApplicationGitRepository';
-import ApplicationPort from './ApplicationPort';
-import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 import ApplicationStorage from './ApplicationStorage';
 import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import Base from './Base';
@@ -23,6 +21,8 @@ import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
+import ServicePort from './ServicePort';
+import ServicePortPortsInner from './ServicePortPortsInner';
 
 /**
  * The Application model module.
@@ -35,13 +35,13 @@ class Application {
      * @alias module:model/Application
      * @implements module:model/Base
      * @implements module:model/ApplicationStorage
-     * @implements module:model/ApplicationPort
+     * @implements module:model/ServicePort
      * @implements module:model/ApplicationAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ApplicationPort.initialize(this);ApplicationAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ServicePort.initialize(this);ApplicationAllOf.initialize(this);
         Application.initialize(this, id, createdAt);
     }
 
@@ -67,7 +67,7 @@ class Application {
             obj = obj || new Application();
             Base.constructFromObject(data, obj);
             ApplicationStorage.constructFromObject(data, obj);
-            ApplicationPort.constructFromObject(data, obj);
+            ServicePort.constructFromObject(data, obj);
             ApplicationAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -83,7 +83,7 @@ class Application {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortPortsInner]);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
@@ -158,7 +158,7 @@ Application.prototype['updated_at'] = undefined;
 Application.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortPortsInner>} ports
+ * @member {Array.<module:model/ServicePortPortsInner>} ports
  */
 Application.prototype['ports'] = undefined;
 
@@ -273,11 +273,11 @@ Base.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
-// Implement ApplicationPort interface:
+// Implement ServicePort interface:
 /**
- * @member {Array.<module:model/ApplicationPortPortsInner>} ports
+ * @member {Array.<module:model/ServicePortPortsInner>} ports
  */
-ApplicationPort.prototype['ports'] = undefined;
+ServicePort.prototype['ports'] = undefined;
 // Implement ApplicationAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment

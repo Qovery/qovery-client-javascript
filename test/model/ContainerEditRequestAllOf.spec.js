@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property description (base name: "description")', function() {
-      // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.ContainerEditRequestAllOf();
-      //expect(instance).to.be();
-    });
-
     it('should have the property registryId (base name: "registry_id")', function() {
       // uncomment below and update the code to test the property registryId
       //var instance = new QoveryApi.ContainerEditRequestAllOf();
@@ -78,8 +72,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tag (base name: "tag")', function() {
+      // uncomment below and update the code to test the property tag
+      //var instance = new QoveryApi.ContainerEditRequestAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property _arguments (base name: "arguments")', function() {
       // uncomment below and update the code to test the property _arguments
+      //var instance = new QoveryApi.ContainerEditRequestAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property entrypoint (base name: "entrypoint")', function() {
+      // uncomment below and update the code to test the property entrypoint
       //var instance = new QoveryApi.ContainerEditRequestAllOf();
       //expect(instance).to.be();
     });
@@ -104,18 +110,6 @@
 
     it('should have the property maxRunningInstances (base name: "max_running_instances")', function() {
       // uncomment below and update the code to test the property maxRunningInstances
-      //var instance = new QoveryApi.ContainerEditRequestAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property healthcheck (base name: "healthcheck")', function() {
-      // uncomment below and update the code to test the property healthcheck
-      //var instance = new QoveryApi.ContainerEditRequestAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property stickySession (base name: "sticky_session")', function() {
-      // uncomment below and update the code to test the property stickySession
       //var instance = new QoveryApi.ContainerEditRequestAllOf();
       //expect(instance).to.be();
     });

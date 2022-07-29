@@ -47,18 +47,24 @@ export default class ContainerDependencyApi {
      * NOT YET IMPLEMENTED - Add container dependency to this application.
      * Add container dependency to this container to prevent this container starting before the linked dependencies
      * @param {String} containerId Container ID
+     * @param {String} targetContainerId Target container ID
      * @param {module:api/ContainerDependencyApi~createContainerDependencyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponse}
      */
-    createContainerDependency(containerId, callback) {
+    createContainerDependency(containerId, targetContainerId, callback) {
       let postBody = null;
       // verify the required parameter 'containerId' is set
       if (containerId === undefined || containerId === null) {
         throw new Error("Missing the required parameter 'containerId' when calling createContainerDependency");
       }
+      // verify the required parameter 'targetContainerId' is set
+      if (targetContainerId === undefined || targetContainerId === null) {
+        throw new Error("Missing the required parameter 'targetContainerId' when calling createContainerDependency");
+      }
 
       let pathParams = {
-        'containerId': containerId
+        'containerId': containerId,
+        'targetContainerId': targetContainerId
       };
       let queryParams = {
       };

@@ -12,12 +12,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationPortRequest from './ApplicationPortRequest';
-import ApplicationPortRequestPortsInner from './ApplicationPortRequestPortsInner';
-import ApplicationStorageRequest from './ApplicationStorageRequest';
-import ApplicationStorageRequestStorageInner from './ApplicationStorageRequestStorageInner';
 import ContainerRequestAllOf from './ContainerRequestAllOf';
-import Healthcheck from './Healthcheck';
+import ServicePortRequest from './ServicePortRequest';
+import ServicePortRequestPortsInner from './ServicePortRequestPortsInner';
+import ServiceStorageRequest from './ServiceStorageRequest';
+import ServiceStorageRequestStorageInner from './ServiceStorageRequestStorageInner';
 
 /**
  * The ContainerRequest model module.
@@ -28,16 +27,17 @@ class ContainerRequest {
     /**
      * Constructs a new <code>ContainerRequest</code>.
      * @alias module:model/ContainerRequest
-     * @implements module:model/ApplicationStorageRequest
-     * @implements module:model/ApplicationPortRequest
+     * @implements module:model/ServiceStorageRequest
+     * @implements module:model/ServicePortRequest
      * @implements module:model/ContainerRequestAllOf
      * @param name {String} name is case insensitive
      * @param registryId {String} id of the linked registry
      * @param imageName {String} name of the image container
+     * @param tag {String} tag of the image container
      */
-    constructor(name, registryId, imageName) { 
-        ApplicationStorageRequest.initialize(this);ApplicationPortRequest.initialize(this);ContainerRequestAllOf.initialize(this, name, registryId, imageName);
-        ContainerRequest.initialize(this, name, registryId, imageName);
+    constructor(name, registryId, imageName, tag) { 
+        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ContainerRequestAllOf.initialize(this, name, registryId, imageName, tag);
+        ContainerRequest.initialize(this, name, registryId, imageName, tag);
     }
 
     /**
@@ -45,10 +45,11 @@ class ContainerRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, registryId, imageName) { 
+    static initialize(obj, name, registryId, imageName, tag) { 
         obj['name'] = name;
         obj['registry_id'] = registryId;
         obj['image_name'] = imageName;
+        obj['tag'] = tag;
     }
 
     /**
@@ -61,21 +62,18 @@ class ContainerRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ContainerRequest();
-            ApplicationStorageRequest.constructFromObject(data, obj);
-            ApplicationPortRequest.constructFromObject(data, obj);
+            ServiceStorageRequest.constructFromObject(data, obj);
+            ServicePortRequest.constructFromObject(data, obj);
             ContainerRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageRequestStorageInner]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageRequestStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortRequestPortsInner]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortRequestPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('registry_id')) {
                 obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
@@ -83,8 +81,14 @@ class ContainerRequest {
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
             }
+            if (data.hasOwnProperty('tag')) {
+                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            }
             if (data.hasOwnProperty('arguments')) {
-                obj['arguments'] = ApiClient.convertToType(data['arguments'], 'String');
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -98,9 +102,6 @@ class ContainerRequest {
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
             }
-            if (data.hasOwnProperty('healthcheck')) {
-                obj['healthcheck'] = Healthcheck.constructFromObject(data['healthcheck']);
-            }
         }
         return obj;
     }
@@ -109,12 +110,12 @@ class ContainerRequest {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageRequestStorageInner>} storage
+ * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
 ContainerRequest.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortRequestPortsInner>} ports
+ * @member {Array.<module:model/ServicePortRequestPortsInner>} ports
  */
 ContainerRequest.prototype['ports'] = undefined;
 
@@ -123,12 +124,6 @@ ContainerRequest.prototype['ports'] = undefined;
  * @member {String} name
  */
 ContainerRequest.prototype['name'] = undefined;
-
-/**
- * give a description to this container
- * @member {String} description
- */
-ContainerRequest.prototype['description'] = undefined;
 
 /**
  * id of the linked registry
@@ -143,23 +138,35 @@ ContainerRequest.prototype['registry_id'] = undefined;
 ContainerRequest.prototype['image_name'] = undefined;
 
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerRequest.prototype['tag'] = undefined;
+
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerRequest.prototype['arguments'] = undefined;
 
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerRequest.prototype['entrypoint'] = undefined;
+
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ContainerRequest.prototype['cpu'] = 250;
+ContainerRequest.prototype['cpu'] = 500;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ContainerRequest.prototype['memory'] = 256;
+ContainerRequest.prototype['memory'] = 512;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
@@ -175,33 +182,23 @@ ContainerRequest.prototype['min_running_instances'] = 1;
  */
 ContainerRequest.prototype['max_running_instances'] = 1;
 
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerRequest.prototype['healthcheck'] = undefined;
 
-
-// Implement ApplicationStorageRequest interface:
+// Implement ServiceStorageRequest interface:
 /**
- * @member {Array.<module:model/ApplicationStorageRequestStorageInner>} storage
+ * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
-ApplicationStorageRequest.prototype['storage'] = undefined;
-// Implement ApplicationPortRequest interface:
+ServiceStorageRequest.prototype['storage'] = undefined;
+// Implement ServicePortRequest interface:
 /**
- * @member {Array.<module:model/ApplicationPortRequestPortsInner>} ports
+ * @member {Array.<module:model/ServicePortRequestPortsInner>} ports
  */
-ApplicationPortRequest.prototype['ports'] = undefined;
+ServicePortRequest.prototype['ports'] = undefined;
 // Implement ContainerRequestAllOf interface:
 /**
  * name is case insensitive
  * @member {String} name
  */
 ContainerRequestAllOf.prototype['name'] = undefined;
-/**
- * give a description to this container
- * @member {String} description
- */
-ContainerRequestAllOf.prototype['description'] = undefined;
 /**
  * id of the linked registry
  * @member {String} registry_id
@@ -213,21 +210,31 @@ ContainerRequestAllOf.prototype['registry_id'] = undefined;
  */
 ContainerRequestAllOf.prototype['image_name'] = undefined;
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerRequestAllOf.prototype['tag'] = undefined;
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerRequestAllOf.prototype['arguments'] = undefined;
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerRequestAllOf.prototype['entrypoint'] = undefined;
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ContainerRequestAllOf.prototype['cpu'] = 250;
+ContainerRequestAllOf.prototype['cpu'] = 500;
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ContainerRequestAllOf.prototype['memory'] = 256;
+ContainerRequestAllOf.prototype['memory'] = 512;
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
  * @member {Number} min_running_instances
@@ -240,10 +247,6 @@ ContainerRequestAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerRequestAllOf.prototype['max_running_instances'] = 1;
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerRequestAllOf.prototype['healthcheck'] = undefined;
 
 
 

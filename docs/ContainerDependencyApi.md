@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## createContainerDependency
 
-> ContainerResponse createContainerDependency(containerId)
+> ContainerResponse createContainerDependency(containerId, targetContainerId)
 
 NOT YET IMPLEMENTED - Add container dependency to this application.
 
@@ -29,7 +29,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ContainerDependencyApi();
 let containerId = "containerId_example"; // String | Container ID
-apiInstance.createContainerDependency(containerId, (error, data, response) => {
+let targetContainerId = "targetContainerId_example"; // String | Target container ID
+apiInstance.createContainerDependency(containerId, targetContainerId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -44,6 +45,7 @@ apiInstance.createContainerDependency(containerId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **containerId** | **String**| Container ID | 
+ **targetContainerId** | **String**| Target container ID | 
 
 ### Return type
 

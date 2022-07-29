@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deploymentDelayStartTimeSec** | **Number** | please use &#x60;readiness_probe.initial_delay_seconds&#x60; and &#x60;liveness_probe.initial_delay_seconds&#x60; instead | [optional] [default to 30]
 **deploymentCustomDomainCheckEnabled** | **Boolean** | disable custom domain check when deploying an application | [optional] [default to true]
-**buildTimeoutMaxSec** | **Number** |  | [optional] [default to 1800]
 **networkIngressProxyBodySizeMb** | **Number** |  | [optional] [default to 100]
 **networkIngressEnableCors** | **Boolean** |  | [optional] [default to false]
 **networkIngressCorsAllowOrigin** | **String** |  | [optional] [default to &#39;*&#39;]

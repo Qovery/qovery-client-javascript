@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Healthcheck from './Healthcheck';
 
 /**
  * The ContainerRequestAllOf model module.
@@ -26,10 +25,11 @@ class ContainerRequestAllOf {
      * @param name {String} name is case insensitive
      * @param registryId {String} id of the linked registry
      * @param imageName {String} name of the image container
+     * @param tag {String} tag of the image container
      */
-    constructor(name, registryId, imageName) { 
+    constructor(name, registryId, imageName, tag) { 
         
-        ContainerRequestAllOf.initialize(this, name, registryId, imageName);
+        ContainerRequestAllOf.initialize(this, name, registryId, imageName, tag);
     }
 
     /**
@@ -37,10 +37,11 @@ class ContainerRequestAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, registryId, imageName) { 
+    static initialize(obj, name, registryId, imageName, tag) { 
         obj['name'] = name;
         obj['registry_id'] = registryId;
         obj['image_name'] = imageName;
+        obj['tag'] = tag;
     }
 
     /**
@@ -57,17 +58,20 @@ class ContainerRequestAllOf {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
             if (data.hasOwnProperty('registry_id')) {
                 obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
             }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
             }
+            if (data.hasOwnProperty('tag')) {
+                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            }
             if (data.hasOwnProperty('arguments')) {
-                obj['arguments'] = ApiClient.convertToType(data['arguments'], 'String');
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -80,9 +84,6 @@ class ContainerRequestAllOf {
             }
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
-            }
-            if (data.hasOwnProperty('healthcheck')) {
-                obj['healthcheck'] = Healthcheck.constructFromObject(data['healthcheck']);
             }
         }
         return obj;
@@ -98,12 +99,6 @@ class ContainerRequestAllOf {
 ContainerRequestAllOf.prototype['name'] = undefined;
 
 /**
- * give a description to this container
- * @member {String} description
- */
-ContainerRequestAllOf.prototype['description'] = undefined;
-
-/**
  * id of the linked registry
  * @member {String} registry_id
  */
@@ -116,23 +111,35 @@ ContainerRequestAllOf.prototype['registry_id'] = undefined;
 ContainerRequestAllOf.prototype['image_name'] = undefined;
 
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerRequestAllOf.prototype['tag'] = undefined;
+
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerRequestAllOf.prototype['arguments'] = undefined;
 
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerRequestAllOf.prototype['entrypoint'] = undefined;
+
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ContainerRequestAllOf.prototype['cpu'] = 250;
+ContainerRequestAllOf.prototype['cpu'] = 500;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ContainerRequestAllOf.prototype['memory'] = 256;
+ContainerRequestAllOf.prototype['memory'] = 512;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
@@ -147,11 +154,6 @@ ContainerRequestAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerRequestAllOf.prototype['max_running_instances'] = 1;
-
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerRequestAllOf.prototype['healthcheck'] = undefined;
 
 
 

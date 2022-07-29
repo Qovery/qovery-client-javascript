@@ -15,21 +15,21 @@ import ApiClient from '../ApiClient';
 import StorageTypeEnum from './StorageTypeEnum';
 
 /**
- * The ApplicationStorageRequestStorageInner model module.
- * @module model/ApplicationStorageRequestStorageInner
+ * The ServiceStorageRequestStorageInner model module.
+ * @module model/ServiceStorageRequestStorageInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ApplicationStorageRequestStorageInner {
+class ServiceStorageRequestStorageInner {
     /**
-     * Constructs a new <code>ApplicationStorageRequestStorageInner</code>.
-     * @alias module:model/ApplicationStorageRequestStorageInner
+     * Constructs a new <code>ServiceStorageRequestStorageInner</code>.
+     * @alias module:model/ServiceStorageRequestStorageInner
      * @param type {module:model/StorageTypeEnum} 
      * @param size {Number} unit is GB
      * @param mountPoint {String} 
      */
     constructor(type, size, mountPoint) { 
         
-        ApplicationStorageRequestStorageInner.initialize(this, type, size, mountPoint);
+        ServiceStorageRequestStorageInner.initialize(this, type, size, mountPoint);
     }
 
     /**
@@ -44,15 +44,15 @@ class ApplicationStorageRequestStorageInner {
     }
 
     /**
-     * Constructs a <code>ApplicationStorageRequestStorageInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ServiceStorageRequestStorageInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApplicationStorageRequestStorageInner} obj Optional instance to populate.
-     * @return {module:model/ApplicationStorageRequestStorageInner} The populated <code>ApplicationStorageRequestStorageInner</code> instance.
+     * @param {module:model/ServiceStorageRequestStorageInner} obj Optional instance to populate.
+     * @return {module:model/ServiceStorageRequestStorageInner} The populated <code>ServiceStorageRequestStorageInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApplicationStorageRequestStorageInner();
+            obj = obj || new ServiceStorageRequestStorageInner();
 
             if (data.hasOwnProperty('type')) {
                 obj['type'] = StorageTypeEnum.constructFromObject(data['type']);
@@ -73,23 +73,23 @@ class ApplicationStorageRequestStorageInner {
 /**
  * @member {module:model/StorageTypeEnum} type
  */
-ApplicationStorageRequestStorageInner.prototype['type'] = undefined;
+ServiceStorageRequestStorageInner.prototype['type'] = undefined;
 
 /**
  * unit is GB
  * @member {Number} size
  */
-ApplicationStorageRequestStorageInner.prototype['size'] = undefined;
+ServiceStorageRequestStorageInner.prototype['size'] = undefined;
 
 /**
  * @member {String} mount_point
  */
-ApplicationStorageRequestStorageInner.prototype['mount_point'] = undefined;
+ServiceStorageRequestStorageInner.prototype['mount_point'] = undefined;
 
 
 
 
 
 
-export default ApplicationStorageRequestStorageInner;
+export default ServiceStorageRequestStorageInner;
 

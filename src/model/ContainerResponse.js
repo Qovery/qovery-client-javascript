@@ -12,14 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationPort from './ApplicationPort';
-import ApplicationPortPortsInner from './ApplicationPortPortsInner';
 import ApplicationStorage from './ApplicationStorage';
 import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import Base from './Base';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
-import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
+import ServicePort from './ServicePort';
+import ServicePortPortsInner from './ServicePortPortsInner';
 
 /**
  * The ContainerResponse model module.
@@ -32,13 +31,13 @@ class ContainerResponse {
      * @alias module:model/ContainerResponse
      * @implements module:model/Base
      * @implements module:model/ApplicationStorage
-     * @implements module:model/ApplicationPort
+     * @implements module:model/ServicePort
      * @implements module:model/ContainerResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ApplicationPort.initialize(this);ContainerResponseAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ServicePort.initialize(this);ContainerResponseAllOf.initialize(this);
         ContainerResponse.initialize(this, id, createdAt);
     }
 
@@ -64,7 +63,7 @@ class ContainerResponse {
             obj = obj || new ContainerResponse();
             Base.constructFromObject(data, obj);
             ApplicationStorage.constructFromObject(data, obj);
-            ApplicationPort.constructFromObject(data, obj);
+            ServicePort.constructFromObject(data, obj);
             ContainerResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -80,10 +79,13 @@ class ContainerResponse {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortPortsInner]);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
+            }
+            if (data.hasOwnProperty('registry')) {
+                obj['registry'] = ReferenceObject.constructFromObject(data['registry']);
             }
             if (data.hasOwnProperty('maximum_cpu')) {
                 obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
@@ -94,17 +96,17 @@ class ContainerResponse {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('registry_id')) {
-                obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
-            }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
             }
+            if (data.hasOwnProperty('tag')) {
+                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            }
             if (data.hasOwnProperty('arguments')) {
-                obj['arguments'] = ApiClient.convertToType(data['arguments'], 'String');
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -117,9 +119,6 @@ class ContainerResponse {
             }
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
-            }
-            if (data.hasOwnProperty('healthcheck')) {
-                obj['healthcheck'] = Healthcheck.constructFromObject(data['healthcheck']);
             }
         }
         return obj;
@@ -149,7 +148,7 @@ ContainerResponse.prototype['updated_at'] = undefined;
 ContainerResponse.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationPortPortsInner>} ports
+ * @member {Array.<module:model/ServicePortPortsInner>} ports
  */
 ContainerResponse.prototype['ports'] = undefined;
 
@@ -159,18 +158,21 @@ ContainerResponse.prototype['ports'] = undefined;
 ContainerResponse.prototype['environment'] = undefined;
 
 /**
+ * @member {module:model/ReferenceObject} registry
+ */
+ContainerResponse.prototype['registry'] = undefined;
+
+/**
  * Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-ContainerResponse.prototype['maximum_cpu'] = 250;
+ContainerResponse.prototype['maximum_cpu'] = undefined;
 
 /**
  * Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-ContainerResponse.prototype['maximum_memory'] = 256;
+ContainerResponse.prototype['maximum_memory'] = undefined;
 
 /**
  * name is case insensitive
@@ -179,41 +181,39 @@ ContainerResponse.prototype['maximum_memory'] = 256;
 ContainerResponse.prototype['name'] = undefined;
 
 /**
- * give a description to this container
- * @member {String} description
- */
-ContainerResponse.prototype['description'] = undefined;
-
-/**
- * id of the linked registry
- * @member {String} registry_id
- */
-ContainerResponse.prototype['registry_id'] = undefined;
-
-/**
  * name of the image container
  * @member {String} image_name
  */
 ContainerResponse.prototype['image_name'] = undefined;
 
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerResponse.prototype['tag'] = undefined;
+
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerResponse.prototype['arguments'] = undefined;
 
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerResponse.prototype['entrypoint'] = undefined;
+
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
  */
-ContainerResponse.prototype['cpu'] = 250;
+ContainerResponse.prototype['cpu'] = undefined;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
  */
-ContainerResponse.prototype['memory'] = 256;
+ContainerResponse.prototype['memory'] = undefined;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
@@ -228,11 +228,6 @@ ContainerResponse.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerResponse.prototype['max_running_instances'] = 1;
-
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerResponse.prototype['healthcheck'] = undefined;
 
 
 // Implement Base interface:
@@ -253,64 +248,64 @@ Base.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
  */
 ApplicationStorage.prototype['storage'] = undefined;
-// Implement ApplicationPort interface:
+// Implement ServicePort interface:
 /**
- * @member {Array.<module:model/ApplicationPortPortsInner>} ports
+ * @member {Array.<module:model/ServicePortPortsInner>} ports
  */
-ApplicationPort.prototype['ports'] = undefined;
+ServicePort.prototype['ports'] = undefined;
 // Implement ContainerResponseAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment
  */
 ContainerResponseAllOf.prototype['environment'] = undefined;
 /**
+ * @member {module:model/ReferenceObject} registry
+ */
+ContainerResponseAllOf.prototype['registry'] = undefined;
+/**
  * Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-ContainerResponseAllOf.prototype['maximum_cpu'] = 250;
+ContainerResponseAllOf.prototype['maximum_cpu'] = undefined;
 /**
  * Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-ContainerResponseAllOf.prototype['maximum_memory'] = 256;
+ContainerResponseAllOf.prototype['maximum_memory'] = undefined;
 /**
  * name is case insensitive
  * @member {String} name
  */
 ContainerResponseAllOf.prototype['name'] = undefined;
 /**
- * give a description to this container
- * @member {String} description
- */
-ContainerResponseAllOf.prototype['description'] = undefined;
-/**
- * id of the linked registry
- * @member {String} registry_id
- */
-ContainerResponseAllOf.prototype['registry_id'] = undefined;
-/**
  * name of the image container
  * @member {String} image_name
  */
 ContainerResponseAllOf.prototype['image_name'] = undefined;
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerResponseAllOf.prototype['tag'] = undefined;
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerResponseAllOf.prototype['arguments'] = undefined;
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerResponseAllOf.prototype['entrypoint'] = undefined;
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
  */
-ContainerResponseAllOf.prototype['cpu'] = 250;
+ContainerResponseAllOf.prototype['cpu'] = undefined;
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
  */
-ContainerResponseAllOf.prototype['memory'] = 256;
+ContainerResponseAllOf.prototype['memory'] = undefined;
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
  * @member {Number} min_running_instances
@@ -323,10 +318,6 @@ ContainerResponseAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerResponseAllOf.prototype['max_running_instances'] = 1;
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerResponseAllOf.prototype['healthcheck'] = undefined;
 
 
 

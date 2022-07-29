@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Healthcheck from './Healthcheck';
 
 /**
  * The ContainerEditRequestAllOf model module.
@@ -23,10 +22,14 @@ class ContainerEditRequestAllOf {
     /**
      * Constructs a new <code>ContainerEditRequestAllOf</code>.
      * @alias module:model/ContainerEditRequestAllOf
+     * @param name {String} name is case insensitive
+     * @param registryId {String} id of the linked registry
+     * @param imageName {String} name of the image container
+     * @param tag {String} tag of the image container
      */
-    constructor() { 
+    constructor(name, registryId, imageName, tag) { 
         
-        ContainerEditRequestAllOf.initialize(this);
+        ContainerEditRequestAllOf.initialize(this, name, registryId, imageName, tag);
     }
 
     /**
@@ -34,7 +37,11 @@ class ContainerEditRequestAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, name, registryId, imageName, tag) { 
+        obj['name'] = name;
+        obj['registry_id'] = registryId;
+        obj['image_name'] = imageName;
+        obj['tag'] = tag;
     }
 
     /**
@@ -51,17 +58,20 @@ class ContainerEditRequestAllOf {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
             if (data.hasOwnProperty('registry_id')) {
                 obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
             }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
             }
+            if (data.hasOwnProperty('tag')) {
+                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            }
             if (data.hasOwnProperty('arguments')) {
-                obj['arguments'] = ApiClient.convertToType(data['arguments'], 'String');
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -74,12 +84,6 @@ class ContainerEditRequestAllOf {
             }
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
-            }
-            if (data.hasOwnProperty('healthcheck')) {
-                obj['healthcheck'] = Healthcheck.constructFromObject(data['healthcheck']);
-            }
-            if (data.hasOwnProperty('sticky_session')) {
-                obj['sticky_session'] = ApiClient.convertToType(data['sticky_session'], 'Boolean');
             }
         }
         return obj;
@@ -95,12 +99,6 @@ class ContainerEditRequestAllOf {
 ContainerEditRequestAllOf.prototype['name'] = undefined;
 
 /**
- * give a description to this application
- * @member {String} description
- */
-ContainerEditRequestAllOf.prototype['description'] = undefined;
-
-/**
  * id of the linked registry
  * @member {String} registry_id
  */
@@ -113,23 +111,35 @@ ContainerEditRequestAllOf.prototype['registry_id'] = undefined;
 ContainerEditRequestAllOf.prototype['image_name'] = undefined;
 
 /**
- * @member {String} arguments
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerEditRequestAllOf.prototype['tag'] = undefined;
+
+/**
+ * @member {Array.<String>} arguments
  */
 ContainerEditRequestAllOf.prototype['arguments'] = undefined;
 
 /**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerEditRequestAllOf.prototype['entrypoint'] = undefined;
+
+/**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ContainerEditRequestAllOf.prototype['cpu'] = 250;
+ContainerEditRequestAllOf.prototype['cpu'] = 500;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ContainerEditRequestAllOf.prototype['memory'] = 256;
+ContainerEditRequestAllOf.prototype['memory'] = 512;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
@@ -144,18 +154,6 @@ ContainerEditRequestAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerEditRequestAllOf.prototype['max_running_instances'] = 1;
-
-/**
- * @member {module:model/Healthcheck} healthcheck
- */
-ContainerEditRequestAllOf.prototype['healthcheck'] = undefined;
-
-/**
- * Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application. 
- * @member {Boolean} sticky_session
- * @default false
- */
-ContainerEditRequestAllOf.prototype['sticky_session'] = false;
 
 
 

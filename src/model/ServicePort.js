@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationPortPortsInner from './ApplicationPortPortsInner';
+import ServicePortPortsInner from './ServicePortPortsInner';
 
 /**
- * The ApplicationPort model module.
- * @module model/ApplicationPort
+ * The ServicePort model module.
+ * @module model/ServicePort
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ApplicationPort {
+class ServicePort {
     /**
-     * Constructs a new <code>ApplicationPort</code>.
-     * @alias module:model/ApplicationPort
+     * Constructs a new <code>ServicePort</code>.
+     * @alias module:model/ServicePort
      */
     constructor() { 
         
-        ApplicationPort.initialize(this);
+        ServicePort.initialize(this);
     }
 
     /**
@@ -38,18 +38,18 @@ class ApplicationPort {
     }
 
     /**
-     * Constructs a <code>ApplicationPort</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ServicePort</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApplicationPort} obj Optional instance to populate.
-     * @return {module:model/ApplicationPort} The populated <code>ApplicationPort</code> instance.
+     * @param {module:model/ServicePort} obj Optional instance to populate.
+     * @return {module:model/ServicePort} The populated <code>ServicePort</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApplicationPort();
+            obj = obj || new ServicePort();
 
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ApplicationPortPortsInner]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortPortsInner]);
             }
         }
         return obj;
@@ -59,14 +59,14 @@ class ApplicationPort {
 }
 
 /**
- * @member {Array.<module:model/ApplicationPortPortsInner>} ports
+ * @member {Array.<module:model/ServicePortPortsInner>} ports
  */
-ApplicationPort.prototype['ports'] = undefined;
+ServicePort.prototype['ports'] = undefined;
 
 
 
 
 
 
-export default ApplicationPort;
+export default ServicePort;
 

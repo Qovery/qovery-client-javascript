@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationPortRequest();
+    instance = new QoveryApi.ServiceStorageRequestStorageInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,28 @@
       object[property] = value;
   }
 
-  describe('ApplicationPortRequest', function() {
-    it('should create an instance of ApplicationPortRequest', function() {
-      // uncomment below and update the code to test ApplicationPortRequest
-      //var instance = new QoveryApi.ApplicationPortRequest();
-      //expect(instance).to.be.a(QoveryApi.ApplicationPortRequest);
+  describe('ServiceStorageRequestStorageInner', function() {
+    it('should create an instance of ServiceStorageRequestStorageInner', function() {
+      // uncomment below and update the code to test ServiceStorageRequestStorageInner
+      //var instance = new QoveryApi.ServiceStorageRequestStorageInner();
+      //expect(instance).to.be.a(QoveryApi.ServiceStorageRequestStorageInner);
     });
 
-    it('should have the property ports (base name: "ports")', function() {
-      // uncomment below and update the code to test the property ports
-      //var instance = new QoveryApi.ApplicationPortRequest();
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instance = new QoveryApi.ServiceStorageRequestStorageInner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property size (base name: "size")', function() {
+      // uncomment below and update the code to test the property size
+      //var instance = new QoveryApi.ServiceStorageRequestStorageInner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property mountPoint (base name: "mount_point")', function() {
+      // uncomment below and update the code to test the property mountPoint
+      //var instance = new QoveryApi.ServiceStorageRequestStorageInner();
       //expect(instance).to.be();
     });
 

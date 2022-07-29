@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationPort();
+    instance = new QoveryApi.ServicePortRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ApplicationPort', function() {
-    it('should create an instance of ApplicationPort', function() {
-      // uncomment below and update the code to test ApplicationPort
-      //var instance = new QoveryApi.ApplicationPort();
-      //expect(instance).to.be.a(QoveryApi.ApplicationPort);
+  describe('ServicePortRequest', function() {
+    it('should create an instance of ServicePortRequest', function() {
+      // uncomment below and update the code to test ServicePortRequest
+      //var instance = new QoveryApi.ServicePortRequest();
+      //expect(instance).to.be.a(QoveryApi.ServicePortRequest);
     });
 
     it('should have the property ports (base name: "ports")', function() {
       // uncomment below and update the code to test the property ports
-      //var instance = new QoveryApi.ApplicationPort();
+      //var instance = new QoveryApi.ServicePortRequest();
       //expect(instance).to.be();
     });
 

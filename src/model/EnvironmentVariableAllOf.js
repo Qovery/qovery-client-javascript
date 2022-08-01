@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import EnvironmentVariableAllOfAliasedVariable from './EnvironmentVariableAllOfAliasedVariable';
 import EnvironmentVariableAllOfOverriddenVariable from './EnvironmentVariableAllOfOverriddenVariable';
 import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import ServiceType from './ServiceType';
 
 /**
  * The EnvironmentVariableAllOf model module.
@@ -68,7 +69,7 @@ class EnvironmentVariableAllOf {
                 obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
             }
             if (data.hasOwnProperty('service_type')) {
-                obj['service_type'] = ApiClient.convertToType(data['service_type'], 'String');
+                obj['service_type'] = ServiceType.constructFromObject(data['service_type']);
             }
         }
         return obj;
@@ -105,34 +106,12 @@ EnvironmentVariableAllOf.prototype['service_id'] = undefined;
 EnvironmentVariableAllOf.prototype['service_name'] = undefined;
 
 /**
- * present only for `BUILT_IN` variable
- * @member {module:model/EnvironmentVariableAllOf.ServiceTypeEnum} service_type
+ * @member {module:model/ServiceType} service_type
  */
 EnvironmentVariableAllOf.prototype['service_type'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>service_type</code> property.
- * @enum {String}
- * @readonly
- */
-EnvironmentVariableAllOf['ServiceTypeEnum'] = {
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION",
-
-    /**
-     * value: "DATABASE"
-     * @const
-     */
-    "DATABASE": "DATABASE"
-};
 
 
 

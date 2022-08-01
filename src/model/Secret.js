@@ -83,6 +83,15 @@ class Secret {
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
             }
+            if (data.hasOwnProperty('service_id')) {
+                obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
+            }
+            if (data.hasOwnProperty('service_name')) {
+                obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
+            }
+            if (data.hasOwnProperty('service_type')) {
+                obj['service_type'] = ApiClient.convertToType(data['service_type'], 'String');
+            }
         }
         return obj;
     }
@@ -126,6 +135,24 @@ Secret.prototype['aliased_secret'] = undefined;
  */
 Secret.prototype['scope'] = undefined;
 
+/**
+ * present only for `BUILT_IN` variable
+ * @member {String} service_id
+ */
+Secret.prototype['service_id'] = undefined;
+
+/**
+ * present only for `BUILT_IN` variable
+ * @member {String} service_name
+ */
+Secret.prototype['service_name'] = undefined;
+
+/**
+ * present only for `BUILT_IN` variable
+ * @member {module:model/Secret.ServiceTypeEnum} service_type
+ */
+Secret.prototype['service_type'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -158,7 +185,43 @@ SecretAllOf.prototype['aliased_secret'] = undefined;
  * @member {module:model/EnvironmentVariableScopeEnum} scope
  */
 SecretAllOf.prototype['scope'] = undefined;
+/**
+ * present only for `BUILT_IN` variable
+ * @member {String} service_id
+ */
+SecretAllOf.prototype['service_id'] = undefined;
+/**
+ * present only for `BUILT_IN` variable
+ * @member {String} service_name
+ */
+SecretAllOf.prototype['service_name'] = undefined;
+/**
+ * present only for `BUILT_IN` variable
+ * @member {module:model/SecretAllOf.ServiceTypeEnum} service_type
+ */
+SecretAllOf.prototype['service_type'] = undefined;
 
+
+
+/**
+ * Allowed values for the <code>service_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+Secret['ServiceTypeEnum'] = {
+
+    /**
+     * value: "APPLICATION"
+     * @const
+     */
+    "APPLICATION": "APPLICATION",
+
+    /**
+     * value: "DATABASE"
+     * @const
+     */
+    "DATABASE": "DATABASE"
+};
 
 
 

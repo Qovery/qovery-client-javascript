@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **scope** | [**EnvironmentVariableScopeEnum**](EnvironmentVariableScopeEnum.md) |  | 
 **serviceId** | **String** | present only for &#x60;BUILT_IN&#x60; variable | [optional] 
 **serviceName** | **String** | present only for &#x60;BUILT_IN&#x60; variable | [optional] 
-**serviceType** | [**ServiceType**](ServiceType.md) |  | [optional] 
+**serviceType** | [**LinkedServiceTypeEnum**](LinkedServiceTypeEnum.md) |  | [optional] 
 
 

@@ -684,6 +684,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.KubernetesEnum](docs/KubernetesEnum.md)
  - [QoveryApi.Link](docs/Link.md)
  - [QoveryApi.LinkResponseList](docs/LinkResponseList.md)
+ - [QoveryApi.LinkedServiceTypeEnum](docs/LinkedServiceTypeEnum.md)
  - [QoveryApi.ListClusterLogs200Response](docs/ListClusterLogs200Response.md)
  - [QoveryApi.ListContainerRegistry200Response](docs/ListContainerRegistry200Response.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200Response](docs/ListDatabaseDeploymentHistory200Response.md)

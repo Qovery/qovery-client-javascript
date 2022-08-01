@@ -15,7 +15,7 @@ import ApiClient from '../ApiClient';
 import EnvironmentVariableAllOfAliasedVariable from './EnvironmentVariableAllOfAliasedVariable';
 import EnvironmentVariableAllOfOverriddenVariable from './EnvironmentVariableAllOfOverriddenVariable';
 import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
-import ServiceType from './ServiceType';
+import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
 
 /**
  * The EnvironmentVariableAllOf model module.
@@ -69,7 +69,7 @@ class EnvironmentVariableAllOf {
                 obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
             }
             if (data.hasOwnProperty('service_type')) {
-                obj['service_type'] = ServiceType.constructFromObject(data['service_type']);
+                obj['service_type'] = LinkedServiceTypeEnum.constructFromObject(data['service_type']);
             }
         }
         return obj;
@@ -106,7 +106,7 @@ EnvironmentVariableAllOf.prototype['service_id'] = undefined;
 EnvironmentVariableAllOf.prototype['service_name'] = undefined;
 
 /**
- * @member {module:model/ServiceType} service_type
+ * @member {module:model/LinkedServiceTypeEnum} service_type
  */
 EnvironmentVariableAllOf.prototype['service_type'] = undefined;
 

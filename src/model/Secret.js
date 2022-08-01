@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import AliasedSecret from './AliasedSecret';
 import Base from './Base';
 import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
 import OverriddenSecret from './OverriddenSecret';
 import SecretAllOf from './SecretAllOf';
 
@@ -90,7 +91,7 @@ class Secret {
                 obj['service_name'] = ApiClient.convertToType(data['service_name'], 'String');
             }
             if (data.hasOwnProperty('service_type')) {
-                obj['service_type'] = ApiClient.convertToType(data['service_type'], 'String');
+                obj['service_type'] = LinkedServiceTypeEnum.constructFromObject(data['service_type']);
             }
         }
         return obj;
@@ -148,8 +149,7 @@ Secret.prototype['service_id'] = undefined;
 Secret.prototype['service_name'] = undefined;
 
 /**
- * present only for `BUILT_IN` variable
- * @member {module:model/Secret.ServiceTypeEnum} service_type
+ * @member {module:model/LinkedServiceTypeEnum} service_type
  */
 Secret.prototype['service_type'] = undefined;
 
@@ -196,32 +196,10 @@ SecretAllOf.prototype['service_id'] = undefined;
  */
 SecretAllOf.prototype['service_name'] = undefined;
 /**
- * present only for `BUILT_IN` variable
- * @member {module:model/SecretAllOf.ServiceTypeEnum} service_type
+ * @member {module:model/LinkedServiceTypeEnum} service_type
  */
 SecretAllOf.prototype['service_type'] = undefined;
 
-
-
-/**
- * Allowed values for the <code>service_type</code> property.
- * @enum {String}
- * @readonly
- */
-Secret['ServiceTypeEnum'] = {
-
-    /**
-     * value: "APPLICATION"
-     * @const
-     */
-    "APPLICATION": "APPLICATION",
-
-    /**
-     * value: "DATABASE"
-     * @const
-     */
-    "DATABASE": "DATABASE"
-};
 
 
 

@@ -23,10 +23,12 @@ class AwsCredentialsRequest {
      * Constructs a new <code>AwsCredentialsRequest</code>.
      * @alias module:model/AwsCredentialsRequest
      * @param name {String} 
+     * @param accessKeyId {String} 
+     * @param secretAccessKey {String} 
      */
-    constructor(name) { 
+    constructor(name, accessKeyId, secretAccessKey) { 
         
-        AwsCredentialsRequest.initialize(this, name);
+        AwsCredentialsRequest.initialize(this, name, accessKeyId, secretAccessKey);
     }
 
     /**
@@ -34,8 +36,10 @@ class AwsCredentialsRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
+    static initialize(obj, name, accessKeyId, secretAccessKey) { 
         obj['name'] = name;
+        obj['access_key_id'] = accessKeyId;
+        obj['secret_access_key'] = secretAccessKey;
     }
 
     /**

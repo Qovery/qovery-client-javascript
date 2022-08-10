@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **cloudProvider** | [**EnvironmentAllOfCloudProvider**](EnvironmentAllOfCloudProvider.md) |  | 
 **mode** | [**EnvironmentModeEnum**](EnvironmentModeEnum.md) |  | 
 **clusterId** | **String** |  | 
+**clusterName** | **String** |  | [optional] 
 
 

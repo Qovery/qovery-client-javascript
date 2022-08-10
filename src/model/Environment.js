@@ -95,6 +95,9 @@ class Environment {
             if (data.hasOwnProperty('cluster_id')) {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
             }
+            if (data.hasOwnProperty('cluster_name')) {
+                obj['cluster_name'] = ApiClient.convertToType(data['cluster_name'], 'String');
+            }
         }
         return obj;
     }
@@ -149,6 +152,11 @@ Environment.prototype['mode'] = undefined;
  */
 Environment.prototype['cluster_id'] = undefined;
 
+/**
+ * @member {String} cluster_name
+ */
+Environment.prototype['cluster_name'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -190,6 +198,10 @@ EnvironmentAllOf.prototype['mode'] = undefined;
  * @member {String} cluster_id
  */
 EnvironmentAllOf.prototype['cluster_id'] = undefined;
+/**
+ * @member {String} cluster_name
+ */
+EnvironmentAllOf.prototype['cluster_name'] = undefined;
 
 
 

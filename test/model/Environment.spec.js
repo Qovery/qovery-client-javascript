@@ -108,6 +108,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property clusterName (base name: "cluster_name")', function() {
+      // uncomment below and update the code to test the property clusterName
+      //var instance = new QoveryApi.Environment();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

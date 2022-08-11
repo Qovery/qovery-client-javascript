@@ -13,6 +13,9 @@ Method | HTTP request | Description
 [**editAWSCredentials**](CloudProviderCredentialsApi.md#editAWSCredentials) | **PUT** /organization/{organizationId}/aws/credentials/{credentialsId} | Edit a set of AWS credentials
 [**editDOCredentials**](CloudProviderCredentialsApi.md#editDOCredentials) | **PUT** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Edit a set of Digital Ocean credentials
 [**editScalewayCredentials**](CloudProviderCredentialsApi.md#editScalewayCredentials) | **PUT** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Edit a set of Scaleway credentials
+[**getAWSCredentials**](CloudProviderCredentialsApi.md#getAWSCredentials) | **GET** /organization/{organizationId}/aws/credentials/{credentialsId} | Get a set of AWS credentials
+[**getDOCredentials**](CloudProviderCredentialsApi.md#getDOCredentials) | **GET** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Get a set of Digital Ocean credentials
+[**getScalewayCredentials**](CloudProviderCredentialsApi.md#getScalewayCredentials) | **GET** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Get a set of Scaleway credentials
 [**listAWSCredentials**](CloudProviderCredentialsApi.md#listAWSCredentials) | **GET** /organization/{organizationId}/aws/credentials | List AWS credentials
 [**listDOCredentials**](CloudProviderCredentialsApi.md#listDOCredentials) | **GET** /organization/{organizationId}/digitalOcean/credentials | List DO credentials
 [**listScalewayCredentials**](CloudProviderCredentialsApi.md#listScalewayCredentials) | **GET** /organization/{organizationId}/scaleway/credentials | List Scaleway credentials
@@ -475,6 +478,153 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getAWSCredentials
+
+> ClusterCredentials getAWSCredentials(organizationId, credentialsId)
+
+Get a set of AWS credentials
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let credentialsId = "credentialsId_example"; // String | Credentials ID
+apiInstance.getAWSCredentials(organizationId, credentialsId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **credentialsId** | **String**| Credentials ID | 
+
+### Return type
+
+[**ClusterCredentials**](ClusterCredentials.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getDOCredentials
+
+> ClusterCredentials getDOCredentials(organizationId, credentialsId)
+
+Get a set of Digital Ocean credentials
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let credentialsId = "credentialsId_example"; // String | Credentials ID
+apiInstance.getDOCredentials(organizationId, credentialsId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **credentialsId** | **String**| Credentials ID | 
+
+### Return type
+
+[**ClusterCredentials**](ClusterCredentials.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getScalewayCredentials
+
+> ClusterCredentials getScalewayCredentials(organizationId, credentialsId)
+
+Get a set of Scaleway credentials
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderCredentialsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let credentialsId = "credentialsId_example"; // String | Credentials ID
+apiInstance.getScalewayCredentials(organizationId, credentialsId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **credentialsId** | **String**| Credentials ID | 
+
+### Return type
+
+[**ClusterCredentials**](ClusterCredentials.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

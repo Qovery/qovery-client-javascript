@@ -468,6 +468,150 @@ export default class CloudProviderCredentialsApi {
     }
 
     /**
+     * Callback function to receive the result of the getAWSCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~getAWSCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a set of AWS credentials
+     * @param {String} organizationId Organization ID
+     * @param {String} credentialsId Credentials ID
+     * @param {module:api/CloudProviderCredentialsApi~getAWSCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterCredentials}
+     */
+    getAWSCredentials(organizationId, credentialsId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getAWSCredentials");
+      }
+      // verify the required parameter 'credentialsId' is set
+      if (credentialsId === undefined || credentialsId === null) {
+        throw new Error("Missing the required parameter 'credentialsId' when calling getAWSCredentials");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'credentialsId': credentialsId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterCredentials;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/aws/credentials/{credentialsId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDOCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~getDOCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a set of Digital Ocean credentials
+     * @param {String} organizationId Organization ID
+     * @param {String} credentialsId Credentials ID
+     * @param {module:api/CloudProviderCredentialsApi~getDOCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterCredentials}
+     */
+    getDOCredentials(organizationId, credentialsId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getDOCredentials");
+      }
+      // verify the required parameter 'credentialsId' is set
+      if (credentialsId === undefined || credentialsId === null) {
+        throw new Error("Missing the required parameter 'credentialsId' when calling getDOCredentials");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'credentialsId': credentialsId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterCredentials;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/digitalOcean/credentials/{credentialsId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getScalewayCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~getScalewayCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a set of Scaleway credentials
+     * @param {String} organizationId Organization ID
+     * @param {String} credentialsId Credentials ID
+     * @param {module:api/CloudProviderCredentialsApi~getScalewayCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterCredentials}
+     */
+    getScalewayCredentials(organizationId, credentialsId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getScalewayCredentials");
+      }
+      // verify the required parameter 'credentialsId' is set
+      if (credentialsId === undefined || credentialsId === null) {
+        throw new Error("Missing the required parameter 'credentialsId' when calling getScalewayCredentials");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'credentialsId': credentialsId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterCredentials;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/scaleway/credentials/{credentialsId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listAWSCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~listAWSCredentialsCallback
      * @param {String} error Error message, if any.

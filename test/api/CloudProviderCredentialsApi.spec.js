@@ -138,6 +138,36 @@
         done();
       });
     });
+    describe('getAWSCredentials', function() {
+      it('should call getAWSCredentials successfully', function(done) {
+        //uncomment below and update the code to test getAWSCredentials
+        //instance.getAWSCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getDOCredentials', function() {
+      it('should call getDOCredentials successfully', function(done) {
+        //uncomment below and update the code to test getDOCredentials
+        //instance.getDOCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getScalewayCredentials', function() {
+      it('should call getScalewayCredentials successfully', function(done) {
+        //uncomment below and update the code to test getScalewayCredentials
+        //instance.getScalewayCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listAWSCredentials', function() {
       it('should call listAWSCredentials successfully', function(done) {
         //uncomment below and update the code to test listAWSCredentials

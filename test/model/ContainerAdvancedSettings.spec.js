@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property networkIngressProxyBufferSizeKb (base name: "network.ingress.proxy_buffer_size_kb")', function() {
+      // uncomment below and update the code to test the property networkIngressProxyBufferSizeKb
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property readinessProbeType (base name: "readiness_probe.type")', function() {
       // uncomment below and update the code to test the property readinessProbeType
       //var instance = new QoveryApi.ContainerAdvancedSettings();

@@ -71,6 +71,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.cors_allow_headers')) {
                 obj['network.ingress.cors_allow_headers'] = ApiClient.convertToType(data['network.ingress.cors_allow_headers'], 'String');
             }
+            if (data.hasOwnProperty('network.ingress.proxy_buffer_size_kb')) {
+                obj['network.ingress.proxy_buffer_size_kb'] = ApiClient.convertToType(data['network.ingress.proxy_buffer_size_kb'], 'Number');
+            }
             if (data.hasOwnProperty('readiness_probe.type')) {
                 obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
             }
@@ -172,6 +175,13 @@ ApplicationAdvancedSettings.prototype['network.ingress.cors_allow_methods'] = 'G
  * @default 'DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization'
  */
 ApplicationAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = 'DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization';
+
+/**
+ * header buffer size used while reading response header from upstream
+ * @member {Number} network.ingress.proxy_buffer_size_kb
+ * @default 4
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.proxy_buffer_size_kb'] = 4;
 
 /**
  * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **networkIngressCorsAllowOrigin** | **String** |  | [optional] [default to &#39;*&#39;]
 **networkIngressCorsAllowMethods** | **String** |  | [optional] [default to &#39;GET, PUT, POST, DELETE, PATCH, OPTIONS&#39;]
 **networkIngressCorsAllowHeaders** | **String** |  | [optional] [default to &#39;DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization&#39;]
+**networkIngressProxyBufferSizeKb** | **Number** | header buffer size used while reading response header from upstream | [optional] [default to 4]
 **readinessProbeType** | **String** | &#x60;NONE&#x60; disable readiness probe &#x60;TCP&#x60; enable TCP readiness probe &#x60;HTTP&#x60; enable HTTP readiness probe  | [optional] [default to &#39;TCP&#39;]
 **readinessProbeHttpGetPath** | **String** | HTTP GET path to check status (must returns 2xx E.g \&quot;/healtz\&quot;) - only usable with TYPE &#x3D; HTTP | [optional] [default to &#39;/&#39;]
 **readinessProbeInitialDelaySeconds** | **Number** | Delay before liveness probe is initiated | [optional] [default to 30]

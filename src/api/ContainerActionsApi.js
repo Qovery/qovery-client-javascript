@@ -82,52 +82,6 @@ export default class ContainerActionsApi {
     }
 
     /**
-     * Callback function to receive the result of the previewEnvironmentContainer operation.
-     * @callback module:api/ContainerActionsApi~previewEnvironmentContainerCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - Deploy a preview environment with your container application
-     * You must provide the image tag.
-     * @param {String} containerId Container ID
-     * @param {Object} opts Optional parameters
-     * @param {module:model/ContainerDeployRequest} opts.containerDeployRequest 
-     * @param {module:api/ContainerActionsApi~previewEnvironmentContainerCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
-     */
-    previewEnvironmentContainer(containerId, opts, callback) {
-      opts = opts || {};
-      let postBody = opts['containerDeployRequest'];
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling previewEnvironmentContainer");
-      }
-
-      let pathParams = {
-        'containerId': containerId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Status;
-      return this.apiClient.callApi(
-        '/container/{containerId}/previewEnvironment', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the restartContainer operation.
      * @callback module:api/ContainerActionsApi~restartContainerCallback
      * @param {String} error Error message, if any.

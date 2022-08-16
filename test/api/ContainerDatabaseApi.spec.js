@@ -48,16 +48,6 @@
   }
 
   describe('ContainerDatabaseApi', function() {
-    describe('attachDatabaseToContainer', function() {
-      it('should call attachDatabaseToContainer successfully', function(done) {
-        //uncomment below and update the code to test attachDatabaseToContainer
-        //instance.attachDatabaseToContainer(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('attachLogicalDatabaseToContainer', function() {
       it('should call attachLogicalDatabaseToContainer successfully', function(done) {
         //uncomment below and update the code to test attachLogicalDatabaseToContainer
@@ -68,30 +58,10 @@
         done();
       });
     });
-    describe('listContainerDatabase', function() {
-      it('should call listContainerDatabase successfully', function(done) {
-        //uncomment below and update the code to test listContainerDatabase
-        //instance.listContainerDatabase(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('listContainerLogicalDatabase', function() {
       it('should call listContainerLogicalDatabase successfully', function(done) {
         //uncomment below and update the code to test listContainerLogicalDatabase
         //instance.listContainerLogicalDatabase(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('removeDatabaseFromContainer', function() {
-      it('should call removeDatabaseFromContainer successfully', function(done) {
-        //uncomment below and update the code to test removeDatabaseFromContainer
-        //instance.removeDatabaseFromContainer(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

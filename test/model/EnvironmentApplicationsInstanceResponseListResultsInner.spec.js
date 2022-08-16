@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.GetContainerTags200Response();
+    instance = new QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,22 @@
       object[property] = value;
   }
 
-  describe('GetContainerTags200Response', function() {
-    it('should create an instance of GetContainerTags200Response', function() {
-      // uncomment below and update the code to test GetContainerTags200Response
-      //var instance = new QoveryApi.GetContainerTags200Response();
-      //expect(instance).to.be.a(QoveryApi.GetContainerTags200Response);
+  describe('EnvironmentApplicationsInstanceResponseListResultsInner', function() {
+    it('should create an instance of EnvironmentApplicationsInstanceResponseListResultsInner', function() {
+      // uncomment below and update the code to test EnvironmentApplicationsInstanceResponseListResultsInner
+      //var instance = new QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner);
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.GetContainerTags200Response();
+    it('should have the property application (base name: "application")', function() {
+      // uncomment below and update the code to test the property application
+      //var instance = new QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property instances (base name: "instances")', function() {
+      // uncomment below and update the code to test the property instances
+      //var instance = new QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner();
       //expect(instance).to.be();
     });
 

@@ -11,4 +11,6 @@
 
 * `PROJECT` (value: `"PROJECT"`)
 
+* `CONTAINER` (value: `"CONTAINER"`)
+
 

@@ -13,8 +13,6 @@
 
 
 import ApiClient from "../ApiClient";
-import Database from '../model/Database';
-import DatabaseResponseList from '../model/DatabaseResponseList';
 import LogicalDatabase from '../model/LogicalDatabase';
 import LogicalDatabaseResponseList from '../model/LogicalDatabaseResponseList';
 
@@ -36,54 +34,6 @@ export default class ContainerDatabaseApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-    /**
-     * Callback function to receive the result of the attachDatabaseToContainer operation.
-     * @callback module:api/ContainerDatabaseApi~attachDatabaseToContainerCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Database} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - Link a database to the container
-     * @param {String} containerId Container ID
-     * @param {String} targetDatabaseId Target database ID
-     * @param {module:api/ContainerDatabaseApi~attachDatabaseToContainerCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Database}
-     */
-    attachDatabaseToContainer(containerId, targetDatabaseId, callback) {
-      let postBody = null;
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling attachDatabaseToContainer");
-      }
-      // verify the required parameter 'targetDatabaseId' is set
-      if (targetDatabaseId === undefined || targetDatabaseId === null) {
-        throw new Error("Missing the required parameter 'targetDatabaseId' when calling attachDatabaseToContainer");
-      }
-
-      let pathParams = {
-        'containerId': containerId,
-        'targetDatabaseId': targetDatabaseId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Database;
-      return this.apiClient.callApi(
-        '/container/{containerId}/database/{targetDatabaseId}', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
 
     /**
      * Callback function to receive the result of the attachLogicalDatabaseToContainer operation.
@@ -134,48 +84,6 @@ export default class ContainerDatabaseApi {
     }
 
     /**
-     * Callback function to receive the result of the listContainerDatabase operation.
-     * @callback module:api/ContainerDatabaseApi~listContainerDatabaseCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DatabaseResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - List linked databases
-     * @param {String} containerId Container ID
-     * @param {module:api/ContainerDatabaseApi~listContainerDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DatabaseResponseList}
-     */
-    listContainerDatabase(containerId, callback) {
-      let postBody = null;
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling listContainerDatabase");
-      }
-
-      let pathParams = {
-        'containerId': containerId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = DatabaseResponseList;
-      return this.apiClient.callApi(
-        '/container/{containerId}/database', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the listContainerLogicalDatabase operation.
      * @callback module:api/ContainerDatabaseApi~listContainerLogicalDatabaseCallback
      * @param {String} error Error message, if any.
@@ -212,53 +120,6 @@ export default class ContainerDatabaseApi {
       let returnType = LogicalDatabaseResponseList;
       return this.apiClient.callApi(
         '/container/{containerId}/logicalDatabase', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the removeDatabaseFromContainer operation.
-     * @callback module:api/ContainerDatabaseApi~removeDatabaseFromContainerCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - Remove database link to this container.
-     * @param {String} containerId Container ID
-     * @param {String} targetDatabaseId Target database ID
-     * @param {module:api/ContainerDatabaseApi~removeDatabaseFromContainerCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    removeDatabaseFromContainer(containerId, targetDatabaseId, callback) {
-      let postBody = null;
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling removeDatabaseFromContainer");
-      }
-      // verify the required parameter 'targetDatabaseId' is set
-      if (targetDatabaseId === undefined || targetDatabaseId === null) {
-        throw new Error("Missing the required parameter 'targetDatabaseId' when calling removeDatabaseFromContainer");
-      }
-
-      let pathParams = {
-        'containerId': containerId,
-        'targetDatabaseId': targetDatabaseId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/container/{containerId}/database/{targetDatabaseId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

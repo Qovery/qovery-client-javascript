@@ -1,4 +1,4 @@
-# QoveryApi.GetEnvironmentContainerCurrentInstance200ResponseResultsInner
+# QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner
 
 ## Properties
 

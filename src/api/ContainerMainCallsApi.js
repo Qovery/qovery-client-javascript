@@ -15,12 +15,8 @@
 import ApiClient from "../ApiClient";
 import ContainerEditRequest from '../model/ContainerEditRequest';
 import ContainerResponse from '../model/ContainerResponse';
-import GetContainerTags200Response from '../model/GetContainerTags200Response';
 import LinkResponseList from '../model/LinkResponseList';
 import Status from '../model/Status';
-import TagRequest from '../model/TagRequest';
-import TagResponseList from '../model/TagResponseList';
-import UserResponseList from '../model/UserResponseList';
 
 /**
 * ContainerMainCalls service.
@@ -40,51 +36,6 @@ export default class ContainerMainCallsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-    /**
-     * Callback function to receive the result of the createContainerTag operation.
-     * @callback module:api/ContainerMainCallsApi~createContainerTagCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TagResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - Add container tag
-     * @param {String} containerId Container ID
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TagRequest} opts.tagRequest 
-     * @param {module:api/ContainerMainCallsApi~createContainerTagCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TagResponseList}
-     */
-    createContainerTag(containerId, opts, callback) {
-      opts = opts || {};
-      let postBody = opts['tagRequest'];
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling createContainerTag");
-      }
-
-      let pathParams = {
-        'containerId': containerId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = TagResponseList;
-      return this.apiClient.callApi(
-        '/container/{containerId}/tag', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
 
     /**
      * Callback function to receive the result of the deleteContainer operation.
@@ -123,53 +74,6 @@ export default class ContainerMainCallsApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/container/{containerId}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the deleteContainerTag operation.
-     * @callback module:api/ContainerMainCallsApi~deleteContainerTagCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - Delete container tag
-     * @param {String} containerId Container ID
-     * @param {String} tagId Tag ID
-     * @param {module:api/ContainerMainCallsApi~deleteContainerTagCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    deleteContainerTag(containerId, tagId, callback) {
-      let postBody = null;
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling deleteContainerTag");
-      }
-      // verify the required parameter 'tagId' is set
-      if (tagId === undefined || tagId === null) {
-        throw new Error("Missing the required parameter 'tagId' when calling deleteContainerTag");
-      }
-
-      let pathParams = {
-        'containerId': containerId,
-        'tagId': tagId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/container/{containerId}/tag/{tagId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -306,91 +210,6 @@ export default class ContainerMainCallsApi {
     }
 
     /**
-     * Callback function to receive the result of the getContainerTags operation.
-     * @callback module:api/ContainerMainCallsApi~getContainerTagsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GetContainerTags200Response} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - List image tags
-     * List all image container tags already deployed in the Qovery environment.
-     * @param {String} containerId Container ID
-     * @param {module:api/ContainerMainCallsApi~getContainerTagsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetContainerTags200Response}
-     */
-    getContainerTags(containerId, callback) {
-      let postBody = null;
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling getContainerTags");
-      }
-
-      let pathParams = {
-        'containerId': containerId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetContainerTags200Response;
-      return this.apiClient.callApi(
-        '/container/{containerId}/tagHistory', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listContainerContributor operation.
-     * @callback module:api/ContainerMainCallsApi~listContainerContributorCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UserResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED -List contributors
-     * @param {String} containerId Container ID
-     * @param {module:api/ContainerMainCallsApi~listContainerContributorCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UserResponseList}
-     */
-    listContainerContributor(containerId, callback) {
-      let postBody = null;
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling listContainerContributor");
-      }
-
-      let pathParams = {
-        'containerId': containerId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = UserResponseList;
-      return this.apiClient.callApi(
-        '/container/{containerId}/contributor', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the listContainerLinks operation.
      * @callback module:api/ContainerMainCallsApi~listContainerLinksCallback
      * @param {String} error Error message, if any.
@@ -400,7 +219,7 @@ export default class ContainerMainCallsApi {
 
     /**
      * NOT YET IMPLEMENTED - List all URLs of the container
-     * This will return all the custom domains and Qovery autogenerated domain for the given application
+     * This will return all the custom domains and Qovery autogenerated domain for the given container
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMainCallsApi~listContainerLinksCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/LinkResponseList}
@@ -428,48 +247,6 @@ export default class ContainerMainCallsApi {
       let returnType = LinkResponseList;
       return this.apiClient.callApi(
         '/container/{containerId}/link', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listContainerTag operation.
-     * @callback module:api/ContainerMainCallsApi~listContainerTagCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TagResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * NOT YET IMPLEMENTED - List tags
-     * @param {String} containerId Container ID
-     * @param {module:api/ContainerMainCallsApi~listContainerTagCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TagResponseList}
-     */
-    listContainerTag(containerId, callback) {
-      let postBody = null;
-      // verify the required parameter 'containerId' is set
-      if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling listContainerTag");
-      }
-
-      let pathParams = {
-        'containerId': containerId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = TagResponseList;
-      return this.apiClient.callApi(
-        '/container/{containerId}/tag', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

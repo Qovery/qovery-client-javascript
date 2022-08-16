@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('previewEnvironmentContainer', function() {
-      it('should call previewEnvironmentContainer successfully', function(done) {
-        //uncomment below and update the code to test previewEnvironmentContainer
-        //instance.previewEnvironmentContainer(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('restartContainer', function() {
       it('should call restartContainer successfully', function(done) {
         //uncomment below and update the code to test restartContainer

@@ -78,56 +78,6 @@
         done();
       });
     });
-    describe('getContainerMetricCpu', function() {
-      it('should call getContainerMetricCpu successfully', function(done) {
-        //uncomment below and update the code to test getContainerMetricCpu
-        //instance.getContainerMetricCpu(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getContainerMetricHealthCheck', function() {
-      it('should call getContainerMetricHealthCheck successfully', function(done) {
-        //uncomment below and update the code to test getContainerMetricHealthCheck
-        //instance.getContainerMetricHealthCheck(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getContainerMetricMemory', function() {
-      it('should call getContainerMetricMemory successfully', function(done) {
-        //uncomment below and update the code to test getContainerMetricMemory
-        //instance.getContainerMetricMemory(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getContainerMetricRestart', function() {
-      it('should call getContainerMetricRestart successfully', function(done) {
-        //uncomment below and update the code to test getContainerMetricRestart
-        //instance.getContainerMetricRestart(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getContainerMetricStorage', function() {
-      it('should call getContainerMetricStorage successfully', function(done) {
-        //uncomment below and update the code to test getContainerMetricStorage
-        //instance.getContainerMetricStorage(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
   });
 
 }));

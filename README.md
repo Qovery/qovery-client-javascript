@@ -181,7 +181,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 *QoveryApi.ApplicationsApi* | [**deployAllApplications**](docs/ApplicationsApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
-*QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentInstance**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentInstance) | **GET** /environment/{environmentId}/application/instance | List running instances with CPU and RAM usage for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentStorage**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationStatus**](docs/ApplicationsApi.md#getEnvironmentApplicationStatus) | **GET** /environment/{environmentId}/application/status | List all environment applications statuses
@@ -245,7 +244,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**stopCluster**](docs/ClustersApi.md#stopCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/stop | Stop cluster
 *QoveryApi.ClustersApi* | [**updateCluster**](docs/ClustersApi.md#updateCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/update | Update a cluster Version
 *QoveryApi.ContainerActionsApi* | [**deployContainer**](docs/ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | NOT YET IMPLEMENTED - Deploy container
-*QoveryApi.ContainerActionsApi* | [**previewEnvironmentContainer**](docs/ContainerActionsApi.md#previewEnvironmentContainer) | **POST** /container/{containerId}/previewEnvironment | NOT YET IMPLEMENTED - Deploy a preview environment with your container application
 *QoveryApi.ContainerActionsApi* | [**restartContainer**](docs/ContainerActionsApi.md#restartContainer) | **POST** /container/{containerId}/restart | NOT YET IMPLEMENTED - Restart container
 *QoveryApi.ContainerActionsApi* | [**stopContainer**](docs/ContainerActionsApi.md#stopContainer) | **POST** /container/{containerId}/stop | NOT YET IMPLEMENTED - Stop container
 *QoveryApi.ContainerConfigurationApi* | [**editContainerAdvancedSettings**](docs/ContainerConfigurationApi.md#editContainerAdvancedSettings) | **PUT** /container/{containerId}/advancedSettings | NOT YET IMPLEMENTED - Edit advanced settings
@@ -257,19 +255,13 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerCustomDomainApi* | [**editContainerCustomDomain**](docs/ContainerCustomDomainApi.md#editContainerCustomDomain) | **PUT** /container/{containerId}/customDomain/{customDomainId} | NOT YET IMPLEMENTED - Edit a Custom Domain
 *QoveryApi.ContainerCustomDomainApi* | [**getContainerCustomDomainStatus**](docs/ContainerCustomDomainApi.md#getContainerCustomDomainStatus) | **GET** /container/{containerId}/customDomain/{customDomainId}/status | NOT YET IMPLEMENTED - Get Custom Domain status
 *QoveryApi.ContainerCustomDomainApi* | [**listContainerCustomDomain**](docs/ContainerCustomDomainApi.md#listContainerCustomDomain) | **GET** /container/{containerId}/customDomain | NOT YET IMPLEMENTED - List container custom domains
-*QoveryApi.ContainerDatabaseApi* | [**attachDatabaseToContainer**](docs/ContainerDatabaseApi.md#attachDatabaseToContainer) | **POST** /container/{containerId}/database/{targetDatabaseId} | NOT YET IMPLEMENTED - Link a database to the container
 *QoveryApi.ContainerDatabaseApi* | [**attachLogicalDatabaseToContainer**](docs/ContainerDatabaseApi.md#attachLogicalDatabaseToContainer) | **POST** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | NOT YET IMPLEMENTED - Link a logical database to the container
-*QoveryApi.ContainerDatabaseApi* | [**listContainerDatabase**](docs/ContainerDatabaseApi.md#listContainerDatabase) | **GET** /container/{containerId}/database | NOT YET IMPLEMENTED - List linked databases
 *QoveryApi.ContainerDatabaseApi* | [**listContainerLogicalDatabase**](docs/ContainerDatabaseApi.md#listContainerLogicalDatabase) | **GET** /container/{containerId}/logicalDatabase | NOT YET IMPLEMENTED - List linked logical databases
-*QoveryApi.ContainerDatabaseApi* | [**removeDatabaseFromContainer**](docs/ContainerDatabaseApi.md#removeDatabaseFromContainer) | **DELETE** /container/{containerId}/database/{targetDatabaseId} | NOT YET IMPLEMENTED - Remove database link to this container.
 *QoveryApi.ContainerDatabaseApi* | [**removeLogicalDatabaseFromContainer**](docs/ContainerDatabaseApi.md#removeLogicalDatabaseFromContainer) | **DELETE** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | NOT YET IMPLEMENTED - Remove logical database link to this container.
 *QoveryApi.ContainerDependencyApi* | [**createContainerDependency**](docs/ContainerDependencyApi.md#createContainerDependency) | **POST** /container/{containerId}/dependency/{targetContainerId} | NOT YET IMPLEMENTED - Add container dependency to this application.
 *QoveryApi.ContainerDependencyApi* | [**listContainerDependency**](docs/ContainerDependencyApi.md#listContainerDependency) | **GET** /container/{containerId}/dependency | NOT YET IMPLEMENTED - List container dependencies
 *QoveryApi.ContainerDependencyApi* | [**removeContainerDependency**](docs/ContainerDependencyApi.md#removeContainerDependency) | **DELETE** /container/{containerId}/dependency/{targetContainerId} | NOT YET IMPLEMENTED - Remove container dependency to this container.
-*QoveryApi.ContainerDeploymentRestrictionApi* | [**createContainerDeploymentRestriction**](docs/ContainerDeploymentRestrictionApi.md#createContainerDeploymentRestriction) | **POST** /container/{containerId}/deploymentRestriction | NOT YET IMPLEMENTED - Create an container deployment restriction
-*QoveryApi.ContainerDeploymentRestrictionApi* | [**deleteContainerDeploymentRestriction**](docs/ContainerDeploymentRestrictionApi.md#deleteContainerDeploymentRestriction) | **DELETE** /container/{containerId}/deploymentRestriction/{deploymentRestrictionId} | NOT YET IMPLEMENTED - Delete a container deployment restriction
-*QoveryApi.ContainerDeploymentRestrictionApi* | [**editContainerDeploymentRestriction**](docs/ContainerDeploymentRestrictionApi.md#editContainerDeploymentRestriction) | **PUT** /container/{containerId}/deploymentRestriction/{deploymentRestrictionId} | NOT YET IMPLEMENTED - Edit a container deployment restriction
-*QoveryApi.ContainerDeploymentRestrictionApi* | [**getContainerDeploymentRestrictions**](docs/ContainerDeploymentRestrictionApi.md#getContainerDeploymentRestrictions) | **GET** /container/{containerId}/deploymentRestriction | NOT YET IMPLEMENTED - Get container deployment restrictions
+*QoveryApi.ContainerDeploymentHistoryApi* | [**listContainerDeploymentHistory**](docs/ContainerDeploymentHistoryApi.md#listContainerDeploymentHistory) | **GET** /container/{containerId}/deploymentHistory | NOT YET IMPLEMENTED - List container deployments
 *QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable | Add an environment variable to the container
 *QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariableAlias**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableAlias) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/alias | NOT YET IMPLEMENTED - Create an environment variable alias at the container level
 *QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariableOverride**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableOverride) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/override | NOT YET IMPLEMENTED - Create an environment variable override at the container level
@@ -277,43 +269,33 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerEnvironmentVariableApi* | [**editContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#editContainerEnvironmentVariable) | **PUT** /container/{containerId}/environmentVariable/{environmentVariableId} | NOT YET IMPLEMENTED - Edit an environment variable belonging to the container
 *QoveryApi.ContainerEnvironmentVariableApi* | [**importContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#importContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable/import | NOT YET IMPLEMENTED - Import variables
 *QoveryApi.ContainerEnvironmentVariableApi* | [**listContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#listContainerEnvironmentVariable) | **GET** /container/{containerId}/environmentVariable | NOT YET IMPLEMENTED - List environment variables
-*QoveryApi.ContainerEventApi* | [**listContainerEvent**](docs/ContainerEventApi.md#listContainerEvent) | **GET** /container/{containerId}/event | NOT YET IMPLEMENTED - List container events
 *QoveryApi.ContainerLogsApi* | [**listContainerLog**](docs/ContainerLogsApi.md#listContainerLog) | **GET** /container/{containerId}/log | NOT YET IMPLEMENTED - List logs
-*QoveryApi.ContainerMainCallsApi* | [**createContainerTag**](docs/ContainerMainCallsApi.md#createContainerTag) | **POST** /container/{containerId}/tag | NOT YET IMPLEMENTED - Add container tag
 *QoveryApi.ContainerMainCallsApi* | [**deleteContainer**](docs/ContainerMainCallsApi.md#deleteContainer) | **DELETE** /container/{containerId} | NOT YET IMPLEMENTED - Delete container
-*QoveryApi.ContainerMainCallsApi* | [**deleteContainerTag**](docs/ContainerMainCallsApi.md#deleteContainerTag) | **DELETE** /container/{containerId}/tag/{tagId} | NOT YET IMPLEMENTED - Delete container tag
 *QoveryApi.ContainerMainCallsApi* | [**editContainer**](docs/ContainerMainCallsApi.md#editContainer) | **PUT** /container/{containerId} | NOT YET IMPLEMENTED - Edit container
 *QoveryApi.ContainerMainCallsApi* | [**getContainer**](docs/ContainerMainCallsApi.md#getContainer) | **GET** /container/{containerId} | NOT YET IMPLEMENTED - Get container by ID
 *QoveryApi.ContainerMainCallsApi* | [**getContainerStatus**](docs/ContainerMainCallsApi.md#getContainerStatus) | **GET** /container/{containerId}/status | NOT YET IMPLEMENTED - Get container status
-*QoveryApi.ContainerMainCallsApi* | [**getContainerTags**](docs/ContainerMainCallsApi.md#getContainerTags) | **GET** /container/{containerId}/tagHistory | NOT YET IMPLEMENTED - List image tags
-*QoveryApi.ContainerMainCallsApi* | [**listContainerContributor**](docs/ContainerMainCallsApi.md#listContainerContributor) | **GET** /container/{containerId}/contributor | NOT YET IMPLEMENTED -List contributors
 *QoveryApi.ContainerMainCallsApi* | [**listContainerLinks**](docs/ContainerMainCallsApi.md#listContainerLinks) | **GET** /container/{containerId}/link | NOT YET IMPLEMENTED - List all URLs of the container
-*QoveryApi.ContainerMainCallsApi* | [**listContainerTag**](docs/ContainerMainCallsApi.md#listContainerTag) | **GET** /container/{containerId}/tag | NOT YET IMPLEMENTED - List tags
 *QoveryApi.ContainerMetricsApi* | [**getContainerCurrentInstance**](docs/ContainerMetricsApi.md#getContainerCurrentInstance) | **GET** /container/{containerId}/instance | NOT YET IMPLEMENTED - List currently running instances of the container with their CPU and RAM metrics
 *QoveryApi.ContainerMetricsApi* | [**getContainerCurrentScale**](docs/ContainerMetricsApi.md#getContainerCurrentScale) | **GET** /container/{containerId}/currentScale | NOT YET IMPLEMENTED - Get current scaling of the container
 *QoveryApi.ContainerMetricsApi* | [**getContainerCurrentStorageDisk**](docs/ContainerMetricsApi.md#getContainerCurrentStorageDisk) | **GET** /container/{containerId}/currentStorage | NOT YET IMPLEMENTED - List current storage disk usage
-*QoveryApi.ContainerMetricsApi* | [**getContainerMetricCpu**](docs/ContainerMetricsApi.md#getContainerMetricCpu) | **GET** /container/{containerId}/metric/cpu | NOT YET IMPLEMENTED - Get CPU consumption metric over time for the container
-*QoveryApi.ContainerMetricsApi* | [**getContainerMetricHealthCheck**](docs/ContainerMetricsApi.md#getContainerMetricHealthCheck) | **GET** /container/{containerId}/metric/healthCheck | NOT YET IMPLEMENTED - Get Health Check latency  metric over time for the container
-*QoveryApi.ContainerMetricsApi* | [**getContainerMetricMemory**](docs/ContainerMetricsApi.md#getContainerMetricMemory) | **GET** /container/{containerId}/metric/memory | NOT YET IMPLEMENTED - Get Memory consumption metric over time for the container
-*QoveryApi.ContainerMetricsApi* | [**getContainerMetricRestart**](docs/ContainerMetricsApi.md#getContainerMetricRestart) | **GET** /container/{containerId}/metric/restart | NOT YET IMPLEMENTED - List container restarts
-*QoveryApi.ContainerMetricsApi* | [**getContainerMetricStorage**](docs/ContainerMetricsApi.md#getContainerMetricStorage) | **GET** /container/{containerId}/metric/storage | NOT YET IMPLEMENTED - Get Storage consumption metric over time for the container 
 *QoveryApi.ContainerRegistriesApi* | [**createContainerRegistry**](docs/ContainerRegistriesApi.md#createContainerRegistry) | **POST** /organization/{organizationId}/containerRegistry | Create a container registry
-*QoveryApi.ContainerRegistriesApi* | [**deleteContainerRegistry**](docs/ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Delete a container registry
+*QoveryApi.ContainerRegistriesApi* | [**deleteContainerRegistry**](docs/ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | NOT YET IMPLEMENTED - Delete a container registry
 *QoveryApi.ContainerRegistriesApi* | [**listAvailableContainerRegistry**](docs/ContainerRegistriesApi.md#listAvailableContainerRegistry) | **GET** /organization/{organizationId}/availableContainerRegistry | List supported container registries
-*QoveryApi.ContainerRegistriesApi* | [**listContainerRegistry**](docs/ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | List organization container registries
+*QoveryApi.ContainerRegistriesApi* | [**listContainerRegistry**](docs/ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | NOT YET IMPLEMENTED - List organization container registries
 *QoveryApi.ContainerRegistryApi* | [**editContainerRegistry**](docs/ContainerRegistryApi.md#editContainerRegistry) | **PUT** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Edit a container registry
 *QoveryApi.ContainerSecretApi* | [**createContainerSecret**](docs/ContainerSecretApi.md#createContainerSecret) | **POST** /container/{containerId}/secret | NOT YET IMPLEMENTED - Add a secret to the container
 *QoveryApi.ContainerSecretApi* | [**createContainerSecretAlias**](docs/ContainerSecretApi.md#createContainerSecretAlias) | **POST** /container/{containerId}/secret/{secretId}/alias | NOT YET IMPLEMENTED - Create a secret alias at the container level
 *QoveryApi.ContainerSecretApi* | [**deleteContainerSecret**](docs/ContainerSecretApi.md#deleteContainerSecret) | **DELETE** /container/{containerId}/secret/{secretId} | NOT YET IMPLEMENTED - Delete a secret from an container
 *QoveryApi.ContainerSecretApi* | [**editContainerSecret**](docs/ContainerSecretApi.md#editContainerSecret) | **PUT** /container/{containerId}/secret/{secretId} | NOT YET IMPLEMENTED - Edit a secret belonging to the container
 *QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | NOT YET IMPLEMENTED - List container secrets
+*QoveryApi.ContainersApi* | [**autoDeployContainerEnvironments**](docs/ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | NOT YET IMPLEMENTED - Auto deploy containers
 *QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 *QoveryApi.ContainersApi* | [**deployAllContainers**](docs/ContainersApi.md#deployAllContainers) | **POST** /environment/{environmentId}/container/deploy | Deploy containers
-*QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentInstance**](docs/ContainersApi.md#getEnvironmentContainerCurrentInstance) | **GET** /environment/{environmentId}/container/instance | List running instances with CPU and RAM usage for each container
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentScale**](docs/ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentStorage**](docs/ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerStatus**](docs/ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
 *QoveryApi.ContainersApi* | [**listContainer**](docs/ContainersApi.md#listContainer) | **GET** /environment/{environmentId}/container | List containers
+*QoveryApi.ContainersApi* | [**previewContainerEnvironments**](docs/ContainersApi.md#previewContainerEnvironments) | **POST** /organization/{organizationId}/container/preview | NOT YET IMPLEMENTED - Preview container environments
 *QoveryApi.CustomDomainApi* | [**createApplicationCustomDomain**](docs/CustomDomainApi.md#createApplicationCustomDomain) | **POST** /application/{applicationId}/customDomain | Add custom domain to the application.
 *QoveryApi.CustomDomainApi* | [**deleteCustomDomain**](docs/CustomDomainApi.md#deleteCustomDomain) | **DELETE** /application/{applicationId}/customDomain/{customDomainId} | Delete a Custom Domain
 *QoveryApi.CustomDomainApi* | [**editCustomDomain**](docs/CustomDomainApi.md#editCustomDomain) | **PUT** /application/{applicationId}/customDomain/{customDomainId} | Edit a Custom Domain
@@ -475,6 +457,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ApplicationResponseList](docs/ApplicationResponseList.md)
  - [QoveryApi.ApplicationStorage](docs/ApplicationStorage.md)
  - [QoveryApi.ApplicationStorageStorageInner](docs/ApplicationStorageStorageInner.md)
+ - [QoveryApi.AutoDeployContainerEnvironmentsRequest](docs/AutoDeployContainerEnvironmentsRequest.md)
  - [QoveryApi.AvailableContainerRegistryResponse](docs/AvailableContainerRegistryResponse.md)
  - [QoveryApi.AwsCredentialsRequest](docs/AwsCredentialsRequest.md)
  - [QoveryApi.Backup](docs/Backup.md)
@@ -542,9 +525,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ContainerCurrentScale](docs/ContainerCurrentScale.md)
  - [QoveryApi.ContainerDependencyRequest](docs/ContainerDependencyRequest.md)
  - [QoveryApi.ContainerDeployRequest](docs/ContainerDeployRequest.md)
- - [QoveryApi.ContainerDeploymentRestriction](docs/ContainerDeploymentRestriction.md)
- - [QoveryApi.ContainerDeploymentRestrictionRequest](docs/ContainerDeploymentRestrictionRequest.md)
- - [QoveryApi.ContainerDeploymentRestrictionResponseList](docs/ContainerDeploymentRestrictionResponseList.md)
  - [QoveryApi.ContainerEditRequest](docs/ContainerEditRequest.md)
  - [QoveryApi.ContainerEditRequestAllOf](docs/ContainerEditRequestAllOf.md)
  - [QoveryApi.ContainerNetwork](docs/ContainerNetwork.md)
@@ -614,6 +594,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentApplicationsCurrentScale](docs/EnvironmentApplicationsCurrentScale.md)
  - [QoveryApi.EnvironmentApplicationsCurrentScaleResponseList](docs/EnvironmentApplicationsCurrentScaleResponseList.md)
  - [QoveryApi.EnvironmentApplicationsInstanceResponseList](docs/EnvironmentApplicationsInstanceResponseList.md)
+ - [QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner](docs/EnvironmentApplicationsInstanceResponseListResultsInner.md)
  - [QoveryApi.EnvironmentApplicationsStorage](docs/EnvironmentApplicationsStorage.md)
  - [QoveryApi.EnvironmentApplicationsStorageResponseList](docs/EnvironmentApplicationsStorageResponseList.md)
  - [QoveryApi.EnvironmentApplicationsSupportedLanguage](docs/EnvironmentApplicationsSupportedLanguage.md)
@@ -659,9 +640,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EventPaginatedResponseListAllOf](docs/EventPaginatedResponseListAllOf.md)
  - [QoveryApi.EventResponseList](docs/EventResponseList.md)
  - [QoveryApi.GenericObjectCurrentCost](docs/GenericObjectCurrentCost.md)
- - [QoveryApi.GetContainerTags200Response](docs/GetContainerTags200Response.md)
- - [QoveryApi.GetEnvironmentContainerCurrentInstance200Response](docs/GetEnvironmentContainerCurrentInstance200Response.md)
- - [QoveryApi.GetEnvironmentContainerCurrentInstance200ResponseResultsInner](docs/GetEnvironmentContainerCurrentInstance200ResponseResultsInner.md)
  - [QoveryApi.GitAuthProvider](docs/GitAuthProvider.md)
  - [QoveryApi.GitAuthProviderResponseList](docs/GitAuthProviderResponseList.md)
  - [QoveryApi.GitProviderEnum](docs/GitProviderEnum.md)
@@ -689,6 +667,10 @@ Class | Method | HTTP request | Description
  - [QoveryApi.LinkResponseList](docs/LinkResponseList.md)
  - [QoveryApi.LinkedServiceTypeEnum](docs/LinkedServiceTypeEnum.md)
  - [QoveryApi.ListClusterLogs200Response](docs/ListClusterLogs200Response.md)
+ - [QoveryApi.ListContainerDeploymentHistory200Response](docs/ListContainerDeploymentHistory200Response.md)
+ - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOf](docs/ListContainerDeploymentHistory200ResponseAllOf.md)
+ - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInner](docs/ListContainerDeploymentHistory200ResponseAllOfResultsInner.md)
+ - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf](docs/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.md)
  - [QoveryApi.ListContainerRegistry200Response](docs/ListContainerRegistry200Response.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200Response](docs/ListDatabaseDeploymentHistory200Response.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200ResponseAllOf](docs/ListDatabaseDeploymentHistory200ResponseAllOf.md)
@@ -749,6 +731,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.PaidUsage](docs/PaidUsage.md)
  - [QoveryApi.PlanEnum](docs/PlanEnum.md)
  - [QoveryApi.PortProtocolEnum](docs/PortProtocolEnum.md)
+ - [QoveryApi.PreviewContainerEnvironmentsRequest](docs/PreviewContainerEnvironmentsRequest.md)
  - [QoveryApi.Project](docs/Project.md)
  - [QoveryApi.ProjectAllOf](docs/ProjectAllOf.md)
  - [QoveryApi.ProjectCurrentCost](docs/ProjectCurrentCost.md)

@@ -15,20 +15,20 @@ import ApiClient from '../ApiClient';
 import Instance from './Instance';
 
 /**
- * The GetEnvironmentContainerCurrentInstance200ResponseResultsInner model module.
- * @module model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner
+ * The EnvironmentApplicationsInstanceResponseListResultsInner model module.
+ * @module model/EnvironmentApplicationsInstanceResponseListResultsInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class GetEnvironmentContainerCurrentInstance200ResponseResultsInner {
+class EnvironmentApplicationsInstanceResponseListResultsInner {
     /**
-     * Constructs a new <code>GetEnvironmentContainerCurrentInstance200ResponseResultsInner</code>.
-     * @alias module:model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner
+     * Constructs a new <code>EnvironmentApplicationsInstanceResponseListResultsInner</code>.
+     * @alias module:model/EnvironmentApplicationsInstanceResponseListResultsInner
      * @param application {String} 
      * @param instances {Array.<module:model/Instance>} 
      */
     constructor(application, instances) { 
         
-        GetEnvironmentContainerCurrentInstance200ResponseResultsInner.initialize(this, application, instances);
+        EnvironmentApplicationsInstanceResponseListResultsInner.initialize(this, application, instances);
     }
 
     /**
@@ -42,15 +42,15 @@ class GetEnvironmentContainerCurrentInstance200ResponseResultsInner {
     }
 
     /**
-     * Constructs a <code>GetEnvironmentContainerCurrentInstance200ResponseResultsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentApplicationsInstanceResponseListResultsInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner} obj Optional instance to populate.
-     * @return {module:model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner} The populated <code>GetEnvironmentContainerCurrentInstance200ResponseResultsInner</code> instance.
+     * @param {module:model/EnvironmentApplicationsInstanceResponseListResultsInner} obj Optional instance to populate.
+     * @return {module:model/EnvironmentApplicationsInstanceResponseListResultsInner} The populated <code>EnvironmentApplicationsInstanceResponseListResultsInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new GetEnvironmentContainerCurrentInstance200ResponseResultsInner();
+            obj = obj || new EnvironmentApplicationsInstanceResponseListResultsInner();
 
             if (data.hasOwnProperty('application')) {
                 obj['application'] = ApiClient.convertToType(data['application'], 'String');
@@ -68,17 +68,17 @@ class GetEnvironmentContainerCurrentInstance200ResponseResultsInner {
 /**
  * @member {String} application
  */
-GetEnvironmentContainerCurrentInstance200ResponseResultsInner.prototype['application'] = undefined;
+EnvironmentApplicationsInstanceResponseListResultsInner.prototype['application'] = undefined;
 
 /**
  * @member {Array.<module:model/Instance>} instances
  */
-GetEnvironmentContainerCurrentInstance200ResponseResultsInner.prototype['instances'] = undefined;
+EnvironmentApplicationsInstanceResponseListResultsInner.prototype['instances'] = undefined;
 
 
 
 
 
 
-export default GetEnvironmentContainerCurrentInstance200ResponseResultsInner;
+export default EnvironmentApplicationsInstanceResponseListResultsInner;
 

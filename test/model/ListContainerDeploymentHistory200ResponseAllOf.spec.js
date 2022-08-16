@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ContainerDeploymentRestrictionResponseList();
+    instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ContainerDeploymentRestrictionResponseList', function() {
-    it('should create an instance of ContainerDeploymentRestrictionResponseList', function() {
-      // uncomment below and update the code to test ContainerDeploymentRestrictionResponseList
-      //var instance = new QoveryApi.ContainerDeploymentRestrictionResponseList();
-      //expect(instance).to.be.a(QoveryApi.ContainerDeploymentRestrictionResponseList);
+  describe('ListContainerDeploymentHistory200ResponseAllOf', function() {
+    it('should create an instance of ListContainerDeploymentHistory200ResponseAllOf', function() {
+      // uncomment below and update the code to test ListContainerDeploymentHistory200ResponseAllOf
+      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOf();
+      //expect(instance).to.be.a(QoveryApi.ListContainerDeploymentHistory200ResponseAllOf);
     });
 
-    it('should have the property deploymentRestrictions (base name: "deployment_restrictions")', function() {
-      // uncomment below and update the code to test the property deploymentRestrictions
-      //var instance = new QoveryApi.ContainerDeploymentRestrictionResponseList();
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOf();
       //expect(instance).to.be();
     });
 

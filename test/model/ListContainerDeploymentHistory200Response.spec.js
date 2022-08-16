@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.GetEnvironmentContainerCurrentInstance200Response();
+    instance = new QoveryApi.ListContainerDeploymentHistory200Response();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,28 @@
       object[property] = value;
   }
 
-  describe('GetEnvironmentContainerCurrentInstance200Response', function() {
-    it('should create an instance of GetEnvironmentContainerCurrentInstance200Response', function() {
-      // uncomment below and update the code to test GetEnvironmentContainerCurrentInstance200Response
-      //var instance = new QoveryApi.GetEnvironmentContainerCurrentInstance200Response();
-      //expect(instance).to.be.a(QoveryApi.GetEnvironmentContainerCurrentInstance200Response);
+  describe('ListContainerDeploymentHistory200Response', function() {
+    it('should create an instance of ListContainerDeploymentHistory200Response', function() {
+      // uncomment below and update the code to test ListContainerDeploymentHistory200Response
+      //var instance = new QoveryApi.ListContainerDeploymentHistory200Response();
+      //expect(instance).to.be.a(QoveryApi.ListContainerDeploymentHistory200Response);
+    });
+
+    it('should have the property page (base name: "page")', function() {
+      // uncomment below and update the code to test the property page
+      //var instance = new QoveryApi.ListContainerDeploymentHistory200Response();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pageSize (base name: "page_size")', function() {
+      // uncomment below and update the code to test the property pageSize
+      //var instance = new QoveryApi.ListContainerDeploymentHistory200Response();
+      //expect(instance).to.be();
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.GetEnvironmentContainerCurrentInstance200Response();
+      //var instance = new QoveryApi.ListContainerDeploymentHistory200Response();
       //expect(instance).to.be();
     });
 

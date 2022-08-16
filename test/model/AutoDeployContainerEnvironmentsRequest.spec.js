@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ContainerDeploymentRestrictionRequest();
+    instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('ContainerDeploymentRestrictionRequest', function() {
-    it('should create an instance of ContainerDeploymentRestrictionRequest', function() {
-      // uncomment below and update the code to test ContainerDeploymentRestrictionRequest
-      //var instance = new QoveryApi.ContainerDeploymentRestrictionRequest();
-      //expect(instance).to.be.a(QoveryApi.ContainerDeploymentRestrictionRequest);
+  describe('AutoDeployContainerEnvironmentsRequest', function() {
+    it('should create an instance of AutoDeployContainerEnvironmentsRequest', function() {
+      // uncomment below and update the code to test AutoDeployContainerEnvironmentsRequest
+      //var instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
+      //expect(instance).to.be.a(QoveryApi.AutoDeployContainerEnvironmentsRequest);
     });
 
-    it('should have the property mode (base name: "mode")', function() {
-      // uncomment below and update the code to test the property mode
-      //var instance = new QoveryApi.ContainerDeploymentRestrictionRequest();
+    it('should have the property imageName (base name: "image_name")', function() {
+      // uncomment below and update the code to test the property imageName
+      //var instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new QoveryApi.ContainerDeploymentRestrictionRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
-      //var instance = new QoveryApi.ContainerDeploymentRestrictionRequest();
+    it('should have the property tag (base name: "tag")', function() {
+      // uncomment below and update the code to test the property tag
+      //var instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
       //expect(instance).to.be();
     });
 

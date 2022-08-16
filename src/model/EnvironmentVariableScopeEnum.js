@@ -47,6 +47,13 @@ export default class EnvironmentVariableScopeEnum {
         "PROJECT" = "PROJECT";
 
     
+        /**
+         * value: "CONTAINER"
+         * @const
+         */
+        "CONTAINER" = "CONTAINER";
+
+    
 
     /**
     * Returns a <code>EnvironmentVariableScopeEnum</code> enum value from a Javascript object name.

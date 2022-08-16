@@ -13,13 +13,14 @@
 
 
 import ApiClient from "../ApiClient";
+import AutoDeployContainerEnvironmentsRequest from '../model/AutoDeployContainerEnvironmentsRequest';
 import ContainerRequest from '../model/ContainerRequest';
 import ContainerResponse from '../model/ContainerResponse';
 import ContainerResponseList from '../model/ContainerResponseList';
 import DeployAllRequest from '../model/DeployAllRequest';
 import EnvironmentContainersCurrentScaleResponseList from '../model/EnvironmentContainersCurrentScaleResponseList';
 import EnvironmentContainersStorageResponseList from '../model/EnvironmentContainersStorageResponseList';
-import GetEnvironmentContainerCurrentInstance200Response from '../model/GetEnvironmentContainerCurrentInstance200Response';
+import PreviewContainerEnvironmentsRequest from '../model/PreviewContainerEnvironmentsRequest';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
 import Status from '../model/Status';
 
@@ -41,6 +42,52 @@ export default class ContainersApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the autoDeployContainerEnvironments operation.
+     * @callback module:api/ContainersApi~autoDeployContainerEnvironmentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * NOT YET IMPLEMENTED - Auto deploy containers
+     * Triggers a new container deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the container should have the same image name and a different tag 
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AutoDeployContainerEnvironmentsRequest} opts.autoDeployContainerEnvironmentsRequest 
+     * @param {module:api/ContainersApi~autoDeployContainerEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    autoDeployContainerEnvironments(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['autoDeployContainerEnvironmentsRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling autoDeployContainerEnvironments");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/container/deploy', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the createContainer operation.
@@ -128,48 +175,6 @@ export default class ContainersApi {
       let returnType = Status;
       return this.apiClient.callApi(
         '/environment/{environmentId}/container/deploy', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEnvironmentContainerCurrentInstance operation.
-     * @callback module:api/ContainersApi~getEnvironmentContainerCurrentInstanceCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/GetEnvironmentContainerCurrentInstance200Response} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List running instances with CPU and RAM usage for each container
-     * @param {String} environmentId Environment ID
-     * @param {module:api/ContainersApi~getEnvironmentContainerCurrentInstanceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetEnvironmentContainerCurrentInstance200Response}
-     */
-    getEnvironmentContainerCurrentInstance(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentContainerCurrentInstance");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = GetEnvironmentContainerCurrentInstance200Response;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/container/instance', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -344,6 +349,52 @@ export default class ContainersApi {
       let returnType = ContainerResponseList;
       return this.apiClient.callApi(
         '/environment/{environmentId}/container', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the previewContainerEnvironments operation.
+     * @callback module:api/ContainersApi~previewContainerEnvironmentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * NOT YET IMPLEMENTED - Preview container environments
+     * Triggers a new container preview for each environment matching the following conditions - preview environment feature should be enabled for the container - the container should have the same image name and a different tag 
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/PreviewContainerEnvironmentsRequest} opts.previewContainerEnvironmentsRequest 
+     * @param {module:api/ContainersApi~previewContainerEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    previewContainerEnvironments(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['previewContainerEnvironmentsRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling previewContainerEnvironments");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/container/preview', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -34,6 +34,7 @@ import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
 import ApplicationStorage from './model/ApplicationStorage';
 import ApplicationStorageStorageInner from './model/ApplicationStorageStorageInner';
+import AutoDeployContainerEnvironmentsRequest from './model/AutoDeployContainerEnvironmentsRequest';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import Backup from './model/Backup';
@@ -101,9 +102,6 @@ import ContainerAdvancedSettings from './model/ContainerAdvancedSettings';
 import ContainerCurrentScale from './model/ContainerCurrentScale';
 import ContainerDependencyRequest from './model/ContainerDependencyRequest';
 import ContainerDeployRequest from './model/ContainerDeployRequest';
-import ContainerDeploymentRestriction from './model/ContainerDeploymentRestriction';
-import ContainerDeploymentRestrictionRequest from './model/ContainerDeploymentRestrictionRequest';
-import ContainerDeploymentRestrictionResponseList from './model/ContainerDeploymentRestrictionResponseList';
 import ContainerEditRequest from './model/ContainerEditRequest';
 import ContainerEditRequestAllOf from './model/ContainerEditRequestAllOf';
 import ContainerNetwork from './model/ContainerNetwork';
@@ -173,6 +171,7 @@ import EnvironmentAllOfCloudProvider from './model/EnvironmentAllOfCloudProvider
 import EnvironmentApplicationsCurrentScale from './model/EnvironmentApplicationsCurrentScale';
 import EnvironmentApplicationsCurrentScaleResponseList from './model/EnvironmentApplicationsCurrentScaleResponseList';
 import EnvironmentApplicationsInstanceResponseList from './model/EnvironmentApplicationsInstanceResponseList';
+import EnvironmentApplicationsInstanceResponseListResultsInner from './model/EnvironmentApplicationsInstanceResponseListResultsInner';
 import EnvironmentApplicationsStorage from './model/EnvironmentApplicationsStorage';
 import EnvironmentApplicationsStorageResponseList from './model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguage from './model/EnvironmentApplicationsSupportedLanguage';
@@ -218,9 +217,6 @@ import EventPaginatedResponseList from './model/EventPaginatedResponseList';
 import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListAllOf';
 import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
-import GetContainerTags200Response from './model/GetContainerTags200Response';
-import GetEnvironmentContainerCurrentInstance200Response from './model/GetEnvironmentContainerCurrentInstance200Response';
-import GetEnvironmentContainerCurrentInstance200ResponseResultsInner from './model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
 import GitProviderEnum from './model/GitProviderEnum';
@@ -248,6 +244,10 @@ import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import LinkedServiceTypeEnum from './model/LinkedServiceTypeEnum';
 import ListClusterLogs200Response from './model/ListClusterLogs200Response';
+import ListContainerDeploymentHistory200Response from './model/ListContainerDeploymentHistory200Response';
+import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
+import ListContainerDeploymentHistory200ResponseAllOfResultsInner from './model/ListContainerDeploymentHistory200ResponseAllOfResultsInner';
+import ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf from './model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf';
 import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
@@ -308,6 +308,7 @@ import PaginationData from './model/PaginationData';
 import PaidUsage from './model/PaidUsage';
 import PlanEnum from './model/PlanEnum';
 import PortProtocolEnum from './model/PortProtocolEnum';
+import PreviewContainerEnvironmentsRequest from './model/PreviewContainerEnvironmentsRequest';
 import Project from './model/Project';
 import ProjectAllOf from './model/ProjectAllOf';
 import ProjectCurrentCost from './model/ProjectCurrentCost';
@@ -394,9 +395,8 @@ import ContainerConfigurationApi from './api/ContainerConfigurationApi';
 import ContainerCustomDomainApi from './api/ContainerCustomDomainApi';
 import ContainerDatabaseApi from './api/ContainerDatabaseApi';
 import ContainerDependencyApi from './api/ContainerDependencyApi';
-import ContainerDeploymentRestrictionApi from './api/ContainerDeploymentRestrictionApi';
+import ContainerDeploymentHistoryApi from './api/ContainerDeploymentHistoryApi';
 import ContainerEnvironmentVariableApi from './api/ContainerEnvironmentVariableApi';
-import ContainerEventApi from './api/ContainerEventApi';
 import ContainerLogsApi from './api/ContainerLogsApi';
 import ContainerMainCallsApi from './api/ContainerMainCallsApi';
 import ContainerMetricsApi from './api/ContainerMetricsApi';
@@ -601,6 +601,12 @@ export {
      * @property {module:model/ApplicationStorageStorageInner}
      */
     ApplicationStorageStorageInner,
+
+    /**
+     * The AutoDeployContainerEnvironmentsRequest model constructor.
+     * @property {module:model/AutoDeployContainerEnvironmentsRequest}
+     */
+    AutoDeployContainerEnvironmentsRequest,
 
     /**
      * The AvailableContainerRegistryResponse model constructor.
@@ -1003,24 +1009,6 @@ export {
      * @property {module:model/ContainerDeployRequest}
      */
     ContainerDeployRequest,
-
-    /**
-     * The ContainerDeploymentRestriction model constructor.
-     * @property {module:model/ContainerDeploymentRestriction}
-     */
-    ContainerDeploymentRestriction,
-
-    /**
-     * The ContainerDeploymentRestrictionRequest model constructor.
-     * @property {module:model/ContainerDeploymentRestrictionRequest}
-     */
-    ContainerDeploymentRestrictionRequest,
-
-    /**
-     * The ContainerDeploymentRestrictionResponseList model constructor.
-     * @property {module:model/ContainerDeploymentRestrictionResponseList}
-     */
-    ContainerDeploymentRestrictionResponseList,
 
     /**
      * The ContainerEditRequest model constructor.
@@ -1437,6 +1425,12 @@ export {
     EnvironmentApplicationsInstanceResponseList,
 
     /**
+     * The EnvironmentApplicationsInstanceResponseListResultsInner model constructor.
+     * @property {module:model/EnvironmentApplicationsInstanceResponseListResultsInner}
+     */
+    EnvironmentApplicationsInstanceResponseListResultsInner,
+
+    /**
      * The EnvironmentApplicationsStorage model constructor.
      * @property {module:model/EnvironmentApplicationsStorage}
      */
@@ -1707,24 +1701,6 @@ export {
     GenericObjectCurrentCost,
 
     /**
-     * The GetContainerTags200Response model constructor.
-     * @property {module:model/GetContainerTags200Response}
-     */
-    GetContainerTags200Response,
-
-    /**
-     * The GetEnvironmentContainerCurrentInstance200Response model constructor.
-     * @property {module:model/GetEnvironmentContainerCurrentInstance200Response}
-     */
-    GetEnvironmentContainerCurrentInstance200Response,
-
-    /**
-     * The GetEnvironmentContainerCurrentInstance200ResponseResultsInner model constructor.
-     * @property {module:model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner}
-     */
-    GetEnvironmentContainerCurrentInstance200ResponseResultsInner,
-
-    /**
      * The GitAuthProvider model constructor.
      * @property {module:model/GitAuthProvider}
      */
@@ -1885,6 +1861,30 @@ export {
      * @property {module:model/ListClusterLogs200Response}
      */
     ListClusterLogs200Response,
+
+    /**
+     * The ListContainerDeploymentHistory200Response model constructor.
+     * @property {module:model/ListContainerDeploymentHistory200Response}
+     */
+    ListContainerDeploymentHistory200Response,
+
+    /**
+     * The ListContainerDeploymentHistory200ResponseAllOf model constructor.
+     * @property {module:model/ListContainerDeploymentHistory200ResponseAllOf}
+     */
+    ListContainerDeploymentHistory200ResponseAllOf,
+
+    /**
+     * The ListContainerDeploymentHistory200ResponseAllOfResultsInner model constructor.
+     * @property {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner}
+     */
+    ListContainerDeploymentHistory200ResponseAllOfResultsInner,
+
+    /**
+     * The ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf model constructor.
+     * @property {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf}
+     */
+    ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf,
 
     /**
      * The ListContainerRegistry200Response model constructor.
@@ -2245,6 +2245,12 @@ export {
      * @property {module:model/PortProtocolEnum}
      */
     PortProtocolEnum,
+
+    /**
+     * The PreviewContainerEnvironmentsRequest model constructor.
+     * @property {module:model/PreviewContainerEnvironmentsRequest}
+     */
+    PreviewContainerEnvironmentsRequest,
 
     /**
      * The Project model constructor.
@@ -2763,22 +2769,16 @@ export {
     ContainerDependencyApi,
 
     /**
-    * The ContainerDeploymentRestrictionApi service constructor.
-    * @property {module:api/ContainerDeploymentRestrictionApi}
+    * The ContainerDeploymentHistoryApi service constructor.
+    * @property {module:api/ContainerDeploymentHistoryApi}
     */
-    ContainerDeploymentRestrictionApi,
+    ContainerDeploymentHistoryApi,
 
     /**
     * The ContainerEnvironmentVariableApi service constructor.
     * @property {module:api/ContainerEnvironmentVariableApi}
     */
     ContainerEnvironmentVariableApi,
-
-    /**
-    * The ContainerEventApi service constructor.
-    * @property {module:api/ContainerEventApi}
-    */
-    ContainerEventApi,
 
     /**
     * The ContainerLogsApi service constructor.

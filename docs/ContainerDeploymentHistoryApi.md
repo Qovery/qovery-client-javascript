@@ -1,20 +1,20 @@
-# QoveryApi.ContainerEventApi
+# QoveryApi.ContainerDeploymentHistoryApi
 
 All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listContainerEvent**](ContainerEventApi.md#listContainerEvent) | **GET** /container/{containerId}/event | NOT YET IMPLEMENTED - List container events
+[**listContainerDeploymentHistory**](ContainerDeploymentHistoryApi.md#listContainerDeploymentHistory) | **GET** /container/{containerId}/deploymentHistory | NOT YET IMPLEMENTED - List container deployments
 
 
 
-## listContainerEvent
+## listContainerDeploymentHistory
 
-> EventPaginatedResponseList listContainerEvent(containerId, opts)
+> ListContainerDeploymentHistory200Response listContainerDeploymentHistory(containerId)
 
-NOT YET IMPLEMENTED - List container events
+NOT YET IMPLEMENTED - List container deployments
 
-By default it returns the 20 last results. The response is paginated. In order to request the next page, you can use the startId query parameter
+Returns the 20 last container deployments
 
 ### Example
 
@@ -25,12 +25,9 @@ let defaultClient = QoveryApi.ApiClient.instance;
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new QoveryApi.ContainerEventApi();
+let apiInstance = new QoveryApi.ContainerDeploymentHistoryApi();
 let containerId = "containerId_example"; // String | Container ID
-let opts = {
-  'startId': "startId_example" // String | Starting point after which to return results
-};
-apiInstance.listContainerEvent(containerId, opts, (error, data, response) => {
+apiInstance.listContainerDeploymentHistory(containerId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -45,11 +42,10 @@ apiInstance.listContainerEvent(containerId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **containerId** | **String**| Container ID | 
- **startId** | **String**| Starting point after which to return results | [optional] 
 
 ### Return type
 
-[**EventPaginatedResponseList**](EventPaginatedResponseList.md)
+[**ListContainerDeploymentHistory200Response**](ListContainerDeploymentHistory200Response.md)
 
 ### Authorization
 

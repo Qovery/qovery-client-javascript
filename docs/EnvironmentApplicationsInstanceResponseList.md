@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[GetEnvironmentContainerCurrentInstance200ResponseResultsInner]**](GetEnvironmentContainerCurrentInstance200ResponseResultsInner.md) |  | [optional] 
+**results** | [**[EnvironmentApplicationsInstanceResponseListResultsInner]**](EnvironmentApplicationsInstanceResponseListResultsInner.md) |  | [optional] 
 
 

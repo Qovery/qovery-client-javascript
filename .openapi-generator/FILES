@@ -37,6 +37,7 @@ docs/ApplicationSecretApi.md
 docs/ApplicationStorage.md
 docs/ApplicationStorageStorageInner.md
 docs/ApplicationsApi.md
+docs/AutoDeployContainerEnvironmentsRequest.md
 docs/AvailableContainerRegistryResponse.md
 docs/AwsCredentialsRequest.md
 docs/Backup.md
@@ -114,14 +115,10 @@ docs/ContainerDatabaseApi.md
 docs/ContainerDependencyApi.md
 docs/ContainerDependencyRequest.md
 docs/ContainerDeployRequest.md
-docs/ContainerDeploymentRestriction.md
-docs/ContainerDeploymentRestrictionApi.md
-docs/ContainerDeploymentRestrictionRequest.md
-docs/ContainerDeploymentRestrictionResponseList.md
+docs/ContainerDeploymentHistoryApi.md
 docs/ContainerEditRequest.md
 docs/ContainerEditRequestAllOf.md
 docs/ContainerEnvironmentVariableApi.md
-docs/ContainerEventApi.md
 docs/ContainerLogsApi.md
 docs/ContainerMainCallsApi.md
 docs/ContainerMetricsApi.md
@@ -206,6 +203,7 @@ docs/EnvironmentAllOfCloudProvider.md
 docs/EnvironmentApplicationsCurrentScale.md
 docs/EnvironmentApplicationsCurrentScaleResponseList.md
 docs/EnvironmentApplicationsInstanceResponseList.md
+docs/EnvironmentApplicationsInstanceResponseListResultsInner.md
 docs/EnvironmentApplicationsStorage.md
 docs/EnvironmentApplicationsStorageResponseList.md
 docs/EnvironmentApplicationsSupportedLanguage.md
@@ -258,9 +256,6 @@ docs/EventPaginatedResponseList.md
 docs/EventPaginatedResponseListAllOf.md
 docs/EventResponseList.md
 docs/GenericObjectCurrentCost.md
-docs/GetContainerTags200Response.md
-docs/GetEnvironmentContainerCurrentInstance200Response.md
-docs/GetEnvironmentContainerCurrentInstance200ResponseResultsInner.md
 docs/GitAuthProvider.md
 docs/GitAuthProviderResponseList.md
 docs/GitProviderEnum.md
@@ -290,6 +285,10 @@ docs/Link.md
 docs/LinkResponseList.md
 docs/LinkedServiceTypeEnum.md
 docs/ListClusterLogs200Response.md
+docs/ListContainerDeploymentHistory200Response.md
+docs/ListContainerDeploymentHistory200ResponseAllOf.md
+docs/ListContainerDeploymentHistory200ResponseAllOfResultsInner.md
+docs/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.md
 docs/ListContainerRegistry200Response.md
 docs/ListDatabaseDeploymentHistory200Response.md
 docs/ListDatabaseDeploymentHistory200ResponseAllOf.md
@@ -356,6 +355,7 @@ docs/PaginationData.md
 docs/PaidUsage.md
 docs/PlanEnum.md
 docs/PortProtocolEnum.md
+docs/PreviewContainerEnvironmentsRequest.md
 docs/Project.md
 docs/ProjectAllOf.md
 docs/ProjectCurrentCost.md
@@ -453,9 +453,8 @@ src/api/ContainerConfigurationApi.js
 src/api/ContainerCustomDomainApi.js
 src/api/ContainerDatabaseApi.js
 src/api/ContainerDependencyApi.js
-src/api/ContainerDeploymentRestrictionApi.js
+src/api/ContainerDeploymentHistoryApi.js
 src/api/ContainerEnvironmentVariableApi.js
-src/api/ContainerEventApi.js
 src/api/ContainerLogsApi.js
 src/api/ContainerMainCallsApi.js
 src/api/ContainerMetricsApi.js
@@ -517,6 +516,7 @@ src/model/ApplicationRequestAllOf.js
 src/model/ApplicationResponseList.js
 src/model/ApplicationStorage.js
 src/model/ApplicationStorageStorageInner.js
+src/model/AutoDeployContainerEnvironmentsRequest.js
 src/model/AvailableContainerRegistryResponse.js
 src/model/AwsCredentialsRequest.js
 src/model/Backup.js
@@ -584,9 +584,6 @@ src/model/ContainerAdvancedSettings.js
 src/model/ContainerCurrentScale.js
 src/model/ContainerDependencyRequest.js
 src/model/ContainerDeployRequest.js
-src/model/ContainerDeploymentRestriction.js
-src/model/ContainerDeploymentRestrictionRequest.js
-src/model/ContainerDeploymentRestrictionResponseList.js
 src/model/ContainerEditRequest.js
 src/model/ContainerEditRequestAllOf.js
 src/model/ContainerNetwork.js
@@ -656,6 +653,7 @@ src/model/EnvironmentAllOfCloudProvider.js
 src/model/EnvironmentApplicationsCurrentScale.js
 src/model/EnvironmentApplicationsCurrentScaleResponseList.js
 src/model/EnvironmentApplicationsInstanceResponseList.js
+src/model/EnvironmentApplicationsInstanceResponseListResultsInner.js
 src/model/EnvironmentApplicationsStorage.js
 src/model/EnvironmentApplicationsStorageResponseList.js
 src/model/EnvironmentApplicationsSupportedLanguage.js
@@ -701,9 +699,6 @@ src/model/EventPaginatedResponseList.js
 src/model/EventPaginatedResponseListAllOf.js
 src/model/EventResponseList.js
 src/model/GenericObjectCurrentCost.js
-src/model/GetContainerTags200Response.js
-src/model/GetEnvironmentContainerCurrentInstance200Response.js
-src/model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner.js
 src/model/GitAuthProvider.js
 src/model/GitAuthProviderResponseList.js
 src/model/GitProviderEnum.js
@@ -731,6 +726,10 @@ src/model/Link.js
 src/model/LinkResponseList.js
 src/model/LinkedServiceTypeEnum.js
 src/model/ListClusterLogs200Response.js
+src/model/ListContainerDeploymentHistory200Response.js
+src/model/ListContainerDeploymentHistory200ResponseAllOf.js
+src/model/ListContainerDeploymentHistory200ResponseAllOfResultsInner.js
+src/model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.js
 src/model/ListContainerRegistry200Response.js
 src/model/ListDatabaseDeploymentHistory200Response.js
 src/model/ListDatabaseDeploymentHistory200ResponseAllOf.js
@@ -791,6 +790,7 @@ src/model/PaginationData.js
 src/model/PaidUsage.js
 src/model/PlanEnum.js
 src/model/PortProtocolEnum.js
+src/model/PreviewContainerEnvironmentsRequest.js
 src/model/Project.js
 src/model/ProjectAllOf.js
 src/model/ProjectCurrentCost.js
@@ -877,9 +877,8 @@ test/api/ContainerConfigurationApi.spec.js
 test/api/ContainerCustomDomainApi.spec.js
 test/api/ContainerDatabaseApi.spec.js
 test/api/ContainerDependencyApi.spec.js
-test/api/ContainerDeploymentRestrictionApi.spec.js
+test/api/ContainerDeploymentHistoryApi.spec.js
 test/api/ContainerEnvironmentVariableApi.spec.js
-test/api/ContainerEventApi.spec.js
 test/api/ContainerLogsApi.spec.js
 test/api/ContainerMainCallsApi.spec.js
 test/api/ContainerMetricsApi.spec.js
@@ -940,6 +939,7 @@ test/model/ApplicationRequestAllOf.spec.js
 test/model/ApplicationResponseList.spec.js
 test/model/ApplicationStorage.spec.js
 test/model/ApplicationStorageStorageInner.spec.js
+test/model/AutoDeployContainerEnvironmentsRequest.spec.js
 test/model/AvailableContainerRegistryResponse.spec.js
 test/model/AwsCredentialsRequest.spec.js
 test/model/Backup.spec.js
@@ -1007,9 +1007,6 @@ test/model/ContainerAdvancedSettings.spec.js
 test/model/ContainerCurrentScale.spec.js
 test/model/ContainerDependencyRequest.spec.js
 test/model/ContainerDeployRequest.spec.js
-test/model/ContainerDeploymentRestriction.spec.js
-test/model/ContainerDeploymentRestrictionRequest.spec.js
-test/model/ContainerDeploymentRestrictionResponseList.spec.js
 test/model/ContainerEditRequest.spec.js
 test/model/ContainerEditRequestAllOf.spec.js
 test/model/ContainerNetwork.spec.js
@@ -1079,6 +1076,7 @@ test/model/EnvironmentAllOfCloudProvider.spec.js
 test/model/EnvironmentApplicationsCurrentScale.spec.js
 test/model/EnvironmentApplicationsCurrentScaleResponseList.spec.js
 test/model/EnvironmentApplicationsInstanceResponseList.spec.js
+test/model/EnvironmentApplicationsInstanceResponseListResultsInner.spec.js
 test/model/EnvironmentApplicationsStorage.spec.js
 test/model/EnvironmentApplicationsStorageResponseList.spec.js
 test/model/EnvironmentApplicationsSupportedLanguage.spec.js
@@ -1124,9 +1122,6 @@ test/model/EventPaginatedResponseList.spec.js
 test/model/EventPaginatedResponseListAllOf.spec.js
 test/model/EventResponseList.spec.js
 test/model/GenericObjectCurrentCost.spec.js
-test/model/GetContainerTags200Response.spec.js
-test/model/GetEnvironmentContainerCurrentInstance200Response.spec.js
-test/model/GetEnvironmentContainerCurrentInstance200ResponseResultsInner.spec.js
 test/model/GitAuthProvider.spec.js
 test/model/GitAuthProviderResponseList.spec.js
 test/model/GitProviderEnum.spec.js
@@ -1154,6 +1149,10 @@ test/model/Link.spec.js
 test/model/LinkResponseList.spec.js
 test/model/LinkedServiceTypeEnum.spec.js
 test/model/ListClusterLogs200Response.spec.js
+test/model/ListContainerDeploymentHistory200Response.spec.js
+test/model/ListContainerDeploymentHistory200ResponseAllOf.spec.js
+test/model/ListContainerDeploymentHistory200ResponseAllOfResultsInner.spec.js
+test/model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.spec.js
 test/model/ListContainerRegistry200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200ResponseAllOf.spec.js
@@ -1214,6 +1213,7 @@ test/model/PaginationData.spec.js
 test/model/PaidUsage.spec.js
 test/model/PlanEnum.spec.js
 test/model/PortProtocolEnum.spec.js
+test/model/PreviewContainerEnvironmentsRequest.spec.js
 test/model/Project.spec.js
 test/model/ProjectAllOf.spec.js
 test/model/ProjectCurrentCost.spec.js

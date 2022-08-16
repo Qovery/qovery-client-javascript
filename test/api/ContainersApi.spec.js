@@ -48,6 +48,16 @@
   }
 
   describe('ContainersApi', function() {
+    describe('autoDeployContainerEnvironments', function() {
+      it('should call autoDeployContainerEnvironments successfully', function(done) {
+        //uncomment below and update the code to test autoDeployContainerEnvironments
+        //instance.autoDeployContainerEnvironments(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createContainer', function() {
       it('should call createContainer successfully', function(done) {
         //uncomment below and update the code to test createContainer
@@ -62,16 +72,6 @@
       it('should call deployAllContainers successfully', function(done) {
         //uncomment below and update the code to test deployAllContainers
         //instance.deployAllContainers(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getEnvironmentContainerCurrentInstance', function() {
-      it('should call getEnvironmentContainerCurrentInstance successfully', function(done) {
-        //uncomment below and update the code to test getEnvironmentContainerCurrentInstance
-        //instance.getEnvironmentContainerCurrentInstance(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -112,6 +112,16 @@
       it('should call listContainer successfully', function(done) {
         //uncomment below and update the code to test listContainer
         //instance.listContainer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('previewContainerEnvironments', function() {
+      it('should call previewContainerEnvironments successfully', function(done) {
+        //uncomment below and update the code to test previewContainerEnvironments
+        //instance.previewContainerEnvironments(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -13,18 +13,18 @@
 
 
 import ApiClient from "../ApiClient";
-import EventPaginatedResponseList from '../model/EventPaginatedResponseList';
+import ListContainerDeploymentHistory200Response from '../model/ListContainerDeploymentHistory200Response';
 
 /**
-* ContainerEvent service.
-* @module api/ContainerEventApi
+* ContainerDeploymentHistory service.
+* @module api/ContainerDeploymentHistoryApi
 * @version $(grep 'version' _build/openapi.yaml | head -1 | tr ':' '\n' | tail -1 | tr -d ' ')
 */
-export default class ContainerEventApi {
+export default class ContainerDeploymentHistoryApi {
 
     /**
-    * Constructs a new ContainerEventApi. 
-    * @alias module:api/ContainerEventApi
+    * Constructs a new ContainerDeploymentHistoryApi. 
+    * @alias module:api/ContainerDeploymentHistoryApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
@@ -35,35 +35,31 @@ export default class ContainerEventApi {
 
 
     /**
-     * Callback function to receive the result of the listContainerEvent operation.
-     * @callback module:api/ContainerEventApi~listContainerEventCallback
+     * Callback function to receive the result of the listContainerDeploymentHistory operation.
+     * @callback module:api/ContainerDeploymentHistoryApi~listContainerDeploymentHistoryCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EventPaginatedResponseList} data The data returned by the service call.
+     * @param {module:model/ListContainerDeploymentHistory200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * NOT YET IMPLEMENTED - List container events
-     * By default it returns the 20 last results. The response is paginated. In order to request the next page, you can use the startId query parameter
+     * NOT YET IMPLEMENTED - List container deployments
+     * Returns the 20 last container deployments
      * @param {String} containerId Container ID
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.startId Starting point after which to return results
-     * @param {module:api/ContainerEventApi~listContainerEventCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EventPaginatedResponseList}
+     * @param {module:api/ContainerDeploymentHistoryApi~listContainerDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ListContainerDeploymentHistory200Response}
      */
-    listContainerEvent(containerId, opts, callback) {
-      opts = opts || {};
+    listContainerDeploymentHistory(containerId, callback) {
       let postBody = null;
       // verify the required parameter 'containerId' is set
       if (containerId === undefined || containerId === null) {
-        throw new Error("Missing the required parameter 'containerId' when calling listContainerEvent");
+        throw new Error("Missing the required parameter 'containerId' when calling listContainerDeploymentHistory");
       }
 
       let pathParams = {
         'containerId': containerId
       };
       let queryParams = {
-        'startId': opts['startId']
       };
       let headerParams = {
       };
@@ -73,9 +69,9 @@ export default class ContainerEventApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = EventPaginatedResponseList;
+      let returnType = ListContainerDeploymentHistory200Response;
       return this.apiClient.callApi(
-        '/container/{containerId}/event', 'GET',
+        '/container/{containerId}/deploymentHistory', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -18,7 +18,6 @@ import ApplicationRequest from '../model/ApplicationRequest';
 import ApplicationResponseList from '../model/ApplicationResponseList';
 import DeployAllRequest from '../model/DeployAllRequest';
 import EnvironmentApplicationsCurrentScaleResponseList from '../model/EnvironmentApplicationsCurrentScaleResponseList';
-import EnvironmentApplicationsInstanceResponseList from '../model/EnvironmentApplicationsInstanceResponseList';
 import EnvironmentApplicationsStorageResponseList from '../model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguageList from '../model/EnvironmentApplicationsSupportedLanguageList';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
@@ -129,48 +128,6 @@ export default class ApplicationsApi {
       let returnType = Status;
       return this.apiClient.callApi(
         '/environment/{environmentId}/application/deploy', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEnvironmentApplicationCurrentInstance operation.
-     * @callback module:api/ApplicationsApi~getEnvironmentApplicationCurrentInstanceCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentApplicationsInstanceResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List running instances with CPU and RAM usage for each application
-     * @param {String} environmentId Environment ID
-     * @param {module:api/ApplicationsApi~getEnvironmentApplicationCurrentInstanceCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentApplicationsInstanceResponseList}
-     */
-    getEnvironmentApplicationCurrentInstance(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentApplicationCurrentInstance");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentApplicationsInstanceResponseList;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/application/instance', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

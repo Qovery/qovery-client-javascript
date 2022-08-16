@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ContainerEventApi();
+    instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,25 @@
       object[property] = value;
   }
 
-  describe('ContainerEventApi', function() {
-    describe('listContainerEvent', function() {
-      it('should call listContainerEvent successfully', function(done) {
-        //uncomment below and update the code to test listContainerEvent
-        //instance.listContainerEvent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('PreviewContainerEnvironmentsRequest', function() {
+    it('should create an instance of PreviewContainerEnvironmentsRequest', function() {
+      // uncomment below and update the code to test PreviewContainerEnvironmentsRequest
+      //var instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
+      //expect(instance).to.be.a(QoveryApi.PreviewContainerEnvironmentsRequest);
     });
+
+    it('should have the property imageName (base name: "image_name")', function() {
+      // uncomment below and update the code to test the property imageName
+      //var instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tag (base name: "tag")', function() {
+      // uncomment below and update the code to test the property tag
+      //var instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

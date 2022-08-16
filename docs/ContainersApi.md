@@ -4,14 +4,68 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**autoDeployContainerEnvironments**](ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | NOT YET IMPLEMENTED - Auto deploy containers
 [**createContainer**](ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 [**deployAllContainers**](ContainersApi.md#deployAllContainers) | **POST** /environment/{environmentId}/container/deploy | Deploy containers
-[**getEnvironmentContainerCurrentInstance**](ContainersApi.md#getEnvironmentContainerCurrentInstance) | **GET** /environment/{environmentId}/container/instance | List running instances with CPU and RAM usage for each container
 [**getEnvironmentContainerCurrentScale**](ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
 [**getEnvironmentContainerCurrentStorage**](ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 [**getEnvironmentContainerStatus**](ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
 [**listContainer**](ContainersApi.md#listContainer) | **GET** /environment/{environmentId}/container | List containers
+[**previewContainerEnvironments**](ContainersApi.md#previewContainerEnvironments) | **POST** /organization/{organizationId}/container/preview | NOT YET IMPLEMENTED - Preview container environments
 
+
+
+## autoDeployContainerEnvironments
+
+> Status autoDeployContainerEnvironments(organizationId, opts)
+
+NOT YET IMPLEMENTED - Auto deploy containers
+
+Triggers a new container deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the container should have the same image name and a different tag 
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ContainersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let opts = {
+  'autoDeployContainerEnvironmentsRequest': new QoveryApi.AutoDeployContainerEnvironmentsRequest() // AutoDeployContainerEnvironmentsRequest | 
+};
+apiInstance.autoDeployContainerEnvironments(organizationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **autoDeployContainerEnvironmentsRequest** | [**AutoDeployContainerEnvironmentsRequest**](AutoDeployContainerEnvironmentsRequest.md)|  | [optional] 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## createContainer
@@ -115,53 +169,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## getEnvironmentContainerCurrentInstance
-
-> GetEnvironmentContainerCurrentInstance200Response getEnvironmentContainerCurrentInstance(environmentId)
-
-List running instances with CPU and RAM usage for each container
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.ContainersApi();
-let environmentId = "environmentId_example"; // String | Environment ID
-apiInstance.getEnvironmentContainerCurrentInstance(environmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **environmentId** | **String**| Environment ID | 
-
-### Return type
-
-[**GetEnvironmentContainerCurrentInstance200Response**](GetEnvironmentContainerCurrentInstance200Response.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
@@ -358,5 +365,58 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## previewContainerEnvironments
+
+> Status previewContainerEnvironments(organizationId, opts)
+
+NOT YET IMPLEMENTED - Preview container environments
+
+Triggers a new container preview for each environment matching the following conditions - preview environment feature should be enabled for the container - the container should have the same image name and a different tag 
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ContainersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let opts = {
+  'previewContainerEnvironmentsRequest': new QoveryApi.PreviewContainerEnvironmentsRequest() // PreviewContainerEnvironmentsRequest | 
+};
+apiInstance.previewContainerEnvironments(organizationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **previewContainerEnvironmentsRequest** | [**PreviewContainerEnvironmentsRequest**](PreviewContainerEnvironmentsRequest.md)|  | [optional] 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 

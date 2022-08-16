@@ -68,16 +68,6 @@
         done();
       });
     });
-    describe('getEnvironmentApplicationCurrentInstance', function() {
-      it('should call getEnvironmentApplicationCurrentInstance successfully', function(done) {
-        //uncomment below and update the code to test getEnvironmentApplicationCurrentInstance
-        //instance.getEnvironmentApplicationCurrentInstance(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getEnvironmentApplicationCurrentScale', function() {
       it('should call getEnvironmentApplicationCurrentScale successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentApplicationCurrentScale

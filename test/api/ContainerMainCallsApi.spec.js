@@ -48,30 +48,10 @@
   }
 
   describe('ContainerMainCallsApi', function() {
-    describe('createContainerTag', function() {
-      it('should call createContainerTag successfully', function(done) {
-        //uncomment below and update the code to test createContainerTag
-        //instance.createContainerTag(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('deleteContainer', function() {
       it('should call deleteContainer successfully', function(done) {
         //uncomment below and update the code to test deleteContainer
         //instance.deleteContainer(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteContainerTag', function() {
-      it('should call deleteContainerTag successfully', function(done) {
-        //uncomment below and update the code to test deleteContainerTag
-        //instance.deleteContainerTag(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -108,40 +88,10 @@
         done();
       });
     });
-    describe('getContainerTags', function() {
-      it('should call getContainerTags successfully', function(done) {
-        //uncomment below and update the code to test getContainerTags
-        //instance.getContainerTags(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listContainerContributor', function() {
-      it('should call listContainerContributor successfully', function(done) {
-        //uncomment below and update the code to test listContainerContributor
-        //instance.listContainerContributor(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('listContainerLinks', function() {
       it('should call listContainerLinks successfully', function(done) {
         //uncomment below and update the code to test listContainerLinks
         //instance.listContainerLinks(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listContainerTag', function() {
-      it('should call listContainerTag successfully', function(done) {
-        //uncomment below and update the code to test listContainerTag
-        //instance.listContainerTag(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

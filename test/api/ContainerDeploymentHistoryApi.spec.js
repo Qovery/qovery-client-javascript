@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.GetEnvironmentContainerCurrentInstance200ResponseResultsInner();
+    instance = new QoveryApi.ContainerDeploymentHistoryApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,25 +47,17 @@
       object[property] = value;
   }
 
-  describe('GetEnvironmentContainerCurrentInstance200ResponseResultsInner', function() {
-    it('should create an instance of GetEnvironmentContainerCurrentInstance200ResponseResultsInner', function() {
-      // uncomment below and update the code to test GetEnvironmentContainerCurrentInstance200ResponseResultsInner
-      //var instance = new QoveryApi.GetEnvironmentContainerCurrentInstance200ResponseResultsInner();
-      //expect(instance).to.be.a(QoveryApi.GetEnvironmentContainerCurrentInstance200ResponseResultsInner);
+  describe('ContainerDeploymentHistoryApi', function() {
+    describe('listContainerDeploymentHistory', function() {
+      it('should call listContainerDeploymentHistory successfully', function(done) {
+        //uncomment below and update the code to test listContainerDeploymentHistory
+        //instance.listContainerDeploymentHistory(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property application (base name: "application")', function() {
-      // uncomment below and update the code to test the property application
-      //var instance = new QoveryApi.GetEnvironmentContainerCurrentInstance200ResponseResultsInner();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property instances (base name: "instances")', function() {
-      // uncomment below and update the code to test the property instances
-      //var instance = new QoveryApi.GetEnvironmentContainerCurrentInstance200ResponseResultsInner();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

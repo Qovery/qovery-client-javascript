@@ -25,7 +25,7 @@ class ContainerRegistryRequest {
      * @alias module:model/ContainerRegistryRequest
      * @param name {String} 
      * @param kind {module:model/ContainerRegistryKindEnum} 
-     * @param url {String} URL of the container registry
+     * @param url {String} URL of the container registry.  Must start by 'https://' and for docker_hub should be 'https://docker.io' 
      * @param config {Object.<String, Object>} authentification configuration
      */
     constructor(name, kind, url, config) { 
@@ -94,7 +94,7 @@ ContainerRegistryRequest.prototype['kind'] = undefined;
 ContainerRegistryRequest.prototype['description'] = undefined;
 
 /**
- * URL of the container registry
+ * URL of the container registry.  Must start by 'https://' and for docker_hub should be 'https://docker.io' 
  * @member {String} url
  */
 ContainerRegistryRequest.prototype['url'] = undefined;

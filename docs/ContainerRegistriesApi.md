@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createContainerRegistry**](ContainerRegistriesApi.md#createContainerRegistry) | **POST** /organization/{organizationId}/containerRegistry | Create a container registry
 [**deleteContainerRegistry**](ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | NOT YET IMPLEMENTED - Delete a container registry
-[**listAvailableContainerRegistry**](ContainerRegistriesApi.md#listAvailableContainerRegistry) | **GET** /organization/{organizationId}/availableContainerRegistry | List supported container registries
+[**listAvailableContainerRegistry**](ContainerRegistriesApi.md#listAvailableContainerRegistry) | **GET** /availableContainerRegistry | List supported container registries
 [**listContainerRegistry**](ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | NOT YET IMPLEMENTED - List organization container registries
 
 
@@ -111,7 +111,7 @@ null (empty response body)
 
 ## listAvailableContainerRegistry
 
-> AvailableContainerRegistryResponse listAvailableContainerRegistry(organizationId)
+> AvailableContainerRegistryResponse listAvailableContainerRegistry()
 
 List supported container registries
 
@@ -127,8 +127,7 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ContainerRegistriesApi();
-let organizationId = "organizationId_example"; // String | Organization ID
-apiInstance.listAvailableContainerRegistry(organizationId, (error, data, response) => {
+apiInstance.listAvailableContainerRegistry((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -139,10 +138,7 @@ apiInstance.listAvailableContainerRegistry(organizationId, (error, data, respons
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organizationId** | **String**| Organization ID | 
+This endpoint does not need any parameter.
 
 ### Return type
 

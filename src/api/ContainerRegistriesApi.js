@@ -134,19 +134,13 @@ export default class ContainerRegistriesApi {
     /**
      * List supported container registries
      * List supported container registries by Qovery and get the mandatory authentification configuration.
-     * @param {String} organizationId Organization ID
      * @param {module:api/ContainerRegistriesApi~listAvailableContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AvailableContainerRegistryResponse}
      */
-    listAvailableContainerRegistry(organizationId, callback) {
+    listAvailableContainerRegistry(callback) {
       let postBody = null;
-      // verify the required parameter 'organizationId' is set
-      if (organizationId === undefined || organizationId === null) {
-        throw new Error("Missing the required parameter 'organizationId' when calling listAvailableContainerRegistry");
-      }
 
       let pathParams = {
-        'organizationId': organizationId
       };
       let queryParams = {
       };
@@ -160,7 +154,7 @@ export default class ContainerRegistriesApi {
       let accepts = ['application/json'];
       let returnType = AvailableContainerRegistryResponse;
       return this.apiClient.callApi(
-        '/organization/{organizationId}/availableContainerRegistry', 'GET',
+        '/availableContainerRegistry', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

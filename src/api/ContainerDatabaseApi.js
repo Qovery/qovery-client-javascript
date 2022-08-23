@@ -44,7 +44,7 @@ export default class ContainerDatabaseApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Link a logical database to the container
+     * Link a logical database to the container
      * @param {String} containerId Container ID
      * @param {String} targetLogicalDatabaseId Target database ID
      * @param {module:api/ContainerDatabaseApi~attachLogicalDatabaseToContainerCallback} callback The callback function, accepting three arguments: error, data, response
@@ -92,7 +92,7 @@ export default class ContainerDatabaseApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - List linked logical databases
+     * List linked logical databases
      * @param {String} containerId Container ID
      * @param {module:api/ContainerDatabaseApi~listContainerLogicalDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/LogicalDatabaseResponseList}
@@ -134,7 +134,7 @@ export default class ContainerDatabaseApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Remove logical database link to this container.
+     * Remove logical database link to this container.
      * @param {String} containerId Container ID
      * @param {String} targetLogicalDatabaseId Target database ID
      * @param {module:api/ContainerDatabaseApi~removeLogicalDatabaseFromContainerCallback} callback The callback function, accepting three arguments: error, data, response

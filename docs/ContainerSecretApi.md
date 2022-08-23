@@ -4,11 +4,11 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createContainerSecret**](ContainerSecretApi.md#createContainerSecret) | **POST** /container/{containerId}/secret | NOT YET IMPLEMENTED - Add a secret to the container
-[**createContainerSecretAlias**](ContainerSecretApi.md#createContainerSecretAlias) | **POST** /container/{containerId}/secret/{secretId}/alias | NOT YET IMPLEMENTED - Create a secret alias at the container level
-[**deleteContainerSecret**](ContainerSecretApi.md#deleteContainerSecret) | **DELETE** /container/{containerId}/secret/{secretId} | NOT YET IMPLEMENTED - Delete a secret from an container
-[**editContainerSecret**](ContainerSecretApi.md#editContainerSecret) | **PUT** /container/{containerId}/secret/{secretId} | NOT YET IMPLEMENTED - Edit a secret belonging to the container
-[**listContainerSecrets**](ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | NOT YET IMPLEMENTED - List container secrets
+[**createContainerSecret**](ContainerSecretApi.md#createContainerSecret) | **POST** /container/{containerId}/secret | Add a secret to the container
+[**createContainerSecretAlias**](ContainerSecretApi.md#createContainerSecretAlias) | **POST** /container/{containerId}/secret/{secretId}/alias | Create a secret alias at the container level
+[**deleteContainerSecret**](ContainerSecretApi.md#deleteContainerSecret) | **DELETE** /container/{containerId}/secret/{secretId} | Delete a secret from an container
+[**editContainerSecret**](ContainerSecretApi.md#editContainerSecret) | **PUT** /container/{containerId}/secret/{secretId} | Edit a secret belonging to the container
+[**listContainerSecrets**](ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets
 
 
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 > Secret createContainerSecret(containerId, opts)
 
-NOT YET IMPLEMENTED - Add a secret to the container
+Add a secret to the container
 
 - Add a secret to the container. 
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 > Secret createContainerSecretAlias(containerId, secretId, opts)
 
-NOT YET IMPLEMENTED - Create a secret alias at the container level
+Create a secret alias at the container level
 
 - Allows you to add an alias at container level on an existing secret having higher scope, in order to customize its key. - You only have to specify a key in the request body - The system will create a new secret at container level with the same value as the one corresponding to the secret id in the path - The response body will contain the newly created secret - Information regarding the aliased_secret will be exposed in the \&quot;aliased_secret\&quot; field of the newly created secret - Only 1 alias level is allowed. You can&#39;t create an alias on an alias 
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 
 > deleteContainerSecret(containerId, secretId)
 
-NOT YET IMPLEMENTED - Delete a secret from an container
+Delete a secret from an container
 
 - To delete a secret you must have the project user permission - You can&#39;t delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well 
 
@@ -175,7 +175,7 @@ null (empty response body)
 
 > Secret editContainerSecret(containerId, secretId, secretEditRequest)
 
-NOT YET IMPLEMENTED - Edit a secret belonging to the container
+Edit a secret belonging to the container
 
 - You can&#39;t edit a BUILT_IN secret - For an override, you can&#39;t edit the key - For an alias, you can&#39;t edit the value - An override can only have a scope lower to the secret it is overriding (hierarchy is BUILT_IN &gt; PROJECT &gt; ENVIRONMENT &gt; CONTAINER) 
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 > SecretResponseList listContainerSecrets(containerId)
 
-NOT YET IMPLEMENTED - List container secrets
+List container secrets
 
 Secrets are like environment variables, but they are secured and can&#39;t be revealed.
 

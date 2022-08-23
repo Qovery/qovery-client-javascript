@@ -4,7 +4,7 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listContainerDeploymentHistory**](ContainerDeploymentHistoryApi.md#listContainerDeploymentHistory) | **GET** /container/{containerId}/deploymentHistory | NOT YET IMPLEMENTED - List container deployments
+[**listContainerDeploymentHistory**](ContainerDeploymentHistoryApi.md#listContainerDeploymentHistory) | **GET** /container/{containerId}/deploymentHistory | List container deployments
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > ListContainerDeploymentHistory200Response listContainerDeploymentHistory(containerId)
 
-NOT YET IMPLEMENTED - List container deployments
+List container deployments
 
 Returns the 20 last container deployments
 

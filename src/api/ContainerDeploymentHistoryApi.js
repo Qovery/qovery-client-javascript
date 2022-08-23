@@ -43,7 +43,7 @@ export default class ContainerDeploymentHistoryApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - List container deployments
+     * List container deployments
      * Returns the 20 last container deployments
      * @param {String} containerId Container ID
      * @param {module:api/ContainerDeploymentHistoryApi~listContainerDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response

@@ -4,9 +4,9 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**attachLogicalDatabaseToContainer**](ContainerDatabaseApi.md#attachLogicalDatabaseToContainer) | **POST** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | NOT YET IMPLEMENTED - Link a logical database to the container
-[**listContainerLogicalDatabase**](ContainerDatabaseApi.md#listContainerLogicalDatabase) | **GET** /container/{containerId}/logicalDatabase | NOT YET IMPLEMENTED - List linked logical databases
-[**removeLogicalDatabaseFromContainer**](ContainerDatabaseApi.md#removeLogicalDatabaseFromContainer) | **DELETE** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | NOT YET IMPLEMENTED - Remove logical database link to this container.
+[**attachLogicalDatabaseToContainer**](ContainerDatabaseApi.md#attachLogicalDatabaseToContainer) | **POST** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | Link a logical database to the container
+[**listContainerLogicalDatabase**](ContainerDatabaseApi.md#listContainerLogicalDatabase) | **GET** /container/{containerId}/logicalDatabase | List linked logical databases
+[**removeLogicalDatabaseFromContainer**](ContainerDatabaseApi.md#removeLogicalDatabaseFromContainer) | **DELETE** /container/{containerId}/logicalDatabase/{targetLogicalDatabaseId} | Remove logical database link to this container.
 
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 > LogicalDatabase attachLogicalDatabaseToContainer(containerId, targetLogicalDatabaseId)
 
-NOT YET IMPLEMENTED - Link a logical database to the container
+Link a logical database to the container
 
 ### Example
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 > LogicalDatabaseResponseList listContainerLogicalDatabase(containerId)
 
-NOT YET IMPLEMENTED - List linked logical databases
+List linked logical databases
 
 ### Example
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 > removeLogicalDatabaseFromContainer(containerId, targetLogicalDatabaseId)
 
-NOT YET IMPLEMENTED - Remove logical database link to this container.
+Remove logical database link to this container.
 
 ### Example
 

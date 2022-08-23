@@ -4,14 +4,14 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**autoDeployContainerEnvironments**](ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | NOT YET IMPLEMENTED - Auto deploy containers
+[**autoDeployContainerEnvironments**](ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 [**createContainer**](ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 [**deployAllContainers**](ContainersApi.md#deployAllContainers) | **POST** /environment/{environmentId}/container/deploy | Deploy containers
 [**getEnvironmentContainerCurrentScale**](ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
 [**getEnvironmentContainerCurrentStorage**](ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 [**getEnvironmentContainerStatus**](ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
 [**listContainer**](ContainersApi.md#listContainer) | **GET** /environment/{environmentId}/container | List containers
-[**previewContainerEnvironments**](ContainersApi.md#previewContainerEnvironments) | **POST** /organization/{organizationId}/container/preview | NOT YET IMPLEMENTED - Preview container environments
+[**previewContainerEnvironments**](ContainersApi.md#previewContainerEnvironments) | **POST** /organization/{organizationId}/container/preview | Preview container environments
 
 
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 > Status autoDeployContainerEnvironments(organizationId, opts)
 
-NOT YET IMPLEMENTED - Auto deploy containers
+Auto deploy containers
 
 Triggers a new container deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the container should have the same image name and a different tag 
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 > Status previewContainerEnvironments(organizationId, opts)
 
-NOT YET IMPLEMENTED - Preview container environments
+Preview container environments
 
 Triggers a new container preview for each environment matching the following conditions - preview environment feature should be enabled for the container - the container should have the same image name and a different tag 
 

@@ -45,7 +45,7 @@ export default class ContainerConfigurationApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Edit advanced settings
+     * Edit advanced settings
      * Edit advanced settings by returning table of advanced settings.
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
@@ -91,7 +91,7 @@ export default class ContainerConfigurationApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Edit Container Network
+     * Edit Container Network
      * Edit the Network settings of the container.
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
@@ -137,7 +137,7 @@ export default class ContainerConfigurationApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Get advanced settings
+     * Get advanced settings
      * Get list and values of the advanced settings of the container.
      * @param {String} containerId Container ID
      * @param {module:api/ContainerConfigurationApi~getContainerAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -180,7 +180,7 @@ export default class ContainerConfigurationApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Get Container Network information
+     * Get Container Network information
      * Get status of the container network settings.
      * @param {String} containerId Container ID
      * @param {module:api/ContainerConfigurationApi~getContainerNetworkCallback} callback The callback function, accepting three arguments: error, data, response

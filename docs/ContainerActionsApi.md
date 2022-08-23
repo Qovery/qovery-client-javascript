@@ -4,9 +4,9 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deployContainer**](ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | NOT YET IMPLEMENTED - Deploy container
-[**restartContainer**](ContainerActionsApi.md#restartContainer) | **POST** /container/{containerId}/restart | NOT YET IMPLEMENTED - Restart container
-[**stopContainer**](ContainerActionsApi.md#stopContainer) | **POST** /container/{containerId}/stop | NOT YET IMPLEMENTED - Stop container
+[**deployContainer**](ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | Deploy container
+[**restartContainer**](ContainerActionsApi.md#restartContainer) | **POST** /container/{containerId}/restart | Restart container
+[**stopContainer**](ContainerActionsApi.md#stopContainer) | **POST** /container/{containerId}/stop | Stop container
 
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 > Status deployContainer(containerId, opts)
 
-NOT YET IMPLEMENTED - Deploy container
+Deploy container
 
 You must provide a git commit id
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 > Status restartContainer(containerId)
 
-NOT YET IMPLEMENTED - Restart container
+Restart container
 
 ### Example
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 > Status stopContainer(containerId)
 
-NOT YET IMPLEMENTED - Stop container
+Stop container
 
 ### Example
 

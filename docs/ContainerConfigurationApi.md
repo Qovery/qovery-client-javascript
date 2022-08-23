@@ -4,10 +4,10 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**editContainerAdvancedSettings**](ContainerConfigurationApi.md#editContainerAdvancedSettings) | **PUT** /container/{containerId}/advancedSettings | NOT YET IMPLEMENTED - Edit advanced settings
-[**editContainerNetwork**](ContainerConfigurationApi.md#editContainerNetwork) | **PUT** /container/{containerId}/network | NOT YET IMPLEMENTED - Edit Container Network
-[**getContainerAdvancedSettings**](ContainerConfigurationApi.md#getContainerAdvancedSettings) | **GET** /container/{containerId}/advancedSettings | NOT YET IMPLEMENTED - Get advanced settings
-[**getContainerNetwork**](ContainerConfigurationApi.md#getContainerNetwork) | **GET** /container/{containerId}/network | NOT YET IMPLEMENTED - Get Container Network information
+[**editContainerAdvancedSettings**](ContainerConfigurationApi.md#editContainerAdvancedSettings) | **PUT** /container/{containerId}/advancedSettings | Edit advanced settings
+[**editContainerNetwork**](ContainerConfigurationApi.md#editContainerNetwork) | **PUT** /container/{containerId}/network | Edit Container Network
+[**getContainerAdvancedSettings**](ContainerConfigurationApi.md#getContainerAdvancedSettings) | **GET** /container/{containerId}/advancedSettings | Get advanced settings
+[**getContainerNetwork**](ContainerConfigurationApi.md#getContainerNetwork) | **GET** /container/{containerId}/network | Get Container Network information
 
 
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 > [ContainerAdvancedSettings] editContainerAdvancedSettings(containerId, opts)
 
-NOT YET IMPLEMENTED - Edit advanced settings
+Edit advanced settings
 
 Edit advanced settings by returning table of advanced settings.
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 > ContainerNetwork editContainerNetwork(containerId, opts)
 
-NOT YET IMPLEMENTED - Edit Container Network
+Edit Container Network
 
 Edit the Network settings of the container.
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 > [ContainerAdvancedSettings] getContainerAdvancedSettings(containerId)
 
-NOT YET IMPLEMENTED - Get advanced settings
+Get advanced settings
 
 Get list and values of the advanced settings of the container.
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 > ContainerNetwork getContainerNetwork(containerId)
 
-NOT YET IMPLEMENTED - Get Container Network information
+Get Container Network information
 
 Get status of the container network settings.
 

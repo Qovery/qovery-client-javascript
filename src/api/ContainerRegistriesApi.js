@@ -91,7 +91,7 @@ export default class ContainerRegistriesApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Delete a container registry
+     * Delete a container registry
      * @param {String} organizationId Organization ID
      * @param {module:api/ContainerRegistriesApi~deleteContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -169,7 +169,7 @@ export default class ContainerRegistriesApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - List organization container registries
+     * List organization container registries
      * @param {String} organizationId Organization ID
      * @param {module:api/ContainerRegistriesApi~listContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListContainerRegistry200Response}

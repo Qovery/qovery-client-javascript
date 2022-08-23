@@ -5,9 +5,9 @@ All URIs are relative to *https://api.qovery.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createContainerRegistry**](ContainerRegistriesApi.md#createContainerRegistry) | **POST** /organization/{organizationId}/containerRegistry | Create a container registry
-[**deleteContainerRegistry**](ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | NOT YET IMPLEMENTED - Delete a container registry
+[**deleteContainerRegistry**](ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Delete a container registry
 [**listAvailableContainerRegistry**](ContainerRegistriesApi.md#listAvailableContainerRegistry) | **GET** /availableContainerRegistry | List supported container registries
-[**listContainerRegistry**](ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | NOT YET IMPLEMENTED - List organization container registries
+[**listContainerRegistry**](ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | List organization container registries
 
 
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 > deleteContainerRegistry(organizationId)
 
-NOT YET IMPLEMENTED - Delete a container registry
+Delete a container registry
 
 ### Example
 
@@ -158,7 +158,7 @@ This endpoint does not need any parameter.
 
 > ListContainerRegistry200Response listContainerRegistry(organizationId)
 
-NOT YET IMPLEMENTED - List organization container registries
+List organization container registries
 
 ### Example
 

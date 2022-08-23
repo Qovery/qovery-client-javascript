@@ -44,7 +44,7 @@ export default class ContainerDependencyApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Add container dependency to this application.
+     * Add container dependency to this application.
      * Add container dependency to this container to prevent this container starting before the linked dependencies
      * @param {String} containerId Container ID
      * @param {String} targetContainerId Target container ID
@@ -93,7 +93,7 @@ export default class ContainerDependencyApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - List container dependencies
+     * List container dependencies
      * @param {String} containerId Container ID
      * @param {module:api/ContainerDependencyApi~listContainerDependencyCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponseList}
@@ -135,7 +135,7 @@ export default class ContainerDependencyApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Remove container dependency to this container.
+     * Remove container dependency to this container.
      * @param {String} containerId Container ID
      * @param {module:api/ContainerDependencyApi~removeContainerDependencyCallback} callback The callback function, accepting three arguments: error, data, response
      */

@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**createApplicationSecret**](ApplicationSecretApi.md#createApplicationSecret) | **POST** /application/{applicationId}/secret | Add a secret to the application
 [**createApplicationSecretAlias**](ApplicationSecretApi.md#createApplicationSecretAlias) | **POST** /application/{applicationId}/secret/{secretId}/alias | Create a secret alias at the application level
 [**createApplicationSecretOverride**](ApplicationSecretApi.md#createApplicationSecretOverride) | **POST** /application/{applicationId}/secret/{secretId}/override | Create a secret override at the application level
-[**createContainerSecretOverride**](ApplicationSecretApi.md#createContainerSecretOverride) | **POST** /container/{containerId}/secret/{secretId}/override | NOT YET IMPLEMENTED - Create a secret override at the container level
+[**createContainerSecretOverride**](ApplicationSecretApi.md#createContainerSecretOverride) | **POST** /container/{containerId}/secret/{secretId}/override | Create a secret override at the container level
 [**deleteApplicationSecret**](ApplicationSecretApi.md#deleteApplicationSecret) | **DELETE** /application/{applicationId}/secret/{secretId} | Delete a secret from an application
 [**editApplicationSecret**](ApplicationSecretApi.md#editApplicationSecret) | **PUT** /application/{applicationId}/secret/{secretId} | Edit a secret belonging to the application
 [**listApplicationSecrets**](ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 > Secret createContainerSecretOverride(containerId, secretId, opts)
 
-NOT YET IMPLEMENTED - Create a secret override at the container level
+Create a secret override at the container level
 
 - Allows you to override at container level a secret that has a higher scope. - You only have to specify a value in the request body - The system will create a new secret at container level with the same key as the one corresponding to the secret id in the path - The response body will contain the newly created secret - Information regarding the overridden_secret will be exposed in the \&quot;overridden_secret\&quot; field of the newly created secret 
 

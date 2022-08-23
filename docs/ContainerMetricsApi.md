@@ -4,9 +4,9 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getContainerCurrentInstance**](ContainerMetricsApi.md#getContainerCurrentInstance) | **GET** /container/{containerId}/instance | NOT YET IMPLEMENTED - List currently running instances of the container with their CPU and RAM metrics
-[**getContainerCurrentScale**](ContainerMetricsApi.md#getContainerCurrentScale) | **GET** /container/{containerId}/currentScale | NOT YET IMPLEMENTED - Get current scaling of the container
-[**getContainerCurrentStorageDisk**](ContainerMetricsApi.md#getContainerCurrentStorageDisk) | **GET** /container/{containerId}/currentStorage | NOT YET IMPLEMENTED - List current storage disk usage
+[**getContainerCurrentInstance**](ContainerMetricsApi.md#getContainerCurrentInstance) | **GET** /container/{containerId}/instance | List currently running instances of the container with their CPU and RAM metrics
+[**getContainerCurrentScale**](ContainerMetricsApi.md#getContainerCurrentScale) | **GET** /container/{containerId}/currentScale | Get current scaling of the container
+[**getContainerCurrentStorageDisk**](ContainerMetricsApi.md#getContainerCurrentStorageDisk) | **GET** /container/{containerId}/currentStorage | List current storage disk usage
 
 
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 > InstanceResponseList getContainerCurrentInstance(containerId)
 
-NOT YET IMPLEMENTED - List currently running instances of the container with their CPU and RAM metrics
+List currently running instances of the container with their CPU and RAM metrics
 
 ### Example
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 > ContainerCurrentScale getContainerCurrentScale(containerId)
 
-NOT YET IMPLEMENTED - Get current scaling of the container
+Get current scaling of the container
 
 Returns min, max, and running number of instances of the application
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 > StorageDiskResponseList getContainerCurrentStorageDisk(containerId)
 
-NOT YET IMPLEMENTED - List current storage disk usage
+List current storage disk usage
 
 ### Example
 

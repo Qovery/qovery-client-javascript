@@ -44,7 +44,7 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Deploy container
+     * Deploy container
      * You must provide a git commit id
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
@@ -90,7 +90,7 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Restart container
+     * Restart container
      * @param {String} containerId Container ID
      * @param {module:api/ContainerActionsApi~restartContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
@@ -132,7 +132,7 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Stop container
+     * Stop container
      * @param {String} containerId Container ID
      * @param {module:api/ContainerActionsApi~stopContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}

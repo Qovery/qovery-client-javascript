@@ -43,7 +43,7 @@ export default class ContainerLogsApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - List logs
+     * List logs
      * This will list the last 1000 logs of the container
      * @param {String} containerId Container ID
      * @param {module:api/ContainerLogsApi~listContainerLogCallback} callback The callback function, accepting three arguments: error, data, response

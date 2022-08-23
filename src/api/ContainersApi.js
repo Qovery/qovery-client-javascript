@@ -52,7 +52,7 @@ export default class ContainersApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Auto deploy containers
+     * Auto deploy containers
      * Triggers a new container deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the container should have the same image name and a different tag 
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
@@ -363,7 +363,7 @@ export default class ContainersApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Preview container environments
+     * Preview container environments
      * Triggers a new container preview for each environment matching the following conditions - preview environment feature should be enabled for the container - the container should have the same image name and a different tag 
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters

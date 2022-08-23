@@ -45,7 +45,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - List currently running instances of the container with their CPU and RAM metrics
+     * List currently running instances of the container with their CPU and RAM metrics
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMetricsApi~getContainerCurrentInstanceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InstanceResponseList}
@@ -87,7 +87,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - Get current scaling of the container
+     * Get current scaling of the container
      * Returns min, max, and running number of instances of the application
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMetricsApi~getContainerCurrentScaleCallback} callback The callback function, accepting three arguments: error, data, response
@@ -130,7 +130,7 @@ export default class ContainerMetricsApi {
      */
 
     /**
-     * NOT YET IMPLEMENTED - List current storage disk usage
+     * List current storage disk usage
      * @param {String} containerId Container ID
      * @param {module:api/ContainerMetricsApi~getContainerCurrentStorageDiskCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/StorageDiskResponseList}

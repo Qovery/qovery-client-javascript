@@ -232,7 +232,9 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**deleteCluster**](docs/ClustersApi.md#deleteCluster) | **DELETE** /organization/{organizationId}/cluster/{clusterId} | Delete a cluster
 *QoveryApi.ClustersApi* | [**deployCluster**](docs/ClustersApi.md#deployCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/deploy | Deploy a cluster
 *QoveryApi.ClustersApi* | [**editCluster**](docs/ClustersApi.md#editCluster) | **PUT** /organization/{organizationId}/cluster/{clusterId} | Edit a cluster
+*QoveryApi.ClustersApi* | [**editClusterAdvancedSettings**](docs/ClustersApi.md#editClusterAdvancedSettings) | **PUT** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Edit advanced settings
 *QoveryApi.ClustersApi* | [**editRoutingTable**](docs/ClustersApi.md#editRoutingTable) | **PUT** /organization/{organizationId}/cluster/{clusterId}/routingTable | Edit routing table
+*QoveryApi.ClustersApi* | [**getClusterAdvancedSettings**](docs/ClustersApi.md#getClusterAdvancedSettings) | **GET** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Get advanced settings
 *QoveryApi.ClustersApi* | [**getClusterReadinessStatus**](docs/ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
 *QoveryApi.ClustersApi* | [**getClusterStatus**](docs/ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
 *QoveryApi.ClustersApi* | [**getOrganizationCloudProviderInfo**](docs/ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
@@ -588,6 +590,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DeploymentRestrictionTypeEnum](docs/DeploymentRestrictionTypeEnum.md)
  - [QoveryApi.DeploymentRuleRequest](docs/DeploymentRuleRequest.md)
  - [QoveryApi.DoCredentialsRequest](docs/DoCredentialsRequest.md)
+ - [QoveryApi.EditClusterAdvancedSettingsRequest](docs/EditClusterAdvancedSettingsRequest.md)
  - [QoveryApi.Environment](docs/Environment.md)
  - [QoveryApi.EnvironmentAllOf](docs/EnvironmentAllOf.md)
  - [QoveryApi.EnvironmentAllOfCloudProvider](docs/EnvironmentAllOfCloudProvider.md)

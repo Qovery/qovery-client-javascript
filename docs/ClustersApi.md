@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**deleteCluster**](ClustersApi.md#deleteCluster) | **DELETE** /organization/{organizationId}/cluster/{clusterId} | Delete a cluster
 [**deployCluster**](ClustersApi.md#deployCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/deploy | Deploy a cluster
 [**editCluster**](ClustersApi.md#editCluster) | **PUT** /organization/{organizationId}/cluster/{clusterId} | Edit a cluster
+[**editClusterAdvancedSettings**](ClustersApi.md#editClusterAdvancedSettings) | **PUT** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Edit advanced settings
 [**editRoutingTable**](ClustersApi.md#editRoutingTable) | **PUT** /organization/{organizationId}/cluster/{clusterId}/routingTable | Edit routing table
+[**getClusterAdvancedSettings**](ClustersApi.md#getClusterAdvancedSettings) | **GET** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Get advanced settings
 [**getClusterReadinessStatus**](ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
 [**getClusterStatus**](ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
 [**getOrganizationCloudProviderInfo**](ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
@@ -226,6 +228,61 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## editClusterAdvancedSettings
+
+> Object editClusterAdvancedSettings(organizationId, clusterId, opts)
+
+Edit advanced settings
+
+Edit advanced settings by returning table of advanced settings.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+let opts = {
+  'editClusterAdvancedSettingsRequest': new QoveryApi.EditClusterAdvancedSettingsRequest() // EditClusterAdvancedSettingsRequest | 
+};
+apiInstance.editClusterAdvancedSettings(organizationId, clusterId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+ **editClusterAdvancedSettingsRequest** | [**EditClusterAdvancedSettingsRequest**](EditClusterAdvancedSettingsRequest.md)|  | [optional] 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## editRoutingTable
 
 > ClusterRoutingTable editRoutingTable(organizationId, clusterId, opts)
@@ -278,6 +335,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getClusterAdvancedSettings
+
+> Object getClusterAdvancedSettings(organizationId, clusterId)
+
+Get advanced settings
+
+Get list and values of the advanced settings of the cluster.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.getClusterAdvancedSettings(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

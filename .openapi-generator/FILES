@@ -196,6 +196,7 @@ docs/DeploymentRestrictionModeEnum.md
 docs/DeploymentRestrictionTypeEnum.md
 docs/DeploymentRuleRequest.md
 docs/DoCredentialsRequest.md
+docs/EditClusterAdvancedSettingsRequest.md
 docs/Environment.md
 docs/EnvironmentActionsApi.md
 docs/EnvironmentAllOf.md
@@ -647,6 +648,7 @@ src/model/DeploymentRestrictionModeEnum.js
 src/model/DeploymentRestrictionTypeEnum.js
 src/model/DeploymentRuleRequest.js
 src/model/DoCredentialsRequest.js
+src/model/EditClusterAdvancedSettingsRequest.js
 src/model/Environment.js
 src/model/EnvironmentAllOf.js
 src/model/EnvironmentAllOfCloudProvider.js
@@ -1070,6 +1072,7 @@ test/model/DeploymentRestrictionModeEnum.spec.js
 test/model/DeploymentRestrictionTypeEnum.spec.js
 test/model/DeploymentRuleRequest.spec.js
 test/model/DoCredentialsRequest.spec.js
+test/model/EditClusterAdvancedSettingsRequest.spec.js
 test/model/Environment.spec.js
 test/model/EnvironmentAllOf.spec.js
 test/model/EnvironmentAllOfCloudProvider.spec.js

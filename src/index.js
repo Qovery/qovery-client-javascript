@@ -165,6 +165,7 @@ import DeploymentRestrictionModeEnum from './model/DeploymentRestrictionModeEnum
 import DeploymentRestrictionTypeEnum from './model/DeploymentRestrictionTypeEnum';
 import DeploymentRuleRequest from './model/DeploymentRuleRequest';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
+import EditClusterAdvancedSettingsRequest from './model/EditClusterAdvancedSettingsRequest';
 import Environment from './model/Environment';
 import EnvironmentAllOf from './model/EnvironmentAllOf';
 import EnvironmentAllOfCloudProvider from './model/EnvironmentAllOfCloudProvider';
@@ -1387,6 +1388,12 @@ export {
      * @property {module:model/DoCredentialsRequest}
      */
     DoCredentialsRequest,
+
+    /**
+     * The EditClusterAdvancedSettingsRequest model constructor.
+     * @property {module:model/EditClusterAdvancedSettingsRequest}
+     */
+    EditClusterAdvancedSettingsRequest,
 
     /**
      * The Environment model constructor.

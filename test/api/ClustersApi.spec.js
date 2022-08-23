@@ -88,10 +88,30 @@
         done();
       });
     });
+    describe('editClusterAdvancedSettings', function() {
+      it('should call editClusterAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test editClusterAdvancedSettings
+        //instance.editClusterAdvancedSettings(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editRoutingTable', function() {
       it('should call editRoutingTable successfully', function(done) {
         //uncomment below and update the code to test editRoutingTable
         //instance.editRoutingTable(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getClusterAdvancedSettings', function() {
+      it('should call getClusterAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test getClusterAdvancedSettings
+        //instance.getClusterAdvancedSettings(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

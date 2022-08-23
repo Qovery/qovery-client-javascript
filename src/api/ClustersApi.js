@@ -24,6 +24,7 @@ import ClusterRoutingTableRequest from '../model/ClusterRoutingTableRequest';
 import ClusterStatus from '../model/ClusterStatus';
 import ClusterStatusGet from '../model/ClusterStatusGet';
 import ClusterStatusResponseList from '../model/ClusterStatusResponseList';
+import EditClusterAdvancedSettingsRequest from '../model/EditClusterAdvancedSettingsRequest';
 import ListClusterLogs200Response from '../model/ListClusterLogs200Response';
 
 /**
@@ -238,6 +239,58 @@ export default class ClustersApi {
     }
 
     /**
+     * Callback function to receive the result of the editClusterAdvancedSettings operation.
+     * @callback module:api/ClustersApi~editClusterAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit advanced settings
+     * Edit advanced settings by returning table of advanced settings.
+     * @param {String} organizationId Organization ID
+     * @param {String} clusterId Cluster ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/EditClusterAdvancedSettingsRequest} opts.editClusterAdvancedSettingsRequest 
+     * @param {module:api/ClustersApi~editClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    editClusterAdvancedSettings(organizationId, clusterId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['editClusterAdvancedSettingsRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling editClusterAdvancedSettings");
+      }
+      // verify the required parameter 'clusterId' is set
+      if (clusterId === undefined || clusterId === null) {
+        throw new Error("Missing the required parameter 'clusterId' when calling editClusterAdvancedSettings");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'clusterId': clusterId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/cluster/{clusterId}/advancedSettings', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editRoutingTable operation.
      * @callback module:api/ClustersApi~editRoutingTableCallback
      * @param {String} error Error message, if any.
@@ -284,6 +337,55 @@ export default class ClustersApi {
       let returnType = ClusterRoutingTable;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/routingTable', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getClusterAdvancedSettings operation.
+     * @callback module:api/ClustersApi~getClusterAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get advanced settings
+     * Get list and values of the advanced settings of the cluster.
+     * @param {String} organizationId Organization ID
+     * @param {String} clusterId Cluster ID
+     * @param {module:api/ClustersApi~getClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    getClusterAdvancedSettings(organizationId, clusterId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getClusterAdvancedSettings");
+      }
+      // verify the required parameter 'clusterId' is set
+      if (clusterId === undefined || clusterId === null) {
+        throw new Error("Missing the required parameter 'clusterId' when calling getClusterAdvancedSettings");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'clusterId': clusterId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/cluster/{clusterId}/advancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

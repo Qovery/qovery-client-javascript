@@ -179,11 +179,10 @@ Database.prototype['accessibility'] = undefined;
 Database.prototype['cpu'] = 250;
 
 /**
- * unit is MB. 1024 MB = 1GB
+ * unit is MB. 1024 MB = 1GB   Default value is linked to the database type: - MANAGED: `100` - CONTAINER   - POSTGRES: `100`   - REDIS: `100`   - MYSQL: `512`   - MONGODB: `256` 
  * @member {Number} memory
- * @default 256
  */
-Database.prototype['memory'] = 256;
+Database.prototype['memory'] = undefined;
 
 /**
  * unit is GB
@@ -210,16 +209,14 @@ Database.prototype['port'] = undefined;
 /**
  * Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-Database.prototype['maximum_cpu'] = 250;
+Database.prototype['maximum_cpu'] = undefined;
 
 /**
  * Maximum memory that can be allocated to the database based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-Database.prototype['maximum_memory'] = 256;
+Database.prototype['maximum_memory'] = undefined;
 
 /**
  * indicates if the database disk is encrypted or not
@@ -270,11 +267,10 @@ DatabaseRequest.prototype['accessibility'] = undefined;
  */
 DatabaseRequest.prototype['cpu'] = 250;
 /**
- * unit is MB. 1024 MB = 1GB
+ * unit is MB. 1024 MB = 1GB   Default value is linked to the database type: - MANAGED: `100` - CONTAINER   - POSTGRES: `100`   - REDIS: `100`   - MYSQL: `512`   - MONGODB: `256` 
  * @member {Number} memory
- * @default 256
  */
-DatabaseRequest.prototype['memory'] = 256;
+DatabaseRequest.prototype['memory'] = undefined;
 /**
  * unit is GB
  * @member {Number} storage
@@ -297,15 +293,13 @@ DatabaseAllOf.prototype['port'] = undefined;
 /**
  * Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-DatabaseAllOf.prototype['maximum_cpu'] = 250;
+DatabaseAllOf.prototype['maximum_cpu'] = undefined;
 /**
  * Maximum memory that can be allocated to the database based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-DatabaseAllOf.prototype['maximum_memory'] = 256;
+DatabaseAllOf.prototype['maximum_memory'] = undefined;
 /**
  * indicates if the database disk is encrypted or not
  * @member {Boolean} disk_encrypted

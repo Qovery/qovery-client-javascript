@@ -160,16 +160,16 @@ ApplicationEditRequest.prototype['buildpack_language'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ApplicationEditRequest.prototype['cpu'] = 250;
+ApplicationEditRequest.prototype['cpu'] = 500;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ApplicationEditRequest.prototype['memory'] = 256;
+ApplicationEditRequest.prototype['memory'] = 512;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
@@ -246,15 +246,15 @@ ApplicationEditRequestAllOf.prototype['buildpack_language'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ApplicationEditRequestAllOf.prototype['cpu'] = 250;
+ApplicationEditRequestAllOf.prototype['cpu'] = 500;
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ApplicationEditRequestAllOf.prototype['memory'] = 256;
+ApplicationEditRequestAllOf.prototype['memory'] = 512;
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
  * @member {Number} min_running_instances

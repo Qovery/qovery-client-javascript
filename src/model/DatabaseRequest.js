@@ -123,11 +123,10 @@ DatabaseRequest.prototype['accessibility'] = undefined;
 DatabaseRequest.prototype['cpu'] = 250;
 
 /**
- * unit is MB. 1024 MB = 1GB
+ * unit is MB. 1024 MB = 1GB   Default value is linked to the database type: - MANAGED: `100` - CONTAINER   - POSTGRES: `100`   - REDIS: `100`   - MYSQL: `512`   - MONGODB: `256` 
  * @member {Number} memory
- * @default 256
  */
-DatabaseRequest.prototype['memory'] = 256;
+DatabaseRequest.prototype['memory'] = undefined;
 
 /**
  * unit is GB

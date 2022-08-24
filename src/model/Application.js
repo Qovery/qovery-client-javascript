@@ -175,16 +175,14 @@ Application.prototype['git_repository'] = undefined;
 /**
  * Maximum cpu that can be allocated to the application based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-Application.prototype['maximum_cpu'] = 250;
+Application.prototype['maximum_cpu'] = undefined;
 
 /**
  * Maximum memory that can be allocated to the application based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-Application.prototype['maximum_memory'] = 256;
+Application.prototype['maximum_memory'] = undefined;
 
 /**
  * name is case insensitive
@@ -217,16 +215,14 @@ Application.prototype['buildpack_language'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
  */
-Application.prototype['cpu'] = 250;
+Application.prototype['cpu'] = undefined;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
  */
-Application.prototype['memory'] = 256;
+Application.prototype['memory'] = undefined;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
@@ -290,15 +286,13 @@ ApplicationAllOf.prototype['git_repository'] = undefined;
 /**
  * Maximum cpu that can be allocated to the application based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-ApplicationAllOf.prototype['maximum_cpu'] = 250;
+ApplicationAllOf.prototype['maximum_cpu'] = undefined;
 /**
  * Maximum memory that can be allocated to the application based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-ApplicationAllOf.prototype['maximum_memory'] = 256;
+ApplicationAllOf.prototype['maximum_memory'] = undefined;
 /**
  * name is case insensitive
  * @member {String} name
@@ -325,15 +319,13 @@ ApplicationAllOf.prototype['buildpack_language'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
  */
-ApplicationAllOf.prototype['cpu'] = 250;
+ApplicationAllOf.prototype['cpu'] = undefined;
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
  */
-ApplicationAllOf.prototype['memory'] = 256;
+ApplicationAllOf.prototype['memory'] = undefined;
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
  * @member {Number} min_running_instances

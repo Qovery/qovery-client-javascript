@@ -91,16 +91,14 @@ DatabaseAllOf.prototype['port'] = undefined;
 /**
  * Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
- * @default 250
  */
-DatabaseAllOf.prototype['maximum_cpu'] = 250;
+DatabaseAllOf.prototype['maximum_cpu'] = undefined;
 
 /**
  * Maximum memory that can be allocated to the database based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
- * @default 256
  */
-DatabaseAllOf.prototype['maximum_memory'] = 256;
+DatabaseAllOf.prototype['maximum_memory'] = undefined;
 
 /**
  * indicates if the database disk is encrypted or not

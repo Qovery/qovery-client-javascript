@@ -134,16 +134,16 @@ ApplicationRequestAllOf.prototype['buildpack_language'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
- * @default 250
+ * @default 500
  */
-ApplicationRequestAllOf.prototype['cpu'] = 250;
+ApplicationRequestAllOf.prototype['cpu'] = 500;
 
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
- * @default 256
+ * @default 512
  */
-ApplicationRequestAllOf.prototype['memory'] = 256;
+ApplicationRequestAllOf.prototype['memory'] = 512;
 
 /**
  * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 

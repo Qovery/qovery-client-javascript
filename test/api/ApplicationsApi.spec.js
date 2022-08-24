@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('getDefaultApplicationAdvancedSettings', function() {
+      it('should call getDefaultApplicationAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test getDefaultApplicationAdvancedSettings
+        //instance.getDefaultApplicationAdvancedSettings(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEnvironmentApplicationCurrentScale', function() {
       it('should call getEnvironmentApplicationCurrentScale successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentApplicationCurrentScale

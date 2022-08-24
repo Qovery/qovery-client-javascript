@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import Application from '../model/Application';
+import ApplicationAdvancedSettings from '../model/ApplicationAdvancedSettings';
 import ApplicationRequest from '../model/ApplicationRequest';
 import ApplicationResponseList from '../model/ApplicationResponseList';
 import DeployAllRequest from '../model/DeployAllRequest';
@@ -128,6 +129,42 @@ export default class ApplicationsApi {
       let returnType = Status;
       return this.apiClient.callApi(
         '/environment/{environmentId}/application/deploy', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDefaultApplicationAdvancedSettings operation.
+     * @callback module:api/ApplicationsApi~getDefaultApplicationAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ApplicationAdvancedSettings} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List default application advanced settings
+     * @param {module:api/ApplicationsApi~getDefaultApplicationAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ApplicationAdvancedSettings}
+     */
+    getDefaultApplicationAdvancedSettings(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ApplicationAdvancedSettings;
+      return this.apiClient.callApi(
+        '/defaultApplicationAdvancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

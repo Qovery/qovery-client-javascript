@@ -177,6 +177,7 @@ docs/DatabasesApi.md
 docs/DependencyApi.md
 docs/DeployAllRequest.md
 docs/DeployAllRequestApplicationsInner.md
+docs/DeployAllRequestContainersInner.md
 docs/DeployRequest.md
 docs/DeploymentHistory.md
 docs/DeploymentHistoryAllOf.md
@@ -629,6 +630,7 @@ src/model/DatabaseTypeEnum.js
 src/model/DatabaseVersionMode.js
 src/model/DeployAllRequest.js
 src/model/DeployAllRequestApplicationsInner.js
+src/model/DeployAllRequestContainersInner.js
 src/model/DeployRequest.js
 src/model/DeploymentHistory.js
 src/model/DeploymentHistoryAllOf.js
@@ -1053,6 +1055,7 @@ test/model/DatabaseTypeEnum.spec.js
 test/model/DatabaseVersionMode.spec.js
 test/model/DeployAllRequest.spec.js
 test/model/DeployAllRequestApplicationsInner.spec.js
+test/model/DeployAllRequestContainersInner.spec.js
 test/model/DeployRequest.spec.js
 test/model/DeploymentHistory.spec.js
 test/model/DeploymentHistoryAllOf.spec.js

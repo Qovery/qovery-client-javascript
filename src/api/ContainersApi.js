@@ -135,28 +135,28 @@ export default class ContainersApi {
     }
 
     /**
-     * Callback function to receive the result of the deployAllContainers operation.
-     * @callback module:api/ContainersApi~deployAllContainersCallback
+     * Callback function to receive the result of the deployAllServices operation.
+     * @callback module:api/ContainersApi~deployAllServicesCallback
      * @param {String} error Error message, if any.
      * @param {module:model/Status} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Deploy containers
-     * Deploy to the last commit the containers you specified.
+     * Deploy services
+     * Update and deploy the selected services
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
      * @param {module:model/DeployAllRequest} opts.deployAllRequest 
-     * @param {module:api/ContainersApi~deployAllContainersCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/ContainersApi~deployAllServicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
-    deployAllContainers(environmentId, opts, callback) {
+    deployAllServices(environmentId, opts, callback) {
       opts = opts || {};
       let postBody = opts['deployAllRequest'];
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling deployAllContainers");
+        throw new Error("Missing the required parameter 'environmentId' when calling deployAllServices");
       }
 
       let pathParams = {

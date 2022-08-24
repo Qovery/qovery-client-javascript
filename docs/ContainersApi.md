@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**autoDeployContainerEnvironments**](ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 [**createContainer**](ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
-[**deployAllContainers**](ContainersApi.md#deployAllContainers) | **POST** /environment/{environmentId}/container/deploy | Deploy containers
+[**deployAllServices**](ContainersApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
 [**getEnvironmentContainerCurrentScale**](ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
 [**getEnvironmentContainerCurrentStorage**](ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 [**getEnvironmentContainerStatus**](ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
@@ -119,13 +119,13 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## deployAllContainers
+## deployAllServices
 
-> Status deployAllContainers(environmentId, opts)
+> Status deployAllServices(environmentId, opts)
 
-Deploy containers
+Deploy services
 
-Deploy to the last commit the containers you specified.
+Update and deploy the selected services
 
 ### Example
 
@@ -141,7 +141,7 @@ let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
   'deployAllRequest': new QoveryApi.DeployAllRequest() // DeployAllRequest | 
 };
-apiInstance.deployAllContainers(environmentId, opts, (error, data, response) => {
+apiInstance.deployAllServices(environmentId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

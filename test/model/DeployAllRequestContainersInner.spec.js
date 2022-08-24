@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.DeployAllRequest();
+    instance = new QoveryApi.DeployAllRequestContainersInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('DeployAllRequest', function() {
-    it('should create an instance of DeployAllRequest', function() {
-      // uncomment below and update the code to test DeployAllRequest
-      //var instance = new QoveryApi.DeployAllRequest();
-      //expect(instance).to.be.a(QoveryApi.DeployAllRequest);
+  describe('DeployAllRequestContainersInner', function() {
+    it('should create an instance of DeployAllRequestContainersInner', function() {
+      // uncomment below and update the code to test DeployAllRequestContainersInner
+      //var instance = new QoveryApi.DeployAllRequestContainersInner();
+      //expect(instance).to.be.a(QoveryApi.DeployAllRequestContainersInner);
     });
 
-    it('should have the property applications (base name: "applications")', function() {
-      // uncomment below and update the code to test the property applications
-      //var instance = new QoveryApi.DeployAllRequest();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.DeployAllRequestContainersInner();
       //expect(instance).to.be();
     });
 
-    it('should have the property containers (base name: "containers")', function() {
-      // uncomment below and update the code to test the property containers
-      //var instance = new QoveryApi.DeployAllRequest();
+    it('should have the property imageTag (base name: "image_tag")', function() {
+      // uncomment below and update the code to test the property imageTag
+      //var instance = new QoveryApi.DeployAllRequestContainersInner();
       //expect(instance).to.be();
     });
 

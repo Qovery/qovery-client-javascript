@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createApplication**](ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 [**deployAllApplications**](ApplicationsApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
+[**deployAllServices**](ApplicationsApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
 [**getDefaultApplicationAdvancedSettings**](ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
 [**getEnvironmentApplicationCurrentScale**](ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 [**getEnvironmentApplicationCurrentStorage**](ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
@@ -89,6 +90,59 @@ let opts = {
   'deployAllRequest': new QoveryApi.DeployAllRequest() // DeployAllRequest | 
 };
 apiInstance.deployAllApplications(environmentId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **environmentId** | **String**| Environment ID | 
+ **deployAllRequest** | [**DeployAllRequest**](DeployAllRequest.md)|  | [optional] 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## deployAllServices
+
+> Status deployAllServices(environmentId, opts)
+
+Deploy services
+
+Update and deploy the selected services
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ApplicationsApi();
+let environmentId = "environmentId_example"; // String | Environment ID
+let opts = {
+  'deployAllRequest': new QoveryApi.DeployAllRequest() // DeployAllRequest | 
+};
+apiInstance.deployAllServices(environmentId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

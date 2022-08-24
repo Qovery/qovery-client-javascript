@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import DeployAllRequestApplicationsInner from './DeployAllRequestApplicationsInner';
+import DeployAllRequestContainersInner from './DeployAllRequestContainersInner';
 
 /**
  * The DeployAllRequest model module.
@@ -51,6 +52,9 @@ class DeployAllRequest {
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [DeployAllRequestApplicationsInner]);
             }
+            if (data.hasOwnProperty('containers')) {
+                obj['containers'] = ApiClient.convertToType(data['containers'], [DeployAllRequestContainersInner]);
+            }
         }
         return obj;
     }
@@ -62,6 +66,11 @@ class DeployAllRequest {
  * @member {Array.<module:model/DeployAllRequestApplicationsInner>} applications
  */
 DeployAllRequest.prototype['applications'] = undefined;
+
+/**
+ * @member {Array.<module:model/DeployAllRequestContainersInner>} containers
+ */
+DeployAllRequest.prototype['containers'] = undefined;
 
 
 

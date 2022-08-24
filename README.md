@@ -181,6 +181,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 *QoveryApi.ApplicationsApi* | [**deployAllApplications**](docs/ApplicationsApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
+*QoveryApi.ApplicationsApi* | [**deployAllServices**](docs/ApplicationsApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
 *QoveryApi.ApplicationsApi* | [**getDefaultApplicationAdvancedSettings**](docs/ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentStorage**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
@@ -293,7 +294,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets
 *QoveryApi.ContainersApi* | [**autoDeployContainerEnvironments**](docs/ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 *QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
-*QoveryApi.ContainersApi* | [**deployAllContainers**](docs/ContainersApi.md#deployAllContainers) | **POST** /environment/{environmentId}/container/deploy | Deploy containers
+*QoveryApi.ContainersApi* | [**deployAllServices**](docs/ContainersApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentScale**](docs/ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentStorage**](docs/ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerStatus**](docs/ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
@@ -572,6 +573,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DatabaseVersionMode](docs/DatabaseVersionMode.md)
  - [QoveryApi.DeployAllRequest](docs/DeployAllRequest.md)
  - [QoveryApi.DeployAllRequestApplicationsInner](docs/DeployAllRequestApplicationsInner.md)
+ - [QoveryApi.DeployAllRequestContainersInner](docs/DeployAllRequestContainersInner.md)
  - [QoveryApi.DeployRequest](docs/DeployRequest.md)
  - [QoveryApi.DeploymentHistory](docs/DeploymentHistory.md)
  - [QoveryApi.DeploymentHistoryAllOf](docs/DeploymentHistoryAllOf.md)

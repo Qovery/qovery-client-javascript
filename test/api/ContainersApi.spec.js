@@ -68,10 +68,10 @@
         done();
       });
     });
-    describe('deployAllContainers', function() {
-      it('should call deployAllContainers successfully', function(done) {
-        //uncomment below and update the code to test deployAllContainers
-        //instance.deployAllContainers(function(error) {
+    describe('deployAllServices', function() {
+      it('should call deployAllServices successfully', function(done) {
+        //uncomment below and update the code to test deployAllServices
+        //instance.deployAllServices(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -146,6 +146,7 @@ import DatabaseTypeEnum from './model/DatabaseTypeEnum';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
 import DeployAllRequest from './model/DeployAllRequest';
 import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
+import DeployAllRequestContainersInner from './model/DeployAllRequestContainersInner';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistory from './model/DeploymentHistory';
 import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
@@ -1274,6 +1275,12 @@ export {
      * @property {module:model/DeployAllRequestApplicationsInner}
      */
     DeployAllRequestApplicationsInner,
+
+    /**
+     * The DeployAllRequestContainersInner model constructor.
+     * @property {module:model/DeployAllRequestContainersInner}
+     */
+    DeployAllRequestContainersInner,
 
     /**
      * The DeployRequest model constructor.

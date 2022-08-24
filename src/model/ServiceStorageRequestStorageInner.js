@@ -24,7 +24,7 @@ class ServiceStorageRequestStorageInner {
      * Constructs a new <code>ServiceStorageRequestStorageInner</code>.
      * @alias module:model/ServiceStorageRequestStorageInner
      * @param type {module:model/StorageTypeEnum} 
-     * @param size {Number} unit is GB
+     * @param size {Number} unit is GB Minimum size is 4 GB 
      * @param mountPoint {String} 
      */
     constructor(type, size, mountPoint) { 
@@ -76,7 +76,7 @@ class ServiceStorageRequestStorageInner {
 ServiceStorageRequestStorageInner.prototype['type'] = undefined;
 
 /**
- * unit is GB
+ * unit is GB Minimum size is 4 GB 
  * @member {Number} size
  */
 ServiceStorageRequestStorageInner.prototype['size'] = undefined;

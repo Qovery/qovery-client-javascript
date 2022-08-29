@@ -1,4 +1,4 @@
-# QoveryApi.EditClusterAdvancedSettingsRequest
+# QoveryApi.ClusterAdvancedSettings
 
 ## Properties
 

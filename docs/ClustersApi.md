@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## editClusterAdvancedSettings
 
-> Object editClusterAdvancedSettings(organizationId, clusterId, opts)
+> ClusterAdvancedSettings editClusterAdvancedSettings(organizationId, clusterId, opts)
 
 Edit advanced settings
 
@@ -249,7 +249,7 @@ let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 let opts = {
-  'editClusterAdvancedSettingsRequest': new QoveryApi.EditClusterAdvancedSettingsRequest() // EditClusterAdvancedSettingsRequest | 
+  'clusterAdvancedSettings': new QoveryApi.ClusterAdvancedSettings() // ClusterAdvancedSettings | 
 };
 apiInstance.editClusterAdvancedSettings(organizationId, clusterId, opts, (error, data, response) => {
   if (error) {
@@ -267,11 +267,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
  **clusterId** | **String**| Cluster ID | 
- **editClusterAdvancedSettingsRequest** | [**EditClusterAdvancedSettingsRequest**](EditClusterAdvancedSettingsRequest.md)|  | [optional] 
+ **clusterAdvancedSettings** | [**ClusterAdvancedSettings**](ClusterAdvancedSettings.md)|  | [optional] 
 
 ### Return type
 
-**Object**
+[**ClusterAdvancedSettings**](ClusterAdvancedSettings.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ## getClusterAdvancedSettings
 
-> Object getClusterAdvancedSettings(organizationId, clusterId)
+> ClusterAdvancedSettings getClusterAdvancedSettings(organizationId, clusterId)
 
 Get advanced settings
 
@@ -377,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**ClusterAdvancedSettings**](ClusterAdvancedSettings.md)
 
 ### Authorization
 

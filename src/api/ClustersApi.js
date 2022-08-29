@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import Cluster from '../model/Cluster';
+import ClusterAdvancedSettings from '../model/ClusterAdvancedSettings';
 import ClusterCloudProviderInfo from '../model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoRequest from '../model/ClusterCloudProviderInfoRequest';
 import ClusterReadinessStatus from '../model/ClusterReadinessStatus';
@@ -24,7 +25,6 @@ import ClusterRoutingTableRequest from '../model/ClusterRoutingTableRequest';
 import ClusterStatus from '../model/ClusterStatus';
 import ClusterStatusGet from '../model/ClusterStatusGet';
 import ClusterStatusResponseList from '../model/ClusterStatusResponseList';
-import EditClusterAdvancedSettingsRequest from '../model/EditClusterAdvancedSettingsRequest';
 import ListClusterLogs200Response from '../model/ListClusterLogs200Response';
 
 /**
@@ -242,7 +242,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the editClusterAdvancedSettings operation.
      * @callback module:api/ClustersApi~editClusterAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/ClusterAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -252,13 +252,13 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EditClusterAdvancedSettingsRequest} opts.editClusterAdvancedSettingsRequest 
+     * @param {module:model/ClusterAdvancedSettings} opts.clusterAdvancedSettings 
      * @param {module:api/ClustersApi~editClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/ClusterAdvancedSettings}
      */
     editClusterAdvancedSettings(organizationId, clusterId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['editClusterAdvancedSettingsRequest'];
+      let postBody = opts['clusterAdvancedSettings'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling editClusterAdvancedSettings");
@@ -282,7 +282,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = ClusterAdvancedSettings;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/advancedSettings', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -346,7 +346,7 @@ export default class ClustersApi {
      * Callback function to receive the result of the getClusterAdvancedSettings operation.
      * @callback module:api/ClustersApi~getClusterAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/ClusterAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -356,7 +356,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~getClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/ClusterAdvancedSettings}
      */
     getClusterAdvancedSettings(organizationId, clusterId, callback) {
       let postBody = null;
@@ -383,7 +383,7 @@ export default class ClustersApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = ClusterAdvancedSettings;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/advancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

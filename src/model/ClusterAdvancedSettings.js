@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The EditClusterAdvancedSettingsRequest model module.
- * @module model/EditClusterAdvancedSettingsRequest
+ * The ClusterAdvancedSettings model module.
+ * @module model/ClusterAdvancedSettings
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class EditClusterAdvancedSettingsRequest {
+class ClusterAdvancedSettings {
     /**
-     * Constructs a new <code>EditClusterAdvancedSettingsRequest</code>.
-     * @alias module:model/EditClusterAdvancedSettingsRequest
+     * Constructs a new <code>ClusterAdvancedSettings</code>.
+     * @alias module:model/ClusterAdvancedSettings
      */
     constructor() { 
         
-        EditClusterAdvancedSettingsRequest.initialize(this);
+        ClusterAdvancedSettings.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class EditClusterAdvancedSettingsRequest {
     }
 
     /**
-     * Constructs a <code>EditClusterAdvancedSettingsRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterAdvancedSettings</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EditClusterAdvancedSettingsRequest} obj Optional instance to populate.
-     * @return {module:model/EditClusterAdvancedSettingsRequest} The populated <code>EditClusterAdvancedSettingsRequest</code> instance.
+     * @param {module:model/ClusterAdvancedSettings} obj Optional instance to populate.
+     * @return {module:model/ClusterAdvancedSettings} The populated <code>ClusterAdvancedSettings</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EditClusterAdvancedSettingsRequest();
+            obj = obj || new ClusterAdvancedSettings();
 
             if (data.hasOwnProperty('registry.image_retention_time')) {
                 obj['registry.image_retention_time'] = ApiClient.convertToType(data['registry.image_retention_time'], 'Number');
@@ -71,32 +71,32 @@ class EditClusterAdvancedSettingsRequest {
  * @member {Number} registry.image_retention_time
  * @default 31536000
  */
-EditClusterAdvancedSettingsRequest.prototype['registry.image_retention_time'] = 31536000;
+ClusterAdvancedSettings.prototype['registry.image_retention_time'] = 31536000;
 
 /**
  * Select the size of the main load_balancer (only effective for Scaleway)
  * @member {String} load_balancer.size
  * @default 'lb-s'
  */
-EditClusterAdvancedSettingsRequest.prototype['load_balancer.size'] = 'lb-s';
+ClusterAdvancedSettings.prototype['load_balancer.size'] = 'lb-s';
 
 /**
  * @member {Number} pleco.resources_ttl
  * @default -1
  */
-EditClusterAdvancedSettingsRequest.prototype['pleco.resources_ttl'] = -1;
+ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = -1;
 
 /**
  * For how long in week loki is going to keep logs of your applications
  * @member {Number} loki.log_retention_in_week
  * @default 12
  */
-EditClusterAdvancedSettingsRequest.prototype['loki.log_retention_in_week'] = 12;
+ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
 
 
 
 
 
 
-export default EditClusterAdvancedSettingsRequest;
+export default ClusterAdvancedSettings;
 

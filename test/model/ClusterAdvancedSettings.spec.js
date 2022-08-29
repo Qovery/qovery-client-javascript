@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EditClusterAdvancedSettingsRequest();
+    instance = new QoveryApi.ClusterAdvancedSettings();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,34 @@
       object[property] = value;
   }
 
-  describe('EditClusterAdvancedSettingsRequest', function() {
-    it('should create an instance of EditClusterAdvancedSettingsRequest', function() {
-      // uncomment below and update the code to test EditClusterAdvancedSettingsRequest
-      //var instance = new QoveryApi.EditClusterAdvancedSettingsRequest();
-      //expect(instance).to.be.a(QoveryApi.EditClusterAdvancedSettingsRequest);
+  describe('ClusterAdvancedSettings', function() {
+    it('should create an instance of ClusterAdvancedSettings', function() {
+      // uncomment below and update the code to test ClusterAdvancedSettings
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be.a(QoveryApi.ClusterAdvancedSettings);
     });
 
     it('should have the property registryImageRetentionTime (base name: "registry.image_retention_time")', function() {
       // uncomment below and update the code to test the property registryImageRetentionTime
-      //var instance = new QoveryApi.EditClusterAdvancedSettingsRequest();
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
 
     it('should have the property loadBalancerSize (base name: "load_balancer.size")', function() {
       // uncomment below and update the code to test the property loadBalancerSize
-      //var instance = new QoveryApi.EditClusterAdvancedSettingsRequest();
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
 
     it('should have the property plecoResourcesTtl (base name: "pleco.resources_ttl")', function() {
       // uncomment below and update the code to test the property plecoResourcesTtl
-      //var instance = new QoveryApi.EditClusterAdvancedSettingsRequest();
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
 
     it('should have the property lokiLogRetentionInWeek (base name: "loki.log_retention_in_week")', function() {
       // uncomment below and update the code to test the property lokiLogRetentionInWeek
-      //var instance = new QoveryApi.EditClusterAdvancedSettingsRequest();
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
 

@@ -60,6 +60,7 @@ import CloudProviderEnum from './model/CloudProviderEnum';
 import CloudProviderResponseList from './model/CloudProviderResponseList';
 import CluserCredentials from './model/CluserCredentials';
 import Cluster from './model/Cluster';
+import ClusterAdvancedSettings from './model/ClusterAdvancedSettings';
 import ClusterAllOf from './model/ClusterAllOf';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
@@ -166,7 +167,6 @@ import DeploymentRestrictionModeEnum from './model/DeploymentRestrictionModeEnum
 import DeploymentRestrictionTypeEnum from './model/DeploymentRestrictionTypeEnum';
 import DeploymentRuleRequest from './model/DeploymentRuleRequest';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
-import EditClusterAdvancedSettingsRequest from './model/EditClusterAdvancedSettingsRequest';
 import Environment from './model/Environment';
 import EnvironmentAllOf from './model/EnvironmentAllOf';
 import EnvironmentAllOfCloudProvider from './model/EnvironmentAllOfCloudProvider';
@@ -759,6 +759,12 @@ export {
      * @property {module:model/Cluster}
      */
     Cluster,
+
+    /**
+     * The ClusterAdvancedSettings model constructor.
+     * @property {module:model/ClusterAdvancedSettings}
+     */
+    ClusterAdvancedSettings,
 
     /**
      * The ClusterAllOf model constructor.
@@ -1395,12 +1401,6 @@ export {
      * @property {module:model/DoCredentialsRequest}
      */
     DoCredentialsRequest,
-
-    /**
-     * The EditClusterAdvancedSettingsRequest model constructor.
-     * @property {module:model/EditClusterAdvancedSettingsRequest}
-     */
-    EditClusterAdvancedSettingsRequest,
 
     /**
      * The Environment model constructor.

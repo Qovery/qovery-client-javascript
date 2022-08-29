@@ -181,7 +181,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 *QoveryApi.ApplicationsApi* | [**deployAllApplications**](docs/ApplicationsApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
-*QoveryApi.ApplicationsApi* | [**deployAllServices**](docs/ApplicationsApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
 *QoveryApi.ApplicationsApi* | [**getDefaultApplicationAdvancedSettings**](docs/ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentStorage**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application

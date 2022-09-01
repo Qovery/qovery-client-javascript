@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## editContainerRegistry
 
-> ContainerRegistryResponse editContainerRegistry(organizationId, containerRegistryId, opts)
+> ContainerRegistryResponse editContainerRegistry(organizationId, opts)
 
 Edit a container registry
 
@@ -25,11 +25,10 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ContainerRegistryApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-let containerRegistryId = "containerRegistryId_example"; // String | Container Registry ID
 let opts = {
   'containerRegistryRequest': new QoveryApi.ContainerRegistryRequest() // ContainerRegistryRequest | 
 };
-apiInstance.editContainerRegistry(organizationId, containerRegistryId, opts, (error, data, response) => {
+apiInstance.editContainerRegistry(organizationId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -44,7 +43,6 @@ apiInstance.editContainerRegistry(organizationId, containerRegistryId, opts, (er
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **containerRegistryId** | **String**| Container Registry ID | 
  **containerRegistryRequest** | [**ContainerRegistryRequest**](ContainerRegistryRequest.md)|  | [optional] 
 
 ### Return type

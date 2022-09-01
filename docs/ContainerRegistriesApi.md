@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createContainerRegistry**](ContainerRegistriesApi.md#createContainerRegistry) | **POST** /organization/{organizationId}/containerRegistry | Create a container registry
 [**deleteContainerRegistry**](ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Delete a container registry
+[**getContainerRegistry**](ContainerRegistriesApi.md#getContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Get a container registry
 [**listAvailableContainerRegistry**](ContainerRegistriesApi.md#listAvailableContainerRegistry) | **GET** /availableContainerRegistry | List supported container registries
 [**listContainerRegistry**](ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | List organization container registries
 
@@ -107,6 +108,55 @@ null (empty response body)
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+
+## getContainerRegistry
+
+> ContainerRegistryResponse getContainerRegistry(organizationId, containerRegistryId)
+
+Get a container registry
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ContainerRegistriesApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let containerRegistryId = "containerRegistryId_example"; // String | Container Registry ID
+apiInstance.getContainerRegistry(organizationId, containerRegistryId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **containerRegistryId** | **String**| Container Registry ID | 
+
+### Return type
+
+[**ContainerRegistryResponse**](ContainerRegistryResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## listAvailableContainerRegistry

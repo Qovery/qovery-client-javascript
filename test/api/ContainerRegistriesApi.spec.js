@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('getContainerRegistry', function() {
+      it('should call getContainerRegistry successfully', function(done) {
+        //uncomment below and update the code to test getContainerRegistry
+        //instance.getContainerRegistry(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listAvailableContainerRegistry', function() {
       it('should call listAvailableContainerRegistry successfully', function(done) {
         //uncomment below and update the code to test listAvailableContainerRegistry

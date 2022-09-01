@@ -46,27 +46,21 @@ export default class ContainerRegistryApi {
     /**
      * Edit a container registry
      * @param {String} organizationId Organization ID
-     * @param {String} containerRegistryId Container Registry ID
      * @param {Object} opts Optional parameters
      * @param {module:model/ContainerRegistryRequest} opts.containerRegistryRequest 
      * @param {module:api/ContainerRegistryApi~editContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerRegistryResponse}
      */
-    editContainerRegistry(organizationId, containerRegistryId, opts, callback) {
+    editContainerRegistry(organizationId, opts, callback) {
       opts = opts || {};
       let postBody = opts['containerRegistryRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling editContainerRegistry");
       }
-      // verify the required parameter 'containerRegistryId' is set
-      if (containerRegistryId === undefined || containerRegistryId === null) {
-        throw new Error("Missing the required parameter 'containerRegistryId' when calling editContainerRegistry");
-      }
 
       let pathParams = {
-        'organizationId': organizationId,
-        'containerRegistryId': containerRegistryId
+        'organizationId': organizationId
       };
       let queryParams = {
       };

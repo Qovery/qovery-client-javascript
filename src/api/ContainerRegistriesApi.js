@@ -124,6 +124,54 @@ export default class ContainerRegistriesApi {
     }
 
     /**
+     * Callback function to receive the result of the getContainerRegistry operation.
+     * @callback module:api/ContainerRegistriesApi~getContainerRegistryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContainerRegistryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a container registry
+     * @param {String} organizationId Organization ID
+     * @param {String} containerRegistryId Container Registry ID
+     * @param {module:api/ContainerRegistriesApi~getContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ContainerRegistryResponse}
+     */
+    getContainerRegistry(organizationId, containerRegistryId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getContainerRegistry");
+      }
+      // verify the required parameter 'containerRegistryId' is set
+      if (containerRegistryId === undefined || containerRegistryId === null) {
+        throw new Error("Missing the required parameter 'containerRegistryId' when calling getContainerRegistry");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'containerRegistryId': containerRegistryId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ContainerRegistryResponse;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/containerRegistry/{containerRegistryId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listAvailableContainerRegistry operation.
      * @callback module:api/ContainerRegistriesApi~listAvailableContainerRegistryCallback
      * @param {String} error Error message, if any.

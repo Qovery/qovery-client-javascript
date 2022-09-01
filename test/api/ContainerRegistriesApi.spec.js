@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('editContainerRegistry', function() {
+      it('should call editContainerRegistry successfully', function(done) {
+        //uncomment below and update the code to test editContainerRegistry
+        //instance.editContainerRegistry(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getContainerRegistry', function() {
       it('should call getContainerRegistry successfully', function(done) {
         //uncomment below and update the code to test getContainerRegistry

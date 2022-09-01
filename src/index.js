@@ -403,7 +403,6 @@ import ContainerLogsApi from './api/ContainerLogsApi';
 import ContainerMainCallsApi from './api/ContainerMainCallsApi';
 import ContainerMetricsApi from './api/ContainerMetricsApi';
 import ContainerRegistriesApi from './api/ContainerRegistriesApi';
-import ContainerRegistryApi from './api/ContainerRegistryApi';
 import ContainerSecretApi from './api/ContainerSecretApi';
 import ContainersApi from './api/ContainersApi';
 import CustomDomainApi from './api/CustomDomainApi';
@@ -2817,12 +2816,6 @@ export {
     * @property {module:api/ContainerRegistriesApi}
     */
     ContainerRegistriesApi,
-
-    /**
-    * The ContainerRegistryApi service constructor.
-    * @property {module:api/ContainerRegistryApi}
-    */
-    ContainerRegistryApi,
 
     /**
     * The ContainerSecretApi service constructor.

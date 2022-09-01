@@ -124,6 +124,51 @@ export default class ContainerRegistriesApi {
     }
 
     /**
+     * Callback function to receive the result of the editContainerRegistry operation.
+     * @callback module:api/ContainerRegistriesApi~editContainerRegistryCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContainerRegistryResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit a container registry
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ContainerRegistryRequest} opts.containerRegistryRequest 
+     * @param {module:api/ContainerRegistriesApi~editContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ContainerRegistryResponse}
+     */
+    editContainerRegistry(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['containerRegistryRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling editContainerRegistry");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ContainerRegistryResponse;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/containerRegistry/{containerRegistryId}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getContainerRegistry operation.
      * @callback module:api/ContainerRegistriesApi~getContainerRegistryCallback
      * @param {String} error Error message, if any.

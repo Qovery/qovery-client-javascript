@@ -126,7 +126,6 @@ docs/ContainerMetricsApi.md
 docs/ContainerNetwork.md
 docs/ContainerNetworkRequest.md
 docs/ContainerRegistriesApi.md
-docs/ContainerRegistryApi.md
 docs/ContainerRegistryKindEnum.md
 docs/ContainerRegistryRequest.md
 docs/ContainerRegistryResponse.md
@@ -461,7 +460,6 @@ src/api/ContainerLogsApi.js
 src/api/ContainerMainCallsApi.js
 src/api/ContainerMetricsApi.js
 src/api/ContainerRegistriesApi.js
-src/api/ContainerRegistryApi.js
 src/api/ContainerSecretApi.js
 src/api/ContainersApi.js
 src/api/CustomDomainApi.js
@@ -887,7 +885,6 @@ test/api/ContainerLogsApi.spec.js
 test/api/ContainerMainCallsApi.spec.js
 test/api/ContainerMetricsApi.spec.js
 test/api/ContainerRegistriesApi.spec.js
-test/api/ContainerRegistryApi.spec.js
 test/api/ContainerSecretApi.spec.js
 test/api/ContainersApi.spec.js
 test/api/CustomDomainApi.spec.js

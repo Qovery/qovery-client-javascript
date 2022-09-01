@@ -32,7 +32,7 @@ class ContainerEditRequest {
      * @implements module:model/ContainerEditRequestAllOf
      * @param name {String} name is case insensitive
      * @param registryId {String} id of the linked registry
-     * @param imageName {String} name of the image container
+     * @param imageName {String} The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `namespace/image` * `PUBLIC_ECR`: `registry_alias/repository` 
      * @param tag {String} tag of the image container
      */
     constructor(name, registryId, imageName, tag) { 
@@ -132,7 +132,7 @@ ContainerEditRequest.prototype['name'] = undefined;
 ContainerEditRequest.prototype['registry_id'] = undefined;
 
 /**
- * name of the image container
+ * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `namespace/image` * `PUBLIC_ECR`: `registry_alias/repository` 
  * @member {String} image_name
  */
 ContainerEditRequest.prototype['image_name'] = undefined;
@@ -205,7 +205,7 @@ ContainerEditRequestAllOf.prototype['name'] = undefined;
  */
 ContainerEditRequestAllOf.prototype['registry_id'] = undefined;
 /**
- * name of the image container
+ * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `namespace/image` * `PUBLIC_ECR`: `registry_alias/repository` 
  * @member {String} image_name
  */
 ContainerEditRequestAllOf.prototype['image_name'] = undefined;

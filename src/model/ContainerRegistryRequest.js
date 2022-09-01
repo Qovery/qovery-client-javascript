@@ -25,8 +25,8 @@ class ContainerRegistryRequest {
      * @alias module:model/ContainerRegistryRequest
      * @param name {String} 
      * @param kind {module:model/ContainerRegistryKindEnum} 
-     * @param url {String} URL of the container registry.  Must start by 'https://' and for docker_hub should be 'https://docker.io' 
-     * @param config {Object.<String, Object>} authentification configuration
+     * @param url {String} URL of the container registry: * For `DOCKER_HUB`: should be `https://docker.io` * For others: must start by `https://` 
+     * @param config {Object.<String, Object>} This field is dependent of the container registry kind: * `ECR` needs in the config: region, access_key_id, secret_access_key * `SCALEWAY_CR` needs in the config: region, scaleway_access_key, scaleway_secret_key * `DOCKER_HUB` needs in the config: username, password * `PUBLIC_ECR` needs in the config: access_key_id, secret_access_key * `DOCR` is not supported anymore 
      */
     constructor(name, kind, url, config) { 
         
@@ -94,13 +94,13 @@ ContainerRegistryRequest.prototype['kind'] = undefined;
 ContainerRegistryRequest.prototype['description'] = undefined;
 
 /**
- * URL of the container registry.  Must start by 'https://' and for docker_hub should be 'https://docker.io' 
+ * URL of the container registry: * For `DOCKER_HUB`: should be `https://docker.io` * For others: must start by `https://` 
  * @member {String} url
  */
 ContainerRegistryRequest.prototype['url'] = undefined;
 
 /**
- * authentification configuration
+ * This field is dependent of the container registry kind: * `ECR` needs in the config: region, access_key_id, secret_access_key * `SCALEWAY_CR` needs in the config: region, scaleway_access_key, scaleway_secret_key * `DOCKER_HUB` needs in the config: username, password * `PUBLIC_ECR` needs in the config: access_key_id, secret_access_key * `DOCR` is not supported anymore 
  * @member {Object.<String, Object>} config
  */
 ContainerRegistryRequest.prototype['config'] = undefined;

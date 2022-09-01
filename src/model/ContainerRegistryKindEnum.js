@@ -27,13 +27,6 @@ export default class ContainerRegistryKindEnum {
 
     
         /**
-         * value: "DOCR"
-         * @const
-         */
-        "DOCR" = "DOCR";
-
-    
-        /**
          * value: "SCALEWAY_CR"
          * @const
          */
@@ -52,6 +45,13 @@ export default class ContainerRegistryKindEnum {
          * @const
          */
         "PUBLIC_ECR" = "PUBLIC_ECR";
+
+    
+        /**
+         * value: "DOCR"
+         * @const
+         */
+        "DOCR" = "DOCR";
 
     
 

@@ -108,6 +108,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property networkIngressWhitelistSourceRange (base name: "network.ingress.whitelist_source_range")', function() {
+      // uncomment below and update the code to test the property networkIngressWhitelistSourceRange
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property readinessProbeType (base name: "readiness_probe.type")', function() {
       // uncomment below and update the code to test the property readinessProbeType
       //var instance = new QoveryApi.ApplicationAdvancedSettings();

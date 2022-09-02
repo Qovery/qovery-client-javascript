@@ -74,6 +74,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.proxy_buffer_size_kb')) {
                 obj['network.ingress.proxy_buffer_size_kb'] = ApiClient.convertToType(data['network.ingress.proxy_buffer_size_kb'], 'Number');
             }
+            if (data.hasOwnProperty('network.ingress.whitelist_source_range')) {
+                obj['network.ingress.whitelist_source_range'] = ApiClient.convertToType(data['network.ingress.whitelist_source_range'], 'String');
+            }
             if (data.hasOwnProperty('readiness_probe.type')) {
                 obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
             }
@@ -182,6 +185,13 @@ ApplicationAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = 'D
  * @default 4
  */
 ApplicationAdvancedSettings.prototype['network.ingress.proxy_buffer_size_kb'] = 4;
+
+/**
+ * list of source ranges to allow access to ingress proxy.  This property can be used to whitelist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 To allow all source ranges, set 0.0.0.0/0. 
+ * @member {String} network.ingress.whitelist_source_range
+ * @default '0.0.0.0/0'
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.whitelist_source_range'] = '0.0.0.0/0';
 
 /**
  * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 

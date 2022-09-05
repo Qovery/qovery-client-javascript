@@ -119,6 +119,8 @@ import ContainerResponseList from './model/ContainerResponseList';
 import ContainerStorage from './model/ContainerStorage';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
+import CreateEnvironmentModeEnum from './model/CreateEnvironmentModeEnum';
+import CreateEnvironmentRequest from './model/CreateEnvironmentRequest';
 import Credentials from './model/Credentials';
 import CredentialsRequest from './model/CredentialsRequest';
 import CreditCard from './model/CreditCard';
@@ -198,7 +200,6 @@ import EnvironmentLogResponseList from './model/EnvironmentLogResponseList';
 import EnvironmentLogScope from './model/EnvironmentLogScope';
 import EnvironmentLogTypeEnum from './model/EnvironmentLogTypeEnum';
 import EnvironmentModeEnum from './model/EnvironmentModeEnum';
-import EnvironmentRequest from './model/EnvironmentRequest';
 import EnvironmentResponseList from './model/EnvironmentResponseList';
 import EnvironmentRestartRequest from './model/EnvironmentRestartRequest';
 import EnvironmentStats from './model/EnvironmentStats';
@@ -1114,6 +1115,18 @@ export {
     CostRange,
 
     /**
+     * The CreateEnvironmentModeEnum model constructor.
+     * @property {module:model/CreateEnvironmentModeEnum}
+     */
+    CreateEnvironmentModeEnum,
+
+    /**
+     * The CreateEnvironmentRequest model constructor.
+     * @property {module:model/CreateEnvironmentRequest}
+     */
+    CreateEnvironmentRequest,
+
+    /**
      * The Credentials model constructor.
      * @property {module:model/Credentials}
      */
@@ -1586,12 +1599,6 @@ export {
      * @property {module:model/EnvironmentModeEnum}
      */
     EnvironmentModeEnum,
-
-    /**
-     * The EnvironmentRequest model constructor.
-     * @property {module:model/EnvironmentRequest}
-     */
-    EnvironmentRequest,
 
     /**
      * The EnvironmentResponseList model constructor.

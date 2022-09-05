@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] 
-**mode** | [**EnvironmentModeEnum**](EnvironmentModeEnum.md) |  | [optional] 
+**mode** | [**CreateEnvironmentModeEnum**](CreateEnvironmentModeEnum.md) |  | [optional] 
 
 

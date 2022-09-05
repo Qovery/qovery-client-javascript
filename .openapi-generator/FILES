@@ -140,6 +140,8 @@ docs/ContainerStorage.md
 docs/ContainersApi.md
 docs/Cost.md
 docs/CostRange.md
+docs/CreateEnvironmentModeEnum.md
+docs/CreateEnvironmentRequest.md
 docs/Credentials.md
 docs/CredentialsRequest.md
 docs/CreditCard.md
@@ -233,7 +235,6 @@ docs/EnvironmentLogTypeEnum.md
 docs/EnvironmentLogsApi.md
 docs/EnvironmentMainCallsApi.md
 docs/EnvironmentModeEnum.md
-docs/EnvironmentRequest.md
 docs/EnvironmentResponseList.md
 docs/EnvironmentRestartRequest.md
 docs/EnvironmentSecretApi.md
@@ -601,6 +602,8 @@ src/model/ContainerResponseList.js
 src/model/ContainerStorage.js
 src/model/Cost.js
 src/model/CostRange.js
+src/model/CreateEnvironmentModeEnum.js
+src/model/CreateEnvironmentRequest.js
 src/model/Credentials.js
 src/model/CredentialsRequest.js
 src/model/CreditCard.js
@@ -680,7 +683,6 @@ src/model/EnvironmentLogResponseList.js
 src/model/EnvironmentLogScope.js
 src/model/EnvironmentLogTypeEnum.js
 src/model/EnvironmentModeEnum.js
-src/model/EnvironmentRequest.js
 src/model/EnvironmentResponseList.js
 src/model/EnvironmentRestartRequest.js
 src/model/EnvironmentStats.js
@@ -1025,6 +1027,8 @@ test/model/ContainerResponseList.spec.js
 test/model/ContainerStorage.spec.js
 test/model/Cost.spec.js
 test/model/CostRange.spec.js
+test/model/CreateEnvironmentModeEnum.spec.js
+test/model/CreateEnvironmentRequest.spec.js
 test/model/Credentials.spec.js
 test/model/CredentialsRequest.spec.js
 test/model/CreditCard.spec.js
@@ -1104,7 +1108,6 @@ test/model/EnvironmentLogResponseList.spec.js
 test/model/EnvironmentLogScope.spec.js
 test/model/EnvironmentLogTypeEnum.spec.js
 test/model/EnvironmentModeEnum.spec.js
-test/model/EnvironmentRequest.spec.js
 test/model/EnvironmentResponseList.spec.js
 test/model/EnvironmentRestartRequest.spec.js
 test/model/EnvironmentStats.spec.js

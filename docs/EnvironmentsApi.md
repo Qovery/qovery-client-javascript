@@ -29,7 +29,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.EnvironmentsApi();
 let projectId = "projectId_example"; // String | Project ID
 let opts = {
-  'environmentRequest': new QoveryApi.EnvironmentRequest() // EnvironmentRequest | 
+  'createEnvironmentRequest': new QoveryApi.CreateEnvironmentRequest() // CreateEnvironmentRequest | 
 };
 apiInstance.createEnvironment(projectId, opts, (error, data, response) => {
   if (error) {
@@ -46,7 +46,7 @@ apiInstance.createEnvironment(projectId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projectId** | **String**| Project ID | 
- **environmentRequest** | [**EnvironmentRequest**](EnvironmentRequest.md)|  | [optional] 
+ **createEnvironmentRequest** | [**CreateEnvironmentRequest**](CreateEnvironmentRequest.md)|  | [optional] 
 
 ### Return type
 

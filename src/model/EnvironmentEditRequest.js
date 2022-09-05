@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentModeEnum from './EnvironmentModeEnum';
+import CreateEnvironmentModeEnum from './CreateEnvironmentModeEnum';
 
 /**
  * The EnvironmentEditRequest model module.
@@ -52,7 +52,7 @@ class EnvironmentEditRequest {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
+                obj['mode'] = CreateEnvironmentModeEnum.constructFromObject(data['mode']);
             }
         }
         return obj;
@@ -67,7 +67,7 @@ class EnvironmentEditRequest {
 EnvironmentEditRequest.prototype['name'] = undefined;
 
 /**
- * @member {module:model/EnvironmentModeEnum} mode
+ * @member {module:model/CreateEnvironmentModeEnum} mode
  */
 EnvironmentEditRequest.prototype['mode'] = undefined;
 

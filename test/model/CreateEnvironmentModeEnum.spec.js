@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,29 +46,11 @@
       object[property] = value;
   }
 
-  describe('EnvironmentRequest', function() {
-    it('should create an instance of EnvironmentRequest', function() {
-      // uncomment below and update the code to test EnvironmentRequest
-      //var instance = new QoveryApi.EnvironmentRequest();
-      //expect(instance).to.be.a(QoveryApi.EnvironmentRequest);
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.EnvironmentRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cluster (base name: "cluster")', function() {
-      // uncomment below and update the code to test the property cluster
-      //var instance = new QoveryApi.EnvironmentRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property mode (base name: "mode")', function() {
-      // uncomment below and update the code to test the property mode
-      //var instance = new QoveryApi.EnvironmentRequest();
-      //expect(instance).to.be();
+  describe('CreateEnvironmentModeEnum', function() {
+    it('should create an instance of CreateEnvironmentModeEnum', function() {
+      // uncomment below and update the code to test CreateEnvironmentModeEnum
+      //var instance = new QoveryApi.CreateEnvironmentModeEnum();
+      //expect(instance).to.be.a(QoveryApi.CreateEnvironmentModeEnum);
     });
 
   });

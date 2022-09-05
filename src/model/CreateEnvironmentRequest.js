@@ -12,22 +12,22 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentModeEnum from './EnvironmentModeEnum';
+import CreateEnvironmentModeEnum from './CreateEnvironmentModeEnum';
 
 /**
- * The EnvironmentRequest model module.
- * @module model/EnvironmentRequest
+ * The CreateEnvironmentRequest model module.
+ * @module model/CreateEnvironmentRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class EnvironmentRequest {
+class CreateEnvironmentRequest {
     /**
-     * Constructs a new <code>EnvironmentRequest</code>.
-     * @alias module:model/EnvironmentRequest
+     * Constructs a new <code>CreateEnvironmentRequest</code>.
+     * @alias module:model/CreateEnvironmentRequest
      * @param name {String} name is case insensitive
      */
     constructor(name) { 
         
-        EnvironmentRequest.initialize(this, name);
+        CreateEnvironmentRequest.initialize(this, name);
     }
 
     /**
@@ -40,15 +40,15 @@ class EnvironmentRequest {
     }
 
     /**
-     * Constructs a <code>EnvironmentRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CreateEnvironmentRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EnvironmentRequest} obj Optional instance to populate.
-     * @return {module:model/EnvironmentRequest} The populated <code>EnvironmentRequest</code> instance.
+     * @param {module:model/CreateEnvironmentRequest} obj Optional instance to populate.
+     * @return {module:model/CreateEnvironmentRequest} The populated <code>CreateEnvironmentRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EnvironmentRequest();
+            obj = obj || new CreateEnvironmentRequest();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -57,7 +57,7 @@ class EnvironmentRequest {
                 obj['cluster'] = ApiClient.convertToType(data['cluster'], 'String');
             }
             if (data.hasOwnProperty('mode')) {
-                obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
+                obj['mode'] = CreateEnvironmentModeEnum.constructFromObject(data['mode']);
             }
         }
         return obj;
@@ -70,22 +70,22 @@ class EnvironmentRequest {
  * name is case insensitive
  * @member {String} name
  */
-EnvironmentRequest.prototype['name'] = undefined;
+CreateEnvironmentRequest.prototype['name'] = undefined;
 
 /**
  * @member {String} cluster
  */
-EnvironmentRequest.prototype['cluster'] = undefined;
+CreateEnvironmentRequest.prototype['cluster'] = undefined;
 
 /**
- * @member {module:model/EnvironmentModeEnum} mode
+ * @member {module:model/CreateEnvironmentModeEnum} mode
  */
-EnvironmentRequest.prototype['mode'] = undefined;
+CreateEnvironmentRequest.prototype['mode'] = undefined;
 
 
 
 
 
 
-export default EnvironmentRequest;
+export default CreateEnvironmentRequest;
 

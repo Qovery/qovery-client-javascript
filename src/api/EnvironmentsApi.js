@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import CreateEnvironmentRequest from '../model/CreateEnvironmentRequest';
 import Environment from '../model/Environment';
-import EnvironmentRequest from '../model/EnvironmentRequest';
 import EnvironmentResponseList from '../model/EnvironmentResponseList';
 import EnvironmentStatsResponseList from '../model/EnvironmentStatsResponseList';
 import EnvironmentStatusList from '../model/EnvironmentStatusList';
@@ -50,13 +50,13 @@ export default class EnvironmentsApi {
      * Create an environment
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentRequest} opts.environmentRequest 
+     * @param {module:model/CreateEnvironmentRequest} opts.createEnvironmentRequest 
      * @param {module:api/EnvironmentsApi~createEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Environment}
      */
     createEnvironment(projectId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['environmentRequest'];
+      let postBody = opts['createEnvironmentRequest'];
       // verify the required parameter 'projectId' is set
       if (projectId === undefined || projectId === null) {
         throw new Error("Missing the required parameter 'projectId' when calling createEnvironment");

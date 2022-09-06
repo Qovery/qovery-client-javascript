@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## deleteContainerRegistry
 
-> deleteContainerRegistry(organizationId)
+> deleteContainerRegistry(organizationId, containerRegistryId)
 
 Delete a container registry
 
@@ -81,7 +81,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ContainerRegistriesApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-apiInstance.deleteContainerRegistry(organizationId, (error, data, response) => {
+let containerRegistryId = "containerRegistryId_example"; // String | Container Registry ID
+apiInstance.deleteContainerRegistry(organizationId, containerRegistryId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -96,6 +97,7 @@ apiInstance.deleteContainerRegistry(organizationId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **containerRegistryId** | **String**| Container Registry ID | 
 
 ### Return type
 
@@ -113,7 +115,7 @@ null (empty response body)
 
 ## editContainerRegistry
 
-> ContainerRegistryResponse editContainerRegistry(organizationId, opts)
+> ContainerRegistryResponse editContainerRegistry(organizationId, containerRegistryId, opts)
 
 Edit a container registry
 
@@ -128,10 +130,11 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ContainerRegistriesApi();
 let organizationId = "organizationId_example"; // String | Organization ID
+let containerRegistryId = "containerRegistryId_example"; // String | Container Registry ID
 let opts = {
   'containerRegistryRequest': new QoveryApi.ContainerRegistryRequest() // ContainerRegistryRequest | 
 };
-apiInstance.editContainerRegistry(organizationId, opts, (error, data, response) => {
+apiInstance.editContainerRegistry(organizationId, containerRegistryId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -146,6 +149,7 @@ apiInstance.editContainerRegistry(organizationId, opts, (error, data, response) 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **containerRegistryId** | **String**| Container Registry ID | 
  **containerRegistryRequest** | [**ContainerRegistryRequest**](ContainerRegistryRequest.md)|  | [optional] 
 
 ### Return type

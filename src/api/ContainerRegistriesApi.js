@@ -93,17 +93,23 @@ export default class ContainerRegistriesApi {
     /**
      * Delete a container registry
      * @param {String} organizationId Organization ID
+     * @param {String} containerRegistryId Container Registry ID
      * @param {module:api/ContainerRegistriesApi~deleteContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteContainerRegistry(organizationId, callback) {
+    deleteContainerRegistry(organizationId, containerRegistryId, callback) {
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling deleteContainerRegistry");
       }
+      // verify the required parameter 'containerRegistryId' is set
+      if (containerRegistryId === undefined || containerRegistryId === null) {
+        throw new Error("Missing the required parameter 'containerRegistryId' when calling deleteContainerRegistry");
+      }
 
       let pathParams = {
-        'organizationId': organizationId
+        'organizationId': organizationId,
+        'containerRegistryId': containerRegistryId
       };
       let queryParams = {
       };
@@ -134,21 +140,27 @@ export default class ContainerRegistriesApi {
     /**
      * Edit a container registry
      * @param {String} organizationId Organization ID
+     * @param {String} containerRegistryId Container Registry ID
      * @param {Object} opts Optional parameters
      * @param {module:model/ContainerRegistryRequest} opts.containerRegistryRequest 
      * @param {module:api/ContainerRegistriesApi~editContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerRegistryResponse}
      */
-    editContainerRegistry(organizationId, opts, callback) {
+    editContainerRegistry(organizationId, containerRegistryId, opts, callback) {
       opts = opts || {};
       let postBody = opts['containerRegistryRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling editContainerRegistry");
       }
+      // verify the required parameter 'containerRegistryId' is set
+      if (containerRegistryId === undefined || containerRegistryId === null) {
+        throw new Error("Missing the required parameter 'containerRegistryId' when calling editContainerRegistry");
+      }
 
       let pathParams = {
-        'organizationId': organizationId
+        'organizationId': organizationId,
+        'containerRegistryId': containerRegistryId
       };
       let queryParams = {
       };

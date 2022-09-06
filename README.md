@@ -536,6 +536,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ContainerNetworkRequest](docs/ContainerNetworkRequest.md)
  - [QoveryApi.ContainerRegistryKindEnum](docs/ContainerRegistryKindEnum.md)
  - [QoveryApi.ContainerRegistryRequest](docs/ContainerRegistryRequest.md)
+ - [QoveryApi.ContainerRegistryRequestConfig](docs/ContainerRegistryRequestConfig.md)
  - [QoveryApi.ContainerRegistryResponse](docs/ContainerRegistryResponse.md)
  - [QoveryApi.ContainerRegistryResponseAllOf](docs/ContainerRegistryResponseAllOf.md)
  - [QoveryApi.ContainerRequest](docs/ContainerRequest.md)

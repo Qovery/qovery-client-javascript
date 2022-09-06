@@ -128,6 +128,7 @@ docs/ContainerNetworkRequest.md
 docs/ContainerRegistriesApi.md
 docs/ContainerRegistryKindEnum.md
 docs/ContainerRegistryRequest.md
+docs/ContainerRegistryRequestConfig.md
 docs/ContainerRegistryResponse.md
 docs/ContainerRegistryResponseAllOf.md
 docs/ContainerRequest.md
@@ -592,6 +593,7 @@ src/model/ContainerNetwork.js
 src/model/ContainerNetworkRequest.js
 src/model/ContainerRegistryKindEnum.js
 src/model/ContainerRegistryRequest.js
+src/model/ContainerRegistryRequestConfig.js
 src/model/ContainerRegistryResponse.js
 src/model/ContainerRegistryResponseAllOf.js
 src/model/ContainerRequest.js
@@ -1017,6 +1019,7 @@ test/model/ContainerNetwork.spec.js
 test/model/ContainerNetworkRequest.spec.js
 test/model/ContainerRegistryKindEnum.spec.js
 test/model/ContainerRegistryRequest.spec.js
+test/model/ContainerRegistryRequestConfig.spec.js
 test/model/ContainerRegistryResponse.spec.js
 test/model/ContainerRegistryResponseAllOf.spec.js
 test/model/ContainerRequest.spec.js

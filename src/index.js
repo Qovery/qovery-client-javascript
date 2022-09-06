@@ -109,6 +109,7 @@ import ContainerNetwork from './model/ContainerNetwork';
 import ContainerNetworkRequest from './model/ContainerNetworkRequest';
 import ContainerRegistryKindEnum from './model/ContainerRegistryKindEnum';
 import ContainerRegistryRequest from './model/ContainerRegistryRequest';
+import ContainerRegistryRequestConfig from './model/ContainerRegistryRequestConfig';
 import ContainerRegistryResponse from './model/ContainerRegistryResponse';
 import ContainerRegistryResponseAllOf from './model/ContainerRegistryResponseAllOf';
 import ContainerRequest from './model/ContainerRequest';
@@ -1053,6 +1054,12 @@ export {
      * @property {module:model/ContainerRegistryRequest}
      */
     ContainerRegistryRequest,
+
+    /**
+     * The ContainerRegistryRequestConfig model constructor.
+     * @property {module:model/ContainerRegistryRequestConfig}
+     */
+    ContainerRegistryRequestConfig,
 
     /**
      * The ContainerRegistryResponse model constructor.

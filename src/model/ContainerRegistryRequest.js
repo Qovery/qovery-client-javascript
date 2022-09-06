@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ContainerRegistryKindEnum from './ContainerRegistryKindEnum';
+import ContainerRegistryRequestConfig from './ContainerRegistryRequestConfig';
 
 /**
  * The ContainerRegistryRequest model module.
@@ -26,7 +27,7 @@ class ContainerRegistryRequest {
      * @param name {String} 
      * @param kind {module:model/ContainerRegistryKindEnum} 
      * @param url {String} URL of the container registry: * For `DOCKER_HUB`: should be `https://docker.io` * For others: must start by `https://` 
-     * @param config {Object.<String, String>} This field is dependent of the container registry kind: * `ECR` needs in the config: region, access_key_id, secret_access_key * `SCALEWAY_CR` needs in the config: region, scaleway_access_key, scaleway_secret_key * `DOCKER_HUB` needs in the config: username, password * `PUBLIC_ECR` needs in the config: access_key_id, secret_access_key * `DOCR` is not supported anymore 
+     * @param config {module:model/ContainerRegistryRequestConfig} 
      */
     constructor(name, kind, url, config) { 
         
@@ -69,7 +70,7 @@ class ContainerRegistryRequest {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
             if (data.hasOwnProperty('config')) {
-                obj['config'] = ApiClient.convertToType(data['config'], {'String': 'String'});
+                obj['config'] = ContainerRegistryRequestConfig.constructFromObject(data['config']);
             }
         }
         return obj;
@@ -100,8 +101,7 @@ ContainerRegistryRequest.prototype['description'] = undefined;
 ContainerRegistryRequest.prototype['url'] = undefined;
 
 /**
- * This field is dependent of the container registry kind: * `ECR` needs in the config: region, access_key_id, secret_access_key * `SCALEWAY_CR` needs in the config: region, scaleway_access_key, scaleway_secret_key * `DOCKER_HUB` needs in the config: username, password * `PUBLIC_ECR` needs in the config: access_key_id, secret_access_key * `DOCR` is not supported anymore 
- * @member {Object.<String, String>} config
+ * @member {module:model/ContainerRegistryRequestConfig} config
  */
 ContainerRegistryRequest.prototype['config'] = undefined;
 

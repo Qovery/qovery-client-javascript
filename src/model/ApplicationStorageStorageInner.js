@@ -23,13 +23,14 @@ class ApplicationStorageStorageInner {
     /**
      * Constructs a new <code>ApplicationStorageStorageInner</code>.
      * @alias module:model/ApplicationStorageStorageInner
+     * @param id {String} 
      * @param type {module:model/StorageTypeEnum} 
      * @param size {Number} unit is GB
      * @param mountPoint {String} 
      */
-    constructor(type, size, mountPoint) { 
+    constructor(id, type, size, mountPoint) { 
         
-        ApplicationStorageStorageInner.initialize(this, type, size, mountPoint);
+        ApplicationStorageStorageInner.initialize(this, id, type, size, mountPoint);
     }
 
     /**
@@ -37,7 +38,8 @@ class ApplicationStorageStorageInner {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, size, mountPoint) { 
+    static initialize(obj, id, type, size, mountPoint) { 
+        obj['id'] = id;
         obj['type'] = type;
         obj['size'] = size;
         obj['mount_point'] = mountPoint;

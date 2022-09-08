@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | **String** |  | 
 **type** | [**StorageTypeEnum**](StorageTypeEnum.md) |  | 
 **size** | **Number** | unit is GB | 
 **mountPoint** | **String** |  | 

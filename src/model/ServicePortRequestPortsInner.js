@@ -64,6 +64,9 @@ class ServicePortRequestPortsInner {
             if (data.hasOwnProperty('publicly_accessible')) {
                 obj['publicly_accessible'] = ApiClient.convertToType(data['publicly_accessible'], 'Boolean');
             }
+            if (data.hasOwnProperty('is_default')) {
+                obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
+            }
             if (data.hasOwnProperty('protocol')) {
                 obj['protocol'] = PortProtocolEnum.constructFromObject(data['protocol']);
             }
@@ -96,6 +99,12 @@ ServicePortRequestPortsInner.prototype['external_port'] = undefined;
  * @member {Boolean} publicly_accessible
  */
 ServicePortRequestPortsInner.prototype['publicly_accessible'] = undefined;
+
+/**
+ * is the default port to use for domain & probes check
+ * @member {Boolean} is_default
+ */
+ServicePortRequestPortsInner.prototype['is_default'] = undefined;
 
 /**
  * @member {module:model/PortProtocolEnum} protocol

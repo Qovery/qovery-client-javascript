@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isDefault (base name: "is_default")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new QoveryApi.ServicePortRequestPortsInner();
+      //expect(instance).to.be();
+    });
+
     it('should have the property protocol (base name: "protocol")', function() {
       // uncomment below and update the code to test the property protocol
       //var instance = new QoveryApi.ServicePortRequestPortsInner();

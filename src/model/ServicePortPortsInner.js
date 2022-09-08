@@ -23,13 +23,14 @@ class ServicePortPortsInner {
     /**
      * Constructs a new <code>ServicePortPortsInner</code>.
      * @alias module:model/ServicePortPortsInner
+     * @param id {String} 
      * @param internalPort {Number} The listening port of your service.
      * @param publiclyAccessible {Boolean} Expose the port to the world
      * @param protocol {module:model/PortProtocolEnum} 
      */
-    constructor(internalPort, publiclyAccessible, protocol) { 
+    constructor(id, internalPort, publiclyAccessible, protocol) { 
         
-        ServicePortPortsInner.initialize(this, internalPort, publiclyAccessible, protocol);
+        ServicePortPortsInner.initialize(this, id, internalPort, publiclyAccessible, protocol);
     }
 
     /**
@@ -37,7 +38,8 @@ class ServicePortPortsInner {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, internalPort, publiclyAccessible, protocol) { 
+    static initialize(obj, id, internalPort, publiclyAccessible, protocol) { 
+        obj['id'] = id;
         obj['internal_port'] = internalPort;
         obj['publicly_accessible'] = publiclyAccessible;
         obj['protocol'] = protocol;

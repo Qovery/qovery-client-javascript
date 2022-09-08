@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
+**id** | **String** |  | 
 **name** | **String** |  | [optional] 
 **internalPort** | **Number** | The listening port of your service. | 
 **externalPort** | **Number** | The exposed port for your service. This is optional. If not set a default port will be used. | [optional] 

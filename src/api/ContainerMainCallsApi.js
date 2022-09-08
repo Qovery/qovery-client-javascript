@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import ContainerEditRequest from '../model/ContainerEditRequest';
+import ContainerRequest from '../model/ContainerRequest';
 import ContainerResponse from '../model/ContainerResponse';
 import LinkResponseList from '../model/LinkResponseList';
 import Status from '../model/Status';
@@ -92,13 +92,13 @@ export default class ContainerMainCallsApi {
      * - To edit the container you must have the admin permission. - For port edition, if you provide a port id, we will update the corresponding port. If you don't we will create a new one. If you remove a port from the payload, we will delete it. - For storage edition, if you provide a storage id, we will update the corresponding storage. If you don't we will create a new one. If you remove a storage from the payload, we will delete it. 
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ContainerEditRequest} opts.containerEditRequest 
+     * @param {module:model/ContainerRequest} opts.containerRequest 
      * @param {module:api/ContainerMainCallsApi~editContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponse}
      */
     editContainer(containerId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['containerEditRequest'];
+      let postBody = opts['containerRequest'];
       // verify the required parameter 'containerId' is set
       if (containerId === undefined || containerId === null) {
         throw new Error("Missing the required parameter 'containerId' when calling editContainer");

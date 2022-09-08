@@ -103,8 +103,6 @@ import ContainerAdvancedSettings from './model/ContainerAdvancedSettings';
 import ContainerCurrentScale from './model/ContainerCurrentScale';
 import ContainerDependencyRequest from './model/ContainerDependencyRequest';
 import ContainerDeployRequest from './model/ContainerDeployRequest';
-import ContainerEditRequest from './model/ContainerEditRequest';
-import ContainerEditRequestAllOf from './model/ContainerEditRequestAllOf';
 import ContainerNetwork from './model/ContainerNetwork';
 import ContainerNetworkRequest from './model/ContainerNetworkRequest';
 import ContainerRegistryKindEnum from './model/ContainerRegistryKindEnum';
@@ -1018,18 +1016,6 @@ export {
      * @property {module:model/ContainerDeployRequest}
      */
     ContainerDeployRequest,
-
-    /**
-     * The ContainerEditRequest model constructor.
-     * @property {module:model/ContainerEditRequest}
-     */
-    ContainerEditRequest,
-
-    /**
-     * The ContainerEditRequestAllOf model constructor.
-     * @property {module:model/ContainerEditRequestAllOf}
-     */
-    ContainerEditRequestAllOf,
 
     /**
      * The ContainerNetwork model constructor.

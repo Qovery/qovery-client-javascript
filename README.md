@@ -530,8 +530,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ContainerCurrentScale](docs/ContainerCurrentScale.md)
  - [QoveryApi.ContainerDependencyRequest](docs/ContainerDependencyRequest.md)
  - [QoveryApi.ContainerDeployRequest](docs/ContainerDeployRequest.md)
- - [QoveryApi.ContainerEditRequest](docs/ContainerEditRequest.md)
- - [QoveryApi.ContainerEditRequestAllOf](docs/ContainerEditRequestAllOf.md)
  - [QoveryApi.ContainerNetwork](docs/ContainerNetwork.md)
  - [QoveryApi.ContainerNetworkRequest](docs/ContainerNetworkRequest.md)
  - [QoveryApi.ContainerRegistryKindEnum](docs/ContainerRegistryKindEnum.md)

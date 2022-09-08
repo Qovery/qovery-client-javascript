@@ -81,7 +81,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ContainerMainCallsApi();
 let containerId = "containerId_example"; // String | Container ID
 let opts = {
-  'containerEditRequest': new QoveryApi.ContainerEditRequest() // ContainerEditRequest | 
+  'containerRequest': new QoveryApi.ContainerRequest() // ContainerRequest | 
 };
 apiInstance.editContainer(containerId, opts, (error, data, response) => {
   if (error) {
@@ -98,7 +98,7 @@ apiInstance.editContainer(containerId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **containerId** | **String**| Container ID | 
- **containerEditRequest** | [**ContainerEditRequest**](ContainerEditRequest.md)|  | [optional] 
+ **containerRequest** | [**ContainerRequest**](ContainerRequest.md)|  | [optional] 
 
 ### Return type
 

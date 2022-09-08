@@ -54,6 +54,9 @@ class ServiceStorageRequestStorageInner {
         if (data) {
             obj = obj || new ServiceStorageRequestStorageInner();
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = StorageTypeEnum.constructFromObject(data['type']);
             }
@@ -69,6 +72,11 @@ class ServiceStorageRequestStorageInner {
 
 
 }
+
+/**
+ * @member {String} id
+ */
+ServiceStorageRequestStorageInner.prototype['id'] = undefined;
 
 /**
  * @member {module:model/StorageTypeEnum} type

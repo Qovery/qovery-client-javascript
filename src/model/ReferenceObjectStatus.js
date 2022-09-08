@@ -30,10 +30,11 @@ class ReferenceObjectStatus {
      * @implements module:model/Status
      * @param id {String} 
      * @param state {module:model/StateEnum} 
+     * @param serviceDeploymentStatus {module:model/ServiceDeploymentStatusEnum} 
      */
-    constructor(id, state) { 
-        ReferenceObject.initialize(this, id);Status.initialize(this, state);
-        ReferenceObjectStatus.initialize(this, id, state);
+    constructor(id, state, serviceDeploymentStatus) { 
+        ReferenceObject.initialize(this, id);Status.initialize(this, id, state, serviceDeploymentStatus);
+        ReferenceObjectStatus.initialize(this, id, state, serviceDeploymentStatus);
     }
 
     /**
@@ -41,9 +42,10 @@ class ReferenceObjectStatus {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, state) { 
+    static initialize(obj, id, state, serviceDeploymentStatus) { 
         obj['id'] = id;
         obj['state'] = state;
+        obj['service_deployment_status'] = serviceDeploymentStatus;
     }
 
     /**

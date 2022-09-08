@@ -24,11 +24,13 @@ class Status {
     /**
      * Constructs a new <code>Status</code>.
      * @alias module:model/Status
+     * @param id {String} 
      * @param state {module:model/StateEnum} 
+     * @param serviceDeploymentStatus {module:model/ServiceDeploymentStatusEnum} 
      */
-    constructor(state) { 
+    constructor(id, state, serviceDeploymentStatus) { 
         
-        Status.initialize(this, state);
+        Status.initialize(this, id, state, serviceDeploymentStatus);
     }
 
     /**
@@ -36,8 +38,10 @@ class Status {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, state) { 
+    static initialize(obj, id, state, serviceDeploymentStatus) { 
+        obj['id'] = id;
         obj['state'] = state;
+        obj['service_deployment_status'] = serviceDeploymentStatus;
     }
 
     /**

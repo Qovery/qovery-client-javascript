@@ -23,10 +23,20 @@ class ContainerResponseAllOf {
     /**
      * Constructs a new <code>ContainerResponseAllOf</code>.
      * @alias module:model/ContainerResponseAllOf
+     * @param maximumCpu {Number} Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+     * @param maximumMemory {Number} Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+     * @param name {String} name is case insensitive
+     * @param imageName {String} name of the image container
+     * @param tag {String} tag of the image container
+     * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
+     * @param memory {Number} unit is MB. 1024 MB = 1GB
+     * @param minRunningInstances {Number} Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
+     * @param maxRunningInstances {Number} Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
+     * @param autoPreview {Boolean} Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
      */
-    constructor() { 
+    constructor(maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
         
-        ContainerResponseAllOf.initialize(this);
+        ContainerResponseAllOf.initialize(this, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
     }
 
     /**
@@ -34,7 +44,17 @@ class ContainerResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+        obj['maximum_cpu'] = maximumCpu;
+        obj['maximum_memory'] = maximumMemory;
+        obj['name'] = name;
+        obj['image_name'] = imageName;
+        obj['tag'] = tag;
+        obj['cpu'] = cpu;
+        obj['memory'] = memory;
+        obj['min_running_instances'] = minRunningInstances || 1;
+        obj['max_running_instances'] = maxRunningInstances || 1;
+        obj['auto_preview'] = autoPreview;
     }
 
     /**
@@ -86,6 +106,9 @@ class ContainerResponseAllOf {
             }
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
+            }
+            if (data.hasOwnProperty('auto_preview')) {
+                obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
         }
         return obj;
@@ -170,6 +193,12 @@ ContainerResponseAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerResponseAllOf.prototype['max_running_instances'] = 1;
+
+/**
+ * Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
+ * @member {Boolean} auto_preview
+ */
+ContainerResponseAllOf.prototype['auto_preview'] = undefined;
 
 
 

@@ -162,6 +162,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoPreview (base name: "auto_preview")', function() {
+      // uncomment below and update the code to test the property autoPreview
+      //var instance = new QoveryApi.ContainerResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

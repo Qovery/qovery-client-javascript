@@ -23,6 +23,8 @@ class ContainerResponseAllOf {
     /**
      * Constructs a new <code>ContainerResponseAllOf</code>.
      * @alias module:model/ContainerResponseAllOf
+     * @param environment {module:model/ReferenceObject} 
+     * @param registry {module:model/ReferenceObject} 
      * @param maximumCpu {Number} Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
      * @param maximumMemory {Number} Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
      * @param name {String} name is case insensitive
@@ -34,9 +36,9 @@ class ContainerResponseAllOf {
      * @param maxRunningInstances {Number} Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
      * @param autoPreview {Boolean} Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
      */
-    constructor(maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+    constructor(environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
         
-        ContainerResponseAllOf.initialize(this, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
+        ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
     }
 
     /**
@@ -44,7 +46,9 @@ class ContainerResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+    static initialize(obj, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+        obj['environment'] = environment;
+        obj['registry'] = registry;
         obj['maximum_cpu'] = maximumCpu;
         obj['maximum_memory'] = maximumMemory;
         obj['name'] = name;

@@ -35,6 +35,8 @@ class ContainerResponse {
      * @implements module:model/ContainerResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param environment {module:model/ReferenceObject} 
+     * @param registry {module:model/ReferenceObject} 
      * @param maximumCpu {Number} Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
      * @param maximumMemory {Number} Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
      * @param name {String} name is case insensitive
@@ -46,9 +48,9 @@ class ContainerResponse {
      * @param maxRunningInstances {Number} Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
      * @param autoPreview {Boolean} Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
      */
-    constructor(id, createdAt, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
-        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ServicePort.initialize(this);ContainerResponseAllOf.initialize(this, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
-        ContainerResponse.initialize(this, id, createdAt, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
+    constructor(id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ServicePort.initialize(this);ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
+        ContainerResponse.initialize(this, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
     }
 
     /**
@@ -56,9 +58,11 @@ class ContainerResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+    static initialize(obj, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
+        obj['environment'] = environment;
+        obj['registry'] = registry;
         obj['maximum_cpu'] = maximumCpu;
         obj['maximum_memory'] = maximumMemory;
         obj['name'] = name;

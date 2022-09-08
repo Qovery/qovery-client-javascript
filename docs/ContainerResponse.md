@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
-**storage** | [**[ApplicationStorageStorageInner]**](ApplicationStorageStorageInner.md) |  | [optional] 
+**storage** | [**[ServiceStorageStorageInner]**](ServiceStorageStorageInner.md) |  | [optional] 
 **ports** | [**[ServicePortPortsInner]**](ServicePortPortsInner.md) |  | [optional] 
 **environment** | [**ReferenceObject**](ReferenceObject.md) |  | 
 **registry** | [**ReferenceObject**](ReferenceObject.md) |  | 

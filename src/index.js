@@ -32,8 +32,6 @@ import ApplicationNetworkRequest from './model/ApplicationNetworkRequest';
 import ApplicationRequest from './model/ApplicationRequest';
 import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
-import ApplicationStorage from './model/ApplicationStorage';
-import ApplicationStorageStorageInner from './model/ApplicationStorageStorageInner';
 import AutoDeployContainerEnvironmentsRequest from './model/AutoDeployContainerEnvironmentsRequest';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
@@ -345,8 +343,10 @@ import ServicePortPortsInner from './model/ServicePortPortsInner';
 import ServicePortRequest from './model/ServicePortRequest';
 import ServicePortRequestPortsInner from './model/ServicePortRequestPortsInner';
 import ServiceResponseList from './model/ServiceResponseList';
+import ServiceStorage from './model/ServiceStorage';
 import ServiceStorageRequest from './model/ServiceStorageRequest';
 import ServiceStorageRequestStorageInner from './model/ServiceStorageRequestStorageInner';
+import ServiceStorageStorageInner from './model/ServiceStorageStorageInner';
 import ServiceTotalNumber from './model/ServiceTotalNumber';
 import ServiceTypeEnum from './model/ServiceTypeEnum';
 import SignUp from './model/SignUp';
@@ -590,18 +590,6 @@ export {
      * @property {module:model/ApplicationResponseList}
      */
     ApplicationResponseList,
-
-    /**
-     * The ApplicationStorage model constructor.
-     * @property {module:model/ApplicationStorage}
-     */
-    ApplicationStorage,
-
-    /**
-     * The ApplicationStorageStorageInner model constructor.
-     * @property {module:model/ApplicationStorageStorageInner}
-     */
-    ApplicationStorageStorageInner,
 
     /**
      * The AutoDeployContainerEnvironmentsRequest model constructor.
@@ -2470,6 +2458,12 @@ export {
     ServiceResponseList,
 
     /**
+     * The ServiceStorage model constructor.
+     * @property {module:model/ServiceStorage}
+     */
+    ServiceStorage,
+
+    /**
      * The ServiceStorageRequest model constructor.
      * @property {module:model/ServiceStorageRequest}
      */
@@ -2480,6 +2474,12 @@ export {
      * @property {module:model/ServiceStorageRequestStorageInner}
      */
     ServiceStorageRequestStorageInner,
+
+    /**
+     * The ServiceStorageStorageInner model constructor.
+     * @property {module:model/ServiceStorageStorageInner}
+     */
+    ServiceStorageStorageInner,
 
     /**
      * The ServiceTotalNumber model constructor.

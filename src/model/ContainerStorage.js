@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
+import ServiceStorage from './ServiceStorage';
+import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
 /**
  * The ContainerStorage model module.
@@ -24,10 +24,10 @@ class ContainerStorage {
     /**
      * Constructs a new <code>ContainerStorage</code>.
      * @alias module:model/ContainerStorage
-     * @implements module:model/ApplicationStorage
+     * @implements module:model/ServiceStorage
      */
     constructor() { 
-        ApplicationStorage.initialize(this);
+        ServiceStorage.initialize(this);
         ContainerStorage.initialize(this);
     }
 
@@ -49,10 +49,10 @@ class ContainerStorage {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ContainerStorage();
-            ApplicationStorage.constructFromObject(data, obj);
+            ServiceStorage.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
             }
         }
         return obj;
@@ -62,16 +62,16 @@ class ContainerStorage {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
+ * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 ContainerStorage.prototype['storage'] = undefined;
 
 
-// Implement ApplicationStorage interface:
+// Implement ServiceStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
+ * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
-ApplicationStorage.prototype['storage'] = undefined;
+ServiceStorage.prototype['storage'] = undefined;
 
 
 

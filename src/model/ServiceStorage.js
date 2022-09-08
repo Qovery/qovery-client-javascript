@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
+import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
 /**
- * The ApplicationStorage model module.
- * @module model/ApplicationStorage
+ * The ServiceStorage model module.
+ * @module model/ServiceStorage
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ApplicationStorage {
+class ServiceStorage {
     /**
-     * Constructs a new <code>ApplicationStorage</code>.
-     * @alias module:model/ApplicationStorage
+     * Constructs a new <code>ServiceStorage</code>.
+     * @alias module:model/ServiceStorage
      */
     constructor() { 
         
-        ApplicationStorage.initialize(this);
+        ServiceStorage.initialize(this);
     }
 
     /**
@@ -38,18 +38,18 @@ class ApplicationStorage {
     }
 
     /**
-     * Constructs a <code>ApplicationStorage</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ServiceStorage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApplicationStorage} obj Optional instance to populate.
-     * @return {module:model/ApplicationStorage} The populated <code>ApplicationStorage</code> instance.
+     * @param {module:model/ServiceStorage} obj Optional instance to populate.
+     * @return {module:model/ServiceStorage} The populated <code>ServiceStorage</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApplicationStorage();
+            obj = obj || new ServiceStorage();
 
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
             }
         }
         return obj;
@@ -59,14 +59,14 @@ class ApplicationStorage {
 }
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
+ * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
-ApplicationStorage.prototype['storage'] = undefined;
+ServiceStorage.prototype['storage'] = undefined;
 
 
 
 
 
 
-export default ApplicationStorage;
+export default ServiceStorage;
 

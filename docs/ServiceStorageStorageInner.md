@@ -1,4 +1,4 @@
-# QoveryApi.ApplicationStorageStorageInner
+# QoveryApi.ServiceStorageStorageInner
 
 ## Properties
 

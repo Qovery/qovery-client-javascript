@@ -12,13 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationStorage from './ApplicationStorage';
-import ApplicationStorageStorageInner from './ApplicationStorageStorageInner';
 import Base from './Base';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
 import ReferenceObject from './ReferenceObject';
 import ServicePort from './ServicePort';
 import ServicePortPortsInner from './ServicePortPortsInner';
+import ServiceStorage from './ServiceStorage';
+import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
 /**
  * The ContainerResponse model module.
@@ -30,7 +30,7 @@ class ContainerResponse {
      * Constructs a new <code>ContainerResponse</code>.
      * @alias module:model/ContainerResponse
      * @implements module:model/Base
-     * @implements module:model/ApplicationStorage
+     * @implements module:model/ServiceStorage
      * @implements module:model/ServicePort
      * @implements module:model/ContainerResponseAllOf
      * @param id {String} 
@@ -49,7 +49,7 @@ class ContainerResponse {
      * @param autoPreview {Boolean} Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
      */
     constructor(id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
-        Base.initialize(this, id, createdAt);ApplicationStorage.initialize(this);ServicePort.initialize(this);ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ServicePort.initialize(this);ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
         ContainerResponse.initialize(this, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
     }
 
@@ -86,7 +86,7 @@ class ContainerResponse {
         if (data) {
             obj = obj || new ContainerResponse();
             Base.constructFromObject(data, obj);
-            ApplicationStorage.constructFromObject(data, obj);
+            ServiceStorage.constructFromObject(data, obj);
             ServicePort.constructFromObject(data, obj);
             ContainerResponseAllOf.constructFromObject(data, obj);
 
@@ -100,7 +100,7 @@ class ContainerResponse {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
             if (data.hasOwnProperty('storage')) {
-                obj['storage'] = ApiClient.convertToType(data['storage'], [ApplicationStorageStorageInner]);
+                obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
             }
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortPortsInner]);
@@ -170,7 +170,7 @@ ContainerResponse.prototype['created_at'] = undefined;
 ContainerResponse.prototype['updated_at'] = undefined;
 
 /**
- * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
+ * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 ContainerResponse.prototype['storage'] = undefined;
 
@@ -276,11 +276,11 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement ApplicationStorage interface:
+// Implement ServiceStorage interface:
 /**
- * @member {Array.<module:model/ApplicationStorageStorageInner>} storage
+ * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
-ApplicationStorage.prototype['storage'] = undefined;
+ServiceStorage.prototype['storage'] = undefined;
 // Implement ServicePort interface:
 /**
  * @member {Array.<module:model/ServicePortPortsInner>} ports

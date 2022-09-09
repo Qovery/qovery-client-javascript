@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.AliasedSecret();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,29 +46,11 @@
       object[property] = value;
   }
 
-  describe('AliasedSecret', function() {
-    it('should create an instance of AliasedSecret', function() {
-      // uncomment below and update the code to test AliasedSecret
-      //var instance = new QoveryApi.AliasedSecret();
-      //expect(instance).to.be.a(QoveryApi.AliasedSecret);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.AliasedSecret();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property key (base name: "key")', function() {
-      // uncomment below and update the code to test the property key
-      //var instance = new QoveryApi.AliasedSecret();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property scope (base name: "scope")', function() {
-      // uncomment below and update the code to test the property scope
-      //var instance = new QoveryApi.AliasedSecret();
-      //expect(instance).to.be();
+  describe('APIVariableScopeEnum', function() {
+    it('should create an instance of APIVariableScopeEnum', function() {
+      // uncomment below and update the code to test APIVariableScopeEnum
+      //var instance = new QoveryApi.APIVariableScopeEnum();
+      //expect(instance).to.be.a(QoveryApi.APIVariableScopeEnum);
     });
 
   });

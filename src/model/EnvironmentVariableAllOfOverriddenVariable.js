@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
  * The EnvironmentVariableAllOfOverriddenVariable model module.
@@ -58,7 +58,7 @@ class EnvironmentVariableAllOfOverriddenVariable {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -83,7 +83,7 @@ EnvironmentVariableAllOfOverriddenVariable.prototype['key'] = undefined;
 EnvironmentVariableAllOfOverriddenVariable.prototype['value'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariableAllOfOverriddenVariable.prototype['scope'] = undefined;
 

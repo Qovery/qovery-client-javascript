@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **String** | key is case sensitive | [optional] 
-**overriddenSecret** | [**OverriddenSecret**](OverriddenSecret.md) |  | [optional] 
-**aliasedSecret** | [**AliasedSecret**](AliasedSecret.md) |  | [optional] 
-**scope** | [**EnvironmentVariableScopeEnum**](EnvironmentVariableScopeEnum.md) |  | 
+**key** | **String** | key is case sensitive | 
+**overriddenSecret** | [**SecretOverride**](SecretOverride.md) |  | [optional] 
+**aliasedSecret** | [**SecretAlias**](SecretAlias.md) |  | [optional] 
+**scope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 
 **serviceId** | **String** | present only for &#x60;BUILT_IN&#x60; variable | [optional] 
 **serviceName** | **String** | present only for &#x60;BUILT_IN&#x60; variable | [optional] 
 **serviceType** | [**LinkedServiceTypeEnum**](LinkedServiceTypeEnum.md) |  | [optional] 

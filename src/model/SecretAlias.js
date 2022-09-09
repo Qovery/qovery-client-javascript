@@ -12,21 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
- * The AliasedSecret model module.
- * @module model/AliasedSecret
+ * The SecretAlias model module.
+ * @module model/SecretAlias
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class AliasedSecret {
+class SecretAlias {
     /**
-     * Constructs a new <code>AliasedSecret</code>.
-     * @alias module:model/AliasedSecret
+     * Constructs a new <code>SecretAlias</code>.
+     * @alias module:model/SecretAlias
+     * @param id {String} 
+     * @param key {String} 
+     * @param scope {module:model/APIVariableScopeEnum} 
      */
-    constructor() { 
+    constructor(id, key, scope) { 
         
-        AliasedSecret.initialize(this);
+        SecretAlias.initialize(this, id, key, scope);
     }
 
     /**
@@ -34,19 +37,22 @@ class AliasedSecret {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, key, scope) { 
+        obj['id'] = id;
+        obj['key'] = key;
+        obj['scope'] = scope;
     }
 
     /**
-     * Constructs a <code>AliasedSecret</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SecretAlias</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/AliasedSecret} obj Optional instance to populate.
-     * @return {module:model/AliasedSecret} The populated <code>AliasedSecret</code> instance.
+     * @param {module:model/SecretAlias} obj Optional instance to populate.
+     * @return {module:model/SecretAlias} The populated <code>SecretAlias</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new AliasedSecret();
+            obj = obj || new SecretAlias();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -55,7 +61,7 @@ class AliasedSecret {
                 obj['key'] = ApiClient.convertToType(data['key'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -67,22 +73,22 @@ class AliasedSecret {
 /**
  * @member {String} id
  */
-AliasedSecret.prototype['id'] = undefined;
+SecretAlias.prototype['id'] = undefined;
 
 /**
  * @member {String} key
  */
-AliasedSecret.prototype['key'] = undefined;
+SecretAlias.prototype['key'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
-AliasedSecret.prototype['scope'] = undefined;
+SecretAlias.prototype['scope'] = undefined;
 
 
 
 
 
 
-export default AliasedSecret;
+export default SecretAlias;
 

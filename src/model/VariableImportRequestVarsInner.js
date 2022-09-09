@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
  * The VariableImportRequestVarsInner model module.
@@ -25,7 +25,7 @@ class VariableImportRequestVarsInner {
      * @alias module:model/VariableImportRequestVarsInner
      * @param name {String} 
      * @param value {String} 
-     * @param scope {module:model/EnvironmentVariableScopeEnum} 
+     * @param scope {module:model/APIVariableScopeEnum} 
      * @param isSecret {Boolean} 
      */
     constructor(name, value, scope, isSecret) { 
@@ -63,7 +63,7 @@ class VariableImportRequestVarsInner {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('is_secret')) {
                 obj['is_secret'] = ApiClient.convertToType(data['is_secret'], 'Boolean');
@@ -86,7 +86,7 @@ VariableImportRequestVarsInner.prototype['name'] = undefined;
 VariableImportRequestVarsInner.prototype['value'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 VariableImportRequestVarsInner.prototype['scope'] = undefined;
 

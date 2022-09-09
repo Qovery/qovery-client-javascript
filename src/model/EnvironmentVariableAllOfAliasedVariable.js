@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
  * The EnvironmentVariableAllOfAliasedVariable model module.
@@ -58,7 +58,7 @@ class EnvironmentVariableAllOfAliasedVariable {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -83,7 +83,7 @@ EnvironmentVariableAllOfAliasedVariable.prototype['key'] = undefined;
 EnvironmentVariableAllOfAliasedVariable.prototype['value'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariableAllOfAliasedVariable.prototype['scope'] = undefined;
 

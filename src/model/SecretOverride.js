@@ -12,21 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
- * The OverriddenSecret model module.
- * @module model/OverriddenSecret
+ * The SecretOverride model module.
+ * @module model/SecretOverride
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class OverriddenSecret {
+class SecretOverride {
     /**
-     * Constructs a new <code>OverriddenSecret</code>.
-     * @alias module:model/OverriddenSecret
+     * Constructs a new <code>SecretOverride</code>.
+     * @alias module:model/SecretOverride
+     * @param id {String} 
+     * @param key {String} 
+     * @param scope {module:model/APIVariableScopeEnum} 
      */
-    constructor() { 
+    constructor(id, key, scope) { 
         
-        OverriddenSecret.initialize(this);
+        SecretOverride.initialize(this, id, key, scope);
     }
 
     /**
@@ -34,19 +37,22 @@ class OverriddenSecret {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, key, scope) { 
+        obj['id'] = id;
+        obj['key'] = key;
+        obj['scope'] = scope;
     }
 
     /**
-     * Constructs a <code>OverriddenSecret</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>SecretOverride</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/OverriddenSecret} obj Optional instance to populate.
-     * @return {module:model/OverriddenSecret} The populated <code>OverriddenSecret</code> instance.
+     * @param {module:model/SecretOverride} obj Optional instance to populate.
+     * @return {module:model/SecretOverride} The populated <code>SecretOverride</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OverriddenSecret();
+            obj = obj || new SecretOverride();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -55,7 +61,7 @@ class OverriddenSecret {
                 obj['key'] = ApiClient.convertToType(data['key'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
         }
         return obj;
@@ -67,22 +73,22 @@ class OverriddenSecret {
 /**
  * @member {String} id
  */
-OverriddenSecret.prototype['id'] = undefined;
+SecretOverride.prototype['id'] = undefined;
 
 /**
  * @member {String} key
  */
-OverriddenSecret.prototype['key'] = undefined;
+SecretOverride.prototype['key'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
-OverriddenSecret.prototype['scope'] = undefined;
+SecretOverride.prototype['scope'] = undefined;
 
 
 
 
 
 
-export default OverriddenSecret;
+export default SecretOverride;
 

@@ -3,10 +3,10 @@
 .openapi-generator-ignore
 .travis.yml
 README.md
+docs/APIVariableScopeEnum.md
 docs/AccountInfo.md
 docs/AccountInfoApi.md
 docs/AccountInfoEditRequest.md
-docs/AliasedSecret.md
 docs/Application.md
 docs/ApplicationActionsApi.md
 docs/ApplicationAdvancedSettings.md
@@ -247,7 +247,6 @@ docs/EnvironmentVariableApi.md
 docs/EnvironmentVariableEditRequest.md
 docs/EnvironmentVariableRequest.md
 docs/EnvironmentVariableResponseList.md
-docs/EnvironmentVariableScopeEnum.md
 docs/EnvironmentsApi.md
 docs/Event.md
 docs/EventAllOf.md
@@ -349,7 +348,6 @@ docs/OrganizationWebhookEventEnum.md
 docs/OrganizationWebhookKindEnum.md
 docs/OrganizationWebhookResponse.md
 docs/OrganizationWebhookResponseList.md
-docs/OverriddenSecret.md
 docs/PaginationData.md
 docs/PaidUsage.md
 docs/PlanEnum.md
@@ -383,8 +381,10 @@ docs/RemainingCredits.md
 docs/RewardClaim.md
 docs/ScalewayCredentialsRequest.md
 docs/Secret.md
+docs/SecretAlias.md
 docs/SecretAllOf.md
 docs/SecretEditRequest.md
+docs/SecretOverride.md
 docs/SecretRequest.md
 docs/SecretResponseList.md
 docs/Service.md
@@ -495,9 +495,9 @@ src/api/ProjectsApi.js
 src/api/ReferralRewardsApi.js
 src/api/UserSignUpApi.js
 src/index.js
+src/model/APIVariableScopeEnum.js
 src/model/AccountInfo.js
 src/model/AccountInfoEditRequest.js
-src/model/AliasedSecret.js
 src/model/Application.js
 src/model/ApplicationAdvancedSettings.js
 src/model/ApplicationAllOf.js
@@ -692,7 +692,6 @@ src/model/EnvironmentVariableAllOfOverriddenVariable.js
 src/model/EnvironmentVariableEditRequest.js
 src/model/EnvironmentVariableRequest.js
 src/model/EnvironmentVariableResponseList.js
-src/model/EnvironmentVariableScopeEnum.js
 src/model/Event.js
 src/model/EventAllOf.js
 src/model/EventPaginatedResponseList.js
@@ -785,7 +784,6 @@ src/model/OrganizationWebhookEventEnum.js
 src/model/OrganizationWebhookKindEnum.js
 src/model/OrganizationWebhookResponse.js
 src/model/OrganizationWebhookResponseList.js
-src/model/OverriddenSecret.js
 src/model/PaginationData.js
 src/model/PaidUsage.js
 src/model/PlanEnum.js
@@ -813,8 +811,10 @@ src/model/RemainingCredits.js
 src/model/RewardClaim.js
 src/model/ScalewayCredentialsRequest.js
 src/model/Secret.js
+src/model/SecretAlias.js
 src/model/SecretAllOf.js
 src/model/SecretEditRequest.js
+src/model/SecretOverride.js
 src/model/SecretRequest.js
 src/model/SecretResponseList.js
 src/model/Service.js
@@ -919,9 +919,9 @@ test/api/ProjectSecretApi.spec.js
 test/api/ProjectsApi.spec.js
 test/api/ReferralRewardsApi.spec.js
 test/api/UserSignUpApi.spec.js
+test/model/APIVariableScopeEnum.spec.js
 test/model/AccountInfo.spec.js
 test/model/AccountInfoEditRequest.spec.js
-test/model/AliasedSecret.spec.js
 test/model/Application.spec.js
 test/model/ApplicationAdvancedSettings.spec.js
 test/model/ApplicationAllOf.spec.js
@@ -1116,7 +1116,6 @@ test/model/EnvironmentVariableAllOfOverriddenVariable.spec.js
 test/model/EnvironmentVariableEditRequest.spec.js
 test/model/EnvironmentVariableRequest.spec.js
 test/model/EnvironmentVariableResponseList.spec.js
-test/model/EnvironmentVariableScopeEnum.spec.js
 test/model/Event.spec.js
 test/model/EventAllOf.spec.js
 test/model/EventPaginatedResponseList.spec.js
@@ -1209,7 +1208,6 @@ test/model/OrganizationWebhookEventEnum.spec.js
 test/model/OrganizationWebhookKindEnum.spec.js
 test/model/OrganizationWebhookResponse.spec.js
 test/model/OrganizationWebhookResponseList.spec.js
-test/model/OverriddenSecret.spec.js
 test/model/PaginationData.spec.js
 test/model/PaidUsage.spec.js
 test/model/PlanEnum.spec.js
@@ -1237,8 +1235,10 @@ test/model/RemainingCredits.spec.js
 test/model/RewardClaim.spec.js
 test/model/ScalewayCredentialsRequest.spec.js
 test/model/Secret.spec.js
+test/model/SecretAlias.spec.js
 test/model/SecretAllOf.spec.js
 test/model/SecretEditRequest.spec.js
+test/model/SecretOverride.spec.js
 test/model/SecretRequest.spec.js
 test/model/SecretResponseList.spec.js
 test/model/Service.spec.js

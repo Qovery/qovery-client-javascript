@@ -22,10 +22,12 @@ class SecretEditRequest {
     /**
      * Constructs a new <code>SecretEditRequest</code>.
      * @alias module:model/SecretEditRequest
+     * @param value {String} 
+     * @param key {String} 
      */
-    constructor() { 
+    constructor(value, key) { 
         
-        SecretEditRequest.initialize(this);
+        SecretEditRequest.initialize(this, value, key);
     }
 
     /**
@@ -33,7 +35,9 @@ class SecretEditRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, value, key) { 
+        obj['value'] = value;
+        obj['key'] = key;
     }
 
     /**

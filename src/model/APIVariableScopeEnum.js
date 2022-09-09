@@ -13,11 +13,11 @@
 
 import ApiClient from '../ApiClient';
 /**
-* Enum class EnvironmentVariableScopeEnum.
+* Enum class APIVariableScopeEnum.
 * @enum {}
 * @readonly
 */
-export default class EnvironmentVariableScopeEnum {
+export default class APIVariableScopeEnum {
     
         /**
          * value: "APPLICATION"
@@ -56,9 +56,9 @@ export default class EnvironmentVariableScopeEnum {
     
 
     /**
-    * Returns a <code>EnvironmentVariableScopeEnum</code> enum value from a Javascript object name.
+    * Returns a <code>APIVariableScopeEnum</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/EnvironmentVariableScopeEnum} The enum <code>EnvironmentVariableScopeEnum</code> value.
+    * @return {module:model/APIVariableScopeEnum} The enum <code>APIVariableScopeEnum</code> value.
     */
     static constructFromObject(object) {
         return object;

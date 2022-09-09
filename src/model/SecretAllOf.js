@@ -12,10 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
-import AliasedSecret from './AliasedSecret';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
-import OverriddenSecret from './OverriddenSecret';
+import SecretAlias from './SecretAlias';
+import SecretOverride from './SecretOverride';
 
 /**
  * The SecretAllOf model module.
@@ -26,11 +26,12 @@ class SecretAllOf {
     /**
      * Constructs a new <code>SecretAllOf</code>.
      * @alias module:model/SecretAllOf
-     * @param scope {module:model/EnvironmentVariableScopeEnum} 
+     * @param key {String} key is case sensitive
+     * @param scope {module:model/APIVariableScopeEnum} 
      */
-    constructor(scope) { 
+    constructor(key, scope) { 
         
-        SecretAllOf.initialize(this, scope);
+        SecretAllOf.initialize(this, key, scope);
     }
 
     /**
@@ -38,7 +39,8 @@ class SecretAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, scope) { 
+    static initialize(obj, key, scope) { 
+        obj['key'] = key;
         obj['scope'] = scope;
     }
 
@@ -57,13 +59,13 @@ class SecretAllOf {
                 obj['key'] = ApiClient.convertToType(data['key'], 'String');
             }
             if (data.hasOwnProperty('overridden_secret')) {
-                obj['overridden_secret'] = OverriddenSecret.constructFromObject(data['overridden_secret']);
+                obj['overridden_secret'] = SecretOverride.constructFromObject(data['overridden_secret']);
             }
             if (data.hasOwnProperty('aliased_secret')) {
-                obj['aliased_secret'] = AliasedSecret.constructFromObject(data['aliased_secret']);
+                obj['aliased_secret'] = SecretAlias.constructFromObject(data['aliased_secret']);
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
@@ -88,17 +90,17 @@ class SecretAllOf {
 SecretAllOf.prototype['key'] = undefined;
 
 /**
- * @member {module:model/OverriddenSecret} overridden_secret
+ * @member {module:model/SecretOverride} overridden_secret
  */
 SecretAllOf.prototype['overridden_secret'] = undefined;
 
 /**
- * @member {module:model/AliasedSecret} aliased_secret
+ * @member {module:model/SecretAlias} aliased_secret
  */
 SecretAllOf.prototype['aliased_secret'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 SecretAllOf.prototype['scope'] = undefined;
 

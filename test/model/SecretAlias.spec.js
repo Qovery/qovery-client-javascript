@@ -28,6 +28,7 @@
   var instance;
 
   beforeEach(function() {
+    instance = new QoveryApi.SecretAlias();
   });
 
   var getProperty = function(object, getter, property) {
@@ -46,11 +47,29 @@
       object[property] = value;
   }
 
-  describe('EnvironmentVariableScopeEnum', function() {
-    it('should create an instance of EnvironmentVariableScopeEnum', function() {
-      // uncomment below and update the code to test EnvironmentVariableScopeEnum
-      //var instance = new QoveryApi.EnvironmentVariableScopeEnum();
-      //expect(instance).to.be.a(QoveryApi.EnvironmentVariableScopeEnum);
+  describe('SecretAlias', function() {
+    it('should create an instance of SecretAlias', function() {
+      // uncomment below and update the code to test SecretAlias
+      //var instance = new QoveryApi.SecretAlias();
+      //expect(instance).to.be.a(QoveryApi.SecretAlias);
+    });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.SecretAlias();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property key (base name: "key")', function() {
+      // uncomment below and update the code to test the property key
+      //var instance = new QoveryApi.SecretAlias();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scope (base name: "scope")', function() {
+      // uncomment below and update the code to test the property scope
+      //var instance = new QoveryApi.SecretAlias();
+      //expect(instance).to.be();
     });
 
   });

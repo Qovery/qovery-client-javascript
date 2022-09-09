@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
  * The VariableImportSuccessfulImportedVariablesInner model module.
@@ -24,7 +24,7 @@ class VariableImportSuccessfulImportedVariablesInner {
      * Constructs a new <code>VariableImportSuccessfulImportedVariablesInner</code>.
      * @alias module:model/VariableImportSuccessfulImportedVariablesInner
      * @param name {String} 
-     * @param scope {module:model/EnvironmentVariableScopeEnum} 
+     * @param scope {module:model/APIVariableScopeEnum} 
      * @param isSecret {Boolean} 
      */
     constructor(name, scope, isSecret) { 
@@ -61,7 +61,7 @@ class VariableImportSuccessfulImportedVariablesInner {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('is_secret')) {
                 obj['is_secret'] = ApiClient.convertToType(data['is_secret'], 'Boolean');
@@ -85,7 +85,7 @@ VariableImportSuccessfulImportedVariablesInner.prototype['name'] = undefined;
 VariableImportSuccessfulImportedVariablesInner.prototype['value'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 VariableImportSuccessfulImportedVariablesInner.prototype['scope'] = undefined;
 

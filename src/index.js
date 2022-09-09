@@ -13,9 +13,9 @@
 
 
 import ApiClient from './ApiClient';
+import APIVariableScopeEnum from './model/APIVariableScopeEnum';
 import AccountInfo from './model/AccountInfo';
 import AccountInfoEditRequest from './model/AccountInfoEditRequest';
-import AliasedSecret from './model/AliasedSecret';
 import Application from './model/Application';
 import ApplicationAdvancedSettings from './model/ApplicationAdvancedSettings';
 import ApplicationAllOf from './model/ApplicationAllOf';
@@ -210,7 +210,6 @@ import EnvironmentVariableAllOfOverriddenVariable from './model/EnvironmentVaria
 import EnvironmentVariableEditRequest from './model/EnvironmentVariableEditRequest';
 import EnvironmentVariableRequest from './model/EnvironmentVariableRequest';
 import EnvironmentVariableResponseList from './model/EnvironmentVariableResponseList';
-import EnvironmentVariableScopeEnum from './model/EnvironmentVariableScopeEnum';
 import Event from './model/Event';
 import EventAllOf from './model/EventAllOf';
 import EventPaginatedResponseList from './model/EventPaginatedResponseList';
@@ -303,7 +302,6 @@ import OrganizationWebhookEventEnum from './model/OrganizationWebhookEventEnum';
 import OrganizationWebhookKindEnum from './model/OrganizationWebhookKindEnum';
 import OrganizationWebhookResponse from './model/OrganizationWebhookResponse';
 import OrganizationWebhookResponseList from './model/OrganizationWebhookResponseList';
-import OverriddenSecret from './model/OverriddenSecret';
 import PaginationData from './model/PaginationData';
 import PaidUsage from './model/PaidUsage';
 import PlanEnum from './model/PlanEnum';
@@ -331,8 +329,10 @@ import RemainingCredits from './model/RemainingCredits';
 import RewardClaim from './model/RewardClaim';
 import ScalewayCredentialsRequest from './model/ScalewayCredentialsRequest';
 import Secret from './model/Secret';
+import SecretAlias from './model/SecretAlias';
 import SecretAllOf from './model/SecretAllOf';
 import SecretEditRequest from './model/SecretEditRequest';
+import SecretOverride from './model/SecretOverride';
 import SecretRequest from './model/SecretRequest';
 import SecretResponseList from './model/SecretResponseList';
 import Service from './model/Service';
@@ -478,6 +478,12 @@ export {
     ApiClient,
 
     /**
+     * The APIVariableScopeEnum model constructor.
+     * @property {module:model/APIVariableScopeEnum}
+     */
+    APIVariableScopeEnum,
+
+    /**
      * The AccountInfo model constructor.
      * @property {module:model/AccountInfo}
      */
@@ -488,12 +494,6 @@ export {
      * @property {module:model/AccountInfoEditRequest}
      */
     AccountInfoEditRequest,
-
-    /**
-     * The AliasedSecret model constructor.
-     * @property {module:model/AliasedSecret}
-     */
-    AliasedSecret,
 
     /**
      * The Application model constructor.
@@ -1660,12 +1660,6 @@ export {
     EnvironmentVariableResponseList,
 
     /**
-     * The EnvironmentVariableScopeEnum model constructor.
-     * @property {module:model/EnvironmentVariableScopeEnum}
-     */
-    EnvironmentVariableScopeEnum,
-
-    /**
      * The Event model constructor.
      * @property {module:model/Event}
      */
@@ -2218,12 +2212,6 @@ export {
     OrganizationWebhookResponseList,
 
     /**
-     * The OverriddenSecret model constructor.
-     * @property {module:model/OverriddenSecret}
-     */
-    OverriddenSecret,
-
-    /**
      * The PaginationData model constructor.
      * @property {module:model/PaginationData}
      */
@@ -2386,6 +2374,12 @@ export {
     Secret,
 
     /**
+     * The SecretAlias model constructor.
+     * @property {module:model/SecretAlias}
+     */
+    SecretAlias,
+
+    /**
      * The SecretAllOf model constructor.
      * @property {module:model/SecretAllOf}
      */
@@ -2396,6 +2390,12 @@ export {
      * @property {module:model/SecretEditRequest}
      */
     SecretEditRequest,
+
+    /**
+     * The SecretOverride model constructor.
+     * @property {module:model/SecretOverride}
+     */
+    SecretOverride,
 
     /**
      * The SecretRequest model constructor.

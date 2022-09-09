@@ -12,9 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 import EnvironmentVariableAllOfAliasedVariable from './EnvironmentVariableAllOfAliasedVariable';
 import EnvironmentVariableAllOfOverriddenVariable from './EnvironmentVariableAllOfOverriddenVariable';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
 
 /**
@@ -26,7 +26,7 @@ class EnvironmentVariableAllOf {
     /**
      * Constructs a new <code>EnvironmentVariableAllOf</code>.
      * @alias module:model/EnvironmentVariableAllOf
-     * @param scope {module:model/EnvironmentVariableScopeEnum} 
+     * @param scope {module:model/APIVariableScopeEnum} 
      */
     constructor(scope) { 
         
@@ -60,7 +60,7 @@ class EnvironmentVariableAllOf {
                 obj['aliased_variable'] = EnvironmentVariableAllOfAliasedVariable.constructFromObject(data['aliased_variable']);
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
@@ -89,7 +89,7 @@ EnvironmentVariableAllOf.prototype['overridden_variable'] = undefined;
 EnvironmentVariableAllOf.prototype['aliased_variable'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariableAllOf.prototype['scope'] = undefined;
 

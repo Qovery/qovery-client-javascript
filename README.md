@@ -440,9 +440,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [QoveryApi.APIVariableScopeEnum](docs/APIVariableScopeEnum.md)
  - [QoveryApi.AccountInfo](docs/AccountInfo.md)
  - [QoveryApi.AccountInfoEditRequest](docs/AccountInfoEditRequest.md)
- - [QoveryApi.AliasedSecret](docs/AliasedSecret.md)
  - [QoveryApi.Application](docs/Application.md)
  - [QoveryApi.ApplicationAdvancedSettings](docs/ApplicationAdvancedSettings.md)
  - [QoveryApi.ApplicationAllOf](docs/ApplicationAllOf.md)
@@ -637,7 +637,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentVariableEditRequest](docs/EnvironmentVariableEditRequest.md)
  - [QoveryApi.EnvironmentVariableRequest](docs/EnvironmentVariableRequest.md)
  - [QoveryApi.EnvironmentVariableResponseList](docs/EnvironmentVariableResponseList.md)
- - [QoveryApi.EnvironmentVariableScopeEnum](docs/EnvironmentVariableScopeEnum.md)
  - [QoveryApi.Event](docs/Event.md)
  - [QoveryApi.EventAllOf](docs/EventAllOf.md)
  - [QoveryApi.EventPaginatedResponseList](docs/EventPaginatedResponseList.md)
@@ -730,7 +729,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.OrganizationWebhookKindEnum](docs/OrganizationWebhookKindEnum.md)
  - [QoveryApi.OrganizationWebhookResponse](docs/OrganizationWebhookResponse.md)
  - [QoveryApi.OrganizationWebhookResponseList](docs/OrganizationWebhookResponseList.md)
- - [QoveryApi.OverriddenSecret](docs/OverriddenSecret.md)
  - [QoveryApi.PaginationData](docs/PaginationData.md)
  - [QoveryApi.PaidUsage](docs/PaidUsage.md)
  - [QoveryApi.PlanEnum](docs/PlanEnum.md)
@@ -758,8 +756,10 @@ Class | Method | HTTP request | Description
  - [QoveryApi.RewardClaim](docs/RewardClaim.md)
  - [QoveryApi.ScalewayCredentialsRequest](docs/ScalewayCredentialsRequest.md)
  - [QoveryApi.Secret](docs/Secret.md)
+ - [QoveryApi.SecretAlias](docs/SecretAlias.md)
  - [QoveryApi.SecretAllOf](docs/SecretAllOf.md)
  - [QoveryApi.SecretEditRequest](docs/SecretEditRequest.md)
+ - [QoveryApi.SecretOverride](docs/SecretOverride.md)
  - [QoveryApi.SecretRequest](docs/SecretRequest.md)
  - [QoveryApi.SecretResponseList](docs/SecretResponseList.md)
  - [QoveryApi.Service](docs/Service.md)

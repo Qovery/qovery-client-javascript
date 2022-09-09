@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.OverriddenSecret();
+    instance = new QoveryApi.SecretOverride();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('OverriddenSecret', function() {
-    it('should create an instance of OverriddenSecret', function() {
-      // uncomment below and update the code to test OverriddenSecret
-      //var instance = new QoveryApi.OverriddenSecret();
-      //expect(instance).to.be.a(QoveryApi.OverriddenSecret);
+  describe('SecretOverride', function() {
+    it('should create an instance of SecretOverride', function() {
+      // uncomment below and update the code to test SecretOverride
+      //var instance = new QoveryApi.SecretOverride();
+      //expect(instance).to.be.a(QoveryApi.SecretOverride);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.OverriddenSecret();
+      //var instance = new QoveryApi.SecretOverride();
       //expect(instance).to.be();
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instance = new QoveryApi.OverriddenSecret();
+      //var instance = new QoveryApi.SecretOverride();
       //expect(instance).to.be();
     });
 
     it('should have the property scope (base name: "scope")', function() {
       // uncomment below and update the code to test the property scope
-      //var instance = new QoveryApi.OverriddenSecret();
+      //var instance = new QoveryApi.SecretOverride();
       //expect(instance).to.be();
     });
 

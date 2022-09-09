@@ -1,12 +1,11 @@
-# QoveryApi.VariableImportRequestVarsInner
+# QoveryApi.SecretOverride
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
-**value** | **String** |  | 
+**id** | **String** |  | 
+**key** | **String** |  | 
 **scope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 
-**isSecret** | **Boolean** |  | 
 
 

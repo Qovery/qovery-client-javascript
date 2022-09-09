@@ -1,4 +1,4 @@
-# QoveryApi.EnvironmentVariableScopeEnum
+# QoveryApi.APIVariableScopeEnum
 
 ## Enum
 

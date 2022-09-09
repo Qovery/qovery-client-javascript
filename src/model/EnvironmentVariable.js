@@ -12,12 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import APIVariableScopeEnum from './APIVariableScopeEnum';
 import Base from './Base';
 import EnvironmentVariableAllOf from './EnvironmentVariableAllOf';
 import EnvironmentVariableAllOfAliasedVariable from './EnvironmentVariableAllOfAliasedVariable';
 import EnvironmentVariableAllOfOverriddenVariable from './EnvironmentVariableAllOfOverriddenVariable';
 import EnvironmentVariableRequest from './EnvironmentVariableRequest';
-import EnvironmentVariableScopeEnum from './EnvironmentVariableScopeEnum';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
 
 /**
@@ -36,7 +36,7 @@ class EnvironmentVariable {
      * @param createdAt {Date} 
      * @param key {String} key is case sensitive
      * @param value {String} value of the env variable.
-     * @param scope {module:model/EnvironmentVariableScopeEnum} 
+     * @param scope {module:model/APIVariableScopeEnum} 
      */
     constructor(id, createdAt, key, value, scope) { 
         Base.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key, value);EnvironmentVariableAllOf.initialize(this, scope);
@@ -92,7 +92,7 @@ class EnvironmentVariable {
                 obj['aliased_variable'] = EnvironmentVariableAllOfAliasedVariable.constructFromObject(data['aliased_variable']);
             }
             if (data.hasOwnProperty('scope')) {
-                obj['scope'] = EnvironmentVariableScopeEnum.constructFromObject(data['scope']);
+                obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
@@ -148,7 +148,7 @@ EnvironmentVariable.prototype['overridden_variable'] = undefined;
 EnvironmentVariable.prototype['aliased_variable'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariable.prototype['scope'] = undefined;
 
@@ -204,7 +204,7 @@ EnvironmentVariableAllOf.prototype['overridden_variable'] = undefined;
  */
 EnvironmentVariableAllOf.prototype['aliased_variable'] = undefined;
 /**
- * @member {module:model/EnvironmentVariableScopeEnum} scope
+ * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariableAllOf.prototype['scope'] = undefined;
 /**

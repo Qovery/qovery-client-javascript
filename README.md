@@ -175,7 +175,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecret**](docs/ApplicationSecretApi.md#createApplicationSecret) | **POST** /application/{applicationId}/secret | Add a secret to the application
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecretAlias**](docs/ApplicationSecretApi.md#createApplicationSecretAlias) | **POST** /application/{applicationId}/secret/{secretId}/alias | Create a secret alias at the application level
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecretOverride**](docs/ApplicationSecretApi.md#createApplicationSecretOverride) | **POST** /application/{applicationId}/secret/{secretId}/override | Create a secret override at the application level
-*QoveryApi.ApplicationSecretApi* | [**createContainerSecretOverride**](docs/ApplicationSecretApi.md#createContainerSecretOverride) | **POST** /container/{containerId}/secret/{secretId}/override | Create a secret override at the container level
 *QoveryApi.ApplicationSecretApi* | [**deleteApplicationSecret**](docs/ApplicationSecretApi.md#deleteApplicationSecret) | **DELETE** /application/{applicationId}/secret/{secretId} | Delete a secret from an application
 *QoveryApi.ApplicationSecretApi* | [**editApplicationSecret**](docs/ApplicationSecretApi.md#editApplicationSecret) | **PUT** /application/{applicationId}/secret/{secretId} | Edit a secret belonging to the application
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
@@ -289,6 +288,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerRegistriesApi* | [**listContainerRegistry**](docs/ContainerRegistriesApi.md#listContainerRegistry) | **GET** /organization/{organizationId}/containerRegistry | List organization container registries
 *QoveryApi.ContainerSecretApi* | [**createContainerSecret**](docs/ContainerSecretApi.md#createContainerSecret) | **POST** /container/{containerId}/secret | Add a secret to the container
 *QoveryApi.ContainerSecretApi* | [**createContainerSecretAlias**](docs/ContainerSecretApi.md#createContainerSecretAlias) | **POST** /container/{containerId}/secret/{secretId}/alias | Create a secret alias at the container level
+*QoveryApi.ContainerSecretApi* | [**createContainerSecretOverride**](docs/ContainerSecretApi.md#createContainerSecretOverride) | **POST** /container/{containerId}/secret/{secretId}/override | Create a secret override at the container level
 *QoveryApi.ContainerSecretApi* | [**deleteContainerSecret**](docs/ContainerSecretApi.md#deleteContainerSecret) | **DELETE** /container/{containerId}/secret/{secretId} | Delete a secret from an container
 *QoveryApi.ContainerSecretApi* | [**editContainerSecret**](docs/ContainerSecretApi.md#editContainerSecret) | **PUT** /container/{containerId}/secret/{secretId} | Edit a secret belonging to the container
 *QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets

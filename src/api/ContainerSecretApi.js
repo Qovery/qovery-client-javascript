@@ -18,6 +18,7 @@ import Secret from '../model/Secret';
 import SecretEditRequest from '../model/SecretEditRequest';
 import SecretRequest from '../model/SecretRequest';
 import SecretResponseList from '../model/SecretResponseList';
+import Value from '../model/Value';
 
 /**
 * ContainerSecret service.
@@ -131,6 +132,58 @@ export default class ContainerSecretApi {
       let returnType = Secret;
       return this.apiClient.callApi(
         '/container/{containerId}/secret/{secretId}/alias', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the createContainerSecretOverride operation.
+     * @callback module:api/ContainerSecretApi~createContainerSecretOverrideCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Secret} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a secret override at the container level
+     * - Allows you to override at container level a secret that has a higher scope. - You only have to specify a value in the request body - The system will create a new secret at container level with the same key as the one corresponding to the secret id in the path - The response body will contain the newly created secret - Information regarding the overridden_secret will be exposed in the \"overridden_secret\" field of the newly created secret 
+     * @param {String} containerId Container ID
+     * @param {String} secretId Secret ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/Value} opts.value 
+     * @param {module:api/ContainerSecretApi~createContainerSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Secret}
+     */
+    createContainerSecretOverride(containerId, secretId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['value'];
+      // verify the required parameter 'containerId' is set
+      if (containerId === undefined || containerId === null) {
+        throw new Error("Missing the required parameter 'containerId' when calling createContainerSecretOverride");
+      }
+      // verify the required parameter 'secretId' is set
+      if (secretId === undefined || secretId === null) {
+        throw new Error("Missing the required parameter 'secretId' when calling createContainerSecretOverride");
+      }
+
+      let pathParams = {
+        'containerId': containerId,
+        'secretId': secretId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Secret;
+      return this.apiClient.callApi(
+        '/container/{containerId}/secret/{secretId}/override', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

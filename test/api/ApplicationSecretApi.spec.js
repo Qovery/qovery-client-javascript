@@ -78,16 +78,6 @@
         done();
       });
     });
-    describe('createContainerSecretOverride', function() {
-      it('should call createContainerSecretOverride successfully', function(done) {
-        //uncomment below and update the code to test createContainerSecretOverride
-        //instance.createContainerSecretOverride(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('deleteApplicationSecret', function() {
       it('should call deleteApplicationSecret successfully', function(done) {
         //uncomment below and update the code to test deleteApplicationSecret

@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**createApplicationSecret**](ApplicationSecretApi.md#createApplicationSecret) | **POST** /application/{applicationId}/secret | Add a secret to the application
 [**createApplicationSecretAlias**](ApplicationSecretApi.md#createApplicationSecretAlias) | **POST** /application/{applicationId}/secret/{secretId}/alias | Create a secret alias at the application level
 [**createApplicationSecretOverride**](ApplicationSecretApi.md#createApplicationSecretOverride) | **POST** /application/{applicationId}/secret/{secretId}/override | Create a secret override at the application level
-[**createContainerSecretOverride**](ApplicationSecretApi.md#createContainerSecretOverride) | **POST** /container/{containerId}/secret/{secretId}/override | Create a secret override at the container level
 [**deleteApplicationSecret**](ApplicationSecretApi.md#deleteApplicationSecret) | **DELETE** /application/{applicationId}/secret/{secretId} | Delete a secret from an application
 [**editApplicationSecret**](ApplicationSecretApi.md#editApplicationSecret) | **PUT** /application/{applicationId}/secret/{secretId} | Edit a secret belonging to the application
 [**listApplicationSecrets**](ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
@@ -160,61 +159,6 @@ apiInstance.createApplicationSecretOverride(applicationId, secretId, opts, (erro
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **applicationId** | **String**| Application ID | 
- **secretId** | **String**| Secret ID | 
- **value** | [**Value**](Value.md)|  | [optional] 
-
-### Return type
-
-[**Secret**](Secret.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## createContainerSecretOverride
-
-> Secret createContainerSecretOverride(containerId, secretId, opts)
-
-Create a secret override at the container level
-
-- Allows you to override at container level a secret that has a higher scope. - You only have to specify a value in the request body - The system will create a new secret at container level with the same key as the one corresponding to the secret id in the path - The response body will contain the newly created secret - Information regarding the overridden_secret will be exposed in the \&quot;overridden_secret\&quot; field of the newly created secret 
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.ApplicationSecretApi();
-let containerId = "containerId_example"; // String | Container ID
-let secretId = "secretId_example"; // String | Secret ID
-let opts = {
-  'value': new QoveryApi.Value() // Value | 
-};
-apiInstance.createContainerSecretOverride(containerId, secretId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **containerId** | **String**| Container ID | 
  **secretId** | **String**| Secret ID | 
  **value** | [**Value**](Value.md)|  | [optional] 
 

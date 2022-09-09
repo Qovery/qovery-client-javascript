@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('createContainerSecretOverride', function() {
+      it('should call createContainerSecretOverride successfully', function(done) {
+        //uncomment below and update the code to test createContainerSecretOverride
+        //instance.createContainerSecretOverride(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteContainerSecret', function() {
       it('should call deleteContainerSecret successfully', function(done) {
         //uncomment below and update the code to test deleteContainerSecret

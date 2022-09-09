@@ -19,7 +19,6 @@ import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
-import ServicePort from './ServicePort';
 import ServicePortResponseList from './ServicePortResponseList';
 import ServiceStorage from './ServiceStorage';
 import ServiceStorageStorageInner from './ServiceStorageStorageInner';
@@ -35,13 +34,12 @@ class Application {
      * @alias module:model/Application
      * @implements module:model/Base
      * @implements module:model/ServiceStorage
-     * @implements module:model/ServicePortResponseList
      * @implements module:model/ApplicationAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ServicePortResponseList.initialize(this);ApplicationAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ApplicationAllOf.initialize(this);
         Application.initialize(this, id, createdAt);
     }
 
@@ -67,7 +65,6 @@ class Application {
             obj = obj || new Application();
             Base.constructFromObject(data, obj);
             ServiceStorage.constructFromObject(data, obj);
-            ServicePortResponseList.constructFromObject(data, obj);
             ApplicationAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -81,9 +78,6 @@ class Application {
             }
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
-            }
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ServicePort]);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
@@ -130,6 +124,9 @@ class Application {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ServicePortResponseList.constructFromObject(data['ports']);
+            }
         }
         return obj;
     }
@@ -156,11 +153,6 @@ Application.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 Application.prototype['storage'] = undefined;
-
-/**
- * @member {Array.<module:model/ServicePort>} results
- */
-Application.prototype['results'] = undefined;
 
 /**
  * @member {module:model/ReferenceObject} environment
@@ -250,6 +242,11 @@ Application.prototype['healthcheck'] = undefined;
  */
 Application.prototype['auto_preview'] = true;
 
+/**
+ * @member {module:model/ServicePortResponseList} ports
+ */
+Application.prototype['ports'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -269,11 +266,6 @@ Base.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 ServiceStorage.prototype['storage'] = undefined;
-// Implement ServicePortResponseList interface:
-/**
- * @member {Array.<module:model/ServicePort>} results
- */
-ServicePortResponseList.prototype['results'] = undefined;
 // Implement ApplicationAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment
@@ -348,6 +340,10 @@ ApplicationAllOf.prototype['healthcheck'] = undefined;
  * @default true
  */
 ApplicationAllOf.prototype['auto_preview'] = true;
+/**
+ * @member {module:model/ServicePortResponseList} ports
+ */
+ApplicationAllOf.prototype['ports'] = undefined;
 
 
 

@@ -78,12 +78,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ContainerResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
       //var instance = new QoveryApi.ContainerResponse();
@@ -164,6 +158,12 @@
 
     it('should have the property autoPreview (base name: "auto_preview")', function() {
       // uncomment below and update the code to test the property autoPreview
+      //var instance = new QoveryApi.ContainerResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ports (base name: "ports")', function() {
+      // uncomment below and update the code to test the property ports
       //var instance = new QoveryApi.ContainerResponse();
       //expect(instance).to.be();
     });

@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ApplicationEditRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.ApplicationEditRequest();
@@ -140,6 +134,12 @@
 
     it('should have the property stickySession (base name: "sticky_session")', function() {
       // uncomment below and update the code to test the property stickySession
+      //var instance = new QoveryApi.ApplicationEditRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ports (base name: "ports")', function() {
+      // uncomment below and update the code to test the property ports
       //var instance = new QoveryApi.ApplicationEditRequest();
       //expect(instance).to.be();
     });

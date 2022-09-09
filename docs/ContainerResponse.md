@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **storage** | [**[ServiceStorageStorageInner]**](ServiceStorageStorageInner.md) |  | [optional] 
-**results** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
 **environment** | [**ReferenceObject**](ReferenceObject.md) |  | 
 **registry** | [**ReferenceObject**](ReferenceObject.md) |  | 
 **maximumCpu** | **Number** | Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m &#x3D; 1 cpu | 
@@ -23,5 +22,6 @@ Name | Type | Description | Notes
 **minRunningInstances** | **Number** | Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running.  | [default to 1]
 **maxRunningInstances** | **Number** | Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit.  | [default to 1]
 **autoPreview** | **Boolean** | Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request.  | 
+**ports** | [**ServicePortResponseList**](ServicePortResponseList.md) |  | [optional] 
 
 

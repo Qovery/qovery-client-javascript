@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **storage** | [**[ServiceStorageStorageInner]**](ServiceStorageStorageInner.md) |  | [optional] 
-**results** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
 **environment** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
 **gitRepository** | [**ApplicationGitRepository**](ApplicationGitRepository.md) |  | [optional] 
 **maximumCpu** | **Number** | Maximum cpu that can be allocated to the application based on organization cluster configuration. unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] 
@@ -24,5 +23,6 @@ Name | Type | Description | Notes
 **maxRunningInstances** | **Number** | Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit.  | [optional] [default to 1]
 **healthcheck** | [**Healthcheck**](Healthcheck.md) |  | [optional] 
 **autoPreview** | **Boolean** | Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request.  | [optional] [default to true]
+**ports** | [**ServicePortResponseList**](ServicePortResponseList.md) |  | [optional] 
 
 

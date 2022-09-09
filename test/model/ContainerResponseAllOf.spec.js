@@ -138,6 +138,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property ports (base name: "ports")', function() {
+      // uncomment below and update the code to test the property ports
+      //var instance = new QoveryApi.ContainerResponseAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

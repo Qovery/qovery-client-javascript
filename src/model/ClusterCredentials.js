@@ -22,10 +22,12 @@ class ClusterCredentials {
     /**
      * Constructs a new <code>ClusterCredentials</code>.
      * @alias module:model/ClusterCredentials
+     * @param id {String} 
+     * @param name {String} 
      */
-    constructor() { 
+    constructor(id, name) { 
         
-        ClusterCredentials.initialize(this);
+        ClusterCredentials.initialize(this, id, name);
     }
 
     /**
@@ -33,7 +35,9 @@ class ClusterCredentials {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, name) { 
+        obj['id'] = id;
+        obj['name'] = name;
     }
 
     /**

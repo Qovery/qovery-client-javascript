@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentVariableAllOfAliasedVariable();
+    instance = new QoveryApi.EnvironmentVariableOverride();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,34 @@
       object[property] = value;
   }
 
-  describe('EnvironmentVariableAllOfAliasedVariable', function() {
-    it('should create an instance of EnvironmentVariableAllOfAliasedVariable', function() {
-      // uncomment below and update the code to test EnvironmentVariableAllOfAliasedVariable
-      //var instance = new QoveryApi.EnvironmentVariableAllOfAliasedVariable();
-      //expect(instance).to.be.a(QoveryApi.EnvironmentVariableAllOfAliasedVariable);
+  describe('EnvironmentVariableOverride', function() {
+    it('should create an instance of EnvironmentVariableOverride', function() {
+      // uncomment below and update the code to test EnvironmentVariableOverride
+      //var instance = new QoveryApi.EnvironmentVariableOverride();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentVariableOverride);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.EnvironmentVariableAllOfAliasedVariable();
+      //var instance = new QoveryApi.EnvironmentVariableOverride();
       //expect(instance).to.be();
     });
 
     it('should have the property key (base name: "key")', function() {
       // uncomment below and update the code to test the property key
-      //var instance = new QoveryApi.EnvironmentVariableAllOfAliasedVariable();
+      //var instance = new QoveryApi.EnvironmentVariableOverride();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instance = new QoveryApi.EnvironmentVariableAllOfAliasedVariable();
+      //var instance = new QoveryApi.EnvironmentVariableOverride();
       //expect(instance).to.be();
     });
 
     it('should have the property scope (base name: "scope")', function() {
       // uncomment below and update the code to test the property scope
-      //var instance = new QoveryApi.EnvironmentVariableAllOfAliasedVariable();
+      //var instance = new QoveryApi.EnvironmentVariableOverride();
       //expect(instance).to.be();
     });
 

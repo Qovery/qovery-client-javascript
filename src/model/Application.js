@@ -20,7 +20,7 @@ import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 import ServicePort from './ServicePort';
-import ServicePortPortsInner from './ServicePortPortsInner';
+import ServicePortResponseList from './ServicePortResponseList';
 import ServiceStorage from './ServiceStorage';
 import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
@@ -35,13 +35,13 @@ class Application {
      * @alias module:model/Application
      * @implements module:model/Base
      * @implements module:model/ServiceStorage
-     * @implements module:model/ServicePort
+     * @implements module:model/ServicePortResponseList
      * @implements module:model/ApplicationAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ServicePort.initialize(this);ApplicationAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ServicePortResponseList.initialize(this);ApplicationAllOf.initialize(this);
         Application.initialize(this, id, createdAt);
     }
 
@@ -67,7 +67,7 @@ class Application {
             obj = obj || new Application();
             Base.constructFromObject(data, obj);
             ServiceStorage.constructFromObject(data, obj);
-            ServicePort.constructFromObject(data, obj);
+            ServicePortResponseList.constructFromObject(data, obj);
             ApplicationAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -82,8 +82,8 @@ class Application {
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
             }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortPortsInner]);
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [ServicePort]);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
@@ -158,9 +158,9 @@ Application.prototype['updated_at'] = undefined;
 Application.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ServicePortPortsInner>} ports
+ * @member {Array.<module:model/ServicePort>} results
  */
-Application.prototype['ports'] = undefined;
+Application.prototype['results'] = undefined;
 
 /**
  * @member {module:model/ReferenceObject} environment
@@ -269,11 +269,11 @@ Base.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 ServiceStorage.prototype['storage'] = undefined;
-// Implement ServicePort interface:
+// Implement ServicePortResponseList interface:
 /**
- * @member {Array.<module:model/ServicePortPortsInner>} ports
+ * @member {Array.<module:model/ServicePort>} results
  */
-ServicePort.prototype['ports'] = undefined;
+ServicePortResponseList.prototype['results'] = undefined;
 // Implement ApplicationAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment

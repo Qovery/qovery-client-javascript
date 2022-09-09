@@ -56,7 +56,6 @@ import CloneRequest from './model/CloneRequest';
 import CloudProvider from './model/CloudProvider';
 import CloudProviderEnum from './model/CloudProviderEnum';
 import CloudProviderResponseList from './model/CloudProviderResponseList';
-import CluserCredentials from './model/CluserCredentials';
 import Cluster from './model/Cluster';
 import ClusterAdvancedSettings from './model/ClusterAdvancedSettings';
 import ClusterAllOf from './model/ClusterAllOf';
@@ -113,7 +112,6 @@ import ContainerRequestAllOf from './model/ContainerRequestAllOf';
 import ContainerResponse from './model/ContainerResponse';
 import ContainerResponseAllOf from './model/ContainerResponseAllOf';
 import ContainerResponseList from './model/ContainerResponseList';
-import ContainerStorage from './model/ContainerStorage';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
 import CreateEnvironmentModeEnum from './model/CreateEnvironmentModeEnum';
@@ -204,10 +202,10 @@ import EnvironmentStatsResponseList from './model/EnvironmentStatsResponseList';
 import EnvironmentStatusList from './model/EnvironmentStatusList';
 import EnvironmentTotalNumber from './model/EnvironmentTotalNumber';
 import EnvironmentVariable from './model/EnvironmentVariable';
+import EnvironmentVariableAlias from './model/EnvironmentVariableAlias';
 import EnvironmentVariableAllOf from './model/EnvironmentVariableAllOf';
-import EnvironmentVariableAllOfAliasedVariable from './model/EnvironmentVariableAllOfAliasedVariable';
-import EnvironmentVariableAllOfOverriddenVariable from './model/EnvironmentVariableAllOfOverriddenVariable';
 import EnvironmentVariableEditRequest from './model/EnvironmentVariableEditRequest';
+import EnvironmentVariableOverride from './model/EnvironmentVariableOverride';
 import EnvironmentVariableRequest from './model/EnvironmentVariableRequest';
 import EnvironmentVariableResponseList from './model/EnvironmentVariableResponseList';
 import Event from './model/Event';
@@ -339,9 +337,9 @@ import Service from './model/Service';
 import ServiceAllOf from './model/ServiceAllOf';
 import ServiceDeploymentStatusEnum from './model/ServiceDeploymentStatusEnum';
 import ServicePort from './model/ServicePort';
-import ServicePortPortsInner from './model/ServicePortPortsInner';
 import ServicePortRequest from './model/ServicePortRequest';
 import ServicePortRequestPortsInner from './model/ServicePortRequestPortsInner';
+import ServicePortResponseList from './model/ServicePortResponseList';
 import ServiceResponseList from './model/ServiceResponseList';
 import ServiceStorage from './model/ServiceStorage';
 import ServiceStorageRequest from './model/ServiceStorageRequest';
@@ -736,12 +734,6 @@ export {
     CloudProviderResponseList,
 
     /**
-     * The CluserCredentials model constructor.
-     * @property {module:model/CluserCredentials}
-     */
-    CluserCredentials,
-
-    /**
      * The Cluster model constructor.
      * @property {module:model/Cluster}
      */
@@ -1076,12 +1068,6 @@ export {
      * @property {module:model/ContainerResponseList}
      */
     ContainerResponseList,
-
-    /**
-     * The ContainerStorage model constructor.
-     * @property {module:model/ContainerStorage}
-     */
-    ContainerStorage,
 
     /**
      * The Cost model constructor.
@@ -1624,28 +1610,28 @@ export {
     EnvironmentVariable,
 
     /**
+     * The EnvironmentVariableAlias model constructor.
+     * @property {module:model/EnvironmentVariableAlias}
+     */
+    EnvironmentVariableAlias,
+
+    /**
      * The EnvironmentVariableAllOf model constructor.
      * @property {module:model/EnvironmentVariableAllOf}
      */
     EnvironmentVariableAllOf,
 
     /**
-     * The EnvironmentVariableAllOfAliasedVariable model constructor.
-     * @property {module:model/EnvironmentVariableAllOfAliasedVariable}
-     */
-    EnvironmentVariableAllOfAliasedVariable,
-
-    /**
-     * The EnvironmentVariableAllOfOverriddenVariable model constructor.
-     * @property {module:model/EnvironmentVariableAllOfOverriddenVariable}
-     */
-    EnvironmentVariableAllOfOverriddenVariable,
-
-    /**
      * The EnvironmentVariableEditRequest model constructor.
      * @property {module:model/EnvironmentVariableEditRequest}
      */
     EnvironmentVariableEditRequest,
+
+    /**
+     * The EnvironmentVariableOverride model constructor.
+     * @property {module:model/EnvironmentVariableOverride}
+     */
+    EnvironmentVariableOverride,
 
     /**
      * The EnvironmentVariableRequest model constructor.
@@ -2434,12 +2420,6 @@ export {
     ServicePort,
 
     /**
-     * The ServicePortPortsInner model constructor.
-     * @property {module:model/ServicePortPortsInner}
-     */
-    ServicePortPortsInner,
-
-    /**
      * The ServicePortRequest model constructor.
      * @property {module:model/ServicePortRequest}
      */
@@ -2450,6 +2430,12 @@ export {
      * @property {module:model/ServicePortRequestPortsInner}
      */
     ServicePortRequestPortsInner,
+
+    /**
+     * The ServicePortResponseList model constructor.
+     * @property {module:model/ServicePortResponseList}
+     */
+    ServicePortResponseList,
 
     /**
      * The ServiceResponseList model constructor.

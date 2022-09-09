@@ -54,8 +54,44 @@
       //expect(instance).to.be.a(QoveryApi.ServicePort);
     });
 
-    it('should have the property ports (base name: "ports")', function() {
-      // uncomment below and update the code to test the property ports
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.ServicePort();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new QoveryApi.ServicePort();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property internalPort (base name: "internal_port")', function() {
+      // uncomment below and update the code to test the property internalPort
+      //var instance = new QoveryApi.ServicePort();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalPort (base name: "external_port")', function() {
+      // uncomment below and update the code to test the property externalPort
+      //var instance = new QoveryApi.ServicePort();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property publiclyAccessible (base name: "publicly_accessible")', function() {
+      // uncomment below and update the code to test the property publiclyAccessible
+      //var instance = new QoveryApi.ServicePort();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDefault (base name: "is_default")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new QoveryApi.ServicePort();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property protocol (base name: "protocol")', function() {
+      // uncomment below and update the code to test the property protocol
       //var instance = new QoveryApi.ServicePort();
       //expect(instance).to.be();
     });

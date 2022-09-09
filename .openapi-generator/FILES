@@ -63,7 +63,6 @@ docs/CloudProviderApi.md
 docs/CloudProviderCredentialsApi.md
 docs/CloudProviderEnum.md
 docs/CloudProviderResponseList.md
-docs/CluserCredentials.md
 docs/Cluster.md
 docs/ClusterAdvancedSettings.md
 docs/ClusterAllOf.md
@@ -133,7 +132,6 @@ docs/ContainerResponse.md
 docs/ContainerResponseAllOf.md
 docs/ContainerResponseList.md
 docs/ContainerSecretApi.md
-docs/ContainerStorage.md
 docs/ContainersApi.md
 docs/Cost.md
 docs/CostRange.md
@@ -240,11 +238,11 @@ docs/EnvironmentStatsResponseList.md
 docs/EnvironmentStatusList.md
 docs/EnvironmentTotalNumber.md
 docs/EnvironmentVariable.md
+docs/EnvironmentVariableAlias.md
 docs/EnvironmentVariableAllOf.md
-docs/EnvironmentVariableAllOfAliasedVariable.md
-docs/EnvironmentVariableAllOfOverriddenVariable.md
 docs/EnvironmentVariableApi.md
 docs/EnvironmentVariableEditRequest.md
+docs/EnvironmentVariableOverride.md
 docs/EnvironmentVariableRequest.md
 docs/EnvironmentVariableResponseList.md
 docs/EnvironmentsApi.md
@@ -391,9 +389,9 @@ docs/Service.md
 docs/ServiceAllOf.md
 docs/ServiceDeploymentStatusEnum.md
 docs/ServicePort.md
-docs/ServicePortPortsInner.md
 docs/ServicePortRequest.md
 docs/ServicePortRequestPortsInner.md
+docs/ServicePortResponseList.md
 docs/ServiceResponseList.md
 docs/ServiceStorage.md
 docs/ServiceStorageRequest.md
@@ -538,7 +536,6 @@ src/model/CloneRequest.js
 src/model/CloudProvider.js
 src/model/CloudProviderEnum.js
 src/model/CloudProviderResponseList.js
-src/model/CluserCredentials.js
 src/model/Cluster.js
 src/model/ClusterAdvancedSettings.js
 src/model/ClusterAllOf.js
@@ -595,7 +592,6 @@ src/model/ContainerRequestAllOf.js
 src/model/ContainerResponse.js
 src/model/ContainerResponseAllOf.js
 src/model/ContainerResponseList.js
-src/model/ContainerStorage.js
 src/model/Cost.js
 src/model/CostRange.js
 src/model/CreateEnvironmentModeEnum.js
@@ -686,10 +682,10 @@ src/model/EnvironmentStatsResponseList.js
 src/model/EnvironmentStatusList.js
 src/model/EnvironmentTotalNumber.js
 src/model/EnvironmentVariable.js
+src/model/EnvironmentVariableAlias.js
 src/model/EnvironmentVariableAllOf.js
-src/model/EnvironmentVariableAllOfAliasedVariable.js
-src/model/EnvironmentVariableAllOfOverriddenVariable.js
 src/model/EnvironmentVariableEditRequest.js
+src/model/EnvironmentVariableOverride.js
 src/model/EnvironmentVariableRequest.js
 src/model/EnvironmentVariableResponseList.js
 src/model/Event.js
@@ -821,9 +817,9 @@ src/model/Service.js
 src/model/ServiceAllOf.js
 src/model/ServiceDeploymentStatusEnum.js
 src/model/ServicePort.js
-src/model/ServicePortPortsInner.js
 src/model/ServicePortRequest.js
 src/model/ServicePortRequestPortsInner.js
+src/model/ServicePortResponseList.js
 src/model/ServiceResponseList.js
 src/model/ServiceStorage.js
 src/model/ServiceStorageRequest.js
@@ -962,7 +958,6 @@ test/model/CloneRequest.spec.js
 test/model/CloudProvider.spec.js
 test/model/CloudProviderEnum.spec.js
 test/model/CloudProviderResponseList.spec.js
-test/model/CluserCredentials.spec.js
 test/model/Cluster.spec.js
 test/model/ClusterAdvancedSettings.spec.js
 test/model/ClusterAllOf.spec.js
@@ -1019,7 +1014,6 @@ test/model/ContainerRequestAllOf.spec.js
 test/model/ContainerResponse.spec.js
 test/model/ContainerResponseAllOf.spec.js
 test/model/ContainerResponseList.spec.js
-test/model/ContainerStorage.spec.js
 test/model/Cost.spec.js
 test/model/CostRange.spec.js
 test/model/CreateEnvironmentModeEnum.spec.js
@@ -1110,10 +1104,10 @@ test/model/EnvironmentStatsResponseList.spec.js
 test/model/EnvironmentStatusList.spec.js
 test/model/EnvironmentTotalNumber.spec.js
 test/model/EnvironmentVariable.spec.js
+test/model/EnvironmentVariableAlias.spec.js
 test/model/EnvironmentVariableAllOf.spec.js
-test/model/EnvironmentVariableAllOfAliasedVariable.spec.js
-test/model/EnvironmentVariableAllOfOverriddenVariable.spec.js
 test/model/EnvironmentVariableEditRequest.spec.js
+test/model/EnvironmentVariableOverride.spec.js
 test/model/EnvironmentVariableRequest.spec.js
 test/model/EnvironmentVariableResponseList.spec.js
 test/model/Event.spec.js
@@ -1245,9 +1239,9 @@ test/model/Service.spec.js
 test/model/ServiceAllOf.spec.js
 test/model/ServiceDeploymentStatusEnum.spec.js
 test/model/ServicePort.spec.js
-test/model/ServicePortPortsInner.spec.js
 test/model/ServicePortRequest.spec.js
 test/model/ServicePortRequestPortsInner.spec.js
+test/model/ServicePortResponseList.spec.js
 test/model/ServiceResponseList.spec.js
 test/model/ServiceStorage.spec.js
 test/model/ServiceStorageRequest.spec.js

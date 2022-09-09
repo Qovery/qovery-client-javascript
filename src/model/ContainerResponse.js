@@ -16,7 +16,7 @@ import Base from './Base';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
 import ReferenceObject from './ReferenceObject';
 import ServicePort from './ServicePort';
-import ServicePortPortsInner from './ServicePortPortsInner';
+import ServicePortResponseList from './ServicePortResponseList';
 import ServiceStorage from './ServiceStorage';
 import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
@@ -31,7 +31,7 @@ class ContainerResponse {
      * @alias module:model/ContainerResponse
      * @implements module:model/Base
      * @implements module:model/ServiceStorage
-     * @implements module:model/ServicePort
+     * @implements module:model/ServicePortResponseList
      * @implements module:model/ContainerResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
@@ -49,7 +49,7 @@ class ContainerResponse {
      * @param autoPreview {Boolean} Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
      */
     constructor(id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
-        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ServicePort.initialize(this);ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ServicePortResponseList.initialize(this);ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
         ContainerResponse.initialize(this, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
     }
 
@@ -87,7 +87,7 @@ class ContainerResponse {
             obj = obj || new ContainerResponse();
             Base.constructFromObject(data, obj);
             ServiceStorage.constructFromObject(data, obj);
-            ServicePort.constructFromObject(data, obj);
+            ServicePortResponseList.constructFromObject(data, obj);
             ContainerResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -102,8 +102,8 @@ class ContainerResponse {
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
             }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortPortsInner]);
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [ServicePort]);
             }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
@@ -175,9 +175,9 @@ ContainerResponse.prototype['updated_at'] = undefined;
 ContainerResponse.prototype['storage'] = undefined;
 
 /**
- * @member {Array.<module:model/ServicePortPortsInner>} ports
+ * @member {Array.<module:model/ServicePort>} results
  */
-ContainerResponse.prototype['ports'] = undefined;
+ContainerResponse.prototype['results'] = undefined;
 
 /**
  * @member {module:model/ReferenceObject} environment
@@ -281,11 +281,11 @@ Base.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 ServiceStorage.prototype['storage'] = undefined;
-// Implement ServicePort interface:
+// Implement ServicePortResponseList interface:
 /**
- * @member {Array.<module:model/ServicePortPortsInner>} ports
+ * @member {Array.<module:model/ServicePort>} results
  */
-ServicePort.prototype['ports'] = undefined;
+ServicePortResponseList.prototype['results'] = undefined;
 // Implement ContainerResponseAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentVariableAllOfOverriddenVariable();
+    instance = new QoveryApi.ServicePortResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,16 @@
       object[property] = value;
   }
 
-  describe('EnvironmentVariableAllOfOverriddenVariable', function() {
-    it('should create an instance of EnvironmentVariableAllOfOverriddenVariable', function() {
-      // uncomment below and update the code to test EnvironmentVariableAllOfOverriddenVariable
-      //var instance = new QoveryApi.EnvironmentVariableAllOfOverriddenVariable();
-      //expect(instance).to.be.a(QoveryApi.EnvironmentVariableAllOfOverriddenVariable);
+  describe('ServicePortResponseList', function() {
+    it('should create an instance of ServicePortResponseList', function() {
+      // uncomment below and update the code to test ServicePortResponseList
+      //var instance = new QoveryApi.ServicePortResponseList();
+      //expect(instance).to.be.a(QoveryApi.ServicePortResponseList);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.EnvironmentVariableAllOfOverriddenVariable();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property key (base name: "key")', function() {
-      // uncomment below and update the code to test the property key
-      //var instance = new QoveryApi.EnvironmentVariableAllOfOverriddenVariable();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
-      //var instance = new QoveryApi.EnvironmentVariableAllOfOverriddenVariable();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property scope (base name: "scope")', function() {
-      // uncomment below and update the code to test the property scope
-      //var instance = new QoveryApi.EnvironmentVariableAllOfOverriddenVariable();
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instance = new QoveryApi.ServicePortResponseList();
       //expect(instance).to.be();
     });
 

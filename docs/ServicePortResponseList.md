@@ -1,10 +1,9 @@
-# QoveryApi.ClusterCredentials
+# QoveryApi.ServicePortResponseList
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | 
-**name** | **String** |  | 
+**results** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
 
 

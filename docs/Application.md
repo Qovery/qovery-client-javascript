@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **storage** | [**[ServiceStorageStorageInner]**](ServiceStorageStorageInner.md) |  | [optional] 
-**ports** | [**[ServicePortPortsInner]**](ServicePortPortsInner.md) |  | [optional] 
+**results** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
 **environment** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
 **gitRepository** | [**ApplicationGitRepository**](ApplicationGitRepository.md) |  | [optional] 
 **maximumCpu** | **Number** | Maximum cpu that can be allocated to the application based on organization cluster configuration. unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] 

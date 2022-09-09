@@ -15,18 +15,22 @@ import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
- * The EnvironmentVariableAllOfAliasedVariable model module.
- * @module model/EnvironmentVariableAllOfAliasedVariable
+ * The EnvironmentVariableOverride model module.
+ * @module model/EnvironmentVariableOverride
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class EnvironmentVariableAllOfAliasedVariable {
+class EnvironmentVariableOverride {
     /**
-     * Constructs a new <code>EnvironmentVariableAllOfAliasedVariable</code>.
-     * @alias module:model/EnvironmentVariableAllOfAliasedVariable
+     * Constructs a new <code>EnvironmentVariableOverride</code>.
+     * @alias module:model/EnvironmentVariableOverride
+     * @param id {String} 
+     * @param key {String} 
+     * @param value {String} 
+     * @param scope {module:model/APIVariableScopeEnum} 
      */
-    constructor() { 
+    constructor(id, key, value, scope) { 
         
-        EnvironmentVariableAllOfAliasedVariable.initialize(this);
+        EnvironmentVariableOverride.initialize(this, id, key, value, scope);
     }
 
     /**
@@ -34,19 +38,23 @@ class EnvironmentVariableAllOfAliasedVariable {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, key, value, scope) { 
+        obj['id'] = id;
+        obj['key'] = key;
+        obj['value'] = value;
+        obj['scope'] = scope;
     }
 
     /**
-     * Constructs a <code>EnvironmentVariableAllOfAliasedVariable</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentVariableOverride</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EnvironmentVariableAllOfAliasedVariable} obj Optional instance to populate.
-     * @return {module:model/EnvironmentVariableAllOfAliasedVariable} The populated <code>EnvironmentVariableAllOfAliasedVariable</code> instance.
+     * @param {module:model/EnvironmentVariableOverride} obj Optional instance to populate.
+     * @return {module:model/EnvironmentVariableOverride} The populated <code>EnvironmentVariableOverride</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EnvironmentVariableAllOfAliasedVariable();
+            obj = obj || new EnvironmentVariableOverride();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -70,27 +78,27 @@ class EnvironmentVariableAllOfAliasedVariable {
 /**
  * @member {String} id
  */
-EnvironmentVariableAllOfAliasedVariable.prototype['id'] = undefined;
+EnvironmentVariableOverride.prototype['id'] = undefined;
 
 /**
  * @member {String} key
  */
-EnvironmentVariableAllOfAliasedVariable.prototype['key'] = undefined;
+EnvironmentVariableOverride.prototype['key'] = undefined;
 
 /**
  * @member {String} value
  */
-EnvironmentVariableAllOfAliasedVariable.prototype['value'] = undefined;
+EnvironmentVariableOverride.prototype['value'] = undefined;
 
 /**
  * @member {module:model/APIVariableScopeEnum} scope
  */
-EnvironmentVariableAllOfAliasedVariable.prototype['scope'] = undefined;
+EnvironmentVariableOverride.prototype['scope'] = undefined;
 
 
 
 
 
 
-export default EnvironmentVariableAllOfAliasedVariable;
+export default EnvironmentVariableOverride;
 

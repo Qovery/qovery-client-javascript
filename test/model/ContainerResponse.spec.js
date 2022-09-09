@@ -78,8 +78,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property ports (base name: "ports")', function() {
-      // uncomment below and update the code to test the property ports
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
       //var instance = new QoveryApi.ContainerResponse();
       //expect(instance).to.be();
     });

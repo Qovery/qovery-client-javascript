@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.CluserCredentials();
+    instance = new QoveryApi.EnvironmentVariableAlias();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,34 @@
       object[property] = value;
   }
 
-  describe('CluserCredentials', function() {
-    it('should create an instance of CluserCredentials', function() {
-      // uncomment below and update the code to test CluserCredentials
-      //var instance = new QoveryApi.CluserCredentials();
-      //expect(instance).to.be.a(QoveryApi.CluserCredentials);
+  describe('EnvironmentVariableAlias', function() {
+    it('should create an instance of EnvironmentVariableAlias', function() {
+      // uncomment below and update the code to test EnvironmentVariableAlias
+      //var instance = new QoveryApi.EnvironmentVariableAlias();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentVariableAlias);
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.CluserCredentials();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.EnvironmentVariableAlias();
       //expect(instance).to.be();
     });
 
-    it('should have the property accessKeyId (base name: "access_key_id")', function() {
-      // uncomment below and update the code to test the property accessKeyId
-      //var instance = new QoveryApi.CluserCredentials();
+    it('should have the property key (base name: "key")', function() {
+      // uncomment below and update the code to test the property key
+      //var instance = new QoveryApi.EnvironmentVariableAlias();
       //expect(instance).to.be();
     });
 
-    it('should have the property secretAccessKey (base name: "secret_access_key")', function() {
-      // uncomment below and update the code to test the property secretAccessKey
-      //var instance = new QoveryApi.CluserCredentials();
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instance = new QoveryApi.EnvironmentVariableAlias();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scope (base name: "scope")', function() {
+      // uncomment below and update the code to test the property scope
+      //var instance = new QoveryApi.EnvironmentVariableAlias();
       //expect(instance).to.be();
     });
 

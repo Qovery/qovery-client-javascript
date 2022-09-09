@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListContainerDeploymentHistory200ResponseAllOfResultsInner from './ListContainerDeploymentHistory200ResponseAllOfResultsInner';
+import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 
 /**
  * The ListContainerDeploymentHistory200ResponseAllOf model module.
@@ -49,7 +49,7 @@ class ListContainerDeploymentHistory200ResponseAllOf {
             obj = obj || new ListContainerDeploymentHistory200ResponseAllOf();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ListContainerDeploymentHistory200ResponseAllOfResultsInner]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryContainer]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class ListContainerDeploymentHistory200ResponseAllOf {
 }
 
 /**
- * @member {Array.<module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner>} results
+ * @member {Array.<module:model/DeploymentHistoryContainer>} results
  */
 ListContainerDeploymentHistory200ResponseAllOf.prototype['results'] = undefined;
 

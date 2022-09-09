@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
 
 /**
- * The ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf model module.
- * @module model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf
+ * The DeploymentHistoryContainerAllOf model module.
+ * @module model/DeploymentHistoryContainerAllOf
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf {
+class DeploymentHistoryContainerAllOf {
     /**
-     * Constructs a new <code>ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf</code>.
-     * @alias module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf
+     * Constructs a new <code>DeploymentHistoryContainerAllOf</code>.
+     * @alias module:model/DeploymentHistoryContainerAllOf
      */
     constructor() { 
         
-        ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.initialize(this);
+        DeploymentHistoryContainerAllOf.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf {
     }
 
     /**
-     * Constructs a <code>ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentHistoryContainerAllOf</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf} obj Optional instance to populate.
-     * @return {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf} The populated <code>ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf</code> instance.
+     * @param {module:model/DeploymentHistoryContainerAllOf} obj Optional instance to populate.
+     * @return {module:model/DeploymentHistoryContainerAllOf} The populated <code>DeploymentHistoryContainerAllOf</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+            obj = obj || new DeploymentHistoryContainerAllOf();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -77,37 +77,37 @@ class ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf {
  * name of the container
  * @member {String} name
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['name'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['name'] = undefined;
 
 /**
  * @member {module:model/DeploymentHistoryStatusEnum} status
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['status'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['status'] = undefined;
 
 /**
  * @member {String} image_name
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['image_name'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['image_name'] = undefined;
 
 /**
  * @member {String} tag
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['tag'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['tag'] = undefined;
 
 /**
  * @member {Array.<String>} arguments
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['arguments'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['arguments'] = undefined;
 
 /**
  * @member {String} entrypoint
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['entrypoint'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['entrypoint'] = undefined;
 
 
 
 
 
 
-export default ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf;
+export default DeploymentHistoryContainerAllOf;
 

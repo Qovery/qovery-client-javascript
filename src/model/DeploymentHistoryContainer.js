@@ -13,26 +13,26 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import DeploymentHistoryContainerAllOf from './DeploymentHistoryContainerAllOf';
 import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
-import ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf from './ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf';
 
 /**
- * The ListContainerDeploymentHistory200ResponseAllOfResultsInner model module.
- * @module model/ListContainerDeploymentHistory200ResponseAllOfResultsInner
+ * The DeploymentHistoryContainer model module.
+ * @module model/DeploymentHistoryContainer
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListContainerDeploymentHistory200ResponseAllOfResultsInner {
+class DeploymentHistoryContainer {
     /**
-     * Constructs a new <code>ListContainerDeploymentHistory200ResponseAllOfResultsInner</code>.
-     * @alias module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner
+     * Constructs a new <code>DeploymentHistoryContainer</code>.
+     * @alias module:model/DeploymentHistoryContainer
      * @implements module:model/Base
-     * @implements module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf
+     * @implements module:model/DeploymentHistoryContainerAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.initialize(this);
-        ListContainerDeploymentHistory200ResponseAllOfResultsInner.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);DeploymentHistoryContainerAllOf.initialize(this);
+        DeploymentHistoryContainer.initialize(this, id, createdAt);
     }
 
     /**
@@ -46,17 +46,17 @@ class ListContainerDeploymentHistory200ResponseAllOfResultsInner {
     }
 
     /**
-     * Constructs a <code>ListContainerDeploymentHistory200ResponseAllOfResultsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentHistoryContainer</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner} obj Optional instance to populate.
-     * @return {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner} The populated <code>ListContainerDeploymentHistory200ResponseAllOfResultsInner</code> instance.
+     * @param {module:model/DeploymentHistoryContainer} obj Optional instance to populate.
+     * @return {module:model/DeploymentHistoryContainer} The populated <code>DeploymentHistoryContainer</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListContainerDeploymentHistory200ResponseAllOfResultsInner();
+            obj = obj || new DeploymentHistoryContainer();
             Base.constructFromObject(data, obj);
-            ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.constructFromObject(data, obj);
+            DeploymentHistoryContainerAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -95,48 +95,48 @@ class ListContainerDeploymentHistory200ResponseAllOfResultsInner {
 /**
  * @member {String} id
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['id'] = undefined;
+DeploymentHistoryContainer.prototype['id'] = undefined;
 
 /**
  * @member {Date} created_at
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['created_at'] = undefined;
+DeploymentHistoryContainer.prototype['created_at'] = undefined;
 
 /**
  * @member {Date} updated_at
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['updated_at'] = undefined;
+DeploymentHistoryContainer.prototype['updated_at'] = undefined;
 
 /**
  * name of the container
  * @member {String} name
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['name'] = undefined;
+DeploymentHistoryContainer.prototype['name'] = undefined;
 
 /**
  * @member {module:model/DeploymentHistoryStatusEnum} status
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['status'] = undefined;
+DeploymentHistoryContainer.prototype['status'] = undefined;
 
 /**
  * @member {String} image_name
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['image_name'] = undefined;
+DeploymentHistoryContainer.prototype['image_name'] = undefined;
 
 /**
  * @member {String} tag
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['tag'] = undefined;
+DeploymentHistoryContainer.prototype['tag'] = undefined;
 
 /**
  * @member {Array.<String>} arguments
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['arguments'] = undefined;
+DeploymentHistoryContainer.prototype['arguments'] = undefined;
 
 /**
  * @member {String} entrypoint
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInner.prototype['entrypoint'] = undefined;
+DeploymentHistoryContainer.prototype['entrypoint'] = undefined;
 
 
 // Implement Base interface:
@@ -152,35 +152,35 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf interface:
+// Implement DeploymentHistoryContainerAllOf interface:
 /**
  * name of the container
  * @member {String} name
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['name'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['name'] = undefined;
 /**
  * @member {module:model/DeploymentHistoryStatusEnum} status
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['status'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['status'] = undefined;
 /**
  * @member {String} image_name
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['image_name'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['image_name'] = undefined;
 /**
  * @member {String} tag
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['tag'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['tag'] = undefined;
 /**
  * @member {Array.<String>} arguments
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['arguments'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['arguments'] = undefined;
 /**
  * @member {String} entrypoint
  */
-ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['entrypoint'] = undefined;
+DeploymentHistoryContainerAllOf.prototype['entrypoint'] = undefined;
 
 
 
 
-export default ListContainerDeploymentHistory200ResponseAllOfResultsInner;
+export default DeploymentHistoryContainer;
 

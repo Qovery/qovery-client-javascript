@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ListContainerDeploymentHistory200ResponseAllOfResultsInner]**](ListContainerDeploymentHistory200ResponseAllOfResultsInner.md) |  | [optional] 
+**results** | [**[DeploymentHistoryContainer]**](DeploymentHistoryContainer.md) |  | [optional] 
 
 

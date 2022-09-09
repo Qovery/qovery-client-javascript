@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 import ListContainerDeploymentHistory200ResponseAllOf from './ListContainerDeploymentHistory200ResponseAllOf';
-import ListContainerDeploymentHistory200ResponseAllOfResultsInner from './ListContainerDeploymentHistory200ResponseAllOfResultsInner';
 import PaginationData from './PaginationData';
 
 /**
@@ -65,7 +65,7 @@ class ListContainerDeploymentHistory200Response {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ListContainerDeploymentHistory200ResponseAllOfResultsInner]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryContainer]);
             }
         }
         return obj;
@@ -85,7 +85,7 @@ ListContainerDeploymentHistory200Response.prototype['page'] = undefined;
 ListContainerDeploymentHistory200Response.prototype['page_size'] = undefined;
 
 /**
- * @member {Array.<module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner>} results
+ * @member {Array.<module:model/DeploymentHistoryContainer>} results
  */
 ListContainerDeploymentHistory200Response.prototype['results'] = undefined;
 
@@ -101,7 +101,7 @@ PaginationData.prototype['page'] = undefined;
 PaginationData.prototype['page_size'] = undefined;
 // Implement ListContainerDeploymentHistory200ResponseAllOf interface:
 /**
- * @member {Array.<module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner>} results
+ * @member {Array.<module:model/DeploymentHistoryContainer>} results
  */
 ListContainerDeploymentHistory200ResponseAllOf.prototype['results'] = undefined;
 

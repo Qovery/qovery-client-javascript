@@ -1,4 +1,4 @@
-# QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf
+# QoveryApi.DeploymentHistoryContainerAllOf
 
 ## Properties
 

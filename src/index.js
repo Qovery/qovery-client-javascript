@@ -150,6 +150,8 @@ import DeploymentHistory from './model/DeploymentHistory';
 import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
 import DeploymentHistoryApplication from './model/DeploymentHistoryApplication';
 import DeploymentHistoryApplicationAllOf from './model/DeploymentHistoryApplicationAllOf';
+import DeploymentHistoryContainer from './model/DeploymentHistoryContainer';
+import DeploymentHistoryContainerAllOf from './model/DeploymentHistoryContainerAllOf';
 import DeploymentHistoryDatabase from './model/DeploymentHistoryDatabase';
 import DeploymentHistoryDatabaseAllOf from './model/DeploymentHistoryDatabaseAllOf';
 import DeploymentHistoryEnvironment from './model/DeploymentHistoryEnvironment';
@@ -243,8 +245,6 @@ import LinkedServiceTypeEnum from './model/LinkedServiceTypeEnum';
 import ListClusterLogs200Response from './model/ListClusterLogs200Response';
 import ListContainerDeploymentHistory200Response from './model/ListContainerDeploymentHistory200Response';
 import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
-import ListContainerDeploymentHistory200ResponseAllOfResultsInner from './model/ListContainerDeploymentHistory200ResponseAllOfResultsInner';
-import ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf from './model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf';
 import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
@@ -1298,6 +1298,18 @@ export {
     DeploymentHistoryApplicationAllOf,
 
     /**
+     * The DeploymentHistoryContainer model constructor.
+     * @property {module:model/DeploymentHistoryContainer}
+     */
+    DeploymentHistoryContainer,
+
+    /**
+     * The DeploymentHistoryContainerAllOf model constructor.
+     * @property {module:model/DeploymentHistoryContainerAllOf}
+     */
+    DeploymentHistoryContainerAllOf,
+
+    /**
      * The DeploymentHistoryDatabase model constructor.
      * @property {module:model/DeploymentHistoryDatabase}
      */
@@ -1854,18 +1866,6 @@ export {
      * @property {module:model/ListContainerDeploymentHistory200ResponseAllOf}
      */
     ListContainerDeploymentHistory200ResponseAllOf,
-
-    /**
-     * The ListContainerDeploymentHistory200ResponseAllOfResultsInner model constructor.
-     * @property {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInner}
-     */
-    ListContainerDeploymentHistory200ResponseAllOfResultsInner,
-
-    /**
-     * The ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf model constructor.
-     * @property {module:model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf}
-     */
-    ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf,
 
     /**
      * The ListContainerRegistry200Response model constructor.

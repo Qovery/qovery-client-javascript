@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+    instance = new QoveryApi.DeploymentHistoryContainer();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,46 +47,64 @@
       object[property] = value;
   }
 
-  describe('ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf', function() {
-    it('should create an instance of ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf', function() {
-      // uncomment below and update the code to test ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf
-      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
-      //expect(instance).to.be.a(QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf);
+  describe('DeploymentHistoryContainer', function() {
+    it('should create an instance of DeploymentHistoryContainer', function() {
+      // uncomment below and update the code to test DeploymentHistoryContainer
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
+      //expect(instance).to.be.a(QoveryApi.DeploymentHistoryContainer);
+    });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
+      //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
       //expect(instance).to.be();
     });
 
     it('should have the property imageName (base name: "image_name")', function() {
       // uncomment below and update the code to test the property imageName
-      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
       //expect(instance).to.be();
     });
 
     it('should have the property _arguments (base name: "arguments")', function() {
       // uncomment below and update the code to test the property _arguments
-      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
       //expect(instance).to.be();
     });
 
     it('should have the property entrypoint (base name: "entrypoint")', function() {
       // uncomment below and update the code to test the property entrypoint
-      //var instance = new QoveryApi.ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryContainer();
       //expect(instance).to.be();
     });
 

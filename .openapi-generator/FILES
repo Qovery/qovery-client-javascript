@@ -180,6 +180,8 @@ docs/DeploymentHistory.md
 docs/DeploymentHistoryAllOf.md
 docs/DeploymentHistoryApplication.md
 docs/DeploymentHistoryApplicationAllOf.md
+docs/DeploymentHistoryContainer.md
+docs/DeploymentHistoryContainerAllOf.md
 docs/DeploymentHistoryDatabase.md
 docs/DeploymentHistoryDatabaseAllOf.md
 docs/DeploymentHistoryEnvironment.md
@@ -283,8 +285,6 @@ docs/LinkedServiceTypeEnum.md
 docs/ListClusterLogs200Response.md
 docs/ListContainerDeploymentHistory200Response.md
 docs/ListContainerDeploymentHistory200ResponseAllOf.md
-docs/ListContainerDeploymentHistory200ResponseAllOfResultsInner.md
-docs/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.md
 docs/ListContainerRegistry200Response.md
 docs/ListDatabaseDeploymentHistory200Response.md
 docs/ListDatabaseDeploymentHistory200ResponseAllOf.md
@@ -630,6 +630,8 @@ src/model/DeploymentHistory.js
 src/model/DeploymentHistoryAllOf.js
 src/model/DeploymentHistoryApplication.js
 src/model/DeploymentHistoryApplicationAllOf.js
+src/model/DeploymentHistoryContainer.js
+src/model/DeploymentHistoryContainerAllOf.js
 src/model/DeploymentHistoryDatabase.js
 src/model/DeploymentHistoryDatabaseAllOf.js
 src/model/DeploymentHistoryEnvironment.js
@@ -723,8 +725,6 @@ src/model/LinkedServiceTypeEnum.js
 src/model/ListClusterLogs200Response.js
 src/model/ListContainerDeploymentHistory200Response.js
 src/model/ListContainerDeploymentHistory200ResponseAllOf.js
-src/model/ListContainerDeploymentHistory200ResponseAllOfResultsInner.js
-src/model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.js
 src/model/ListContainerRegistry200Response.js
 src/model/ListDatabaseDeploymentHistory200Response.js
 src/model/ListDatabaseDeploymentHistory200ResponseAllOf.js
@@ -1052,6 +1052,8 @@ test/model/DeploymentHistory.spec.js
 test/model/DeploymentHistoryAllOf.spec.js
 test/model/DeploymentHistoryApplication.spec.js
 test/model/DeploymentHistoryApplicationAllOf.spec.js
+test/model/DeploymentHistoryContainer.spec.js
+test/model/DeploymentHistoryContainerAllOf.spec.js
 test/model/DeploymentHistoryDatabase.spec.js
 test/model/DeploymentHistoryDatabaseAllOf.spec.js
 test/model/DeploymentHistoryEnvironment.spec.js
@@ -1145,8 +1147,6 @@ test/model/LinkedServiceTypeEnum.spec.js
 test/model/ListClusterLogs200Response.spec.js
 test/model/ListContainerDeploymentHistory200Response.spec.js
 test/model/ListContainerDeploymentHistory200ResponseAllOf.spec.js
-test/model/ListContainerDeploymentHistory200ResponseAllOfResultsInner.spec.js
-test/model/ListContainerDeploymentHistory200ResponseAllOfResultsInnerAllOf.spec.js
 test/model/ListContainerRegistry200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200ResponseAllOf.spec.js

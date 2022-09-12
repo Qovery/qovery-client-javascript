@@ -17,6 +17,5 @@ Name | Type | Description | Notes
 **healthcheck** | [**Healthcheck**](Healthcheck.md) |  | [optional] 
 **autoPreview** | **Boolean** | Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request.  | [optional] [default to true]
 **stickySession** | **Boolean** | Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application.  | [optional] [default to false]
-**ports** | [**ServicePortResponseList**](ServicePortResponseList.md) |  | [optional] 
 
 

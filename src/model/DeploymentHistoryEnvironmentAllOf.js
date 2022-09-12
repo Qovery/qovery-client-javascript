@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import DeploymentHistoryApplication from './DeploymentHistoryApplication';
+import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
 import StateEnum from './StateEnum';
 
@@ -56,6 +57,9 @@ class DeploymentHistoryEnvironmentAllOf {
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [DeploymentHistoryApplication]);
             }
+            if (data.hasOwnProperty('containers')) {
+                obj['containers'] = ApiClient.convertToType(data['containers'], [DeploymentHistoryContainer]);
+            }
             if (data.hasOwnProperty('databases')) {
                 obj['databases'] = ApiClient.convertToType(data['databases'], [DeploymentHistoryDatabase]);
             }
@@ -75,6 +79,11 @@ DeploymentHistoryEnvironmentAllOf.prototype['status'] = undefined;
  * @member {Array.<module:model/DeploymentHistoryApplication>} applications
  */
 DeploymentHistoryEnvironmentAllOf.prototype['applications'] = undefined;
+
+/**
+ * @member {Array.<module:model/DeploymentHistoryContainer>} containers
+ */
+DeploymentHistoryEnvironmentAllOf.prototype['containers'] = undefined;
 
 /**
  * @member {Array.<module:model/DeploymentHistoryDatabase>} databases

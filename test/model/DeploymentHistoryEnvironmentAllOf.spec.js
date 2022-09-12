@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property containers (base name: "containers")', function() {
+      // uncomment below and update the code to test the property containers
+      //var instance = new QoveryApi.DeploymentHistoryEnvironmentAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property databases (base name: "databases")', function() {
       // uncomment below and update the code to test the property databases
       //var instance = new QoveryApi.DeploymentHistoryEnvironmentAllOf();

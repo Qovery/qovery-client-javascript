@@ -32,8 +32,8 @@ import ApplicationNetworkRequest from './model/ApplicationNetworkRequest';
 import ApplicationRequest from './model/ApplicationRequest';
 import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
-import AutoDeployContainerEnvironmentsRequest from './model/AutoDeployContainerEnvironmentsRequest';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
+import AvailableContainerRegistryResponseList from './model/AvailableContainerRegistryResponseList';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import Backup from './model/Backup';
 import BackupAllOf from './model/BackupAllOf';
@@ -51,7 +51,6 @@ import Budget from './model/Budget';
 import BudgetThreshold from './model/BudgetThreshold';
 import BuildModeEnum from './model/BuildModeEnum';
 import BuildPackLanguageEnum from './model/BuildPackLanguageEnum';
-import ChangePlanRequest from './model/ChangePlanRequest';
 import CloneRequest from './model/CloneRequest';
 import CloudProvider from './model/CloudProvider';
 import CloudProviderEnum from './model/CloudProviderEnum';
@@ -77,6 +76,7 @@ import ClusterLogsErrorEventDetails from './model/ClusterLogsErrorEventDetails';
 import ClusterLogsErrorEventDetailsTransmitter from './model/ClusterLogsErrorEventDetailsTransmitter';
 import ClusterLogsErrorUnderlyingError from './model/ClusterLogsErrorUnderlyingError';
 import ClusterLogsMessage from './model/ClusterLogsMessage';
+import ClusterLogsResponseList from './model/ClusterLogsResponseList';
 import ClusterReadinessStatus from './model/ClusterReadinessStatus';
 import ClusterRegion from './model/ClusterRegion';
 import ClusterRegionResponseList from './model/ClusterRegionResponseList';
@@ -107,6 +107,7 @@ import ContainerRegistryRequest from './model/ContainerRegistryRequest';
 import ContainerRegistryRequestConfig from './model/ContainerRegistryRequestConfig';
 import ContainerRegistryResponse from './model/ContainerRegistryResponse';
 import ContainerRegistryResponseAllOf from './model/ContainerRegistryResponseAllOf';
+import ContainerRegistryResponseList from './model/ContainerRegistryResponseList';
 import ContainerRequest from './model/ContainerRequest';
 import ContainerRequestAllOf from './model/ContainerRequestAllOf';
 import ContainerResponse from './model/ContainerResponse';
@@ -242,11 +243,8 @@ import KubernetesEnum from './model/KubernetesEnum';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import LinkedServiceTypeEnum from './model/LinkedServiceTypeEnum';
-import ListAvailableContainerRegistry200Response from './model/ListAvailableContainerRegistry200Response';
-import ListClusterLogs200Response from './model/ListClusterLogs200Response';
 import ListContainerDeploymentHistory200Response from './model/ListContainerDeploymentHistory200Response';
 import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
-import ListContainerRegistry200Response from './model/ListContainerRegistry200Response';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
@@ -287,6 +285,9 @@ import OrganizationApiTokenCreateAllOf from './model/OrganizationApiTokenCreateA
 import OrganizationApiTokenCreateRequest from './model/OrganizationApiTokenCreateRequest';
 import OrganizationApiTokenResponseList from './model/OrganizationApiTokenResponseList';
 import OrganizationApiTokenScope from './model/OrganizationApiTokenScope';
+import OrganizationChangePlanRequest from './model/OrganizationChangePlanRequest';
+import OrganizationContainerAutoDeployRequest from './model/OrganizationContainerAutoDeployRequest';
+import OrganizationContainerPreviewRequest from './model/OrganizationContainerPreviewRequest';
 import OrganizationCreditCodeRequest from './model/OrganizationCreditCodeRequest';
 import OrganizationCurrentCost from './model/OrganizationCurrentCost';
 import OrganizationCurrentCostAllOf from './model/OrganizationCurrentCostAllOf';
@@ -305,7 +306,6 @@ import PaginationData from './model/PaginationData';
 import PaidUsage from './model/PaidUsage';
 import PlanEnum from './model/PlanEnum';
 import PortProtocolEnum from './model/PortProtocolEnum';
-import PreviewContainerEnvironmentsRequest from './model/PreviewContainerEnvironmentsRequest';
 import Project from './model/Project';
 import ProjectAllOf from './model/ProjectAllOf';
 import ProjectCurrentCost from './model/ProjectCurrentCost';
@@ -590,16 +590,16 @@ export {
     ApplicationResponseList,
 
     /**
-     * The AutoDeployContainerEnvironmentsRequest model constructor.
-     * @property {module:model/AutoDeployContainerEnvironmentsRequest}
-     */
-    AutoDeployContainerEnvironmentsRequest,
-
-    /**
      * The AvailableContainerRegistryResponse model constructor.
      * @property {module:model/AvailableContainerRegistryResponse}
      */
     AvailableContainerRegistryResponse,
+
+    /**
+     * The AvailableContainerRegistryResponseList model constructor.
+     * @property {module:model/AvailableContainerRegistryResponseList}
+     */
+    AvailableContainerRegistryResponseList,
 
     /**
      * The AwsCredentialsRequest model constructor.
@@ -702,12 +702,6 @@ export {
      * @property {module:model/BuildPackLanguageEnum}
      */
     BuildPackLanguageEnum,
-
-    /**
-     * The ChangePlanRequest model constructor.
-     * @property {module:model/ChangePlanRequest}
-     */
-    ChangePlanRequest,
 
     /**
      * The CloneRequest model constructor.
@@ -858,6 +852,12 @@ export {
      * @property {module:model/ClusterLogsMessage}
      */
     ClusterLogsMessage,
+
+    /**
+     * The ClusterLogsResponseList model constructor.
+     * @property {module:model/ClusterLogsResponseList}
+     */
+    ClusterLogsResponseList,
 
     /**
      * The ClusterReadinessStatus model constructor.
@@ -1038,6 +1038,12 @@ export {
      * @property {module:model/ContainerRegistryResponseAllOf}
      */
     ContainerRegistryResponseAllOf,
+
+    /**
+     * The ContainerRegistryResponseList model constructor.
+     * @property {module:model/ContainerRegistryResponseList}
+     */
+    ContainerRegistryResponseList,
 
     /**
      * The ContainerRequest model constructor.
@@ -1850,18 +1856,6 @@ export {
     LinkedServiceTypeEnum,
 
     /**
-     * The ListAvailableContainerRegistry200Response model constructor.
-     * @property {module:model/ListAvailableContainerRegistry200Response}
-     */
-    ListAvailableContainerRegistry200Response,
-
-    /**
-     * The ListClusterLogs200Response model constructor.
-     * @property {module:model/ListClusterLogs200Response}
-     */
-    ListClusterLogs200Response,
-
-    /**
      * The ListContainerDeploymentHistory200Response model constructor.
      * @property {module:model/ListContainerDeploymentHistory200Response}
      */
@@ -1872,12 +1866,6 @@ export {
      * @property {module:model/ListContainerDeploymentHistory200ResponseAllOf}
      */
     ListContainerDeploymentHistory200ResponseAllOf,
-
-    /**
-     * The ListContainerRegistry200Response model constructor.
-     * @property {module:model/ListContainerRegistry200Response}
-     */
-    ListContainerRegistry200Response,
 
     /**
      * The ListDatabaseDeploymentHistory200Response model constructor.
@@ -2120,6 +2108,24 @@ export {
     OrganizationApiTokenScope,
 
     /**
+     * The OrganizationChangePlanRequest model constructor.
+     * @property {module:model/OrganizationChangePlanRequest}
+     */
+    OrganizationChangePlanRequest,
+
+    /**
+     * The OrganizationContainerAutoDeployRequest model constructor.
+     * @property {module:model/OrganizationContainerAutoDeployRequest}
+     */
+    OrganizationContainerAutoDeployRequest,
+
+    /**
+     * The OrganizationContainerPreviewRequest model constructor.
+     * @property {module:model/OrganizationContainerPreviewRequest}
+     */
+    OrganizationContainerPreviewRequest,
+
+    /**
      * The OrganizationCreditCodeRequest model constructor.
      * @property {module:model/OrganizationCreditCodeRequest}
      */
@@ -2226,12 +2232,6 @@ export {
      * @property {module:model/PortProtocolEnum}
      */
     PortProtocolEnum,
-
-    /**
-     * The PreviewContainerEnvironmentsRequest model constructor.
-     * @property {module:model/PreviewContainerEnvironmentsRequest}
-     */
-    PreviewContainerEnvironmentsRequest,
 
     /**
      * The Project model constructor.

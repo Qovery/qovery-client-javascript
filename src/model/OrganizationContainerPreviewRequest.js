@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The AutoDeployContainerEnvironmentsRequest model module.
- * @module model/AutoDeployContainerEnvironmentsRequest
+ * The OrganizationContainerPreviewRequest model module.
+ * @module model/OrganizationContainerPreviewRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class AutoDeployContainerEnvironmentsRequest {
+class OrganizationContainerPreviewRequest {
     /**
-     * Constructs a new <code>AutoDeployContainerEnvironmentsRequest</code>.
-     * @alias module:model/AutoDeployContainerEnvironmentsRequest
+     * Constructs a new <code>OrganizationContainerPreviewRequest</code>.
+     * @alias module:model/OrganizationContainerPreviewRequest
      */
     constructor() { 
         
-        AutoDeployContainerEnvironmentsRequest.initialize(this);
+        OrganizationContainerPreviewRequest.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class AutoDeployContainerEnvironmentsRequest {
     }
 
     /**
-     * Constructs a <code>AutoDeployContainerEnvironmentsRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationContainerPreviewRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/AutoDeployContainerEnvironmentsRequest} obj Optional instance to populate.
-     * @return {module:model/AutoDeployContainerEnvironmentsRequest} The populated <code>AutoDeployContainerEnvironmentsRequest</code> instance.
+     * @param {module:model/OrganizationContainerPreviewRequest} obj Optional instance to populate.
+     * @return {module:model/OrganizationContainerPreviewRequest} The populated <code>OrganizationContainerPreviewRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new AutoDeployContainerEnvironmentsRequest();
+            obj = obj || new OrganizationContainerPreviewRequest();
 
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
@@ -61,21 +61,21 @@ class AutoDeployContainerEnvironmentsRequest {
 }
 
 /**
- * the container image name to deploy
+ * the container image name to trigger preview environment
  * @member {String} image_name
  */
-AutoDeployContainerEnvironmentsRequest.prototype['image_name'] = undefined;
+OrganizationContainerPreviewRequest.prototype['image_name'] = undefined;
 
 /**
- * the new tag to deploy
+ * the tag to be used in the preview environment
  * @member {String} tag
  */
-AutoDeployContainerEnvironmentsRequest.prototype['tag'] = undefined;
+OrganizationContainerPreviewRequest.prototype['tag'] = undefined;
 
 
 
 
 
 
-export default AutoDeployContainerEnvironmentsRequest;
+export default OrganizationContainerPreviewRequest;
 

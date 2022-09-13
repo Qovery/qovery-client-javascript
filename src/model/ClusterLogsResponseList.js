@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import ClusterLogs from './ClusterLogs';
 
 /**
- * The ListClusterLogs200Response model module.
- * @module model/ListClusterLogs200Response
+ * The ClusterLogsResponseList model module.
+ * @module model/ClusterLogsResponseList
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListClusterLogs200Response {
+class ClusterLogsResponseList {
     /**
-     * Constructs a new <code>ListClusterLogs200Response</code>.
-     * @alias module:model/ListClusterLogs200Response
+     * Constructs a new <code>ClusterLogsResponseList</code>.
+     * @alias module:model/ClusterLogsResponseList
      */
     constructor() { 
         
-        ListClusterLogs200Response.initialize(this);
+        ClusterLogsResponseList.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class ListClusterLogs200Response {
     }
 
     /**
-     * Constructs a <code>ListClusterLogs200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ClusterLogsResponseList</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListClusterLogs200Response} obj Optional instance to populate.
-     * @return {module:model/ListClusterLogs200Response} The populated <code>ListClusterLogs200Response</code> instance.
+     * @param {module:model/ClusterLogsResponseList} obj Optional instance to populate.
+     * @return {module:model/ClusterLogsResponseList} The populated <code>ClusterLogsResponseList</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListClusterLogs200Response();
+            obj = obj || new ClusterLogsResponseList();
 
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [ClusterLogs]);
@@ -61,12 +61,12 @@ class ListClusterLogs200Response {
 /**
  * @member {Array.<module:model/ClusterLogs>} results
  */
-ListClusterLogs200Response.prototype['results'] = undefined;
+ClusterLogsResponseList.prototype['results'] = undefined;
 
 
 
 
 
 
-export default ListClusterLogs200Response;
+export default ClusterLogsResponseList;
 

@@ -35,8 +35,8 @@ docs/ApplicationRequestAllOf.md
 docs/ApplicationResponseList.md
 docs/ApplicationSecretApi.md
 docs/ApplicationsApi.md
-docs/AutoDeployContainerEnvironmentsRequest.md
 docs/AvailableContainerRegistryResponse.md
+docs/AvailableContainerRegistryResponseList.md
 docs/AwsCredentialsRequest.md
 docs/Backup.md
 docs/BackupAllOf.md
@@ -56,7 +56,6 @@ docs/Budget.md
 docs/BudgetThreshold.md
 docs/BuildModeEnum.md
 docs/BuildPackLanguageEnum.md
-docs/ChangePlanRequest.md
 docs/CloneRequest.md
 docs/CloudProvider.md
 docs/CloudProviderApi.md
@@ -84,6 +83,7 @@ docs/ClusterLogsErrorEventDetails.md
 docs/ClusterLogsErrorEventDetailsTransmitter.md
 docs/ClusterLogsErrorUnderlyingError.md
 docs/ClusterLogsMessage.md
+docs/ClusterLogsResponseList.md
 docs/ClusterReadinessStatus.md
 docs/ClusterRegion.md
 docs/ClusterRegionResponseList.md
@@ -126,6 +126,7 @@ docs/ContainerRegistryRequest.md
 docs/ContainerRegistryRequestConfig.md
 docs/ContainerRegistryResponse.md
 docs/ContainerRegistryResponseAllOf.md
+docs/ContainerRegistryResponseList.md
 docs/ContainerRequest.md
 docs/ContainerRequestAllOf.md
 docs/ContainerResponse.md
@@ -282,11 +283,8 @@ docs/KubernetesEnum.md
 docs/Link.md
 docs/LinkResponseList.md
 docs/LinkedServiceTypeEnum.md
-docs/ListAvailableContainerRegistry200Response.md
-docs/ListClusterLogs200Response.md
 docs/ListContainerDeploymentHistory200Response.md
 docs/ListContainerDeploymentHistory200ResponseAllOf.md
-docs/ListContainerRegistry200Response.md
 docs/ListDatabaseDeploymentHistory200Response.md
 docs/ListDatabaseDeploymentHistory200ResponseAllOf.md
 docs/Log.md
@@ -331,6 +329,9 @@ docs/OrganizationApiTokenCreateAllOf.md
 docs/OrganizationApiTokenCreateRequest.md
 docs/OrganizationApiTokenResponseList.md
 docs/OrganizationApiTokenScope.md
+docs/OrganizationChangePlanRequest.md
+docs/OrganizationContainerAutoDeployRequest.md
+docs/OrganizationContainerPreviewRequest.md
 docs/OrganizationCreditCodeRequest.md
 docs/OrganizationCurrentCost.md
 docs/OrganizationCurrentCostAllOf.md
@@ -351,7 +352,6 @@ docs/PaginationData.md
 docs/PaidUsage.md
 docs/PlanEnum.md
 docs/PortProtocolEnum.md
-docs/PreviewContainerEnvironmentsRequest.md
 docs/Project.md
 docs/ProjectAllOf.md
 docs/ProjectCurrentCost.md
@@ -512,8 +512,8 @@ src/model/ApplicationNetworkRequest.js
 src/model/ApplicationRequest.js
 src/model/ApplicationRequestAllOf.js
 src/model/ApplicationResponseList.js
-src/model/AutoDeployContainerEnvironmentsRequest.js
 src/model/AvailableContainerRegistryResponse.js
+src/model/AvailableContainerRegistryResponseList.js
 src/model/AwsCredentialsRequest.js
 src/model/Backup.js
 src/model/BackupAllOf.js
@@ -531,7 +531,6 @@ src/model/Budget.js
 src/model/BudgetThreshold.js
 src/model/BuildModeEnum.js
 src/model/BuildPackLanguageEnum.js
-src/model/ChangePlanRequest.js
 src/model/CloneRequest.js
 src/model/CloudProvider.js
 src/model/CloudProviderEnum.js
@@ -557,6 +556,7 @@ src/model/ClusterLogsErrorEventDetails.js
 src/model/ClusterLogsErrorEventDetailsTransmitter.js
 src/model/ClusterLogsErrorUnderlyingError.js
 src/model/ClusterLogsMessage.js
+src/model/ClusterLogsResponseList.js
 src/model/ClusterReadinessStatus.js
 src/model/ClusterRegion.js
 src/model/ClusterRegionResponseList.js
@@ -587,6 +587,7 @@ src/model/ContainerRegistryRequest.js
 src/model/ContainerRegistryRequestConfig.js
 src/model/ContainerRegistryResponse.js
 src/model/ContainerRegistryResponseAllOf.js
+src/model/ContainerRegistryResponseList.js
 src/model/ContainerRequest.js
 src/model/ContainerRequestAllOf.js
 src/model/ContainerResponse.js
@@ -722,11 +723,8 @@ src/model/KubernetesEnum.js
 src/model/Link.js
 src/model/LinkResponseList.js
 src/model/LinkedServiceTypeEnum.js
-src/model/ListAvailableContainerRegistry200Response.js
-src/model/ListClusterLogs200Response.js
 src/model/ListContainerDeploymentHistory200Response.js
 src/model/ListContainerDeploymentHistory200ResponseAllOf.js
-src/model/ListContainerRegistry200Response.js
 src/model/ListDatabaseDeploymentHistory200Response.js
 src/model/ListDatabaseDeploymentHistory200ResponseAllOf.js
 src/model/Log.js
@@ -767,6 +765,9 @@ src/model/OrganizationApiTokenCreateAllOf.js
 src/model/OrganizationApiTokenCreateRequest.js
 src/model/OrganizationApiTokenResponseList.js
 src/model/OrganizationApiTokenScope.js
+src/model/OrganizationChangePlanRequest.js
+src/model/OrganizationContainerAutoDeployRequest.js
+src/model/OrganizationContainerPreviewRequest.js
 src/model/OrganizationCreditCodeRequest.js
 src/model/OrganizationCurrentCost.js
 src/model/OrganizationCurrentCostAllOf.js
@@ -785,7 +786,6 @@ src/model/PaginationData.js
 src/model/PaidUsage.js
 src/model/PlanEnum.js
 src/model/PortProtocolEnum.js
-src/model/PreviewContainerEnvironmentsRequest.js
 src/model/Project.js
 src/model/ProjectAllOf.js
 src/model/ProjectCurrentCost.js
@@ -934,8 +934,8 @@ test/model/ApplicationNetworkRequest.spec.js
 test/model/ApplicationRequest.spec.js
 test/model/ApplicationRequestAllOf.spec.js
 test/model/ApplicationResponseList.spec.js
-test/model/AutoDeployContainerEnvironmentsRequest.spec.js
 test/model/AvailableContainerRegistryResponse.spec.js
+test/model/AvailableContainerRegistryResponseList.spec.js
 test/model/AwsCredentialsRequest.spec.js
 test/model/Backup.spec.js
 test/model/BackupAllOf.spec.js
@@ -953,7 +953,6 @@ test/model/Budget.spec.js
 test/model/BudgetThreshold.spec.js
 test/model/BuildModeEnum.spec.js
 test/model/BuildPackLanguageEnum.spec.js
-test/model/ChangePlanRequest.spec.js
 test/model/CloneRequest.spec.js
 test/model/CloudProvider.spec.js
 test/model/CloudProviderEnum.spec.js
@@ -979,6 +978,7 @@ test/model/ClusterLogsErrorEventDetails.spec.js
 test/model/ClusterLogsErrorEventDetailsTransmitter.spec.js
 test/model/ClusterLogsErrorUnderlyingError.spec.js
 test/model/ClusterLogsMessage.spec.js
+test/model/ClusterLogsResponseList.spec.js
 test/model/ClusterReadinessStatus.spec.js
 test/model/ClusterRegion.spec.js
 test/model/ClusterRegionResponseList.spec.js
@@ -1009,6 +1009,7 @@ test/model/ContainerRegistryRequest.spec.js
 test/model/ContainerRegistryRequestConfig.spec.js
 test/model/ContainerRegistryResponse.spec.js
 test/model/ContainerRegistryResponseAllOf.spec.js
+test/model/ContainerRegistryResponseList.spec.js
 test/model/ContainerRequest.spec.js
 test/model/ContainerRequestAllOf.spec.js
 test/model/ContainerResponse.spec.js
@@ -1144,11 +1145,8 @@ test/model/KubernetesEnum.spec.js
 test/model/Link.spec.js
 test/model/LinkResponseList.spec.js
 test/model/LinkedServiceTypeEnum.spec.js
-test/model/ListAvailableContainerRegistry200Response.spec.js
-test/model/ListClusterLogs200Response.spec.js
 test/model/ListContainerDeploymentHistory200Response.spec.js
 test/model/ListContainerDeploymentHistory200ResponseAllOf.spec.js
-test/model/ListContainerRegistry200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200ResponseAllOf.spec.js
 test/model/Log.spec.js
@@ -1189,6 +1187,9 @@ test/model/OrganizationApiTokenCreateAllOf.spec.js
 test/model/OrganizationApiTokenCreateRequest.spec.js
 test/model/OrganizationApiTokenResponseList.spec.js
 test/model/OrganizationApiTokenScope.spec.js
+test/model/OrganizationChangePlanRequest.spec.js
+test/model/OrganizationContainerAutoDeployRequest.spec.js
+test/model/OrganizationContainerPreviewRequest.spec.js
 test/model/OrganizationCreditCodeRequest.spec.js
 test/model/OrganizationCurrentCost.spec.js
 test/model/OrganizationCurrentCostAllOf.spec.js
@@ -1207,7 +1208,6 @@ test/model/PaginationData.spec.js
 test/model/PaidUsage.spec.js
 test/model/PlanEnum.spec.js
 test/model/PortProtocolEnum.spec.js
-test/model/PreviewContainerEnvironmentsRequest.spec.js
 test/model/Project.spec.js
 test/model/ProjectAllOf.spec.js
 test/model/ProjectCurrentCost.spec.js

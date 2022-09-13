@@ -638,7 +638,7 @@ Name | Type | Description  | Notes
 
 ## listClusterLogs
 
-> ListClusterLogs200Response listClusterLogs(organizationId, clusterId)
+> ClusterLogsResponseList listClusterLogs(organizationId, clusterId)
 
 List Cluster Logs
 
@@ -675,7 +675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListClusterLogs200Response**](ListClusterLogs200Response.md)
+[**ClusterLogsResponseList**](ClusterLogsResponseList.md)
 
 ### Authorization
 

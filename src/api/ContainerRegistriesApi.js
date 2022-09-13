@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
+import AvailableContainerRegistryResponseList from '../model/AvailableContainerRegistryResponseList';
 import ContainerRegistryRequest from '../model/ContainerRegistryRequest';
 import ContainerRegistryResponse from '../model/ContainerRegistryResponse';
-import ListAvailableContainerRegistry200Response from '../model/ListAvailableContainerRegistry200Response';
-import ListContainerRegistry200Response from '../model/ListContainerRegistry200Response';
+import ContainerRegistryResponseList from '../model/ContainerRegistryResponseList';
 
 /**
 * ContainerRegistries service.
@@ -232,7 +232,7 @@ export default class ContainerRegistriesApi {
      * Callback function to receive the result of the listAvailableContainerRegistry operation.
      * @callback module:api/ContainerRegistriesApi~listAvailableContainerRegistryCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListAvailableContainerRegistry200Response} data The data returned by the service call.
+     * @param {module:model/AvailableContainerRegistryResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -240,7 +240,7 @@ export default class ContainerRegistriesApi {
      * List supported container registries
      * List supported container registries by Qovery and get the mandatory authentification configuration.
      * @param {module:api/ContainerRegistriesApi~listAvailableContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListAvailableContainerRegistry200Response}
+     * data is of type: {@link module:model/AvailableContainerRegistryResponseList}
      */
     listAvailableContainerRegistry(callback) {
       let postBody = null;
@@ -257,7 +257,7 @@ export default class ContainerRegistriesApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ListAvailableContainerRegistry200Response;
+      let returnType = AvailableContainerRegistryResponseList;
       return this.apiClient.callApi(
         '/availableContainerRegistry', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -269,7 +269,7 @@ export default class ContainerRegistriesApi {
      * Callback function to receive the result of the listContainerRegistry operation.
      * @callback module:api/ContainerRegistriesApi~listContainerRegistryCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListContainerRegistry200Response} data The data returned by the service call.
+     * @param {module:model/ContainerRegistryResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -277,7 +277,7 @@ export default class ContainerRegistriesApi {
      * List organization container registries
      * @param {String} organizationId Organization ID
      * @param {module:api/ContainerRegistriesApi~listContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListContainerRegistry200Response}
+     * data is of type: {@link module:model/ContainerRegistryResponseList}
      */
     listContainerRegistry(organizationId, callback) {
       let postBody = null;
@@ -299,7 +299,7 @@ export default class ContainerRegistriesApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ListContainerRegistry200Response;
+      let returnType = ContainerRegistryResponseList;
       return this.apiClient.callApi(
         '/organization/{organizationId}/containerRegistry', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ChangePlanRequest();
+    instance = new QoveryApi.ClusterLogsResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ChangePlanRequest', function() {
-    it('should create an instance of ChangePlanRequest', function() {
-      // uncomment below and update the code to test ChangePlanRequest
-      //var instance = new QoveryApi.ChangePlanRequest();
-      //expect(instance).to.be.a(QoveryApi.ChangePlanRequest);
+  describe('ClusterLogsResponseList', function() {
+    it('should create an instance of ClusterLogsResponseList', function() {
+      // uncomment below and update the code to test ClusterLogsResponseList
+      //var instance = new QoveryApi.ClusterLogsResponseList();
+      //expect(instance).to.be.a(QoveryApi.ClusterLogsResponseList);
     });
 
-    it('should have the property plan (base name: "plan")', function() {
-      // uncomment below and update the code to test the property plan
-      //var instance = new QoveryApi.ChangePlanRequest();
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instance = new QoveryApi.ClusterLogsResponseList();
       //expect(instance).to.be();
     });
 

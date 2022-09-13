@@ -1,4 +1,4 @@
-# QoveryApi.ListContainerRegistry200Response
+# QoveryApi.ContainerRegistryResponseList
 
 ## Properties
 

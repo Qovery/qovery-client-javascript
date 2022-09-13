@@ -1,4 +1,4 @@
-# QoveryApi.AutoDeployContainerEnvironmentsRequest
+# QoveryApi.OrganizationContainerAutoDeployRequest
 
 ## Properties
 

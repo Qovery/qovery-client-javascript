@@ -1,9 +1,9 @@
-# QoveryApi.ListClusterLogs200Response
+# QoveryApi.OrganizationChangePlanRequest
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ClusterLogs]**](ClusterLogs.md) |  | [optional] 
+**plan** | **String** |  | [optional] 
 
 

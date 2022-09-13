@@ -1,4 +1,4 @@
-# QoveryApi.PreviewContainerEnvironmentsRequest
+# QoveryApi.OrganizationContainerPreviewRequest
 
 ## Properties
 

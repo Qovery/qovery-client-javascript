@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
+    instance = new QoveryApi.OrganizationContainerAutoDeployRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('AutoDeployContainerEnvironmentsRequest', function() {
-    it('should create an instance of AutoDeployContainerEnvironmentsRequest', function() {
-      // uncomment below and update the code to test AutoDeployContainerEnvironmentsRequest
-      //var instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
-      //expect(instance).to.be.a(QoveryApi.AutoDeployContainerEnvironmentsRequest);
+  describe('OrganizationContainerAutoDeployRequest', function() {
+    it('should create an instance of OrganizationContainerAutoDeployRequest', function() {
+      // uncomment below and update the code to test OrganizationContainerAutoDeployRequest
+      //var instance = new QoveryApi.OrganizationContainerAutoDeployRequest();
+      //expect(instance).to.be.a(QoveryApi.OrganizationContainerAutoDeployRequest);
     });
 
     it('should have the property imageName (base name: "image_name")', function() {
       // uncomment below and update the code to test the property imageName
-      //var instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
+      //var instance = new QoveryApi.OrganizationContainerAutoDeployRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instance = new QoveryApi.AutoDeployContainerEnvironmentsRequest();
+      //var instance = new QoveryApi.OrganizationContainerAutoDeployRequest();
       //expect(instance).to.be();
     });
 

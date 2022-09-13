@@ -12,20 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
+import ContainerRegistryResponse from './ContainerRegistryResponse';
 
 /**
- * The ChangePlanRequest model module.
- * @module model/ChangePlanRequest
+ * The ContainerRegistryResponseList model module.
+ * @module model/ContainerRegistryResponseList
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ChangePlanRequest {
+class ContainerRegistryResponseList {
     /**
-     * Constructs a new <code>ChangePlanRequest</code>.
-     * @alias module:model/ChangePlanRequest
+     * Constructs a new <code>ContainerRegistryResponseList</code>.
+     * @alias module:model/ContainerRegistryResponseList
      */
     constructor() { 
         
-        ChangePlanRequest.initialize(this);
+        ContainerRegistryResponseList.initialize(this);
     }
 
     /**
@@ -37,18 +38,18 @@ class ChangePlanRequest {
     }
 
     /**
-     * Constructs a <code>ChangePlanRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ContainerRegistryResponseList</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ChangePlanRequest} obj Optional instance to populate.
-     * @return {module:model/ChangePlanRequest} The populated <code>ChangePlanRequest</code> instance.
+     * @param {module:model/ContainerRegistryResponseList} obj Optional instance to populate.
+     * @return {module:model/ContainerRegistryResponseList} The populated <code>ContainerRegistryResponseList</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ChangePlanRequest();
+            obj = obj || new ContainerRegistryResponseList();
 
-            if (data.hasOwnProperty('plan')) {
-                obj['plan'] = ApiClient.convertToType(data['plan'], 'String');
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [ContainerRegistryResponse]);
             }
         }
         return obj;
@@ -58,14 +59,14 @@ class ChangePlanRequest {
 }
 
 /**
- * @member {String} plan
+ * @member {Array.<module:model/ContainerRegistryResponse>} results
  */
-ChangePlanRequest.prototype['plan'] = undefined;
+ContainerRegistryResponseList.prototype['results'] = undefined;
 
 
 
 
 
 
-export default ChangePlanRequest;
+export default ContainerRegistryResponseList;
 

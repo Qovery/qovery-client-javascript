@@ -12,21 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import ContainerRegistryResponse from './ContainerRegistryResponse';
 
 /**
- * The ListContainerRegistry200Response model module.
- * @module model/ListContainerRegistry200Response
+ * The OrganizationChangePlanRequest model module.
+ * @module model/OrganizationChangePlanRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListContainerRegistry200Response {
+class OrganizationChangePlanRequest {
     /**
-     * Constructs a new <code>ListContainerRegistry200Response</code>.
-     * @alias module:model/ListContainerRegistry200Response
+     * Constructs a new <code>OrganizationChangePlanRequest</code>.
+     * @alias module:model/OrganizationChangePlanRequest
      */
     constructor() { 
         
-        ListContainerRegistry200Response.initialize(this);
+        OrganizationChangePlanRequest.initialize(this);
     }
 
     /**
@@ -38,18 +37,18 @@ class ListContainerRegistry200Response {
     }
 
     /**
-     * Constructs a <code>ListContainerRegistry200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationChangePlanRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListContainerRegistry200Response} obj Optional instance to populate.
-     * @return {module:model/ListContainerRegistry200Response} The populated <code>ListContainerRegistry200Response</code> instance.
+     * @param {module:model/OrganizationChangePlanRequest} obj Optional instance to populate.
+     * @return {module:model/OrganizationChangePlanRequest} The populated <code>OrganizationChangePlanRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListContainerRegistry200Response();
+            obj = obj || new OrganizationChangePlanRequest();
 
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ContainerRegistryResponse]);
+            if (data.hasOwnProperty('plan')) {
+                obj['plan'] = ApiClient.convertToType(data['plan'], 'String');
             }
         }
         return obj;
@@ -59,14 +58,14 @@ class ListContainerRegistry200Response {
 }
 
 /**
- * @member {Array.<module:model/ContainerRegistryResponse>} results
+ * @member {String} plan
  */
-ListContainerRegistry200Response.prototype['results'] = undefined;
+OrganizationChangePlanRequest.prototype['plan'] = undefined;
 
 
 
 
 
 
-export default ListContainerRegistry200Response;
+export default OrganizationChangePlanRequest;
 

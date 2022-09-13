@@ -141,7 +141,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.BillingApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'changePlanRequest': new QoveryApi.ChangePlanRequest() // ChangePlanRequest | 
+  'organizationChangePlanRequest': new QoveryApi.OrganizationChangePlanRequest() // OrganizationChangePlanRequest | 
 };
 apiInstance.changePlan(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -158,7 +158,7 @@ apiInstance.changePlan(organizationId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **changePlanRequest** | [**ChangePlanRequest**](ChangePlanRequest.md)|  | [optional] 
+ **organizationChangePlanRequest** | [**OrganizationChangePlanRequest**](OrganizationChangePlanRequest.md)|  | [optional] 
 
 ### Return type
 

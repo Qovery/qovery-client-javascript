@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import AvailableContainerRegistryResponse from './AvailableContainerRegistryResponse';
 
 /**
- * The ListAvailableContainerRegistry200Response model module.
- * @module model/ListAvailableContainerRegistry200Response
+ * The AvailableContainerRegistryResponseList model module.
+ * @module model/AvailableContainerRegistryResponseList
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListAvailableContainerRegistry200Response {
+class AvailableContainerRegistryResponseList {
     /**
-     * Constructs a new <code>ListAvailableContainerRegistry200Response</code>.
-     * @alias module:model/ListAvailableContainerRegistry200Response
+     * Constructs a new <code>AvailableContainerRegistryResponseList</code>.
+     * @alias module:model/AvailableContainerRegistryResponseList
      */
     constructor() { 
         
-        ListAvailableContainerRegistry200Response.initialize(this);
+        AvailableContainerRegistryResponseList.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class ListAvailableContainerRegistry200Response {
     }
 
     /**
-     * Constructs a <code>ListAvailableContainerRegistry200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>AvailableContainerRegistryResponseList</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListAvailableContainerRegistry200Response} obj Optional instance to populate.
-     * @return {module:model/ListAvailableContainerRegistry200Response} The populated <code>ListAvailableContainerRegistry200Response</code> instance.
+     * @param {module:model/AvailableContainerRegistryResponseList} obj Optional instance to populate.
+     * @return {module:model/AvailableContainerRegistryResponseList} The populated <code>AvailableContainerRegistryResponseList</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListAvailableContainerRegistry200Response();
+            obj = obj || new AvailableContainerRegistryResponseList();
 
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [AvailableContainerRegistryResponse]);
@@ -61,12 +61,12 @@ class ListAvailableContainerRegistry200Response {
 /**
  * @member {Array.<module:model/AvailableContainerRegistryResponse>} results
  */
-ListAvailableContainerRegistry200Response.prototype['results'] = undefined;
+AvailableContainerRegistryResponseList.prototype['results'] = undefined;
 
 
 
 
 
 
-export default ListAvailableContainerRegistry200Response;
+export default AvailableContainerRegistryResponseList;
 

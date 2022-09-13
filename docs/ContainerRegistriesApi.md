@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ## listAvailableContainerRegistry
 
-> ListAvailableContainerRegistry200Response listAvailableContainerRegistry()
+> AvailableContainerRegistryResponseList listAvailableContainerRegistry()
 
 List supported container registries
 
@@ -248,7 +248,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListAvailableContainerRegistry200Response**](ListAvailableContainerRegistry200Response.md)
+[**AvailableContainerRegistryResponseList**](AvailableContainerRegistryResponseList.md)
 
 ### Authorization
 
@@ -262,7 +262,7 @@ This endpoint does not need any parameter.
 
 ## listContainerRegistry
 
-> ListContainerRegistry200Response listContainerRegistry(organizationId)
+> ContainerRegistryResponseList listContainerRegistry(organizationId)
 
 List organization container registries
 
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListContainerRegistry200Response**](ListContainerRegistry200Response.md)
+[**ContainerRegistryResponseList**](ContainerRegistryResponseList.md)
 
 ### Authorization
 

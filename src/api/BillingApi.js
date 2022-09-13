@@ -16,7 +16,6 @@ import ApiClient from "../ApiClient";
 import BillingInfo from '../model/BillingInfo';
 import BillingInfoRequest from '../model/BillingInfoRequest';
 import BillingStatus from '../model/BillingStatus';
-import ChangePlanRequest from '../model/ChangePlanRequest';
 import CostRange from '../model/CostRange';
 import CreditCard from '../model/CreditCard';
 import CreditCardRequest from '../model/CreditCardRequest';
@@ -25,6 +24,7 @@ import Invoice from '../model/Invoice';
 import InvoiceResponseList from '../model/InvoiceResponseList';
 import Link from '../model/Link';
 import Organization from '../model/Organization';
+import OrganizationChangePlanRequest from '../model/OrganizationChangePlanRequest';
 import OrganizationCreditCodeRequest from '../model/OrganizationCreditCodeRequest';
 import OrganizationCurrentCost from '../model/OrganizationCurrentCost';
 
@@ -148,13 +148,13 @@ export default class BillingApi {
      * Change organization plan
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ChangePlanRequest} opts.changePlanRequest 
+     * @param {module:model/OrganizationChangePlanRequest} opts.organizationChangePlanRequest 
      * @param {module:api/BillingApi~changePlanCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Organization}
      */
     changePlan(organizationId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['changePlanRequest'];
+      let postBody = opts['organizationChangePlanRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling changePlan");

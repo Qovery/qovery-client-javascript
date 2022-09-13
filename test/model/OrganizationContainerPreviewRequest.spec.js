@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListClusterLogs200Response();
+    instance = new QoveryApi.OrganizationContainerPreviewRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,22 @@
       object[property] = value;
   }
 
-  describe('ListClusterLogs200Response', function() {
-    it('should create an instance of ListClusterLogs200Response', function() {
-      // uncomment below and update the code to test ListClusterLogs200Response
-      //var instance = new QoveryApi.ListClusterLogs200Response();
-      //expect(instance).to.be.a(QoveryApi.ListClusterLogs200Response);
+  describe('OrganizationContainerPreviewRequest', function() {
+    it('should create an instance of OrganizationContainerPreviewRequest', function() {
+      // uncomment below and update the code to test OrganizationContainerPreviewRequest
+      //var instance = new QoveryApi.OrganizationContainerPreviewRequest();
+      //expect(instance).to.be.a(QoveryApi.OrganizationContainerPreviewRequest);
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ListClusterLogs200Response();
+    it('should have the property imageName (base name: "image_name")', function() {
+      // uncomment below and update the code to test the property imageName
+      //var instance = new QoveryApi.OrganizationContainerPreviewRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tag (base name: "tag")', function() {
+      // uncomment below and update the code to test the property tag
+      //var instance = new QoveryApi.OrganizationContainerPreviewRequest();
       //expect(instance).to.be();
     });
 

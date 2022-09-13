@@ -35,7 +35,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ContainersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'autoDeployContainerEnvironmentsRequest': new QoveryApi.AutoDeployContainerEnvironmentsRequest() // AutoDeployContainerEnvironmentsRequest | 
+  'organizationContainerAutoDeployRequest': new QoveryApi.OrganizationContainerAutoDeployRequest() // OrganizationContainerAutoDeployRequest | 
 };
 apiInstance.autoDeployContainerEnvironments(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -52,7 +52,7 @@ apiInstance.autoDeployContainerEnvironments(organizationId, opts, (error, data, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **autoDeployContainerEnvironmentsRequest** | [**AutoDeployContainerEnvironmentsRequest**](AutoDeployContainerEnvironmentsRequest.md)|  | [optional] 
+ **organizationContainerAutoDeployRequest** | [**OrganizationContainerAutoDeployRequest**](OrganizationContainerAutoDeployRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -388,7 +388,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ContainersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'previewContainerEnvironmentsRequest': new QoveryApi.PreviewContainerEnvironmentsRequest() // PreviewContainerEnvironmentsRequest | 
+  'organizationContainerPreviewRequest': new QoveryApi.OrganizationContainerPreviewRequest() // OrganizationContainerPreviewRequest | 
 };
 apiInstance.previewContainerEnvironments(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -405,7 +405,7 @@ apiInstance.previewContainerEnvironments(organizationId, opts, (error, data, res
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **previewContainerEnvironmentsRequest** | [**PreviewContainerEnvironmentsRequest**](PreviewContainerEnvironmentsRequest.md)|  | [optional] 
+ **organizationContainerPreviewRequest** | [**OrganizationContainerPreviewRequest**](OrganizationContainerPreviewRequest.md)|  | [optional] 
 
 ### Return type
 

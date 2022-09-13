@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListAvailableContainerRegistry200Response();
+    instance = new QoveryApi.OrganizationChangePlanRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ListAvailableContainerRegistry200Response', function() {
-    it('should create an instance of ListAvailableContainerRegistry200Response', function() {
-      // uncomment below and update the code to test ListAvailableContainerRegistry200Response
-      //var instance = new QoveryApi.ListAvailableContainerRegistry200Response();
-      //expect(instance).to.be.a(QoveryApi.ListAvailableContainerRegistry200Response);
+  describe('OrganizationChangePlanRequest', function() {
+    it('should create an instance of OrganizationChangePlanRequest', function() {
+      // uncomment below and update the code to test OrganizationChangePlanRequest
+      //var instance = new QoveryApi.OrganizationChangePlanRequest();
+      //expect(instance).to.be.a(QoveryApi.OrganizationChangePlanRequest);
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ListAvailableContainerRegistry200Response();
+    it('should have the property plan (base name: "plan")', function() {
+      // uncomment below and update the code to test the property plan
+      //var instance = new QoveryApi.OrganizationChangePlanRequest();
       //expect(instance).to.be();
     });
 

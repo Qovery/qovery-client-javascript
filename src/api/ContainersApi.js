@@ -13,14 +13,14 @@
 
 
 import ApiClient from "../ApiClient";
-import AutoDeployContainerEnvironmentsRequest from '../model/AutoDeployContainerEnvironmentsRequest';
 import ContainerRequest from '../model/ContainerRequest';
 import ContainerResponse from '../model/ContainerResponse';
 import ContainerResponseList from '../model/ContainerResponseList';
 import DeployAllRequest from '../model/DeployAllRequest';
 import EnvironmentContainersCurrentScaleResponseList from '../model/EnvironmentContainersCurrentScaleResponseList';
 import EnvironmentContainersStorageResponseList from '../model/EnvironmentContainersStorageResponseList';
-import PreviewContainerEnvironmentsRequest from '../model/PreviewContainerEnvironmentsRequest';
+import OrganizationContainerAutoDeployRequest from '../model/OrganizationContainerAutoDeployRequest';
+import OrganizationContainerPreviewRequest from '../model/OrganizationContainerPreviewRequest';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
 import Status from '../model/Status';
 
@@ -56,13 +56,13 @@ export default class ContainersApi {
      * Triggers a new container deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the container should have the same image name and a different tag 
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/AutoDeployContainerEnvironmentsRequest} opts.autoDeployContainerEnvironmentsRequest 
+     * @param {module:model/OrganizationContainerAutoDeployRequest} opts.organizationContainerAutoDeployRequest 
      * @param {module:api/ContainersApi~autoDeployContainerEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
     autoDeployContainerEnvironments(organizationId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['autoDeployContainerEnvironmentsRequest'];
+      let postBody = opts['organizationContainerAutoDeployRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling autoDeployContainerEnvironments");
@@ -367,13 +367,13 @@ export default class ContainersApi {
      * Triggers a new container preview for each environment matching the following conditions - preview environment feature should be enabled for the container - the container should have the same image name and a different tag 
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/PreviewContainerEnvironmentsRequest} opts.previewContainerEnvironmentsRequest 
+     * @param {module:model/OrganizationContainerPreviewRequest} opts.organizationContainerPreviewRequest 
      * @param {module:api/ContainersApi~previewContainerEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
     previewContainerEnvironments(organizationId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['previewContainerEnvironmentsRequest'];
+      let postBody = opts['organizationContainerPreviewRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling previewContainerEnvironments");

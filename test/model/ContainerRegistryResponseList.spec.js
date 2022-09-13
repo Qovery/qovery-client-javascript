@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListContainerRegistry200Response();
+    instance = new QoveryApi.ContainerRegistryResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ListContainerRegistry200Response', function() {
-    it('should create an instance of ListContainerRegistry200Response', function() {
-      // uncomment below and update the code to test ListContainerRegistry200Response
-      //var instance = new QoveryApi.ListContainerRegistry200Response();
-      //expect(instance).to.be.a(QoveryApi.ListContainerRegistry200Response);
+  describe('ContainerRegistryResponseList', function() {
+    it('should create an instance of ContainerRegistryResponseList', function() {
+      // uncomment below and update the code to test ContainerRegistryResponseList
+      //var instance = new QoveryApi.ContainerRegistryResponseList();
+      //expect(instance).to.be.a(QoveryApi.ContainerRegistryResponseList);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ListContainerRegistry200Response();
+      //var instance = new QoveryApi.ContainerRegistryResponseList();
       //expect(instance).to.be();
     });
 

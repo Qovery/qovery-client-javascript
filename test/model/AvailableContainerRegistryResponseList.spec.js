@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
+    instance = new QoveryApi.AvailableContainerRegistryResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,16 @@
       object[property] = value;
   }
 
-  describe('PreviewContainerEnvironmentsRequest', function() {
-    it('should create an instance of PreviewContainerEnvironmentsRequest', function() {
-      // uncomment below and update the code to test PreviewContainerEnvironmentsRequest
-      //var instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
-      //expect(instance).to.be.a(QoveryApi.PreviewContainerEnvironmentsRequest);
+  describe('AvailableContainerRegistryResponseList', function() {
+    it('should create an instance of AvailableContainerRegistryResponseList', function() {
+      // uncomment below and update the code to test AvailableContainerRegistryResponseList
+      //var instance = new QoveryApi.AvailableContainerRegistryResponseList();
+      //expect(instance).to.be.a(QoveryApi.AvailableContainerRegistryResponseList);
     });
 
-    it('should have the property imageName (base name: "image_name")', function() {
-      // uncomment below and update the code to test the property imageName
-      //var instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property tag (base name: "tag")', function() {
-      // uncomment below and update the code to test the property tag
-      //var instance = new QoveryApi.PreviewContainerEnvironmentsRequest();
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instance = new QoveryApi.AvailableContainerRegistryResponseList();
       //expect(instance).to.be();
     });
 

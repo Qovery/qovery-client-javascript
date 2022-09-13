@@ -78,6 +78,42 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new QoveryApi.Application();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property internalPort (base name: "internal_port")', function() {
+      // uncomment below and update the code to test the property internalPort
+      //var instance = new QoveryApi.Application();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalPort (base name: "external_port")', function() {
+      // uncomment below and update the code to test the property externalPort
+      //var instance = new QoveryApi.Application();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property publiclyAccessible (base name: "publicly_accessible")', function() {
+      // uncomment below and update the code to test the property publiclyAccessible
+      //var instance = new QoveryApi.Application();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDefault (base name: "is_default")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new QoveryApi.Application();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property protocol (base name: "protocol")', function() {
+      // uncomment below and update the code to test the property protocol
+      //var instance = new QoveryApi.Application();
+      //expect(instance).to.be();
+    });
+
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
       //var instance = new QoveryApi.Application();
@@ -98,12 +134,6 @@
 
     it('should have the property maximumMemory (base name: "maximum_memory")', function() {
       // uncomment below and update the code to test the property maximumMemory
-      //var instance = new QoveryApi.Application();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.Application();
       //expect(instance).to.be();
     });
@@ -164,12 +194,6 @@
 
     it('should have the property autoPreview (base name: "auto_preview")', function() {
       // uncomment below and update the code to test the property autoPreview
-      //var instance = new QoveryApi.Application();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property ports (base name: "ports")', function() {
-      // uncomment below and update the code to test the property ports
       //var instance = new QoveryApi.Application();
       //expect(instance).to.be();
     });

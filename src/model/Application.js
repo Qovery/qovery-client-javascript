@@ -18,8 +18,9 @@ import Base from './Base';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
+import PortProtocolEnum from './PortProtocolEnum';
 import ReferenceObject from './ReferenceObject';
-import ServicePortResponseList from './ServicePortResponseList';
+import ServicePort from './ServicePort';
 import ServiceStorage from './ServiceStorage';
 import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
@@ -34,13 +35,17 @@ class Application {
      * @alias module:model/Application
      * @implements module:model/Base
      * @implements module:model/ServiceStorage
+     * @implements module:model/ServicePort
      * @implements module:model/ApplicationAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param internalPort {Number} The listening port of your service.
+     * @param publiclyAccessible {Boolean} Expose the port to the world
+     * @param protocol {module:model/PortProtocolEnum} 
      */
-    constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ApplicationAllOf.initialize(this);
-        Application.initialize(this, id, createdAt);
+    constructor(id, createdAt, internalPort, publiclyAccessible, protocol) { 
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ServicePort.initialize(this, id, internalPort, publiclyAccessible, protocol);ApplicationAllOf.initialize(this);
+        Application.initialize(this, id, createdAt, internalPort, publiclyAccessible, protocol);
     }
 
     /**
@@ -48,9 +53,12 @@ class Application {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt) { 
+    static initialize(obj, id, createdAt, internalPort, publiclyAccessible, protocol) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
+        obj['internal_port'] = internalPort;
+        obj['publicly_accessible'] = publiclyAccessible;
+        obj['protocol'] = protocol;
     }
 
     /**
@@ -65,6 +73,7 @@ class Application {
             obj = obj || new Application();
             Base.constructFromObject(data, obj);
             ServiceStorage.constructFromObject(data, obj);
+            ServicePort.constructFromObject(data, obj);
             ApplicationAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -79,6 +88,24 @@ class Application {
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
             }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('internal_port')) {
+                obj['internal_port'] = ApiClient.convertToType(data['internal_port'], 'Number');
+            }
+            if (data.hasOwnProperty('external_port')) {
+                obj['external_port'] = ApiClient.convertToType(data['external_port'], 'Number');
+            }
+            if (data.hasOwnProperty('publicly_accessible')) {
+                obj['publicly_accessible'] = ApiClient.convertToType(data['publicly_accessible'], 'Boolean');
+            }
+            if (data.hasOwnProperty('is_default')) {
+                obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
+            }
+            if (data.hasOwnProperty('protocol')) {
+                obj['protocol'] = PortProtocolEnum.constructFromObject(data['protocol']);
+            }
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
@@ -90,9 +117,6 @@ class Application {
             }
             if (data.hasOwnProperty('maximum_memory')) {
                 obj['maximum_memory'] = ApiClient.convertToType(data['maximum_memory'], 'Number');
-            }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
@@ -124,9 +148,6 @@ class Application {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ServicePortResponseList.constructFromObject(data['ports']);
-            }
         }
         return obj;
     }
@@ -155,6 +176,41 @@ Application.prototype['updated_at'] = undefined;
 Application.prototype['storage'] = undefined;
 
 /**
+ * name is case insensitive
+ * @member {String} name
+ */
+Application.prototype['name'] = undefined;
+
+/**
+ * The listening port of your service.
+ * @member {Number} internal_port
+ */
+Application.prototype['internal_port'] = undefined;
+
+/**
+ * The exposed port for your service. This is optional. If not set a default port will be used.
+ * @member {Number} external_port
+ */
+Application.prototype['external_port'] = undefined;
+
+/**
+ * Expose the port to the world
+ * @member {Boolean} publicly_accessible
+ */
+Application.prototype['publicly_accessible'] = undefined;
+
+/**
+ * is the default port to use for domain & probes check
+ * @member {Boolean} is_default
+ */
+Application.prototype['is_default'] = undefined;
+
+/**
+ * @member {module:model/PortProtocolEnum} protocol
+ */
+Application.prototype['protocol'] = undefined;
+
+/**
  * @member {module:model/ReferenceObject} environment
  */
 Application.prototype['environment'] = undefined;
@@ -175,12 +231,6 @@ Application.prototype['maximum_cpu'] = undefined;
  * @member {Number} maximum_memory
  */
 Application.prototype['maximum_memory'] = undefined;
-
-/**
- * name is case insensitive
- * @member {String} name
- */
-Application.prototype['name'] = undefined;
 
 /**
  * give a description to this application
@@ -242,11 +292,6 @@ Application.prototype['healthcheck'] = undefined;
  */
 Application.prototype['auto_preview'] = true;
 
-/**
- * @member {module:model/ServicePortResponseList} ports
- */
-Application.prototype['ports'] = undefined;
-
 
 // Implement Base interface:
 /**
@@ -266,6 +311,39 @@ Base.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 ServiceStorage.prototype['storage'] = undefined;
+// Implement ServicePort interface:
+/**
+ * @member {String} id
+ */
+ServicePort.prototype['id'] = undefined;
+/**
+ * @member {String} name
+ */
+ServicePort.prototype['name'] = undefined;
+/**
+ * The listening port of your service.
+ * @member {Number} internal_port
+ */
+ServicePort.prototype['internal_port'] = undefined;
+/**
+ * The exposed port for your service. This is optional. If not set a default port will be used.
+ * @member {Number} external_port
+ */
+ServicePort.prototype['external_port'] = undefined;
+/**
+ * Expose the port to the world
+ * @member {Boolean} publicly_accessible
+ */
+ServicePort.prototype['publicly_accessible'] = undefined;
+/**
+ * is the default port to use for domain & probes check
+ * @member {Boolean} is_default
+ */
+ServicePort.prototype['is_default'] = undefined;
+/**
+ * @member {module:model/PortProtocolEnum} protocol
+ */
+ServicePort.prototype['protocol'] = undefined;
 // Implement ApplicationAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment
@@ -340,10 +418,6 @@ ApplicationAllOf.prototype['healthcheck'] = undefined;
  * @default true
  */
 ApplicationAllOf.prototype['auto_preview'] = true;
-/**
- * @member {module:model/ServicePortResponseList} ports
- */
-ApplicationAllOf.prototype['ports'] = undefined;
 
 
 

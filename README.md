@@ -669,6 +669,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Link](docs/Link.md)
  - [QoveryApi.LinkResponseList](docs/LinkResponseList.md)
  - [QoveryApi.LinkedServiceTypeEnum](docs/LinkedServiceTypeEnum.md)
+ - [QoveryApi.ListAvailableContainerRegistry200Response](docs/ListAvailableContainerRegistry200Response.md)
  - [QoveryApi.ListClusterLogs200Response](docs/ListClusterLogs200Response.md)
  - [QoveryApi.ListContainerDeploymentHistory200Response](docs/ListContainerDeploymentHistory200Response.md)
  - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOf](docs/ListContainerDeploymentHistory200ResponseAllOf.md)

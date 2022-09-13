@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import AvailableContainerRegistryResponse from '../model/AvailableContainerRegistryResponse';
 import ContainerRegistryRequest from '../model/ContainerRegistryRequest';
 import ContainerRegistryResponse from '../model/ContainerRegistryResponse';
+import ListAvailableContainerRegistry200Response from '../model/ListAvailableContainerRegistry200Response';
 import ListContainerRegistry200Response from '../model/ListContainerRegistry200Response';
 
 /**
@@ -232,7 +232,7 @@ export default class ContainerRegistriesApi {
      * Callback function to receive the result of the listAvailableContainerRegistry operation.
      * @callback module:api/ContainerRegistriesApi~listAvailableContainerRegistryCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/AvailableContainerRegistryResponse} data The data returned by the service call.
+     * @param {module:model/ListAvailableContainerRegistry200Response} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -240,7 +240,7 @@ export default class ContainerRegistriesApi {
      * List supported container registries
      * List supported container registries by Qovery and get the mandatory authentification configuration.
      * @param {module:api/ContainerRegistriesApi~listAvailableContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AvailableContainerRegistryResponse}
+     * data is of type: {@link module:model/ListAvailableContainerRegistry200Response}
      */
     listAvailableContainerRegistry(callback) {
       let postBody = null;
@@ -257,7 +257,7 @@ export default class ContainerRegistriesApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = AvailableContainerRegistryResponse;
+      let returnType = ListAvailableContainerRegistry200Response;
       return this.apiClient.callApi(
         '/availableContainerRegistry', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -282,6 +282,7 @@ docs/KubernetesEnum.md
 docs/Link.md
 docs/LinkResponseList.md
 docs/LinkedServiceTypeEnum.md
+docs/ListAvailableContainerRegistry200Response.md
 docs/ListClusterLogs200Response.md
 docs/ListContainerDeploymentHistory200Response.md
 docs/ListContainerDeploymentHistory200ResponseAllOf.md
@@ -721,6 +722,7 @@ src/model/KubernetesEnum.js
 src/model/Link.js
 src/model/LinkResponseList.js
 src/model/LinkedServiceTypeEnum.js
+src/model/ListAvailableContainerRegistry200Response.js
 src/model/ListClusterLogs200Response.js
 src/model/ListContainerDeploymentHistory200Response.js
 src/model/ListContainerDeploymentHistory200ResponseAllOf.js
@@ -1142,6 +1144,7 @@ test/model/KubernetesEnum.spec.js
 test/model/Link.spec.js
 test/model/LinkResponseList.spec.js
 test/model/LinkedServiceTypeEnum.spec.js
+test/model/ListAvailableContainerRegistry200Response.spec.js
 test/model/ListClusterLogs200Response.spec.js
 test/model/ListContainerDeploymentHistory200Response.spec.js
 test/model/ListContainerDeploymentHistory200ResponseAllOf.spec.js

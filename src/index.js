@@ -242,6 +242,7 @@ import KubernetesEnum from './model/KubernetesEnum';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import LinkedServiceTypeEnum from './model/LinkedServiceTypeEnum';
+import ListAvailableContainerRegistry200Response from './model/ListAvailableContainerRegistry200Response';
 import ListClusterLogs200Response from './model/ListClusterLogs200Response';
 import ListContainerDeploymentHistory200Response from './model/ListContainerDeploymentHistory200Response';
 import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
@@ -1847,6 +1848,12 @@ export {
      * @property {module:model/LinkedServiceTypeEnum}
      */
     LinkedServiceTypeEnum,
+
+    /**
+     * The ListAvailableContainerRegistry200Response model constructor.
+     * @property {module:model/ListAvailableContainerRegistry200Response}
+     */
+    ListAvailableContainerRegistry200Response,
 
     /**
      * The ListClusterLogs200Response model constructor.

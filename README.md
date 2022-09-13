@@ -766,7 +766,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ServicePort](docs/ServicePort.md)
  - [QoveryApi.ServicePortRequest](docs/ServicePortRequest.md)
  - [QoveryApi.ServicePortRequestPortsInner](docs/ServicePortRequestPortsInner.md)
- - [QoveryApi.ServicePortResponseList](docs/ServicePortResponseList.md)
  - [QoveryApi.ServiceResponseList](docs/ServiceResponseList.md)
  - [QoveryApi.ServiceStorage](docs/ServiceStorage.md)
  - [QoveryApi.ServiceStorageRequest](docs/ServiceStorageRequest.md)

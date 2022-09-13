@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **storage** | [**[ServiceStorageRequestStorageInner]**](ServiceStorageRequestStorageInner.md) |  | [optional] 
-**ports** | [**[ServicePortRequestPortsInner]**](ServicePortRequestPortsInner.md) |  | [optional] 
 **name** | **String** | name is case insensitive | 
 **description** | **String** | give a description to this application | [optional] 
 **gitRepository** | [**ApplicationGitRepositoryRequest**](ApplicationGitRepositoryRequest.md) |  | 
@@ -18,5 +17,6 @@ Name | Type | Description | Notes
 **maxRunningInstances** | **Number** | Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit.  | [optional] [default to 1]
 **healthcheck** | [**Healthcheck**](Healthcheck.md) |  | [optional] 
 **autoPreview** | **Boolean** | Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request.  | [optional] [default to true]
+**ports** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
 
 

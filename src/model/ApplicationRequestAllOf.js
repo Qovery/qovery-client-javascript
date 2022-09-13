@@ -16,6 +16,7 @@ import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
+import ServicePort from './ServicePort';
 
 /**
  * The ApplicationRequestAllOf model module.
@@ -90,6 +91,9 @@ class ApplicationRequestAllOf {
             }
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
         }
         return obj;
@@ -170,6 +174,11 @@ ApplicationRequestAllOf.prototype['healthcheck'] = undefined;
  * @default true
  */
 ApplicationRequestAllOf.prototype['auto_preview'] = true;
+
+/**
+ * @member {Array.<module:model/ServicePort>} ports
+ */
+ApplicationRequestAllOf.prototype['ports'] = undefined;
 
 
 

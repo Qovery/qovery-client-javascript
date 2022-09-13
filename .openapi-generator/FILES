@@ -391,7 +391,6 @@ docs/ServiceDeploymentStatusEnum.md
 docs/ServicePort.md
 docs/ServicePortRequest.md
 docs/ServicePortRequestPortsInner.md
-docs/ServicePortResponseList.md
 docs/ServiceResponseList.md
 docs/ServiceStorage.md
 docs/ServiceStorageRequest.md
@@ -819,7 +818,6 @@ src/model/ServiceDeploymentStatusEnum.js
 src/model/ServicePort.js
 src/model/ServicePortRequest.js
 src/model/ServicePortRequestPortsInner.js
-src/model/ServicePortResponseList.js
 src/model/ServiceResponseList.js
 src/model/ServiceStorage.js
 src/model/ServiceStorageRequest.js
@@ -1241,7 +1239,6 @@ test/model/ServiceDeploymentStatusEnum.spec.js
 test/model/ServicePort.spec.js
 test/model/ServicePortRequest.spec.js
 test/model/ServicePortRequestPortsInner.spec.js
-test/model/ServicePortResponseList.spec.js
 test/model/ServiceResponseList.spec.js
 test/model/ServiceStorage.spec.js
 test/model/ServiceStorageRequest.spec.js

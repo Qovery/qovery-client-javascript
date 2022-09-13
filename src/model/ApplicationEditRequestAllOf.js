@@ -16,6 +16,7 @@ import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
+import ServicePort from './ServicePort';
 
 /**
  * The ApplicationEditRequestAllOf model module.
@@ -89,6 +90,9 @@ class ApplicationEditRequestAllOf {
             }
             if (data.hasOwnProperty('sticky_session')) {
                 obj['sticky_session'] = ApiClient.convertToType(data['sticky_session'], 'Boolean');
+            }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
         }
         return obj;
@@ -176,6 +180,11 @@ ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
  * @default false
  */
 ApplicationEditRequestAllOf.prototype['sticky_session'] = false;
+
+/**
+ * @member {Array.<module:model/ServicePort>} ports
+ */
+ApplicationEditRequestAllOf.prototype['ports'] = undefined;
 
 
 

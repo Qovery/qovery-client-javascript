@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ReferenceObject from './ReferenceObject';
-import ServicePortResponseList from './ServicePortResponseList';
+import ServicePort from './ServicePort';
 
 /**
  * The ContainerResponseAllOf model module.
@@ -116,7 +116,7 @@ class ContainerResponseAllOf {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ServicePortResponseList.constructFromObject(data['ports']);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
         }
         return obj;
@@ -209,7 +209,7 @@ ContainerResponseAllOf.prototype['max_running_instances'] = 1;
 ContainerResponseAllOf.prototype['auto_preview'] = undefined;
 
 /**
- * @member {module:model/ServicePortResponseList} ports
+ * @member {Array.<module:model/ServicePort>} ports
  */
 ContainerResponseAllOf.prototype['ports'] = undefined;
 

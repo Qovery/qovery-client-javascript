@@ -15,7 +15,7 @@ import ApiClient from '../ApiClient';
 import Base from './Base';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
 import ReferenceObject from './ReferenceObject';
-import ServicePortResponseList from './ServicePortResponseList';
+import ServicePort from './ServicePort';
 import ServiceStorage from './ServiceStorage';
 import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
@@ -142,7 +142,7 @@ class ContainerResponse {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ServicePortResponseList.constructFromObject(data['ports']);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
         }
         return obj;
@@ -255,7 +255,7 @@ ContainerResponse.prototype['max_running_instances'] = 1;
 ContainerResponse.prototype['auto_preview'] = undefined;
 
 /**
- * @member {module:model/ServicePortResponseList} ports
+ * @member {Array.<module:model/ServicePort>} ports
  */
 ContainerResponse.prototype['ports'] = undefined;
 
@@ -349,7 +349,7 @@ ContainerResponseAllOf.prototype['max_running_instances'] = 1;
  */
 ContainerResponseAllOf.prototype['auto_preview'] = undefined;
 /**
- * @member {module:model/ServicePortResponseList} ports
+ * @member {Array.<module:model/ServicePort>} ports
  */
 ContainerResponseAllOf.prototype['ports'] = undefined;
 

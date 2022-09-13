@@ -17,8 +17,7 @@ import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
-import ServicePortRequest from './ServicePortRequest';
-import ServicePortRequestPortsInner from './ServicePortRequestPortsInner';
+import ServicePort from './ServicePort';
 import ServiceStorageRequest from './ServiceStorageRequest';
 import ServiceStorageRequestStorageInner from './ServiceStorageRequestStorageInner';
 
@@ -32,11 +31,10 @@ class ApplicationEditRequest {
      * Constructs a new <code>ApplicationEditRequest</code>.
      * @alias module:model/ApplicationEditRequest
      * @implements module:model/ServiceStorageRequest
-     * @implements module:model/ServicePortRequest
      * @implements module:model/ApplicationEditRequestAllOf
      */
     constructor() { 
-        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ApplicationEditRequestAllOf.initialize(this);
+        ServiceStorageRequest.initialize(this);ApplicationEditRequestAllOf.initialize(this);
         ApplicationEditRequest.initialize(this);
     }
 
@@ -59,14 +57,10 @@ class ApplicationEditRequest {
         if (data) {
             obj = obj || new ApplicationEditRequest();
             ServiceStorageRequest.constructFromObject(data, obj);
-            ServicePortRequest.constructFromObject(data, obj);
             ApplicationEditRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageRequestStorageInner]);
-            }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortRequestPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -107,6 +101,9 @@ class ApplicationEditRequest {
             if (data.hasOwnProperty('sticky_session')) {
                 obj['sticky_session'] = ApiClient.convertToType(data['sticky_session'], 'Boolean');
             }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
+            }
         }
         return obj;
     }
@@ -118,11 +115,6 @@ class ApplicationEditRequest {
  * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
 ApplicationEditRequest.prototype['storage'] = undefined;
-
-/**
- * @member {Array.<module:model/ServicePortRequestPortsInner>} ports
- */
-ApplicationEditRequest.prototype['ports'] = undefined;
 
 /**
  * name is case insensitive
@@ -204,17 +196,17 @@ ApplicationEditRequest.prototype['auto_preview'] = true;
  */
 ApplicationEditRequest.prototype['sticky_session'] = false;
 
+/**
+ * @member {Array.<module:model/ServicePort>} ports
+ */
+ApplicationEditRequest.prototype['ports'] = undefined;
+
 
 // Implement ServiceStorageRequest interface:
 /**
  * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
 ServiceStorageRequest.prototype['storage'] = undefined;
-// Implement ServicePortRequest interface:
-/**
- * @member {Array.<module:model/ServicePortRequestPortsInner>} ports
- */
-ServicePortRequest.prototype['ports'] = undefined;
 // Implement ApplicationEditRequestAllOf interface:
 /**
  * name is case insensitive
@@ -283,6 +275,10 @@ ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
  * @default false
  */
 ApplicationEditRequestAllOf.prototype['sticky_session'] = false;
+/**
+ * @member {Array.<module:model/ServicePort>} ports
+ */
+ApplicationEditRequestAllOf.prototype['ports'] = undefined;
 
 
 

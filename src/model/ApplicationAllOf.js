@@ -17,7 +17,7 @@ import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
-import ServicePortResponseList from './ServicePortResponseList';
+import ServicePort from './ServicePort';
 
 /**
  * The ApplicationAllOf model module.
@@ -99,7 +99,7 @@ class ApplicationAllOf {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ServicePortResponseList.constructFromObject(data['ports']);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
         }
         return obj;
@@ -197,7 +197,7 @@ ApplicationAllOf.prototype['healthcheck'] = undefined;
 ApplicationAllOf.prototype['auto_preview'] = true;
 
 /**
- * @member {module:model/ServicePortResponseList} ports
+ * @member {Array.<module:model/ServicePort>} ports
  */
 ApplicationAllOf.prototype['ports'] = undefined;
 

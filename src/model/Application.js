@@ -19,7 +19,7 @@ import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
-import ServicePortResponseList from './ServicePortResponseList';
+import ServicePort from './ServicePort';
 import ServiceStorage from './ServiceStorage';
 import ServiceStorageStorageInner from './ServiceStorageStorageInner';
 
@@ -125,7 +125,7 @@ class Application {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ServicePortResponseList.constructFromObject(data['ports']);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
         }
         return obj;
@@ -243,7 +243,7 @@ Application.prototype['healthcheck'] = undefined;
 Application.prototype['auto_preview'] = true;
 
 /**
- * @member {module:model/ServicePortResponseList} ports
+ * @member {Array.<module:model/ServicePort>} ports
  */
 Application.prototype['ports'] = undefined;
 
@@ -341,7 +341,7 @@ ApplicationAllOf.prototype['healthcheck'] = undefined;
  */
 ApplicationAllOf.prototype['auto_preview'] = true;
 /**
- * @member {module:model/ServicePortResponseList} ports
+ * @member {Array.<module:model/ServicePort>} ports
  */
 ApplicationAllOf.prototype['ports'] = undefined;
 

@@ -339,7 +339,6 @@ import ServiceDeploymentStatusEnum from './model/ServiceDeploymentStatusEnum';
 import ServicePort from './model/ServicePort';
 import ServicePortRequest from './model/ServicePortRequest';
 import ServicePortRequestPortsInner from './model/ServicePortRequestPortsInner';
-import ServicePortResponseList from './model/ServicePortResponseList';
 import ServiceResponseList from './model/ServiceResponseList';
 import ServiceStorage from './model/ServiceStorage';
 import ServiceStorageRequest from './model/ServiceStorageRequest';
@@ -2430,12 +2429,6 @@ export {
      * @property {module:model/ServicePortRequestPortsInner}
      */
     ServicePortRequestPortsInner,
-
-    /**
-     * The ServicePortResponseList model constructor.
-     * @property {module:model/ServicePortResponseList}
-     */
-    ServicePortResponseList,
 
     /**
      * The ServiceResponseList model constructor.

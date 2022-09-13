@@ -22,6 +22,6 @@ Name | Type | Description | Notes
 **minRunningInstances** | **Number** | Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running.  | [default to 1]
 **maxRunningInstances** | **Number** | Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit.  | [default to 1]
 **autoPreview** | **Boolean** | Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request.  | 
-**ports** | [**ServicePortResponseList**](ServicePortResponseList.md) |  | [optional] 
+**ports** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
 
 

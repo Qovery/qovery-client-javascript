@@ -346,7 +346,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentMainCallsApi* | [**editEnvironment**](docs/EnvironmentMainCallsApi.md#editEnvironment) | **PUT** /environment/{environmentId} | Edit an environment
 *QoveryApi.EnvironmentMainCallsApi* | [**getEnvironment**](docs/EnvironmentMainCallsApi.md#getEnvironment) | **GET** /environment/{environmentId} | Get environment by ID
 *QoveryApi.EnvironmentMainCallsApi* | [**getEnvironmentStatus**](docs/EnvironmentMainCallsApi.md#getEnvironmentStatus) | **GET** /environment/{environmentId}/status | Get environment status
-*QoveryApi.EnvironmentMainCallsApi* | [**listEnvironmentLinks**](docs/EnvironmentMainCallsApi.md#listEnvironmentLinks) | **GET** /environment/{environmentId}/link | List all URLs of the environment
 *QoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecret**](docs/EnvironmentSecretApi.md#createEnvironmentSecret) | **POST** /environment/{environmentId}/secret | Add a secret to the environment
 *QoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecretAlias**](docs/EnvironmentSecretApi.md#createEnvironmentSecretAlias) | **POST** /environment/{environmentId}/secret/{secretId}/alias | Create a secret alias at the environment level
 *QoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecretOverride**](docs/EnvironmentSecretApi.md#createEnvironmentSecretOverride) | **POST** /environment/{environmentId}/secret/{secretId}/override | Create a secret override at the environment level

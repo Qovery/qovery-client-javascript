@@ -88,16 +88,6 @@
         done();
       });
     });
-    describe('listEnvironmentLinks', function() {
-      it('should call listEnvironmentLinks successfully', function(done) {
-        //uncomment below and update the code to test listEnvironmentLinks
-        //instance.listEnvironmentLinks(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
   });
 
 }));

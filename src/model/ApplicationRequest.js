@@ -17,7 +17,7 @@ import ApplicationRequestAllOf from './ApplicationRequestAllOf';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
-import ServicePort from './ServicePort';
+import ServicePortRequest from './ServicePortRequest';
 import ServiceStorageRequest from './ServiceStorageRequest';
 import ServiceStorageRequestStorageInner from './ServiceStorageRequestStorageInner';
 
@@ -103,7 +103,7 @@ class ApplicationRequest {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
             if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortRequest]);
             }
         }
         return obj;
@@ -191,7 +191,7 @@ ApplicationRequest.prototype['healthcheck'] = undefined;
 ApplicationRequest.prototype['auto_preview'] = true;
 
 /**
- * @member {Array.<module:model/ServicePort>} ports
+ * @member {Array.<module:model/ServicePortRequest>} ports
  */
 ApplicationRequest.prototype['ports'] = undefined;
 
@@ -264,7 +264,7 @@ ApplicationRequestAllOf.prototype['healthcheck'] = undefined;
  */
 ApplicationRequestAllOf.prototype['auto_preview'] = true;
 /**
- * @member {Array.<module:model/ServicePort>} ports
+ * @member {Array.<module:model/ServicePortRequest>} ports
  */
 ApplicationRequestAllOf.prototype['ports'] = undefined;
 

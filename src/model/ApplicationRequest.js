@@ -18,6 +18,7 @@ import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
 import Healthcheck from './Healthcheck';
 import ServicePortRequest from './ServicePortRequest';
+import ServicePortRequestPortsInner from './ServicePortRequestPortsInner';
 import ServiceStorageRequest from './ServiceStorageRequest';
 import ServiceStorageRequestStorageInner from './ServiceStorageRequestStorageInner';
 
@@ -31,12 +32,13 @@ class ApplicationRequest {
      * Constructs a new <code>ApplicationRequest</code>.
      * @alias module:model/ApplicationRequest
      * @implements module:model/ServiceStorageRequest
+     * @implements module:model/ServicePortRequest
      * @implements module:model/ApplicationRequestAllOf
      * @param name {String} name is case insensitive
      * @param gitRepository {module:model/ApplicationGitRepositoryRequest} 
      */
     constructor(name, gitRepository) { 
-        ServiceStorageRequest.initialize(this);ApplicationRequestAllOf.initialize(this, name, gitRepository);
+        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ApplicationRequestAllOf.initialize(this, name, gitRepository);
         ApplicationRequest.initialize(this, name, gitRepository);
     }
 
@@ -61,10 +63,14 @@ class ApplicationRequest {
         if (data) {
             obj = obj || new ApplicationRequest();
             ServiceStorageRequest.constructFromObject(data, obj);
+            ServicePortRequest.constructFromObject(data, obj);
             ApplicationRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageRequestStorageInner]);
+            }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortRequestPortsInner]);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -102,9 +108,6 @@ class ApplicationRequest {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
-            if (data.hasOwnProperty('ports')) {
-                obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePortRequest]);
-            }
         }
         return obj;
     }
@@ -116,6 +119,11 @@ class ApplicationRequest {
  * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
 ApplicationRequest.prototype['storage'] = undefined;
+
+/**
+ * @member {Array.<module:model/ServicePortRequestPortsInner>} ports
+ */
+ApplicationRequest.prototype['ports'] = undefined;
 
 /**
  * name is case insensitive
@@ -190,17 +198,17 @@ ApplicationRequest.prototype['healthcheck'] = undefined;
  */
 ApplicationRequest.prototype['auto_preview'] = true;
 
-/**
- * @member {Array.<module:model/ServicePortRequest>} ports
- */
-ApplicationRequest.prototype['ports'] = undefined;
-
 
 // Implement ServiceStorageRequest interface:
 /**
  * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
 ServiceStorageRequest.prototype['storage'] = undefined;
+// Implement ServicePortRequest interface:
+/**
+ * @member {Array.<module:model/ServicePortRequestPortsInner>} ports
+ */
+ServicePortRequest.prototype['ports'] = undefined;
 // Implement ApplicationRequestAllOf interface:
 /**
  * name is case insensitive
@@ -263,10 +271,6 @@ ApplicationRequestAllOf.prototype['healthcheck'] = undefined;
  * @default true
  */
 ApplicationRequestAllOf.prototype['auto_preview'] = true;
-/**
- * @member {Array.<module:model/ServicePortRequest>} ports
- */
-ApplicationRequestAllOf.prototype['ports'] = undefined;
 
 
 

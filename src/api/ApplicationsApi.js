@@ -17,12 +17,10 @@ import Application from '../model/Application';
 import ApplicationAdvancedSettings from '../model/ApplicationAdvancedSettings';
 import ApplicationRequest from '../model/ApplicationRequest';
 import ApplicationResponseList from '../model/ApplicationResponseList';
-import DeployAllRequest from '../model/DeployAllRequest';
 import EnvironmentApplicationsCurrentScaleResponseList from '../model/EnvironmentApplicationsCurrentScaleResponseList';
 import EnvironmentApplicationsStorageResponseList from '../model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguageList from '../model/EnvironmentApplicationsSupportedLanguageList';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
-import Status from '../model/Status';
 
 /**
 * Applications service.
@@ -83,52 +81,6 @@ export default class ApplicationsApi {
       let returnType = Application;
       return this.apiClient.callApi(
         '/environment/{environmentId}/application', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the deployAllApplications operation.
-     * @callback module:api/ApplicationsApi~deployAllApplicationsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Deploy applications
-     * Deploy to the last commit the applications you specified.
-     * @param {String} environmentId Environment ID
-     * @param {Object} opts Optional parameters
-     * @param {module:model/DeployAllRequest} opts.deployAllRequest 
-     * @param {module:api/ApplicationsApi~deployAllApplicationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
-     */
-    deployAllApplications(environmentId, opts, callback) {
-      opts = opts || {};
-      let postBody = opts['deployAllRequest'];
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling deployAllApplications");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Status;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/application/deploy', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

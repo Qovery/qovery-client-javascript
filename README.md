@@ -179,7 +179,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**editApplicationSecret**](docs/ApplicationSecretApi.md#editApplicationSecret) | **PUT** /application/{applicationId}/secret/{secretId} | Edit a secret belonging to the application
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
-*QoveryApi.ApplicationsApi* | [**deployAllApplications**](docs/ApplicationsApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
 *QoveryApi.ApplicationsApi* | [**getDefaultApplicationAdvancedSettings**](docs/ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentStorage**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
@@ -333,6 +332,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.DependencyApi* | [**createApplicationDependency**](docs/DependencyApi.md#createApplicationDependency) | **POST** /application/{applicationId}/dependency/{targetApplicationId} | Add application dependency to this application.
 *QoveryApi.DependencyApi* | [**listApplicationDependency**](docs/DependencyApi.md#listApplicationDependency) | **GET** /application/{applicationId}/dependency | List application dependencies
 *QoveryApi.DependencyApi* | [**removeApplicationDependency**](docs/DependencyApi.md#removeApplicationDependency) | **DELETE** /application/{applicationId}/dependency/{targetApplicationId} | Remove application dependency to this application.
+*QoveryApi.EnvironmentApi* | [**deployAllApplications**](docs/EnvironmentApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
 *QoveryApi.EnvironmentActionsApi* | [**cancelEnvironmentDeployment**](docs/EnvironmentActionsApi.md#cancelEnvironmentDeployment) | **POST** /environment/{environmentId}/cancelDeployment | Cancel environment deployment
 *QoveryApi.EnvironmentActionsApi* | [**cloneEnvironment**](docs/EnvironmentActionsApi.md#cloneEnvironment) | **POST** /environment/{environmentId}/clone | Clone environment
 *QoveryApi.EnvironmentActionsApi* | [**deployEnvironment**](docs/EnvironmentActionsApi.md#deployEnvironment) | **POST** /environment/{environmentId}/deploy | Deploy environment

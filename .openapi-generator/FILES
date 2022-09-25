@@ -201,6 +201,7 @@ docs/Environment.md
 docs/EnvironmentActionsApi.md
 docs/EnvironmentAllOf.md
 docs/EnvironmentAllOfCloudProvider.md
+docs/EnvironmentApi.md
 docs/EnvironmentApplicationsCurrentScale.md
 docs/EnvironmentApplicationsCurrentScaleResponseList.md
 docs/EnvironmentApplicationsInstanceResponseList.md
@@ -470,6 +471,7 @@ src/api/DatabaseMetricsApi.js
 src/api/DatabasesApi.js
 src/api/DependencyApi.js
 src/api/EnvironmentActionsApi.js
+src/api/EnvironmentApi.js
 src/api/EnvironmentDeploymentHistoryApi.js
 src/api/EnvironmentDeploymentRuleApi.js
 src/api/EnvironmentLogsApi.js
@@ -893,6 +895,7 @@ test/api/DatabaseMetricsApi.spec.js
 test/api/DatabasesApi.spec.js
 test/api/DependencyApi.spec.js
 test/api/EnvironmentActionsApi.spec.js
+test/api/EnvironmentApi.spec.js
 test/api/EnvironmentDeploymentHistoryApi.spec.js
 test/api/EnvironmentDeploymentRuleApi.spec.js
 test/api/EnvironmentLogsApi.spec.js

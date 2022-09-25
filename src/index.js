@@ -412,6 +412,7 @@ import DatabaseMainCallsApi from './api/DatabaseMainCallsApi';
 import DatabaseMetricsApi from './api/DatabaseMetricsApi';
 import DatabasesApi from './api/DatabasesApi';
 import DependencyApi from './api/DependencyApi';
+import EnvironmentApi from './api/EnvironmentApi';
 import EnvironmentActionsApi from './api/EnvironmentActionsApi';
 import EnvironmentDeploymentHistoryApi from './api/EnvironmentDeploymentHistoryApi';
 import EnvironmentDeploymentRuleApi from './api/EnvironmentDeploymentRuleApi';
@@ -2868,6 +2869,12 @@ export {
     * @property {module:api/DependencyApi}
     */
     DependencyApi,
+
+    /**
+    * The EnvironmentApi service constructor.
+    * @property {module:api/EnvironmentApi}
+    */
+    EnvironmentApi,
 
     /**
     * The EnvironmentActionsApi service constructor.

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInner();
+    instance = new QoveryApi.OrganizationCustomRoleCreateRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('OrganizationCustomRoleRequestProjectPermissionsInner', function() {
-    it('should create an instance of OrganizationCustomRoleRequestProjectPermissionsInner', function() {
-      // uncomment below and update the code to test OrganizationCustomRoleRequestProjectPermissionsInner
-      //var instance = new QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInner();
-      //expect(instance).to.be.a(QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInner);
+  describe('OrganizationCustomRoleCreateRequest', function() {
+    it('should create an instance of OrganizationCustomRoleCreateRequest', function() {
+      // uncomment below and update the code to test OrganizationCustomRoleCreateRequest
+      //var instance = new QoveryApi.OrganizationCustomRoleCreateRequest();
+      //expect(instance).to.be.a(QoveryApi.OrganizationCustomRoleCreateRequest);
     });
 
-    it('should have the property projectId (base name: "project_id")', function() {
-      // uncomment below and update the code to test the property projectId
-      //var instance = new QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInner();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new QoveryApi.OrganizationCustomRoleCreateRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property isAdmin (base name: "is_admin")', function() {
-      // uncomment below and update the code to test the property isAdmin
-      //var instance = new QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInner();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property permissions (base name: "permissions")', function() {
-      // uncomment below and update the code to test the property permissions
-      //var instance = new QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInner();
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new QoveryApi.OrganizationCustomRoleCreateRequest();
       //expect(instance).to.be();
     });
 

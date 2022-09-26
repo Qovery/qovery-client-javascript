@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner from './OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner';
+import OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner from './OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner';
 
 /**
- * The OrganizationCustomRoleRequestProjectPermissionsInner model module.
- * @module model/OrganizationCustomRoleRequestProjectPermissionsInner
+ * The OrganizationCustomRoleUpdateRequestProjectPermissionsInner model module.
+ * @module model/OrganizationCustomRoleUpdateRequestProjectPermissionsInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class OrganizationCustomRoleRequestProjectPermissionsInner {
+class OrganizationCustomRoleUpdateRequestProjectPermissionsInner {
     /**
-     * Constructs a new <code>OrganizationCustomRoleRequestProjectPermissionsInner</code>.
-     * @alias module:model/OrganizationCustomRoleRequestProjectPermissionsInner
+     * Constructs a new <code>OrganizationCustomRoleUpdateRequestProjectPermissionsInner</code>.
+     * @alias module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInner
      */
     constructor() { 
         
-        OrganizationCustomRoleRequestProjectPermissionsInner.initialize(this);
+        OrganizationCustomRoleUpdateRequestProjectPermissionsInner.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class OrganizationCustomRoleRequestProjectPermissionsInner {
     }
 
     /**
-     * Constructs a <code>OrganizationCustomRoleRequestProjectPermissionsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationCustomRoleUpdateRequestProjectPermissionsInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/OrganizationCustomRoleRequestProjectPermissionsInner} obj Optional instance to populate.
-     * @return {module:model/OrganizationCustomRoleRequestProjectPermissionsInner} The populated <code>OrganizationCustomRoleRequestProjectPermissionsInner</code> instance.
+     * @param {module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInner} obj Optional instance to populate.
+     * @return {module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInner} The populated <code>OrganizationCustomRoleUpdateRequestProjectPermissionsInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OrganizationCustomRoleRequestProjectPermissionsInner();
+            obj = obj || new OrganizationCustomRoleUpdateRequestProjectPermissionsInner();
 
             if (data.hasOwnProperty('project_id')) {
                 obj['project_id'] = ApiClient.convertToType(data['project_id'], 'String');
@@ -55,7 +55,7 @@ class OrganizationCustomRoleRequestProjectPermissionsInner {
                 obj['is_admin'] = ApiClient.convertToType(data['is_admin'], 'Boolean');
             }
             if (data.hasOwnProperty('permissions')) {
-                obj['permissions'] = ApiClient.convertToType(data['permissions'], [OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner]);
+                obj['permissions'] = ApiClient.convertToType(data['permissions'], [OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner]);
             }
         }
         return obj;
@@ -67,25 +67,25 @@ class OrganizationCustomRoleRequestProjectPermissionsInner {
 /**
  * @member {String} project_id
  */
-OrganizationCustomRoleRequestProjectPermissionsInner.prototype['project_id'] = undefined;
+OrganizationCustomRoleUpdateRequestProjectPermissionsInner.prototype['project_id'] = undefined;
 
 /**
  * If `is_admin` is `true`, the user is: - automatically `MANAGER` for each environment type - allowed to manage project deployment rules - able to delete the project Note that `permissions` can then be ignored for this project 
  * @member {Boolean} is_admin
  * @default false
  */
-OrganizationCustomRoleRequestProjectPermissionsInner.prototype['is_admin'] = false;
+OrganizationCustomRoleUpdateRequestProjectPermissionsInner.prototype['is_admin'] = false;
 
 /**
  * Mandatory if `is_admin` is `false`   Should contain an entry for every environment type: - `DEVELOPMENT` - `PREVIEW` - `STAGING` - `PRODUCTION` 
- * @member {Array.<module:model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner>} permissions
+ * @member {Array.<module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner>} permissions
  */
-OrganizationCustomRoleRequestProjectPermissionsInner.prototype['permissions'] = undefined;
+OrganizationCustomRoleUpdateRequestProjectPermissionsInner.prototype['permissions'] = undefined;
 
 
 
 
 
 
-export default OrganizationCustomRoleRequestProjectPermissionsInner;
+export default OrganizationCustomRoleUpdateRequestProjectPermissionsInner;
 

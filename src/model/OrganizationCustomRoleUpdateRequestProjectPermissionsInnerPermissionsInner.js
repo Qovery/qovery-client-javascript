@@ -16,18 +16,18 @@ import EnvironmentModeEnum from './EnvironmentModeEnum';
 import OrganizationCustomRoleProjectPermission from './OrganizationCustomRoleProjectPermission';
 
 /**
- * The OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner model module.
- * @module model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner
+ * The OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner model module.
+ * @module model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner {
+class OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner {
     /**
-     * Constructs a new <code>OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner</code>.
-     * @alias module:model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner
+     * Constructs a new <code>OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner</code>.
+     * @alias module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner
      */
     constructor() { 
         
-        OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner.initialize(this);
+        OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner.initialize(this);
     }
 
     /**
@@ -39,15 +39,15 @@ class OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner {
     }
 
     /**
-     * Constructs a <code>OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner} obj Optional instance to populate.
-     * @return {module:model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner} The populated <code>OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner</code> instance.
+     * @param {module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner} obj Optional instance to populate.
+     * @return {module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner} The populated <code>OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner();
+            obj = obj || new OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner();
 
             if (data.hasOwnProperty('environment_type')) {
                 obj['environment_type'] = EnvironmentModeEnum.constructFromObject(data['environment_type']);
@@ -65,17 +65,17 @@ class OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner {
 /**
  * @member {module:model/EnvironmentModeEnum} environment_type
  */
-OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner.prototype['environment_type'] = undefined;
+OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner.prototype['environment_type'] = undefined;
 
 /**
  * @member {module:model/OrganizationCustomRoleProjectPermission} permission
  */
-OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner.prototype['permission'] = undefined;
+OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner.prototype['permission'] = undefined;
 
 
 
 
 
 
-export default OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner;
+export default OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner;
 

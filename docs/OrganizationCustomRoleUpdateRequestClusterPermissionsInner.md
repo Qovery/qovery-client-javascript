@@ -1,4 +1,4 @@
-# QoveryApi.OrganizationCustomRoleRequestClusterPermissionsInner
+# QoveryApi.OrganizationCustomRoleUpdateRequestClusterPermissionsInner
 
 ## Properties
 

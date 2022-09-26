@@ -32,7 +32,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationCustomRoleApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'organizationCustomRoleRequest': new QoveryApi.OrganizationCustomRoleRequest() // OrganizationCustomRoleRequest | 
+  'organizationCustomRoleCreateRequest': new QoveryApi.OrganizationCustomRoleCreateRequest() // OrganizationCustomRoleCreateRequest | 
 };
 apiInstance.createOrganizationCustomRole(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -49,7 +49,7 @@ apiInstance.createOrganizationCustomRole(organizationId, opts, (error, data, res
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **organizationCustomRoleRequest** | [**OrganizationCustomRoleRequest**](OrganizationCustomRoleRequest.md)|  | [optional] 
+ **organizationCustomRoleCreateRequest** | [**OrganizationCustomRoleCreateRequest**](OrganizationCustomRoleCreateRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -134,7 +134,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationCustomRoleApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'organizationCustomRoleRequest': new QoveryApi.OrganizationCustomRoleRequest() // OrganizationCustomRoleRequest | 
+  'organizationCustomRoleUpdateRequest': new QoveryApi.OrganizationCustomRoleUpdateRequest() // OrganizationCustomRoleUpdateRequest | 
 };
 apiInstance.editOrganizationCustomRole(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -151,7 +151,7 @@ apiInstance.editOrganizationCustomRole(organizationId, opts, (error, data, respo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **organizationCustomRoleRequest** | [**OrganizationCustomRoleRequest**](OrganizationCustomRoleRequest.md)|  | [optional] 
+ **organizationCustomRoleUpdateRequest** | [**OrganizationCustomRoleUpdateRequest**](OrganizationCustomRoleUpdateRequest.md)|  | [optional] 
 
 ### Return type
 

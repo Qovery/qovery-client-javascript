@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import OrganizationCustomRoleClusterPermission from './OrganizationCustomRoleClusterPermission';
 
 /**
- * The OrganizationCustomRoleRequestClusterPermissionsInner model module.
- * @module model/OrganizationCustomRoleRequestClusterPermissionsInner
+ * The OrganizationCustomRoleUpdateRequestClusterPermissionsInner model module.
+ * @module model/OrganizationCustomRoleUpdateRequestClusterPermissionsInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class OrganizationCustomRoleRequestClusterPermissionsInner {
+class OrganizationCustomRoleUpdateRequestClusterPermissionsInner {
     /**
-     * Constructs a new <code>OrganizationCustomRoleRequestClusterPermissionsInner</code>.
-     * @alias module:model/OrganizationCustomRoleRequestClusterPermissionsInner
+     * Constructs a new <code>OrganizationCustomRoleUpdateRequestClusterPermissionsInner</code>.
+     * @alias module:model/OrganizationCustomRoleUpdateRequestClusterPermissionsInner
      */
     constructor() { 
         
-        OrganizationCustomRoleRequestClusterPermissionsInner.initialize(this);
+        OrganizationCustomRoleUpdateRequestClusterPermissionsInner.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class OrganizationCustomRoleRequestClusterPermissionsInner {
     }
 
     /**
-     * Constructs a <code>OrganizationCustomRoleRequestClusterPermissionsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationCustomRoleUpdateRequestClusterPermissionsInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/OrganizationCustomRoleRequestClusterPermissionsInner} obj Optional instance to populate.
-     * @return {module:model/OrganizationCustomRoleRequestClusterPermissionsInner} The populated <code>OrganizationCustomRoleRequestClusterPermissionsInner</code> instance.
+     * @param {module:model/OrganizationCustomRoleUpdateRequestClusterPermissionsInner} obj Optional instance to populate.
+     * @return {module:model/OrganizationCustomRoleUpdateRequestClusterPermissionsInner} The populated <code>OrganizationCustomRoleUpdateRequestClusterPermissionsInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new OrganizationCustomRoleRequestClusterPermissionsInner();
+            obj = obj || new OrganizationCustomRoleUpdateRequestClusterPermissionsInner();
 
             if (data.hasOwnProperty('cluster_id')) {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
@@ -64,17 +64,17 @@ class OrganizationCustomRoleRequestClusterPermissionsInner {
 /**
  * @member {String} cluster_id
  */
-OrganizationCustomRoleRequestClusterPermissionsInner.prototype['cluster_id'] = undefined;
+OrganizationCustomRoleUpdateRequestClusterPermissionsInner.prototype['cluster_id'] = undefined;
 
 /**
  * @member {module:model/OrganizationCustomRoleClusterPermission} permission
  */
-OrganizationCustomRoleRequestClusterPermissionsInner.prototype['permission'] = undefined;
+OrganizationCustomRoleUpdateRequestClusterPermissionsInner.prototype['permission'] = undefined;
 
 
 
 
 
 
-export default OrganizationCustomRoleRequestClusterPermissionsInner;
+export default OrganizationCustomRoleUpdateRequestClusterPermissionsInner;
 

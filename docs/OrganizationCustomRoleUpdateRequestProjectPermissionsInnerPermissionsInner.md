@@ -1,4 +1,4 @@
-# QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner
+# QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner
 
 ## Properties
 

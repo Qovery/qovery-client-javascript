@@ -14,8 +14,9 @@
 
 import ApiClient from "../ApiClient";
 import OrganizationCustomRole from '../model/OrganizationCustomRole';
+import OrganizationCustomRoleCreateRequest from '../model/OrganizationCustomRoleCreateRequest';
 import OrganizationCustomRoleList from '../model/OrganizationCustomRoleList';
-import OrganizationCustomRoleRequest from '../model/OrganizationCustomRoleRequest';
+import OrganizationCustomRoleUpdateRequest from '../model/OrganizationCustomRoleUpdateRequest';
 
 /**
 * OrganizationCustomRole service.
@@ -49,13 +50,13 @@ export default class OrganizationCustomRoleApi {
      * Create an organization custom role
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationCustomRoleRequest} opts.organizationCustomRoleRequest 
+     * @param {module:model/OrganizationCustomRoleCreateRequest} opts.organizationCustomRoleCreateRequest 
      * @param {module:api/OrganizationCustomRoleApi~createOrganizationCustomRoleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationCustomRole}
      */
     createOrganizationCustomRole(organizationId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['organizationCustomRoleRequest'];
+      let postBody = opts['organizationCustomRoleCreateRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling createOrganizationCustomRole");
@@ -137,13 +138,13 @@ export default class OrganizationCustomRoleApi {
      * Edit an organization custom role
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationCustomRoleRequest} opts.organizationCustomRoleRequest 
+     * @param {module:model/OrganizationCustomRoleUpdateRequest} opts.organizationCustomRoleUpdateRequest 
      * @param {module:api/OrganizationCustomRoleApi~editOrganizationCustomRoleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationCustomRole}
      */
     editOrganizationCustomRole(organizationId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['organizationCustomRoleRequest'];
+      let postBody = opts['organizationCustomRoleUpdateRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling editOrganizationCustomRole");

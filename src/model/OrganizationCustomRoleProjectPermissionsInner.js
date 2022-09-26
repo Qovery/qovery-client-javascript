@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner from './OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner';
+import OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner from './OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner';
 
 /**
  * The OrganizationCustomRoleProjectPermissionsInner model module.
@@ -58,7 +58,7 @@ class OrganizationCustomRoleProjectPermissionsInner {
                 obj['is_admin'] = ApiClient.convertToType(data['is_admin'], 'Boolean');
             }
             if (data.hasOwnProperty('permissions')) {
-                obj['permissions'] = ApiClient.convertToType(data['permissions'], [OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner]);
+                obj['permissions'] = ApiClient.convertToType(data['permissions'], [OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner]);
             }
         }
         return obj;
@@ -85,7 +85,7 @@ OrganizationCustomRoleProjectPermissionsInner.prototype['project_name'] = undefi
 OrganizationCustomRoleProjectPermissionsInner.prototype['is_admin'] = false;
 
 /**
- * @member {Array.<module:model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner>} permissions
+ * @member {Array.<module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner>} permissions
  */
 OrganizationCustomRoleProjectPermissionsInner.prototype['permissions'] = undefined;
 

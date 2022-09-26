@@ -298,13 +298,14 @@ import OrganizationCurrentCostAllOf from './model/OrganizationCurrentCostAllOf';
 import OrganizationCustomRole from './model/OrganizationCustomRole';
 import OrganizationCustomRoleClusterPermission from './model/OrganizationCustomRoleClusterPermission';
 import OrganizationCustomRoleClusterPermissionsInner from './model/OrganizationCustomRoleClusterPermissionsInner';
+import OrganizationCustomRoleCreateRequest from './model/OrganizationCustomRoleCreateRequest';
 import OrganizationCustomRoleList from './model/OrganizationCustomRoleList';
 import OrganizationCustomRoleProjectPermission from './model/OrganizationCustomRoleProjectPermission';
 import OrganizationCustomRoleProjectPermissionsInner from './model/OrganizationCustomRoleProjectPermissionsInner';
-import OrganizationCustomRoleRequest from './model/OrganizationCustomRoleRequest';
-import OrganizationCustomRoleRequestClusterPermissionsInner from './model/OrganizationCustomRoleRequestClusterPermissionsInner';
-import OrganizationCustomRoleRequestProjectPermissionsInner from './model/OrganizationCustomRoleRequestProjectPermissionsInner';
-import OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner from './model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner';
+import OrganizationCustomRoleUpdateRequest from './model/OrganizationCustomRoleUpdateRequest';
+import OrganizationCustomRoleUpdateRequestClusterPermissionsInner from './model/OrganizationCustomRoleUpdateRequestClusterPermissionsInner';
+import OrganizationCustomRoleUpdateRequestProjectPermissionsInner from './model/OrganizationCustomRoleUpdateRequestProjectPermissionsInner';
+import OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner from './model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner';
 import OrganizationEditRequest from './model/OrganizationEditRequest';
 import OrganizationGithubAppConnectRequest from './model/OrganizationGithubAppConnectRequest';
 import OrganizationRequest from './model/OrganizationRequest';
@@ -2202,6 +2203,12 @@ export {
     OrganizationCustomRoleClusterPermissionsInner,
 
     /**
+     * The OrganizationCustomRoleCreateRequest model constructor.
+     * @property {module:model/OrganizationCustomRoleCreateRequest}
+     */
+    OrganizationCustomRoleCreateRequest,
+
+    /**
      * The OrganizationCustomRoleList model constructor.
      * @property {module:model/OrganizationCustomRoleList}
      */
@@ -2220,28 +2227,28 @@ export {
     OrganizationCustomRoleProjectPermissionsInner,
 
     /**
-     * The OrganizationCustomRoleRequest model constructor.
-     * @property {module:model/OrganizationCustomRoleRequest}
+     * The OrganizationCustomRoleUpdateRequest model constructor.
+     * @property {module:model/OrganizationCustomRoleUpdateRequest}
      */
-    OrganizationCustomRoleRequest,
+    OrganizationCustomRoleUpdateRequest,
 
     /**
-     * The OrganizationCustomRoleRequestClusterPermissionsInner model constructor.
-     * @property {module:model/OrganizationCustomRoleRequestClusterPermissionsInner}
+     * The OrganizationCustomRoleUpdateRequestClusterPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleUpdateRequestClusterPermissionsInner}
      */
-    OrganizationCustomRoleRequestClusterPermissionsInner,
+    OrganizationCustomRoleUpdateRequestClusterPermissionsInner,
 
     /**
-     * The OrganizationCustomRoleRequestProjectPermissionsInner model constructor.
-     * @property {module:model/OrganizationCustomRoleRequestProjectPermissionsInner}
+     * The OrganizationCustomRoleUpdateRequestProjectPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInner}
      */
-    OrganizationCustomRoleRequestProjectPermissionsInner,
+    OrganizationCustomRoleUpdateRequestProjectPermissionsInner,
 
     /**
-     * The OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner model constructor.
-     * @property {module:model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner}
+     * The OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner}
      */
-    OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner,
+    OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner,
 
     /**
      * The OrganizationEditRequest model constructor.

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.OrganizationCustomRoleRequestClusterPermissionsInner();
+    instance = new QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('OrganizationCustomRoleRequestClusterPermissionsInner', function() {
-    it('should create an instance of OrganizationCustomRoleRequestClusterPermissionsInner', function() {
-      // uncomment below and update the code to test OrganizationCustomRoleRequestClusterPermissionsInner
-      //var instance = new QoveryApi.OrganizationCustomRoleRequestClusterPermissionsInner();
-      //expect(instance).to.be.a(QoveryApi.OrganizationCustomRoleRequestClusterPermissionsInner);
+  describe('OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner', function() {
+    it('should create an instance of OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner', function() {
+      // uncomment below and update the code to test OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner
+      //var instance = new QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner();
+      //expect(instance).to.be.a(QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner);
     });
 
-    it('should have the property clusterId (base name: "cluster_id")', function() {
-      // uncomment below and update the code to test the property clusterId
-      //var instance = new QoveryApi.OrganizationCustomRoleRequestClusterPermissionsInner();
+    it('should have the property environmentType (base name: "environment_type")', function() {
+      // uncomment below and update the code to test the property environmentType
+      //var instance = new QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner();
       //expect(instance).to.be();
     });
 
     it('should have the property permission (base name: "permission")', function() {
       // uncomment below and update the code to test the property permission
-      //var instance = new QoveryApi.OrganizationCustomRoleRequestClusterPermissionsInner();
+      //var instance = new QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner();
       //expect(instance).to.be();
     });
 

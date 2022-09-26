@@ -108,6 +108,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property roleName (base name: "role_name")', function() {
+      // uncomment below and update the code to test the property roleName
+      //var instance = new QoveryApi.Member();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

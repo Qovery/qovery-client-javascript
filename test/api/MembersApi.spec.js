@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('editOrganizationMemberRole', function() {
+      it('should call editOrganizationMemberRole successfully', function(done) {
+        //uncomment below and update the code to test editOrganizationMemberRole
+        //instance.editOrganizationMemberRole(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrganizationInvitedMembers', function() {
       it('should call getOrganizationInvitedMembers successfully', function(done) {
         //uncomment below and update the code to test getOrganizationInvitedMembers

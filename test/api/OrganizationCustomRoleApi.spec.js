@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.OrganizationMainCallsApi();
+    instance = new QoveryApi.OrganizationCustomRoleApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,61 +47,51 @@
       object[property] = value;
   }
 
-  describe('OrganizationMainCallsApi', function() {
-    describe('createOrganization', function() {
-      it('should call createOrganization successfully', function(done) {
-        //uncomment below and update the code to test createOrganization
-        //instance.createOrganization(function(error) {
+  describe('OrganizationCustomRoleApi', function() {
+    describe('createOrganizationCustomRole', function() {
+      it('should call createOrganizationCustomRole successfully', function(done) {
+        //uncomment below and update the code to test createOrganizationCustomRole
+        //instance.createOrganizationCustomRole(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('deleteOrganization', function() {
-      it('should call deleteOrganization successfully', function(done) {
-        //uncomment below and update the code to test deleteOrganization
-        //instance.deleteOrganization(function(error) {
+    describe('deleteOrganizationCustomRole', function() {
+      it('should call deleteOrganizationCustomRole successfully', function(done) {
+        //uncomment below and update the code to test deleteOrganizationCustomRole
+        //instance.deleteOrganizationCustomRole(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('editOrganization', function() {
-      it('should call editOrganization successfully', function(done) {
-        //uncomment below and update the code to test editOrganization
-        //instance.editOrganization(function(error) {
+    describe('editOrganizationCustomRole', function() {
+      it('should call editOrganizationCustomRole successfully', function(done) {
+        //uncomment below and update the code to test editOrganizationCustomRole
+        //instance.editOrganizationCustomRole(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('getOrganization', function() {
-      it('should call getOrganization successfully', function(done) {
-        //uncomment below and update the code to test getOrganization
-        //instance.getOrganization(function(error) {
+    describe('getOrganizationCustomRole', function() {
+      it('should call getOrganizationCustomRole successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationCustomRole
+        //instance.getOrganizationCustomRole(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('listOrganization', function() {
-      it('should call listOrganization successfully', function(done) {
-        //uncomment below and update the code to test listOrganization
-        //instance.listOrganization(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listOrganizationAvailableRoles', function() {
-      it('should call listOrganizationAvailableRoles successfully', function(done) {
-        //uncomment below and update the code to test listOrganizationAvailableRoles
-        //instance.listOrganizationAvailableRoles(function(error) {
+    describe('listOrganizationCustomRoles', function() {
+      it('should call listOrganizationCustomRoles successfully', function(done) {
+        //uncomment below and update the code to test listOrganizationCustomRoles
+        //instance.listOrganizationCustomRoles(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

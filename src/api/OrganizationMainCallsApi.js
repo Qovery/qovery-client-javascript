@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import Organization from '../model/Organization';
+import OrganizationAvailableRoleList from '../model/OrganizationAvailableRoleList';
 import OrganizationEditRequest from '../model/OrganizationEditRequest';
 import OrganizationRequest from '../model/OrganizationRequest';
 import OrganizationResponseList from '../model/OrganizationResponseList';
@@ -237,6 +238,49 @@ export default class OrganizationMainCallsApi {
       let returnType = OrganizationResponseList;
       return this.apiClient.callApi(
         '/organization', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listOrganizationAvailableRoles operation.
+     * @callback module:api/OrganizationMainCallsApi~listOrganizationAvailableRolesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OrganizationAvailableRoleList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List organization available roles
+     * List organization available roles
+     * @param {String} organizationId Organization ID
+     * @param {module:api/OrganizationMainCallsApi~listOrganizationAvailableRolesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OrganizationAvailableRoleList}
+     */
+    listOrganizationAvailableRoles(organizationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling listOrganizationAvailableRoles");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = OrganizationAvailableRoleList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/availableRole', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -382,6 +382,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseDatabase**](docs/LogicalDatabaseApi.md#listLogicalDatabaseDatabase) | **GET** /database/{databaseId}/logicalDatabase | List logical databases of a database
 *QoveryApi.MembersApi* | [**deleteInviteMember**](docs/MembersApi.md#deleteInviteMember) | **DELETE** /organization/{organizationId}/inviteMember/{inviteId} | Remove an invited member
 *QoveryApi.MembersApi* | [**deleteMember**](docs/MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member/{userId} | Remove a member
+*QoveryApi.MembersApi* | [**editOrganizationMemberRole**](docs/MembersApi.md#editOrganizationMemberRole) | **PUT** /organization/{organizationId}/member | Edit an organization member role
 *QoveryApi.MembersApi* | [**getOrganizationInvitedMembers**](docs/MembersApi.md#getOrganizationInvitedMembers) | **GET** /organization/{organizationId}/inviteMember | Get invited members
 *QoveryApi.MembersApi* | [**getOrganizationMembers**](docs/MembersApi.md#getOrganizationMembers) | **GET** /organization/{organizationId}/member | Get organization members
 *QoveryApi.MembersApi* | [**postAcceptInviteMember**](docs/MembersApi.md#postAcceptInviteMember) | **POST** /organization/{organizationId}/inviteMember/{inviteId} | Accept Invite in the organization
@@ -397,11 +398,17 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationApiTokenApi* | [**createOrganizationApiToken**](docs/OrganizationApiTokenApi.md#createOrganizationApiToken) | **POST** /organization/{organizationId}/apiToken | Create an organization api token
 *QoveryApi.OrganizationApiTokenApi* | [**deleteOrganizationApiToken**](docs/OrganizationApiTokenApi.md#deleteOrganizationApiToken) | **DELETE** /organization/{organizationId}/apiToken/{apiTokenId} | Delete organization api token
 *QoveryApi.OrganizationApiTokenApi* | [**listOrganizationApiTokens**](docs/OrganizationApiTokenApi.md#listOrganizationApiTokens) | **GET** /organization/{organizationId}/apiToken | List organization api tokens
+*QoveryApi.OrganizationCustomRoleApi* | [**createOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#createOrganizationCustomRole) | **POST** /organization/{organizationId}/customRole | Create an organization custom role
+*QoveryApi.OrganizationCustomRoleApi* | [**deleteOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#deleteOrganizationCustomRole) | **DELETE** /organization/{organizationId}/customRole/{customRoleId} | Delete organization custom role
+*QoveryApi.OrganizationCustomRoleApi* | [**editOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#editOrganizationCustomRole) | **PUT** /organization/{organizationId}/customRole/{customRoleId} | Edit an organization custom role
+*QoveryApi.OrganizationCustomRoleApi* | [**getOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#getOrganizationCustomRole) | **GET** /organization/{organizationId}/customRole/{customRoleId} | Get an organization custom role 
+*QoveryApi.OrganizationCustomRoleApi* | [**listOrganizationCustomRoles**](docs/OrganizationCustomRoleApi.md#listOrganizationCustomRoles) | **GET** /organization/{organizationId}/customRole | List organization custom roles
 *QoveryApi.OrganizationMainCallsApi* | [**createOrganization**](docs/OrganizationMainCallsApi.md#createOrganization) | **POST** /organization | Create an organization
 *QoveryApi.OrganizationMainCallsApi* | [**deleteOrganization**](docs/OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
 *QoveryApi.OrganizationMainCallsApi* | [**editOrganization**](docs/OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
 *QoveryApi.OrganizationMainCallsApi* | [**getOrganization**](docs/OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganization**](docs/OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
+*QoveryApi.OrganizationMainCallsApi* | [**listOrganizationAvailableRoles**](docs/OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
 *QoveryApi.OrganizationWebhookApi* | [**createOrganizationWebhook**](docs/OrganizationWebhookApi.md#createOrganizationWebhook) | **POST** /organization/{organizationId}/webhook | Create an organization webhook
 *QoveryApi.OrganizationWebhookApi* | [**deleteOrganizationWebhook**](docs/OrganizationWebhookApi.md#deleteOrganizationWebhook) | **DELETE** /organization/{organizationId}/webhook/{webhookId} | Delete organization webhook
 *QoveryApi.OrganizationWebhookApi* | [**editOrganizationWebhook**](docs/OrganizationWebhookApi.md#editOrganizationWebhook) | **PUT** /organization/{organizationId}/webhook/{webhookId} | Edit an organization webhook
@@ -569,6 +576,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DatabaseResponseList](docs/DatabaseResponseList.md)
  - [QoveryApi.DatabaseTypeEnum](docs/DatabaseTypeEnum.md)
  - [QoveryApi.DatabaseVersionMode](docs/DatabaseVersionMode.md)
+ - [QoveryApi.DefaultMemberRole](docs/DefaultMemberRole.md)
  - [QoveryApi.DeployAllRequest](docs/DeployAllRequest.md)
  - [QoveryApi.DeployAllRequestApplicationsInner](docs/DeployAllRequestApplicationsInner.md)
  - [QoveryApi.DeployAllRequestContainersInner](docs/DeployAllRequestContainersInner.md)
@@ -684,6 +692,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Member](docs/Member.md)
  - [QoveryApi.MemberAllOf](docs/MemberAllOf.md)
  - [QoveryApi.MemberResponseList](docs/MemberResponseList.md)
+ - [QoveryApi.MemberRoleUpdateRequest](docs/MemberRoleUpdateRequest.md)
  - [QoveryApi.MetricCPU](docs/MetricCPU.md)
  - [QoveryApi.MetricCPUDatapoint](docs/MetricCPUDatapoint.md)
  - [QoveryApi.MetricCPUDatapointResponseList](docs/MetricCPUDatapointResponseList.md)
@@ -711,12 +720,24 @@ Class | Method | HTTP request | Description
  - [QoveryApi.OrganizationApiTokenCreateRequest](docs/OrganizationApiTokenCreateRequest.md)
  - [QoveryApi.OrganizationApiTokenResponseList](docs/OrganizationApiTokenResponseList.md)
  - [QoveryApi.OrganizationApiTokenScope](docs/OrganizationApiTokenScope.md)
+ - [QoveryApi.OrganizationAvailableRole](docs/OrganizationAvailableRole.md)
+ - [QoveryApi.OrganizationAvailableRoleList](docs/OrganizationAvailableRoleList.md)
  - [QoveryApi.OrganizationChangePlanRequest](docs/OrganizationChangePlanRequest.md)
  - [QoveryApi.OrganizationContainerAutoDeployRequest](docs/OrganizationContainerAutoDeployRequest.md)
  - [QoveryApi.OrganizationContainerPreviewRequest](docs/OrganizationContainerPreviewRequest.md)
  - [QoveryApi.OrganizationCreditCodeRequest](docs/OrganizationCreditCodeRequest.md)
  - [QoveryApi.OrganizationCurrentCost](docs/OrganizationCurrentCost.md)
  - [QoveryApi.OrganizationCurrentCostAllOf](docs/OrganizationCurrentCostAllOf.md)
+ - [QoveryApi.OrganizationCustomRole](docs/OrganizationCustomRole.md)
+ - [QoveryApi.OrganizationCustomRoleClusterPermission](docs/OrganizationCustomRoleClusterPermission.md)
+ - [QoveryApi.OrganizationCustomRoleClusterPermissionsInner](docs/OrganizationCustomRoleClusterPermissionsInner.md)
+ - [QoveryApi.OrganizationCustomRoleList](docs/OrganizationCustomRoleList.md)
+ - [QoveryApi.OrganizationCustomRoleProjectPermission](docs/OrganizationCustomRoleProjectPermission.md)
+ - [QoveryApi.OrganizationCustomRoleProjectPermissionsInner](docs/OrganizationCustomRoleProjectPermissionsInner.md)
+ - [QoveryApi.OrganizationCustomRoleRequest](docs/OrganizationCustomRoleRequest.md)
+ - [QoveryApi.OrganizationCustomRoleRequestClusterPermissionsInner](docs/OrganizationCustomRoleRequestClusterPermissionsInner.md)
+ - [QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInner](docs/OrganizationCustomRoleRequestProjectPermissionsInner.md)
+ - [QoveryApi.OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner](docs/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner.md)
  - [QoveryApi.OrganizationEditRequest](docs/OrganizationEditRequest.md)
  - [QoveryApi.OrganizationGithubAppConnectRequest](docs/OrganizationGithubAppConnectRequest.md)
  - [QoveryApi.OrganizationRequest](docs/OrganizationRequest.md)

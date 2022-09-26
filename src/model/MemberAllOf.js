@@ -68,6 +68,9 @@ class MemberAllOf {
             if (data.hasOwnProperty('role')) {
                 obj['role'] = InviteMemberRoleEnum.constructFromObject(data['role']);
             }
+            if (data.hasOwnProperty('role_name')) {
+                obj['role_name'] = ApiClient.convertToType(data['role_name'], 'String');
+            }
         }
         return obj;
     }
@@ -105,6 +108,12 @@ MemberAllOf.prototype['last_activity_at'] = undefined;
  * @member {module:model/InviteMemberRoleEnum} role
  */
 MemberAllOf.prototype['role'] = undefined;
+
+/**
+ * the role linked to the user
+ * @member {String} role_name
+ */
+MemberAllOf.prototype['role_name'] = undefined;
 
 
 

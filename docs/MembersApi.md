@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteInviteMember**](MembersApi.md#deleteInviteMember) | **DELETE** /organization/{organizationId}/inviteMember/{inviteId} | Remove an invited member
 [**deleteMember**](MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member/{userId} | Remove a member
+[**editOrganizationMemberRole**](MembersApi.md#editOrganizationMemberRole) | **PUT** /organization/{organizationId}/member | Edit an organization member role
 [**getOrganizationInvitedMembers**](MembersApi.md#getOrganizationInvitedMembers) | **GET** /organization/{organizationId}/inviteMember | Get invited members
 [**getOrganizationMembers**](MembersApi.md#getOrganizationMembers) | **GET** /organization/{organizationId}/member | Get organization members
 [**postAcceptInviteMember**](MembersApi.md#postAcceptInviteMember) | **POST** /organization/{organizationId}/inviteMember/{inviteId} | Accept Invite in the organization
@@ -107,6 +108,59 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
+## editOrganizationMemberRole
+
+> editOrganizationMemberRole(organizationId, opts)
+
+Edit an organization member role
+
+Edit an organization member role
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.MembersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let opts = {
+  'memberRoleUpdateRequest': new QoveryApi.MemberRoleUpdateRequest() // MemberRoleUpdateRequest | 
+};
+apiInstance.editOrganizationMemberRole(organizationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **memberRoleUpdateRequest** | [**MemberRoleUpdateRequest**](MemberRoleUpdateRequest.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: Not defined
 
 

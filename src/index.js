@@ -143,6 +143,7 @@ import DatabaseRequest from './model/DatabaseRequest';
 import DatabaseResponseList from './model/DatabaseResponseList';
 import DatabaseTypeEnum from './model/DatabaseTypeEnum';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
+import DefaultMemberRole from './model/DefaultMemberRole';
 import DeployAllRequest from './model/DeployAllRequest';
 import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
 import DeployAllRequestContainersInner from './model/DeployAllRequestContainersInner';
@@ -258,6 +259,7 @@ import LogicalDatabaseResponseList from './model/LogicalDatabaseResponseList';
 import Member from './model/Member';
 import MemberAllOf from './model/MemberAllOf';
 import MemberResponseList from './model/MemberResponseList';
+import MemberRoleUpdateRequest from './model/MemberRoleUpdateRequest';
 import MetricCPU from './model/MetricCPU';
 import MetricCPUDatapoint from './model/MetricCPUDatapoint';
 import MetricCPUDatapointResponseList from './model/MetricCPUDatapointResponseList';
@@ -285,12 +287,24 @@ import OrganizationApiTokenCreateAllOf from './model/OrganizationApiTokenCreateA
 import OrganizationApiTokenCreateRequest from './model/OrganizationApiTokenCreateRequest';
 import OrganizationApiTokenResponseList from './model/OrganizationApiTokenResponseList';
 import OrganizationApiTokenScope from './model/OrganizationApiTokenScope';
+import OrganizationAvailableRole from './model/OrganizationAvailableRole';
+import OrganizationAvailableRoleList from './model/OrganizationAvailableRoleList';
 import OrganizationChangePlanRequest from './model/OrganizationChangePlanRequest';
 import OrganizationContainerAutoDeployRequest from './model/OrganizationContainerAutoDeployRequest';
 import OrganizationContainerPreviewRequest from './model/OrganizationContainerPreviewRequest';
 import OrganizationCreditCodeRequest from './model/OrganizationCreditCodeRequest';
 import OrganizationCurrentCost from './model/OrganizationCurrentCost';
 import OrganizationCurrentCostAllOf from './model/OrganizationCurrentCostAllOf';
+import OrganizationCustomRole from './model/OrganizationCustomRole';
+import OrganizationCustomRoleClusterPermission from './model/OrganizationCustomRoleClusterPermission';
+import OrganizationCustomRoleClusterPermissionsInner from './model/OrganizationCustomRoleClusterPermissionsInner';
+import OrganizationCustomRoleList from './model/OrganizationCustomRoleList';
+import OrganizationCustomRoleProjectPermission from './model/OrganizationCustomRoleProjectPermission';
+import OrganizationCustomRoleProjectPermissionsInner from './model/OrganizationCustomRoleProjectPermissionsInner';
+import OrganizationCustomRoleRequest from './model/OrganizationCustomRoleRequest';
+import OrganizationCustomRoleRequestClusterPermissionsInner from './model/OrganizationCustomRoleRequestClusterPermissionsInner';
+import OrganizationCustomRoleRequestProjectPermissionsInner from './model/OrganizationCustomRoleRequestProjectPermissionsInner';
+import OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner from './model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner';
 import OrganizationEditRequest from './model/OrganizationEditRequest';
 import OrganizationGithubAppConnectRequest from './model/OrganizationGithubAppConnectRequest';
 import OrganizationRequest from './model/OrganizationRequest';
@@ -427,6 +441,7 @@ import LogicalDatabaseApi from './api/LogicalDatabaseApi';
 import MembersApi from './api/MembersApi';
 import OrganizationAccountGitRepositoriesApi from './api/OrganizationAccountGitRepositoriesApi';
 import OrganizationApiTokenApi from './api/OrganizationApiTokenApi';
+import OrganizationCustomRoleApi from './api/OrganizationCustomRoleApi';
 import OrganizationMainCallsApi from './api/OrganizationMainCallsApi';
 import OrganizationWebhookApi from './api/OrganizationWebhookApi';
 import ProjectDeploymentRuleApi from './api/ProjectDeploymentRuleApi';
@@ -1257,6 +1272,12 @@ export {
     DatabaseVersionMode,
 
     /**
+     * The DefaultMemberRole model constructor.
+     * @property {module:model/DefaultMemberRole}
+     */
+    DefaultMemberRole,
+
+    /**
      * The DeployAllRequest model constructor.
      * @property {module:model/DeployAllRequest}
      */
@@ -1947,6 +1968,12 @@ export {
     MemberResponseList,
 
     /**
+     * The MemberRoleUpdateRequest model constructor.
+     * @property {module:model/MemberRoleUpdateRequest}
+     */
+    MemberRoleUpdateRequest,
+
+    /**
      * The MetricCPU model constructor.
      * @property {module:model/MetricCPU}
      */
@@ -2109,6 +2136,18 @@ export {
     OrganizationApiTokenScope,
 
     /**
+     * The OrganizationAvailableRole model constructor.
+     * @property {module:model/OrganizationAvailableRole}
+     */
+    OrganizationAvailableRole,
+
+    /**
+     * The OrganizationAvailableRoleList model constructor.
+     * @property {module:model/OrganizationAvailableRoleList}
+     */
+    OrganizationAvailableRoleList,
+
+    /**
      * The OrganizationChangePlanRequest model constructor.
      * @property {module:model/OrganizationChangePlanRequest}
      */
@@ -2143,6 +2182,66 @@ export {
      * @property {module:model/OrganizationCurrentCostAllOf}
      */
     OrganizationCurrentCostAllOf,
+
+    /**
+     * The OrganizationCustomRole model constructor.
+     * @property {module:model/OrganizationCustomRole}
+     */
+    OrganizationCustomRole,
+
+    /**
+     * The OrganizationCustomRoleClusterPermission model constructor.
+     * @property {module:model/OrganizationCustomRoleClusterPermission}
+     */
+    OrganizationCustomRoleClusterPermission,
+
+    /**
+     * The OrganizationCustomRoleClusterPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleClusterPermissionsInner}
+     */
+    OrganizationCustomRoleClusterPermissionsInner,
+
+    /**
+     * The OrganizationCustomRoleList model constructor.
+     * @property {module:model/OrganizationCustomRoleList}
+     */
+    OrganizationCustomRoleList,
+
+    /**
+     * The OrganizationCustomRoleProjectPermission model constructor.
+     * @property {module:model/OrganizationCustomRoleProjectPermission}
+     */
+    OrganizationCustomRoleProjectPermission,
+
+    /**
+     * The OrganizationCustomRoleProjectPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleProjectPermissionsInner}
+     */
+    OrganizationCustomRoleProjectPermissionsInner,
+
+    /**
+     * The OrganizationCustomRoleRequest model constructor.
+     * @property {module:model/OrganizationCustomRoleRequest}
+     */
+    OrganizationCustomRoleRequest,
+
+    /**
+     * The OrganizationCustomRoleRequestClusterPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleRequestClusterPermissionsInner}
+     */
+    OrganizationCustomRoleRequestClusterPermissionsInner,
+
+    /**
+     * The OrganizationCustomRoleRequestProjectPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleRequestProjectPermissionsInner}
+     */
+    OrganizationCustomRoleRequestProjectPermissionsInner,
+
+    /**
+     * The OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner model constructor.
+     * @property {module:model/OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner}
+     */
+    OrganizationCustomRoleRequestProjectPermissionsInnerPermissionsInner,
 
     /**
      * The OrganizationEditRequest model constructor.
@@ -2959,6 +3058,12 @@ export {
     * @property {module:api/OrganizationApiTokenApi}
     */
     OrganizationApiTokenApi,
+
+    /**
+    * The OrganizationCustomRoleApi service constructor.
+    * @property {module:api/OrganizationCustomRoleApi}
+    */
+    OrganizationCustomRoleApi,
 
     /**
     * The OrganizationMainCallsApi service constructor.

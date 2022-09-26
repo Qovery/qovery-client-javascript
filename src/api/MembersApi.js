@@ -17,6 +17,7 @@ import InviteMember from '../model/InviteMember';
 import InviteMemberRequest from '../model/InviteMemberRequest';
 import InviteMemberResponseList from '../model/InviteMemberResponseList';
 import MemberResponseList from '../model/MemberResponseList';
+import MemberRoleUpdateRequest from '../model/MemberRoleUpdateRequest';
 import TransferOwnershipRequest from '../model/TransferOwnershipRequest';
 
 /**
@@ -121,6 +122,51 @@ export default class MembersApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/organization/{organizationId}/member/{userId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editOrganizationMemberRole operation.
+     * @callback module:api/MembersApi~editOrganizationMemberRoleCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit an organization member role
+     * Edit an organization member role
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/MemberRoleUpdateRequest} opts.memberRoleUpdateRequest 
+     * @param {module:api/MembersApi~editOrganizationMemberRoleCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    editOrganizationMemberRole(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['memberRoleUpdateRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling editOrganizationMemberRole");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/member', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

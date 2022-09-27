@@ -74,6 +74,24 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.proxy_buffer_size_kb')) {
                 obj['network.ingress.proxy_buffer_size_kb'] = ApiClient.convertToType(data['network.ingress.proxy_buffer_size_kb'], 'Number');
             }
+            if (data.hasOwnProperty('network.ingress.keepalive_time_seconds')) {
+                obj['network.ingress.keepalive_time_seconds'] = ApiClient.convertToType(data['network.ingress.keepalive_time_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.keepalive_timeout_seconds')) {
+                obj['network.ingress.keepalive_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.keepalive_timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.send_timeout_seconds')) {
+                obj['network.ingress.send_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.send_timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.proxy_connect_timeout_seconds')) {
+                obj['network.ingress.proxy_connect_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.proxy_connect_timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.proxy_send_timeout_seconds')) {
+                obj['network.ingress.proxy_send_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.proxy_send_timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.proxy_read_timeout_seconds')) {
+                obj['network.ingress.proxy_read_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.proxy_read_timeout_seconds'], 'Number');
+            }
             if (data.hasOwnProperty('network.ingress.whitelist_source_range')) {
                 obj['network.ingress.whitelist_source_range'] = ApiClient.convertToType(data['network.ingress.whitelist_source_range'], 'String');
             }
@@ -185,6 +203,48 @@ ApplicationAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = 'D
  * @default 4
  */
 ApplicationAdvancedSettings.prototype['network.ingress.proxy_buffer_size_kb'] = 4;
+
+/**
+ * Limits the maximum time (in seconds) during which requests can be processed through one keepalive connection
+ * @member {Number} network.ingress.keepalive_time_seconds
+ * @default 3600
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.keepalive_time_seconds'] = 3600;
+
+/**
+ * Sets a timeout (in seconds) during which an idle keepalive connection to an upstream server will stay open.
+ * @member {Number} network.ingress.keepalive_timeout_seconds
+ * @default 60
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.keepalive_timeout_seconds'] = 60;
+
+/**
+ * Sets a timeout (in seconds) for transmitting a response to the client
+ * @member {Number} network.ingress.send_timeout_seconds
+ * @default 60
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.send_timeout_seconds'] = 60;
+
+/**
+ * Sets a timeout (in seconds) for establishing a connection to a proxied server
+ * @member {Number} network.ingress.proxy_connect_timeout_seconds
+ * @default 60
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.proxy_connect_timeout_seconds'] = 60;
+
+/**
+ * Sets a timeout (in seconds) for transmitting a request to the proxied server
+ * @member {Number} network.ingress.proxy_send_timeout_seconds
+ * @default 60
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.proxy_send_timeout_seconds'] = 60;
+
+/**
+ * Sets a timeout (in seconds) for reading a response from the proxied server
+ * @member {Number} network.ingress.proxy_read_timeout_seconds
+ * @default 60
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.proxy_read_timeout_seconds'] = 60;
 
 /**
  * list of source ranges to allow access to ingress proxy.  This property can be used to whitelist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 To allow all source ranges, set 0.0.0.0/0. 

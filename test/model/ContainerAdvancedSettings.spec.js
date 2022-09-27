@@ -96,6 +96,42 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property networkIngressKeepaliveTimeSeconds (base name: "network.ingress.keepalive_time_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressKeepaliveTimeSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressKeepaliveTimeoutSeconds (base name: "network.ingress.keepalive_timeout_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressKeepaliveTimeoutSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressSendTimeoutSeconds (base name: "network.ingress.send_timeout_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressSendTimeoutSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressProxyConnectTimeoutSeconds (base name: "network.ingress.proxy_connect_timeout_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressProxyConnectTimeoutSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressProxySendTimeoutSeconds (base name: "network.ingress.proxy_send_timeout_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressProxySendTimeoutSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressProxyReadTimeoutSeconds (base name: "network.ingress.proxy_read_timeout_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressProxyReadTimeoutSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property networkIngressWhitelistSourceRange (base name: "network.ingress.whitelist_source_range")', function() {
       // uncomment below and update the code to test the property networkIngressWhitelistSourceRange
       //var instance = new QoveryApi.ContainerAdvancedSettings();

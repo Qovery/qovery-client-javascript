@@ -24,11 +24,10 @@ class InviteMemberRequest {
      * Constructs a new <code>InviteMemberRequest</code>.
      * @alias module:model/InviteMemberRequest
      * @param email {String} 
-     * @param role {module:model/InviteMemberRoleEnum} 
      */
-    constructor(email, role) { 
+    constructor(email) { 
         
-        InviteMemberRequest.initialize(this, email, role);
+        InviteMemberRequest.initialize(this, email);
     }
 
     /**
@@ -36,9 +35,8 @@ class InviteMemberRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, email, role) { 
+    static initialize(obj, email) { 
         obj['email'] = email;
-        obj['role'] = role;
     }
 
     /**
@@ -58,6 +56,9 @@ class InviteMemberRequest {
             if (data.hasOwnProperty('role')) {
                 obj['role'] = InviteMemberRoleEnum.constructFromObject(data['role']);
             }
+            if (data.hasOwnProperty('role_id')) {
+                obj['role_id'] = ApiClient.convertToType(data['role_id'], 'String');
+            }
         }
         return obj;
     }
@@ -74,6 +75,12 @@ InviteMemberRequest.prototype['email'] = undefined;
  * @member {module:model/InviteMemberRoleEnum} role
  */
 InviteMemberRequest.prototype['role'] = undefined;
+
+/**
+ * the target role to attribute to the new member
+ * @member {String} role_id
+ */
+InviteMemberRequest.prototype['role_id'] = undefined;
 
 
 

@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property roleId (base name: "role_id")', function() {
+      // uncomment below and update the code to test the property roleId
+      //var instance = new QoveryApi.InviteMemberRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

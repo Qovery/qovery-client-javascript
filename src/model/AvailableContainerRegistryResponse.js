@@ -54,6 +54,9 @@ class AvailableContainerRegistryResponse {
             if (data.hasOwnProperty('required_config')) {
                 obj['required_config'] = ApiClient.convertToType(data['required_config'], {'String': Object});
             }
+            if (data.hasOwnProperty('is_mandatory')) {
+                obj['is_mandatory'] = ApiClient.convertToType(data['is_mandatory'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -70,6 +73,11 @@ AvailableContainerRegistryResponse.prototype['kind'] = undefined;
  * @member {Object.<String, Object>} required_config
  */
 AvailableContainerRegistryResponse.prototype['required_config'] = undefined;
+
+/**
+ * @member {Boolean} is_mandatory
+ */
+AvailableContainerRegistryResponse.prototype['is_mandatory'] = undefined;
 
 
 

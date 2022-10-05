@@ -53,9 +53,6 @@ class OrganizationAvailableRole {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('is_default')) {
-                obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -64,22 +61,14 @@ class OrganizationAvailableRole {
 }
 
 /**
- * Filled only for an organization custom role
  * @member {String} id
  */
 OrganizationAvailableRole.prototype['id'] = undefined;
 
 /**
- * It can be either a custom role name or a default role name
  * @member {String} name
  */
 OrganizationAvailableRole.prototype['name'] = undefined;
-
-/**
- * - `true` if it is a Qovery role - `false` if it is a custom role 
- * @member {Boolean} is_default
- */
-OrganizationAvailableRole.prototype['is_default'] = undefined;
 
 
 

@@ -60,14 +60,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property customRoleId (base name: "custom_role_id")', function() {
-      // uncomment below and update the code to test the property customRoleId
-      //var instance = new QoveryApi.MemberRoleUpdateRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property defaultRoleName (base name: "default_role_name")', function() {
-      // uncomment below and update the code to test the property defaultRoleName
+    it('should have the property roleId (base name: "role_id")', function() {
+      // uncomment below and update the code to test the property roleId
       //var instance = new QoveryApi.MemberRoleUpdateRequest();
       //expect(instance).to.be();
     });

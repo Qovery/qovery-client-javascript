@@ -26,12 +26,11 @@ class ContainerRegistryRequest {
      * @alias module:model/ContainerRegistryRequest
      * @param name {String} 
      * @param kind {module:model/ContainerRegistryKindEnum} 
-     * @param url {String} URL of the container registry: * For `DOCKER_HUB`: should be `https://docker.io` * For others: must start by `https://` 
      * @param config {module:model/ContainerRegistryRequestConfig} 
      */
-    constructor(name, kind, url, config) { 
+    constructor(name, kind, config) { 
         
-        ContainerRegistryRequest.initialize(this, name, kind, url, config);
+        ContainerRegistryRequest.initialize(this, name, kind, config);
     }
 
     /**
@@ -39,10 +38,9 @@ class ContainerRegistryRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, kind, url, config) { 
+    static initialize(obj, name, kind, config) { 
         obj['name'] = name;
         obj['kind'] = kind;
-        obj['url'] = url;
         obj['config'] = config;
     }
 
@@ -95,7 +93,7 @@ ContainerRegistryRequest.prototype['kind'] = undefined;
 ContainerRegistryRequest.prototype['description'] = undefined;
 
 /**
- * URL of the container registry: * For `DOCKER_HUB`: should be `https://docker.io` * For others: must start by `https://` 
+ * URL of the container registry: * For `DOCKER_HUB`: it must be `https://docker.io` (default with 'https://docker.io' if no url provided for DOCKER_HUB) * For others: it's required and must start by `https://` 
  * @member {String} url
  */
 ContainerRegistryRequest.prototype['url'] = undefined;

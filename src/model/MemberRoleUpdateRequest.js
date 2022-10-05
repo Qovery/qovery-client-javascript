@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import DefaultMemberRole from './DefaultMemberRole';
 
 /**
  * The MemberRoleUpdateRequest model module.
@@ -51,11 +50,8 @@ class MemberRoleUpdateRequest {
             if (data.hasOwnProperty('user_id')) {
                 obj['user_id'] = ApiClient.convertToType(data['user_id'], 'String');
             }
-            if (data.hasOwnProperty('custom_role_id')) {
-                obj['custom_role_id'] = ApiClient.convertToType(data['custom_role_id'], 'String');
-            }
-            if (data.hasOwnProperty('default_role_name')) {
-                obj['default_role_name'] = DefaultMemberRole.constructFromObject(data['default_role_name']);
+            if (data.hasOwnProperty('role_id')) {
+                obj['role_id'] = ApiClient.convertToType(data['role_id'], 'String');
             }
         }
         return obj;
@@ -71,15 +67,9 @@ class MemberRoleUpdateRequest {
 MemberRoleUpdateRequest.prototype['user_id'] = undefined;
 
 /**
- * used to specify an organization custom role, otherwise `null`
- * @member {String} custom_role_id
+ * @member {String} role_id
  */
-MemberRoleUpdateRequest.prototype['custom_role_id'] = undefined;
-
-/**
- * @member {module:model/DefaultMemberRole} default_role_name
- */
-MemberRoleUpdateRequest.prototype['default_role_name'] = undefined;
+MemberRoleUpdateRequest.prototype['role_id'] = undefined;
 
 
 

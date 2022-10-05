@@ -32,7 +32,7 @@ class ContainerRequest {
      * @implements module:model/ContainerRequestAllOf
      * @param name {String} name is case insensitive
      * @param registryId {String} id of the linked registry
-     * @param imageName {String} The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `namespace/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+     * @param imageName {String} The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
      * @param tag {String} tag of the image container
      */
     constructor(name, registryId, imageName, tag) { 
@@ -132,7 +132,7 @@ ContainerRequest.prototype['name'] = undefined;
 ContainerRequest.prototype['registry_id'] = undefined;
 
 /**
- * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `namespace/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+ * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
  * @member {String} image_name
  */
 ContainerRequest.prototype['image_name'] = undefined;
@@ -205,7 +205,7 @@ ContainerRequestAllOf.prototype['name'] = undefined;
  */
 ContainerRequestAllOf.prototype['registry_id'] = undefined;
 /**
- * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `namespace/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+ * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
  * @member {String} image_name
  */
 ContainerRequestAllOf.prototype['image_name'] = undefined;

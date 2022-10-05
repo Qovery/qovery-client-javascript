@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class ContainerRegistryRequestConfig {
     /**
      * Constructs a new <code>ContainerRegistryRequestConfig</code>.
-     * This field is dependent of the container registry kind: * &#x60;ECR&#x60; needs in the config: region, access_key_id, secret_access_key * &#x60;SCALEWAY_CR&#x60; needs in the config: region, scaleway_access_key, scaleway_secret_key * &#x60;DOCKER_HUB&#x60; needs in the config: username, password * &#x60;PUBLIC_ECR&#x60; needs in the config: access_key_id, secret_access_key * &#x60;DOCR&#x60; is not supported anymore 
+     * This field is dependent of the container registry kind: * &#x60;ECR&#x60; needs in the config: region, access_key_id, secret_access_key * &#x60;SCALEWAY_CR&#x60; needs in the config: region, scaleway_access_key, scaleway_secret_key * &#x60;DOCKER_HUB&#x60; needs in the config (optional): username, password * &#x60;PUBLIC_ECR&#x60; doesn&#39;t need credentials info * &#x60;DOCR&#x60; is not supported anymore 
      * @alias module:model/ContainerRegistryRequestConfig
      */
     constructor() { 
@@ -107,13 +107,13 @@ ContainerRegistryRequestConfig.prototype['scaleway_access_key'] = undefined;
 ContainerRegistryRequestConfig.prototype['scaleway_secret_key'] = undefined;
 
 /**
- * Required if kind is `DOCKER_HUB`
+ * optional, for kind `DOCKER_HUB`   We encourage you to set credentials for Docker Hub due to the limits on the pull rate 
  * @member {String} username
  */
 ContainerRegistryRequestConfig.prototype['username'] = undefined;
 
 /**
- * Required if kind is `DOCKER_HUB`
+ * optional, for kind `DOCKER_HUB`   We encourage you to set credentials for Docker Hub due to the limits on the pull rate 
  * @member {String} password
  */
 ContainerRegistryRequestConfig.prototype['password'] = undefined;

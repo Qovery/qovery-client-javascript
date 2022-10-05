@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isMandatory (base name: "is_mandatory")', function() {
+      // uncomment below and update the code to test the property isMandatory
+      //var instance = new QoveryApi.AvailableContainerRegistryResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

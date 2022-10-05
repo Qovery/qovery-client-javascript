@@ -192,7 +192,7 @@ ApplicationRequest.prototype['max_running_instances'] = 1;
 ApplicationRequest.prototype['healthcheck'] = undefined;
 
 /**
- * Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request. 
+ * Specify if the environment preview option is activated or not for this application.   If activated, a preview environment will be automatically cloned at each pull request.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview
  * @default true
  */
@@ -266,7 +266,7 @@ ApplicationRequestAllOf.prototype['max_running_instances'] = 1;
  */
 ApplicationRequestAllOf.prototype['healthcheck'] = undefined;
 /**
- * Specify if the environment preview option is activated or not for this application. If activated, a preview environment will be automatically cloned at each pull request. 
+ * Specify if the environment preview option is activated or not for this application.   If activated, a preview environment will be automatically cloned at each pull request.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview
  * @default true
  */

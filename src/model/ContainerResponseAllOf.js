@@ -35,7 +35,7 @@ class ContainerResponseAllOf {
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param minRunningInstances {Number} Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
      * @param maxRunningInstances {Number} Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
-     * @param autoPreview {Boolean} Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
+     * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      */
     constructor(environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
         
@@ -203,7 +203,7 @@ ContainerResponseAllOf.prototype['min_running_instances'] = 1;
 ContainerResponseAllOf.prototype['max_running_instances'] = 1;
 
 /**
- * Specify if the environment preview option is activated or not for this container. If activated, a preview environment will be automatically cloned at each pull request. 
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview
  */
 ContainerResponseAllOf.prototype['auto_preview'] = undefined;

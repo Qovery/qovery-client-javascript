@@ -102,6 +102,9 @@ class ContainerRequest {
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
             }
+            if (data.hasOwnProperty('auto_preview')) {
+                obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -182,6 +185,12 @@ ContainerRequest.prototype['min_running_instances'] = 1;
  */
 ContainerRequest.prototype['max_running_instances'] = 1;
 
+/**
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+ContainerRequest.prototype['auto_preview'] = undefined;
+
 
 // Implement ServiceStorageRequest interface:
 /**
@@ -247,6 +256,11 @@ ContainerRequestAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerRequestAllOf.prototype['max_running_instances'] = 1;
+/**
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+ContainerRequestAllOf.prototype['auto_preview'] = undefined;
 
 
 

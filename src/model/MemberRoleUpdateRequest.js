@@ -22,10 +22,12 @@ class MemberRoleUpdateRequest {
     /**
      * Constructs a new <code>MemberRoleUpdateRequest</code>.
      * @alias module:model/MemberRoleUpdateRequest
+     * @param userId {String} specify the git provider user id
+     * @param roleId {String} 
      */
-    constructor() { 
+    constructor(userId, roleId) { 
         
-        MemberRoleUpdateRequest.initialize(this);
+        MemberRoleUpdateRequest.initialize(this, userId, roleId);
     }
 
     /**
@@ -33,7 +35,9 @@ class MemberRoleUpdateRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, userId, roleId) { 
+        obj['user_id'] = userId;
+        obj['role_id'] = roleId;
     }
 
     /**

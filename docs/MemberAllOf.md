@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **lastActivityAt** | **Date** | last time the user was connected | [optional] 
 **role** | [**InviteMemberRoleEnum**](InviteMemberRoleEnum.md) |  | [optional] 
 **roleName** | **String** | the role linked to the user | [optional] 
+**roleId** | **String** |  | [optional] 
 
 

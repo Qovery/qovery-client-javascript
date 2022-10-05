@@ -96,6 +96,12 @@ class InviteMember {
             if (data.hasOwnProperty('logo_url')) {
                 obj['logo_url'] = ApiClient.convertToType(data['logo_url'], 'String');
             }
+            if (data.hasOwnProperty('role_id')) {
+                obj['role_id'] = ApiClient.convertToType(data['role_id'], 'String');
+            }
+            if (data.hasOwnProperty('role_name')) {
+                obj['role_name'] = ApiClient.convertToType(data['role_name'], 'String');
+            }
         }
         return obj;
     }
@@ -148,6 +154,16 @@ InviteMember.prototype['inviter'] = undefined;
  */
 InviteMember.prototype['logo_url'] = undefined;
 
+/**
+ * @member {String} role_id
+ */
+InviteMember.prototype['role_id'] = undefined;
+
+/**
+ * @member {String} role_name
+ */
+InviteMember.prototype['role_name'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -187,6 +203,14 @@ InviteMemberAllOf.prototype['inviter'] = undefined;
  * @member {String} logo_url
  */
 InviteMemberAllOf.prototype['logo_url'] = undefined;
+/**
+ * @member {String} role_id
+ */
+InviteMemberAllOf.prototype['role_id'] = undefined;
+/**
+ * @member {String} role_name
+ */
+InviteMemberAllOf.prototype['role_name'] = undefined;
 
 
 

@@ -13,5 +13,7 @@ Name | Type | Description | Notes
 **invitationStatus** | [**InviteStatusEnum**](InviteStatusEnum.md) |  | 
 **inviter** | **String** |  | 
 **logoUrl** | **String** |  | [optional] 
+**roleId** | **String** |  | [optional] 
+**roleName** | **String** |  | [optional] 
 
 

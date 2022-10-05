@@ -78,7 +78,7 @@ OrganizationCustomRoleProjectPermissionsInner.prototype['project_id'] = undefine
 OrganizationCustomRoleProjectPermissionsInner.prototype['project_name'] = undefined;
 
 /**
- * If `is_admin` is `true`, the user is: - automatically `MANAGER` for each environment type - allowed to manage project deployment rules - able to delete the project Note that `permissions` can then be ignored for this project 
+ * If `is_admin` is `true`, the user is: - automatically `MANAGER` for each environment type - allowed to manage project deployment rules - able to delete the project    Note that `permissions` can then be ignored for this project 
  * @member {Boolean} is_admin
  * @default false
  */

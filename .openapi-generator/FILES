@@ -172,7 +172,6 @@ docs/DatabaseResponseList.md
 docs/DatabaseTypeEnum.md
 docs/DatabaseVersionMode.md
 docs/DatabasesApi.md
-docs/DefaultMemberRole.md
 docs/DependencyApi.md
 docs/DeployAllRequest.md
 docs/DeployAllRequestApplicationsInner.md
@@ -642,7 +641,6 @@ src/model/DatabaseRequest.js
 src/model/DatabaseResponseList.js
 src/model/DatabaseTypeEnum.js
 src/model/DatabaseVersionMode.js
-src/model/DefaultMemberRole.js
 src/model/DeployAllRequest.js
 src/model/DeployAllRequestApplicationsInner.js
 src/model/DeployAllRequestContainersInner.js
@@ -1081,7 +1079,6 @@ test/model/DatabaseRequest.spec.js
 test/model/DatabaseResponseList.spec.js
 test/model/DatabaseTypeEnum.spec.js
 test/model/DatabaseVersionMode.spec.js
-test/model/DefaultMemberRole.spec.js
 test/model/DeployAllRequest.spec.js
 test/model/DeployAllRequestApplicationsInner.spec.js
 test/model/DeployAllRequestContainersInner.spec.js

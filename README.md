@@ -576,7 +576,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DatabaseResponseList](docs/DatabaseResponseList.md)
  - [QoveryApi.DatabaseTypeEnum](docs/DatabaseTypeEnum.md)
  - [QoveryApi.DatabaseVersionMode](docs/DatabaseVersionMode.md)
- - [QoveryApi.DefaultMemberRole](docs/DefaultMemberRole.md)
  - [QoveryApi.DeployAllRequest](docs/DeployAllRequest.md)
  - [QoveryApi.DeployAllRequestApplicationsInner](docs/DeployAllRequestApplicationsInner.md)
  - [QoveryApi.DeployAllRequestContainersInner](docs/DeployAllRequestContainersInner.md)

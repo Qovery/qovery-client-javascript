@@ -143,7 +143,6 @@ import DatabaseRequest from './model/DatabaseRequest';
 import DatabaseResponseList from './model/DatabaseResponseList';
 import DatabaseTypeEnum from './model/DatabaseTypeEnum';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
-import DefaultMemberRole from './model/DefaultMemberRole';
 import DeployAllRequest from './model/DeployAllRequest';
 import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
 import DeployAllRequestContainersInner from './model/DeployAllRequestContainersInner';
@@ -1271,12 +1270,6 @@ export {
      * @property {module:model/DatabaseVersionMode}
      */
     DatabaseVersionMode,
-
-    /**
-     * The DefaultMemberRole model constructor.
-     * @property {module:model/DefaultMemberRole}
-     */
-    DefaultMemberRole,
 
     /**
      * The DeployAllRequest model constructor.

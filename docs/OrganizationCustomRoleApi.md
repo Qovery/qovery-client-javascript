@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ## deleteOrganizationCustomRole
 
-> deleteOrganizationCustomRole(organizationId)
+> deleteOrganizationCustomRole(organizationId, customRoleId)
 
 Delete organization custom role
 
@@ -84,7 +84,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.OrganizationCustomRoleApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-apiInstance.deleteOrganizationCustomRole(organizationId, (error, data, response) => {
+let customRoleId = "customRoleId_example"; // String | Custom Role ID
+apiInstance.deleteOrganizationCustomRole(organizationId, customRoleId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -99,6 +100,7 @@ apiInstance.deleteOrganizationCustomRole(organizationId, (error, data, response)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **customRoleId** | **String**| Custom Role ID | 
 
 ### Return type
 
@@ -116,7 +118,7 @@ null (empty response body)
 
 ## editOrganizationCustomRole
 
-> OrganizationCustomRole editOrganizationCustomRole(organizationId, opts)
+> OrganizationCustomRole editOrganizationCustomRole(organizationId, customRoleId, opts)
 
 Edit an organization custom role
 
@@ -133,10 +135,11 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.OrganizationCustomRoleApi();
 let organizationId = "organizationId_example"; // String | Organization ID
+let customRoleId = "customRoleId_example"; // String | Custom Role ID
 let opts = {
   'organizationCustomRoleUpdateRequest': new QoveryApi.OrganizationCustomRoleUpdateRequest() // OrganizationCustomRoleUpdateRequest | 
 };
-apiInstance.editOrganizationCustomRole(organizationId, opts, (error, data, response) => {
+apiInstance.editOrganizationCustomRole(organizationId, customRoleId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -151,6 +154,7 @@ apiInstance.editOrganizationCustomRole(organizationId, opts, (error, data, respo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **customRoleId** | **String**| Custom Role ID | 
  **organizationCustomRoleUpdateRequest** | [**OrganizationCustomRoleUpdateRequest**](OrganizationCustomRoleUpdateRequest.md)|  | [optional] 
 
 ### Return type

@@ -95,17 +95,23 @@ export default class OrganizationCustomRoleApi {
      * Delete organization custom role
      * Delete organization custom role
      * @param {String} organizationId Organization ID
+     * @param {String} customRoleId Custom Role ID
      * @param {module:api/OrganizationCustomRoleApi~deleteOrganizationCustomRoleCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteOrganizationCustomRole(organizationId, callback) {
+    deleteOrganizationCustomRole(organizationId, customRoleId, callback) {
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling deleteOrganizationCustomRole");
       }
+      // verify the required parameter 'customRoleId' is set
+      if (customRoleId === undefined || customRoleId === null) {
+        throw new Error("Missing the required parameter 'customRoleId' when calling deleteOrganizationCustomRole");
+      }
 
       let pathParams = {
-        'organizationId': organizationId
+        'organizationId': organizationId,
+        'customRoleId': customRoleId
       };
       let queryParams = {
       };
@@ -137,21 +143,27 @@ export default class OrganizationCustomRoleApi {
      * Edit an organization custom role
      * Edit an organization custom role
      * @param {String} organizationId Organization ID
+     * @param {String} customRoleId Custom Role ID
      * @param {Object} opts Optional parameters
      * @param {module:model/OrganizationCustomRoleUpdateRequest} opts.organizationCustomRoleUpdateRequest 
      * @param {module:api/OrganizationCustomRoleApi~editOrganizationCustomRoleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationCustomRole}
      */
-    editOrganizationCustomRole(organizationId, opts, callback) {
+    editOrganizationCustomRole(organizationId, customRoleId, opts, callback) {
       opts = opts || {};
       let postBody = opts['organizationCustomRoleUpdateRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling editOrganizationCustomRole");
       }
+      // verify the required parameter 'customRoleId' is set
+      if (customRoleId === undefined || customRoleId === null) {
+        throw new Error("Missing the required parameter 'customRoleId' when calling editOrganizationCustomRole");
+      }
 
       let pathParams = {
-        'organizationId': organizationId
+        'organizationId': organizationId,
+        'customRoleId': customRoleId
       };
       let queryParams = {
       };

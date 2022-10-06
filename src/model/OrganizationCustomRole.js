@@ -49,6 +49,9 @@ class OrganizationCustomRole {
         if (data) {
             obj = obj || new OrganizationCustomRole();
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -67,6 +70,11 @@ class OrganizationCustomRole {
 
 
 }
+
+/**
+ * @member {String} id
+ */
+OrganizationCustomRole.prototype['id'] = undefined;
 
 /**
  * @member {String} name

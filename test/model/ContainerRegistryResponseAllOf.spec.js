@@ -78,8 +78,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property belongsToCluster (base name: "belongs_to_cluster")', function() {
-      // uncomment below and update the code to test the property belongsToCluster
+    it('should have the property cluster (base name: "cluster")', function() {
+      // uncomment below and update the code to test the property cluster
       //var instance = new QoveryApi.ContainerRegistryResponseAllOf();
       //expect(instance).to.be();
     });

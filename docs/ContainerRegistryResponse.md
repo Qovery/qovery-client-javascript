@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **kind** | [**ContainerRegistryKindEnum**](ContainerRegistryKindEnum.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **url** | **String** | URL of the container registry | [optional] 
-**belongsToCluster** | **Boolean** | If this registry is used by a cluster | [optional] 
+**cluster** | [**Base**](Base.md) |  | [optional] 
 
 

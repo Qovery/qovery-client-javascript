@@ -79,8 +79,8 @@ class ContainerRegistryResponse {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('belongs_to_cluster')) {
-                obj['belongs_to_cluster'] = ApiClient.convertToType(data['belongs_to_cluster'], 'Boolean');
+            if (data.hasOwnProperty('cluster')) {
+                obj['cluster'] = ApiClient.convertToType(data['cluster'], Base);
             }
         }
         return obj;
@@ -126,10 +126,9 @@ ContainerRegistryResponse.prototype['description'] = undefined;
 ContainerRegistryResponse.prototype['url'] = undefined;
 
 /**
- * If this registry is used by a cluster
- * @member {Boolean} belongs_to_cluster
+ * @member {module:model/Base} cluster
  */
-ContainerRegistryResponse.prototype['belongs_to_cluster'] = undefined;
+ContainerRegistryResponse.prototype['cluster'] = undefined;
 
 
 // Implement Base interface:
@@ -164,10 +163,9 @@ ContainerRegistryResponseAllOf.prototype['description'] = undefined;
  */
 ContainerRegistryResponseAllOf.prototype['url'] = undefined;
 /**
- * If this registry is used by a cluster
- * @member {Boolean} belongs_to_cluster
+ * @member {module:model/Base} cluster
  */
-ContainerRegistryResponseAllOf.prototype['belongs_to_cluster'] = undefined;
+ContainerRegistryResponseAllOf.prototype['cluster'] = undefined;
 
 
 

@@ -60,6 +60,9 @@ class ContainerRegistryResponseAllOf {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('belongs_to_cluster')) {
+                obj['belongs_to_cluster'] = ApiClient.convertToType(data['belongs_to_cluster'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -87,6 +90,12 @@ ContainerRegistryResponseAllOf.prototype['description'] = undefined;
  * @member {String} url
  */
 ContainerRegistryResponseAllOf.prototype['url'] = undefined;
+
+/**
+ * If this registry is used by a cluster
+ * @member {Boolean} belongs_to_cluster
+ */
+ContainerRegistryResponseAllOf.prototype['belongs_to_cluster'] = undefined;
 
 
 

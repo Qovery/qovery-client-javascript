@@ -80,7 +80,7 @@ class ContainerRegistryResponse {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
             if (data.hasOwnProperty('cluster')) {
-                obj['cluster'] = ApiClient.convertToType(data['cluster'], Base);
+                obj['cluster'] = ApiClient.convertToType(data['cluster'], Object);
             }
         }
         return obj;
@@ -126,7 +126,7 @@ ContainerRegistryResponse.prototype['description'] = undefined;
 ContainerRegistryResponse.prototype['url'] = undefined;
 
 /**
- * @member {module:model/Base} cluster
+ * @member {Object} cluster
  */
 ContainerRegistryResponse.prototype['cluster'] = undefined;
 
@@ -163,7 +163,7 @@ ContainerRegistryResponseAllOf.prototype['description'] = undefined;
  */
 ContainerRegistryResponseAllOf.prototype['url'] = undefined;
 /**
- * @member {module:model/Base} cluster
+ * @member {Object} cluster
  */
 ContainerRegistryResponseAllOf.prototype['cluster'] = undefined;
 

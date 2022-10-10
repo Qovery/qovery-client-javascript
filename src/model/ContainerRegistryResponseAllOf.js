@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Base from './Base';
 import ContainerRegistryKindEnum from './ContainerRegistryKindEnum';
 
 /**
@@ -62,7 +61,7 @@ class ContainerRegistryResponseAllOf {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
             if (data.hasOwnProperty('cluster')) {
-                obj['cluster'] = ApiClient.convertToType(data['cluster'], Base);
+                obj['cluster'] = ApiClient.convertToType(data['cluster'], Object);
             }
         }
         return obj;
@@ -93,7 +92,7 @@ ContainerRegistryResponseAllOf.prototype['description'] = undefined;
 ContainerRegistryResponseAllOf.prototype['url'] = undefined;
 
 /**
- * @member {module:model/Base} cluster
+ * @member {Object} cluster
  */
 ContainerRegistryResponseAllOf.prototype['cluster'] = undefined;
 

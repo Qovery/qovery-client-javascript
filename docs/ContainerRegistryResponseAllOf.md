@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **kind** | [**ContainerRegistryKindEnum**](ContainerRegistryKindEnum.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **url** | **String** | URL of the container registry | [optional] 
-**cluster** | **Object** |  | [optional] 
+**cluster** | [**Base**](Base.md) |  | [optional] 
 
 

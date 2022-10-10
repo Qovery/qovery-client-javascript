@@ -27,17 +27,17 @@ export default class PlanEnum {
 
     
         /**
-         * value: "PROFESSIONAL"
+         * value: "TEAM"
          * @const
          */
-        "PROFESSIONAL" = "PROFESSIONAL";
+        "TEAM" = "TEAM";
 
     
         /**
-         * value: "BUSINESS"
+         * value: "TEAM_YEARLY"
          * @const
          */
-        "BUSINESS" = "BUSINESS";
+        "TEAM_YEARLY" = "TEAM_YEARLY";
 
     
         /**
@@ -45,6 +45,13 @@ export default class PlanEnum {
          * @const
          */
         "ENTERPRISE" = "ENTERPRISE";
+
+    
+        /**
+         * value: "ENTERPRISE_YEARLY"
+         * @const
+         */
+        "ENTERPRISE_YEARLY" = "ENTERPRISE_YEARLY";
 
     
 

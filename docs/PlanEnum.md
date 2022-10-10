@@ -5,10 +5,12 @@
 
 * `FREE` (value: `"FREE"`)
 
-* `PROFESSIONAL` (value: `"PROFESSIONAL"`)
+* `TEAM` (value: `"TEAM"`)
 
-* `BUSINESS` (value: `"BUSINESS"`)
+* `TEAM_YEARLY` (value: `"TEAM_YEARLY"`)
 
 * `ENTERPRISE` (value: `"ENTERPRISE"`)
+
+* `ENTERPRISE_YEARLY` (value: `"ENTERPRISE_YEARLY"`)
 
 

@@ -27,6 +27,13 @@ export default class LinkedServiceTypeEnum {
 
     
         /**
+         * value: "CONTAINER"
+         * @const
+         */
+        "CONTAINER" = "CONTAINER";
+
+    
+        /**
          * value: "DATABASE"
          * @const
          */

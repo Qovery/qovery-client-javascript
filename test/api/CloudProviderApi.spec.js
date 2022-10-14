@@ -48,6 +48,26 @@
   }
 
   describe('CloudProviderApi', function() {
+    describe('listAWSEKSInstanceType', function() {
+      it('should call listAWSEKSInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listAWSEKSInstanceType
+        //instance.listAWSEKSInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listAWSEc2InstanceType', function() {
+      it('should call listAWSEc2InstanceType successfully', function(done) {
+        //uncomment below and update the code to test listAWSEc2InstanceType
+        //instance.listAWSEc2InstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listAWSFeatures', function() {
       it('should call listAWSFeatures successfully', function(done) {
         //uncomment below and update the code to test listAWSFeatures
@@ -132,6 +152,16 @@
       it('should call listScalewayInstanceType successfully', function(done) {
         //uncomment below and update the code to test listScalewayInstanceType
         //instance.listScalewayInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listScalewayKapsuleInstanceType', function() {
+      it('should call listScalewayKapsuleInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listScalewayKapsuleInstanceType
+        //instance.listScalewayKapsuleInstanceType(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

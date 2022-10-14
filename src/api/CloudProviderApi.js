@@ -38,6 +38,84 @@ export default class CloudProviderApi {
 
 
     /**
+     * Callback function to receive the result of the listAWSEKSInstanceType operation.
+     * @callback module:api/CloudProviderApi~listAWSEKSInstanceTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterInstanceTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List AWS EKS available instance types
+     * @param {module:api/CloudProviderApi~listAWSEKSInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
+     */
+    listAWSEKSInstanceType(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterInstanceTypeResponseList;
+      return this.apiClient.callApi(
+        '/aws/eks/instanceType/{region}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listAWSEc2InstanceType operation.
+     * @callback module:api/CloudProviderApi~listAWSEc2InstanceTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterInstanceTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List AWS EC2 available instance types
+     * @param {String} region region name
+     * @param {module:api/CloudProviderApi~listAWSEc2InstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
+     */
+    listAWSEc2InstanceType(region, callback) {
+      let postBody = null;
+      // verify the required parameter 'region' is set
+      if (region === undefined || region === null) {
+        throw new Error("Missing the required parameter 'region' when calling listAWSEc2InstanceType");
+      }
+
+      let pathParams = {
+        'region': region
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterInstanceTypeResponseList;
+      return this.apiClient.callApi(
+        '/aws/ec2/instanceType/{region}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listAWSFeatures operation.
      * @callback module:api/CloudProviderApi~listAWSFeaturesCallback
      * @param {String} error Error message, if any.
@@ -356,6 +434,48 @@ export default class CloudProviderApi {
       let returnType = ClusterInstanceTypeResponseList;
       return this.apiClient.callApi(
         '/scaleway/instanceType', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listScalewayKapsuleInstanceType operation.
+     * @callback module:api/CloudProviderApi~listScalewayKapsuleInstanceTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterInstanceTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List Scaleway Kapsule available instance types
+     * @param {String} zone zone name
+     * @param {module:api/CloudProviderApi~listScalewayKapsuleInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
+     */
+    listScalewayKapsuleInstanceType(zone, callback) {
+      let postBody = null;
+      // verify the required parameter 'zone' is set
+      if (zone === undefined || zone === null) {
+        throw new Error("Missing the required parameter 'zone' when calling listScalewayKapsuleInstanceType");
+      }
+
+      let pathParams = {
+        'zone': zone
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterInstanceTypeResponseList;
+      return this.apiClient.callApi(
+        '/scaleway/instanceType/{zone}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

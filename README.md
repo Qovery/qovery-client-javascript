@@ -202,6 +202,8 @@ Class | Method | HTTP request | Description
 *QoveryApi.BillingApi* | [**listOrganizationCreditCards**](docs/BillingApi.md#listOrganizationCreditCards) | **GET** /organization/{organizationId}/creditCard | List organization credit cards
 *QoveryApi.BillingApi* | [**listOrganizationInvoice**](docs/BillingApi.md#listOrganizationInvoice) | **GET** /organization/{organizationId}/invoice | List organization invoices
 *QoveryApi.BillingApi* | [**organizationDownloadAllInvoices**](docs/BillingApi.md#organizationDownloadAllInvoices) | **POST** /organization/{organizationId}/downloadInvoices | Download all invoices
+*QoveryApi.CloudProviderApi* | [**listAWSEKSInstanceType**](docs/CloudProviderApi.md#listAWSEKSInstanceType) | **GET** /aws/eks/instanceType/{region} | List AWS EKS available instance types
+*QoveryApi.CloudProviderApi* | [**listAWSEc2InstanceType**](docs/CloudProviderApi.md#listAWSEc2InstanceType) | **GET** /aws/ec2/instanceType/{region} | List AWS EC2 available instance types
 *QoveryApi.CloudProviderApi* | [**listAWSFeatures**](docs/CloudProviderApi.md#listAWSFeatures) | **GET** /aws/clusterFeature | List AWS features available
 *QoveryApi.CloudProviderApi* | [**listAWSInstanceType**](docs/CloudProviderApi.md#listAWSInstanceType) | **GET** /aws/instanceType | List AWS available instance types
 *QoveryApi.CloudProviderApi* | [**listAWSRegions**](docs/CloudProviderApi.md#listAWSRegions) | **GET** /aws/region | List AWS regions
@@ -211,6 +213,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.CloudProviderApi* | [**listDORegions**](docs/CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
 *QoveryApi.CloudProviderApi* | [**listScalewayFeatures**](docs/CloudProviderApi.md#listScalewayFeatures) | **GET** /scaleway/clusterFeature | List Scaleway features available
 *QoveryApi.CloudProviderApi* | [**listScalewayInstanceType**](docs/CloudProviderApi.md#listScalewayInstanceType) | **GET** /scaleway/instanceType | List Scaleway available instance types
+*QoveryApi.CloudProviderApi* | [**listScalewayKapsuleInstanceType**](docs/CloudProviderApi.md#listScalewayKapsuleInstanceType) | **GET** /scaleway/instanceType/{zone} | List Scaleway Kapsule available instance types
 *QoveryApi.CloudProviderApi* | [**listScalewayRegions**](docs/CloudProviderApi.md#listScalewayRegions) | **GET** /scaleway/region | List Scaleway regions
 *QoveryApi.CloudProviderCredentialsApi* | [**createAWSCredentials**](docs/CloudProviderCredentialsApi.md#createAWSCredentials) | **POST** /organization/{organizationId}/aws/credentials | Create AWS credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**createDOCredentials**](docs/CloudProviderCredentialsApi.md#createDOCredentials) | **POST** /organization/{organizationId}/digitalOcean/credentials | Create Digital Ocean credentials set

@@ -8,5 +8,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | 
 **cpu** | **Number** |  | 
 **ramInGb** | **Number** |  | 
+**bandwidthInGbps** | **String** |  | 
+**bandwidthGuarantee** | **String** |  | 
 
 

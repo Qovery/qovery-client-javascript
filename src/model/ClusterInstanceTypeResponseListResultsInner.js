@@ -26,10 +26,12 @@ class ClusterInstanceTypeResponseListResultsInner {
      * @param name {String} 
      * @param cpu {Number} 
      * @param ramInGb {Number} 
+     * @param bandwidthInGbps {String} 
+     * @param bandwidthGuarantee {String} 
      */
-    constructor(type, name, cpu, ramInGb) { 
+    constructor(type, name, cpu, ramInGb, bandwidthInGbps, bandwidthGuarantee) { 
         
-        ClusterInstanceTypeResponseListResultsInner.initialize(this, type, name, cpu, ramInGb);
+        ClusterInstanceTypeResponseListResultsInner.initialize(this, type, name, cpu, ramInGb, bandwidthInGbps, bandwidthGuarantee);
     }
 
     /**
@@ -37,11 +39,13 @@ class ClusterInstanceTypeResponseListResultsInner {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, name, cpu, ramInGb) { 
+    static initialize(obj, type, name, cpu, ramInGb, bandwidthInGbps, bandwidthGuarantee) { 
         obj['type'] = type;
         obj['name'] = name;
         obj['cpu'] = cpu;
         obj['ram_in_gb'] = ramInGb;
+        obj['bandwidth_in_gbps'] = bandwidthInGbps;
+        obj['bandwidth_guarantee'] = bandwidthGuarantee;
     }
 
     /**
@@ -66,6 +70,12 @@ class ClusterInstanceTypeResponseListResultsInner {
             }
             if (data.hasOwnProperty('ram_in_gb')) {
                 obj['ram_in_gb'] = ApiClient.convertToType(data['ram_in_gb'], 'Number');
+            }
+            if (data.hasOwnProperty('bandwidth_in_gbps')) {
+                obj['bandwidth_in_gbps'] = ApiClient.convertToType(data['bandwidth_in_gbps'], 'String');
+            }
+            if (data.hasOwnProperty('bandwidth_guarantee')) {
+                obj['bandwidth_guarantee'] = ApiClient.convertToType(data['bandwidth_guarantee'], 'String');
             }
         }
         return obj;
@@ -93,6 +103,16 @@ ClusterInstanceTypeResponseListResultsInner.prototype['cpu'] = undefined;
  * @member {Number} ram_in_gb
  */
 ClusterInstanceTypeResponseListResultsInner.prototype['ram_in_gb'] = undefined;
+
+/**
+ * @member {String} bandwidth_in_gbps
+ */
+ClusterInstanceTypeResponseListResultsInner.prototype['bandwidth_in_gbps'] = undefined;
+
+/**
+ * @member {String} bandwidth_guarantee
+ */
+ClusterInstanceTypeResponseListResultsInner.prototype['bandwidth_guarantee'] = undefined;
 
 
 

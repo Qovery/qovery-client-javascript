@@ -4,6 +4,8 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**listAWSEKSInstanceType**](CloudProviderApi.md#listAWSEKSInstanceType) | **GET** /aws/eks/instanceType/{region} | List AWS EKS available instance types
+[**listAWSEc2InstanceType**](CloudProviderApi.md#listAWSEc2InstanceType) | **GET** /aws/ec2/instanceType/{region} | List AWS EC2 available instance types
 [**listAWSFeatures**](CloudProviderApi.md#listAWSFeatures) | **GET** /aws/clusterFeature | List AWS features available
 [**listAWSInstanceType**](CloudProviderApi.md#listAWSInstanceType) | **GET** /aws/instanceType | List AWS available instance types
 [**listAWSRegions**](CloudProviderApi.md#listAWSRegions) | **GET** /aws/region | List AWS regions
@@ -13,8 +15,99 @@ Method | HTTP request | Description
 [**listDORegions**](CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
 [**listScalewayFeatures**](CloudProviderApi.md#listScalewayFeatures) | **GET** /scaleway/clusterFeature | List Scaleway features available
 [**listScalewayInstanceType**](CloudProviderApi.md#listScalewayInstanceType) | **GET** /scaleway/instanceType | List Scaleway available instance types
+[**listScalewayKapsuleInstanceType**](CloudProviderApi.md#listScalewayKapsuleInstanceType) | **GET** /scaleway/instanceType/{zone} | List Scaleway Kapsule available instance types
 [**listScalewayRegions**](CloudProviderApi.md#listScalewayRegions) | **GET** /scaleway/region | List Scaleway regions
 
+
+
+## listAWSEKSInstanceType
+
+> ClusterInstanceTypeResponseList listAWSEKSInstanceType()
+
+List AWS EKS available instance types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+apiInstance.listAWSEKSInstanceType((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ClusterInstanceTypeResponseList**](ClusterInstanceTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listAWSEc2InstanceType
+
+> ClusterInstanceTypeResponseList listAWSEc2InstanceType(region)
+
+List AWS EC2 available instance types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+let region = us-east-2; // String | region name
+apiInstance.listAWSEc2InstanceType(region, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **String**| region name | 
+
+### Return type
+
+[**ClusterInstanceTypeResponseList**](ClusterInstanceTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## listAWSFeatures
@@ -389,6 +482,53 @@ apiInstance.listScalewayInstanceType((error, data, response) => {
 ### Parameters
 
 This endpoint does not need any parameter.
+
+### Return type
+
+[**ClusterInstanceTypeResponseList**](ClusterInstanceTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listScalewayKapsuleInstanceType
+
+> ClusterInstanceTypeResponseList listScalewayKapsuleInstanceType(zone)
+
+List Scaleway Kapsule available instance types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+let zone = fr-par-1; // String | zone name
+apiInstance.listScalewayKapsuleInstanceType(zone, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **zone** | **String**| zone name | 
 
 ### Return type
 

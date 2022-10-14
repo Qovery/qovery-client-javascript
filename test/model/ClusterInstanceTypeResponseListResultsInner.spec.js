@@ -78,6 +78,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property bandwidthInGbps (base name: "bandwidth_in_gbps")', function() {
+      // uncomment below and update the code to test the property bandwidthInGbps
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResultsInner();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property bandwidthGuarantee (base name: "bandwidth_guarantee")', function() {
+      // uncomment below and update the code to test the property bandwidthGuarantee
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResultsInner();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

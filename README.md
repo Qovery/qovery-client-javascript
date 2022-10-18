@@ -384,7 +384,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseContainer**](docs/LogicalDatabaseApi.md#listLogicalDatabaseContainer) | **GET** /logicalDatabase/{logicalDatabaseId}/container | List linked containers
 *QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseDatabase**](docs/LogicalDatabaseApi.md#listLogicalDatabaseDatabase) | **GET** /database/{databaseId}/logicalDatabase | List logical databases of a database
 *QoveryApi.MembersApi* | [**deleteInviteMember**](docs/MembersApi.md#deleteInviteMember) | **DELETE** /organization/{organizationId}/inviteMember/{inviteId} | Remove an invited member
-*QoveryApi.MembersApi* | [**deleteMember**](docs/MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member/{userId} | Remove a member
+*QoveryApi.MembersApi* | [**deleteMember**](docs/MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member | Remove a member
 *QoveryApi.MembersApi* | [**editOrganizationMemberRole**](docs/MembersApi.md#editOrganizationMemberRole) | **PUT** /organization/{organizationId}/member | Edit an organization member role
 *QoveryApi.MembersApi* | [**getOrganizationInvitedMembers**](docs/MembersApi.md#getOrganizationInvitedMembers) | **GET** /organization/{organizationId}/inviteMember | Get invited members
 *QoveryApi.MembersApi* | [**getOrganizationMembers**](docs/MembersApi.md#getOrganizationMembers) | **GET** /organization/{organizationId}/member | Get organization members
@@ -579,6 +579,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DatabaseResponseList](docs/DatabaseResponseList.md)
  - [QoveryApi.DatabaseTypeEnum](docs/DatabaseTypeEnum.md)
  - [QoveryApi.DatabaseVersionMode](docs/DatabaseVersionMode.md)
+ - [QoveryApi.DeleteMemberRequest](docs/DeleteMemberRequest.md)
  - [QoveryApi.DeployAllRequest](docs/DeployAllRequest.md)
  - [QoveryApi.DeployAllRequestApplicationsInner](docs/DeployAllRequestApplicationsInner.md)
  - [QoveryApi.DeployAllRequestContainersInner](docs/DeployAllRequestContainersInner.md)

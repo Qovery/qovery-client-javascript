@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import DeleteMemberRequest from '../model/DeleteMemberRequest';
 import InviteMember from '../model/InviteMember';
 import InviteMemberRequest from '../model/InviteMemberRequest';
 import InviteMemberResponseList from '../model/InviteMemberResponseList';
@@ -91,23 +92,20 @@ export default class MembersApi {
     /**
      * Remove a member
      * @param {String} organizationId Organization ID
-     * @param {String} userId User ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/DeleteMemberRequest} opts.deleteMemberRequest 
      * @param {module:api/MembersApi~deleteMemberCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteMember(organizationId, userId, callback) {
-      let postBody = null;
+    deleteMember(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['deleteMemberRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling deleteMember");
       }
-      // verify the required parameter 'userId' is set
-      if (userId === undefined || userId === null) {
-        throw new Error("Missing the required parameter 'userId' when calling deleteMember");
-      }
 
       let pathParams = {
-        'organizationId': organizationId,
-        'userId': userId
+        'organizationId': organizationId
       };
       let queryParams = {
       };
@@ -117,11 +115,11 @@ export default class MembersApi {
       };
 
       let authNames = ['bearerAuth'];
-      let contentTypes = [];
+      let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;
       return this.apiClient.callApi(
-        '/organization/{organizationId}/member/{userId}', 'DELETE',
+        '/organization/{organizationId}/member', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

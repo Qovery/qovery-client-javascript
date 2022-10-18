@@ -5,7 +5,7 @@ All URIs are relative to *https://api.qovery.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteInviteMember**](MembersApi.md#deleteInviteMember) | **DELETE** /organization/{organizationId}/inviteMember/{inviteId} | Remove an invited member
-[**deleteMember**](MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member/{userId} | Remove a member
+[**deleteMember**](MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member | Remove a member
 [**editOrganizationMemberRole**](MembersApi.md#editOrganizationMemberRole) | **PUT** /organization/{organizationId}/member | Edit an organization member role
 [**getOrganizationInvitedMembers**](MembersApi.md#getOrganizationInvitedMembers) | **GET** /organization/{organizationId}/inviteMember | Get invited members
 [**getOrganizationMembers**](MembersApi.md#getOrganizationMembers) | **GET** /organization/{organizationId}/member | Get organization members
@@ -64,7 +64,7 @@ null (empty response body)
 
 ## deleteMember
 
-> deleteMember(organizationId, userId)
+> deleteMember(organizationId, opts)
 
 Remove a member
 
@@ -79,8 +79,10 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-let userId = "userId_example"; // String | User ID
-apiInstance.deleteMember(organizationId, userId, (error, data, response) => {
+let opts = {
+  'deleteMemberRequest': new QoveryApi.DeleteMemberRequest() // DeleteMemberRequest | 
+};
+apiInstance.deleteMember(organizationId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -95,7 +97,7 @@ apiInstance.deleteMember(organizationId, userId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **userId** | **String**| User ID | 
+ **deleteMemberRequest** | [**DeleteMemberRequest**](DeleteMemberRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -107,7 +109,7 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: Not defined
 
 

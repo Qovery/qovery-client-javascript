@@ -143,6 +143,7 @@ import DatabaseRequest from './model/DatabaseRequest';
 import DatabaseResponseList from './model/DatabaseResponseList';
 import DatabaseTypeEnum from './model/DatabaseTypeEnum';
 import DatabaseVersionMode from './model/DatabaseVersionMode';
+import DeleteMemberRequest from './model/DeleteMemberRequest';
 import DeployAllRequest from './model/DeployAllRequest';
 import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
 import DeployAllRequestContainersInner from './model/DeployAllRequestContainersInner';
@@ -1270,6 +1271,12 @@ export {
      * @property {module:model/DatabaseVersionMode}
      */
     DatabaseVersionMode,
+
+    /**
+     * The DeleteMemberRequest model constructor.
+     * @property {module:model/DeleteMemberRequest}
+     */
+    DeleteMemberRequest,
 
     /**
      * The DeployAllRequest model constructor.

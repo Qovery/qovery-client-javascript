@@ -5,8 +5,8 @@
 
 * `AWS` (value: `"AWS"`)
 
-* `DIGITAL_OCEAN` (value: `"DIGITAL_OCEAN"`)
+* `DO` (value: `"DO"`)
 
-* `SCALEWAY` (value: `"SCALEWAY"`)
+* `SCW` (value: `"SCW"`)
 
 

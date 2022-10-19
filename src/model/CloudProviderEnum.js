@@ -27,17 +27,17 @@ export default class CloudProviderEnum {
 
     
         /**
-         * value: "DIGITAL_OCEAN"
+         * value: "DO"
          * @const
          */
-        "DIGITAL_OCEAN" = "DIGITAL_OCEAN";
+        "DO" = "DO";
 
     
         /**
-         * value: "SCALEWAY"
+         * value: "SCW"
          * @const
          */
-        "SCALEWAY" = "SCALEWAY";
+        "SCW" = "SCW";
 
     
 

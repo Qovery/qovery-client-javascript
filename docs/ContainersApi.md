@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**autoDeployContainerEnvironments**](ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 [**createContainer**](ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 [**deployAllServices**](ContainersApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
+[**getContainerRegistryContainerStatus**](ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 [**getEnvironmentContainerCurrentScale**](ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
 [**getEnvironmentContainerCurrentStorage**](ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 [**getEnvironmentContainerStatus**](ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
@@ -169,6 +170,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getContainerRegistryContainerStatus
+
+> ReferenceObjectStatusResponseList getContainerRegistryContainerStatus(organizationId, containerRegistryId)
+
+List all container registry container statuses
+
+Returns a list of containers with only their id and status.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ContainersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let containerRegistryId = "containerRegistryId_example"; // String | Container Registry ID
+apiInstance.getContainerRegistryContainerStatus(organizationId, containerRegistryId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **containerRegistryId** | **String**| Container Registry ID | 
+
+### Return type
+
+[**ReferenceObjectStatusResponseList**](ReferenceObjectStatusResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

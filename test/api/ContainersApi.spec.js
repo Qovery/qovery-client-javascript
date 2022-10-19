@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('getContainerRegistryContainerStatus', function() {
+      it('should call getContainerRegistryContainerStatus successfully', function(done) {
+        //uncomment below and update the code to test getContainerRegistryContainerStatus
+        //instance.getContainerRegistryContainerStatus(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEnvironmentContainerCurrentScale', function() {
       it('should call getEnvironmentContainerCurrentScale successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentContainerCurrentScale

@@ -181,6 +181,55 @@ export default class ContainersApi {
     }
 
     /**
+     * Callback function to receive the result of the getContainerRegistryContainerStatus operation.
+     * @callback module:api/ContainersApi~getContainerRegistryContainerStatusCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ReferenceObjectStatusResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List all container registry container statuses
+     * Returns a list of containers with only their id and status.
+     * @param {String} organizationId Organization ID
+     * @param {String} containerRegistryId Container Registry ID
+     * @param {module:api/ContainersApi~getContainerRegistryContainerStatusCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ReferenceObjectStatusResponseList}
+     */
+    getContainerRegistryContainerStatus(organizationId, containerRegistryId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getContainerRegistryContainerStatus");
+      }
+      // verify the required parameter 'containerRegistryId' is set
+      if (containerRegistryId === undefined || containerRegistryId === null) {
+        throw new Error("Missing the required parameter 'containerRegistryId' when calling getContainerRegistryContainerStatus");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'containerRegistryId': containerRegistryId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ReferenceObjectStatusResponseList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getEnvironmentContainerCurrentScale operation.
      * @callback module:api/ContainersApi~getEnvironmentContainerCurrentScaleCallback
      * @param {String} error Error message, if any.

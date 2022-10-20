@@ -13,4 +13,8 @@
 
 * `ENTERPRISE_YEARLY` (value: `"ENTERPRISE_YEARLY"`)
 
+* `PROFESSIONAL` (value: `"PROFESSIONAL"`)
+
+* `BUSINESS` (value: `"BUSINESS"`)
+
 

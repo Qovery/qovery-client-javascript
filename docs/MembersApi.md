@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## deleteInviteMember
 
-> deleteInviteMember(organizationId)
+> deleteInviteMember(organizationId, inviteId)
 
 Remove an invited member
 
@@ -32,7 +32,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.MembersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-apiInstance.deleteInviteMember(organizationId, (error, data, response) => {
+let inviteId = "inviteId_example"; // String | Invite ID
+apiInstance.deleteInviteMember(organizationId, inviteId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -47,6 +48,7 @@ apiInstance.deleteInviteMember(organizationId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **inviteId** | **String**| Invite ID | 
 
 ### Return type
 

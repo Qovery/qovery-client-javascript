@@ -51,17 +51,23 @@ export default class MembersApi {
     /**
      * Remove an invited member
      * @param {String} organizationId Organization ID
+     * @param {String} inviteId Invite ID
      * @param {module:api/MembersApi~deleteInviteMemberCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteInviteMember(organizationId, callback) {
+    deleteInviteMember(organizationId, inviteId, callback) {
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling deleteInviteMember");
       }
+      // verify the required parameter 'inviteId' is set
+      if (inviteId === undefined || inviteId === null) {
+        throw new Error("Missing the required parameter 'inviteId' when calling deleteInviteMember");
+      }
 
       let pathParams = {
-        'organizationId': organizationId
+        'organizationId': organizationId,
+        'inviteId': inviteId
       };
       let queryParams = {
       };

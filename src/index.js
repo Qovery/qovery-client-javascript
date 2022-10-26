@@ -390,7 +390,6 @@ import WeekdayEnum from './model/WeekdayEnum';
 import AccountInfoApi from './api/AccountInfoApi';
 import ApplicationActionsApi from './api/ApplicationActionsApi';
 import ApplicationConfigurationApi from './api/ApplicationConfigurationApi';
-import ApplicationDatabaseApi from './api/ApplicationDatabaseApi';
 import ApplicationDeploymentHistoryApi from './api/ApplicationDeploymentHistoryApi';
 import ApplicationDeploymentRestrictionApi from './api/ApplicationDeploymentRestrictionApi';
 import ApplicationEnvironmentVariableApi from './api/ApplicationEnvironmentVariableApi';
@@ -408,7 +407,6 @@ import ClustersApi from './api/ClustersApi';
 import ContainerActionsApi from './api/ContainerActionsApi';
 import ContainerConfigurationApi from './api/ContainerConfigurationApi';
 import ContainerCustomDomainApi from './api/ContainerCustomDomainApi';
-import ContainerDatabaseApi from './api/ContainerDatabaseApi';
 import ContainerDependencyApi from './api/ContainerDependencyApi';
 import ContainerDeploymentHistoryApi from './api/ContainerDeploymentHistoryApi';
 import ContainerEnvironmentVariableApi from './api/ContainerEnvironmentVariableApi';
@@ -2755,12 +2753,6 @@ export {
     ApplicationConfigurationApi,
 
     /**
-    * The ApplicationDatabaseApi service constructor.
-    * @property {module:api/ApplicationDatabaseApi}
-    */
-    ApplicationDatabaseApi,
-
-    /**
     * The ApplicationDeploymentHistoryApi service constructor.
     * @property {module:api/ApplicationDeploymentHistoryApi}
     */
@@ -2861,12 +2853,6 @@ export {
     * @property {module:api/ContainerCustomDomainApi}
     */
     ContainerCustomDomainApi,
-
-    /**
-    * The ContainerDatabaseApi service constructor.
-    * @property {module:api/ContainerDatabaseApi}
-    */
-    ContainerDatabaseApi,
 
     /**
     * The ContainerDependencyApi service constructor.

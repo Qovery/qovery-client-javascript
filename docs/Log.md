@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | 
 **message** | **String** |  | 
 **podName** | **String** |  | [optional] 
-**applicationCommitId** | **String** |  | [optional] 
+**version** | **String** |  | [optional] 
 
 

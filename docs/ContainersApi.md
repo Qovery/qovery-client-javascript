@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ## listContainer
 
-> ContainerResponseList listContainer(environmentId, opts)
+> ContainerResponseList listContainer(environmentId)
 
 List containers
 
@@ -386,10 +386,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ContainersApi();
 let environmentId = "environmentId_example"; // String | Environment ID
-let opts = {
-  'toUpdate': false // Boolean | return (or not) results that must be updated
-};
-apiInstance.listContainer(environmentId, opts, (error, data, response) => {
+apiInstance.listContainer(environmentId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -404,7 +401,6 @@ apiInstance.listContainer(environmentId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **environmentId** | **String**| Environment ID | 
- **toUpdate** | **Boolean**| return (or not) results that must be updated | [optional] [default to false]
 
 ### Return type
 

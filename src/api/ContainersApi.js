@@ -368,13 +368,10 @@ export default class ContainersApi {
     /**
      * List containers
      * @param {String} environmentId Environment ID
-     * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.toUpdate return (or not) results that must be updated (default to false)
      * @param {module:api/ContainersApi~listContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponseList}
      */
-    listContainer(environmentId, opts, callback) {
-      opts = opts || {};
+    listContainer(environmentId, callback) {
       let postBody = null;
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
@@ -385,7 +382,6 @@ export default class ContainersApi {
         'environmentId': environmentId
       };
       let queryParams = {
-        'toUpdate': opts['toUpdate']
       };
       let headerParams = {
       };

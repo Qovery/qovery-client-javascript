@@ -367,6 +367,33 @@ Class | Method | HTTP request | Description
 *QoveryApi.GitRepositoriesApi* | [**getGitlabRepositoryBranches**](docs/GitRepositoriesApi.md#getGitlabRepositoryBranches) | **GET** /account/gitlab/repository/branch | Get gitlab branches of the specified repository
 *QoveryApi.GithubAppApi* | [**organizationGithubAppConnect**](docs/GithubAppApi.md#organizationGithubAppConnect) | **POST** /organization/{organizationId}/github/connect | Connect a github account to an organization
 *QoveryApi.GithubAppApi* | [**organizationGithubAppDisconnect**](docs/GithubAppApi.md#organizationGithubAppDisconnect) | **DELETE** /organization/{organizationId}/github/disconnect | Disconnect a github account from an organization
+*QoveryApi.JobActionsApi* | [**deployJob**](docs/JobActionsApi.md#deployJob) | **POST** /job/{jobId}/deploy | Deploy job
+*QoveryApi.JobActionsApi* | [**restartJob**](docs/JobActionsApi.md#restartJob) | **POST** /job/{jobId}/restart | Restart job
+*QoveryApi.JobActionsApi* | [**stopJob**](docs/JobActionsApi.md#stopJob) | **POST** /job/{jobId}/stop | Stop job
+*QoveryApi.JobConfigurationApi* | [**editJobAdvancedSettings**](docs/JobConfigurationApi.md#editJobAdvancedSettings) | **PUT** /job/{jobId}/advancedSettings | Edit advanced settings
+*QoveryApi.JobConfigurationApi* | [**getJobAdvancedSettings**](docs/JobConfigurationApi.md#getJobAdvancedSettings) | **GET** /job/{jobId}/advancedSettings | Get advanced settings
+*QoveryApi.JobDeploymentHistoryApi* | [**listJobDeploymentHistory**](docs/JobDeploymentHistoryApi.md#listJobDeploymentHistory) | **GET** /job/{jobId}/deploymentHistory | List job deployments
+*QoveryApi.JobEnvironmentVariableApi* | [**createJobEnvironmentVariable**](docs/JobEnvironmentVariableApi.md#createJobEnvironmentVariable) | **POST** /job/{jobId}/environmentVariable | Add an environment variable to the job
+*QoveryApi.JobEnvironmentVariableApi* | [**createJobEnvironmentVariableAlias**](docs/JobEnvironmentVariableApi.md#createJobEnvironmentVariableAlias) | **POST** /job/{jobId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the job level
+*QoveryApi.JobEnvironmentVariableApi* | [**createJobEnvironmentVariableOverride**](docs/JobEnvironmentVariableApi.md#createJobEnvironmentVariableOverride) | **POST** /job/{jobId}/environmentVariable/{environmentVariableId}/override | Create an environment variable override at the job level
+*QoveryApi.JobEnvironmentVariableApi* | [**deleteJobEnvironmentVariable**](docs/JobEnvironmentVariableApi.md#deleteJobEnvironmentVariable) | **DELETE** /job/{jobId}/environmentVariable/{environmentVariableId} | Delete an environment variable from a job
+*QoveryApi.JobEnvironmentVariableApi* | [**editJobEnvironmentVariable**](docs/JobEnvironmentVariableApi.md#editJobEnvironmentVariable) | **PUT** /job/{jobId}/environmentVariable/{environmentVariableId} | Edit an environment variable belonging to the job
+*QoveryApi.JobEnvironmentVariableApi* | [**importJobEnvironmentVariable**](docs/JobEnvironmentVariableApi.md#importJobEnvironmentVariable) | **POST** /job/{jobId}/environmentVariable/import | Import variables
+*QoveryApi.JobEnvironmentVariableApi* | [**listJobEnvironmentVariable**](docs/JobEnvironmentVariableApi.md#listJobEnvironmentVariable) | **GET** /job/{jobId}/environmentVariable | List environment variables
+*QoveryApi.JobMainCallsApi* | [**deleteJob**](docs/JobMainCallsApi.md#deleteJob) | **DELETE** /job/{jobId} | Delete job
+*QoveryApi.JobMainCallsApi* | [**editJob**](docs/JobMainCallsApi.md#editJob) | **PUT** /job/{jobId} | Edit job
+*QoveryApi.JobMainCallsApi* | [**getJob**](docs/JobMainCallsApi.md#getJob) | **GET** /job/{jobId} | Get job by ID
+*QoveryApi.JobMainCallsApi* | [**getJobStatus**](docs/JobMainCallsApi.md#getJobStatus) | **GET** /job/{jobId}/status | Get job status
+*QoveryApi.JobMetricsApi* | [**getJobCurrentInstance**](docs/JobMetricsApi.md#getJobCurrentInstance) | **GET** /job/{jobId}/instance | List currently running instances of the job with their CPU and RAM metrics
+*QoveryApi.JobSecretApi* | [**createJobSecret**](docs/JobSecretApi.md#createJobSecret) | **POST** /job/{jobId}/secret | Add a secret to the job
+*QoveryApi.JobSecretApi* | [**createJobSecretAlias**](docs/JobSecretApi.md#createJobSecretAlias) | **POST** /job/{jobId}/secret/{secretId}/alias | Create a secret alias at the job level
+*QoveryApi.JobSecretApi* | [**createJobSecretOverride**](docs/JobSecretApi.md#createJobSecretOverride) | **POST** /job/{jobId}/secret/{secretId}/override | Create a secret override at the job level
+*QoveryApi.JobSecretApi* | [**deleteJobSecret**](docs/JobSecretApi.md#deleteJobSecret) | **DELETE** /job/{jobId}/secret/{secretId} | Delete a secret from an job
+*QoveryApi.JobSecretApi* | [**editJobSecret**](docs/JobSecretApi.md#editJobSecret) | **PUT** /job/{jobId}/secret/{secretId} | Edit a secret belonging to the job
+*QoveryApi.JobSecretApi* | [**listJobSecrets**](docs/JobSecretApi.md#listJobSecrets) | **GET** /job/{jobId}/secret | List job secrets
+*QoveryApi.JobsApi* | [**createJob**](docs/JobsApi.md#createJob) | **POST** /environment/{environmentId}/job | Create a job
+*QoveryApi.JobsApi* | [**getEnvironmentJobStatus**](docs/JobsApi.md#getEnvironmentJobStatus) | **GET** /environment/{environmentId}/job/status | List all environment job statuses
+*QoveryApi.JobsApi* | [**listJobs**](docs/JobsApi.md#listJobs) | **GET** /environment/{environmentId}/job | List jobs
 *QoveryApi.LogicalDatabaseApi* | [**createLogicalDatabaseOnDatabase**](docs/LogicalDatabaseApi.md#createLogicalDatabaseOnDatabase) | **POST** /database/{databaseId}/logicalDatabase | Create a logical database on the database
 *QoveryApi.LogicalDatabaseApi* | [**deleteLogicalDatabase**](docs/LogicalDatabaseApi.md#deleteLogicalDatabase) | **DELETE** /logicalDatabase/{logicalDatabaseId} | Delete a Logical database
 *QoveryApi.LogicalDatabaseApi* | [**editLogicalDatabase**](docs/LogicalDatabaseApi.md#editLogicalDatabase) | **PUT** /logicalDatabase/{logicalDatabaseId} | Edit a logical database
@@ -589,6 +616,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DeploymentHistoryEnvironmentAllOf](docs/DeploymentHistoryEnvironmentAllOf.md)
  - [QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseList](docs/DeploymentHistoryEnvironmentPaginatedResponseList.md)
  - [QoveryApi.DeploymentHistoryEnvironmentPaginatedResponseListAllOf](docs/DeploymentHistoryEnvironmentPaginatedResponseListAllOf.md)
+ - [QoveryApi.DeploymentHistoryJobResponse](docs/DeploymentHistoryJobResponse.md)
+ - [QoveryApi.DeploymentHistoryJobResponseAllOf](docs/DeploymentHistoryJobResponseAllOf.md)
  - [QoveryApi.DeploymentHistoryPaginatedResponseList](docs/DeploymentHistoryPaginatedResponseList.md)
  - [QoveryApi.DeploymentHistoryPaginatedResponseListAllOf](docs/DeploymentHistoryPaginatedResponseListAllOf.md)
  - [QoveryApi.DeploymentHistoryResponseList](docs/DeploymentHistoryResponseList.md)
@@ -675,6 +704,20 @@ Class | Method | HTTP request | Description
  - [QoveryApi.InvoiceAllOf](docs/InvoiceAllOf.md)
  - [QoveryApi.InvoiceResponseList](docs/InvoiceResponseList.md)
  - [QoveryApi.InvoiceStatusEnum](docs/InvoiceStatusEnum.md)
+ - [QoveryApi.JobAdvancedSettings](docs/JobAdvancedSettings.md)
+ - [QoveryApi.JobDeployRequest](docs/JobDeployRequest.md)
+ - [QoveryApi.JobRequest](docs/JobRequest.md)
+ - [QoveryApi.JobRequestAllOf](docs/JobRequestAllOf.md)
+ - [QoveryApi.JobRequestAllOfSchedule](docs/JobRequestAllOfSchedule.md)
+ - [QoveryApi.JobRequestAllOfSource](docs/JobRequestAllOfSource.md)
+ - [QoveryApi.JobRequestAllOfSourceDocker](docs/JobRequestAllOfSourceDocker.md)
+ - [QoveryApi.JobRequestAllOfSourceImage](docs/JobRequestAllOfSourceImage.md)
+ - [QoveryApi.JobResponse](docs/JobResponse.md)
+ - [QoveryApi.JobResponseAllOf](docs/JobResponseAllOf.md)
+ - [QoveryApi.JobResponseAllOfSource](docs/JobResponseAllOfSource.md)
+ - [QoveryApi.JobResponseAllOfSourceDocker](docs/JobResponseAllOfSourceDocker.md)
+ - [QoveryApi.JobResponseList](docs/JobResponseList.md)
+ - [QoveryApi.JobScheduleEvent](docs/JobScheduleEvent.md)
  - [QoveryApi.Key](docs/Key.md)
  - [QoveryApi.KubernetesEnum](docs/KubernetesEnum.md)
  - [QoveryApi.Link](docs/Link.md)
@@ -684,6 +727,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOf](docs/ListContainerDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200Response](docs/ListDatabaseDeploymentHistory200Response.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200ResponseAllOf](docs/ListDatabaseDeploymentHistory200ResponseAllOf.md)
+ - [QoveryApi.ListJobDeploymentHistory200Response](docs/ListJobDeploymentHistory200Response.md)
+ - [QoveryApi.ListJobDeploymentHistory200ResponseAllOf](docs/ListJobDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.Log](docs/Log.md)
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)
  - [QoveryApi.LogPaginatedResponseListAllOf](docs/LogPaginatedResponseListAllOf.md)

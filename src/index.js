@@ -160,6 +160,8 @@ import DeploymentHistoryEnvironment from './model/DeploymentHistoryEnvironment';
 import DeploymentHistoryEnvironmentAllOf from './model/DeploymentHistoryEnvironmentAllOf';
 import DeploymentHistoryEnvironmentPaginatedResponseList from './model/DeploymentHistoryEnvironmentPaginatedResponseList';
 import DeploymentHistoryEnvironmentPaginatedResponseListAllOf from './model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf';
+import DeploymentHistoryJobResponse from './model/DeploymentHistoryJobResponse';
+import DeploymentHistoryJobResponseAllOf from './model/DeploymentHistoryJobResponseAllOf';
 import DeploymentHistoryPaginatedResponseList from './model/DeploymentHistoryPaginatedResponseList';
 import DeploymentHistoryPaginatedResponseListAllOf from './model/DeploymentHistoryPaginatedResponseListAllOf';
 import DeploymentHistoryResponseList from './model/DeploymentHistoryResponseList';
@@ -246,6 +248,20 @@ import Invoice from './model/Invoice';
 import InvoiceAllOf from './model/InvoiceAllOf';
 import InvoiceResponseList from './model/InvoiceResponseList';
 import InvoiceStatusEnum from './model/InvoiceStatusEnum';
+import JobAdvancedSettings from './model/JobAdvancedSettings';
+import JobDeployRequest from './model/JobDeployRequest';
+import JobRequest from './model/JobRequest';
+import JobRequestAllOf from './model/JobRequestAllOf';
+import JobRequestAllOfSchedule from './model/JobRequestAllOfSchedule';
+import JobRequestAllOfSource from './model/JobRequestAllOfSource';
+import JobRequestAllOfSourceDocker from './model/JobRequestAllOfSourceDocker';
+import JobRequestAllOfSourceImage from './model/JobRequestAllOfSourceImage';
+import JobResponse from './model/JobResponse';
+import JobResponseAllOf from './model/JobResponseAllOf';
+import JobResponseAllOfSource from './model/JobResponseAllOfSource';
+import JobResponseAllOfSourceDocker from './model/JobResponseAllOfSourceDocker';
+import JobResponseList from './model/JobResponseList';
+import JobScheduleEvent from './model/JobScheduleEvent';
 import Key from './model/Key';
 import KubernetesEnum from './model/KubernetesEnum';
 import Link from './model/Link';
@@ -255,6 +271,8 @@ import ListContainerDeploymentHistory200Response from './model/ListContainerDepl
 import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
+import ListJobDeploymentHistory200Response from './model/ListJobDeploymentHistory200Response';
+import ListJobDeploymentHistory200ResponseAllOf from './model/ListJobDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
@@ -443,6 +461,14 @@ import EnvironmentVariableApi from './api/EnvironmentVariableApi';
 import EnvironmentsApi from './api/EnvironmentsApi';
 import GitRepositoriesApi from './api/GitRepositoriesApi';
 import GithubAppApi from './api/GithubAppApi';
+import JobActionsApi from './api/JobActionsApi';
+import JobConfigurationApi from './api/JobConfigurationApi';
+import JobDeploymentHistoryApi from './api/JobDeploymentHistoryApi';
+import JobEnvironmentVariableApi from './api/JobEnvironmentVariableApi';
+import JobMainCallsApi from './api/JobMainCallsApi';
+import JobMetricsApi from './api/JobMetricsApi';
+import JobSecretApi from './api/JobSecretApi';
+import JobsApi from './api/JobsApi';
 import LogicalDatabaseApi from './api/LogicalDatabaseApi';
 import MembersApi from './api/MembersApi';
 import OrganizationAccountGitRepositoriesApi from './api/OrganizationAccountGitRepositoriesApi';
@@ -1380,6 +1406,18 @@ export {
     DeploymentHistoryEnvironmentPaginatedResponseListAllOf,
 
     /**
+     * The DeploymentHistoryJobResponse model constructor.
+     * @property {module:model/DeploymentHistoryJobResponse}
+     */
+    DeploymentHistoryJobResponse,
+
+    /**
+     * The DeploymentHistoryJobResponseAllOf model constructor.
+     * @property {module:model/DeploymentHistoryJobResponseAllOf}
+     */
+    DeploymentHistoryJobResponseAllOf,
+
+    /**
      * The DeploymentHistoryPaginatedResponseList model constructor.
      * @property {module:model/DeploymentHistoryPaginatedResponseList}
      */
@@ -1896,6 +1934,90 @@ export {
     InvoiceStatusEnum,
 
     /**
+     * The JobAdvancedSettings model constructor.
+     * @property {module:model/JobAdvancedSettings}
+     */
+    JobAdvancedSettings,
+
+    /**
+     * The JobDeployRequest model constructor.
+     * @property {module:model/JobDeployRequest}
+     */
+    JobDeployRequest,
+
+    /**
+     * The JobRequest model constructor.
+     * @property {module:model/JobRequest}
+     */
+    JobRequest,
+
+    /**
+     * The JobRequestAllOf model constructor.
+     * @property {module:model/JobRequestAllOf}
+     */
+    JobRequestAllOf,
+
+    /**
+     * The JobRequestAllOfSchedule model constructor.
+     * @property {module:model/JobRequestAllOfSchedule}
+     */
+    JobRequestAllOfSchedule,
+
+    /**
+     * The JobRequestAllOfSource model constructor.
+     * @property {module:model/JobRequestAllOfSource}
+     */
+    JobRequestAllOfSource,
+
+    /**
+     * The JobRequestAllOfSourceDocker model constructor.
+     * @property {module:model/JobRequestAllOfSourceDocker}
+     */
+    JobRequestAllOfSourceDocker,
+
+    /**
+     * The JobRequestAllOfSourceImage model constructor.
+     * @property {module:model/JobRequestAllOfSourceImage}
+     */
+    JobRequestAllOfSourceImage,
+
+    /**
+     * The JobResponse model constructor.
+     * @property {module:model/JobResponse}
+     */
+    JobResponse,
+
+    /**
+     * The JobResponseAllOf model constructor.
+     * @property {module:model/JobResponseAllOf}
+     */
+    JobResponseAllOf,
+
+    /**
+     * The JobResponseAllOfSource model constructor.
+     * @property {module:model/JobResponseAllOfSource}
+     */
+    JobResponseAllOfSource,
+
+    /**
+     * The JobResponseAllOfSourceDocker model constructor.
+     * @property {module:model/JobResponseAllOfSourceDocker}
+     */
+    JobResponseAllOfSourceDocker,
+
+    /**
+     * The JobResponseList model constructor.
+     * @property {module:model/JobResponseList}
+     */
+    JobResponseList,
+
+    /**
+     * The JobScheduleEvent model constructor.
+     * @property {module:model/JobScheduleEvent}
+     */
+    JobScheduleEvent,
+
+    /**
      * The Key model constructor.
      * @property {module:model/Key}
      */
@@ -1948,6 +2070,18 @@ export {
      * @property {module:model/ListDatabaseDeploymentHistory200ResponseAllOf}
      */
     ListDatabaseDeploymentHistory200ResponseAllOf,
+
+    /**
+     * The ListJobDeploymentHistory200Response model constructor.
+     * @property {module:model/ListJobDeploymentHistory200Response}
+     */
+    ListJobDeploymentHistory200Response,
+
+    /**
+     * The ListJobDeploymentHistory200ResponseAllOf model constructor.
+     * @property {module:model/ListJobDeploymentHistory200ResponseAllOf}
+     */
+    ListJobDeploymentHistory200ResponseAllOf,
 
     /**
      * The Log model constructor.
@@ -3076,6 +3210,54 @@ export {
     * @property {module:api/GithubAppApi}
     */
     GithubAppApi,
+
+    /**
+    * The JobActionsApi service constructor.
+    * @property {module:api/JobActionsApi}
+    */
+    JobActionsApi,
+
+    /**
+    * The JobConfigurationApi service constructor.
+    * @property {module:api/JobConfigurationApi}
+    */
+    JobConfigurationApi,
+
+    /**
+    * The JobDeploymentHistoryApi service constructor.
+    * @property {module:api/JobDeploymentHistoryApi}
+    */
+    JobDeploymentHistoryApi,
+
+    /**
+    * The JobEnvironmentVariableApi service constructor.
+    * @property {module:api/JobEnvironmentVariableApi}
+    */
+    JobEnvironmentVariableApi,
+
+    /**
+    * The JobMainCallsApi service constructor.
+    * @property {module:api/JobMainCallsApi}
+    */
+    JobMainCallsApi,
+
+    /**
+    * The JobMetricsApi service constructor.
+    * @property {module:api/JobMetricsApi}
+    */
+    JobMetricsApi,
+
+    /**
+    * The JobSecretApi service constructor.
+    * @property {module:api/JobSecretApi}
+    */
+    JobSecretApi,
+
+    /**
+    * The JobsApi service constructor.
+    * @property {module:api/JobsApi}
+    */
+    JobsApi,
 
     /**
     * The LogicalDatabaseApi service constructor.

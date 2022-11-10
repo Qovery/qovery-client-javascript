@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentLogsApi();
+    instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerMessage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,25 @@
       object[property] = value;
   }
 
-  describe('EnvironmentLogsApi', function() {
-    describe('listEnvironmentLog', function() {
-      it('should call listEnvironmentLog successfully', function(done) {
-        //uncomment below and update the code to test listEnvironmentLog
-        //instance.listEnvironmentLog(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ListEnvironmentLogs200ResponseInnerMessage', function() {
+    it('should create an instance of ListEnvironmentLogs200ResponseInnerMessage', function() {
+      // uncomment below and update the code to test ListEnvironmentLogs200ResponseInnerMessage
+      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerMessage();
+      //expect(instance).to.be.a(QoveryApi.ListEnvironmentLogs200ResponseInnerMessage);
     });
-    describe('listEnvironmentLogs', function() {
-      it('should call listEnvironmentLogs successfully', function(done) {
-        //uncomment below and update the code to test listEnvironmentLogs
-        //instance.listEnvironmentLogs(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property safeMessage (base name: "safe_message")', function() {
+      // uncomment below and update the code to test the property safeMessage
+      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerMessage();
+      //expect(instance).to.be();
     });
+
+    it('should have the property fullDetails (base name: "full_details")', function() {
+      // uncomment below and update the code to test the property fullDetails
+      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerMessage();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

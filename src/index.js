@@ -248,6 +248,13 @@ import ListContainerDeploymentHistory200Response from './model/ListContainerDepl
 import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
+import ListEnvironmentLogs200ResponseInner from './model/ListEnvironmentLogs200ResponseInner';
+import ListEnvironmentLogs200ResponseInnerDetails from './model/ListEnvironmentLogs200ResponseInnerDetails';
+import ListEnvironmentLogs200ResponseInnerDetailsStage from './model/ListEnvironmentLogs200ResponseInnerDetailsStage';
+import ListEnvironmentLogs200ResponseInnerDetailsTransmitter from './model/ListEnvironmentLogs200ResponseInnerDetailsTransmitter';
+import ListEnvironmentLogs200ResponseInnerError from './model/ListEnvironmentLogs200ResponseInnerError';
+import ListEnvironmentLogs200ResponseInnerErrorUnderlyingError from './model/ListEnvironmentLogs200ResponseInnerErrorUnderlyingError';
+import ListEnvironmentLogs200ResponseInnerMessage from './model/ListEnvironmentLogs200ResponseInnerMessage';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
@@ -1899,6 +1906,48 @@ export {
      * @property {module:model/ListDatabaseDeploymentHistory200ResponseAllOf}
      */
     ListDatabaseDeploymentHistory200ResponseAllOf,
+
+    /**
+     * The ListEnvironmentLogs200ResponseInner model constructor.
+     * @property {module:model/ListEnvironmentLogs200ResponseInner}
+     */
+    ListEnvironmentLogs200ResponseInner,
+
+    /**
+     * The ListEnvironmentLogs200ResponseInnerDetails model constructor.
+     * @property {module:model/ListEnvironmentLogs200ResponseInnerDetails}
+     */
+    ListEnvironmentLogs200ResponseInnerDetails,
+
+    /**
+     * The ListEnvironmentLogs200ResponseInnerDetailsStage model constructor.
+     * @property {module:model/ListEnvironmentLogs200ResponseInnerDetailsStage}
+     */
+    ListEnvironmentLogs200ResponseInnerDetailsStage,
+
+    /**
+     * The ListEnvironmentLogs200ResponseInnerDetailsTransmitter model constructor.
+     * @property {module:model/ListEnvironmentLogs200ResponseInnerDetailsTransmitter}
+     */
+    ListEnvironmentLogs200ResponseInnerDetailsTransmitter,
+
+    /**
+     * The ListEnvironmentLogs200ResponseInnerError model constructor.
+     * @property {module:model/ListEnvironmentLogs200ResponseInnerError}
+     */
+    ListEnvironmentLogs200ResponseInnerError,
+
+    /**
+     * The ListEnvironmentLogs200ResponseInnerErrorUnderlyingError model constructor.
+     * @property {module:model/ListEnvironmentLogs200ResponseInnerErrorUnderlyingError}
+     */
+    ListEnvironmentLogs200ResponseInnerErrorUnderlyingError,
+
+    /**
+     * The ListEnvironmentLogs200ResponseInnerMessage model constructor.
+     * @property {module:model/ListEnvironmentLogs200ResponseInnerMessage}
+     */
+    ListEnvironmentLogs200ResponseInnerMessage,
 
     /**
      * The Log model constructor.

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentLogsApi();
+    instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerErrorUnderlyingError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,25 @@
       object[property] = value;
   }
 
-  describe('EnvironmentLogsApi', function() {
-    describe('listEnvironmentLog', function() {
-      it('should call listEnvironmentLog successfully', function(done) {
-        //uncomment below and update the code to test listEnvironmentLog
-        //instance.listEnvironmentLog(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ListEnvironmentLogs200ResponseInnerErrorUnderlyingError', function() {
+    it('should create an instance of ListEnvironmentLogs200ResponseInnerErrorUnderlyingError', function() {
+      // uncomment below and update the code to test ListEnvironmentLogs200ResponseInnerErrorUnderlyingError
+      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerErrorUnderlyingError();
+      //expect(instance).to.be.a(QoveryApi.ListEnvironmentLogs200ResponseInnerErrorUnderlyingError);
     });
-    describe('listEnvironmentLogs', function() {
-      it('should call listEnvironmentLogs successfully', function(done) {
-        //uncomment below and update the code to test listEnvironmentLogs
-        //instance.listEnvironmentLogs(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property message (base name: "message")', function() {
+      // uncomment below and update the code to test the property message
+      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerErrorUnderlyingError();
+      //expect(instance).to.be();
     });
+
+    it('should have the property fullDetails (base name: "full_details")', function() {
+      // uncomment below and update the code to test the property fullDetails
+      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerErrorUnderlyingError();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import EnvironmentLogResponseList from '../model/EnvironmentLogResponseList';
+import ListEnvironmentLogs200ResponseInner from '../model/ListEnvironmentLogs200ResponseInner';
 
 /**
 * EnvironmentLogs service.
@@ -72,6 +73,49 @@ export default class EnvironmentLogsApi {
       let returnType = EnvironmentLogResponseList;
       return this.apiClient.callApi(
         '/environment/{environmentId}/log', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listEnvironmentLogs operation.
+     * @callback module:api/EnvironmentLogsApi~listEnvironmentLogsCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ListEnvironmentLogs200ResponseInner>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List environment deployment logs v2
+     * This returns the last 1000 environment deployment logs v2
+     * @param {String} environmentId Environment ID
+     * @param {module:api/EnvironmentLogsApi~listEnvironmentLogsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ListEnvironmentLogs200ResponseInner>}
+     */
+    listEnvironmentLogs(environmentId, callback) {
+      let postBody = null;
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling listEnvironmentLogs");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = [ListEnvironmentLogs200ResponseInner];
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/logs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

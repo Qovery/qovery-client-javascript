@@ -337,6 +337,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentDeploymentRuleApi* | [**editEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#editEnvironmentDeploymentRule) | **PUT** /environment/{environmentId}/deploymentRule/{deploymentRuleId} | Edit an environment deployment rule
 *QoveryApi.EnvironmentDeploymentRuleApi* | [**getEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#getEnvironmentDeploymentRule) | **GET** /environment/{environmentId}/deploymentRule | Get environment deployment rule
 *QoveryApi.EnvironmentLogsApi* | [**listEnvironmentLog**](docs/EnvironmentLogsApi.md#listEnvironmentLog) | **GET** /environment/{environmentId}/log | List environment deployment logs
+*QoveryApi.EnvironmentLogsApi* | [**listEnvironmentLogs**](docs/EnvironmentLogsApi.md#listEnvironmentLogs) | **GET** /environment/{environmentId}/logs | List environment deployment logs v2
 *QoveryApi.EnvironmentMainCallsApi* | [**deleteEnvironment**](docs/EnvironmentMainCallsApi.md#deleteEnvironment) | **DELETE** /environment/{environmentId} | Delete an environment
 *QoveryApi.EnvironmentMainCallsApi* | [**editEnvironment**](docs/EnvironmentMainCallsApi.md#editEnvironment) | **PUT** /environment/{environmentId} | Edit an environment
 *QoveryApi.EnvironmentMainCallsApi* | [**getEnvironment**](docs/EnvironmentMainCallsApi.md#getEnvironment) | **GET** /environment/{environmentId} | Get environment by ID
@@ -676,6 +677,13 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOf](docs/ListContainerDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200Response](docs/ListDatabaseDeploymentHistory200Response.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200ResponseAllOf](docs/ListDatabaseDeploymentHistory200ResponseAllOf.md)
+ - [QoveryApi.ListEnvironmentLogs200ResponseInner](docs/ListEnvironmentLogs200ResponseInner.md)
+ - [QoveryApi.ListEnvironmentLogs200ResponseInnerDetails](docs/ListEnvironmentLogs200ResponseInnerDetails.md)
+ - [QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsStage](docs/ListEnvironmentLogs200ResponseInnerDetailsStage.md)
+ - [QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter](docs/ListEnvironmentLogs200ResponseInnerDetailsTransmitter.md)
+ - [QoveryApi.ListEnvironmentLogs200ResponseInnerError](docs/ListEnvironmentLogs200ResponseInnerError.md)
+ - [QoveryApi.ListEnvironmentLogs200ResponseInnerErrorUnderlyingError](docs/ListEnvironmentLogs200ResponseInnerErrorUnderlyingError.md)
+ - [QoveryApi.ListEnvironmentLogs200ResponseInnerMessage](docs/ListEnvironmentLogs200ResponseInnerMessage.md)
  - [QoveryApi.Log](docs/Log.md)
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)
  - [QoveryApi.LogPaginatedResponseListAllOf](docs/LogPaginatedResponseListAllOf.md)

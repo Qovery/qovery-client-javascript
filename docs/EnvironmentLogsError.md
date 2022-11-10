@@ -1,4 +1,4 @@
-# QoveryApi.ListEnvironmentLogs200ResponseInnerError
+# QoveryApi.EnvironmentLogsError
 
 ## Properties
 
@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **userLogMessage** | **String** |  | [optional] 
 **link** | **String** |  | [optional] 
 **hintMessage** | **String** |  | [optional] 
-**underlyingError** | [**ListEnvironmentLogs200ResponseInnerErrorUnderlyingError**](ListEnvironmentLogs200ResponseInnerErrorUnderlyingError.md) |  | [optional] 
+**underlyingError** | [**EnvironmentLogsErrorUnderlyingError**](EnvironmentLogsErrorUnderlyingError.md) |  | [optional] 
 
 

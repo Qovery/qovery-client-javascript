@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ## listEnvironmentLogs
 
-> [ListEnvironmentLogs200ResponseInner] listEnvironmentLogs(environmentId)
+> [EnvironmentLogs] listEnvironmentLogs(environmentId)
 
 List environment deployment logs v2
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ListEnvironmentLogs200ResponseInner]**](ListEnvironmentLogs200ResponseInner.md)
+[**[EnvironmentLogs]**](EnvironmentLogs.md)
 
 ### Authorization
 

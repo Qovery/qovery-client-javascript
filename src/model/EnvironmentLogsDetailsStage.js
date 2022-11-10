@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ListEnvironmentLogs200ResponseInnerDetailsStage model module.
- * @module model/ListEnvironmentLogs200ResponseInnerDetailsStage
+ * The EnvironmentLogsDetailsStage model module.
+ * @module model/EnvironmentLogsDetailsStage
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListEnvironmentLogs200ResponseInnerDetailsStage {
+class EnvironmentLogsDetailsStage {
     /**
-     * Constructs a new <code>ListEnvironmentLogs200ResponseInnerDetailsStage</code>.
-     * @alias module:model/ListEnvironmentLogs200ResponseInnerDetailsStage
+     * Constructs a new <code>EnvironmentLogsDetailsStage</code>.
+     * @alias module:model/EnvironmentLogsDetailsStage
      */
     constructor() { 
         
-        ListEnvironmentLogs200ResponseInnerDetailsStage.initialize(this);
+        EnvironmentLogsDetailsStage.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ListEnvironmentLogs200ResponseInnerDetailsStage {
     }
 
     /**
-     * Constructs a <code>ListEnvironmentLogs200ResponseInnerDetailsStage</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentLogsDetailsStage</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListEnvironmentLogs200ResponseInnerDetailsStage} obj Optional instance to populate.
-     * @return {module:model/ListEnvironmentLogs200ResponseInnerDetailsStage} The populated <code>ListEnvironmentLogs200ResponseInnerDetailsStage</code> instance.
+     * @param {module:model/EnvironmentLogsDetailsStage} obj Optional instance to populate.
+     * @return {module:model/EnvironmentLogsDetailsStage} The populated <code>EnvironmentLogsDetailsStage</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListEnvironmentLogs200ResponseInnerDetailsStage();
+            obj = obj || new EnvironmentLogsDetailsStage();
 
             if (data.hasOwnProperty('step')) {
                 obj['step'] = ApiClient.convertToType(data['step'], 'String');
@@ -60,12 +60,12 @@ class ListEnvironmentLogs200ResponseInnerDetailsStage {
 /**
  * @member {String} step
  */
-ListEnvironmentLogs200ResponseInnerDetailsStage.prototype['step'] = undefined;
+EnvironmentLogsDetailsStage.prototype['step'] = undefined;
 
 
 
 
 
 
-export default ListEnvironmentLogs200ResponseInnerDetailsStage;
+export default EnvironmentLogsDetailsStage;
 

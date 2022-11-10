@@ -1,4 +1,4 @@
-# QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsStage
+# QoveryApi.EnvironmentLogsDetailsStage
 
 ## Properties
 

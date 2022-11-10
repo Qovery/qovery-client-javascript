@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ListEnvironmentLogs200ResponseInnerDetailsTransmitter model module.
- * @module model/ListEnvironmentLogs200ResponseInnerDetailsTransmitter
+ * The EnvironmentLogsDetailsTransmitter model module.
+ * @module model/EnvironmentLogsDetailsTransmitter
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListEnvironmentLogs200ResponseInnerDetailsTransmitter {
+class EnvironmentLogsDetailsTransmitter {
     /**
-     * Constructs a new <code>ListEnvironmentLogs200ResponseInnerDetailsTransmitter</code>.
-     * @alias module:model/ListEnvironmentLogs200ResponseInnerDetailsTransmitter
+     * Constructs a new <code>EnvironmentLogsDetailsTransmitter</code>.
+     * @alias module:model/EnvironmentLogsDetailsTransmitter
      */
     constructor() { 
         
-        ListEnvironmentLogs200ResponseInnerDetailsTransmitter.initialize(this);
+        EnvironmentLogsDetailsTransmitter.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ListEnvironmentLogs200ResponseInnerDetailsTransmitter {
     }
 
     /**
-     * Constructs a <code>ListEnvironmentLogs200ResponseInnerDetailsTransmitter</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentLogsDetailsTransmitter</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListEnvironmentLogs200ResponseInnerDetailsTransmitter} obj Optional instance to populate.
-     * @return {module:model/ListEnvironmentLogs200ResponseInnerDetailsTransmitter} The populated <code>ListEnvironmentLogs200ResponseInnerDetailsTransmitter</code> instance.
+     * @param {module:model/EnvironmentLogsDetailsTransmitter} obj Optional instance to populate.
+     * @return {module:model/EnvironmentLogsDetailsTransmitter} The populated <code>EnvironmentLogsDetailsTransmitter</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListEnvironmentLogs200ResponseInnerDetailsTransmitter();
+            obj = obj || new EnvironmentLogsDetailsTransmitter();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -66,22 +66,22 @@ class ListEnvironmentLogs200ResponseInnerDetailsTransmitter {
 /**
  * @member {String} id
  */
-ListEnvironmentLogs200ResponseInnerDetailsTransmitter.prototype['id'] = undefined;
+EnvironmentLogsDetailsTransmitter.prototype['id'] = undefined;
 
 /**
  * @member {String} name
  */
-ListEnvironmentLogs200ResponseInnerDetailsTransmitter.prototype['name'] = undefined;
+EnvironmentLogsDetailsTransmitter.prototype['name'] = undefined;
 
 /**
  * @member {String} type
  */
-ListEnvironmentLogs200ResponseInnerDetailsTransmitter.prototype['type'] = undefined;
+EnvironmentLogsDetailsTransmitter.prototype['type'] = undefined;
 
 
 
 
 
 
-export default ListEnvironmentLogs200ResponseInnerDetailsTransmitter;
+export default EnvironmentLogsDetailsTransmitter;
 

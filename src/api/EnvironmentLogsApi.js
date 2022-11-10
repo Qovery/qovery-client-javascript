@@ -14,7 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import EnvironmentLogResponseList from '../model/EnvironmentLogResponseList';
-import ListEnvironmentLogs200ResponseInner from '../model/ListEnvironmentLogs200ResponseInner';
+import EnvironmentLogs from '../model/EnvironmentLogs';
 
 /**
 * EnvironmentLogs service.
@@ -82,7 +82,7 @@ export default class EnvironmentLogsApi {
      * Callback function to receive the result of the listEnvironmentLogs operation.
      * @callback module:api/EnvironmentLogsApi~listEnvironmentLogsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ListEnvironmentLogs200ResponseInner>} data The data returned by the service call.
+     * @param {Array.<module:model/EnvironmentLogs>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -91,7 +91,7 @@ export default class EnvironmentLogsApi {
      * This returns the last 1000 environment deployment logs v2
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentLogsApi~listEnvironmentLogsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ListEnvironmentLogs200ResponseInner>}
+     * data is of type: {@link Array.<module:model/EnvironmentLogs>}
      */
     listEnvironmentLogs(environmentId, callback) {
       let postBody = null;
@@ -113,7 +113,7 @@ export default class EnvironmentLogsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [ListEnvironmentLogs200ResponseInner];
+      let returnType = [EnvironmentLogs];
       return this.apiClient.callApi(
         '/environment/{environmentId}/logs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

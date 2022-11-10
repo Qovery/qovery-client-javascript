@@ -12,22 +12,22 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListEnvironmentLogs200ResponseInnerDetailsStage from './ListEnvironmentLogs200ResponseInnerDetailsStage';
-import ListEnvironmentLogs200ResponseInnerDetailsTransmitter from './ListEnvironmentLogs200ResponseInnerDetailsTransmitter';
+import EnvironmentLogsDetailsStage from './EnvironmentLogsDetailsStage';
+import EnvironmentLogsDetailsTransmitter from './EnvironmentLogsDetailsTransmitter';
 
 /**
- * The ListEnvironmentLogs200ResponseInnerDetails model module.
- * @module model/ListEnvironmentLogs200ResponseInnerDetails
+ * The EnvironmentLogsDetails model module.
+ * @module model/EnvironmentLogsDetails
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListEnvironmentLogs200ResponseInnerDetails {
+class EnvironmentLogsDetails {
     /**
-     * Constructs a new <code>ListEnvironmentLogs200ResponseInnerDetails</code>.
-     * @alias module:model/ListEnvironmentLogs200ResponseInnerDetails
+     * Constructs a new <code>EnvironmentLogsDetails</code>.
+     * @alias module:model/EnvironmentLogsDetails
      */
     constructor() { 
         
-        ListEnvironmentLogs200ResponseInnerDetails.initialize(this);
+        EnvironmentLogsDetails.initialize(this);
     }
 
     /**
@@ -39,15 +39,15 @@ class ListEnvironmentLogs200ResponseInnerDetails {
     }
 
     /**
-     * Constructs a <code>ListEnvironmentLogs200ResponseInnerDetails</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentLogsDetails</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListEnvironmentLogs200ResponseInnerDetails} obj Optional instance to populate.
-     * @return {module:model/ListEnvironmentLogs200ResponseInnerDetails} The populated <code>ListEnvironmentLogs200ResponseInnerDetails</code> instance.
+     * @param {module:model/EnvironmentLogsDetails} obj Optional instance to populate.
+     * @return {module:model/EnvironmentLogsDetails} The populated <code>EnvironmentLogsDetails</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListEnvironmentLogs200ResponseInnerDetails();
+            obj = obj || new EnvironmentLogsDetails();
 
             if (data.hasOwnProperty('organization_id')) {
                 obj['organization_id'] = ApiClient.convertToType(data['organization_id'], 'String');
@@ -59,10 +59,10 @@ class ListEnvironmentLogs200ResponseInnerDetails {
                 obj['execution_id'] = ApiClient.convertToType(data['execution_id'], 'String');
             }
             if (data.hasOwnProperty('transmitter')) {
-                obj['transmitter'] = ListEnvironmentLogs200ResponseInnerDetailsTransmitter.constructFromObject(data['transmitter']);
+                obj['transmitter'] = EnvironmentLogsDetailsTransmitter.constructFromObject(data['transmitter']);
             }
             if (data.hasOwnProperty('stage')) {
-                obj['stage'] = ListEnvironmentLogs200ResponseInnerDetailsStage.constructFromObject(data['stage']);
+                obj['stage'] = EnvironmentLogsDetailsStage.constructFromObject(data['stage']);
             }
         }
         return obj;
@@ -74,32 +74,32 @@ class ListEnvironmentLogs200ResponseInnerDetails {
 /**
  * @member {String} organization_id
  */
-ListEnvironmentLogs200ResponseInnerDetails.prototype['organization_id'] = undefined;
+EnvironmentLogsDetails.prototype['organization_id'] = undefined;
 
 /**
  * @member {String} cluster_id
  */
-ListEnvironmentLogs200ResponseInnerDetails.prototype['cluster_id'] = undefined;
+EnvironmentLogsDetails.prototype['cluster_id'] = undefined;
 
 /**
  * @member {String} execution_id
  */
-ListEnvironmentLogs200ResponseInnerDetails.prototype['execution_id'] = undefined;
+EnvironmentLogsDetails.prototype['execution_id'] = undefined;
 
 /**
- * @member {module:model/ListEnvironmentLogs200ResponseInnerDetailsTransmitter} transmitter
+ * @member {module:model/EnvironmentLogsDetailsTransmitter} transmitter
  */
-ListEnvironmentLogs200ResponseInnerDetails.prototype['transmitter'] = undefined;
+EnvironmentLogsDetails.prototype['transmitter'] = undefined;
 
 /**
- * @member {module:model/ListEnvironmentLogs200ResponseInnerDetailsStage} stage
+ * @member {module:model/EnvironmentLogsDetailsStage} stage
  */
-ListEnvironmentLogs200ResponseInnerDetails.prototype['stage'] = undefined;
+EnvironmentLogsDetails.prototype['stage'] = undefined;
 
 
 
 
 
 
-export default ListEnvironmentLogs200ResponseInnerDetails;
+export default EnvironmentLogsDetails;
 

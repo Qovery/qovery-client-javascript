@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ListEnvironmentLogs200ResponseInnerMessage model module.
- * @module model/ListEnvironmentLogs200ResponseInnerMessage
+ * The EnvironmentLogsErrorUnderlyingError model module.
+ * @module model/EnvironmentLogsErrorUnderlyingError
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListEnvironmentLogs200ResponseInnerMessage {
+class EnvironmentLogsErrorUnderlyingError {
     /**
-     * Constructs a new <code>ListEnvironmentLogs200ResponseInnerMessage</code>.
-     * @alias module:model/ListEnvironmentLogs200ResponseInnerMessage
+     * Constructs a new <code>EnvironmentLogsErrorUnderlyingError</code>.
+     * @alias module:model/EnvironmentLogsErrorUnderlyingError
      */
     constructor() { 
         
-        ListEnvironmentLogs200ResponseInnerMessage.initialize(this);
+        EnvironmentLogsErrorUnderlyingError.initialize(this);
     }
 
     /**
@@ -37,18 +37,18 @@ class ListEnvironmentLogs200ResponseInnerMessage {
     }
 
     /**
-     * Constructs a <code>ListEnvironmentLogs200ResponseInnerMessage</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentLogsErrorUnderlyingError</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListEnvironmentLogs200ResponseInnerMessage} obj Optional instance to populate.
-     * @return {module:model/ListEnvironmentLogs200ResponseInnerMessage} The populated <code>ListEnvironmentLogs200ResponseInnerMessage</code> instance.
+     * @param {module:model/EnvironmentLogsErrorUnderlyingError} obj Optional instance to populate.
+     * @return {module:model/EnvironmentLogsErrorUnderlyingError} The populated <code>EnvironmentLogsErrorUnderlyingError</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListEnvironmentLogs200ResponseInnerMessage();
+            obj = obj || new EnvironmentLogsErrorUnderlyingError();
 
-            if (data.hasOwnProperty('safe_message')) {
-                obj['safe_message'] = ApiClient.convertToType(data['safe_message'], 'String');
+            if (data.hasOwnProperty('message')) {
+                obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
             if (data.hasOwnProperty('full_details')) {
                 obj['full_details'] = ApiClient.convertToType(data['full_details'], 'String');
@@ -61,19 +61,19 @@ class ListEnvironmentLogs200ResponseInnerMessage {
 }
 
 /**
- * @member {String} safe_message
+ * @member {String} message
  */
-ListEnvironmentLogs200ResponseInnerMessage.prototype['safe_message'] = undefined;
+EnvironmentLogsErrorUnderlyingError.prototype['message'] = undefined;
 
 /**
  * @member {String} full_details
  */
-ListEnvironmentLogs200ResponseInnerMessage.prototype['full_details'] = undefined;
+EnvironmentLogsErrorUnderlyingError.prototype['full_details'] = undefined;
 
 
 
 
 
 
-export default ListEnvironmentLogs200ResponseInnerMessage;
+export default EnvironmentLogsErrorUnderlyingError;
 

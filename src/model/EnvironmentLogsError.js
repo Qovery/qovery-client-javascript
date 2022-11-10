@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import ListEnvironmentLogs200ResponseInnerErrorUnderlyingError from './ListEnvironmentLogs200ResponseInnerErrorUnderlyingError';
+import EnvironmentLogsErrorUnderlyingError from './EnvironmentLogsErrorUnderlyingError';
 
 /**
- * The ListEnvironmentLogs200ResponseInnerError model module.
- * @module model/ListEnvironmentLogs200ResponseInnerError
+ * The EnvironmentLogsError model module.
+ * @module model/EnvironmentLogsError
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListEnvironmentLogs200ResponseInnerError {
+class EnvironmentLogsError {
     /**
-     * Constructs a new <code>ListEnvironmentLogs200ResponseInnerError</code>.
-     * @alias module:model/ListEnvironmentLogs200ResponseInnerError
+     * Constructs a new <code>EnvironmentLogsError</code>.
+     * @alias module:model/EnvironmentLogsError
      */
     constructor() { 
         
-        ListEnvironmentLogs200ResponseInnerError.initialize(this);
+        EnvironmentLogsError.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class ListEnvironmentLogs200ResponseInnerError {
     }
 
     /**
-     * Constructs a <code>ListEnvironmentLogs200ResponseInnerError</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentLogsError</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListEnvironmentLogs200ResponseInnerError} obj Optional instance to populate.
-     * @return {module:model/ListEnvironmentLogs200ResponseInnerError} The populated <code>ListEnvironmentLogs200ResponseInnerError</code> instance.
+     * @param {module:model/EnvironmentLogsError} obj Optional instance to populate.
+     * @return {module:model/EnvironmentLogsError} The populated <code>EnvironmentLogsError</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListEnvironmentLogs200ResponseInnerError();
+            obj = obj || new EnvironmentLogsError();
 
             if (data.hasOwnProperty('tag')) {
                 obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
@@ -61,7 +61,7 @@ class ListEnvironmentLogs200ResponseInnerError {
                 obj['hint_message'] = ApiClient.convertToType(data['hint_message'], 'String');
             }
             if (data.hasOwnProperty('underlying_error')) {
-                obj['underlying_error'] = ListEnvironmentLogs200ResponseInnerErrorUnderlyingError.constructFromObject(data['underlying_error']);
+                obj['underlying_error'] = EnvironmentLogsErrorUnderlyingError.constructFromObject(data['underlying_error']);
             }
         }
         return obj;
@@ -73,32 +73,32 @@ class ListEnvironmentLogs200ResponseInnerError {
 /**
  * @member {String} tag
  */
-ListEnvironmentLogs200ResponseInnerError.prototype['tag'] = undefined;
+EnvironmentLogsError.prototype['tag'] = undefined;
 
 /**
  * @member {String} user_log_message
  */
-ListEnvironmentLogs200ResponseInnerError.prototype['user_log_message'] = undefined;
+EnvironmentLogsError.prototype['user_log_message'] = undefined;
 
 /**
  * @member {String} link
  */
-ListEnvironmentLogs200ResponseInnerError.prototype['link'] = undefined;
+EnvironmentLogsError.prototype['link'] = undefined;
 
 /**
  * @member {String} hint_message
  */
-ListEnvironmentLogs200ResponseInnerError.prototype['hint_message'] = undefined;
+EnvironmentLogsError.prototype['hint_message'] = undefined;
 
 /**
- * @member {module:model/ListEnvironmentLogs200ResponseInnerErrorUnderlyingError} underlying_error
+ * @member {module:model/EnvironmentLogsErrorUnderlyingError} underlying_error
  */
-ListEnvironmentLogs200ResponseInnerError.prototype['underlying_error'] = undefined;
+EnvironmentLogsError.prototype['underlying_error'] = undefined;
 
 
 
 
 
 
-export default ListEnvironmentLogs200ResponseInnerError;
+export default EnvironmentLogsError;
 

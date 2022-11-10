@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter();
+    instance = new QoveryApi.EnvironmentLogsMessage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('ListEnvironmentLogs200ResponseInnerDetailsTransmitter', function() {
-    it('should create an instance of ListEnvironmentLogs200ResponseInnerDetailsTransmitter', function() {
-      // uncomment below and update the code to test ListEnvironmentLogs200ResponseInnerDetailsTransmitter
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter();
-      //expect(instance).to.be.a(QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter);
+  describe('EnvironmentLogsMessage', function() {
+    it('should create an instance of EnvironmentLogsMessage', function() {
+      // uncomment below and update the code to test EnvironmentLogsMessage
+      //var instance = new QoveryApi.EnvironmentLogsMessage();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentLogsMessage);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter();
+    it('should have the property safeMessage (base name: "safe_message")', function() {
+      // uncomment below and update the code to test the property safeMessage
+      //var instance = new QoveryApi.EnvironmentLogsMessage();
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter();
+    it('should have the property fullDetails (base name: "full_details")', function() {
+      // uncomment below and update the code to test the property fullDetails
+      //var instance = new QoveryApi.EnvironmentLogsMessage();
       //expect(instance).to.be();
     });
 

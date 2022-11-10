@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListEnvironmentLogs200ResponseInner();
+    instance = new QoveryApi.EnvironmentLogsDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,40 @@
       object[property] = value;
   }
 
-  describe('ListEnvironmentLogs200ResponseInner', function() {
-    it('should create an instance of ListEnvironmentLogs200ResponseInner', function() {
-      // uncomment below and update the code to test ListEnvironmentLogs200ResponseInner
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInner();
-      //expect(instance).to.be.a(QoveryApi.ListEnvironmentLogs200ResponseInner);
+  describe('EnvironmentLogsDetails', function() {
+    it('should create an instance of EnvironmentLogsDetails', function() {
+      // uncomment below and update the code to test EnvironmentLogsDetails
+      //var instance = new QoveryApi.EnvironmentLogsDetails();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentLogsDetails);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInner();
+    it('should have the property organizationId (base name: "organization_id")', function() {
+      // uncomment below and update the code to test the property organizationId
+      //var instance = new QoveryApi.EnvironmentLogsDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property timestamp (base name: "timestamp")', function() {
-      // uncomment below and update the code to test the property timestamp
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInner();
+    it('should have the property clusterId (base name: "cluster_id")', function() {
+      // uncomment below and update the code to test the property clusterId
+      //var instance = new QoveryApi.EnvironmentLogsDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property details (base name: "details")', function() {
-      // uncomment below and update the code to test the property details
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInner();
+    it('should have the property executionId (base name: "execution_id")', function() {
+      // uncomment below and update the code to test the property executionId
+      //var instance = new QoveryApi.EnvironmentLogsDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property error (base name: "error")', function() {
-      // uncomment below and update the code to test the property error
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInner();
+    it('should have the property transmitter (base name: "transmitter")', function() {
+      // uncomment below and update the code to test the property transmitter
+      //var instance = new QoveryApi.EnvironmentLogsDetails();
       //expect(instance).to.be();
     });
 
-    it('should have the property message (base name: "message")', function() {
-      // uncomment below and update the code to test the property message
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInner();
+    it('should have the property stage (base name: "stage")', function() {
+      // uncomment below and update the code to test the property stage
+      //var instance = new QoveryApi.EnvironmentLogsDetails();
       //expect(instance).to.be();
     });
 

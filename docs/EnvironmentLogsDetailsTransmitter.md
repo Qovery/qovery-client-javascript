@@ -1,4 +1,4 @@
-# QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsTransmitter
+# QoveryApi.EnvironmentLogsDetailsTransmitter
 
 ## Properties
 

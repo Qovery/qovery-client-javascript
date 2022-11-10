@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsStage();
+    instance = new QoveryApi.EnvironmentLogsDetailsStage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ListEnvironmentLogs200ResponseInnerDetailsStage', function() {
-    it('should create an instance of ListEnvironmentLogs200ResponseInnerDetailsStage', function() {
-      // uncomment below and update the code to test ListEnvironmentLogs200ResponseInnerDetailsStage
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsStage();
-      //expect(instance).to.be.a(QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsStage);
+  describe('EnvironmentLogsDetailsStage', function() {
+    it('should create an instance of EnvironmentLogsDetailsStage', function() {
+      // uncomment below and update the code to test EnvironmentLogsDetailsStage
+      //var instance = new QoveryApi.EnvironmentLogsDetailsStage();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentLogsDetailsStage);
     });
 
     it('should have the property step (base name: "step")', function() {
       // uncomment below and update the code to test the property step
-      //var instance = new QoveryApi.ListEnvironmentLogs200ResponseInnerDetailsStage();
+      //var instance = new QoveryApi.EnvironmentLogsDetailsStage();
       //expect(instance).to.be();
     });
 

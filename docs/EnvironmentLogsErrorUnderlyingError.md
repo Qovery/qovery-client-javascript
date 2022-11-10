@@ -1,4 +1,4 @@
-# QoveryApi.ListEnvironmentLogs200ResponseInnerErrorUnderlyingError
+# QoveryApi.EnvironmentLogsErrorUnderlyingError
 
 ## Properties
 

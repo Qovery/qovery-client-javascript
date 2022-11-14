@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(QoveryApi.EnvironmentLogs);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instance = new QoveryApi.EnvironmentLogs();
       //expect(instance).to.be();
     });

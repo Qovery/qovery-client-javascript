@@ -25,13 +25,13 @@ class EnvironmentLogs {
     /**
      * Constructs a new <code>EnvironmentLogs</code>.
      * @alias module:model/EnvironmentLogs
-     * @param id {String} 
+     * @param type {String} 
      * @param timestamp {Date} 
      * @param details {module:model/EnvironmentLogsDetails} 
      */
-    constructor(id, timestamp, details) { 
+    constructor(type, timestamp, details) { 
         
-        EnvironmentLogs.initialize(this, id, timestamp, details);
+        EnvironmentLogs.initialize(this, type, timestamp, details);
     }
 
     /**
@@ -39,8 +39,8 @@ class EnvironmentLogs {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, timestamp, details) { 
-        obj['id'] = id;
+    static initialize(obj, type, timestamp, details) { 
+        obj['type'] = type;
         obj['timestamp'] = timestamp;
         obj['details'] = details;
     }
@@ -56,8 +56,8 @@ class EnvironmentLogs {
         if (data) {
             obj = obj || new EnvironmentLogs();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
             if (data.hasOwnProperty('timestamp')) {
                 obj['timestamp'] = ApiClient.convertToType(data['timestamp'], 'Date');
@@ -79,9 +79,9 @@ class EnvironmentLogs {
 }
 
 /**
- * @member {String} id
+ * @member {String} type
  */
-EnvironmentLogs.prototype['id'] = undefined;
+EnvironmentLogs.prototype['type'] = undefined;
 
 /**
  * @member {Date} timestamp

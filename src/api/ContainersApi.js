@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ContainerAdvancedSettings from '../model/ContainerAdvancedSettings';
 import ContainerRequest from '../model/ContainerRequest';
 import ContainerResponse from '../model/ContainerResponse';
 import ContainerResponseList from '../model/ContainerResponseList';
@@ -224,6 +225,42 @@ export default class ContainersApi {
       let returnType = ReferenceObjectStatusResponseList;
       return this.apiClient.callApi(
         '/organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDefaultContainerAdvancedSettings operation.
+     * @callback module:api/ContainersApi~getDefaultContainerAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContainerAdvancedSettings} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List default container advanced settings
+     * @param {module:api/ContainersApi~getDefaultContainerAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ContainerAdvancedSettings}
+     */
+    getDefaultContainerAdvancedSettings(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ContainerAdvancedSettings;
+      return this.apiClient.callApi(
+        '/defaultContainerAdvancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

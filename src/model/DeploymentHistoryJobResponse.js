@@ -13,8 +13,10 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import Commit from './Commit';
 import DeploymentHistoryJobResponseAllOf from './DeploymentHistoryJobResponseAllOf';
 import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
+import JobRequestAllOfSchedule from './JobRequestAllOfSchedule';
 
 /**
  * The DeploymentHistoryJobResponse model module.
@@ -79,6 +81,12 @@ class DeploymentHistoryJobResponse {
             if (data.hasOwnProperty('tag')) {
                 obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
             }
+            if (data.hasOwnProperty('commit')) {
+                obj['commit'] = Commit.constructFromObject(data['commit']);
+            }
+            if (data.hasOwnProperty('schedule')) {
+                obj['schedule'] = JobRequestAllOfSchedule.constructFromObject(data['schedule']);
+            }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
             }
@@ -129,6 +137,16 @@ DeploymentHistoryJobResponse.prototype['image_name'] = undefined;
 DeploymentHistoryJobResponse.prototype['tag'] = undefined;
 
 /**
+ * @member {module:model/Commit} commit
+ */
+DeploymentHistoryJobResponse.prototype['commit'] = undefined;
+
+/**
+ * @member {module:model/JobRequestAllOfSchedule} schedule
+ */
+DeploymentHistoryJobResponse.prototype['schedule'] = undefined;
+
+/**
  * @member {Array.<String>} arguments
  */
 DeploymentHistoryJobResponse.prototype['arguments'] = undefined;
@@ -170,6 +188,14 @@ DeploymentHistoryJobResponseAllOf.prototype['image_name'] = undefined;
  * @member {String} tag
  */
 DeploymentHistoryJobResponseAllOf.prototype['tag'] = undefined;
+/**
+ * @member {module:model/Commit} commit
+ */
+DeploymentHistoryJobResponseAllOf.prototype['commit'] = undefined;
+/**
+ * @member {module:model/JobRequestAllOfSchedule} schedule
+ */
+DeploymentHistoryJobResponseAllOf.prototype['schedule'] = undefined;
 /**
  * @member {Array.<String>} arguments
  */

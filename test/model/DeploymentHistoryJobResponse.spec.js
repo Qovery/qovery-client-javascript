@@ -96,6 +96,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property commit (base name: "commit")', function() {
+      // uncomment below and update the code to test the property commit
+      //var instance = new QoveryApi.DeploymentHistoryJobResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property schedule (base name: "schedule")', function() {
+      // uncomment below and update the code to test the property schedule
+      //var instance = new QoveryApi.DeploymentHistoryJobResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property _arguments (base name: "arguments")', function() {
       // uncomment below and update the code to test the property _arguments
       //var instance = new QoveryApi.DeploymentHistoryJobResponse();

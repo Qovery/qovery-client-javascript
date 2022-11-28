@@ -12,7 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
+import Commit from './Commit';
 import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
+import JobRequestAllOfSchedule from './JobRequestAllOfSchedule';
 
 /**
  * The DeploymentHistoryJobResponseAllOf model module.
@@ -60,6 +62,12 @@ class DeploymentHistoryJobResponseAllOf {
             if (data.hasOwnProperty('tag')) {
                 obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
             }
+            if (data.hasOwnProperty('commit')) {
+                obj['commit'] = Commit.constructFromObject(data['commit']);
+            }
+            if (data.hasOwnProperty('schedule')) {
+                obj['schedule'] = JobRequestAllOfSchedule.constructFromObject(data['schedule']);
+            }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
             }
@@ -93,6 +101,16 @@ DeploymentHistoryJobResponseAllOf.prototype['image_name'] = undefined;
  * @member {String} tag
  */
 DeploymentHistoryJobResponseAllOf.prototype['tag'] = undefined;
+
+/**
+ * @member {module:model/Commit} commit
+ */
+DeploymentHistoryJobResponseAllOf.prototype['commit'] = undefined;
+
+/**
+ * @member {module:model/JobRequestAllOfSchedule} schedule
+ */
+DeploymentHistoryJobResponseAllOf.prototype['schedule'] = undefined;
 
 /**
  * @member {Array.<String>} arguments

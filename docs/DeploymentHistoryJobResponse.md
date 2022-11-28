@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **status** | [**DeploymentHistoryStatusEnum**](DeploymentHistoryStatusEnum.md) |  | [optional] 
 **imageName** | **String** |  | [optional] 
 **tag** | **String** |  | [optional] 
+**commit** | [**Commit**](Commit.md) |  | [optional] 
+**schedule** | [**JobRequestAllOfSchedule**](JobRequestAllOfSchedule.md) |  | [optional] 
 **_arguments** | **[String]** |  | [optional] 
 **entrypoint** | **String** |  | [optional] 
 

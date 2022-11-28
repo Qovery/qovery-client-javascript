@@ -96,6 +96,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property jobs (base name: "jobs")', function() {
+      // uncomment below and update the code to test the property jobs
+      //var instance = new QoveryApi.DeploymentHistoryEnvironment();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

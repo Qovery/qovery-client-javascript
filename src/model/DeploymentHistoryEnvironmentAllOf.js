@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import DeploymentHistoryApplication from './DeploymentHistoryApplication';
 import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
+import DeploymentHistoryJobResponse from './DeploymentHistoryJobResponse';
 import StateEnum from './StateEnum';
 
 /**
@@ -63,6 +64,9 @@ class DeploymentHistoryEnvironmentAllOf {
             if (data.hasOwnProperty('databases')) {
                 obj['databases'] = ApiClient.convertToType(data['databases'], [DeploymentHistoryDatabase]);
             }
+            if (data.hasOwnProperty('jobs')) {
+                obj['jobs'] = ApiClient.convertToType(data['jobs'], [DeploymentHistoryJobResponse]);
+            }
         }
         return obj;
     }
@@ -89,6 +93,11 @@ DeploymentHistoryEnvironmentAllOf.prototype['containers'] = undefined;
  * @member {Array.<module:model/DeploymentHistoryDatabase>} databases
  */
 DeploymentHistoryEnvironmentAllOf.prototype['databases'] = undefined;
+
+/**
+ * @member {Array.<module:model/DeploymentHistoryJobResponse>} jobs
+ */
+DeploymentHistoryEnvironmentAllOf.prototype['jobs'] = undefined;
 
 
 

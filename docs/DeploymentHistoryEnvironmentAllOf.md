@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **applications** | [**[DeploymentHistoryApplication]**](DeploymentHistoryApplication.md) |  | [optional] 
 **containers** | [**[DeploymentHistoryContainer]**](DeploymentHistoryContainer.md) |  | [optional] 
 **databases** | [**[DeploymentHistoryDatabase]**](DeploymentHistoryDatabase.md) |  | [optional] 
+**jobs** | [**[DeploymentHistoryJobResponse]**](DeploymentHistoryJobResponse.md) |  | [optional] 
 
 

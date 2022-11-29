@@ -128,8 +128,9 @@ JobRequest.prototype['memory'] = 512;
 /**
  * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
  * @member {Number} max_nb_restart
+ * @default 0
  */
-JobRequest.prototype['max_nb_restart'] = undefined;
+JobRequest.prototype['max_nb_restart'] = 0;
 
 /**
  * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
@@ -190,8 +191,9 @@ JobRequestAllOf.prototype['memory'] = 512;
 /**
  * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
  * @member {Number} max_nb_restart
+ * @default 0
  */
-JobRequestAllOf.prototype['max_nb_restart'] = undefined;
+JobRequestAllOf.prototype['max_nb_restart'] = 0;
 /**
  * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
  * @member {Number} max_duration_seconds

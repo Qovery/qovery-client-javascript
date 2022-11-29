@@ -134,100 +134,100 @@ JobAdvancedSettings.prototype['cronjob.success_jobs_history_limit'] = 1;
 /**
  * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 
  * @member {module:model/JobAdvancedSettings.ReadinessProbeTypeEnum} readiness_probe.type
- * @default 'TCP'
+ * @default 'NONE'
  */
-JobAdvancedSettings.prototype['readiness_probe.type'] = 'TCP';
+JobAdvancedSettings.prototype['readiness_probe.type'] = 'NONE';
 
 /**
  * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
  * @member {String} readiness_probe.http_get.path
- * @default '/'
+ * @default ''
  */
-JobAdvancedSettings.prototype['readiness_probe.http_get.path'] = '/';
+JobAdvancedSettings.prototype['readiness_probe.http_get.path'] = '';
 
 /**
  * Delay before liveness probe is initiated
  * @member {Number} readiness_probe.initial_delay_seconds
- * @default 30
+ * @default 0
  */
-JobAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = 30;
+JobAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = 0;
 
 /**
  * How often to perform the probe
  * @member {Number} readiness_probe.period_seconds
- * @default 10
+ * @default 0
  */
-JobAdvancedSettings.prototype['readiness_probe.period_seconds'] = 10;
+JobAdvancedSettings.prototype['readiness_probe.period_seconds'] = 0;
 
 /**
  * When the probe times out
  * @member {Number} readiness_probe.timeout_seconds
- * @default 1
+ * @default 0
  */
-JobAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = 1;
+JobAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = 0;
 
 /**
  * Minimum consecutive successes for the probe to be considered successful after having failed.
  * @member {Number} readiness_probe.success_threshold
- * @default 1
+ * @default 0
  */
-JobAdvancedSettings.prototype['readiness_probe.success_threshold'] = 1;
+JobAdvancedSettings.prototype['readiness_probe.success_threshold'] = 0;
 
 /**
  * Minimum consecutive failures for the probe to be considered failed after having succeeded.
  * @member {Number} readiness_probe.failure_threshold
- * @default 3
+ * @default 0
  */
-JobAdvancedSettings.prototype['readiness_probe.failure_threshold'] = 3;
+JobAdvancedSettings.prototype['readiness_probe.failure_threshold'] = 0;
 
 /**
  * `NONE` disable liveness probe `TCP` enable TCP liveness probe `HTTP` enable HTTP liveness probe 
  * @member {module:model/JobAdvancedSettings.LivenessProbeTypeEnum} liveness_probe.type
- * @default 'TCP'
+ * @default 'NONE'
  */
-JobAdvancedSettings.prototype['liveness_probe.type'] = 'TCP';
+JobAdvancedSettings.prototype['liveness_probe.type'] = 'NONE';
 
 /**
  * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
  * @member {String} liveness_probe.http_get.path
- * @default '/'
+ * @default ''
  */
-JobAdvancedSettings.prototype['liveness_probe.http_get.path'] = '/';
+JobAdvancedSettings.prototype['liveness_probe.http_get.path'] = '';
 
 /**
  * Delay before liveness probe is initiated
  * @member {Number} liveness_probe.initial_delay_seconds
- * @default 30
+ * @default 0
  */
-JobAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = 30;
+JobAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = 0;
 
 /**
  * How often to perform the probe
  * @member {Number} liveness_probe.period_seconds
- * @default 10
+ * @default 0
  */
-JobAdvancedSettings.prototype['liveness_probe.period_seconds'] = 10;
+JobAdvancedSettings.prototype['liveness_probe.period_seconds'] = 0;
 
 /**
  * When the probe times out
  * @member {Number} liveness_probe.timeout_seconds
- * @default 5
+ * @default 0
  */
-JobAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = 5;
+JobAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = 0;
 
 /**
  * Minimum consecutive successes for the probe to be considered successful after having failed.
  * @member {Number} liveness_probe.success_threshold
- * @default 1
+ * @default 0
  */
-JobAdvancedSettings.prototype['liveness_probe.success_threshold'] = 1;
+JobAdvancedSettings.prototype['liveness_probe.success_threshold'] = 0;
 
 /**
  * Minimum consecutive failures for the probe to be considered failed after having succeeded.
  * @member {Number} liveness_probe.failure_threshold
- * @default 3
+ * @default 0
  */
-JobAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
+JobAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 0;
 
 
 

@@ -47,12 +47,18 @@ export default class JobMainCallsApi {
     /**
      * Delete job
      * To delete the job you must have the admin permission
+     * @param {String} jobId Job ID
      * @param {module:api/JobMainCallsApi~deleteJobCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteJob(callback) {
+    deleteJob(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling deleteJob");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };
@@ -83,16 +89,22 @@ export default class JobMainCallsApi {
     /**
      * Edit job
      * - To edit the job you must have the admin permission. 
+     * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {module:model/JobRequest} opts.jobRequest 
      * @param {module:api/JobMainCallsApi~editJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobResponse}
      */
-    editJob(opts, callback) {
+    editJob(jobId, opts, callback) {
       opts = opts || {};
       let postBody = opts['jobRequest'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling editJob");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };
@@ -164,13 +176,19 @@ export default class JobMainCallsApi {
 
     /**
      * Get job status
+     * @param {String} jobId Job ID
      * @param {module:api/JobMainCallsApi~getJobStatusCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
-    getJobStatus(callback) {
+    getJobStatus(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling getJobStatus");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };

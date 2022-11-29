@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## editJobAdvancedSettings
 
-> JobAdvancedSettings editJobAdvancedSettings(opts)
+> JobAdvancedSettings editJobAdvancedSettings(jobId, opts)
 
 Edit advanced settings
 
@@ -27,10 +27,11 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobConfigurationApi();
+let jobId = "jobId_example"; // String | Job ID
 let opts = {
   'jobAdvancedSettings': new QoveryApi.JobAdvancedSettings() // JobAdvancedSettings | 
 };
-apiInstance.editJobAdvancedSettings(opts, (error, data, response) => {
+apiInstance.editJobAdvancedSettings(jobId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -44,6 +45,7 @@ apiInstance.editJobAdvancedSettings(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **jobAdvancedSettings** | [**JobAdvancedSettings**](JobAdvancedSettings.md)|  | [optional] 
 
 ### Return type
@@ -62,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## getJobAdvancedSettings
 
-> JobAdvancedSettings getJobAdvancedSettings()
+> JobAdvancedSettings getJobAdvancedSettings(jobId)
 
 Get advanced settings
 
@@ -78,7 +80,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobConfigurationApi();
-apiInstance.getJobAdvancedSettings((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.getJobAdvancedSettings(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -89,7 +92,10 @@ apiInstance.getJobAdvancedSettings((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 

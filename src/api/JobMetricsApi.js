@@ -44,13 +44,19 @@ export default class JobMetricsApi {
 
     /**
      * List currently running instances of the job with their CPU and RAM metrics
+     * @param {String} jobId Job ID
      * @param {module:api/JobMetricsApi~getJobCurrentInstanceCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InstanceResponseList}
      */
-    getJobCurrentInstance(callback) {
+    getJobCurrentInstance(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling getJobCurrentInstance");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };

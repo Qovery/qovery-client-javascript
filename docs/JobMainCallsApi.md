@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## deleteJob
 
-> deleteJob()
+> deleteJob(jobId)
 
 Delete job
 
@@ -29,7 +29,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobMainCallsApi();
-apiInstance.deleteJob((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.deleteJob(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -40,7 +41,10 @@ apiInstance.deleteJob((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 
@@ -58,7 +62,7 @@ null (empty response body)
 
 ## editJob
 
-> JobResponse editJob(opts)
+> JobResponse editJob(jobId, opts)
 
 Edit job
 
@@ -74,10 +78,11 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobMainCallsApi();
+let jobId = "jobId_example"; // String | Job ID
 let opts = {
   'jobRequest': new QoveryApi.JobRequest() // JobRequest | 
 };
-apiInstance.editJob(opts, (error, data, response) => {
+apiInstance.editJob(jobId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -91,6 +96,7 @@ apiInstance.editJob(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **jobRequest** | [**JobRequest**](JobRequest.md)|  | [optional] 
 
 ### Return type
@@ -156,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## getJobStatus
 
-> Status getJobStatus()
+> Status getJobStatus(jobId)
 
 Get job status
 
@@ -170,7 +176,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobMainCallsApi();
-apiInstance.getJobStatus((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.getJobStatus(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -181,7 +188,10 @@ apiInstance.getJobStatus((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 

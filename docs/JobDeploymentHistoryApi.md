@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## listJobDeploymentHistory
 
-> ListJobDeploymentHistory200Response listJobDeploymentHistory()
+> ListJobDeploymentHistory200Response listJobDeploymentHistory(jobId)
 
 List job deployments
 
@@ -26,7 +26,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobDeploymentHistoryApi();
-apiInstance.listJobDeploymentHistory((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.listJobDeploymentHistory(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -37,7 +38,10 @@ apiInstance.listJobDeploymentHistory((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 

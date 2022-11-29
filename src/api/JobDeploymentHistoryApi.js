@@ -45,13 +45,19 @@ export default class JobDeploymentHistoryApi {
     /**
      * List job deployments
      * Returns the 20 last job deployments
+     * @param {String} jobId Job ID
      * @param {module:api/JobDeploymentHistoryApi~listJobDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListJobDeploymentHistory200Response}
      */
-    listJobDeploymentHistory(callback) {
+    listJobDeploymentHistory(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling listJobDeploymentHistory");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };

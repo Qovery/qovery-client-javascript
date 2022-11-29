@@ -45,16 +45,22 @@ export default class JobConfigurationApi {
     /**
      * Edit advanced settings
      * Edit advanced settings by returning table of advanced settings.
+     * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {module:model/JobAdvancedSettings} opts.jobAdvancedSettings 
      * @param {module:api/JobConfigurationApi~editJobAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobAdvancedSettings}
      */
-    editJobAdvancedSettings(opts, callback) {
+    editJobAdvancedSettings(jobId, opts, callback) {
       opts = opts || {};
       let postBody = opts['jobAdvancedSettings'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling editJobAdvancedSettings");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };
@@ -85,13 +91,19 @@ export default class JobConfigurationApi {
     /**
      * Get advanced settings
      * Get list and values of the advanced settings of the job.
+     * @param {String} jobId Job ID
      * @param {module:api/JobConfigurationApi~getJobAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobAdvancedSettings}
      */
-    getJobAdvancedSettings(callback) {
+    getJobAdvancedSettings(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling getJobAdvancedSettings");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };

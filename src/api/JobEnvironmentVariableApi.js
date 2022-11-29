@@ -52,16 +52,22 @@ export default class JobEnvironmentVariableApi {
     /**
      * Add an environment variable to the job
      * - Add an environment variable to the job. 
+     * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {module:model/EnvironmentVariableRequest} opts.environmentVariableRequest 
      * @param {module:api/JobEnvironmentVariableApi~createJobEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
-    createJobEnvironmentVariable(opts, callback) {
+    createJobEnvironmentVariable(jobId, opts, callback) {
       opts = opts || {};
       let postBody = opts['environmentVariableRequest'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling createJobEnvironmentVariable");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };
@@ -92,21 +98,27 @@ export default class JobEnvironmentVariableApi {
     /**
      * Create an environment variable alias at the job level
      * - Allows you to add an alias at job level on an existing environment variable having higher scope, in order to customize its key. - You only have to specify a key in the request body - The system will create a new environment variable at job level with the same value as the one corresponding to the variable id in the path - The response body will contain the newly created variable - Information regarding the aliased_variable will be exposed in the \"aliased_variable\" field of the newly created variable - Only 1 alias level is allowed. You can't create an alias on an alias 
+     * @param {String} jobId Job ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
      * @param {module:model/Key} opts.key 
      * @param {module:api/JobEnvironmentVariableApi~createJobEnvironmentVariableAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
-    createJobEnvironmentVariableAlias(environmentVariableId, opts, callback) {
+    createJobEnvironmentVariableAlias(jobId, environmentVariableId, opts, callback) {
       opts = opts || {};
       let postBody = opts['key'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling createJobEnvironmentVariableAlias");
+      }
       // verify the required parameter 'environmentVariableId' is set
       if (environmentVariableId === undefined || environmentVariableId === null) {
         throw new Error("Missing the required parameter 'environmentVariableId' when calling createJobEnvironmentVariableAlias");
       }
 
       let pathParams = {
+        'jobId': jobId,
         'environmentVariableId': environmentVariableId
       };
       let queryParams = {
@@ -138,21 +150,27 @@ export default class JobEnvironmentVariableApi {
     /**
      * Create an environment variable override at the job level
      * - Allows you to override at job level an environment variable that has a higher scope. - You only have to specify a value in the request body - The system will create a new environment variable at job level with the same key as the one corresponding to the variable id in the path - The response body will contain the newly created variable - Information regarding the overridden_variable will be exposed in the \"overridden_variable\" field of the newly created variable 
+     * @param {String} jobId Job ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
      * @param {module:model/Value} opts.value 
      * @param {module:api/JobEnvironmentVariableApi~createJobEnvironmentVariableOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
-    createJobEnvironmentVariableOverride(environmentVariableId, opts, callback) {
+    createJobEnvironmentVariableOverride(jobId, environmentVariableId, opts, callback) {
       opts = opts || {};
       let postBody = opts['value'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling createJobEnvironmentVariableOverride");
+      }
       // verify the required parameter 'environmentVariableId' is set
       if (environmentVariableId === undefined || environmentVariableId === null) {
         throw new Error("Missing the required parameter 'environmentVariableId' when calling createJobEnvironmentVariableOverride");
       }
 
       let pathParams = {
+        'jobId': jobId,
         'environmentVariableId': environmentVariableId
       };
       let queryParams = {
@@ -184,17 +202,23 @@ export default class JobEnvironmentVariableApi {
     /**
      * Delete an environment variable from a job
      * - To delete an environment variable from an job you must have the project user permission - You can't delete a BUILT_IN variable - If you delete a variable having override or alias, the associated override/alias will be deleted as well 
+     * @param {String} jobId Job ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {module:api/JobEnvironmentVariableApi~deleteJobEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteJobEnvironmentVariable(environmentVariableId, callback) {
+    deleteJobEnvironmentVariable(jobId, environmentVariableId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling deleteJobEnvironmentVariable");
+      }
       // verify the required parameter 'environmentVariableId' is set
       if (environmentVariableId === undefined || environmentVariableId === null) {
         throw new Error("Missing the required parameter 'environmentVariableId' when calling deleteJobEnvironmentVariable");
       }
 
       let pathParams = {
+        'jobId': jobId,
         'environmentVariableId': environmentVariableId
       };
       let queryParams = {
@@ -226,13 +250,18 @@ export default class JobEnvironmentVariableApi {
     /**
      * Edit an environment variable belonging to the job
      * - You can't edit a BUILT_IN variable - For an override, you can't edit the key - For an alias, you can't edit the value - An override can only have a scope lower to the variable it is overriding (hierarchy is BUILT_IN > PROJECT > ENVIRONMENT > CONTAINER) 
+     * @param {String} jobId Job ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {module:model/EnvironmentVariableEditRequest} environmentVariableEditRequest 
      * @param {module:api/JobEnvironmentVariableApi~editJobEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
-    editJobEnvironmentVariable(environmentVariableId, environmentVariableEditRequest, callback) {
+    editJobEnvironmentVariable(jobId, environmentVariableId, environmentVariableEditRequest, callback) {
       let postBody = environmentVariableEditRequest;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling editJobEnvironmentVariable");
+      }
       // verify the required parameter 'environmentVariableId' is set
       if (environmentVariableId === undefined || environmentVariableId === null) {
         throw new Error("Missing the required parameter 'environmentVariableId' when calling editJobEnvironmentVariable");
@@ -243,6 +272,7 @@ export default class JobEnvironmentVariableApi {
       }
 
       let pathParams = {
+        'jobId': jobId,
         'environmentVariableId': environmentVariableId
       };
       let queryParams = {
@@ -274,16 +304,22 @@ export default class JobEnvironmentVariableApi {
     /**
      * Import variables
      * Import environment variables in a defined scope, with a defined visibility.
+     * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {module:model/VariableImportRequest} opts.variableImportRequest 
      * @param {module:api/JobEnvironmentVariableApi~importJobEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableImport}
      */
-    importJobEnvironmentVariable(opts, callback) {
+    importJobEnvironmentVariable(jobId, opts, callback) {
       opts = opts || {};
       let postBody = opts['variableImportRequest'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling importJobEnvironmentVariable");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };
@@ -313,13 +349,19 @@ export default class JobEnvironmentVariableApi {
 
     /**
      * List environment variables
+     * @param {String} jobId Job ID
      * @param {module:api/JobEnvironmentVariableApi~listJobEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariableResponseList}
      */
-    listJobEnvironmentVariable(callback) {
+    listJobEnvironmentVariable(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling listJobEnvironmentVariable");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };

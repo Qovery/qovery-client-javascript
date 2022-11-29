@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createJobEnvironmentVariable
 
-> EnvironmentVariable createJobEnvironmentVariable(opts)
+> EnvironmentVariable createJobEnvironmentVariable(jobId, opts)
 
 Add an environment variable to the job
 
@@ -32,10 +32,11 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobEnvironmentVariableApi();
+let jobId = "jobId_example"; // String | Job ID
 let opts = {
   'environmentVariableRequest': new QoveryApi.EnvironmentVariableRequest() // EnvironmentVariableRequest | 
 };
-apiInstance.createJobEnvironmentVariable(opts, (error, data, response) => {
+apiInstance.createJobEnvironmentVariable(jobId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -49,6 +50,7 @@ apiInstance.createJobEnvironmentVariable(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **environmentVariableRequest** | [**EnvironmentVariableRequest**](EnvironmentVariableRequest.md)|  | [optional] 
 
 ### Return type
@@ -67,7 +69,7 @@ Name | Type | Description  | Notes
 
 ## createJobEnvironmentVariableAlias
 
-> EnvironmentVariable createJobEnvironmentVariableAlias(environmentVariableId, opts)
+> EnvironmentVariable createJobEnvironmentVariableAlias(jobId, environmentVariableId, opts)
 
 Create an environment variable alias at the job level
 
@@ -83,11 +85,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobEnvironmentVariableApi();
+let jobId = "jobId_example"; // String | Job ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 let opts = {
   'key': new QoveryApi.Key() // Key | 
 };
-apiInstance.createJobEnvironmentVariableAlias(environmentVariableId, opts, (error, data, response) => {
+apiInstance.createJobEnvironmentVariableAlias(jobId, environmentVariableId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -101,6 +104,7 @@ apiInstance.createJobEnvironmentVariableAlias(environmentVariableId, opts, (erro
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **environmentVariableId** | **String**| Environment Variable ID | 
  **key** | [**Key**](Key.md)|  | [optional] 
 
@@ -120,7 +124,7 @@ Name | Type | Description  | Notes
 
 ## createJobEnvironmentVariableOverride
 
-> EnvironmentVariable createJobEnvironmentVariableOverride(environmentVariableId, opts)
+> EnvironmentVariable createJobEnvironmentVariableOverride(jobId, environmentVariableId, opts)
 
 Create an environment variable override at the job level
 
@@ -136,11 +140,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobEnvironmentVariableApi();
+let jobId = "jobId_example"; // String | Job ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 let opts = {
   'value': new QoveryApi.Value() // Value | 
 };
-apiInstance.createJobEnvironmentVariableOverride(environmentVariableId, opts, (error, data, response) => {
+apiInstance.createJobEnvironmentVariableOverride(jobId, environmentVariableId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -154,6 +159,7 @@ apiInstance.createJobEnvironmentVariableOverride(environmentVariableId, opts, (e
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **environmentVariableId** | **String**| Environment Variable ID | 
  **value** | [**Value**](Value.md)|  | [optional] 
 
@@ -173,7 +179,7 @@ Name | Type | Description  | Notes
 
 ## deleteJobEnvironmentVariable
 
-> deleteJobEnvironmentVariable(environmentVariableId)
+> deleteJobEnvironmentVariable(jobId, environmentVariableId)
 
 Delete an environment variable from a job
 
@@ -189,8 +195,9 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobEnvironmentVariableApi();
+let jobId = "jobId_example"; // String | Job ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
-apiInstance.deleteJobEnvironmentVariable(environmentVariableId, (error, data, response) => {
+apiInstance.deleteJobEnvironmentVariable(jobId, environmentVariableId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -204,6 +211,7 @@ apiInstance.deleteJobEnvironmentVariable(environmentVariableId, (error, data, re
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **environmentVariableId** | **String**| Environment Variable ID | 
 
 ### Return type
@@ -222,7 +230,7 @@ null (empty response body)
 
 ## editJobEnvironmentVariable
 
-> EnvironmentVariable editJobEnvironmentVariable(environmentVariableId, environmentVariableEditRequest)
+> EnvironmentVariable editJobEnvironmentVariable(jobId, environmentVariableId, environmentVariableEditRequest)
 
 Edit an environment variable belonging to the job
 
@@ -238,9 +246,10 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobEnvironmentVariableApi();
+let jobId = "jobId_example"; // String | Job ID
 let environmentVariableId = "environmentVariableId_example"; // String | Environment Variable ID
 let environmentVariableEditRequest = new QoveryApi.EnvironmentVariableEditRequest(); // EnvironmentVariableEditRequest | 
-apiInstance.editJobEnvironmentVariable(environmentVariableId, environmentVariableEditRequest, (error, data, response) => {
+apiInstance.editJobEnvironmentVariable(jobId, environmentVariableId, environmentVariableEditRequest, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -254,6 +263,7 @@ apiInstance.editJobEnvironmentVariable(environmentVariableId, environmentVariabl
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **environmentVariableId** | **String**| Environment Variable ID | 
  **environmentVariableEditRequest** | [**EnvironmentVariableEditRequest**](EnvironmentVariableEditRequest.md)|  | 
 
@@ -273,7 +283,7 @@ Name | Type | Description  | Notes
 
 ## importJobEnvironmentVariable
 
-> VariableImport importJobEnvironmentVariable(opts)
+> VariableImport importJobEnvironmentVariable(jobId, opts)
 
 Import variables
 
@@ -289,10 +299,11 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobEnvironmentVariableApi();
+let jobId = "jobId_example"; // String | Job ID
 let opts = {
   'variableImportRequest': new QoveryApi.VariableImportRequest() // VariableImportRequest | 
 };
-apiInstance.importJobEnvironmentVariable(opts, (error, data, response) => {
+apiInstance.importJobEnvironmentVariable(jobId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -306,6 +317,7 @@ apiInstance.importJobEnvironmentVariable(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **variableImportRequest** | [**VariableImportRequest**](VariableImportRequest.md)|  | [optional] 
 
 ### Return type
@@ -324,7 +336,7 @@ Name | Type | Description  | Notes
 
 ## listJobEnvironmentVariable
 
-> EnvironmentVariableResponseList listJobEnvironmentVariable()
+> EnvironmentVariableResponseList listJobEnvironmentVariable(jobId)
 
 List environment variables
 
@@ -338,7 +350,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobEnvironmentVariableApi();
-apiInstance.listJobEnvironmentVariable((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.listJobEnvironmentVariable(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -349,7 +362,10 @@ apiInstance.listJobEnvironmentVariable((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 

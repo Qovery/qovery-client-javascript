@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## deployJob
 
-> Status deployJob(opts)
+> Status deployJob(jobId, opts)
 
 Deploy job
 
@@ -28,11 +28,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobActionsApi();
+let jobId = "jobId_example"; // String | Job ID
 let opts = {
   'force': false, // Boolean | Enable or Disable the force trigger of the job
   'jobDeployRequest': new QoveryApi.JobDeployRequest() // JobDeployRequest | 
 };
-apiInstance.deployJob(opts, (error, data, response) => {
+apiInstance.deployJob(jobId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -46,6 +47,7 @@ apiInstance.deployJob(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **force** | **Boolean**| Enable or Disable the force trigger of the job | [optional] [default to false]
  **jobDeployRequest** | [**JobDeployRequest**](JobDeployRequest.md)|  | [optional] 
 
@@ -65,7 +67,7 @@ Name | Type | Description  | Notes
 
 ## restartJob
 
-> Status restartJob(opts)
+> Status restartJob(jobId, opts)
 
 Restart job
 
@@ -79,10 +81,11 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobActionsApi();
+let jobId = "jobId_example"; // String | Job ID
 let opts = {
   'force': false // Boolean | Enable or Disable the force trigger of the job
 };
-apiInstance.restartJob(opts, (error, data, response) => {
+apiInstance.restartJob(jobId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -96,6 +99,7 @@ apiInstance.restartJob(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **force** | **Boolean**| Enable or Disable the force trigger of the job | [optional] [default to false]
 
 ### Return type
@@ -114,7 +118,7 @@ Name | Type | Description  | Notes
 
 ## stopJob
 
-> Status stopJob()
+> Status stopJob(jobId)
 
 Stop job
 
@@ -128,7 +132,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobActionsApi();
-apiInstance.stopJob((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.stopJob(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -139,7 +144,10 @@ apiInstance.stopJob((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 

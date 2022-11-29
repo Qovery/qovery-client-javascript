@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## getJobCurrentInstance
 
-> InstanceResponseList getJobCurrentInstance()
+> InstanceResponseList getJobCurrentInstance(jobId)
 
 List currently running instances of the job with their CPU and RAM metrics
 
@@ -24,7 +24,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobMetricsApi();
-apiInstance.getJobCurrentInstance((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.getJobCurrentInstance(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -35,7 +36,10 @@ apiInstance.getJobCurrentInstance((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 

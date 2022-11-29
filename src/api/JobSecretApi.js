@@ -50,16 +50,22 @@ export default class JobSecretApi {
     /**
      * Add a secret to the job
      * - Add a secret to the job. 
+     * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {module:model/SecretRequest} opts.secretRequest 
      * @param {module:api/JobSecretApi~createJobSecretCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
-    createJobSecret(opts, callback) {
+    createJobSecret(jobId, opts, callback) {
       opts = opts || {};
       let postBody = opts['secretRequest'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling createJobSecret");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };
@@ -90,21 +96,27 @@ export default class JobSecretApi {
     /**
      * Create a secret alias at the job level
      * - Allows you to add an alias at job level on an existing secret having higher scope, in order to customize its key. - You only have to specify a key in the request body - The system will create a new secret at job level with the same value as the one corresponding to the secret id in the path - The response body will contain the newly created secret - Information regarding the aliased_secret will be exposed in the \"aliased_secret\" field of the newly created secret - Only 1 alias level is allowed. You can't create an alias on an alias 
+     * @param {String} jobId Job ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
      * @param {module:model/Key} opts.key 
      * @param {module:api/JobSecretApi~createJobSecretAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
-    createJobSecretAlias(secretId, opts, callback) {
+    createJobSecretAlias(jobId, secretId, opts, callback) {
       opts = opts || {};
       let postBody = opts['key'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling createJobSecretAlias");
+      }
       // verify the required parameter 'secretId' is set
       if (secretId === undefined || secretId === null) {
         throw new Error("Missing the required parameter 'secretId' when calling createJobSecretAlias");
       }
 
       let pathParams = {
+        'jobId': jobId,
         'secretId': secretId
       };
       let queryParams = {
@@ -136,21 +148,27 @@ export default class JobSecretApi {
     /**
      * Create a secret override at the job level
      * - Allows you to override at job level a secret that has a higher scope. - You only have to specify a value in the request body - The system will create a new secret at job level with the same key as the one corresponding to the secret id in the path - The response body will contain the newly created secret - Information regarding the overridden_secret will be exposed in the \"overridden_secret\" field of the newly created secret 
+     * @param {String} jobId Job ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
      * @param {module:model/Value} opts.value 
      * @param {module:api/JobSecretApi~createJobSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
-    createJobSecretOverride(secretId, opts, callback) {
+    createJobSecretOverride(jobId, secretId, opts, callback) {
       opts = opts || {};
       let postBody = opts['value'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling createJobSecretOverride");
+      }
       // verify the required parameter 'secretId' is set
       if (secretId === undefined || secretId === null) {
         throw new Error("Missing the required parameter 'secretId' when calling createJobSecretOverride");
       }
 
       let pathParams = {
+        'jobId': jobId,
         'secretId': secretId
       };
       let queryParams = {
@@ -182,17 +200,23 @@ export default class JobSecretApi {
     /**
      * Delete a secret from an job
      * - To delete a secret you must have the project user permission - You can't delete a BUILT_IN secret - If you delete a secret having override or alias, the associated override/alias will be deleted as well 
+     * @param {String} jobId Job ID
      * @param {String} secretId Secret ID
      * @param {module:api/JobSecretApi~deleteJobSecretCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteJobSecret(secretId, callback) {
+    deleteJobSecret(jobId, secretId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling deleteJobSecret");
+      }
       // verify the required parameter 'secretId' is set
       if (secretId === undefined || secretId === null) {
         throw new Error("Missing the required parameter 'secretId' when calling deleteJobSecret");
       }
 
       let pathParams = {
+        'jobId': jobId,
         'secretId': secretId
       };
       let queryParams = {
@@ -224,13 +248,18 @@ export default class JobSecretApi {
     /**
      * Edit a secret belonging to the job
      * - You can't edit a BUILT_IN secret - For an override, you can't edit the key - For an alias, you can't edit the value - An override can only have a scope lower to the secret it is overriding (hierarchy is BUILT_IN > PROJECT > ENVIRONMENT > CONTAINER) 
+     * @param {String} jobId Job ID
      * @param {String} secretId Secret ID
      * @param {module:model/SecretEditRequest} secretEditRequest 
      * @param {module:api/JobSecretApi~editJobSecretCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
-    editJobSecret(secretId, secretEditRequest, callback) {
+    editJobSecret(jobId, secretId, secretEditRequest, callback) {
       let postBody = secretEditRequest;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling editJobSecret");
+      }
       // verify the required parameter 'secretId' is set
       if (secretId === undefined || secretId === null) {
         throw new Error("Missing the required parameter 'secretId' when calling editJobSecret");
@@ -241,6 +270,7 @@ export default class JobSecretApi {
       }
 
       let pathParams = {
+        'jobId': jobId,
         'secretId': secretId
       };
       let queryParams = {
@@ -272,13 +302,19 @@ export default class JobSecretApi {
     /**
      * List job secrets
      * Secrets are like environment variables, but they are secured and can't be revealed.
+     * @param {String} jobId Job ID
      * @param {module:api/JobSecretApi~listJobSecretsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SecretResponseList}
      */
-    listJobSecrets(callback) {
+    listJobSecrets(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling listJobSecrets");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };

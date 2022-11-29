@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## createJobSecret
 
-> Secret createJobSecret(opts)
+> Secret createJobSecret(jobId, opts)
 
 Add a secret to the job
 
@@ -31,10 +31,11 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobSecretApi();
+let jobId = "jobId_example"; // String | Job ID
 let opts = {
   'secretRequest': new QoveryApi.SecretRequest() // SecretRequest | 
 };
-apiInstance.createJobSecret(opts, (error, data, response) => {
+apiInstance.createJobSecret(jobId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -48,6 +49,7 @@ apiInstance.createJobSecret(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **secretRequest** | [**SecretRequest**](SecretRequest.md)|  | [optional] 
 
 ### Return type
@@ -66,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## createJobSecretAlias
 
-> Secret createJobSecretAlias(secretId, opts)
+> Secret createJobSecretAlias(jobId, secretId, opts)
 
 Create a secret alias at the job level
 
@@ -82,11 +84,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobSecretApi();
+let jobId = "jobId_example"; // String | Job ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
   'key': new QoveryApi.Key() // Key | 
 };
-apiInstance.createJobSecretAlias(secretId, opts, (error, data, response) => {
+apiInstance.createJobSecretAlias(jobId, secretId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -100,6 +103,7 @@ apiInstance.createJobSecretAlias(secretId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **secretId** | **String**| Secret ID | 
  **key** | [**Key**](Key.md)|  | [optional] 
 
@@ -119,7 +123,7 @@ Name | Type | Description  | Notes
 
 ## createJobSecretOverride
 
-> Secret createJobSecretOverride(secretId, opts)
+> Secret createJobSecretOverride(jobId, secretId, opts)
 
 Create a secret override at the job level
 
@@ -135,11 +139,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobSecretApi();
+let jobId = "jobId_example"; // String | Job ID
 let secretId = "secretId_example"; // String | Secret ID
 let opts = {
   'value': new QoveryApi.Value() // Value | 
 };
-apiInstance.createJobSecretOverride(secretId, opts, (error, data, response) => {
+apiInstance.createJobSecretOverride(jobId, secretId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -153,6 +158,7 @@ apiInstance.createJobSecretOverride(secretId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **secretId** | **String**| Secret ID | 
  **value** | [**Value**](Value.md)|  | [optional] 
 
@@ -172,7 +178,7 @@ Name | Type | Description  | Notes
 
 ## deleteJobSecret
 
-> deleteJobSecret(secretId)
+> deleteJobSecret(jobId, secretId)
 
 Delete a secret from an job
 
@@ -188,8 +194,9 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobSecretApi();
+let jobId = "jobId_example"; // String | Job ID
 let secretId = "secretId_example"; // String | Secret ID
-apiInstance.deleteJobSecret(secretId, (error, data, response) => {
+apiInstance.deleteJobSecret(jobId, secretId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -203,6 +210,7 @@ apiInstance.deleteJobSecret(secretId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **secretId** | **String**| Secret ID | 
 
 ### Return type
@@ -221,7 +229,7 @@ null (empty response body)
 
 ## editJobSecret
 
-> Secret editJobSecret(secretId, secretEditRequest)
+> Secret editJobSecret(jobId, secretId, secretEditRequest)
 
 Edit a secret belonging to the job
 
@@ -237,9 +245,10 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobSecretApi();
+let jobId = "jobId_example"; // String | Job ID
 let secretId = "secretId_example"; // String | Secret ID
 let secretEditRequest = new QoveryApi.SecretEditRequest(); // SecretEditRequest | 
-apiInstance.editJobSecret(secretId, secretEditRequest, (error, data, response) => {
+apiInstance.editJobSecret(jobId, secretId, secretEditRequest, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -253,6 +262,7 @@ apiInstance.editJobSecret(secretId, secretEditRequest, (error, data, response) =
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
  **secretId** | **String**| Secret ID | 
  **secretEditRequest** | [**SecretEditRequest**](SecretEditRequest.md)|  | 
 
@@ -272,7 +282,7 @@ Name | Type | Description  | Notes
 
 ## listJobSecrets
 
-> SecretResponseList listJobSecrets()
+> SecretResponseList listJobSecrets(jobId)
 
 List job secrets
 
@@ -288,7 +298,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.JobSecretApi();
-apiInstance.listJobSecrets((error, data, response) => {
+let jobId = "jobId_example"; // String | Job ID
+apiInstance.listJobSecrets(jobId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -299,7 +310,10 @@ apiInstance.listJobSecrets((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
 
 ### Return type
 

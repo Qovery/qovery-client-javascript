@@ -46,17 +46,23 @@ export default class JobActionsApi {
     /**
      * Deploy job
      * You must provide a git commit id
+     * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.force Enable or Disable the force trigger of the job (default to false)
      * @param {module:model/JobDeployRequest} opts.jobDeployRequest 
      * @param {module:api/JobActionsApi~deployJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
-    deployJob(opts, callback) {
+    deployJob(jobId, opts, callback) {
       opts = opts || {};
       let postBody = opts['jobDeployRequest'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling deployJob");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
         'force': opts['force']
@@ -87,16 +93,22 @@ export default class JobActionsApi {
 
     /**
      * Restart job
+     * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.force Enable or Disable the force trigger of the job (default to false)
      * @param {module:api/JobActionsApi~restartJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
-    restartJob(opts, callback) {
+    restartJob(jobId, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling restartJob");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
         'force': opts['force']
@@ -127,13 +139,19 @@ export default class JobActionsApi {
 
     /**
      * Stop job
+     * @param {String} jobId Job ID
      * @param {module:api/JobActionsApi~stopJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
-    stopJob(callback) {
+    stopJob(jobId, callback) {
       let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling stopJob");
+      }
 
       let pathParams = {
+        'jobId': jobId
       };
       let queryParams = {
       };

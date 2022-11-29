@@ -16,7 +16,7 @@ import Base from './Base';
 import Commit from './Commit';
 import DeploymentHistoryJobResponseAllOf from './DeploymentHistoryJobResponseAllOf';
 import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
-import JobRequestAllOfSchedule from './JobRequestAllOfSchedule';
+import JobResponseAllOfSchedule from './JobResponseAllOfSchedule';
 
 /**
  * The DeploymentHistoryJobResponse model module.
@@ -85,7 +85,7 @@ class DeploymentHistoryJobResponse {
                 obj['commit'] = Commit.constructFromObject(data['commit']);
             }
             if (data.hasOwnProperty('schedule')) {
-                obj['schedule'] = JobRequestAllOfSchedule.constructFromObject(data['schedule']);
+                obj['schedule'] = JobResponseAllOfSchedule.constructFromObject(data['schedule']);
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -142,7 +142,7 @@ DeploymentHistoryJobResponse.prototype['tag'] = undefined;
 DeploymentHistoryJobResponse.prototype['commit'] = undefined;
 
 /**
- * @member {module:model/JobRequestAllOfSchedule} schedule
+ * @member {module:model/JobResponseAllOfSchedule} schedule
  */
 DeploymentHistoryJobResponse.prototype['schedule'] = undefined;
 
@@ -193,7 +193,7 @@ DeploymentHistoryJobResponseAllOf.prototype['tag'] = undefined;
  */
 DeploymentHistoryJobResponseAllOf.prototype['commit'] = undefined;
 /**
- * @member {module:model/JobRequestAllOfSchedule} schedule
+ * @member {module:model/JobResponseAllOfSchedule} schedule
  */
 DeploymentHistoryJobResponseAllOf.prototype['schedule'] = undefined;
 /**

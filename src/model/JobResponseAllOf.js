@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import JobRequestAllOfSchedule from './JobRequestAllOfSchedule';
+import JobResponseAllOfSchedule from './JobResponseAllOfSchedule';
 import JobResponseAllOfSource from './JobResponseAllOfSource';
 import ReferenceObject from './ReferenceObject';
 
@@ -109,7 +109,7 @@ class JobResponseAllOf {
                 obj['source'] = JobResponseAllOfSource.constructFromObject(data['source']);
             }
             if (data.hasOwnProperty('schedule')) {
-                obj['schedule'] = JobRequestAllOfSchedule.constructFromObject(data['schedule']);
+                obj['schedule'] = JobResponseAllOfSchedule.constructFromObject(data['schedule']);
             }
         }
         return obj;
@@ -199,7 +199,7 @@ JobResponseAllOf.prototype['port'] = undefined;
 JobResponseAllOf.prototype['source'] = undefined;
 
 /**
- * @member {module:model/JobRequestAllOfSchedule} schedule
+ * @member {module:model/JobResponseAllOfSchedule} schedule
  */
 JobResponseAllOf.prototype['schedule'] = undefined;
 

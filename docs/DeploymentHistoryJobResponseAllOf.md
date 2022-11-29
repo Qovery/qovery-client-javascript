@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **imageName** | **String** |  | [optional] 
 **tag** | **String** |  | [optional] 
 **commit** | [**Commit**](Commit.md) |  | [optional] 
-**schedule** | [**JobRequestAllOfSchedule**](JobRequestAllOfSchedule.md) |  | [optional] 
+**schedule** | [**JobResponseAllOfSchedule**](JobResponseAllOfSchedule.md) |  | [optional] 
 **_arguments** | **[String]** |  | [optional] 
 **entrypoint** | **String** |  | [optional] 
 

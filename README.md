@@ -715,6 +715,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.JobRequestAllOfSourceImage](docs/JobRequestAllOfSourceImage.md)
  - [QoveryApi.JobResponse](docs/JobResponse.md)
  - [QoveryApi.JobResponseAllOf](docs/JobResponseAllOf.md)
+ - [QoveryApi.JobResponseAllOfSchedule](docs/JobResponseAllOfSchedule.md)
  - [QoveryApi.JobResponseAllOfSource](docs/JobResponseAllOfSource.md)
  - [QoveryApi.JobResponseAllOfSourceDocker](docs/JobResponseAllOfSourceDocker.md)
  - [QoveryApi.JobResponseList](docs/JobResponseList.md)

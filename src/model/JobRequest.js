@@ -57,6 +57,9 @@ class JobRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
             }
@@ -99,6 +102,11 @@ class JobRequest {
  * @member {String} name
  */
 JobRequest.prototype['name'] = undefined;
+
+/**
+ * @member {String} description
+ */
+JobRequest.prototype['description'] = undefined;
 
 /**
  * @member {Array.<String>} arguments
@@ -167,6 +175,10 @@ JobRequest.prototype['schedule'] = undefined;
  * @member {String} name
  */
 JobRequestAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+JobRequestAllOf.prototype['description'] = undefined;
 /**
  * @member {Array.<String>} arguments
  */

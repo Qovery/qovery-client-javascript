@@ -258,6 +258,7 @@ import JobRequestAllOfSourceDocker from './model/JobRequestAllOfSourceDocker';
 import JobRequestAllOfSourceImage from './model/JobRequestAllOfSourceImage';
 import JobResponse from './model/JobResponse';
 import JobResponseAllOf from './model/JobResponseAllOf';
+import JobResponseAllOfSchedule from './model/JobResponseAllOfSchedule';
 import JobResponseAllOfSource from './model/JobResponseAllOfSource';
 import JobResponseAllOfSourceDocker from './model/JobResponseAllOfSourceDocker';
 import JobResponseList from './model/JobResponseList';
@@ -1992,6 +1993,12 @@ export {
      * @property {module:model/JobResponseAllOf}
      */
     JobResponseAllOf,
+
+    /**
+     * The JobResponseAllOfSchedule model constructor.
+     * @property {module:model/JobResponseAllOfSchedule}
+     */
+    JobResponseAllOfSchedule,
 
     /**
      * The JobResponseAllOfSource model constructor.

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.JobRequestAllOfSchedule();
+    instance = new QoveryApi.JobResponseAllOfSchedule();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('JobRequestAllOfSchedule', function() {
-    it('should create an instance of JobRequestAllOfSchedule', function() {
-      // uncomment below and update the code to test JobRequestAllOfSchedule
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
-      //expect(instance).to.be.a(QoveryApi.JobRequestAllOfSchedule);
+  describe('JobResponseAllOfSchedule', function() {
+    it('should create an instance of JobResponseAllOfSchedule', function() {
+      // uncomment below and update the code to test JobResponseAllOfSchedule
+      //var instance = new QoveryApi.JobResponseAllOfSchedule();
+      //expect(instance).to.be.a(QoveryApi.JobResponseAllOfSchedule);
     });
 
     it('should have the property event (base name: "event")', function() {
       // uncomment below and update the code to test the property event
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
+      //var instance = new QoveryApi.JobResponseAllOfSchedule();
       //expect(instance).to.be();
     });
 
-    it('should have the property scheduledAt (base name: "scheduled_at")', function() {
-      // uncomment below and update the code to test the property scheduledAt
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
+    it('should have the property scheduleAt (base name: "schedule_at")', function() {
+      // uncomment below and update the code to test the property scheduleAt
+      //var instance = new QoveryApi.JobResponseAllOfSchedule();
       //expect(instance).to.be();
     });
 

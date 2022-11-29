@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import JobScheduleEvent from './JobScheduleEvent';
 
 /**
- * The JobRequestAllOfSchedule model module.
- * @module model/JobRequestAllOfSchedule
+ * The JobResponseAllOfSchedule model module.
+ * @module model/JobResponseAllOfSchedule
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class JobRequestAllOfSchedule {
+class JobResponseAllOfSchedule {
     /**
-     * Constructs a new <code>JobRequestAllOfSchedule</code>.
-     * @alias module:model/JobRequestAllOfSchedule
+     * Constructs a new <code>JobResponseAllOfSchedule</code>.
+     * @alias module:model/JobResponseAllOfSchedule
      */
     constructor() { 
         
-        JobRequestAllOfSchedule.initialize(this);
+        JobResponseAllOfSchedule.initialize(this);
     }
 
     /**
@@ -38,21 +38,21 @@ class JobRequestAllOfSchedule {
     }
 
     /**
-     * Constructs a <code>JobRequestAllOfSchedule</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>JobResponseAllOfSchedule</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/JobRequestAllOfSchedule} obj Optional instance to populate.
-     * @return {module:model/JobRequestAllOfSchedule} The populated <code>JobRequestAllOfSchedule</code> instance.
+     * @param {module:model/JobResponseAllOfSchedule} obj Optional instance to populate.
+     * @return {module:model/JobResponseAllOfSchedule} The populated <code>JobResponseAllOfSchedule</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new JobRequestAllOfSchedule();
+            obj = obj || new JobResponseAllOfSchedule();
 
             if (data.hasOwnProperty('event')) {
                 obj['event'] = JobScheduleEvent.constructFromObject(data['event']);
             }
-            if (data.hasOwnProperty('scheduled_at')) {
-                obj['scheduled_at'] = ApiClient.convertToType(data['scheduled_at'], 'String');
+            if (data.hasOwnProperty('schedule_at')) {
+                obj['schedule_at'] = ApiClient.convertToType(data['schedule_at'], 'String');
             }
         }
         return obj;
@@ -64,18 +64,18 @@ class JobRequestAllOfSchedule {
 /**
  * @member {module:model/JobScheduleEvent} event
  */
-JobRequestAllOfSchedule.prototype['event'] = undefined;
+JobResponseAllOfSchedule.prototype['event'] = undefined;
 
 /**
  * Can only be set if the event is CRON. Represent the cron format for the job schedule without seconds. For example: `* * * * *` represent the cron to launch the job every minute. See https://crontab.guru/ to WISIWIG interface. Timezone is UTC 
- * @member {String} scheduled_at
+ * @member {String} schedule_at
  */
-JobRequestAllOfSchedule.prototype['scheduled_at'] = undefined;
+JobResponseAllOfSchedule.prototype['schedule_at'] = undefined;
 
 
 
 
 
 
-export default JobRequestAllOfSchedule;
+export default JobResponseAllOfSchedule;
 

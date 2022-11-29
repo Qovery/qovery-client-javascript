@@ -303,6 +303,7 @@ docs/JobRequestAllOfSourceDocker.md
 docs/JobRequestAllOfSourceImage.md
 docs/JobResponse.md
 docs/JobResponseAllOf.md
+docs/JobResponseAllOfSchedule.md
 docs/JobResponseAllOfSource.md
 docs/JobResponseAllOfSourceDocker.md
 docs/JobResponseList.md
@@ -794,6 +795,7 @@ src/model/JobRequestAllOfSourceDocker.js
 src/model/JobRequestAllOfSourceImage.js
 src/model/JobResponse.js
 src/model/JobResponseAllOf.js
+src/model/JobResponseAllOfSchedule.js
 src/model/JobResponseAllOfSource.js
 src/model/JobResponseAllOfSourceDocker.js
 src/model/JobResponseList.js
@@ -1264,6 +1266,7 @@ test/model/JobRequestAllOfSourceDocker.spec.js
 test/model/JobRequestAllOfSourceImage.spec.js
 test/model/JobResponse.spec.js
 test/model/JobResponseAllOf.spec.js
+test/model/JobResponseAllOfSchedule.spec.js
 test/model/JobResponseAllOfSource.spec.js
 test/model/JobResponseAllOfSourceDocker.spec.js
 test/model/JobResponseList.spec.js

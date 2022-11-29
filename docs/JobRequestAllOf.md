@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | name is case insensitive | 
+**description** | **String** |  | [optional] 
 **_arguments** | **[String]** |  | [optional] 
 **entrypoint** | **String** | optional entrypoint when launching container | [optional] 
 **cpu** | **Number** | unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] [default to 500]

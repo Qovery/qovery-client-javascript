@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import Environment from '../model/Environment';
 import EnvironmentEditRequest from '../model/EnvironmentEditRequest';
+import GetEnvironmentStatuses200Response from '../model/GetEnvironmentStatuses200Response';
 import Status from '../model/Status';
 
 /**
@@ -203,6 +204,48 @@ export default class EnvironmentMainCallsApi {
       let returnType = Status;
       return this.apiClient.callApi(
         '/environment/{environmentId}/status', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEnvironmentStatuses operation.
+     * @callback module:api/EnvironmentMainCallsApi~getEnvironmentStatusesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetEnvironmentStatuses200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get environment statuses with services status
+     * @param {String} environmentId Environment ID
+     * @param {module:api/EnvironmentMainCallsApi~getEnvironmentStatusesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetEnvironmentStatuses200Response}
+     */
+    getEnvironmentStatuses(environmentId, callback) {
+      let postBody = null;
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentStatuses");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetEnvironmentStatuses200Response;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/statuses', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

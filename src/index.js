@@ -227,6 +227,7 @@ import EventPaginatedResponseList from './model/EventPaginatedResponseList';
 import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListAllOf';
 import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
+import GetEnvironmentStatuses200Response from './model/GetEnvironmentStatuses200Response';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
 import GitProviderEnum from './model/GitProviderEnum';
@@ -1807,6 +1808,12 @@ export {
      * @property {module:model/GenericObjectCurrentCost}
      */
     GenericObjectCurrentCost,
+
+    /**
+     * The GetEnvironmentStatuses200Response model constructor.
+     * @property {module:model/GetEnvironmentStatuses200Response}
+     */
+    GetEnvironmentStatuses200Response,
 
     /**
      * The GitAuthProvider model constructor.

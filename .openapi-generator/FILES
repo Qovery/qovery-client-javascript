@@ -264,6 +264,7 @@ docs/EventPaginatedResponseList.md
 docs/EventPaginatedResponseListAllOf.md
 docs/EventResponseList.md
 docs/GenericObjectCurrentCost.md
+docs/GetEnvironmentStatuses200Response.md
 docs/GitAuthProvider.md
 docs/GitAuthProviderResponseList.md
 docs/GitProviderEnum.md
@@ -764,6 +765,7 @@ src/model/EventPaginatedResponseList.js
 src/model/EventPaginatedResponseListAllOf.js
 src/model/EventResponseList.js
 src/model/GenericObjectCurrentCost.js
+src/model/GetEnvironmentStatuses200Response.js
 src/model/GitAuthProvider.js
 src/model/GitAuthProviderResponseList.js
 src/model/GitProviderEnum.js
@@ -1235,6 +1237,7 @@ test/model/EventPaginatedResponseList.spec.js
 test/model/EventPaginatedResponseListAllOf.spec.js
 test/model/EventResponseList.spec.js
 test/model/GenericObjectCurrentCost.spec.js
+test/model/GetEnvironmentStatuses200Response.spec.js
 test/model/GitAuthProvider.spec.js
 test/model/GitAuthProviderResponseList.spec.js
 test/model/GitProviderEnum.spec.js

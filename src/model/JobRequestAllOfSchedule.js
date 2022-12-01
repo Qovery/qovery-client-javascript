@@ -67,7 +67,7 @@ class JobRequestAllOfSchedule {
 JobRequestAllOfSchedule.prototype['event'] = undefined;
 
 /**
- * Can only be set if the event is CRON. Represent the cron format for the job schedule without seconds. For example: `* * * * *` represent the cron to launch the job every minute. See https://crontab.guru/ to WISIWIG interface. Timezone is UTC 
+ * Can only be set if the event is CRON.   Represent the cron format for the job schedule without seconds.   For example: `* * * * *` represent the cron to launch the job every minute.   See https://crontab.guru/ to WISIWIG interface.   Timezone is UTC   
  * @member {String} scheduled_at
  */
 JobRequestAllOfSchedule.prototype['scheduled_at'] = undefined;

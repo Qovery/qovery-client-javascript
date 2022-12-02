@@ -102,14 +102,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property _arguments (base name: "arguments")', function() {
-      // uncomment below and update the code to test the property _arguments
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property entrypoint (base name: "entrypoint")', function() {
-      // uncomment below and update the code to test the property entrypoint
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
       //var instance = new QoveryApi.JobResponse();
       //expect(instance).to.be();
     });

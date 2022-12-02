@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import JobScheduleEvent from './JobScheduleEvent';
+import JobRequestAllOfScheduleCronjob from './JobRequestAllOfScheduleCronjob';
+import JobRequestAllOfScheduleOnStart from './JobRequestAllOfScheduleOnStart';
 
 /**
  * The JobRequestAllOfSchedule model module.
@@ -22,6 +23,7 @@ import JobScheduleEvent from './JobScheduleEvent';
 class JobRequestAllOfSchedule {
     /**
      * Constructs a new <code>JobRequestAllOfSchedule</code>.
+     * If you want to define a Cron job, only the &#x60;cronjob&#x60; property must be filled   A Lifecycle job should contain at least one property &#x60;on_XXX&#x60; among the 3 properties: &#x60;on_start&#x60;, &#x60;on_stop&#x60;, &#x60;on_delete&#x60; 
      * @alias module:model/JobRequestAllOfSchedule
      */
     constructor() { 
@@ -48,11 +50,17 @@ class JobRequestAllOfSchedule {
         if (data) {
             obj = obj || new JobRequestAllOfSchedule();
 
-            if (data.hasOwnProperty('event')) {
-                obj['event'] = JobScheduleEvent.constructFromObject(data['event']);
+            if (data.hasOwnProperty('on_start')) {
+                obj['on_start'] = JobRequestAllOfScheduleOnStart.constructFromObject(data['on_start']);
             }
-            if (data.hasOwnProperty('scheduled_at')) {
-                obj['scheduled_at'] = ApiClient.convertToType(data['scheduled_at'], 'String');
+            if (data.hasOwnProperty('on_stop')) {
+                obj['on_stop'] = JobRequestAllOfScheduleOnStart.constructFromObject(data['on_stop']);
+            }
+            if (data.hasOwnProperty('on_delete')) {
+                obj['on_delete'] = JobRequestAllOfScheduleOnStart.constructFromObject(data['on_delete']);
+            }
+            if (data.hasOwnProperty('cronjob')) {
+                obj['cronjob'] = JobRequestAllOfScheduleCronjob.constructFromObject(data['cronjob']);
             }
         }
         return obj;
@@ -62,15 +70,24 @@ class JobRequestAllOfSchedule {
 }
 
 /**
- * @member {module:model/JobScheduleEvent} event
+ * @member {module:model/JobRequestAllOfScheduleOnStart} on_start
  */
-JobRequestAllOfSchedule.prototype['event'] = undefined;
+JobRequestAllOfSchedule.prototype['on_start'] = undefined;
 
 /**
- * Can only be set if the event is CRON.   Represent the cron format for the job schedule without seconds.   For example: `* * * * *` represent the cron to launch the job every minute.   See https://crontab.guru/ to WISIWIG interface.   Timezone is UTC   
- * @member {String} scheduled_at
+ * @member {module:model/JobRequestAllOfScheduleOnStart} on_stop
  */
-JobRequestAllOfSchedule.prototype['scheduled_at'] = undefined;
+JobRequestAllOfSchedule.prototype['on_stop'] = undefined;
+
+/**
+ * @member {module:model/JobRequestAllOfScheduleOnStart} on_delete
+ */
+JobRequestAllOfSchedule.prototype['on_delete'] = undefined;
+
+/**
+ * @member {module:model/JobRequestAllOfScheduleCronjob} cronjob
+ */
+JobRequestAllOfSchedule.prototype['cronjob'] = undefined;
 
 
 

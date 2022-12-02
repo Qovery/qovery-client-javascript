@@ -54,14 +54,26 @@
       //expect(instance).to.be.a(QoveryApi.JobResponseAllOfSchedule);
     });
 
-    it('should have the property event (base name: "event")', function() {
-      // uncomment below and update the code to test the property event
+    it('should have the property onStart (base name: "on_start")', function() {
+      // uncomment below and update the code to test the property onStart
       //var instance = new QoveryApi.JobResponseAllOfSchedule();
       //expect(instance).to.be();
     });
 
-    it('should have the property scheduleAt (base name: "schedule_at")', function() {
-      // uncomment below and update the code to test the property scheduleAt
+    it('should have the property onStop (base name: "on_stop")', function() {
+      // uncomment below and update the code to test the property onStop
+      //var instance = new QoveryApi.JobResponseAllOfSchedule();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property onDelete (base name: "on_delete")', function() {
+      // uncomment below and update the code to test the property onDelete
+      //var instance = new QoveryApi.JobResponseAllOfSchedule();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cronjob (base name: "cronjob")', function() {
+      // uncomment below and update the code to test the property cronjob
       //var instance = new QoveryApi.JobResponseAllOfSchedule();
       //expect(instance).to.be();
     });

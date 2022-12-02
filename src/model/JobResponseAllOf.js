@@ -81,11 +81,8 @@ class JobResponseAllOf {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('arguments')) {
-                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
-            }
-            if (data.hasOwnProperty('entrypoint')) {
-                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
@@ -147,15 +144,9 @@ JobResponseAllOf.prototype['maximum_memory'] = undefined;
 JobResponseAllOf.prototype['name'] = undefined;
 
 /**
- * @member {Array.<String>} arguments
+ * @member {String} description
  */
-JobResponseAllOf.prototype['arguments'] = undefined;
-
-/**
- * optional entrypoint when launching container
- * @member {String} entrypoint
- */
-JobResponseAllOf.prototype['entrypoint'] = undefined;
+JobResponseAllOf.prototype['description'] = undefined;
 
 /**
  * unit is millicores (m). 1000m = 1 cpu

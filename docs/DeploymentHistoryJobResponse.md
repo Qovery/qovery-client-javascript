@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **imageName** | **String** |  | [optional] 
 **tag** | **String** |  | [optional] 
 **commit** | [**Commit**](Commit.md) |  | [optional] 
-**schedule** | [**JobResponseAllOfSchedule**](JobResponseAllOfSchedule.md) |  | [optional] 
+**schedule** | [**DeploymentHistoryJobResponseAllOfSchedule**](DeploymentHistoryJobResponseAllOfSchedule.md) |  | [optional] 
 **_arguments** | **[String]** |  | [optional] 
 **entrypoint** | **String** |  | [optional] 
 

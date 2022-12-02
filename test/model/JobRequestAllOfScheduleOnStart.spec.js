@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.JobRequestAllOfSchedule();
+    instance = new QoveryApi.JobRequestAllOfScheduleOnStart();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,22 @@
       object[property] = value;
   }
 
-  describe('JobRequestAllOfSchedule', function() {
-    it('should create an instance of JobRequestAllOfSchedule', function() {
-      // uncomment below and update the code to test JobRequestAllOfSchedule
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
-      //expect(instance).to.be.a(QoveryApi.JobRequestAllOfSchedule);
+  describe('JobRequestAllOfScheduleOnStart', function() {
+    it('should create an instance of JobRequestAllOfScheduleOnStart', function() {
+      // uncomment below and update the code to test JobRequestAllOfScheduleOnStart
+      //var instance = new QoveryApi.JobRequestAllOfScheduleOnStart();
+      //expect(instance).to.be.a(QoveryApi.JobRequestAllOfScheduleOnStart);
     });
 
-    it('should have the property onStart (base name: "on_start")', function() {
-      // uncomment below and update the code to test the property onStart
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
+    it('should have the property _arguments (base name: "arguments")', function() {
+      // uncomment below and update the code to test the property _arguments
+      //var instance = new QoveryApi.JobRequestAllOfScheduleOnStart();
       //expect(instance).to.be();
     });
 
-    it('should have the property onStop (base name: "on_stop")', function() {
-      // uncomment below and update the code to test the property onStop
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property onDelete (base name: "on_delete")', function() {
-      // uncomment below and update the code to test the property onDelete
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cronjob (base name: "cronjob")', function() {
-      // uncomment below and update the code to test the property cronjob
-      //var instance = new QoveryApi.JobRequestAllOfSchedule();
+    it('should have the property entrypoint (base name: "entrypoint")', function() {
+      // uncomment below and update the code to test the property entrypoint
+      //var instance = new QoveryApi.JobRequestAllOfScheduleOnStart();
       //expect(instance).to.be();
     });
 

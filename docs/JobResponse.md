@@ -12,8 +12,7 @@ Name | Type | Description | Notes
 **maximumCpu** | **Number** | Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m &#x3D; 1 cpu | 
 **maximumMemory** | **Number** | Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB &#x3D; 1GB | 
 **name** | **String** | name is case insensitive | 
-**_arguments** | **[String]** |  | [optional] 
-**entrypoint** | **String** | optional entrypoint when launching container | [optional] 
+**description** | **String** |  | [optional] 
 **cpu** | **Number** | unit is millicores (m). 1000m &#x3D; 1 cpu | 
 **memory** | **Number** | unit is MB. 1024 MB &#x3D; 1GB | 
 **maxNbRestart** | **Number** | Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed  | [optional] 

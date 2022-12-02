@@ -162,6 +162,7 @@ import DeploymentHistoryEnvironmentPaginatedResponseList from './model/Deploymen
 import DeploymentHistoryEnvironmentPaginatedResponseListAllOf from './model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf';
 import DeploymentHistoryJobResponse from './model/DeploymentHistoryJobResponse';
 import DeploymentHistoryJobResponseAllOf from './model/DeploymentHistoryJobResponseAllOf';
+import DeploymentHistoryJobResponseAllOfSchedule from './model/DeploymentHistoryJobResponseAllOfSchedule';
 import DeploymentHistoryPaginatedResponseList from './model/DeploymentHistoryPaginatedResponseList';
 import DeploymentHistoryPaginatedResponseListAllOf from './model/DeploymentHistoryPaginatedResponseListAllOf';
 import DeploymentHistoryResponseList from './model/DeploymentHistoryResponseList';
@@ -254,12 +255,15 @@ import JobDeployRequest from './model/JobDeployRequest';
 import JobRequest from './model/JobRequest';
 import JobRequestAllOf from './model/JobRequestAllOf';
 import JobRequestAllOfSchedule from './model/JobRequestAllOfSchedule';
+import JobRequestAllOfScheduleCronjob from './model/JobRequestAllOfScheduleCronjob';
+import JobRequestAllOfScheduleOnStart from './model/JobRequestAllOfScheduleOnStart';
 import JobRequestAllOfSource from './model/JobRequestAllOfSource';
 import JobRequestAllOfSourceDocker from './model/JobRequestAllOfSourceDocker';
 import JobRequestAllOfSourceImage from './model/JobRequestAllOfSourceImage';
 import JobResponse from './model/JobResponse';
 import JobResponseAllOf from './model/JobResponseAllOf';
 import JobResponseAllOfSchedule from './model/JobResponseAllOfSchedule';
+import JobResponseAllOfScheduleCronjob from './model/JobResponseAllOfScheduleCronjob';
 import JobResponseAllOfSource from './model/JobResponseAllOfSource';
 import JobResponseAllOfSourceDocker from './model/JobResponseAllOfSourceDocker';
 import JobResponseList from './model/JobResponseList';
@@ -1420,6 +1424,12 @@ export {
     DeploymentHistoryJobResponseAllOf,
 
     /**
+     * The DeploymentHistoryJobResponseAllOfSchedule model constructor.
+     * @property {module:model/DeploymentHistoryJobResponseAllOfSchedule}
+     */
+    DeploymentHistoryJobResponseAllOfSchedule,
+
+    /**
      * The DeploymentHistoryPaginatedResponseList model constructor.
      * @property {module:model/DeploymentHistoryPaginatedResponseList}
      */
@@ -1972,6 +1982,18 @@ export {
     JobRequestAllOfSchedule,
 
     /**
+     * The JobRequestAllOfScheduleCronjob model constructor.
+     * @property {module:model/JobRequestAllOfScheduleCronjob}
+     */
+    JobRequestAllOfScheduleCronjob,
+
+    /**
+     * The JobRequestAllOfScheduleOnStart model constructor.
+     * @property {module:model/JobRequestAllOfScheduleOnStart}
+     */
+    JobRequestAllOfScheduleOnStart,
+
+    /**
      * The JobRequestAllOfSource model constructor.
      * @property {module:model/JobRequestAllOfSource}
      */
@@ -2006,6 +2028,12 @@ export {
      * @property {module:model/JobResponseAllOfSchedule}
      */
     JobResponseAllOfSchedule,
+
+    /**
+     * The JobResponseAllOfScheduleCronjob model constructor.
+     * @property {module:model/JobResponseAllOfScheduleCronjob}
+     */
+    JobResponseAllOfScheduleCronjob,
 
     /**
      * The JobResponseAllOfSource model constructor.

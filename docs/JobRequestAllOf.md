@@ -6,8 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | name is case insensitive | 
 **description** | **String** |  | [optional] 
-**_arguments** | **[String]** |  | [optional] 
-**entrypoint** | **String** | optional entrypoint when launching container | [optional] 
 **cpu** | **Number** | unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] [default to 500]
 **memory** | **Number** | unit is MB. 1024 MB &#x3D; 1GB | [optional] [default to 512]
 **maxNbRestart** | **Number** | Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed  | [optional] [default to 0]

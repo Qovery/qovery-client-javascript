@@ -13,4 +13,6 @@
 
 * `CONTAINER` (value: `"CONTAINER"`)
 
+* `JOB` (value: `"JOB"`)
+
 

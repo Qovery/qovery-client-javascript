@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('deployAllServices', function() {
+      it('should call deployAllServices successfully', function(done) {
+        //uncomment below and update the code to test deployAllServices
+        //instance.deployAllServices(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deployEnvironment', function() {
       it('should call deployEnvironment successfully', function(done) {
         //uncomment below and update the code to test deployEnvironment

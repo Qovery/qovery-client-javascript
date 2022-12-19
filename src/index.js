@@ -147,6 +147,7 @@ import DeleteMemberRequest from './model/DeleteMemberRequest';
 import DeployAllRequest from './model/DeployAllRequest';
 import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
 import DeployAllRequestContainersInner from './model/DeployAllRequestContainersInner';
+import DeployAllRequestJobsInner from './model/DeployAllRequestJobsInner';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistory from './model/DeploymentHistory';
 import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
@@ -1332,6 +1333,12 @@ export {
      * @property {module:model/DeployAllRequestContainersInner}
      */
     DeployAllRequestContainersInner,
+
+    /**
+     * The DeployAllRequestJobsInner model constructor.
+     * @property {module:model/DeployAllRequestJobsInner}
+     */
+    DeployAllRequestJobsInner,
 
     /**
      * The DeployRequest model constructor.

@@ -287,7 +287,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets
 *QoveryApi.ContainersApi* | [**autoDeployContainerEnvironments**](docs/ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 *QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
-*QoveryApi.ContainersApi* | [**deployAllServices**](docs/ContainersApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
 *QoveryApi.ContainersApi* | [**getContainerRegistryContainerStatus**](docs/ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 *QoveryApi.ContainersApi* | [**getDefaultContainerAdvancedSettings**](docs/ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentScale**](docs/ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
@@ -331,6 +330,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentApi* | [**deployAllApplications**](docs/EnvironmentApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
 *QoveryApi.EnvironmentActionsApi* | [**cancelEnvironmentDeployment**](docs/EnvironmentActionsApi.md#cancelEnvironmentDeployment) | **POST** /environment/{environmentId}/cancelDeployment | Cancel environment deployment
 *QoveryApi.EnvironmentActionsApi* | [**cloneEnvironment**](docs/EnvironmentActionsApi.md#cloneEnvironment) | **POST** /environment/{environmentId}/clone | Clone environment
+*QoveryApi.EnvironmentActionsApi* | [**deployAllServices**](docs/EnvironmentActionsApi.md#deployAllServices) | **POST** /environment/{environmentId}/service/deploy | Deploy services
 *QoveryApi.EnvironmentActionsApi* | [**deployEnvironment**](docs/EnvironmentActionsApi.md#deployEnvironment) | **POST** /environment/{environmentId}/deploy | Deploy environment
 *QoveryApi.EnvironmentActionsApi* | [**restartEnvironment**](docs/EnvironmentActionsApi.md#restartEnvironment) | **POST** /environment/{environmentId}/restart | Restart environment
 *QoveryApi.EnvironmentActionsApi* | [**stopEnvironment**](docs/EnvironmentActionsApi.md#stopEnvironment) | **POST** /environment/{environmentId}/stop | Stop environment
@@ -605,6 +605,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DeployAllRequest](docs/DeployAllRequest.md)
  - [QoveryApi.DeployAllRequestApplicationsInner](docs/DeployAllRequestApplicationsInner.md)
  - [QoveryApi.DeployAllRequestContainersInner](docs/DeployAllRequestContainersInner.md)
+ - [QoveryApi.DeployAllRequestJobsInner](docs/DeployAllRequestJobsInner.md)
  - [QoveryApi.DeployRequest](docs/DeployRequest.md)
  - [QoveryApi.DeploymentHistory](docs/DeploymentHistory.md)
  - [QoveryApi.DeploymentHistoryAllOf](docs/DeploymentHistoryAllOf.md)

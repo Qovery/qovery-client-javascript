@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CloneRequest from '../model/CloneRequest';
+import DeployAllRequest from '../model/DeployAllRequest';
 import Environment from '../model/Environment';
 import EnvironmentRestartRequest from '../model/EnvironmentRestartRequest';
 import Status from '../model/Status';
@@ -121,6 +122,52 @@ export default class EnvironmentActionsApi {
       let returnType = Environment;
       return this.apiClient.callApi(
         '/environment/{environmentId}/clone', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deployAllServices operation.
+     * @callback module:api/EnvironmentActionsApi~deployAllServicesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Deploy services
+     * Update and deploy the selected services
+     * @param {String} environmentId Environment ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/DeployAllRequest} opts.deployAllRequest 
+     * @param {module:api/EnvironmentActionsApi~deployAllServicesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    deployAllServices(environmentId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['deployAllRequest'];
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling deployAllServices");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/service/deploy', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

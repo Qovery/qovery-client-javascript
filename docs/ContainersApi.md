@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**autoDeployContainerEnvironments**](ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 [**createContainer**](ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
-[**deployAllServices**](ContainersApi.md#deployAllServices) | **POST** /environment/{environmentId}/container/deploy | Deploy services
 [**getContainerRegistryContainerStatus**](ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 [**getDefaultContainerAdvancedSettings**](ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings
 [**getEnvironmentContainerCurrentScale**](ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
@@ -110,59 +109,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ContainerResponse**](ContainerResponse.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## deployAllServices
-
-> Status deployAllServices(environmentId, opts)
-
-Deploy services
-
-Update and deploy the selected services
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.ContainersApi();
-let environmentId = "environmentId_example"; // String | Environment ID
-let opts = {
-  'deployAllRequest': new QoveryApi.DeployAllRequest() // DeployAllRequest | 
-};
-apiInstance.deployAllServices(environmentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **environmentId** | **String**| Environment ID | 
- **deployAllRequest** | [**DeployAllRequest**](DeployAllRequest.md)|  | [optional] 
-
-### Return type
-
-[**Status**](Status.md)
 
 ### Authorization
 

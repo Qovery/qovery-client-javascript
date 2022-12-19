@@ -175,6 +175,7 @@ docs/DependencyApi.md
 docs/DeployAllRequest.md
 docs/DeployAllRequestApplicationsInner.md
 docs/DeployAllRequestContainersInner.md
+docs/DeployAllRequestJobsInner.md
 docs/DeployRequest.md
 docs/DeploymentHistory.md
 docs/DeploymentHistoryAllOf.md
@@ -689,6 +690,7 @@ src/model/DeleteMemberRequest.js
 src/model/DeployAllRequest.js
 src/model/DeployAllRequestApplicationsInner.js
 src/model/DeployAllRequestContainersInner.js
+src/model/DeployAllRequestJobsInner.js
 src/model/DeployRequest.js
 src/model/DeploymentHistory.js
 src/model/DeploymentHistoryAllOf.js
@@ -1165,6 +1167,7 @@ test/model/DeleteMemberRequest.spec.js
 test/model/DeployAllRequest.spec.js
 test/model/DeployAllRequestApplicationsInner.spec.js
 test/model/DeployAllRequestContainersInner.spec.js
+test/model/DeployAllRequestJobsInner.spec.js
 test/model/DeployRequest.spec.js
 test/model/DeploymentHistory.spec.js
 test/model/DeploymentHistoryAllOf.spec.js

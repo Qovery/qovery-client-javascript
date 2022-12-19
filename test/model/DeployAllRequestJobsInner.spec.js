@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.DeployAllRequest();
+    instance = new QoveryApi.DeployAllRequestJobsInner();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,28 @@
       object[property] = value;
   }
 
-  describe('DeployAllRequest', function() {
-    it('should create an instance of DeployAllRequest', function() {
-      // uncomment below and update the code to test DeployAllRequest
-      //var instance = new QoveryApi.DeployAllRequest();
-      //expect(instance).to.be.a(QoveryApi.DeployAllRequest);
+  describe('DeployAllRequestJobsInner', function() {
+    it('should create an instance of DeployAllRequestJobsInner', function() {
+      // uncomment below and update the code to test DeployAllRequestJobsInner
+      //var instance = new QoveryApi.DeployAllRequestJobsInner();
+      //expect(instance).to.be.a(QoveryApi.DeployAllRequestJobsInner);
     });
 
-    it('should have the property applications (base name: "applications")', function() {
-      // uncomment below and update the code to test the property applications
-      //var instance = new QoveryApi.DeployAllRequest();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.DeployAllRequestJobsInner();
       //expect(instance).to.be();
     });
 
-    it('should have the property databases (base name: "databases")', function() {
-      // uncomment below and update the code to test the property databases
-      //var instance = new QoveryApi.DeployAllRequest();
+    it('should have the property imageTag (base name: "image_tag")', function() {
+      // uncomment below and update the code to test the property imageTag
+      //var instance = new QoveryApi.DeployAllRequestJobsInner();
       //expect(instance).to.be();
     });
 
-    it('should have the property containers (base name: "containers")', function() {
-      // uncomment below and update the code to test the property containers
-      //var instance = new QoveryApi.DeployAllRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property jobs (base name: "jobs")', function() {
-      // uncomment below and update the code to test the property jobs
-      //var instance = new QoveryApi.DeployAllRequest();
+    it('should have the property gitCommitId (base name: "git_commit_id")', function() {
+      // uncomment below and update the code to test the property gitCommitId
+      //var instance = new QoveryApi.DeployAllRequestJobsInner();
       //expect(instance).to.be();
     });
 

@@ -98,9 +98,6 @@ class ApplicationEditRequest {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
-            if (data.hasOwnProperty('sticky_session')) {
-                obj['sticky_session'] = ApiClient.convertToType(data['sticky_session'], 'Boolean');
-            }
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
@@ -190,13 +187,6 @@ ApplicationEditRequest.prototype['healthcheck'] = undefined;
 ApplicationEditRequest.prototype['auto_preview'] = true;
 
 /**
- * Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application. 
- * @member {Boolean} sticky_session
- * @default false
- */
-ApplicationEditRequest.prototype['sticky_session'] = false;
-
-/**
  * @member {Array.<module:model/ServicePort>} ports
  */
 ApplicationEditRequest.prototype['ports'] = undefined;
@@ -269,12 +259,6 @@ ApplicationEditRequestAllOf.prototype['healthcheck'] = undefined;
  * @default true
  */
 ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
-/**
- * Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application. 
- * @member {Boolean} sticky_session
- * @default false
- */
-ApplicationEditRequestAllOf.prototype['sticky_session'] = false;
 /**
  * @member {Array.<module:model/ServicePort>} ports
  */

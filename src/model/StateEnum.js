@@ -41,13 +41,6 @@ export default class StateEnum {
 
     
         /**
-         * value: "COMPLETED"
-         * @const
-         */
-        "COMPLETED" = "COMPLETED";
-
-    
-        /**
          * value: "DELETED"
          * @const
          */

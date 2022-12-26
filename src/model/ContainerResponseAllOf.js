@@ -88,6 +88,9 @@ class ContainerResponseAllOf {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
             }
@@ -152,6 +155,12 @@ ContainerResponseAllOf.prototype['maximum_memory'] = undefined;
  * @member {String} name
  */
 ContainerResponseAllOf.prototype['name'] = undefined;
+
+/**
+ * give a description to this container
+ * @member {String} description
+ */
+ContainerResponseAllOf.prototype['description'] = undefined;
 
 /**
  * name of the image container

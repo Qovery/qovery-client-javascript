@@ -108,6 +108,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new QoveryApi.ContainerResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property imageName (base name: "image_name")', function() {
       // uncomment below and update the code to test the property imageName
       //var instance = new QoveryApi.ContainerResponse();

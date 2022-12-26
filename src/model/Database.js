@@ -84,6 +84,9 @@ class Database {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = DatabaseTypeEnum.constructFromObject(data['type']);
             }
@@ -150,6 +153,12 @@ Database.prototype['updated_at'] = undefined;
  * @member {String} name
  */
 Database.prototype['name'] = undefined;
+
+/**
+ * give a description to this database
+ * @member {String} description
+ */
+Database.prototype['description'] = undefined;
 
 /**
  * @member {module:model/DatabaseTypeEnum} type
@@ -244,6 +253,11 @@ Base.prototype['updated_at'] = undefined;
  * @member {String} name
  */
 DatabaseRequest.prototype['name'] = undefined;
+/**
+ * give a description to this database
+ * @member {String} description
+ */
+DatabaseRequest.prototype['description'] = undefined;
 /**
  * @member {module:model/DatabaseTypeEnum} type
  */

@@ -51,6 +51,9 @@ class DatabaseEditRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('version')) {
                 obj['version'] = ApiClient.convertToType(data['version'], 'String');
             }
@@ -78,6 +81,12 @@ class DatabaseEditRequest {
  * @member {String} name
  */
 DatabaseEditRequest.prototype['name'] = undefined;
+
+/**
+ * give a description to this database
+ * @member {String} description
+ */
+DatabaseEditRequest.prototype['description'] = undefined;
 
 /**
  * @member {String} version

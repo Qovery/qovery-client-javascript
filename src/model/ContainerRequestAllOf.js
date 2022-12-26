@@ -58,6 +58,9 @@ class ContainerRequestAllOf {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('registry_id')) {
                 obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
             }
@@ -100,6 +103,12 @@ class ContainerRequestAllOf {
  * @member {String} name
  */
 ContainerRequestAllOf.prototype['name'] = undefined;
+
+/**
+ * give a description to this container
+ * @member {String} description
+ */
+ContainerRequestAllOf.prototype['description'] = undefined;
 
 /**
  * id of the linked registry

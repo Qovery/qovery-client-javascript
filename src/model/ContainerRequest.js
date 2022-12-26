@@ -75,6 +75,9 @@ class ContainerRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
             if (data.hasOwnProperty('registry_id')) {
                 obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
             }
@@ -127,6 +130,12 @@ ContainerRequest.prototype['ports'] = undefined;
  * @member {String} name
  */
 ContainerRequest.prototype['name'] = undefined;
+
+/**
+ * give a description to this container
+ * @member {String} description
+ */
+ContainerRequest.prototype['description'] = undefined;
 
 /**
  * id of the linked registry
@@ -208,6 +217,11 @@ ServicePortRequest.prototype['ports'] = undefined;
  * @member {String} name
  */
 ContainerRequestAllOf.prototype['name'] = undefined;
+/**
+ * give a description to this container
+ * @member {String} description
+ */
+ContainerRequestAllOf.prototype['description'] = undefined;
 /**
  * id of the linked registry
  * @member {String} registry_id

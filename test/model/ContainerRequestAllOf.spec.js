@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new QoveryApi.ContainerRequestAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property registryId (base name: "registry_id")', function() {
       // uncomment below and update the code to test the property registryId
       //var instance = new QoveryApi.ContainerRequestAllOf();

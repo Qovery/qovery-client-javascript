@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | name is case insensitive | 
+**description** | **String** | give a description to this database | [optional] 
 **type** | [**DatabaseTypeEnum**](DatabaseTypeEnum.md) |  | 
 **version** | **String** |  | 
 **mode** | [**DatabaseModeEnum**](DatabaseModeEnum.md) |  | 

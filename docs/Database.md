@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** | name is case insensitive | 
+**description** | **String** | give a description to this database | [optional] 
 **type** | [**DatabaseTypeEnum**](DatabaseTypeEnum.md) |  | 
 **version** | **String** |  | 
 **mode** | [**DatabaseModeEnum**](DatabaseModeEnum.md) |  | 

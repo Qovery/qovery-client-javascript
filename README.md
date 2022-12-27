@@ -386,6 +386,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.JobMainCallsApi* | [**editJob**](docs/JobMainCallsApi.md#editJob) | **PUT** /job/{jobId} | Edit job
 *QoveryApi.JobMainCallsApi* | [**getJob**](docs/JobMainCallsApi.md#getJob) | **GET** /job/{jobId} | Get job by ID
 *QoveryApi.JobMainCallsApi* | [**getJobStatus**](docs/JobMainCallsApi.md#getJobStatus) | **GET** /job/{jobId}/status | Get job status
+*QoveryApi.JobMainCallsApi* | [**listJobCommit**](docs/JobMainCallsApi.md#listJobCommit) | **GET** /job/{jobId}/commit | List last job commits
 *QoveryApi.JobMetricsApi* | [**getJobCurrentInstance**](docs/JobMetricsApi.md#getJobCurrentInstance) | **GET** /job/{jobId}/instance | List currently running instances of the job with their CPU and RAM metrics
 *QoveryApi.JobSecretApi* | [**createJobSecret**](docs/JobSecretApi.md#createJobSecret) | **POST** /job/{jobId}/secret | Add a secret to the job
 *QoveryApi.JobSecretApi* | [**createJobSecretAlias**](docs/JobSecretApi.md#createJobSecretAlias) | **POST** /job/{jobId}/secret/{secretId}/alias | Create a secret alias at the job level

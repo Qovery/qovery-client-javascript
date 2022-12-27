@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**editJob**](JobMainCallsApi.md#editJob) | **PUT** /job/{jobId} | Edit job
 [**getJob**](JobMainCallsApi.md#getJob) | **GET** /job/{jobId} | Get job by ID
 [**getJobStatus**](JobMainCallsApi.md#getJobStatus) | **GET** /job/{jobId}/status | Get job status
+[**listJobCommit**](JobMainCallsApi.md#listJobCommit) | **GET** /job/{jobId}/commit | List last job commits
 
 
 
@@ -196,6 +197,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listJobCommit
+
+> CommitResponseList listJobCommit(jobId, opts)
+
+List last job commits
+
+Returns list of the last 100 commits made on the repository linked to the job
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.JobMainCallsApi();
+let jobId = "jobId_example"; // String | Job ID
+let opts = {
+  'startId': "startId_example", // String | Starting point after which to return results
+  'gitCommitId': "gitCommitId_example" // String | Git Commit ID
+};
+apiInstance.listJobCommit(jobId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
+ **startId** | **String**| Starting point after which to return results | [optional] 
+ **gitCommitId** | **String**| Git Commit ID | [optional] 
+
+### Return type
+
+[**CommitResponseList**](CommitResponseList.md)
 
 ### Authorization
 

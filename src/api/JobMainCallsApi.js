@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CommitResponseList from '../model/CommitResponseList';
 import JobRequest from '../model/JobRequest';
 import JobResponse from '../model/JobResponse';
 import Status from '../model/Status';
@@ -203,6 +204,55 @@ export default class JobMainCallsApi {
       let returnType = Status;
       return this.apiClient.callApi(
         '/job/{jobId}/status', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listJobCommit operation.
+     * @callback module:api/JobMainCallsApi~listJobCommitCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CommitResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List last job commits
+     * Returns list of the last 100 commits made on the repository linked to the job
+     * @param {String} jobId Job ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.startId Starting point after which to return results
+     * @param {String} opts.gitCommitId Git Commit ID
+     * @param {module:api/JobMainCallsApi~listJobCommitCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CommitResponseList}
+     */
+    listJobCommit(jobId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling listJobCommit");
+      }
+
+      let pathParams = {
+        'jobId': jobId
+      };
+      let queryParams = {
+        'startId': opts['startId'],
+        'gitCommitId': opts['gitCommitId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CommitResponseList;
+      return this.apiClient.callApi(
+        '/job/{jobId}/commit', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -5,6 +5,7 @@ All URIs are relative to *https://api.qovery.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createJob**](JobsApi.md#createJob) | **POST** /environment/{environmentId}/job | Create a job
+[**getDefaultJobAdvancedSettings**](JobsApi.md#getDefaultJobAdvancedSettings) | **GET** /defaultJobAdvancedSettings | List default job advanced settings
 [**getEnvironmentJobStatus**](JobsApi.md#getEnvironmentJobStatus) | **GET** /environment/{environmentId}/job/status | List all environment job statuses
 [**listJobs**](JobsApi.md#listJobs) | **GET** /environment/{environmentId}/job | List jobs
 
@@ -58,6 +59,49 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getDefaultJobAdvancedSettings
+
+> JobAdvancedSettings getDefaultJobAdvancedSettings()
+
+List default job advanced settings
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.JobsApi();
+apiInstance.getDefaultJobAdvancedSettings((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**JobAdvancedSettings**](JobAdvancedSettings.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

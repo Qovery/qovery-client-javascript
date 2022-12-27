@@ -395,6 +395,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.JobSecretApi* | [**editJobSecret**](docs/JobSecretApi.md#editJobSecret) | **PUT** /job/{jobId}/secret/{secretId} | Edit a secret belonging to the job
 *QoveryApi.JobSecretApi* | [**listJobSecrets**](docs/JobSecretApi.md#listJobSecrets) | **GET** /job/{jobId}/secret | List job secrets
 *QoveryApi.JobsApi* | [**createJob**](docs/JobsApi.md#createJob) | **POST** /environment/{environmentId}/job | Create a job
+*QoveryApi.JobsApi* | [**getDefaultJobAdvancedSettings**](docs/JobsApi.md#getDefaultJobAdvancedSettings) | **GET** /defaultJobAdvancedSettings | List default job advanced settings
 *QoveryApi.JobsApi* | [**getEnvironmentJobStatus**](docs/JobsApi.md#getEnvironmentJobStatus) | **GET** /environment/{environmentId}/job/status | List all environment job statuses
 *QoveryApi.JobsApi* | [**listJobs**](docs/JobsApi.md#listJobs) | **GET** /environment/{environmentId}/job | List jobs
 *QoveryApi.LogicalDatabaseApi* | [**createLogicalDatabaseOnDatabase**](docs/LogicalDatabaseApi.md#createLogicalDatabaseOnDatabase) | **POST** /database/{databaseId}/logicalDatabase | Create a logical database on the database

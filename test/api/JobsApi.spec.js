@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('getDefaultJobAdvancedSettings', function() {
+      it('should call getDefaultJobAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test getDefaultJobAdvancedSettings
+        //instance.getDefaultJobAdvancedSettings(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEnvironmentJobStatus', function() {
       it('should call getEnvironmentJobStatus successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentJobStatus

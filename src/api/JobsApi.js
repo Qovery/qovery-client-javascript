@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import JobAdvancedSettings from '../model/JobAdvancedSettings';
 import JobRequest from '../model/JobRequest';
 import JobResponse from '../model/JobResponse';
 import JobResponseList from '../model/JobResponseList';
@@ -77,6 +78,42 @@ export default class JobsApi {
       let returnType = JobResponse;
       return this.apiClient.callApi(
         '/environment/{environmentId}/job', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDefaultJobAdvancedSettings operation.
+     * @callback module:api/JobsApi~getDefaultJobAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/JobAdvancedSettings} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List default job advanced settings
+     * @param {module:api/JobsApi~getDefaultJobAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/JobAdvancedSettings}
+     */
+    getDefaultJobAdvancedSettings(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = JobAdvancedSettings;
+      return this.apiClient.callApi(
+        '/defaultJobAdvancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

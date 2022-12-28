@@ -45,7 +45,7 @@ export default class JobActionsApi {
 
     /**
      * Deploy job
-     * You must provide a git commit id
+     * You must provide a git commit id or an image tag depending on the source location of your code (git vs image repository).
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
      * @param {Boolean} opts.force Enable or Disable the force trigger of the job (default to false)

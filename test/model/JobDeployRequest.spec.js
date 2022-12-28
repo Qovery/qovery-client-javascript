@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property gitCommitId (base name: "git_commit_id")', function() {
+      // uncomment below and update the code to test the property gitCommitId
+      //var instance = new QoveryApi.JobDeployRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

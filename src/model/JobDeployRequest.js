@@ -22,11 +22,10 @@ class JobDeployRequest {
     /**
      * Constructs a new <code>JobDeployRequest</code>.
      * @alias module:model/JobDeployRequest
-     * @param imageTag {String} Image tag to deploy
      */
-    constructor(imageTag) { 
+    constructor() { 
         
-        JobDeployRequest.initialize(this, imageTag);
+        JobDeployRequest.initialize(this);
     }
 
     /**
@@ -34,8 +33,7 @@ class JobDeployRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, imageTag) { 
-        obj['image_tag'] = imageTag;
+    static initialize(obj) { 
     }
 
     /**
@@ -52,6 +50,9 @@ class JobDeployRequest {
             if (data.hasOwnProperty('image_tag')) {
                 obj['image_tag'] = ApiClient.convertToType(data['image_tag'], 'String');
             }
+            if (data.hasOwnProperty('git_commit_id')) {
+                obj['git_commit_id'] = ApiClient.convertToType(data['git_commit_id'], 'String');
+            }
         }
         return obj;
     }
@@ -60,10 +61,16 @@ class JobDeployRequest {
 }
 
 /**
- * Image tag to deploy
+ * Image tag to deploy.   Cannot be set if `git_commit_id` is defined 
  * @member {String} image_tag
  */
 JobDeployRequest.prototype['image_tag'] = undefined;
+
+/**
+ * Commit to deploy Cannot be set if `image_tag` is defined 
+ * @member {String} git_commit_id
+ */
+JobDeployRequest.prototype['git_commit_id'] = undefined;
 
 
 

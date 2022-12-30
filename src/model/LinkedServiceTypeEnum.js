@@ -40,6 +40,13 @@ export default class LinkedServiceTypeEnum {
         "DATABASE" = "DATABASE";
 
     
+        /**
+         * value: "JOB"
+         * @const
+         */
+        "JOB" = "JOB";
+
+    
 
     /**
     * Returns a <code>LinkedServiceTypeEnum</code> enum value from a Javascript object name.

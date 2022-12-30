@@ -9,4 +9,6 @@
 
 * `DATABASE` (value: `"DATABASE"`)
 
+* `JOB` (value: `"JOB"`)
+
 

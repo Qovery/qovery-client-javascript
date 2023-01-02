@@ -177,6 +177,54 @@ export default class MembersApi {
     }
 
     /**
+     * Callback function to receive the result of the getMemberInvitation operation.
+     * @callback module:api/MembersApi~getMemberInvitationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/InviteMember} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get member invitation
+     * @param {String} organizationId Organization ID
+     * @param {String} inviteId Invite ID
+     * @param {module:api/MembersApi~getMemberInvitationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/InviteMember}
+     */
+    getMemberInvitation(organizationId, inviteId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getMemberInvitation");
+      }
+      // verify the required parameter 'inviteId' is set
+      if (inviteId === undefined || inviteId === null) {
+        throw new Error("Missing the required parameter 'inviteId' when calling getMemberInvitation");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'inviteId': inviteId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = InviteMember;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/inviteMember/{inviteId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getOrganizationInvitedMembers operation.
      * @callback module:api/MembersApi~getOrganizationInvitedMembersCallback
      * @param {String} error Error message, if any.

@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('getMemberInvitation', function() {
+      it('should call getMemberInvitation successfully', function(done) {
+        //uncomment below and update the code to test getMemberInvitation
+        //instance.getMemberInvitation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrganizationInvitedMembers', function() {
       it('should call getOrganizationInvitedMembers successfully', function(done) {
         //uncomment below and update the code to test getOrganizationInvitedMembers

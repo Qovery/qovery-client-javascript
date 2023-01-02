@@ -410,6 +410,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.MembersApi* | [**deleteInviteMember**](docs/MembersApi.md#deleteInviteMember) | **DELETE** /organization/{organizationId}/inviteMember/{inviteId} | Remove an invited member
 *QoveryApi.MembersApi* | [**deleteMember**](docs/MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member | Remove a member
 *QoveryApi.MembersApi* | [**editOrganizationMemberRole**](docs/MembersApi.md#editOrganizationMemberRole) | **PUT** /organization/{organizationId}/member | Edit an organization member role
+*QoveryApi.MembersApi* | [**getMemberInvitation**](docs/MembersApi.md#getMemberInvitation) | **GET** /organization/{organizationId}/inviteMember/{inviteId} | Get member invitation
 *QoveryApi.MembersApi* | [**getOrganizationInvitedMembers**](docs/MembersApi.md#getOrganizationInvitedMembers) | **GET** /organization/{organizationId}/inviteMember | Get invited members
 *QoveryApi.MembersApi* | [**getOrganizationMembers**](docs/MembersApi.md#getOrganizationMembers) | **GET** /organization/{organizationId}/member | Get organization members
 *QoveryApi.MembersApi* | [**postAcceptInviteMember**](docs/MembersApi.md#postAcceptInviteMember) | **POST** /organization/{organizationId}/inviteMember/{inviteId} | Accept Invite in the organization

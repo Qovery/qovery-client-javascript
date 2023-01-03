@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import JobDeployRequest from '../model/JobDeployRequest';
+import JobForceEvent from '../model/JobForceEvent';
 import Status from '../model/Status';
 
 /**
@@ -48,7 +49,7 @@ export default class JobActionsApi {
      * You must provide a git commit id or an image tag depending on the source location of your code (git vs image repository).
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {Boolean} opts.force Enable or Disable the force trigger of the job (default to false)
+     * @param {module:model/JobForceEvent} opts.force When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
      * @param {module:model/JobDeployRequest} opts.jobDeployRequest 
      * @param {module:api/JobActionsApi~deployJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}

@@ -253,6 +253,7 @@ import InvoiceResponseList from './model/InvoiceResponseList';
 import InvoiceStatusEnum from './model/InvoiceStatusEnum';
 import JobAdvancedSettings from './model/JobAdvancedSettings';
 import JobDeployRequest from './model/JobDeployRequest';
+import JobForceEvent from './model/JobForceEvent';
 import JobRequest from './model/JobRequest';
 import JobRequestAllOf from './model/JobRequestAllOf';
 import JobRequestAllOfSchedule from './model/JobRequestAllOfSchedule';
@@ -1969,6 +1970,12 @@ export {
      * @property {module:model/JobDeployRequest}
      */
     JobDeployRequest,
+
+    /**
+     * The JobForceEvent model constructor.
+     * @property {module:model/JobForceEvent}
+     */
+    JobForceEvent,
 
     /**
      * The JobRequest model constructor.

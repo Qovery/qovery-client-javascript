@@ -714,6 +714,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.InvoiceStatusEnum](docs/InvoiceStatusEnum.md)
  - [QoveryApi.JobAdvancedSettings](docs/JobAdvancedSettings.md)
  - [QoveryApi.JobDeployRequest](docs/JobDeployRequest.md)
+ - [QoveryApi.JobForceEvent](docs/JobForceEvent.md)
  - [QoveryApi.JobRequest](docs/JobRequest.md)
  - [QoveryApi.JobRequestAllOf](docs/JobRequestAllOf.md)
  - [QoveryApi.JobRequestAllOfSchedule](docs/JobRequestAllOfSchedule.md)

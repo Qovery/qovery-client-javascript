@@ -296,6 +296,7 @@ docs/JobConfigurationApi.md
 docs/JobDeployRequest.md
 docs/JobDeploymentHistoryApi.md
 docs/JobEnvironmentVariableApi.md
+docs/JobForceEvent.md
 docs/JobMainCallsApi.md
 docs/JobMetricsApi.md
 docs/JobRequest.md
@@ -796,6 +797,7 @@ src/model/InvoiceResponseList.js
 src/model/InvoiceStatusEnum.js
 src/model/JobAdvancedSettings.js
 src/model/JobDeployRequest.js
+src/model/JobForceEvent.js
 src/model/JobRequest.js
 src/model/JobRequestAllOf.js
 src/model/JobRequestAllOfSchedule.js
@@ -1273,6 +1275,7 @@ test/model/InvoiceResponseList.spec.js
 test/model/InvoiceStatusEnum.spec.js
 test/model/JobAdvancedSettings.spec.js
 test/model/JobDeployRequest.spec.js
+test/model/JobForceEvent.spec.js
 test/model/JobRequest.spec.js
 test/model/JobRequestAllOf.spec.js
 test/model/JobRequestAllOfSchedule.spec.js

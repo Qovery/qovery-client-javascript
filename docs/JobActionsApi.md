@@ -30,7 +30,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.JobActionsApi();
 let jobId = "jobId_example"; // String | Job ID
 let opts = {
-  'force': new QoveryApi.JobForceEvent(), // JobForceEvent | When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
+  'forceEvent': new QoveryApi.JobForceEvent(), // JobForceEvent | When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
   'jobDeployRequest': new QoveryApi.JobDeployRequest() // JobDeployRequest | 
 };
 apiInstance.deployJob(jobId, opts, (error, data, response) => {
@@ -48,7 +48,7 @@ apiInstance.deployJob(jobId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **jobId** | **String**| Job ID | 
- **force** | [**JobForceEvent**](.md)| When filled, it indicates the target event to be deployed.   If the concerned job hasn&#39;t the target event provided, the job won&#39;t be deployed.  | [optional] 
+ **forceEvent** | [**JobForceEvent**](.md)| When filled, it indicates the target event to be deployed.   If the concerned job hasn&#39;t the target event provided, the job won&#39;t be deployed.  | [optional] 
  **jobDeployRequest** | [**JobDeployRequest**](JobDeployRequest.md)|  | [optional] 
 
 ### Return type
@@ -83,7 +83,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.JobActionsApi();
 let jobId = "jobId_example"; // String | Job ID
 let opts = {
-  'force': false // Boolean | Enable or Disable the force trigger of the job
+  'forceEvent': new QoveryApi.JobForceEvent() // JobForceEvent | When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
 };
 apiInstance.restartJob(jobId, opts, (error, data, response) => {
   if (error) {
@@ -100,7 +100,7 @@ apiInstance.restartJob(jobId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **jobId** | **String**| Job ID | 
- **force** | **Boolean**| Enable or Disable the force trigger of the job | [optional] [default to false]
+ **forceEvent** | [**JobForceEvent**](.md)| When filled, it indicates the target event to be deployed.   If the concerned job hasn&#39;t the target event provided, the job won&#39;t be deployed.  | [optional] 
 
 ### Return type
 

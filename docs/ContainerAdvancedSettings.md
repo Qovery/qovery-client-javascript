@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **deploymentCustomDomainCheckEnabled** | **Boolean** | disable custom domain check when deploying an application | [optional] [default to true]
+**deploymentTerminationGracePeriodSeconds** | **Number** | define how long in seconds an application is supposed to be stopped gracefully | [optional] [default to 60]
 **networkIngressProxyBodySizeMb** | **Number** |  | [optional] [default to 100]
 **networkIngressEnableCors** | **Boolean** |  | [optional] [default to false]
 **networkIngressCorsAllowOrigin** | **String** |  | [optional] [default to &#39;*&#39;]

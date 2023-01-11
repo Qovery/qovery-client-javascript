@@ -47,6 +47,9 @@ class JobAdvancedSettings {
         if (data) {
             obj = obj || new JobAdvancedSettings();
 
+            if (data.hasOwnProperty('deployment.termination_grace_period_seconds')) {
+                obj['deployment.termination_grace_period_seconds'] = ApiClient.convertToType(data['deployment.termination_grace_period_seconds'], 'Number');
+            }
             if (data.hasOwnProperty('job.delete_ttl_seconds_after_finished')) {
                 obj['job.delete_ttl_seconds_after_finished'] = ApiClient.convertToType(data['job.delete_ttl_seconds_after_finished'], 'Number');
             }
@@ -107,6 +110,13 @@ class JobAdvancedSettings {
 
 
 }
+
+/**
+ * define how long in seconds an application is supposed to be stopped gracefully
+ * @member {Number} deployment.termination_grace_period_seconds
+ * @default 60
+ */
+JobAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
 
 /**
  * @member {Number} job.delete_ttl_seconds_after_finished

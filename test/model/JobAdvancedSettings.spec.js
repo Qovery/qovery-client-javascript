@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(QoveryApi.JobAdvancedSettings);
     });
 
+    it('should have the property deploymentTerminationGracePeriodSeconds (base name: "deployment.termination_grace_period_seconds")', function() {
+      // uncomment below and update the code to test the property deploymentTerminationGracePeriodSeconds
+      //var instance = new QoveryApi.JobAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property jobDeleteTtlSecondsAfterFinished (base name: "job.delete_ttl_seconds_after_finished")', function() {
       // uncomment below and update the code to test the property jobDeleteTtlSecondsAfterFinished
       //var instance = new QoveryApi.JobAdvancedSettings();

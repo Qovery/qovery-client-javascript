@@ -50,6 +50,9 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('deployment.custom_domain_check_enabled')) {
                 obj['deployment.custom_domain_check_enabled'] = ApiClient.convertToType(data['deployment.custom_domain_check_enabled'], 'Boolean');
             }
+            if (data.hasOwnProperty('deployment.termination_grace_period_seconds')) {
+                obj['deployment.termination_grace_period_seconds'] = ApiClient.convertToType(data['deployment.termination_grace_period_seconds'], 'Number');
+            }
             if (data.hasOwnProperty('network.ingress.proxy_body_size_mb')) {
                 obj['network.ingress.proxy_body_size_mb'] = ApiClient.convertToType(data['network.ingress.proxy_body_size_mb'], 'Number');
             }
@@ -144,6 +147,13 @@ class ContainerAdvancedSettings {
  * @default true
  */
 ContainerAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = true;
+
+/**
+ * define how long in seconds an application is supposed to be stopped gracefully
+ * @member {Number} deployment.termination_grace_period_seconds
+ * @default 60
+ */
+ContainerAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
 
 /**
  * @member {Number} network.ingress.proxy_body_size_mb

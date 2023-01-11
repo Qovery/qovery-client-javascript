@@ -53,6 +53,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('deployment.custom_domain_check_enabled')) {
                 obj['deployment.custom_domain_check_enabled'] = ApiClient.convertToType(data['deployment.custom_domain_check_enabled'], 'Boolean');
             }
+            if (data.hasOwnProperty('deployment.termination_grace_period_seconds')) {
+                obj['deployment.termination_grace_period_seconds'] = ApiClient.convertToType(data['deployment.termination_grace_period_seconds'], 'Number');
+            }
             if (data.hasOwnProperty('build.timeout_max_sec')) {
                 obj['build.timeout_max_sec'] = ApiClient.convertToType(data['build.timeout_max_sec'], 'Number');
             }
@@ -160,6 +163,13 @@ ApplicationAdvancedSettings.prototype['deployment.delay_start_time_sec'] = 30;
  * @default true
  */
 ApplicationAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = true;
+
+/**
+ * define how long in seconds an application is supposed to be stopped gracefully
+ * @member {Number} deployment.termination_grace_period_seconds
+ * @default 60
+ */
+ApplicationAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
 
 /**
  * @member {Number} build.timeout_max_sec

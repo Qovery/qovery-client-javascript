@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deploymentTerminationGracePeriodSeconds (base name: "deployment.termination_grace_period_seconds")', function() {
+      // uncomment below and update the code to test the property deploymentTerminationGracePeriodSeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property buildTimeoutMaxSec (base name: "build.timeout_max_sec")', function() {
       // uncomment below and update the code to test the property buildTimeoutMaxSec
       //var instance = new QoveryApi.ApplicationAdvancedSettings();

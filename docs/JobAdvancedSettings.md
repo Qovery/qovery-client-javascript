@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**deploymentTerminationGracePeriodSeconds** | **Number** | define how long in seconds an application is supposed to be stopped gracefully | [optional] [default to 60]
 **jobDeleteTtlSecondsAfterFinished** | **Number** |  | [optional] 
 **cronjobConcurrencyPolicy** | **String** |  | [optional] [default to &#39;Forbid&#39;]
 **cronjobFailedJobsHistoryLimit** | **Number** |  | [optional] [default to 1]

@@ -71,6 +71,9 @@ class InviteMemberAllOf {
             if (data.hasOwnProperty('invitation_status')) {
                 obj['invitation_status'] = InviteStatusEnum.constructFromObject(data['invitation_status']);
             }
+            if (data.hasOwnProperty('organization_name')) {
+                obj['organization_name'] = ApiClient.convertToType(data['organization_name'], 'String');
+            }
             if (data.hasOwnProperty('inviter')) {
                 obj['inviter'] = ApiClient.convertToType(data['inviter'], 'String');
             }
@@ -109,6 +112,11 @@ InviteMemberAllOf.prototype['invitation_link'] = undefined;
  * @member {module:model/InviteStatusEnum} invitation_status
  */
 InviteMemberAllOf.prototype['invitation_status'] = undefined;
+
+/**
+ * @member {String} organization_name
+ */
+InviteMemberAllOf.prototype['organization_name'] = undefined;
 
 /**
  * @member {String} inviter

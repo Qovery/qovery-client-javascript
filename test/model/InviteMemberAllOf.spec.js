@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property organizationName (base name: "organization_name")', function() {
+      // uncomment below and update the code to test the property organizationName
+      //var instance = new QoveryApi.InviteMemberAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property inviter (base name: "inviter")', function() {
       // uncomment below and update the code to test the property inviter
       //var instance = new QoveryApi.InviteMemberAllOf();

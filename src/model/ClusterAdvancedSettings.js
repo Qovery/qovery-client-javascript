@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ClusterAdvancedSettingsCloudProviderContainerRegistryTags from './ClusterAdvancedSettingsCloudProviderContainerRegistryTags';
 
 /**
  * The ClusterAdvancedSettings model module.
@@ -47,17 +48,23 @@ class ClusterAdvancedSettings {
         if (data) {
             obj = obj || new ClusterAdvancedSettings();
 
+            if (data.hasOwnProperty('loki.log_retention_in_week')) {
+                obj['loki.log_retention_in_week'] = ApiClient.convertToType(data['loki.log_retention_in_week'], 'Number');
+            }
+            if (data.hasOwnProperty('aws.vpc.enable_s3_flow_logs')) {
+                obj['aws.vpc.enable_s3_flow_logs'] = ApiClient.convertToType(data['aws.vpc.enable_s3_flow_logs'], 'Boolean');
+            }
             if (data.hasOwnProperty('registry.image_retention_time')) {
                 obj['registry.image_retention_time'] = ApiClient.convertToType(data['registry.image_retention_time'], 'Number');
+            }
+            if (data.hasOwnProperty('cloud_provider_container_registry_tags')) {
+                obj['cloud_provider_container_registry_tags'] = ClusterAdvancedSettingsCloudProviderContainerRegistryTags.constructFromObject(data['cloud_provider_container_registry_tags']);
             }
             if (data.hasOwnProperty('load_balancer.size')) {
                 obj['load_balancer.size'] = ApiClient.convertToType(data['load_balancer.size'], 'String');
             }
             if (data.hasOwnProperty('pleco.resources_ttl')) {
                 obj['pleco.resources_ttl'] = ApiClient.convertToType(data['pleco.resources_ttl'], 'Number');
-            }
-            if (data.hasOwnProperty('loki.log_retention_in_week')) {
-                obj['loki.log_retention_in_week'] = ApiClient.convertToType(data['loki.log_retention_in_week'], 'Number');
             }
         }
         return obj;
@@ -67,11 +74,30 @@ class ClusterAdvancedSettings {
 }
 
 /**
+ * For how long in week loki is going to keep logs of your applications
+ * @member {Number} loki.log_retention_in_week
+ * @default 12
+ */
+ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
+
+/**
+ * Enable flow logs for on the VPC and store them in an S3 bucket
+ * @member {Boolean} aws.vpc.enable_s3_flow_logs
+ * @default false
+ */
+ClusterAdvancedSettings.prototype['aws.vpc.enable_s3_flow_logs'] = false;
+
+/**
  * Configure the number of seconds before cleaning images in the registry
  * @member {Number} registry.image_retention_time
  * @default 31536000
  */
 ClusterAdvancedSettings.prototype['registry.image_retention_time'] = 31536000;
+
+/**
+ * @member {module:model/ClusterAdvancedSettingsCloudProviderContainerRegistryTags} cloud_provider_container_registry_tags
+ */
+ClusterAdvancedSettings.prototype['cloud_provider_container_registry_tags'] = undefined;
 
 /**
  * Select the size of the main load_balancer (only effective for Scaleway)
@@ -85,13 +111,6 @@ ClusterAdvancedSettings.prototype['load_balancer.size'] = 'lb-s';
  * @default -1
  */
 ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = -1;
-
-/**
- * For how long in week loki is going to keep logs of your applications
- * @member {Number} loki.log_retention_in_week
- * @default 12
- */
-ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
 
 
 

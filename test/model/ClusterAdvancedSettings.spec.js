@@ -54,8 +54,26 @@
       //expect(instance).to.be.a(QoveryApi.ClusterAdvancedSettings);
     });
 
+    it('should have the property lokiLogRetentionInWeek (base name: "loki.log_retention_in_week")', function() {
+      // uncomment below and update the code to test the property lokiLogRetentionInWeek
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property awsVpcEnableS3FlowLogs (base name: "aws.vpc.enable_s3_flow_logs")', function() {
+      // uncomment below and update the code to test the property awsVpcEnableS3FlowLogs
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property registryImageRetentionTime (base name: "registry.image_retention_time")', function() {
       // uncomment below and update the code to test the property registryImageRetentionTime
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cloudProviderContainerRegistryTags (base name: "cloud_provider_container_registry_tags")', function() {
+      // uncomment below and update the code to test the property cloudProviderContainerRegistryTags
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
@@ -68,12 +86,6 @@
 
     it('should have the property plecoResourcesTtl (base name: "pleco.resources_ttl")', function() {
       // uncomment below and update the code to test the property plecoResourcesTtl
-      //var instance = new QoveryApi.ClusterAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property lokiLogRetentionInWeek (base name: "loki.log_retention_in_week")', function() {
-      // uncomment below and update the code to test the property lokiLogRetentionInWeek
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });

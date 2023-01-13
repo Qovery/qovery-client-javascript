@@ -57,6 +57,7 @@ import CloudProviderEnum from './model/CloudProviderEnum';
 import CloudProviderResponseList from './model/CloudProviderResponseList';
 import Cluster from './model/Cluster';
 import ClusterAdvancedSettings from './model/ClusterAdvancedSettings';
+import ClusterAdvancedSettingsCloudProviderContainerRegistryTags from './model/ClusterAdvancedSettingsCloudProviderContainerRegistryTags';
 import ClusterAllOf from './model/ClusterAllOf';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
@@ -794,6 +795,12 @@ export {
      * @property {module:model/ClusterAdvancedSettings}
      */
     ClusterAdvancedSettings,
+
+    /**
+     * The ClusterAdvancedSettingsCloudProviderContainerRegistryTags model constructor.
+     * @property {module:model/ClusterAdvancedSettingsCloudProviderContainerRegistryTags}
+     */
+    ClusterAdvancedSettingsCloudProviderContainerRegistryTags,
 
     /**
      * The ClusterAllOf model constructor.

@@ -63,6 +63,7 @@ docs/CloudProviderEnum.md
 docs/CloudProviderResponseList.md
 docs/Cluster.md
 docs/ClusterAdvancedSettings.md
+docs/ClusterAdvancedSettingsCloudProviderContainerRegistryTags.md
 docs/ClusterAllOf.md
 docs/ClusterCloudProviderInfo.md
 docs/ClusterCloudProviderInfoCredentials.md
@@ -601,6 +602,7 @@ src/model/CloudProviderEnum.js
 src/model/CloudProviderResponseList.js
 src/model/Cluster.js
 src/model/ClusterAdvancedSettings.js
+src/model/ClusterAdvancedSettingsCloudProviderContainerRegistryTags.js
 src/model/ClusterAllOf.js
 src/model/ClusterCloudProviderInfo.js
 src/model/ClusterCloudProviderInfoCredentials.js
@@ -1079,6 +1081,7 @@ test/model/CloudProviderEnum.spec.js
 test/model/CloudProviderResponseList.spec.js
 test/model/Cluster.spec.js
 test/model/ClusterAdvancedSettings.spec.js
+test/model/ClusterAdvancedSettingsCloudProviderContainerRegistryTags.spec.js
 test/model/ClusterAllOf.spec.js
 test/model/ClusterCloudProviderInfo.spec.js
 test/model/ClusterCloudProviderInfoCredentials.spec.js

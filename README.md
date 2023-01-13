@@ -518,6 +518,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CloudProviderResponseList](docs/CloudProviderResponseList.md)
  - [QoveryApi.Cluster](docs/Cluster.md)
  - [QoveryApi.ClusterAdvancedSettings](docs/ClusterAdvancedSettings.md)
+ - [QoveryApi.ClusterAdvancedSettingsCloudProviderContainerRegistryTags](docs/ClusterAdvancedSettingsCloudProviderContainerRegistryTags.md)
  - [QoveryApi.ClusterAllOf](docs/ClusterAllOf.md)
  - [QoveryApi.ClusterCloudProviderInfo](docs/ClusterCloudProviderInfo.md)
  - [QoveryApi.ClusterCloudProviderInfoCredentials](docs/ClusterCloudProviderInfoCredentials.md)

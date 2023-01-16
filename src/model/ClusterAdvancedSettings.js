@@ -54,6 +54,9 @@ class ClusterAdvancedSettings {
             if (data.hasOwnProperty('aws.vpc.enable_s3_flow_logs')) {
                 obj['aws.vpc.enable_s3_flow_logs'] = ApiClient.convertToType(data['aws.vpc.enable_s3_flow_logs'], 'Boolean');
             }
+            if (data.hasOwnProperty('aws.vpc.flow_logs_retention_days')) {
+                obj['aws.vpc.flow_logs_retention_days'] = ApiClient.convertToType(data['aws.vpc.flow_logs_retention_days'], 'Number');
+            }
             if (data.hasOwnProperty('registry.image_retention_time')) {
                 obj['registry.image_retention_time'] = ApiClient.convertToType(data['registry.image_retention_time'], 'Number');
             }
@@ -86,6 +89,13 @@ ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
  * @default false
  */
 ClusterAdvancedSettings.prototype['aws.vpc.enable_s3_flow_logs'] = false;
+
+/**
+ * Set the number of retention days for flow logs. Disable with value \"0\"
+ * @member {Number} aws.vpc.flow_logs_retention_days
+ * @default 365
+ */
+ClusterAdvancedSettings.prototype['aws.vpc.flow_logs_retention_days'] = 365;
 
 /**
  * Configure the number of seconds before cleaning images in the registry

@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property awsVpcFlowLogsRetentionDays (base name: "aws.vpc.flow_logs_retention_days")', function() {
+      // uncomment below and update the code to test the property awsVpcFlowLogsRetentionDays
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property registryImageRetentionTime (base name: "registry.image_retention_time")', function() {
       // uncomment below and update the code to test the property registryImageRetentionTime
       //var instance = new QoveryApi.ClusterAdvancedSettings();

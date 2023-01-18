@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
+import APIVariableTypeEnum from './APIVariableTypeEnum';
 import Base from './Base';
 import EnvironmentVariableAlias from './EnvironmentVariableAlias';
 import EnvironmentVariableAllOf from './EnvironmentVariableAllOf';
@@ -34,7 +35,7 @@ class EnvironmentVariable {
      * @implements module:model/EnvironmentVariableAllOf
      * @param id {String} 
      * @param createdAt {Date} 
-     * @param key {String} key is case sensitive
+     * @param key {String} key is case sensitive.
      * @param value {String} value of the env variable.
      * @param scope {module:model/APIVariableScopeEnum} 
      */
@@ -85,6 +86,9 @@ class EnvironmentVariable {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('mount_path')) {
+                obj['mount_path'] = ApiClient.convertToType(data['mount_path'], 'String');
+            }
             if (data.hasOwnProperty('overridden_variable')) {
                 obj['overridden_variable'] = EnvironmentVariableOverride.constructFromObject(data['overridden_variable']);
             }
@@ -93,6 +97,9 @@ class EnvironmentVariable {
             }
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = APIVariableTypeEnum.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
@@ -126,7 +133,7 @@ EnvironmentVariable.prototype['created_at'] = undefined;
 EnvironmentVariable.prototype['updated_at'] = undefined;
 
 /**
- * key is case sensitive
+ * key is case sensitive.
  * @member {String} key
  */
 EnvironmentVariable.prototype['key'] = undefined;
@@ -136,6 +143,12 @@ EnvironmentVariable.prototype['key'] = undefined;
  * @member {String} value
  */
 EnvironmentVariable.prototype['value'] = undefined;
+
+/**
+ * should be set for file only. variable mount path makes variable a file (where file should be mounted).
+ * @member {String} mount_path
+ */
+EnvironmentVariable.prototype['mount_path'] = undefined;
 
 /**
  * @member {module:model/EnvironmentVariableOverride} overridden_variable
@@ -151,6 +164,11 @@ EnvironmentVariable.prototype['aliased_variable'] = undefined;
  * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariable.prototype['scope'] = undefined;
+
+/**
+ * @member {module:model/APIVariableTypeEnum} type
+ */
+EnvironmentVariable.prototype['type'] = undefined;
 
 /**
  * present only for `BUILT_IN` variable
@@ -185,7 +203,7 @@ Base.prototype['created_at'] = undefined;
 Base.prototype['updated_at'] = undefined;
 // Implement EnvironmentVariableRequest interface:
 /**
- * key is case sensitive
+ * key is case sensitive.
  * @member {String} key
  */
 EnvironmentVariableRequest.prototype['key'] = undefined;
@@ -194,6 +212,11 @@ EnvironmentVariableRequest.prototype['key'] = undefined;
  * @member {String} value
  */
 EnvironmentVariableRequest.prototype['value'] = undefined;
+/**
+ * should be set for file only. variable mount path makes variable a file (where file should be mounted).
+ * @member {String} mount_path
+ */
+EnvironmentVariableRequest.prototype['mount_path'] = undefined;
 // Implement EnvironmentVariableAllOf interface:
 /**
  * @member {module:model/EnvironmentVariableOverride} overridden_variable
@@ -207,6 +230,10 @@ EnvironmentVariableAllOf.prototype['aliased_variable'] = undefined;
  * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariableAllOf.prototype['scope'] = undefined;
+/**
+ * @member {module:model/APIVariableTypeEnum} type
+ */
+EnvironmentVariableAllOf.prototype['type'] = undefined;
 /**
  * present only for `BUILT_IN` variable
  * @member {String} service_id

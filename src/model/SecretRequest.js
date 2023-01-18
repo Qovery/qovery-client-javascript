@@ -57,6 +57,9 @@ class SecretRequest {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('mount_path')) {
+                obj['mount_path'] = ApiClient.convertToType(data['mount_path'], 'String');
+            }
         }
         return obj;
     }
@@ -75,6 +78,12 @@ SecretRequest.prototype['key'] = undefined;
  * @member {String} value
  */
 SecretRequest.prototype['value'] = undefined;
+
+/**
+ * should be set for file only. variable mount path make secret a file (where file should be mounted).
+ * @member {String} mount_path
+ */
+SecretRequest.prototype['mount_path'] = undefined;
 
 
 

@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.SecretRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,29 +46,11 @@
       object[property] = value;
   }
 
-  describe('SecretRequest', function() {
-    it('should create an instance of SecretRequest', function() {
-      // uncomment below and update the code to test SecretRequest
-      //var instance = new QoveryApi.SecretRequest();
-      //expect(instance).to.be.a(QoveryApi.SecretRequest);
-    });
-
-    it('should have the property key (base name: "key")', function() {
-      // uncomment below and update the code to test the property key
-      //var instance = new QoveryApi.SecretRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property value (base name: "value")', function() {
-      // uncomment below and update the code to test the property value
-      //var instance = new QoveryApi.SecretRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property mountPath (base name: "mount_path")', function() {
-      // uncomment below and update the code to test the property mountPath
-      //var instance = new QoveryApi.SecretRequest();
-      //expect(instance).to.be();
+  describe('APIVariableTypeEnum', function() {
+    it('should create an instance of APIVariableTypeEnum', function() {
+      // uncomment below and update the code to test APIVariableTypeEnum
+      //var instance = new QoveryApi.APIVariableTypeEnum();
+      //expect(instance).to.be.a(QoveryApi.APIVariableTypeEnum);
     });
 
   });

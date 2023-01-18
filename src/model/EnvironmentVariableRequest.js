@@ -22,7 +22,7 @@ class EnvironmentVariableRequest {
     /**
      * Constructs a new <code>EnvironmentVariableRequest</code>.
      * @alias module:model/EnvironmentVariableRequest
-     * @param key {String} key is case sensitive
+     * @param key {String} key is case sensitive.
      * @param value {String} value of the env variable.
      */
     constructor(key, value) { 
@@ -57,6 +57,9 @@ class EnvironmentVariableRequest {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('mount_path')) {
+                obj['mount_path'] = ApiClient.convertToType(data['mount_path'], 'String');
+            }
         }
         return obj;
     }
@@ -65,7 +68,7 @@ class EnvironmentVariableRequest {
 }
 
 /**
- * key is case sensitive
+ * key is case sensitive.
  * @member {String} key
  */
 EnvironmentVariableRequest.prototype['key'] = undefined;
@@ -75,6 +78,12 @@ EnvironmentVariableRequest.prototype['key'] = undefined;
  * @member {String} value
  */
 EnvironmentVariableRequest.prototype['value'] = undefined;
+
+/**
+ * should be set for file only. variable mount path makes variable a file (where file should be mounted).
+ * @member {String} mount_path
+ */
+EnvironmentVariableRequest.prototype['mount_path'] = undefined;
 
 
 

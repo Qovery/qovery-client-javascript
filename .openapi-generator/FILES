@@ -4,6 +4,7 @@
 .travis.yml
 README.md
 docs/APIVariableScopeEnum.md
+docs/APIVariableTypeEnum.md
 docs/AccountInfo.md
 docs/AccountInfoApi.md
 docs/AccountInfoEditRequest.md
@@ -559,6 +560,7 @@ src/api/ReferralRewardsApi.js
 src/api/UserSignUpApi.js
 src/index.js
 src/model/APIVariableScopeEnum.js
+src/model/APIVariableTypeEnum.js
 src/model/AccountInfo.js
 src/model/AccountInfoEditRequest.js
 src/model/Application.js
@@ -1038,6 +1040,7 @@ test/api/ProjectsApi.spec.js
 test/api/ReferralRewardsApi.spec.js
 test/api/UserSignUpApi.spec.js
 test/model/APIVariableScopeEnum.spec.js
+test/model/APIVariableTypeEnum.spec.js
 test/model/AccountInfo.spec.js
 test/model/AccountInfoEditRequest.spec.js
 test/model/Application.spec.js

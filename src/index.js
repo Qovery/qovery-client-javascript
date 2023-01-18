@@ -14,6 +14,7 @@
 
 import ApiClient from './ApiClient';
 import APIVariableScopeEnum from './model/APIVariableScopeEnum';
+import APIVariableTypeEnum from './model/APIVariableTypeEnum';
 import AccountInfo from './model/AccountInfo';
 import AccountInfoEditRequest from './model/AccountInfoEditRequest';
 import Application from './model/Application';
@@ -537,6 +538,12 @@ export {
      * @property {module:model/APIVariableScopeEnum}
      */
     APIVariableScopeEnum,
+
+    /**
+     * The APIVariableTypeEnum model constructor.
+     * @property {module:model/APIVariableTypeEnum}
+     */
+    APIVariableTypeEnum,
 
     /**
      * The AccountInfo model constructor.

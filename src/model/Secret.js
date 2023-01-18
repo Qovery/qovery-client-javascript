@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
+import APIVariableTypeEnum from './APIVariableTypeEnum';
 import Base from './Base';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
 import SecretAlias from './SecretAlias';
@@ -86,6 +87,9 @@ class Secret {
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = APIVariableTypeEnum.constructFromObject(data['type']);
+            }
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
             }
@@ -139,6 +143,11 @@ Secret.prototype['aliased_secret'] = undefined;
 Secret.prototype['scope'] = undefined;
 
 /**
+ * @member {module:model/APIVariableTypeEnum} type
+ */
+Secret.prototype['type'] = undefined;
+
+/**
  * present only for `BUILT_IN` variable
  * @member {String} service_id
  */
@@ -187,6 +196,10 @@ SecretAllOf.prototype['aliased_secret'] = undefined;
  * @member {module:model/APIVariableScopeEnum} scope
  */
 SecretAllOf.prototype['scope'] = undefined;
+/**
+ * @member {module:model/APIVariableTypeEnum} type
+ */
+SecretAllOf.prototype['type'] = undefined;
 /**
  * present only for `BUILT_IN` variable
  * @member {String} service_id

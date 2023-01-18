@@ -475,6 +475,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [QoveryApi.APIVariableScopeEnum](docs/APIVariableScopeEnum.md)
+ - [QoveryApi.APIVariableTypeEnum](docs/APIVariableTypeEnum.md)
  - [QoveryApi.AccountInfo](docs/AccountInfo.md)
  - [QoveryApi.AccountInfoEditRequest](docs/AccountInfoEditRequest.md)
  - [QoveryApi.Application](docs/Application.md)

@@ -5,7 +5,9 @@ All URIs are relative to *https://api.qovery.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deployApplication**](ApplicationActionsApi.md#deployApplication) | **POST** /application/{applicationId}/deploy | Deploy application
-[**restartApplication**](ApplicationActionsApi.md#restartApplication) | **POST** /application/{applicationId}/restart | Restart application
+[**rebootApplication**](ApplicationActionsApi.md#rebootApplication) | **POST** /application/{applicationId}/restart-service | Reboot application
+[**redeployApplication**](ApplicationActionsApi.md#redeployApplication) | **POST** /application/{applicationId}/redeploy | Redeploy application
+[**restartApplication**](ApplicationActionsApi.md#restartApplication) | **POST** /application/{applicationId}/restart | Deprecated - Restart application
 [**stopApplication**](ApplicationActionsApi.md#stopApplication) | **POST** /application/{applicationId}/stop | Stop application
 
 
@@ -63,11 +65,107 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## rebootApplication
+
+> Status rebootApplication(applicationId)
+
+Reboot application
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ApplicationActionsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.rebootApplication(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## redeployApplication
+
+> Status redeployApplication(applicationId)
+
+Redeploy application
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ApplicationActionsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+apiInstance.redeployApplication(applicationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## restartApplication
 
 > Status restartApplication(applicationId)
 
-Restart application
+Deprecated - Restart application
+
+**Deprecated** - Please use the \&quot;Redeploy application\&quot; endpoint now
 
 ### Example
 

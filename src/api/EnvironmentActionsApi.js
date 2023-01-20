@@ -16,7 +16,7 @@ import ApiClient from "../ApiClient";
 import CloneRequest from '../model/CloneRequest';
 import DeployAllRequest from '../model/DeployAllRequest';
 import Environment from '../model/Environment';
-import EnvironmentRestartRequest from '../model/EnvironmentRestartRequest';
+import RebootServicesRequest from '../model/RebootServicesRequest';
 import Status from '../model/Status';
 
 /**
@@ -217,6 +217,94 @@ export default class EnvironmentActionsApi {
     }
 
     /**
+     * Callback function to receive the result of the rebootServices operation.
+     * @callback module:api/EnvironmentActionsApi~rebootServicesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reboot services
+     * Update and reboot the selected services
+     * @param {String} environmentId Environment ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/RebootServicesRequest} opts.rebootServicesRequest 
+     * @param {module:api/EnvironmentActionsApi~rebootServicesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    rebootServices(environmentId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['rebootServicesRequest'];
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling rebootServices");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/service/restart-service', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the redeployEnvironment operation.
+     * @callback module:api/EnvironmentActionsApi~redeployEnvironmentCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Redeploy environment
+     * @param {String} environmentId Environment ID
+     * @param {module:api/EnvironmentActionsApi~redeployEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    redeployEnvironment(environmentId, callback) {
+      let postBody = null;
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling redeployEnvironment");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/redeploy', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the restartEnvironment operation.
      * @callback module:api/EnvironmentActionsApi~restartEnvironmentCallback
      * @param {String} error Error message, if any.
@@ -225,16 +313,14 @@ export default class EnvironmentActionsApi {
      */
 
     /**
-     * Restart environment
+     * Deprecated - Restart environment
+     * **Deprecated** - Please use the \"Redeploy environment\" endpoint now
      * @param {String} environmentId Environment ID
-     * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentRestartRequest} opts.environmentRestartRequest 
      * @param {module:api/EnvironmentActionsApi~restartEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
-    restartEnvironment(environmentId, opts, callback) {
-      opts = opts || {};
-      let postBody = opts['environmentRestartRequest'];
+    restartEnvironment(environmentId, callback) {
+      let postBody = null;
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
         throw new Error("Missing the required parameter 'environmentId' when calling restartEnvironment");
@@ -251,7 +337,7 @@ export default class EnvironmentActionsApi {
       };
 
       let authNames = ['bearerAuth'];
-      let contentTypes = ['application/json'];
+      let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Status;
       return this.apiClient.callApi(

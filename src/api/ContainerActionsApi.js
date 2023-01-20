@@ -82,6 +82,90 @@ export default class ContainerActionsApi {
     }
 
     /**
+     * Callback function to receive the result of the rebootContainer operation.
+     * @callback module:api/ContainerActionsApi~rebootContainerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reboot container
+     * @param {String} containerId Container ID
+     * @param {module:api/ContainerActionsApi~rebootContainerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    rebootContainer(containerId, callback) {
+      let postBody = null;
+      // verify the required parameter 'containerId' is set
+      if (containerId === undefined || containerId === null) {
+        throw new Error("Missing the required parameter 'containerId' when calling rebootContainer");
+      }
+
+      let pathParams = {
+        'containerId': containerId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/container/{containerId}/restart-service', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the redeployContainer operation.
+     * @callback module:api/ContainerActionsApi~redeployContainerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Redeploy container
+     * @param {String} containerId Container ID
+     * @param {module:api/ContainerActionsApi~redeployContainerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    redeployContainer(containerId, callback) {
+      let postBody = null;
+      // verify the required parameter 'containerId' is set
+      if (containerId === undefined || containerId === null) {
+        throw new Error("Missing the required parameter 'containerId' when calling redeployContainer");
+      }
+
+      let pathParams = {
+        'containerId': containerId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/container/{containerId}/redeploy', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the restartContainer operation.
      * @callback module:api/ContainerActionsApi~restartContainerCallback
      * @param {String} error Error message, if any.
@@ -90,7 +174,8 @@ export default class ContainerActionsApi {
      */
 
     /**
-     * Restart container
+     * Deprecated - Restart container
+     * **Deprecated** - Please use the \"Redeploy container\" endpoint now
      * @param {String} containerId Container ID
      * @param {module:api/ContainerActionsApi~restartContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}

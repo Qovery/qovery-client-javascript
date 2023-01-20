@@ -58,6 +58,26 @@
         done();
       });
     });
+    describe('rebootApplication', function() {
+      it('should call rebootApplication successfully', function(done) {
+        //uncomment below and update the code to test rebootApplication
+        //instance.rebootApplication(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('redeployApplication', function() {
+      it('should call redeployApplication successfully', function(done) {
+        //uncomment below and update the code to test redeployApplication
+        //instance.redeployApplication(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('restartApplication', function() {
       it('should call restartApplication successfully', function(done) {
         //uncomment below and update the code to test restartApplication

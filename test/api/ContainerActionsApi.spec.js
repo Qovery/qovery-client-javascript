@@ -58,6 +58,26 @@
         done();
       });
     });
+    describe('rebootContainer', function() {
+      it('should call rebootContainer successfully', function(done) {
+        //uncomment below and update the code to test rebootContainer
+        //instance.rebootContainer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('redeployContainer', function() {
+      it('should call redeployContainer successfully', function(done) {
+        //uncomment below and update the code to test redeployContainer
+        //instance.redeployContainer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('restartContainer', function() {
       it('should call restartContainer successfully', function(done) {
         //uncomment below and update the code to test restartContainer

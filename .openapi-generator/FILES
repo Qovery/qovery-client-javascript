@@ -247,7 +247,6 @@ docs/EnvironmentLogsMessage.md
 docs/EnvironmentMainCallsApi.md
 docs/EnvironmentModeEnum.md
 docs/EnvironmentResponseList.md
-docs/EnvironmentRestartRequest.md
 docs/EnvironmentSecretApi.md
 docs/EnvironmentStats.md
 docs/EnvironmentStatsResponseList.md
@@ -429,6 +428,7 @@ docs/ProjectSecretApi.md
 docs/ProjectStats.md
 docs/ProjectStatsResponseList.md
 docs/ProjectsApi.md
+docs/RebootServicesRequest.md
 docs/ReferenceObject.md
 docs/ReferenceObjectStatus.md
 docs/ReferenceObjectStatusResponseList.md
@@ -759,7 +759,6 @@ src/model/EnvironmentLogsErrorUnderlyingError.js
 src/model/EnvironmentLogsMessage.js
 src/model/EnvironmentModeEnum.js
 src/model/EnvironmentResponseList.js
-src/model/EnvironmentRestartRequest.js
 src/model/EnvironmentStats.js
 src/model/EnvironmentStatsResponseList.js
 src/model/EnvironmentStatusList.js
@@ -916,6 +915,7 @@ src/model/ProjectRequest.js
 src/model/ProjectResponseList.js
 src/model/ProjectStats.js
 src/model/ProjectStatsResponseList.js
+src/model/RebootServicesRequest.js
 src/model/ReferenceObject.js
 src/model/ReferenceObjectStatus.js
 src/model/ReferenceObjectStatusResponseList.js
@@ -1239,7 +1239,6 @@ test/model/EnvironmentLogsErrorUnderlyingError.spec.js
 test/model/EnvironmentLogsMessage.spec.js
 test/model/EnvironmentModeEnum.spec.js
 test/model/EnvironmentResponseList.spec.js
-test/model/EnvironmentRestartRequest.spec.js
 test/model/EnvironmentStats.spec.js
 test/model/EnvironmentStatsResponseList.spec.js
 test/model/EnvironmentStatusList.spec.js
@@ -1396,6 +1395,7 @@ test/model/ProjectRequest.spec.js
 test/model/ProjectResponseList.spec.js
 test/model/ProjectStats.spec.js
 test/model/ProjectStatsResponseList.spec.js
+test/model/RebootServicesRequest.spec.js
 test/model/ReferenceObject.spec.js
 test/model/ReferenceObjectStatus.spec.js
 test/model/ReferenceObjectStatusResponseList.spec.js

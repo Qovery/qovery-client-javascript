@@ -88,6 +88,26 @@
         done();
       });
     });
+    describe('rebootServices', function() {
+      it('should call rebootServices successfully', function(done) {
+        //uncomment below and update the code to test rebootServices
+        //instance.rebootServices(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('redeployEnvironment', function() {
+      it('should call redeployEnvironment successfully', function(done) {
+        //uncomment below and update the code to test redeployEnvironment
+        //instance.redeployEnvironment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('restartEnvironment', function() {
       it('should call restartEnvironment successfully', function(done) {
         //uncomment below and update the code to test restartEnvironment

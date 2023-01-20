@@ -82,6 +82,90 @@ export default class ApplicationActionsApi {
     }
 
     /**
+     * Callback function to receive the result of the rebootApplication operation.
+     * @callback module:api/ApplicationActionsApi~rebootApplicationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Reboot application
+     * @param {String} applicationId Application ID
+     * @param {module:api/ApplicationActionsApi~rebootApplicationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    rebootApplication(applicationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'applicationId' is set
+      if (applicationId === undefined || applicationId === null) {
+        throw new Error("Missing the required parameter 'applicationId' when calling rebootApplication");
+      }
+
+      let pathParams = {
+        'applicationId': applicationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/application/{applicationId}/restart-service', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the redeployApplication operation.
+     * @callback module:api/ApplicationActionsApi~redeployApplicationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Redeploy application
+     * @param {String} applicationId Application ID
+     * @param {module:api/ApplicationActionsApi~redeployApplicationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    redeployApplication(applicationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'applicationId' is set
+      if (applicationId === undefined || applicationId === null) {
+        throw new Error("Missing the required parameter 'applicationId' when calling redeployApplication");
+      }
+
+      let pathParams = {
+        'applicationId': applicationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/application/{applicationId}/redeploy', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the restartApplication operation.
      * @callback module:api/ApplicationActionsApi~restartApplicationCallback
      * @param {String} error Error message, if any.
@@ -90,7 +174,8 @@ export default class ApplicationActionsApi {
      */
 
     /**
-     * Restart application
+     * Deprecated - Restart application
+     * **Deprecated** - Please use the \"Redeploy application\" endpoint now
      * @param {String} applicationId Application ID
      * @param {module:api/ApplicationActionsApi~restartApplicationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}

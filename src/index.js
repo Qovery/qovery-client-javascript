@@ -213,7 +213,6 @@ import EnvironmentLogsErrorUnderlyingError from './model/EnvironmentLogsErrorUnd
 import EnvironmentLogsMessage from './model/EnvironmentLogsMessage';
 import EnvironmentModeEnum from './model/EnvironmentModeEnum';
 import EnvironmentResponseList from './model/EnvironmentResponseList';
-import EnvironmentRestartRequest from './model/EnvironmentRestartRequest';
 import EnvironmentStats from './model/EnvironmentStats';
 import EnvironmentStatsResponseList from './model/EnvironmentStatsResponseList';
 import EnvironmentStatusList from './model/EnvironmentStatusList';
@@ -370,6 +369,7 @@ import ProjectRequest from './model/ProjectRequest';
 import ProjectResponseList from './model/ProjectResponseList';
 import ProjectStats from './model/ProjectStats';
 import ProjectStatsResponseList from './model/ProjectStatsResponseList';
+import RebootServicesRequest from './model/RebootServicesRequest';
 import ReferenceObject from './model/ReferenceObject';
 import ReferenceObjectStatus from './model/ReferenceObjectStatus';
 import ReferenceObjectStatusResponseList from './model/ReferenceObjectStatusResponseList';
@@ -1734,12 +1734,6 @@ export {
     EnvironmentResponseList,
 
     /**
-     * The EnvironmentRestartRequest model constructor.
-     * @property {module:model/EnvironmentRestartRequest}
-     */
-    EnvironmentRestartRequest,
-
-    /**
      * The EnvironmentStats model constructor.
      * @property {module:model/EnvironmentStats}
      */
@@ -2674,6 +2668,12 @@ export {
      * @property {module:model/ProjectStatsResponseList}
      */
     ProjectStatsResponseList,
+
+    /**
+     * The RebootServicesRequest model constructor.
+     * @property {module:model/RebootServicesRequest}
+     */
+    RebootServicesRequest,
 
     /**
      * The ReferenceObject model constructor.

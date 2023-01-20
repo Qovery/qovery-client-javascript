@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentRestartRequest();
+    instance = new QoveryApi.RebootServicesRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,28 @@
       object[property] = value;
   }
 
-  describe('EnvironmentRestartRequest', function() {
-    it('should create an instance of EnvironmentRestartRequest', function() {
-      // uncomment below and update the code to test EnvironmentRestartRequest
-      //var instance = new QoveryApi.EnvironmentRestartRequest();
-      //expect(instance).to.be.a(QoveryApi.EnvironmentRestartRequest);
+  describe('RebootServicesRequest', function() {
+    it('should create an instance of RebootServicesRequest', function() {
+      // uncomment below and update the code to test RebootServicesRequest
+      //var instance = new QoveryApi.RebootServicesRequest();
+      //expect(instance).to.be.a(QoveryApi.RebootServicesRequest);
     });
 
-    it('should have the property restartDb (base name: "restart_db")', function() {
-      // uncomment below and update the code to test the property restartDb
-      //var instance = new QoveryApi.EnvironmentRestartRequest();
+    it('should have the property applicationIds (base name: "applicationIds")', function() {
+      // uncomment below and update the code to test the property applicationIds
+      //var instance = new QoveryApi.RebootServicesRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databaseIds (base name: "databaseIds")', function() {
+      // uncomment below and update the code to test the property databaseIds
+      //var instance = new QoveryApi.RebootServicesRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property containerIds (base name: "containerIds")', function() {
+      // uncomment below and update the code to test the property containerIds
+      //var instance = new QoveryApi.RebootServicesRequest();
       //expect(instance).to.be();
     });
 

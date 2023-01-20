@@ -8,7 +8,9 @@ Method | HTTP request | Description
 [**cloneEnvironment**](EnvironmentActionsApi.md#cloneEnvironment) | **POST** /environment/{environmentId}/clone | Clone environment
 [**deployAllServices**](EnvironmentActionsApi.md#deployAllServices) | **POST** /environment/{environmentId}/service/deploy | Deploy services
 [**deployEnvironment**](EnvironmentActionsApi.md#deployEnvironment) | **POST** /environment/{environmentId}/deploy | Deploy environment
-[**restartEnvironment**](EnvironmentActionsApi.md#restartEnvironment) | **POST** /environment/{environmentId}/restart | Restart environment
+[**rebootServices**](EnvironmentActionsApi.md#rebootServices) | **POST** /environment/{environmentId}/service/restart-service | Reboot services
+[**redeployEnvironment**](EnvironmentActionsApi.md#redeployEnvironment) | **POST** /environment/{environmentId}/redeploy | Redeploy environment
+[**restartEnvironment**](EnvironmentActionsApi.md#restartEnvironment) | **POST** /environment/{environmentId}/restart | Deprecated - Restart environment
 [**stopEnvironment**](EnvironmentActionsApi.md#stopEnvironment) | **POST** /environment/{environmentId}/stop | Stop environment
 
 
@@ -217,11 +219,13 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## restartEnvironment
+## rebootServices
 
-> Status restartEnvironment(environmentId, opts)
+> Status rebootServices(environmentId, opts)
 
-Restart environment
+Reboot services
+
+Update and reboot the selected services
 
 ### Example
 
@@ -235,9 +239,9 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.EnvironmentActionsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'environmentRestartRequest': new QoveryApi.EnvironmentRestartRequest() // EnvironmentRestartRequest | 
+  'rebootServicesRequest': new QoveryApi.RebootServicesRequest() // RebootServicesRequest | 
 };
-apiInstance.restartEnvironment(environmentId, opts, (error, data, response) => {
+apiInstance.rebootServices(environmentId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -252,7 +256,7 @@ apiInstance.restartEnvironment(environmentId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **environmentId** | **String**| Environment ID | 
- **environmentRestartRequest** | [**EnvironmentRestartRequest**](EnvironmentRestartRequest.md)|  | [optional] 
+ **rebootServicesRequest** | [**RebootServicesRequest**](RebootServicesRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -265,6 +269,102 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## redeployEnvironment
+
+> Status redeployEnvironment(environmentId)
+
+Redeploy environment
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.EnvironmentActionsApi();
+let environmentId = "environmentId_example"; // String | Environment ID
+apiInstance.redeployEnvironment(environmentId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **environmentId** | **String**| Environment ID | 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## restartEnvironment
+
+> Status restartEnvironment(environmentId)
+
+Deprecated - Restart environment
+
+**Deprecated** - Please use the \&quot;Redeploy environment\&quot; endpoint now
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.EnvironmentActionsApi();
+let environmentId = "environmentId_example"; // String | Environment ID
+apiInstance.restartEnvironment(environmentId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **environmentId** | **String**| Environment ID | 
+
+### Return type
+
+[**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('getDefaultClusterAdvancedSettings', function() {
+      it('should call getDefaultClusterAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test getDefaultClusterAdvancedSettings
+        //instance.getDefaultClusterAdvancedSettings(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEnvironmentApplicationCurrentScale', function() {
       it('should call getEnvironmentApplicationCurrentScale successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentApplicationCurrentScale

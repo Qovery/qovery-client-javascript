@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getClusterAdvancedSettings**](ClustersApi.md#getClusterAdvancedSettings) | **GET** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Get advanced settings
 [**getClusterReadinessStatus**](ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
 [**getClusterStatus**](ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
+[**getDefaultClusterAdvancedSettings**](ClustersApi.md#getDefaultClusterAdvancedSettings) | **GET** /defaultClusterAdvancedSettings | List default cluster advanced settings
 [**getOrganizationCloudProviderInfo**](ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
 [**getOrganizationClusterStatus**](ClustersApi.md#getOrganizationClusterStatus) | **GET** /organization/{organizationId}/cluster/status | List all clusters statuses
 [**getRoutingTable**](ClustersApi.md#getRoutingTable) | **GET** /organization/{organizationId}/cluster/{clusterId}/routingTable | Get routing table
@@ -476,6 +477,49 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ClusterStatusGet**](ClusterStatusGet.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getDefaultClusterAdvancedSettings
+
+> ClusterAdvancedSettings getDefaultClusterAdvancedSettings()
+
+List default cluster advanced settings
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ClustersApi();
+apiInstance.getDefaultClusterAdvancedSettings((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ClusterAdvancedSettings**](ClusterAdvancedSettings.md)
 
 ### Authorization
 

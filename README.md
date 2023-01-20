@@ -176,7 +176,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 *QoveryApi.ApplicationsApi* | [**getDefaultApplicationAdvancedSettings**](docs/ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
-*QoveryApi.ApplicationsApi* | [**getDefaultClusterAdvancedSettings**](docs/ApplicationsApi.md#getDefaultClusterAdvancedSettings) | **GET** /defaultClusterAdvancedSettings | List default cluster advanced settings
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentStorage**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationStatus**](docs/ApplicationsApi.md#getEnvironmentApplicationStatus) | **GET** /environment/{environmentId}/application/status | List all environment applications statuses
@@ -236,6 +235,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**getClusterAdvancedSettings**](docs/ClustersApi.md#getClusterAdvancedSettings) | **GET** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Get advanced settings
 *QoveryApi.ClustersApi* | [**getClusterReadinessStatus**](docs/ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
 *QoveryApi.ClustersApi* | [**getClusterStatus**](docs/ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
+*QoveryApi.ClustersApi* | [**getDefaultClusterAdvancedSettings**](docs/ClustersApi.md#getDefaultClusterAdvancedSettings) | **GET** /defaultClusterAdvancedSettings | List default cluster advanced settings
 *QoveryApi.ClustersApi* | [**getOrganizationCloudProviderInfo**](docs/ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
 *QoveryApi.ClustersApi* | [**getOrganizationClusterStatus**](docs/ClustersApi.md#getOrganizationClusterStatus) | **GET** /organization/{organizationId}/cluster/status | List all clusters statuses
 *QoveryApi.ClustersApi* | [**getRoutingTable**](docs/ClustersApi.md#getRoutingTable) | **GET** /organization/{organizationId}/cluster/{clusterId}/routingTable | Get routing table

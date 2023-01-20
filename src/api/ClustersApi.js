@@ -488,6 +488,42 @@ export default class ClustersApi {
     }
 
     /**
+     * Callback function to receive the result of the getDefaultClusterAdvancedSettings operation.
+     * @callback module:api/ClustersApi~getDefaultClusterAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterAdvancedSettings} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List default cluster advanced settings
+     * @param {module:api/ClustersApi~getDefaultClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterAdvancedSettings}
+     */
+    getDefaultClusterAdvancedSettings(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterAdvancedSettings;
+      return this.apiClient.callApi(
+        '/defaultClusterAdvancedSettings', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getOrganizationCloudProviderInfo operation.
      * @callback module:api/ClustersApi~getOrganizationCloudProviderInfoCallback
      * @param {String} error Error message, if any.

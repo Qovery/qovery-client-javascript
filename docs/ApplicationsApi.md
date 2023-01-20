@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createApplication**](ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 [**getDefaultApplicationAdvancedSettings**](ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
-[**getDefaultClusterAdvancedSettings**](ApplicationsApi.md#getDefaultClusterAdvancedSettings) | **GET** /defaultClusterAdvancedSettings | List default cluster advanced settings
 [**getEnvironmentApplicationCurrentScale**](ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
 [**getEnvironmentApplicationCurrentStorage**](ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
 [**getEnvironmentApplicationStatus**](ApplicationsApi.md#getEnvironmentApplicationStatus) | **GET** /environment/{environmentId}/application/status | List all environment applications statuses
@@ -98,49 +97,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ApplicationAdvancedSettings**](ApplicationAdvancedSettings.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## getDefaultClusterAdvancedSettings
-
-> ClusterAdvancedSettings getDefaultClusterAdvancedSettings()
-
-List default cluster advanced settings
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.ApplicationsApi();
-apiInstance.getDefaultClusterAdvancedSettings((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ClusterAdvancedSettings**](ClusterAdvancedSettings.md)
 
 ### Authorization
 

@@ -39,4 +39,12 @@
 
 * `STOP_QUEUED` (value: `"STOP_QUEUED"`)
 
+* `RESTART_QUEUED` (value: `"RESTART_QUEUED"`)
+
+* `RESTARTING` (value: `"RESTARTING"`)
+
+* `RESTARTED` (value: `"RESTARTED"`)
+
+* `RESTARTED_ERROR` (value: `"RESTARTED_ERROR"`)
+
 

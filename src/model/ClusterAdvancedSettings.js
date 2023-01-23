@@ -48,8 +48,8 @@ class ClusterAdvancedSettings {
         if (data) {
             obj = obj || new ClusterAdvancedSettings();
 
-            if (data.hasOwnProperty('loki.log_retention_in_week')) {
-                obj['loki.log_retention_in_week'] = ApiClient.convertToType(data['loki.log_retention_in_week'], 'Number');
+            if (data.hasOwnProperty('aws.cloudwatch.eks_logs_retention_days')) {
+                obj['aws.cloudwatch.eks_logs_retention_days'] = ApiClient.convertToType(data['aws.cloudwatch.eks_logs_retention_days'], 'Number');
             }
             if (data.hasOwnProperty('aws.vpc.enable_s3_flow_logs')) {
                 obj['aws.vpc.enable_s3_flow_logs'] = ApiClient.convertToType(data['aws.vpc.enable_s3_flow_logs'], 'Boolean');
@@ -59,6 +59,9 @@ class ClusterAdvancedSettings {
             }
             if (data.hasOwnProperty('registry.image_retention_time')) {
                 obj['registry.image_retention_time'] = ApiClient.convertToType(data['registry.image_retention_time'], 'Number');
+            }
+            if (data.hasOwnProperty('loki.log_retention_in_week')) {
+                obj['loki.log_retention_in_week'] = ApiClient.convertToType(data['loki.log_retention_in_week'], 'Number');
             }
             if (data.hasOwnProperty('cloud_provider_container_registry_tags')) {
                 obj['cloud_provider_container_registry_tags'] = ClusterAdvancedSettingsCloudProviderContainerRegistryTags.constructFromObject(data['cloud_provider_container_registry_tags']);
@@ -77,11 +80,11 @@ class ClusterAdvancedSettings {
 }
 
 /**
- * For how long in week loki is going to keep logs of your applications
- * @member {Number} loki.log_retention_in_week
- * @default 12
+ * Set the number of retention days for EKS Cloudwatch logs
+ * @member {Number} aws.cloudwatch.eks_logs_retention_days
+ * @default 90
  */
-ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
+ClusterAdvancedSettings.prototype['aws.cloudwatch.eks_logs_retention_days'] = 90;
 
 /**
  * Enable flow logs for on the VPC and store them in an S3 bucket
@@ -103,6 +106,13 @@ ClusterAdvancedSettings.prototype['aws.vpc.flow_logs_retention_days'] = 365;
  * @default 31536000
  */
 ClusterAdvancedSettings.prototype['registry.image_retention_time'] = 31536000;
+
+/**
+ * For how long in week loki is going to keep logs of your applications
+ * @member {Number} loki.log_retention_in_week
+ * @default 12
+ */
+ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
 
 /**
  * @member {module:model/ClusterAdvancedSettingsCloudProviderContainerRegistryTags} cloud_provider_container_registry_tags

@@ -145,6 +145,34 @@ export default class StateEnum {
         "STOP_QUEUED" = "STOP_QUEUED";
 
     
+        /**
+         * value: "RESTART_QUEUED"
+         * @const
+         */
+        "RESTART_QUEUED" = "RESTART_QUEUED";
+
+    
+        /**
+         * value: "RESTARTING"
+         * @const
+         */
+        "RESTARTING" = "RESTARTING";
+
+    
+        /**
+         * value: "RESTARTED"
+         * @const
+         */
+        "RESTARTED" = "RESTARTED";
+
+    
+        /**
+         * value: "RESTARTED_ERROR"
+         * @const
+         */
+        "RESTARTED_ERROR" = "RESTARTED_ERROR";
+
+    
 
     /**
     * Returns a <code>StateEnum</code> enum value from a Javascript object name.

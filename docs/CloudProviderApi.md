@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 ## listAWSEKSInstanceType
 
-> ClusterInstanceTypeResponseList listAWSEKSInstanceType()
+> ClusterInstanceTypeResponseList listAWSEKSInstanceType(region)
 
 List AWS EKS available instance types
 
@@ -36,7 +36,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.CloudProviderApi();
-apiInstance.listAWSEKSInstanceType((error, data, response) => {
+let region = us-east-2; // String | region name
+apiInstance.listAWSEKSInstanceType(region, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -47,7 +48,10 @@ apiInstance.listAWSEKSInstanceType((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **String**| region name | 
 
 ### Return type
 

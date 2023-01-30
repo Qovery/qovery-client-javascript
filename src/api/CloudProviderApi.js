@@ -47,13 +47,19 @@ export default class CloudProviderApi {
 
     /**
      * List AWS EKS available instance types
+     * @param {String} region region name
      * @param {module:api/CloudProviderApi~listAWSEKSInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
      */
-    listAWSEKSInstanceType(callback) {
+    listAWSEKSInstanceType(region, callback) {
       let postBody = null;
+      // verify the required parameter 'region' is set
+      if (region === undefined || region === null) {
+        throw new Error("Missing the required parameter 'region' when calling listAWSEKSInstanceType");
+      }
 
       let pathParams = {
+        'region': region
       };
       let queryParams = {
       };

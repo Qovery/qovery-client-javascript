@@ -156,6 +156,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property networkIngressDenylistSourceRange (base name: "network.ingress.denylist_source_range")', function() {
+      // uncomment below and update the code to test the property networkIngressDenylistSourceRange
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressBasicAuthEnvVar (base name: "network.ingress.basic_auth_env_var")', function() {
+      // uncomment below and update the code to test the property networkIngressBasicAuthEnvVar
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property readinessProbeType (base name: "readiness_probe.type")', function() {
       // uncomment below and update the code to test the property readinessProbeType
       //var instance = new QoveryApi.ApplicationAdvancedSettings();

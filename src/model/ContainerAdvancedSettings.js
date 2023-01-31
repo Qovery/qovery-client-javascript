@@ -92,6 +92,12 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.whitelist_source_range')) {
                 obj['network.ingress.whitelist_source_range'] = ApiClient.convertToType(data['network.ingress.whitelist_source_range'], 'String');
             }
+            if (data.hasOwnProperty('network.ingress.denylist_source_range')) {
+                obj['network.ingress.denylist_source_range'] = ApiClient.convertToType(data['network.ingress.denylist_source_range'], 'String');
+            }
+            if (data.hasOwnProperty('network.ingress.basic_auth_env_var')) {
+                obj['network.ingress.basic_auth_env_var'] = ApiClient.convertToType(data['network.ingress.basic_auth_env_var'], 'String');
+            }
             if (data.hasOwnProperty('readiness_probe.type')) {
                 obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
             }
@@ -240,6 +246,20 @@ ContainerAdvancedSettings.prototype['network.ingress.proxy_read_timeout_seconds'
  * @default '0.0.0.0/0'
  */
 ContainerAdvancedSettings.prototype['network.ingress.whitelist_source_range'] = '0.0.0.0/0';
+
+/**
+ * list of source ranges to deny access to ingress proxy.  This property can be used to blacklist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 
+ * @member {String} network.ingress.denylist_source_range
+ * @default ''
+ */
+ContainerAdvancedSettings.prototype['network.ingress.denylist_source_range'] = '';
+
+/**
+ * Set the name of an environment variable to use as a basic authentication (`login:crypted_password`) from `htpasswd` command. You can add multiples comma separated values. 
+ * @member {String} network.ingress.basic_auth_env_var
+ * @default ''
+ */
+ContainerAdvancedSettings.prototype['network.ingress.basic_auth_env_var'] = '';
 
 /**
  * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 

@@ -132,6 +132,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property _arguments (base name: "arguments")', function() {
+      // uncomment below and update the code to test the property _arguments
+      //var instance = new QoveryApi.ApplicationEditRequestAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property entrypoint (base name: "entrypoint")', function() {
+      // uncomment below and update the code to test the property entrypoint
+      //var instance = new QoveryApi.ApplicationEditRequestAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -101,6 +101,12 @@ class ApplicationEditRequest {
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
+            if (data.hasOwnProperty('arguments')) {
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
+            }
         }
         return obj;
     }
@@ -191,6 +197,17 @@ ApplicationEditRequest.prototype['auto_preview'] = true;
  */
 ApplicationEditRequest.prototype['ports'] = undefined;
 
+/**
+ * @member {Array.<String>} arguments
+ */
+ApplicationEditRequest.prototype['arguments'] = undefined;
+
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ApplicationEditRequest.prototype['entrypoint'] = undefined;
+
 
 // Implement ServiceStorageRequest interface:
 /**
@@ -263,6 +280,15 @@ ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
  * @member {Array.<module:model/ServicePort>} ports
  */
 ApplicationEditRequestAllOf.prototype['ports'] = undefined;
+/**
+ * @member {Array.<String>} arguments
+ */
+ApplicationEditRequestAllOf.prototype['arguments'] = undefined;
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ApplicationEditRequestAllOf.prototype['entrypoint'] = undefined;
 
 
 

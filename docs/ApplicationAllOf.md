@@ -20,5 +20,7 @@ Name | Type | Description | Notes
 **healthcheck** | [**Healthcheck**](Healthcheck.md) |  | [optional] 
 **autoPreview** | **Boolean** | Specify if the environment preview option is activated or not for this application.   If activated, a preview environment will be automatically cloned at each pull request.   If not specified, it takes the value of the &#x60;auto_preview&#x60; property from the associated environment.  | [optional] [default to true]
 **ports** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
+**_arguments** | **[String]** |  | [optional] 
+**entrypoint** | **String** | optional entrypoint when launching container | [optional] 
 
 

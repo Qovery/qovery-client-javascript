@@ -127,6 +127,12 @@ class Application {
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
+            if (data.hasOwnProperty('arguments')) {
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
+            }
         }
         return obj;
     }
@@ -247,6 +253,17 @@ Application.prototype['auto_preview'] = true;
  */
 Application.prototype['ports'] = undefined;
 
+/**
+ * @member {Array.<String>} arguments
+ */
+Application.prototype['arguments'] = undefined;
+
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+Application.prototype['entrypoint'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -344,6 +361,15 @@ ApplicationAllOf.prototype['auto_preview'] = true;
  * @member {Array.<module:model/ServicePort>} ports
  */
 ApplicationAllOf.prototype['ports'] = undefined;
+/**
+ * @member {Array.<String>} arguments
+ */
+ApplicationAllOf.prototype['arguments'] = undefined;
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ApplicationAllOf.prototype['entrypoint'] = undefined;
 
 
 

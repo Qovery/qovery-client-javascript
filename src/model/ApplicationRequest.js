@@ -108,6 +108,12 @@ class ApplicationRequest {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
+            if (data.hasOwnProperty('arguments')) {
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
+            }
         }
         return obj;
     }
@@ -198,6 +204,17 @@ ApplicationRequest.prototype['healthcheck'] = undefined;
  */
 ApplicationRequest.prototype['auto_preview'] = true;
 
+/**
+ * @member {Array.<String>} arguments
+ */
+ApplicationRequest.prototype['arguments'] = undefined;
+
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ApplicationRequest.prototype['entrypoint'] = undefined;
+
 
 // Implement ServiceStorageRequest interface:
 /**
@@ -271,6 +288,15 @@ ApplicationRequestAllOf.prototype['healthcheck'] = undefined;
  * @default true
  */
 ApplicationRequestAllOf.prototype['auto_preview'] = true;
+/**
+ * @member {Array.<String>} arguments
+ */
+ApplicationRequestAllOf.prototype['arguments'] = undefined;
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ApplicationRequestAllOf.prototype['entrypoint'] = undefined;
 
 
 

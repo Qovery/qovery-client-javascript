@@ -91,6 +91,12 @@ class ApplicationEditRequestAllOf {
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
+            if (data.hasOwnProperty('arguments')) {
+                obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
+            }
+            if (data.hasOwnProperty('entrypoint')) {
+                obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
+            }
         }
         return obj;
     }
@@ -175,6 +181,17 @@ ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
  * @member {Array.<module:model/ServicePort>} ports
  */
 ApplicationEditRequestAllOf.prototype['ports'] = undefined;
+
+/**
+ * @member {Array.<String>} arguments
+ */
+ApplicationEditRequestAllOf.prototype['arguments'] = undefined;
+
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ApplicationEditRequestAllOf.prototype['entrypoint'] = undefined;
 
 
 

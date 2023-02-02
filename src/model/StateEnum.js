@@ -167,10 +167,10 @@ export default class StateEnum {
 
     
         /**
-         * value: "RESTARTED_ERROR"
+         * value: "RESTART_ERROR"
          * @const
          */
-        "RESTARTED_ERROR" = "RESTARTED_ERROR";
+        "RESTART_ERROR" = "RESTART_ERROR";
 
     
 

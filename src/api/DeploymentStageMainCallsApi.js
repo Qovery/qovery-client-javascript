@@ -13,9 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
-import EditDeploymentStage200Response from '../model/EditDeploymentStage200Response';
-import EditDeploymentStageRequest from '../model/EditDeploymentStageRequest';
-import ListEnvironmentDeploymentStage200Response from '../model/ListEnvironmentDeploymentStage200Response';
+import DeploymentStageRequest from '../model/DeploymentStageRequest';
+import DeploymentStageResponse from '../model/DeploymentStageResponse';
+import DeploymentStageResponseList from '../model/DeploymentStageResponseList';
 
 /**
 * DeploymentStageMainCalls service.
@@ -81,7 +81,7 @@ export default class DeploymentStageMainCallsApi {
      * Callback function to receive the result of the createEnvironmentDeploymentStage operation.
      * @callback module:api/DeploymentStageMainCallsApi~createEnvironmentDeploymentStageCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/DeploymentStageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -89,13 +89,13 @@ export default class DeploymentStageMainCallsApi {
      * Create environment deployment stage
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {Object} opts.body 
+     * @param {module:model/DeploymentStageRequest} opts.deploymentStageRequest 
      * @param {module:api/DeploymentStageMainCallsApi~createEnvironmentDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/DeploymentStageResponse}
      */
     createEnvironmentDeploymentStage(environmentId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['body'];
+      let postBody = opts['deploymentStageRequest'];
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
         throw new Error("Missing the required parameter 'environmentId' when calling createEnvironmentDeploymentStage");
@@ -114,7 +114,7 @@ export default class DeploymentStageMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = DeploymentStageResponse;
       return this.apiClient.callApi(
         '/environment/{environmentId}/deploymentStage', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -161,7 +161,7 @@ export default class DeploymentStageMainCallsApi {
      * Callback function to receive the result of the editDeploymentStage operation.
      * @callback module:api/DeploymentStageMainCallsApi~editDeploymentStageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/EditDeploymentStage200Response} data The data returned by the service call.
+     * @param {module:model/DeploymentStageResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -169,13 +169,13 @@ export default class DeploymentStageMainCallsApi {
      * Edit deployment stage
      * @param {String} deploymentStageId Deployment Stage ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EditDeploymentStageRequest} opts.editDeploymentStageRequest 
+     * @param {module:model/DeploymentStageRequest} opts.deploymentStageRequest 
      * @param {module:api/DeploymentStageMainCallsApi~editDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EditDeploymentStage200Response}
+     * data is of type: {@link module:model/DeploymentStageResponse}
      */
     editDeploymentStage(deploymentStageId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['editDeploymentStageRequest'];
+      let postBody = opts['deploymentStageRequest'];
       // verify the required parameter 'deploymentStageId' is set
       if (deploymentStageId === undefined || deploymentStageId === null) {
         throw new Error("Missing the required parameter 'deploymentStageId' when calling editDeploymentStage");
@@ -194,7 +194,7 @@ export default class DeploymentStageMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = EditDeploymentStage200Response;
+      let returnType = DeploymentStageResponse;
       return this.apiClient.callApi(
         '/deploymentStage/{deploymentStageId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -206,7 +206,7 @@ export default class DeploymentStageMainCallsApi {
      * Callback function to receive the result of the listEnvironmentDeploymentStage operation.
      * @callback module:api/DeploymentStageMainCallsApi~listEnvironmentDeploymentStageCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListEnvironmentDeploymentStage200Response} data The data returned by the service call.
+     * @param {module:model/DeploymentStageResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -214,7 +214,7 @@ export default class DeploymentStageMainCallsApi {
      * List environment deployment stage
      * @param {String} environmentId Environment ID
      * @param {module:api/DeploymentStageMainCallsApi~listEnvironmentDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListEnvironmentDeploymentStage200Response}
+     * data is of type: {@link module:model/DeploymentStageResponseList}
      */
     listEnvironmentDeploymentStage(environmentId, callback) {
       let postBody = null;
@@ -236,7 +236,7 @@ export default class DeploymentStageMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ListEnvironmentDeploymentStage200Response;
+      let returnType = DeploymentStageResponseList;
       return this.apiClient.callApi(
         '/environment/{environmentId}/deploymentStage', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -248,7 +248,7 @@ export default class DeploymentStageMainCallsApi {
      * Callback function to receive the result of the moveDeploymentStage operation.
      * @callback module:api/DeploymentStageMainCallsApi~moveDeploymentStageCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/DeploymentStageResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -256,7 +256,7 @@ export default class DeploymentStageMainCallsApi {
      * Move deployment stage before requested stage
      * @param {String} stageId Deployment Stage ID
      * @param {module:api/DeploymentStageMainCallsApi~moveDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/DeploymentStageResponseList}
      */
     moveDeploymentStage(stageId, callback) {
       let postBody = null;
@@ -278,7 +278,7 @@ export default class DeploymentStageMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = DeploymentStageResponseList;
       return this.apiClient.callApi(
         '/deploymentStage/{deploymentStageId}/moveBefore/{stageId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

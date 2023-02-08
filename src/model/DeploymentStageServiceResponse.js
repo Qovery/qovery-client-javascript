@@ -13,25 +13,25 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import EditDeploymentStage200ResponseAllOfServicesInnerAllOf from './EditDeploymentStage200ResponseAllOfServicesInnerAllOf';
+import DeploymentStageServiceResponseAllOf from './DeploymentStageServiceResponseAllOf';
 
 /**
- * The EditDeploymentStage200ResponseAllOfServicesInner model module.
- * @module model/EditDeploymentStage200ResponseAllOfServicesInner
+ * The DeploymentStageServiceResponse model module.
+ * @module model/DeploymentStageServiceResponse
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class EditDeploymentStage200ResponseAllOfServicesInner {
+class DeploymentStageServiceResponse {
     /**
-     * Constructs a new <code>EditDeploymentStage200ResponseAllOfServicesInner</code>.
-     * @alias module:model/EditDeploymentStage200ResponseAllOfServicesInner
+     * Constructs a new <code>DeploymentStageServiceResponse</code>.
+     * @alias module:model/DeploymentStageServiceResponse
      * @implements module:model/Base
-     * @implements module:model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf
+     * @implements module:model/DeploymentStageServiceResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);EditDeploymentStage200ResponseAllOfServicesInnerAllOf.initialize(this);
-        EditDeploymentStage200ResponseAllOfServicesInner.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);DeploymentStageServiceResponseAllOf.initialize(this);
+        DeploymentStageServiceResponse.initialize(this, id, createdAt);
     }
 
     /**
@@ -45,17 +45,17 @@ class EditDeploymentStage200ResponseAllOfServicesInner {
     }
 
     /**
-     * Constructs a <code>EditDeploymentStage200ResponseAllOfServicesInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentStageServiceResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EditDeploymentStage200ResponseAllOfServicesInner} obj Optional instance to populate.
-     * @return {module:model/EditDeploymentStage200ResponseAllOfServicesInner} The populated <code>EditDeploymentStage200ResponseAllOfServicesInner</code> instance.
+     * @param {module:model/DeploymentStageServiceResponse} obj Optional instance to populate.
+     * @return {module:model/DeploymentStageServiceResponse} The populated <code>DeploymentStageServiceResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EditDeploymentStage200ResponseAllOfServicesInner();
+            obj = obj || new DeploymentStageServiceResponse();
             Base.constructFromObject(data, obj);
-            EditDeploymentStage200ResponseAllOfServicesInnerAllOf.constructFromObject(data, obj);
+            DeploymentStageServiceResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -79,23 +79,23 @@ class EditDeploymentStage200ResponseAllOfServicesInner {
 /**
  * @member {String} id
  */
-EditDeploymentStage200ResponseAllOfServicesInner.prototype['id'] = undefined;
+DeploymentStageServiceResponse.prototype['id'] = undefined;
 
 /**
  * @member {Date} created_at
  */
-EditDeploymentStage200ResponseAllOfServicesInner.prototype['created_at'] = undefined;
+DeploymentStageServiceResponse.prototype['created_at'] = undefined;
 
 /**
  * @member {Date} updated_at
  */
-EditDeploymentStage200ResponseAllOfServicesInner.prototype['updated_at'] = undefined;
+DeploymentStageServiceResponse.prototype['updated_at'] = undefined;
 
 /**
  * id of the service attached to the stage
  * @member {String} service_id
  */
-EditDeploymentStage200ResponseAllOfServicesInner.prototype['service_id'] = undefined;
+DeploymentStageServiceResponse.prototype['service_id'] = undefined;
 
 
 // Implement Base interface:
@@ -111,15 +111,15 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement EditDeploymentStage200ResponseAllOfServicesInnerAllOf interface:
+// Implement DeploymentStageServiceResponseAllOf interface:
 /**
  * id of the service attached to the stage
  * @member {String} service_id
  */
-EditDeploymentStage200ResponseAllOfServicesInnerAllOf.prototype['service_id'] = undefined;
+DeploymentStageServiceResponseAllOf.prototype['service_id'] = undefined;
 
 
 
 
-export default EditDeploymentStage200ResponseAllOfServicesInner;
+export default DeploymentStageServiceResponse;
 

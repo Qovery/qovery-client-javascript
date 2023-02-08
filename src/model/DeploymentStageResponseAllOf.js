@@ -12,23 +12,23 @@
  */
 
 import ApiClient from '../ApiClient';
-import EditDeploymentStage200ResponseAllOfServicesInner from './EditDeploymentStage200ResponseAllOfServicesInner';
+import DeploymentStageServiceResponse from './DeploymentStageServiceResponse';
 import ReferenceObject from './ReferenceObject';
 
 /**
- * The EditDeploymentStage200ResponseAllOf model module.
- * @module model/EditDeploymentStage200ResponseAllOf
+ * The DeploymentStageResponseAllOf model module.
+ * @module model/DeploymentStageResponseAllOf
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class EditDeploymentStage200ResponseAllOf {
+class DeploymentStageResponseAllOf {
     /**
-     * Constructs a new <code>EditDeploymentStage200ResponseAllOf</code>.
-     * @alias module:model/EditDeploymentStage200ResponseAllOf
+     * Constructs a new <code>DeploymentStageResponseAllOf</code>.
+     * @alias module:model/DeploymentStageResponseAllOf
      * @param environment {module:model/ReferenceObject} 
      */
     constructor(environment) { 
         
-        EditDeploymentStage200ResponseAllOf.initialize(this, environment);
+        DeploymentStageResponseAllOf.initialize(this, environment);
     }
 
     /**
@@ -41,15 +41,15 @@ class EditDeploymentStage200ResponseAllOf {
     }
 
     /**
-     * Constructs a <code>EditDeploymentStage200ResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentStageResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EditDeploymentStage200ResponseAllOf} obj Optional instance to populate.
-     * @return {module:model/EditDeploymentStage200ResponseAllOf} The populated <code>EditDeploymentStage200ResponseAllOf</code> instance.
+     * @param {module:model/DeploymentStageResponseAllOf} obj Optional instance to populate.
+     * @return {module:model/DeploymentStageResponseAllOf} The populated <code>DeploymentStageResponseAllOf</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EditDeploymentStage200ResponseAllOf();
+            obj = obj || new DeploymentStageResponseAllOf();
 
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
@@ -64,7 +64,7 @@ class EditDeploymentStage200ResponseAllOf {
                 obj['deployment_order'] = ApiClient.convertToType(data['deployment_order'], 'Number');
             }
             if (data.hasOwnProperty('services')) {
-                obj['services'] = ApiClient.convertToType(data['services'], [EditDeploymentStage200ResponseAllOfServicesInner]);
+                obj['services'] = ApiClient.convertToType(data['services'], [DeploymentStageServiceResponse]);
             }
         }
         return obj;
@@ -76,34 +76,34 @@ class EditDeploymentStage200ResponseAllOf {
 /**
  * @member {module:model/ReferenceObject} environment
  */
-EditDeploymentStage200ResponseAllOf.prototype['environment'] = undefined;
+DeploymentStageResponseAllOf.prototype['environment'] = undefined;
 
 /**
  * name is case insensitive
  * @member {String} name
  */
-EditDeploymentStage200ResponseAllOf.prototype['name'] = undefined;
+DeploymentStageResponseAllOf.prototype['name'] = undefined;
 
 /**
  * @member {String} description
  */
-EditDeploymentStage200ResponseAllOf.prototype['description'] = undefined;
+DeploymentStageResponseAllOf.prototype['description'] = undefined;
 
 /**
  * Position of the deployment stage within the environment
  * @member {Number} deployment_order
  */
-EditDeploymentStage200ResponseAllOf.prototype['deployment_order'] = undefined;
+DeploymentStageResponseAllOf.prototype['deployment_order'] = undefined;
 
 /**
- * @member {Array.<module:model/EditDeploymentStage200ResponseAllOfServicesInner>} services
+ * @member {Array.<module:model/DeploymentStageServiceResponse>} services
  */
-EditDeploymentStage200ResponseAllOf.prototype['services'] = undefined;
+DeploymentStageResponseAllOf.prototype['services'] = undefined;
 
 
 
 
 
 
-export default EditDeploymentStage200ResponseAllOf;
+export default DeploymentStageResponseAllOf;
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EditDeploymentStage200ResponseAllOf();
+    instance = new QoveryApi.DeploymentStageResponseAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,40 @@
       object[property] = value;
   }
 
-  describe('EditDeploymentStage200ResponseAllOf', function() {
-    it('should create an instance of EditDeploymentStage200ResponseAllOf', function() {
-      // uncomment below and update the code to test EditDeploymentStage200ResponseAllOf
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOf();
-      //expect(instance).to.be.a(QoveryApi.EditDeploymentStage200ResponseAllOf);
+  describe('DeploymentStageResponseAllOf', function() {
+    it('should create an instance of DeploymentStageResponseAllOf', function() {
+      // uncomment below and update the code to test DeploymentStageResponseAllOf
+      //var instance = new QoveryApi.DeploymentStageResponseAllOf();
+      //expect(instance).to.be.a(QoveryApi.DeploymentStageResponseAllOf);
     });
 
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOf();
+      //var instance = new QoveryApi.DeploymentStageResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOf();
+      //var instance = new QoveryApi.DeploymentStageResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOf();
+      //var instance = new QoveryApi.DeploymentStageResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property deploymentOrder (base name: "deployment_order")', function() {
       // uncomment below and update the code to test the property deploymentOrder
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOf();
+      //var instance = new QoveryApi.DeploymentStageResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property services (base name: "services")', function() {
       // uncomment below and update the code to test the property services
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOf();
+      //var instance = new QoveryApi.DeploymentStageResponseAllOf();
       //expect(instance).to.be();
     });
 

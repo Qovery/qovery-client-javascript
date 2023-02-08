@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf();
+    instance = new QoveryApi.DeploymentStageResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('EditDeploymentStage200ResponseAllOfServicesInnerAllOf', function() {
-    it('should create an instance of EditDeploymentStage200ResponseAllOfServicesInnerAllOf', function() {
-      // uncomment below and update the code to test EditDeploymentStage200ResponseAllOfServicesInnerAllOf
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf();
-      //expect(instance).to.be.a(QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf);
+  describe('DeploymentStageResponseList', function() {
+    it('should create an instance of DeploymentStageResponseList', function() {
+      // uncomment below and update the code to test DeploymentStageResponseList
+      //var instance = new QoveryApi.DeploymentStageResponseList();
+      //expect(instance).to.be.a(QoveryApi.DeploymentStageResponseList);
     });
 
-    it('should have the property serviceId (base name: "service_id")', function() {
-      // uncomment below and update the code to test the property serviceId
-      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf();
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instance = new QoveryApi.DeploymentStageResponseList();
       //expect(instance).to.be();
     });
 

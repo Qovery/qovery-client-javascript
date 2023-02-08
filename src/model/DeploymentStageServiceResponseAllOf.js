@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The EditDeploymentStage200ResponseAllOfServicesInnerAllOf model module.
- * @module model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf
+ * The DeploymentStageServiceResponseAllOf model module.
+ * @module model/DeploymentStageServiceResponseAllOf
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class EditDeploymentStage200ResponseAllOfServicesInnerAllOf {
+class DeploymentStageServiceResponseAllOf {
     /**
-     * Constructs a new <code>EditDeploymentStage200ResponseAllOfServicesInnerAllOf</code>.
-     * @alias module:model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf
+     * Constructs a new <code>DeploymentStageServiceResponseAllOf</code>.
+     * @alias module:model/DeploymentStageServiceResponseAllOf
      */
     constructor() { 
         
-        EditDeploymentStage200ResponseAllOfServicesInnerAllOf.initialize(this);
+        DeploymentStageServiceResponseAllOf.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class EditDeploymentStage200ResponseAllOfServicesInnerAllOf {
     }
 
     /**
-     * Constructs a <code>EditDeploymentStage200ResponseAllOfServicesInnerAllOf</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentStageServiceResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf} obj Optional instance to populate.
-     * @return {module:model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf} The populated <code>EditDeploymentStage200ResponseAllOfServicesInnerAllOf</code> instance.
+     * @param {module:model/DeploymentStageServiceResponseAllOf} obj Optional instance to populate.
+     * @return {module:model/DeploymentStageServiceResponseAllOf} The populated <code>DeploymentStageServiceResponseAllOf</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new EditDeploymentStage200ResponseAllOfServicesInnerAllOf();
+            obj = obj || new DeploymentStageServiceResponseAllOf();
 
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
@@ -61,12 +61,12 @@ class EditDeploymentStage200ResponseAllOfServicesInnerAllOf {
  * id of the service attached to the stage
  * @member {String} service_id
  */
-EditDeploymentStage200ResponseAllOfServicesInnerAllOf.prototype['service_id'] = undefined;
+DeploymentStageServiceResponseAllOf.prototype['service_id'] = undefined;
 
 
 
 
 
 
-export default EditDeploymentStage200ResponseAllOfServicesInnerAllOf;
+export default DeploymentStageServiceResponseAllOf;
 

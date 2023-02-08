@@ -62,7 +62,7 @@ null (empty response body)
 
 ## createEnvironmentDeploymentStage
 
-> Object createEnvironmentDeploymentStage(environmentId, opts)
+> DeploymentStageResponse createEnvironmentDeploymentStage(environmentId, opts)
 
 Create environment deployment stage
 
@@ -78,7 +78,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'body': null // Object | 
+  'deploymentStageRequest': new QoveryApi.DeploymentStageRequest() // DeploymentStageRequest | 
 };
 apiInstance.createEnvironmentDeploymentStage(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -95,11 +95,11 @@ apiInstance.createEnvironmentDeploymentStage(environmentId, opts, (error, data, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **environmentId** | **String**| Environment ID | 
- **body** | **Object**|  | [optional] 
+ **deploymentStageRequest** | [**DeploymentStageRequest**](DeploymentStageRequest.md)|  | [optional] 
 
 ### Return type
 
-**Object**
+[**DeploymentStageResponse**](DeploymentStageResponse.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ null (empty response body)
 
 ## editDeploymentStage
 
-> EditDeploymentStage200Response editDeploymentStage(deploymentStageId, opts)
+> DeploymentStageResponse editDeploymentStage(deploymentStageId, opts)
 
 Edit deployment stage
 
@@ -172,7 +172,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
 let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
 let opts = {
-  'editDeploymentStageRequest': new QoveryApi.EditDeploymentStageRequest() // EditDeploymentStageRequest | 
+  'deploymentStageRequest': new QoveryApi.DeploymentStageRequest() // DeploymentStageRequest | 
 };
 apiInstance.editDeploymentStage(deploymentStageId, opts, (error, data, response) => {
   if (error) {
@@ -189,11 +189,11 @@ apiInstance.editDeploymentStage(deploymentStageId, opts, (error, data, response)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentStageId** | **String**| Deployment Stage ID | 
- **editDeploymentStageRequest** | [**EditDeploymentStageRequest**](EditDeploymentStageRequest.md)|  | [optional] 
+ **deploymentStageRequest** | [**DeploymentStageRequest**](DeploymentStageRequest.md)|  | [optional] 
 
 ### Return type
 
-[**EditDeploymentStage200Response**](EditDeploymentStage200Response.md)
+[**DeploymentStageResponse**](DeploymentStageResponse.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ## listEnvironmentDeploymentStage
 
-> ListEnvironmentDeploymentStage200Response listEnvironmentDeploymentStage(environmentId)
+> DeploymentStageResponseList listEnvironmentDeploymentStage(environmentId)
 
 List environment deployment stage
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListEnvironmentDeploymentStage200Response**](ListEnvironmentDeploymentStage200Response.md)
+[**DeploymentStageResponseList**](DeploymentStageResponseList.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ## moveDeploymentStage
 
-> Object moveDeploymentStage(stageId)
+> DeploymentStageResponseList moveDeploymentStage(stageId)
 
 Move deployment stage before requested stage
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DeploymentStageResponseList**](DeploymentStageResponseList.md)
 
 ### Authorization
 

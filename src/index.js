@@ -173,12 +173,13 @@ import DeploymentHistoryStatusEnum from './model/DeploymentHistoryStatusEnum';
 import DeploymentRestrictionModeEnum from './model/DeploymentRestrictionModeEnum';
 import DeploymentRestrictionTypeEnum from './model/DeploymentRestrictionTypeEnum';
 import DeploymentRuleRequest from './model/DeploymentRuleRequest';
+import DeploymentStageRequest from './model/DeploymentStageRequest';
+import DeploymentStageResponse from './model/DeploymentStageResponse';
+import DeploymentStageResponseAllOf from './model/DeploymentStageResponseAllOf';
+import DeploymentStageResponseList from './model/DeploymentStageResponseList';
+import DeploymentStageServiceResponse from './model/DeploymentStageServiceResponse';
+import DeploymentStageServiceResponseAllOf from './model/DeploymentStageServiceResponseAllOf';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
-import EditDeploymentStage200Response from './model/EditDeploymentStage200Response';
-import EditDeploymentStage200ResponseAllOf from './model/EditDeploymentStage200ResponseAllOf';
-import EditDeploymentStage200ResponseAllOfServicesInner from './model/EditDeploymentStage200ResponseAllOfServicesInner';
-import EditDeploymentStage200ResponseAllOfServicesInnerAllOf from './model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf';
-import EditDeploymentStageRequest from './model/EditDeploymentStageRequest';
 import Environment from './model/Environment';
 import EnvironmentAllOf from './model/EnvironmentAllOf';
 import EnvironmentAllOfCloudProvider from './model/EnvironmentAllOfCloudProvider';
@@ -285,7 +286,6 @@ import ListContainerDeploymentHistory200Response from './model/ListContainerDepl
 import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
-import ListEnvironmentDeploymentStage200Response from './model/ListEnvironmentDeploymentStage200Response';
 import ListJobDeploymentHistory200Response from './model/ListJobDeploymentHistory200Response';
 import ListJobDeploymentHistory200ResponseAllOf from './model/ListJobDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
@@ -1501,40 +1501,46 @@ export {
     DeploymentRuleRequest,
 
     /**
+     * The DeploymentStageRequest model constructor.
+     * @property {module:model/DeploymentStageRequest}
+     */
+    DeploymentStageRequest,
+
+    /**
+     * The DeploymentStageResponse model constructor.
+     * @property {module:model/DeploymentStageResponse}
+     */
+    DeploymentStageResponse,
+
+    /**
+     * The DeploymentStageResponseAllOf model constructor.
+     * @property {module:model/DeploymentStageResponseAllOf}
+     */
+    DeploymentStageResponseAllOf,
+
+    /**
+     * The DeploymentStageResponseList model constructor.
+     * @property {module:model/DeploymentStageResponseList}
+     */
+    DeploymentStageResponseList,
+
+    /**
+     * The DeploymentStageServiceResponse model constructor.
+     * @property {module:model/DeploymentStageServiceResponse}
+     */
+    DeploymentStageServiceResponse,
+
+    /**
+     * The DeploymentStageServiceResponseAllOf model constructor.
+     * @property {module:model/DeploymentStageServiceResponseAllOf}
+     */
+    DeploymentStageServiceResponseAllOf,
+
+    /**
      * The DoCredentialsRequest model constructor.
      * @property {module:model/DoCredentialsRequest}
      */
     DoCredentialsRequest,
-
-    /**
-     * The EditDeploymentStage200Response model constructor.
-     * @property {module:model/EditDeploymentStage200Response}
-     */
-    EditDeploymentStage200Response,
-
-    /**
-     * The EditDeploymentStage200ResponseAllOf model constructor.
-     * @property {module:model/EditDeploymentStage200ResponseAllOf}
-     */
-    EditDeploymentStage200ResponseAllOf,
-
-    /**
-     * The EditDeploymentStage200ResponseAllOfServicesInner model constructor.
-     * @property {module:model/EditDeploymentStage200ResponseAllOfServicesInner}
-     */
-    EditDeploymentStage200ResponseAllOfServicesInner,
-
-    /**
-     * The EditDeploymentStage200ResponseAllOfServicesInnerAllOf model constructor.
-     * @property {module:model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf}
-     */
-    EditDeploymentStage200ResponseAllOfServicesInnerAllOf,
-
-    /**
-     * The EditDeploymentStageRequest model constructor.
-     * @property {module:model/EditDeploymentStageRequest}
-     */
-    EditDeploymentStageRequest,
 
     /**
      * The Environment model constructor.
@@ -2171,12 +2177,6 @@ export {
      * @property {module:model/ListDatabaseDeploymentHistory200ResponseAllOf}
      */
     ListDatabaseDeploymentHistory200ResponseAllOf,
-
-    /**
-     * The ListEnvironmentDeploymentStage200Response model constructor.
-     * @property {module:model/ListEnvironmentDeploymentStage200Response}
-     */
-    ListEnvironmentDeploymentStage200Response,
 
     /**
      * The ListJobDeploymentHistory200Response model constructor.

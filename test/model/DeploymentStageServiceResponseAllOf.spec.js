@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListEnvironmentDeploymentStage200Response();
+    instance = new QoveryApi.DeploymentStageServiceResponseAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ListEnvironmentDeploymentStage200Response', function() {
-    it('should create an instance of ListEnvironmentDeploymentStage200Response', function() {
-      // uncomment below and update the code to test ListEnvironmentDeploymentStage200Response
-      //var instance = new QoveryApi.ListEnvironmentDeploymentStage200Response();
-      //expect(instance).to.be.a(QoveryApi.ListEnvironmentDeploymentStage200Response);
+  describe('DeploymentStageServiceResponseAllOf', function() {
+    it('should create an instance of DeploymentStageServiceResponseAllOf', function() {
+      // uncomment below and update the code to test DeploymentStageServiceResponseAllOf
+      //var instance = new QoveryApi.DeploymentStageServiceResponseAllOf();
+      //expect(instance).to.be.a(QoveryApi.DeploymentStageServiceResponseAllOf);
     });
 
-    it('should have the property results (base name: "results")', function() {
-      // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ListEnvironmentDeploymentStage200Response();
+    it('should have the property serviceId (base name: "service_id")', function() {
+      // uncomment below and update the code to test the property serviceId
+      //var instance = new QoveryApi.DeploymentStageServiceResponseAllOf();
       //expect(instance).to.be();
     });
 

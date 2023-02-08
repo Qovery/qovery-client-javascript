@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EditDeploymentStageRequest();
+    instance = new QoveryApi.DeploymentStageRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('EditDeploymentStageRequest', function() {
-    it('should create an instance of EditDeploymentStageRequest', function() {
-      // uncomment below and update the code to test EditDeploymentStageRequest
-      //var instance = new QoveryApi.EditDeploymentStageRequest();
-      //expect(instance).to.be.a(QoveryApi.EditDeploymentStageRequest);
+  describe('DeploymentStageRequest', function() {
+    it('should create an instance of DeploymentStageRequest', function() {
+      // uncomment below and update the code to test DeploymentStageRequest
+      //var instance = new QoveryApi.DeploymentStageRequest();
+      //expect(instance).to.be.a(QoveryApi.DeploymentStageRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.EditDeploymentStageRequest();
+      //var instance = new QoveryApi.DeploymentStageRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.EditDeploymentStageRequest();
+      //var instance = new QoveryApi.DeploymentStageRequest();
       //expect(instance).to.be();
     });
 

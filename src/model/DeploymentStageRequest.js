@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ListEnvironmentDeploymentStage200Response model module.
- * @module model/ListEnvironmentDeploymentStage200Response
+ * The DeploymentStageRequest model module.
+ * @module model/DeploymentStageRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListEnvironmentDeploymentStage200Response {
+class DeploymentStageRequest {
     /**
-     * Constructs a new <code>ListEnvironmentDeploymentStage200Response</code>.
-     * @alias module:model/ListEnvironmentDeploymentStage200Response
+     * Constructs a new <code>DeploymentStageRequest</code>.
+     * @alias module:model/DeploymentStageRequest
      */
     constructor() { 
         
-        ListEnvironmentDeploymentStage200Response.initialize(this);
+        DeploymentStageRequest.initialize(this);
     }
 
     /**
@@ -37,18 +37,21 @@ class ListEnvironmentDeploymentStage200Response {
     }
 
     /**
-     * Constructs a <code>ListEnvironmentDeploymentStage200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentStageRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListEnvironmentDeploymentStage200Response} obj Optional instance to populate.
-     * @return {module:model/ListEnvironmentDeploymentStage200Response} The populated <code>ListEnvironmentDeploymentStage200Response</code> instance.
+     * @param {module:model/DeploymentStageRequest} obj Optional instance to populate.
+     * @return {module:model/DeploymentStageRequest} The populated <code>DeploymentStageRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListEnvironmentDeploymentStage200Response();
+            obj = obj || new DeploymentStageRequest();
 
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Object]);
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
         }
         return obj;
@@ -58,14 +61,21 @@ class ListEnvironmentDeploymentStage200Response {
 }
 
 /**
- * @member {Array.<Object>} results
+ * The name of the deployment stage
+ * @member {String} name
  */
-ListEnvironmentDeploymentStage200Response.prototype['results'] = undefined;
+DeploymentStageRequest.prototype['name'] = undefined;
+
+/**
+ * free test describing this stage
+ * @member {String} description
+ */
+DeploymentStageRequest.prototype['description'] = undefined;
 
 
 
 
 
 
-export default ListEnvironmentDeploymentStage200Response;
+export default DeploymentStageRequest;
 

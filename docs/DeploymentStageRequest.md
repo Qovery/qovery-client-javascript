@@ -1,4 +1,4 @@
-# QoveryApi.EditDeploymentStageRequest
+# QoveryApi.DeploymentStageRequest
 
 ## Properties
 

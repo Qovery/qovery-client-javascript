@@ -110,8 +110,6 @@ docs/ContainerAdvancedSettings.md
 docs/ContainerConfigurationApi.md
 docs/ContainerCurrentScale.md
 docs/ContainerCustomDomainApi.md
-docs/ContainerDependencyApi.md
-docs/ContainerDependencyRequest.md
 docs/ContainerDeployRequest.md
 docs/ContainerDeploymentHistoryApi.md
 docs/ContainerEnvironmentVariableApi.md
@@ -173,7 +171,6 @@ docs/DatabaseTypeEnum.md
 docs/DatabaseVersionMode.md
 docs/DatabasesApi.md
 docs/DeleteMemberRequest.md
-docs/DependencyApi.md
 docs/DeployAllRequest.md
 docs/DeployAllRequestApplicationsInner.md
 docs/DeployAllRequestContainersInner.md
@@ -514,7 +511,6 @@ src/api/ClustersApi.js
 src/api/ContainerActionsApi.js
 src/api/ContainerConfigurationApi.js
 src/api/ContainerCustomDomainApi.js
-src/api/ContainerDependencyApi.js
 src/api/ContainerDeploymentHistoryApi.js
 src/api/ContainerEnvironmentVariableApi.js
 src/api/ContainerLogsApi.js
@@ -531,7 +527,6 @@ src/api/DatabaseEventApi.js
 src/api/DatabaseMainCallsApi.js
 src/api/DatabaseMetricsApi.js
 src/api/DatabasesApi.js
-src/api/DependencyApi.js
 src/api/DeploymentStageMainCallsApi.js
 src/api/EnvironmentActionsApi.js
 src/api/EnvironmentApi.js
@@ -654,7 +649,6 @@ src/model/CommunityUsage.js
 src/model/CompanySizeEnum.js
 src/model/ContainerAdvancedSettings.js
 src/model/ContainerCurrentScale.js
-src/model/ContainerDependencyRequest.js
 src/model/ContainerDeployRequest.js
 src/model/ContainerNetwork.js
 src/model/ContainerNetworkRequest.js
@@ -1002,7 +996,6 @@ test/api/ClustersApi.spec.js
 test/api/ContainerActionsApi.spec.js
 test/api/ContainerConfigurationApi.spec.js
 test/api/ContainerCustomDomainApi.spec.js
-test/api/ContainerDependencyApi.spec.js
 test/api/ContainerDeploymentHistoryApi.spec.js
 test/api/ContainerEnvironmentVariableApi.spec.js
 test/api/ContainerLogsApi.spec.js
@@ -1019,7 +1012,6 @@ test/api/DatabaseEventApi.spec.js
 test/api/DatabaseMainCallsApi.spec.js
 test/api/DatabaseMetricsApi.spec.js
 test/api/DatabasesApi.spec.js
-test/api/DependencyApi.spec.js
 test/api/DeploymentStageMainCallsApi.spec.js
 test/api/EnvironmentActionsApi.spec.js
 test/api/EnvironmentApi.spec.js
@@ -1141,7 +1133,6 @@ test/model/CommunityUsage.spec.js
 test/model/CompanySizeEnum.spec.js
 test/model/ContainerAdvancedSettings.spec.js
 test/model/ContainerCurrentScale.spec.js
-test/model/ContainerDependencyRequest.spec.js
 test/model/ContainerDeployRequest.spec.js
 test/model/ContainerNetwork.spec.js
 test/model/ContainerNetworkRequest.spec.js

@@ -100,7 +100,6 @@ import CommunityUsage from './model/CommunityUsage';
 import CompanySizeEnum from './model/CompanySizeEnum';
 import ContainerAdvancedSettings from './model/ContainerAdvancedSettings';
 import ContainerCurrentScale from './model/ContainerCurrentScale';
-import ContainerDependencyRequest from './model/ContainerDependencyRequest';
 import ContainerDeployRequest from './model/ContainerDeployRequest';
 import ContainerNetwork from './model/ContainerNetwork';
 import ContainerNetworkRequest from './model/ContainerNetworkRequest';
@@ -448,7 +447,6 @@ import ClustersApi from './api/ClustersApi';
 import ContainerActionsApi from './api/ContainerActionsApi';
 import ContainerConfigurationApi from './api/ContainerConfigurationApi';
 import ContainerCustomDomainApi from './api/ContainerCustomDomainApi';
-import ContainerDependencyApi from './api/ContainerDependencyApi';
 import ContainerDeploymentHistoryApi from './api/ContainerDeploymentHistoryApi';
 import ContainerEnvironmentVariableApi from './api/ContainerEnvironmentVariableApi';
 import ContainerLogsApi from './api/ContainerLogsApi';
@@ -465,7 +463,6 @@ import DatabaseEventApi from './api/DatabaseEventApi';
 import DatabaseMainCallsApi from './api/DatabaseMainCallsApi';
 import DatabaseMetricsApi from './api/DatabaseMetricsApi';
 import DatabasesApi from './api/DatabasesApi';
-import DependencyApi from './api/DependencyApi';
 import DeploymentStageMainCallsApi from './api/DeploymentStageMainCallsApi';
 import EnvironmentApi from './api/EnvironmentApi';
 import EnvironmentActionsApi from './api/EnvironmentActionsApi';
@@ -1061,12 +1058,6 @@ export {
      * @property {module:model/ContainerCurrentScale}
      */
     ContainerCurrentScale,
-
-    /**
-     * The ContainerDependencyRequest model constructor.
-     * @property {module:model/ContainerDependencyRequest}
-     */
-    ContainerDependencyRequest,
 
     /**
      * The ContainerDeployRequest model constructor.
@@ -3151,12 +3142,6 @@ export {
     ContainerCustomDomainApi,
 
     /**
-    * The ContainerDependencyApi service constructor.
-    * @property {module:api/ContainerDependencyApi}
-    */
-    ContainerDependencyApi,
-
-    /**
     * The ContainerDeploymentHistoryApi service constructor.
     * @property {module:api/ContainerDeploymentHistoryApi}
     */
@@ -3251,12 +3236,6 @@ export {
     * @property {module:api/DatabasesApi}
     */
     DatabasesApi,
-
-    /**
-    * The DependencyApi service constructor.
-    * @property {module:api/DependencyApi}
-    */
-    DependencyApi,
 
     /**
     * The DeploymentStageMainCallsApi service constructor.

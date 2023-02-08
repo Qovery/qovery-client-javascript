@@ -258,9 +258,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerCustomDomainApi* | [**editContainerCustomDomain**](docs/ContainerCustomDomainApi.md#editContainerCustomDomain) | **PUT** /container/{containerId}/customDomain/{customDomainId} | Edit a Custom Domain
 *QoveryApi.ContainerCustomDomainApi* | [**getContainerCustomDomainStatus**](docs/ContainerCustomDomainApi.md#getContainerCustomDomainStatus) | **GET** /container/{containerId}/customDomain/{customDomainId}/status | Get Custom Domain status
 *QoveryApi.ContainerCustomDomainApi* | [**listContainerCustomDomain**](docs/ContainerCustomDomainApi.md#listContainerCustomDomain) | **GET** /container/{containerId}/customDomain | List container custom domains
-*QoveryApi.ContainerDependencyApi* | [**createContainerDependency**](docs/ContainerDependencyApi.md#createContainerDependency) | **POST** /container/{containerId}/dependency/{targetContainerId} | Add container dependency to this application.
-*QoveryApi.ContainerDependencyApi* | [**listContainerDependency**](docs/ContainerDependencyApi.md#listContainerDependency) | **GET** /container/{containerId}/dependency | List container dependencies
-*QoveryApi.ContainerDependencyApi* | [**removeContainerDependency**](docs/ContainerDependencyApi.md#removeContainerDependency) | **DELETE** /container/{containerId}/dependency/{targetContainerId} | Remove container dependency to this container.
 *QoveryApi.ContainerDeploymentHistoryApi* | [**listContainerDeploymentHistory**](docs/ContainerDeploymentHistoryApi.md#listContainerDeploymentHistory) | **GET** /container/{containerId}/deploymentHistory | List container deployments
 *QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariable**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariable) | **POST** /container/{containerId}/environmentVariable | Add an environment variable to the container
 *QoveryApi.ContainerEnvironmentVariableApi* | [**createContainerEnvironmentVariableAlias**](docs/ContainerEnvironmentVariableApi.md#createContainerEnvironmentVariableAlias) | **POST** /container/{containerId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the container level
@@ -331,9 +328,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabasesApi* | [**listDatabase**](docs/DatabasesApi.md#listDatabase) | **GET** /environment/{environmentId}/database | List environment databases
 *QoveryApi.DatabasesApi* | [**listEnvironmentDatabaseConfig**](docs/DatabasesApi.md#listEnvironmentDatabaseConfig) | **GET** /environment/{environmentId}/databaseConfiguration | List eligible database types, versions and modes for the environment
 *QoveryApi.DatabasesApi* | [**listEnvironmentDatabaseCurrentMetric**](docs/DatabasesApi.md#listEnvironmentDatabaseCurrentMetric) | **GET** /environment/{environmentId}/database/currentMetric | List current metric consumption for each database
-*QoveryApi.DependencyApi* | [**createApplicationDependency**](docs/DependencyApi.md#createApplicationDependency) | **POST** /application/{applicationId}/dependency/{targetApplicationId} | Add application dependency to this application.
-*QoveryApi.DependencyApi* | [**listApplicationDependency**](docs/DependencyApi.md#listApplicationDependency) | **GET** /application/{applicationId}/dependency | List application dependencies
-*QoveryApi.DependencyApi* | [**removeApplicationDependency**](docs/DependencyApi.md#removeApplicationDependency) | **DELETE** /application/{applicationId}/dependency/{targetApplicationId} | Remove application dependency to this application.
 *QoveryApi.DeploymentStageMainCallsApi* | [**attachServiceToDeploymentStage**](docs/DeploymentStageMainCallsApi.md#attachServiceToDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/service/{serviceId} | Attach service to deployment stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**createEnvironmentDeploymentStage**](docs/DeploymentStageMainCallsApi.md#createEnvironmentDeploymentStage) | **POST** /environment/{environmentId}/deploymentStage | Create environment deployment stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**deleteDeploymentStage**](docs/DeploymentStageMainCallsApi.md#deleteDeploymentStage) | **DELETE** /deploymentStage/{deploymentStageId} | Delete deployment stage
@@ -576,7 +570,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CompanySizeEnum](docs/CompanySizeEnum.md)
  - [QoveryApi.ContainerAdvancedSettings](docs/ContainerAdvancedSettings.md)
  - [QoveryApi.ContainerCurrentScale](docs/ContainerCurrentScale.md)
- - [QoveryApi.ContainerDependencyRequest](docs/ContainerDependencyRequest.md)
  - [QoveryApi.ContainerDeployRequest](docs/ContainerDeployRequest.md)
  - [QoveryApi.ContainerNetwork](docs/ContainerNetwork.md)
  - [QoveryApi.ContainerNetworkRequest](docs/ContainerNetworkRequest.md)

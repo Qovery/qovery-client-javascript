@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentDeploymentRuleApi();
+    instance = new QoveryApi.ListEnvironmentDeploymentStage200Response();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('EnvironmentDeploymentRuleApi', function() {
-    describe('editEnvironmentDeploymentRule', function() {
-      it('should call editEnvironmentDeploymentRule successfully', function(done) {
-        //uncomment below and update the code to test editEnvironmentDeploymentRule
-        //instance.editEnvironmentDeploymentRule(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ListEnvironmentDeploymentStage200Response', function() {
+    it('should create an instance of ListEnvironmentDeploymentStage200Response', function() {
+      // uncomment below and update the code to test ListEnvironmentDeploymentStage200Response
+      //var instance = new QoveryApi.ListEnvironmentDeploymentStage200Response();
+      //expect(instance).to.be.a(QoveryApi.ListEnvironmentDeploymentStage200Response);
     });
+
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instance = new QoveryApi.ListEnvironmentDeploymentStage200Response();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

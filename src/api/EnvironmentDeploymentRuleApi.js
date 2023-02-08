@@ -86,47 +86,5 @@ export default class EnvironmentDeploymentRuleApi {
       );
     }
 
-    /**
-     * Callback function to receive the result of the getEnvironmentDeploymentRule operation.
-     * @callback module:api/EnvironmentDeploymentRuleApi~getEnvironmentDeploymentRuleCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentDeploymentRule} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get environment deployment rule
-     * @param {String} environmentId Environment ID
-     * @param {module:api/EnvironmentDeploymentRuleApi~getEnvironmentDeploymentRuleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentDeploymentRule}
-     */
-    getEnvironmentDeploymentRule(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentDeploymentRule");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentDeploymentRule;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/deploymentRule', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
 
 }

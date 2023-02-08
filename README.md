@@ -334,6 +334,12 @@ Class | Method | HTTP request | Description
 *QoveryApi.DependencyApi* | [**createApplicationDependency**](docs/DependencyApi.md#createApplicationDependency) | **POST** /application/{applicationId}/dependency/{targetApplicationId} | Add application dependency to this application.
 *QoveryApi.DependencyApi* | [**listApplicationDependency**](docs/DependencyApi.md#listApplicationDependency) | **GET** /application/{applicationId}/dependency | List application dependencies
 *QoveryApi.DependencyApi* | [**removeApplicationDependency**](docs/DependencyApi.md#removeApplicationDependency) | **DELETE** /application/{applicationId}/dependency/{targetApplicationId} | Remove application dependency to this application.
+*QoveryApi.DeploymentStageMainCallsApi* | [**attachServiceToDeploymentStage**](docs/DeploymentStageMainCallsApi.md#attachServiceToDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/service/{serviceId} | Attach service to deployment stage
+*QoveryApi.DeploymentStageMainCallsApi* | [**createEnvironmentDeploymentStage**](docs/DeploymentStageMainCallsApi.md#createEnvironmentDeploymentStage) | **POST** /environment/{environmentId}/deploymentStage | Create environment deployment stage
+*QoveryApi.DeploymentStageMainCallsApi* | [**deleteDeploymentStage**](docs/DeploymentStageMainCallsApi.md#deleteDeploymentStage) | **DELETE** /deploymentStage/{deploymentStageId} | Delete deployment stage
+*QoveryApi.DeploymentStageMainCallsApi* | [**editDeploymentStage**](docs/DeploymentStageMainCallsApi.md#editDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId} | Edit deployment stage
+*QoveryApi.DeploymentStageMainCallsApi* | [**listEnvironmentDeploymentStage**](docs/DeploymentStageMainCallsApi.md#listEnvironmentDeploymentStage) | **GET** /environment/{environmentId}/deploymentStage | List environment deployment stage
+*QoveryApi.DeploymentStageMainCallsApi* | [**moveDeploymentStage**](docs/DeploymentStageMainCallsApi.md#moveDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/moveBefore/{stageId} | Move deployment stage before requested stage
 *QoveryApi.EnvironmentApi* | [**deployAllApplications**](docs/EnvironmentApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
 *QoveryApi.EnvironmentActionsApi* | [**cancelEnvironmentDeployment**](docs/EnvironmentActionsApi.md#cancelEnvironmentDeployment) | **POST** /environment/{environmentId}/cancelDeployment | Cancel environment deployment
 *QoveryApi.EnvironmentActionsApi* | [**cloneEnvironment**](docs/EnvironmentActionsApi.md#cloneEnvironment) | **POST** /environment/{environmentId}/clone | Clone environment
@@ -345,7 +351,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentActionsApi* | [**stopEnvironment**](docs/EnvironmentActionsApi.md#stopEnvironment) | **POST** /environment/{environmentId}/stop | Stop environment
 *QoveryApi.EnvironmentDeploymentHistoryApi* | [**listEnvironmentDeploymentHistory**](docs/EnvironmentDeploymentHistoryApi.md#listEnvironmentDeploymentHistory) | **GET** /environment/{environmentId}/deploymentHistory | List environment deployments
 *QoveryApi.EnvironmentDeploymentRuleApi* | [**editEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#editEnvironmentDeploymentRule) | **PUT** /environment/{environmentId}/deploymentRule/{deploymentRuleId} | Edit an environment deployment rule
-*QoveryApi.EnvironmentDeploymentRuleApi* | [**getEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#getEnvironmentDeploymentRule) | **GET** /environment/{environmentId}/deploymentRule | Get environment deployment rule
 *QoveryApi.EnvironmentLogsApi* | [**listEnvironmentLog**](docs/EnvironmentLogsApi.md#listEnvironmentLog) | **GET** /environment/{environmentId}/log | List environment deployment logs
 *QoveryApi.EnvironmentLogsApi* | [**listEnvironmentLogs**](docs/EnvironmentLogsApi.md#listEnvironmentLogs) | **GET** /environment/{environmentId}/logs | List environment deployment logs v2
 *QoveryApi.EnvironmentMainCallsApi* | [**deleteEnvironment**](docs/EnvironmentMainCallsApi.md#deleteEnvironment) | **DELETE** /environment/{environmentId} | Delete an environment
@@ -645,6 +650,11 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DeploymentRestrictionTypeEnum](docs/DeploymentRestrictionTypeEnum.md)
  - [QoveryApi.DeploymentRuleRequest](docs/DeploymentRuleRequest.md)
  - [QoveryApi.DoCredentialsRequest](docs/DoCredentialsRequest.md)
+ - [QoveryApi.EditDeploymentStage200Response](docs/EditDeploymentStage200Response.md)
+ - [QoveryApi.EditDeploymentStage200ResponseAllOf](docs/EditDeploymentStage200ResponseAllOf.md)
+ - [QoveryApi.EditDeploymentStage200ResponseAllOfServicesInner](docs/EditDeploymentStage200ResponseAllOfServicesInner.md)
+ - [QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf](docs/EditDeploymentStage200ResponseAllOfServicesInnerAllOf.md)
+ - [QoveryApi.EditDeploymentStageRequest](docs/EditDeploymentStageRequest.md)
  - [QoveryApi.Environment](docs/Environment.md)
  - [QoveryApi.EnvironmentAllOf](docs/EnvironmentAllOf.md)
  - [QoveryApi.EnvironmentAllOfCloudProvider](docs/EnvironmentAllOfCloudProvider.md)
@@ -751,6 +761,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOf](docs/ListContainerDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200Response](docs/ListDatabaseDeploymentHistory200Response.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200ResponseAllOf](docs/ListDatabaseDeploymentHistory200ResponseAllOf.md)
+ - [QoveryApi.ListEnvironmentDeploymentStage200Response](docs/ListEnvironmentDeploymentStage200Response.md)
  - [QoveryApi.ListJobDeploymentHistory200Response](docs/ListJobDeploymentHistory200Response.md)
  - [QoveryApi.ListJobDeploymentHistory200ResponseAllOf](docs/ListJobDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.Log](docs/Log.md)

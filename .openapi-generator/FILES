@@ -201,7 +201,13 @@ docs/DeploymentHistoryStatusEnum.md
 docs/DeploymentRestrictionModeEnum.md
 docs/DeploymentRestrictionTypeEnum.md
 docs/DeploymentRuleRequest.md
+docs/DeploymentStageMainCallsApi.md
 docs/DoCredentialsRequest.md
+docs/EditDeploymentStage200Response.md
+docs/EditDeploymentStage200ResponseAllOf.md
+docs/EditDeploymentStage200ResponseAllOfServicesInner.md
+docs/EditDeploymentStage200ResponseAllOfServicesInnerAllOf.md
+docs/EditDeploymentStageRequest.md
 docs/Environment.md
 docs/EnvironmentActionsApi.md
 docs/EnvironmentAllOf.md
@@ -327,6 +333,7 @@ docs/ListContainerDeploymentHistory200Response.md
 docs/ListContainerDeploymentHistory200ResponseAllOf.md
 docs/ListDatabaseDeploymentHistory200Response.md
 docs/ListDatabaseDeploymentHistory200ResponseAllOf.md
+docs/ListEnvironmentDeploymentStage200Response.md
 docs/ListJobDeploymentHistory200Response.md
 docs/ListJobDeploymentHistory200ResponseAllOf.md
 docs/Log.md
@@ -525,6 +532,7 @@ src/api/DatabaseMainCallsApi.js
 src/api/DatabaseMetricsApi.js
 src/api/DatabasesApi.js
 src/api/DependencyApi.js
+src/api/DeploymentStageMainCallsApi.js
 src/api/EnvironmentActionsApi.js
 src/api/EnvironmentApi.js
 src/api/EnvironmentDeploymentHistoryApi.js
@@ -720,6 +728,11 @@ src/model/DeploymentRestrictionModeEnum.js
 src/model/DeploymentRestrictionTypeEnum.js
 src/model/DeploymentRuleRequest.js
 src/model/DoCredentialsRequest.js
+src/model/EditDeploymentStage200Response.js
+src/model/EditDeploymentStage200ResponseAllOf.js
+src/model/EditDeploymentStage200ResponseAllOfServicesInner.js
+src/model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf.js
+src/model/EditDeploymentStageRequest.js
 src/model/Environment.js
 src/model/EnvironmentAllOf.js
 src/model/EnvironmentAllOfCloudProvider.js
@@ -826,6 +839,7 @@ src/model/ListContainerDeploymentHistory200Response.js
 src/model/ListContainerDeploymentHistory200ResponseAllOf.js
 src/model/ListDatabaseDeploymentHistory200Response.js
 src/model/ListDatabaseDeploymentHistory200ResponseAllOf.js
+src/model/ListEnvironmentDeploymentStage200Response.js
 src/model/ListJobDeploymentHistory200Response.js
 src/model/ListJobDeploymentHistory200ResponseAllOf.js
 src/model/Log.js
@@ -1006,6 +1020,7 @@ test/api/DatabaseMainCallsApi.spec.js
 test/api/DatabaseMetricsApi.spec.js
 test/api/DatabasesApi.spec.js
 test/api/DependencyApi.spec.js
+test/api/DeploymentStageMainCallsApi.spec.js
 test/api/EnvironmentActionsApi.spec.js
 test/api/EnvironmentApi.spec.js
 test/api/EnvironmentDeploymentHistoryApi.spec.js
@@ -1200,6 +1215,11 @@ test/model/DeploymentRestrictionModeEnum.spec.js
 test/model/DeploymentRestrictionTypeEnum.spec.js
 test/model/DeploymentRuleRequest.spec.js
 test/model/DoCredentialsRequest.spec.js
+test/model/EditDeploymentStage200Response.spec.js
+test/model/EditDeploymentStage200ResponseAllOf.spec.js
+test/model/EditDeploymentStage200ResponseAllOfServicesInner.spec.js
+test/model/EditDeploymentStage200ResponseAllOfServicesInnerAllOf.spec.js
+test/model/EditDeploymentStageRequest.spec.js
 test/model/Environment.spec.js
 test/model/EnvironmentAllOf.spec.js
 test/model/EnvironmentAllOfCloudProvider.spec.js
@@ -1306,6 +1326,7 @@ test/model/ListContainerDeploymentHistory200Response.spec.js
 test/model/ListContainerDeploymentHistory200ResponseAllOf.spec.js
 test/model/ListDatabaseDeploymentHistory200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200ResponseAllOf.spec.js
+test/model/ListEnvironmentDeploymentStage200Response.spec.js
 test/model/ListJobDeploymentHistory200Response.spec.js
 test/model/ListJobDeploymentHistory200ResponseAllOf.spec.js
 test/model/Log.spec.js

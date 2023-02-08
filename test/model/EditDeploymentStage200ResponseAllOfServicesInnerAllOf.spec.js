@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.EnvironmentDeploymentRuleApi();
+    instance = new QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,17 +47,19 @@
       object[property] = value;
   }
 
-  describe('EnvironmentDeploymentRuleApi', function() {
-    describe('editEnvironmentDeploymentRule', function() {
-      it('should call editEnvironmentDeploymentRule successfully', function(done) {
-        //uncomment below and update the code to test editEnvironmentDeploymentRule
-        //instance.editEnvironmentDeploymentRule(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('EditDeploymentStage200ResponseAllOfServicesInnerAllOf', function() {
+    it('should create an instance of EditDeploymentStage200ResponseAllOfServicesInnerAllOf', function() {
+      // uncomment below and update the code to test EditDeploymentStage200ResponseAllOfServicesInnerAllOf
+      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf();
+      //expect(instance).to.be.a(QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf);
     });
+
+    it('should have the property serviceId (base name: "service_id")', function() {
+      // uncomment below and update the code to test the property serviceId
+      //var instance = new QoveryApi.EditDeploymentStage200ResponseAllOfServicesInnerAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

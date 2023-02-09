@@ -218,16 +218,6 @@
         done();
       });
     });
-    describe('updateCluster', function() {
-      it('should call updateCluster successfully', function(done) {
-        //uncomment below and update the code to test updateCluster
-        //instance.updateCluster(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
   });
 
 }));

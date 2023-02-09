@@ -243,7 +243,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**listOrganizationCluster**](docs/ClustersApi.md#listOrganizationCluster) | **GET** /organization/{organizationId}/cluster | List organization clusters
 *QoveryApi.ClustersApi* | [**specifyClusterCloudProviderInfo**](docs/ClustersApi.md#specifyClusterCloudProviderInfo) | **POST** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Specify cluster cloud provider info and credentials
 *QoveryApi.ClustersApi* | [**stopCluster**](docs/ClustersApi.md#stopCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/stop | Stop cluster
-*QoveryApi.ClustersApi* | [**updateCluster**](docs/ClustersApi.md#updateCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/update | Update a cluster Version
 *QoveryApi.ContainerActionsApi* | [**deployContainer**](docs/ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | Deploy container
 *QoveryApi.ContainerActionsApi* | [**rebootContainer**](docs/ContainerActionsApi.md#rebootContainer) | **POST** /container/{containerId}/restart-service | Reboot container
 *QoveryApi.ContainerActionsApi* | [**redeployContainer**](docs/ContainerActionsApi.md#redeployContainer) | **POST** /container/{containerId}/redeploy | Redeploy container

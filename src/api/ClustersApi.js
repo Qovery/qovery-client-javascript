@@ -854,54 +854,5 @@ export default class ClustersApi {
       );
     }
 
-    /**
-     * Callback function to receive the result of the updateCluster operation.
-     * @callback module:api/ClustersApi~updateClusterCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ClusterStatus} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Update a cluster Version
-     * allows to update cluster version
-     * @param {String} organizationId Organization ID
-     * @param {String} clusterId Cluster ID
-     * @param {module:api/ClustersApi~updateClusterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ClusterStatus}
-     */
-    updateCluster(organizationId, clusterId, callback) {
-      let postBody = null;
-      // verify the required parameter 'organizationId' is set
-      if (organizationId === undefined || organizationId === null) {
-        throw new Error("Missing the required parameter 'organizationId' when calling updateCluster");
-      }
-      // verify the required parameter 'clusterId' is set
-      if (clusterId === undefined || clusterId === null) {
-        throw new Error("Missing the required parameter 'clusterId' when calling updateCluster");
-      }
-
-      let pathParams = {
-        'organizationId': organizationId,
-        'clusterId': clusterId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = ClusterStatus;
-      return this.apiClient.callApi(
-        '/organization/{organizationId}/cluster/{clusterId}/update', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
 
 }

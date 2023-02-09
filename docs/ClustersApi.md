@@ -21,7 +21,6 @@ Method | HTTP request | Description
 [**listOrganizationCluster**](ClustersApi.md#listOrganizationCluster) | **GET** /organization/{organizationId}/cluster | List organization clusters
 [**specifyClusterCloudProviderInfo**](ClustersApi.md#specifyClusterCloudProviderInfo) | **POST** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Specify cluster cloud provider info and credentials
 [**stopCluster**](ClustersApi.md#stopCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/stop | Stop cluster
-[**updateCluster**](ClustersApi.md#updateCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/update | Update a cluster Version
 
 
 
@@ -852,57 +851,6 @@ let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 apiInstance.stopCluster(organizationId, clusterId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organizationId** | **String**| Organization ID | 
- **clusterId** | **String**| Cluster ID | 
-
-### Return type
-
-[**ClusterStatus**](ClusterStatus.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## updateCluster
-
-> ClusterStatus updateCluster(organizationId, clusterId)
-
-Update a cluster Version
-
-allows to update cluster version
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.ClustersApi();
-let organizationId = "organizationId_example"; // String | Organization ID
-let clusterId = "clusterId_example"; // String | Cluster ID
-apiInstance.updateCluster(organizationId, clusterId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

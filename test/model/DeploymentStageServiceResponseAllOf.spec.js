@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property serviceType (base name: "service_type")', function() {
+      // uncomment below and update the code to test the property serviceType
+      //var instance = new QoveryApi.DeploymentStageServiceResponseAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

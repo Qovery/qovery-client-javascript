@@ -69,6 +69,9 @@ class DeploymentStageServiceResponse {
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
             }
+            if (data.hasOwnProperty('service_type')) {
+                obj['service_type'] = ApiClient.convertToType(data['service_type'], 'String');
+            }
         }
         return obj;
     }
@@ -97,6 +100,12 @@ DeploymentStageServiceResponse.prototype['updated_at'] = undefined;
  */
 DeploymentStageServiceResponse.prototype['service_id'] = undefined;
 
+/**
+ * type of the service (i.e APPLICATION, JOB, DATABASE, ...)
+ * @member {String} service_type
+ */
+DeploymentStageServiceResponse.prototype['service_type'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -117,6 +126,11 @@ Base.prototype['updated_at'] = undefined;
  * @member {String} service_id
  */
 DeploymentStageServiceResponseAllOf.prototype['service_id'] = undefined;
+/**
+ * type of the service (i.e APPLICATION, JOB, DATABASE, ...)
+ * @member {String} service_type
+ */
+DeploymentStageServiceResponseAllOf.prototype['service_type'] = undefined;
 
 
 

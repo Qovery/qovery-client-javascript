@@ -46,17 +46,23 @@ export default class DeploymentStageMainCallsApi {
 
     /**
      * Attach service to deployment stage
+     * @param {String} deploymentStageId Deployment Stage ID
      * @param {String} serviceId Service ID of an application/job/container/database
      * @param {module:api/DeploymentStageMainCallsApi~attachServiceToDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    attachServiceToDeploymentStage(serviceId, callback) {
+    attachServiceToDeploymentStage(deploymentStageId, serviceId, callback) {
       let postBody = null;
+      // verify the required parameter 'deploymentStageId' is set
+      if (deploymentStageId === undefined || deploymentStageId === null) {
+        throw new Error("Missing the required parameter 'deploymentStageId' when calling attachServiceToDeploymentStage");
+      }
       // verify the required parameter 'serviceId' is set
       if (serviceId === undefined || serviceId === null) {
         throw new Error("Missing the required parameter 'serviceId' when calling attachServiceToDeploymentStage");
       }
 
       let pathParams = {
+        'deploymentStageId': deploymentStageId,
         'serviceId': serviceId
       };
       let queryParams = {
@@ -132,12 +138,18 @@ export default class DeploymentStageMainCallsApi {
 
     /**
      * Delete deployment stage
+     * @param {String} deploymentStageId Deployment Stage ID
      * @param {module:api/DeploymentStageMainCallsApi~deleteDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteDeploymentStage(callback) {
+    deleteDeploymentStage(deploymentStageId, callback) {
       let postBody = null;
+      // verify the required parameter 'deploymentStageId' is set
+      if (deploymentStageId === undefined || deploymentStageId === null) {
+        throw new Error("Missing the required parameter 'deploymentStageId' when calling deleteDeploymentStage");
+      }
 
       let pathParams = {
+        'deploymentStageId': deploymentStageId
       };
       let queryParams = {
       };
@@ -254,18 +266,24 @@ export default class DeploymentStageMainCallsApi {
 
     /**
      * Move deployment stage before requested stage
+     * @param {String} deploymentStageId Deployment Stage ID
      * @param {String} stageId Deployment Stage ID
      * @param {module:api/DeploymentStageMainCallsApi~moveDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentStageResponseList}
      */
-    moveDeploymentStage(stageId, callback) {
+    moveDeploymentStage(deploymentStageId, stageId, callback) {
       let postBody = null;
+      // verify the required parameter 'deploymentStageId' is set
+      if (deploymentStageId === undefined || deploymentStageId === null) {
+        throw new Error("Missing the required parameter 'deploymentStageId' when calling moveDeploymentStage");
+      }
       // verify the required parameter 'stageId' is set
       if (stageId === undefined || stageId === null) {
         throw new Error("Missing the required parameter 'stageId' when calling moveDeploymentStage");
       }
 
       let pathParams = {
+        'deploymentStageId': deploymentStageId,
         'stageId': stageId
       };
       let queryParams = {

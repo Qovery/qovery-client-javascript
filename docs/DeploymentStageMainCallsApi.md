@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## attachServiceToDeploymentStage
 
-> attachServiceToDeploymentStage(serviceId)
+> attachServiceToDeploymentStage(deploymentStageId, serviceId)
 
 Attach service to deployment stage
 
@@ -29,8 +29,9 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
+let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
 let serviceId = "serviceId_example"; // String | Service ID of an application/job/container/database
-apiInstance.attachServiceToDeploymentStage(serviceId, (error, data, response) => {
+apiInstance.attachServiceToDeploymentStage(deploymentStageId, serviceId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -44,6 +45,7 @@ apiInstance.attachServiceToDeploymentStage(serviceId, (error, data, response) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **deploymentStageId** | **String**| Deployment Stage ID | 
  **serviceId** | **String**| Service ID of an application/job/container/database | 
 
 ### Return type
@@ -113,7 +115,7 @@ Name | Type | Description  | Notes
 
 ## deleteDeploymentStage
 
-> deleteDeploymentStage()
+> deleteDeploymentStage(deploymentStageId)
 
 Delete deployment stage
 
@@ -127,7 +129,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
-apiInstance.deleteDeploymentStage((error, data, response) => {
+let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
+apiInstance.deleteDeploymentStage(deploymentStageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -138,7 +141,10 @@ apiInstance.deleteDeploymentStage((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deploymentStageId** | **String**| Deployment Stage ID | 
 
 ### Return type
 
@@ -254,7 +260,7 @@ Name | Type | Description  | Notes
 
 ## moveDeploymentStage
 
-> DeploymentStageResponseList moveDeploymentStage(stageId)
+> DeploymentStageResponseList moveDeploymentStage(deploymentStageId, stageId)
 
 Move deployment stage before requested stage
 
@@ -268,8 +274,9 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
+let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
 let stageId = "stageId_example"; // String | Deployment Stage ID
-apiInstance.moveDeploymentStage(stageId, (error, data, response) => {
+apiInstance.moveDeploymentStage(deploymentStageId, stageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -283,6 +290,7 @@ apiInstance.moveDeploymentStage(stageId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **deploymentStageId** | **String**| Deployment Stage ID | 
  **stageId** | **String**| Deployment Stage ID | 
 
 ### Return type

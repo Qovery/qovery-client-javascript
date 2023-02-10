@@ -22,10 +22,11 @@ class DeploymentStageRequest {
     /**
      * Constructs a new <code>DeploymentStageRequest</code>.
      * @alias module:model/DeploymentStageRequest
+     * @param name {String} The name of the deployment stage
      */
-    constructor() { 
+    constructor(name) { 
         
-        DeploymentStageRequest.initialize(this);
+        DeploymentStageRequest.initialize(this, name);
     }
 
     /**
@@ -33,7 +34,8 @@ class DeploymentStageRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, name) { 
+        obj['name'] = name;
     }
 
     /**

@@ -344,6 +344,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentActionsApi* | [**stopEnvironment**](docs/EnvironmentActionsApi.md#stopEnvironment) | **POST** /environment/{environmentId}/stop | Stop environment
 *QoveryApi.EnvironmentDeploymentHistoryApi* | [**listEnvironmentDeploymentHistory**](docs/EnvironmentDeploymentHistoryApi.md#listEnvironmentDeploymentHistory) | **GET** /environment/{environmentId}/deploymentHistory | List environment deployments
 *QoveryApi.EnvironmentDeploymentRuleApi* | [**editEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#editEnvironmentDeploymentRule) | **PUT** /environment/{environmentId}/deploymentRule/{deploymentRuleId} | Edit an environment deployment rule
+*QoveryApi.EnvironmentDeploymentRuleApi* | [**getEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#getEnvironmentDeploymentRule) | **GET** /environment/{environmentId}/deploymentRule | Get environment deployment rule
 *QoveryApi.EnvironmentLogsApi* | [**listEnvironmentLog**](docs/EnvironmentLogsApi.md#listEnvironmentLog) | **GET** /environment/{environmentId}/log | List environment deployment logs
 *QoveryApi.EnvironmentLogsApi* | [**listEnvironmentLogs**](docs/EnvironmentLogsApi.md#listEnvironmentLogs) | **GET** /environment/{environmentId}/logs | List environment deployment logs v2
 *QoveryApi.EnvironmentMainCallsApi* | [**deleteEnvironment**](docs/EnvironmentMainCallsApi.md#deleteEnvironment) | **DELETE** /environment/{environmentId} | Delete an environment

@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
+import APIVariableTypeEnum from './APIVariableTypeEnum';
 
 /**
  * The EnvironmentVariableAlias model module.
@@ -26,11 +27,13 @@ class EnvironmentVariableAlias {
      * @param id {String} 
      * @param key {String} 
      * @param value {String} 
+     * @param mountPath {String} 
      * @param scope {module:model/APIVariableScopeEnum} 
+     * @param variableType {module:model/APIVariableTypeEnum} 
      */
-    constructor(id, key, value, scope) { 
+    constructor(id, key, value, mountPath, scope, variableType) { 
         
-        EnvironmentVariableAlias.initialize(this, id, key, value, scope);
+        EnvironmentVariableAlias.initialize(this, id, key, value, mountPath, scope, variableType);
     }
 
     /**
@@ -38,11 +41,13 @@ class EnvironmentVariableAlias {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, key, value, scope) { 
+    static initialize(obj, id, key, value, mountPath, scope, variableType) { 
         obj['id'] = id;
         obj['key'] = key;
         obj['value'] = value;
+        obj['mount_path'] = mountPath;
         obj['scope'] = scope;
+        obj['variable_type'] = variableType;
     }
 
     /**
@@ -65,8 +70,14 @@ class EnvironmentVariableAlias {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('mount_path')) {
+                obj['mount_path'] = ApiClient.convertToType(data['mount_path'], 'String');
+            }
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
+            }
+            if (data.hasOwnProperty('variable_type')) {
+                obj['variable_type'] = APIVariableTypeEnum.constructFromObject(data['variable_type']);
             }
         }
         return obj;
@@ -91,9 +102,19 @@ EnvironmentVariableAlias.prototype['key'] = undefined;
 EnvironmentVariableAlias.prototype['value'] = undefined;
 
 /**
+ * @member {String} mount_path
+ */
+EnvironmentVariableAlias.prototype['mount_path'] = undefined;
+
+/**
  * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariableAlias.prototype['scope'] = undefined;
+
+/**
+ * @member {module:model/APIVariableTypeEnum} variable_type
+ */
+EnvironmentVariableAlias.prototype['variable_type'] = undefined;
 
 
 

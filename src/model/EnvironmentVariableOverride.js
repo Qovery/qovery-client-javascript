@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
+import APIVariableTypeEnum from './APIVariableTypeEnum';
 
 /**
  * The EnvironmentVariableOverride model module.
@@ -26,11 +27,13 @@ class EnvironmentVariableOverride {
      * @param id {String} 
      * @param key {String} 
      * @param value {String} 
+     * @param mountPath {String} 
      * @param scope {module:model/APIVariableScopeEnum} 
+     * @param variableType {module:model/APIVariableTypeEnum} 
      */
-    constructor(id, key, value, scope) { 
+    constructor(id, key, value, mountPath, scope, variableType) { 
         
-        EnvironmentVariableOverride.initialize(this, id, key, value, scope);
+        EnvironmentVariableOverride.initialize(this, id, key, value, mountPath, scope, variableType);
     }
 
     /**
@@ -38,11 +41,13 @@ class EnvironmentVariableOverride {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, key, value, scope) { 
+    static initialize(obj, id, key, value, mountPath, scope, variableType) { 
         obj['id'] = id;
         obj['key'] = key;
         obj['value'] = value;
+        obj['mount_path'] = mountPath;
         obj['scope'] = scope;
+        obj['variable_type'] = variableType;
     }
 
     /**
@@ -65,8 +70,14 @@ class EnvironmentVariableOverride {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('mount_path')) {
+                obj['mount_path'] = ApiClient.convertToType(data['mount_path'], 'String');
+            }
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
+            }
+            if (data.hasOwnProperty('variable_type')) {
+                obj['variable_type'] = APIVariableTypeEnum.constructFromObject(data['variable_type']);
             }
         }
         return obj;
@@ -91,9 +102,19 @@ EnvironmentVariableOverride.prototype['key'] = undefined;
 EnvironmentVariableOverride.prototype['value'] = undefined;
 
 /**
+ * @member {String} mount_path
+ */
+EnvironmentVariableOverride.prototype['mount_path'] = undefined;
+
+/**
  * @member {module:model/APIVariableScopeEnum} scope
  */
 EnvironmentVariableOverride.prototype['scope'] = undefined;
+
+/**
+ * @member {module:model/APIVariableTypeEnum} variable_type
+ */
+EnvironmentVariableOverride.prototype['variable_type'] = undefined;
 
 
 

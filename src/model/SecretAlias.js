@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
+import APIVariableTypeEnum from './APIVariableTypeEnum';
 
 /**
  * The SecretAlias model module.
@@ -25,11 +26,13 @@ class SecretAlias {
      * @alias module:model/SecretAlias
      * @param id {String} 
      * @param key {String} 
+     * @param mountPath {String} 
      * @param scope {module:model/APIVariableScopeEnum} 
+     * @param variableType {module:model/APIVariableTypeEnum} 
      */
-    constructor(id, key, scope) { 
+    constructor(id, key, mountPath, scope, variableType) { 
         
-        SecretAlias.initialize(this, id, key, scope);
+        SecretAlias.initialize(this, id, key, mountPath, scope, variableType);
     }
 
     /**
@@ -37,10 +40,12 @@ class SecretAlias {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, key, scope) { 
+    static initialize(obj, id, key, mountPath, scope, variableType) { 
         obj['id'] = id;
         obj['key'] = key;
+        obj['mount_path'] = mountPath;
         obj['scope'] = scope;
+        obj['variable_type'] = variableType;
     }
 
     /**
@@ -60,8 +65,14 @@ class SecretAlias {
             if (data.hasOwnProperty('key')) {
                 obj['key'] = ApiClient.convertToType(data['key'], 'String');
             }
+            if (data.hasOwnProperty('mount_path')) {
+                obj['mount_path'] = ApiClient.convertToType(data['mount_path'], 'String');
+            }
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
+            }
+            if (data.hasOwnProperty('variable_type')) {
+                obj['variable_type'] = APIVariableTypeEnum.constructFromObject(data['variable_type']);
             }
         }
         return obj;
@@ -81,9 +92,19 @@ SecretAlias.prototype['id'] = undefined;
 SecretAlias.prototype['key'] = undefined;
 
 /**
+ * @member {String} mount_path
+ */
+SecretAlias.prototype['mount_path'] = undefined;
+
+/**
  * @member {module:model/APIVariableScopeEnum} scope
  */
 SecretAlias.prototype['scope'] = undefined;
+
+/**
+ * @member {module:model/APIVariableTypeEnum} variable_type
+ */
+SecretAlias.prototype['variable_type'] = undefined;
 
 
 

@@ -66,8 +66,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property mountPath (base name: "mount_path")', function() {
+      // uncomment below and update the code to test the property mountPath
+      //var instance = new QoveryApi.SecretAlias();
+      //expect(instance).to.be();
+    });
+
     it('should have the property scope (base name: "scope")', function() {
       // uncomment below and update the code to test the property scope
+      //var instance = new QoveryApi.SecretAlias();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property variableType (base name: "variable_type")', function() {
+      // uncomment below and update the code to test the property variableType
       //var instance = new QoveryApi.SecretAlias();
       //expect(instance).to.be();
     });

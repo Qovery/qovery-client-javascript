@@ -78,8 +78,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property type (base name: "type")', function() {
-      // uncomment below and update the code to test the property type
+    it('should have the property variableType (base name: "variable_type")', function() {
+      // uncomment below and update the code to test the property variableType
       //var instance = new QoveryApi.SecretAllOf();
       //expect(instance).to.be();
     });

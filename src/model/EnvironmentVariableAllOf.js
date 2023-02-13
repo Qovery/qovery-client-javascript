@@ -63,8 +63,8 @@ class EnvironmentVariableAllOf {
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = APIVariableTypeEnum.constructFromObject(data['type']);
+            if (data.hasOwnProperty('variable_type')) {
+                obj['variable_type'] = APIVariableTypeEnum.constructFromObject(data['variable_type']);
             }
             if (data.hasOwnProperty('service_id')) {
                 obj['service_id'] = ApiClient.convertToType(data['service_id'], 'String');
@@ -98,9 +98,9 @@ EnvironmentVariableAllOf.prototype['aliased_variable'] = undefined;
 EnvironmentVariableAllOf.prototype['scope'] = undefined;
 
 /**
- * @member {module:model/APIVariableTypeEnum} type
+ * @member {module:model/APIVariableTypeEnum} variable_type
  */
-EnvironmentVariableAllOf.prototype['type'] = undefined;
+EnvironmentVariableAllOf.prototype['variable_type'] = undefined;
 
 /**
  * present only for `BUILT_IN` variable

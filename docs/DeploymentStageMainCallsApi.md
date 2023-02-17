@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## attachServiceToDeploymentStage
 
-> attachServiceToDeploymentStage(deploymentStageId, serviceId)
+> DeploymentStageResponseList attachServiceToDeploymentStage(deploymentStageId, serviceId)
 
 Attach service to deployment stage
 
@@ -35,7 +35,7 @@ apiInstance.attachServiceToDeploymentStage(deploymentStageId, serviceId, (error,
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**DeploymentStageResponseList**](DeploymentStageResponseList.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: application/json
 
 
 ## createEnvironmentDeploymentStage

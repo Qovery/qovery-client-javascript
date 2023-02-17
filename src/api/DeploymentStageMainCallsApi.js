@@ -40,7 +40,7 @@ export default class DeploymentStageMainCallsApi {
      * Callback function to receive the result of the attachServiceToDeploymentStage operation.
      * @callback module:api/DeploymentStageMainCallsApi~attachServiceToDeploymentStageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/DeploymentStageResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,6 +49,7 @@ export default class DeploymentStageMainCallsApi {
      * @param {String} deploymentStageId Deployment Stage ID
      * @param {String} serviceId Service ID of an application/job/container/database
      * @param {module:api/DeploymentStageMainCallsApi~attachServiceToDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DeploymentStageResponseList}
      */
     attachServiceToDeploymentStage(deploymentStageId, serviceId, callback) {
       let postBody = null;
@@ -74,8 +75,8 @@ export default class DeploymentStageMainCallsApi {
 
       let authNames = ['bearerAuth'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json'];
+      let returnType = DeploymentStageResponseList;
       return this.apiClient.callApi(
         '/deploymentStage/{deploymentStageId}/service/{serviceId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,

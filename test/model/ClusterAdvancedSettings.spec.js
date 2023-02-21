@@ -72,6 +72,54 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property databasePostgresqlDenyPublicAccess (base name: "database.postgresql.deny_public_access")', function() {
+      // uncomment below and update the code to test the property databasePostgresqlDenyPublicAccess
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databasePostgresqlAllowedCidrs (base name: "database.postgresql.allowed_cidrs")', function() {
+      // uncomment below and update the code to test the property databasePostgresqlAllowedCidrs
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databaseMysqlDenyPublicAccess (base name: "database.mysql.deny_public_access")', function() {
+      // uncomment below and update the code to test the property databaseMysqlDenyPublicAccess
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databaseMysqlAllowedCidrs (base name: "database.mysql.allowed_cidrs")', function() {
+      // uncomment below and update the code to test the property databaseMysqlAllowedCidrs
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databaseMongodbDenyPublicAccess (base name: "database.mongodb.deny_public_access")', function() {
+      // uncomment below and update the code to test the property databaseMongodbDenyPublicAccess
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databaseMongodbAllowedCidrs (base name: "database.mongodb.allowed_cidrs")', function() {
+      // uncomment below and update the code to test the property databaseMongodbAllowedCidrs
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databaseRedisDenyPublicAccess (base name: "database.redis.deny_public_access")', function() {
+      // uncomment below and update the code to test the property databaseRedisDenyPublicAccess
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property databaseRedisAllowedCidrs (base name: "database.redis.allowed_cidrs")', function() {
+      // uncomment below and update the code to test the property databaseRedisAllowedCidrs
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property registryImageRetentionTime (base name: "registry.image_retention_time")', function() {
       // uncomment below and update the code to test the property registryImageRetentionTime
       //var instance = new QoveryApi.ClusterAdvancedSettings();

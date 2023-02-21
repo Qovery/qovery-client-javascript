@@ -57,6 +57,30 @@ class ClusterAdvancedSettings {
             if (data.hasOwnProperty('aws.vpc.flow_logs_retention_days')) {
                 obj['aws.vpc.flow_logs_retention_days'] = ApiClient.convertToType(data['aws.vpc.flow_logs_retention_days'], 'Number');
             }
+            if (data.hasOwnProperty('database.postgresql.deny_public_access')) {
+                obj['database.postgresql.deny_public_access'] = ApiClient.convertToType(data['database.postgresql.deny_public_access'], 'Boolean');
+            }
+            if (data.hasOwnProperty('database.postgresql.allowed_cidrs')) {
+                obj['database.postgresql.allowed_cidrs'] = ApiClient.convertToType(data['database.postgresql.allowed_cidrs'], ['String']);
+            }
+            if (data.hasOwnProperty('database.mysql.deny_public_access')) {
+                obj['database.mysql.deny_public_access'] = ApiClient.convertToType(data['database.mysql.deny_public_access'], 'Boolean');
+            }
+            if (data.hasOwnProperty('database.mysql.allowed_cidrs')) {
+                obj['database.mysql.allowed_cidrs'] = ApiClient.convertToType(data['database.mysql.allowed_cidrs'], ['String']);
+            }
+            if (data.hasOwnProperty('database.mongodb.deny_public_access')) {
+                obj['database.mongodb.deny_public_access'] = ApiClient.convertToType(data['database.mongodb.deny_public_access'], 'Boolean');
+            }
+            if (data.hasOwnProperty('database.mongodb.allowed_cidrs')) {
+                obj['database.mongodb.allowed_cidrs'] = ApiClient.convertToType(data['database.mongodb.allowed_cidrs'], ['String']);
+            }
+            if (data.hasOwnProperty('database.redis.deny_public_access')) {
+                obj['database.redis.deny_public_access'] = ApiClient.convertToType(data['database.redis.deny_public_access'], 'Boolean');
+            }
+            if (data.hasOwnProperty('database.redis.allowed_cidrs')) {
+                obj['database.redis.allowed_cidrs'] = ApiClient.convertToType(data['database.redis.allowed_cidrs'], ['String']);
+            }
             if (data.hasOwnProperty('registry.image_retention_time')) {
                 obj['registry.image_retention_time'] = ApiClient.convertToType(data['registry.image_retention_time'], 'Number');
             }
@@ -99,6 +123,58 @@ ClusterAdvancedSettings.prototype['aws.vpc.enable_s3_flow_logs'] = false;
  * @default 365
  */
 ClusterAdvancedSettings.prototype['aws.vpc.flow_logs_retention_days'] = 365;
+
+/**
+ * Deny public access to any PostgreSQL database
+ * @member {Boolean} database.postgresql.deny_public_access
+ * @default false
+ */
+ClusterAdvancedSettings.prototype['database.postgresql.deny_public_access'] = false;
+
+/**
+ * List of CIDRs allowed to access the PostgreSQL database
+ * @member {Array.<String>} database.postgresql.allowed_cidrs
+ */
+ClusterAdvancedSettings.prototype['database.postgresql.allowed_cidrs'] = undefined;
+
+/**
+ * Deny public access to any MySql database
+ * @member {Boolean} database.mysql.deny_public_access
+ * @default false
+ */
+ClusterAdvancedSettings.prototype['database.mysql.deny_public_access'] = false;
+
+/**
+ * List of CIDRs allowed to access the MySql database
+ * @member {Array.<String>} database.mysql.allowed_cidrs
+ */
+ClusterAdvancedSettings.prototype['database.mysql.allowed_cidrs'] = undefined;
+
+/**
+ * Deny public access to any MongoDB/DocumentDB database
+ * @member {Boolean} database.mongodb.deny_public_access
+ * @default false
+ */
+ClusterAdvancedSettings.prototype['database.mongodb.deny_public_access'] = false;
+
+/**
+ * List of CIDRs allowed to access the MongoDB/DocumentDB database
+ * @member {Array.<String>} database.mongodb.allowed_cidrs
+ */
+ClusterAdvancedSettings.prototype['database.mongodb.allowed_cidrs'] = undefined;
+
+/**
+ * Deny public access to any Redis database
+ * @member {Boolean} database.redis.deny_public_access
+ * @default false
+ */
+ClusterAdvancedSettings.prototype['database.redis.deny_public_access'] = false;
+
+/**
+ * List of CIDRs allowed to access the Redis database
+ * @member {Array.<String>} database.redis.allowed_cidrs
+ */
+ClusterAdvancedSettings.prototype['database.redis.allowed_cidrs'] = undefined;
 
 /**
  * Configure the number of seconds before cleaning images in the registry

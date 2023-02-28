@@ -88,6 +88,26 @@
         done();
       });
     });
+    describe('getDeploymentStage', function() {
+      it('should call getDeploymentStage successfully', function(done) {
+        //uncomment below and update the code to test getDeploymentStage
+        //instance.getDeploymentStage(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getServiceDeploymentStage', function() {
+      it('should call getServiceDeploymentStage successfully', function(done) {
+        //uncomment below and update the code to test getServiceDeploymentStage
+        //instance.getServiceDeploymentStage(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listEnvironmentDeploymentStage', function() {
       it('should call listEnvironmentDeploymentStage successfully', function(done) {
         //uncomment below and update the code to test listEnvironmentDeploymentStage

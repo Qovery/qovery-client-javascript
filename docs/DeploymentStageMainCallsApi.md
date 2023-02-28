@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**createEnvironmentDeploymentStage**](DeploymentStageMainCallsApi.md#createEnvironmentDeploymentStage) | **POST** /environment/{environmentId}/deploymentStage | Create environment deployment stage
 [**deleteDeploymentStage**](DeploymentStageMainCallsApi.md#deleteDeploymentStage) | **DELETE** /deploymentStage/{deploymentStageId} | Delete deployment stage
 [**editDeploymentStage**](DeploymentStageMainCallsApi.md#editDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId} | Edit deployment stage
+[**getDeploymentStage**](DeploymentStageMainCallsApi.md#getDeploymentStage) | **GET** /deploymentStage/{deploymentStageId} | Get Deployment Stage
+[**getServiceDeploymentStage**](DeploymentStageMainCallsApi.md#getServiceDeploymentStage) | **GET** /service/{serviceId}/deploymentStage | Get Service Deployment Stage
 [**listEnvironmentDeploymentStage**](DeploymentStageMainCallsApi.md#listEnvironmentDeploymentStage) | **GET** /environment/{environmentId}/deploymentStage | List environment deployment stage
 [**moveDeploymentStage**](DeploymentStageMainCallsApi.md#moveDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/moveBefore/{stageId} | Move deployment stage before requested stage
 
@@ -15,7 +17,7 @@ Method | HTTP request | Description
 
 ## attachServiceToDeploymentStage
 
-> DeploymentStageResponseList attachServiceToDeploymentStage(deploymentStageId, serviceId)
+> DeploymentStageResponseList attachServiceToDeploymentStage(deploymentStageId)
 
 Attach service to deployment stage
 
@@ -30,8 +32,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
 let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
-let serviceId = "serviceId_example"; // String | Service ID of an application/job/container/database
-apiInstance.attachServiceToDeploymentStage(deploymentStageId, serviceId, (error, data, response) => {
+apiInstance.attachServiceToDeploymentStage(deploymentStageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -46,7 +47,6 @@ apiInstance.attachServiceToDeploymentStage(deploymentStageId, serviceId, (error,
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentStageId** | **String**| Deployment Stage ID | 
- **serviceId** | **String**| Service ID of an application/job/container/database | 
 
 ### Return type
 
@@ -208,6 +208,100 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getDeploymentStage
+
+> DeploymentStageResponse getDeploymentStage(deploymentStageId)
+
+Get Deployment Stage
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
+let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
+apiInstance.getDeploymentStage(deploymentStageId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deploymentStageId** | **String**| Deployment Stage ID | 
+
+### Return type
+
+[**DeploymentStageResponse**](DeploymentStageResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getServiceDeploymentStage
+
+> DeploymentStageResponse getServiceDeploymentStage(serviceId)
+
+Get Service Deployment Stage
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
+let serviceId = "serviceId_example"; // String | Service ID of an application/job/container/database
+apiInstance.getServiceDeploymentStage(serviceId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | **String**| Service ID of an application/job/container/database | 
+
+### Return type
+
+[**DeploymentStageResponse**](DeploymentStageResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

@@ -331,6 +331,8 @@ Class | Method | HTTP request | Description
 *QoveryApi.DeploymentStageMainCallsApi* | [**createEnvironmentDeploymentStage**](docs/DeploymentStageMainCallsApi.md#createEnvironmentDeploymentStage) | **POST** /environment/{environmentId}/deploymentStage | Create environment deployment stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**deleteDeploymentStage**](docs/DeploymentStageMainCallsApi.md#deleteDeploymentStage) | **DELETE** /deploymentStage/{deploymentStageId} | Delete deployment stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**editDeploymentStage**](docs/DeploymentStageMainCallsApi.md#editDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId} | Edit deployment stage
+*QoveryApi.DeploymentStageMainCallsApi* | [**getDeploymentStage**](docs/DeploymentStageMainCallsApi.md#getDeploymentStage) | **GET** /deploymentStage/{deploymentStageId} | Get Deployment Stage
+*QoveryApi.DeploymentStageMainCallsApi* | [**getServiceDeploymentStage**](docs/DeploymentStageMainCallsApi.md#getServiceDeploymentStage) | **GET** /service/{serviceId}/deploymentStage | Get Service Deployment Stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**listEnvironmentDeploymentStage**](docs/DeploymentStageMainCallsApi.md#listEnvironmentDeploymentStage) | **GET** /environment/{environmentId}/deploymentStage | List environment deployment stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**moveDeploymentStage**](docs/DeploymentStageMainCallsApi.md#moveDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/moveBefore/{stageId} | Move deployment stage before requested stage
 *QoveryApi.EnvironmentApi* | [**deployAllApplications**](docs/EnvironmentApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications

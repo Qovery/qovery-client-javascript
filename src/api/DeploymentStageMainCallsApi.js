@@ -47,24 +47,18 @@ export default class DeploymentStageMainCallsApi {
     /**
      * Attach service to deployment stage
      * @param {String} deploymentStageId Deployment Stage ID
-     * @param {String} serviceId Service ID of an application/job/container/database
      * @param {module:api/DeploymentStageMainCallsApi~attachServiceToDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentStageResponseList}
      */
-    attachServiceToDeploymentStage(deploymentStageId, serviceId, callback) {
+    attachServiceToDeploymentStage(deploymentStageId, callback) {
       let postBody = null;
       // verify the required parameter 'deploymentStageId' is set
       if (deploymentStageId === undefined || deploymentStageId === null) {
         throw new Error("Missing the required parameter 'deploymentStageId' when calling attachServiceToDeploymentStage");
       }
-      // verify the required parameter 'serviceId' is set
-      if (serviceId === undefined || serviceId === null) {
-        throw new Error("Missing the required parameter 'serviceId' when calling attachServiceToDeploymentStage");
-      }
 
       let pathParams = {
-        'deploymentStageId': deploymentStageId,
-        'serviceId': serviceId
+        'deploymentStageId': deploymentStageId
       };
       let queryParams = {
       };
@@ -210,6 +204,90 @@ export default class DeploymentStageMainCallsApi {
       let returnType = DeploymentStageResponse;
       return this.apiClient.callApi(
         '/deploymentStage/{deploymentStageId}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getDeploymentStage operation.
+     * @callback module:api/DeploymentStageMainCallsApi~getDeploymentStageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DeploymentStageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Deployment Stage
+     * @param {String} deploymentStageId Deployment Stage ID
+     * @param {module:api/DeploymentStageMainCallsApi~getDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DeploymentStageResponse}
+     */
+    getDeploymentStage(deploymentStageId, callback) {
+      let postBody = null;
+      // verify the required parameter 'deploymentStageId' is set
+      if (deploymentStageId === undefined || deploymentStageId === null) {
+        throw new Error("Missing the required parameter 'deploymentStageId' when calling getDeploymentStage");
+      }
+
+      let pathParams = {
+        'deploymentStageId': deploymentStageId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = DeploymentStageResponse;
+      return this.apiClient.callApi(
+        '/deploymentStage/{deploymentStageId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getServiceDeploymentStage operation.
+     * @callback module:api/DeploymentStageMainCallsApi~getServiceDeploymentStageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DeploymentStageResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Service Deployment Stage
+     * @param {String} serviceId Service ID of an application/job/container/database
+     * @param {module:api/DeploymentStageMainCallsApi~getServiceDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DeploymentStageResponse}
+     */
+    getServiceDeploymentStage(serviceId, callback) {
+      let postBody = null;
+      // verify the required parameter 'serviceId' is set
+      if (serviceId === undefined || serviceId === null) {
+        throw new Error("Missing the required parameter 'serviceId' when calling getServiceDeploymentStage");
+      }
+
+      let pathParams = {
+        'serviceId': serviceId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = DeploymentStageResponse;
+      return this.apiClient.callApi(
+        '/service/{serviceId}/deploymentStage', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

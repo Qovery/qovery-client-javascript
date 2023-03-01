@@ -400,18 +400,24 @@ export default class DeploymentStageMainCallsApi {
     /**
      * Move deployment stage before requested stage
      * @param {String} deploymentStageId Deployment Stage ID
+     * @param {String} stageId Deployment Stage ID
      * @param {module:api/DeploymentStageMainCallsApi~moveBeforeDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentStageResponseList}
      */
-    moveBeforeDeploymentStage(deploymentStageId, callback) {
+    moveBeforeDeploymentStage(deploymentStageId, stageId, callback) {
       let postBody = null;
       // verify the required parameter 'deploymentStageId' is set
       if (deploymentStageId === undefined || deploymentStageId === null) {
         throw new Error("Missing the required parameter 'deploymentStageId' when calling moveBeforeDeploymentStage");
       }
+      // verify the required parameter 'stageId' is set
+      if (stageId === undefined || stageId === null) {
+        throw new Error("Missing the required parameter 'stageId' when calling moveBeforeDeploymentStage");
+      }
 
       let pathParams = {
-        'deploymentStageId': deploymentStageId
+        'deploymentStageId': deploymentStageId,
+        'stageId': stageId
       };
       let queryParams = {
       };

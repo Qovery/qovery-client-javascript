@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ## moveBeforeDeploymentStage
 
-> DeploymentStageResponseList moveBeforeDeploymentStage(deploymentStageId)
+> DeploymentStageResponseList moveBeforeDeploymentStage(deploymentStageId, stageId)
 
 Move deployment stage before requested stage
 
@@ -421,7 +421,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
 let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
-apiInstance.moveBeforeDeploymentStage(deploymentStageId, (error, data, response) => {
+let stageId = "stageId_example"; // String | Deployment Stage ID
+apiInstance.moveBeforeDeploymentStage(deploymentStageId, stageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -436,6 +437,7 @@ apiInstance.moveBeforeDeploymentStage(deploymentStageId, (error, data, response)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentStageId** | **String**| Deployment Stage ID | 
+ **stageId** | **String**| Deployment Stage ID | 
 
 ### Return type
 

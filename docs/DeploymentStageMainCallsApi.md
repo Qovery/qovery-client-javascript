@@ -11,7 +11,8 @@ Method | HTTP request | Description
 [**getDeploymentStage**](DeploymentStageMainCallsApi.md#getDeploymentStage) | **GET** /deploymentStage/{deploymentStageId} | Get Deployment Stage
 [**getServiceDeploymentStage**](DeploymentStageMainCallsApi.md#getServiceDeploymentStage) | **GET** /service/{serviceId}/deploymentStage | Get Service Deployment Stage
 [**listEnvironmentDeploymentStage**](DeploymentStageMainCallsApi.md#listEnvironmentDeploymentStage) | **GET** /environment/{environmentId}/deploymentStage | List environment deployment stage
-[**moveDeploymentStage**](DeploymentStageMainCallsApi.md#moveDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/moveBefore/{stageId} | Move deployment stage before requested stage
+[**moveAfterDeploymentStage**](DeploymentStageMainCallsApi.md#moveAfterDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/moveAfter/{stageId} | Move deployment stage after requested stage
+[**moveBeforeDeploymentStage**](DeploymentStageMainCallsApi.md#moveBeforeDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/moveBefore/{stageId} | Move deployment stage before requested stage
 
 
 
@@ -354,11 +355,11 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## moveDeploymentStage
+## moveAfterDeploymentStage
 
-> DeploymentStageResponseList moveDeploymentStage(deploymentStageId, stageId)
+> DeploymentStageResponseList moveAfterDeploymentStage(deploymentStageId, stageId)
 
-Move deployment stage before requested stage
+Move deployment stage after requested stage
 
 ### Example
 
@@ -372,7 +373,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
 let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
 let stageId = "stageId_example"; // String | Deployment Stage ID
-apiInstance.moveDeploymentStage(deploymentStageId, stageId, (error, data, response) => {
+apiInstance.moveAfterDeploymentStage(deploymentStageId, stageId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -388,6 +389,53 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentStageId** | **String**| Deployment Stage ID | 
  **stageId** | **String**| Deployment Stage ID | 
+
+### Return type
+
+[**DeploymentStageResponseList**](DeploymentStageResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## moveBeforeDeploymentStage
+
+> DeploymentStageResponseList moveBeforeDeploymentStage(deploymentStageId)
+
+Move deployment stage before requested stage
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
+let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
+apiInstance.moveBeforeDeploymentStage(deploymentStageId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deploymentStageId** | **String**| Deployment Stage ID | 
 
 ### Return type
 

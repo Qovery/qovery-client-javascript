@@ -342,8 +342,56 @@ export default class DeploymentStageMainCallsApi {
     }
 
     /**
-     * Callback function to receive the result of the moveDeploymentStage operation.
-     * @callback module:api/DeploymentStageMainCallsApi~moveDeploymentStageCallback
+     * Callback function to receive the result of the moveAfterDeploymentStage operation.
+     * @callback module:api/DeploymentStageMainCallsApi~moveAfterDeploymentStageCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/DeploymentStageResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Move deployment stage after requested stage
+     * @param {String} deploymentStageId Deployment Stage ID
+     * @param {String} stageId Deployment Stage ID
+     * @param {module:api/DeploymentStageMainCallsApi~moveAfterDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/DeploymentStageResponseList}
+     */
+    moveAfterDeploymentStage(deploymentStageId, stageId, callback) {
+      let postBody = null;
+      // verify the required parameter 'deploymentStageId' is set
+      if (deploymentStageId === undefined || deploymentStageId === null) {
+        throw new Error("Missing the required parameter 'deploymentStageId' when calling moveAfterDeploymentStage");
+      }
+      // verify the required parameter 'stageId' is set
+      if (stageId === undefined || stageId === null) {
+        throw new Error("Missing the required parameter 'stageId' when calling moveAfterDeploymentStage");
+      }
+
+      let pathParams = {
+        'deploymentStageId': deploymentStageId,
+        'stageId': stageId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = DeploymentStageResponseList;
+      return this.apiClient.callApi(
+        '/deploymentStage/{deploymentStageId}/moveAfter/{stageId}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the moveBeforeDeploymentStage operation.
+     * @callback module:api/DeploymentStageMainCallsApi~moveBeforeDeploymentStageCallback
      * @param {String} error Error message, if any.
      * @param {module:model/DeploymentStageResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -352,24 +400,18 @@ export default class DeploymentStageMainCallsApi {
     /**
      * Move deployment stage before requested stage
      * @param {String} deploymentStageId Deployment Stage ID
-     * @param {String} stageId Deployment Stage ID
-     * @param {module:api/DeploymentStageMainCallsApi~moveDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DeploymentStageMainCallsApi~moveBeforeDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentStageResponseList}
      */
-    moveDeploymentStage(deploymentStageId, stageId, callback) {
+    moveBeforeDeploymentStage(deploymentStageId, callback) {
       let postBody = null;
       // verify the required parameter 'deploymentStageId' is set
       if (deploymentStageId === undefined || deploymentStageId === null) {
-        throw new Error("Missing the required parameter 'deploymentStageId' when calling moveDeploymentStage");
-      }
-      // verify the required parameter 'stageId' is set
-      if (stageId === undefined || stageId === null) {
-        throw new Error("Missing the required parameter 'stageId' when calling moveDeploymentStage");
+        throw new Error("Missing the required parameter 'deploymentStageId' when calling moveBeforeDeploymentStage");
       }
 
       let pathParams = {
-        'deploymentStageId': deploymentStageId,
-        'stageId': stageId
+        'deploymentStageId': deploymentStageId
       };
       let queryParams = {
       };

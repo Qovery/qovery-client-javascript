@@ -118,10 +118,20 @@
         done();
       });
     });
-    describe('moveDeploymentStage', function() {
-      it('should call moveDeploymentStage successfully', function(done) {
-        //uncomment below and update the code to test moveDeploymentStage
-        //instance.moveDeploymentStage(function(error) {
+    describe('moveAfterDeploymentStage', function() {
+      it('should call moveAfterDeploymentStage successfully', function(done) {
+        //uncomment below and update the code to test moveAfterDeploymentStage
+        //instance.moveAfterDeploymentStage(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('moveBeforeDeploymentStage', function() {
+      it('should call moveBeforeDeploymentStage successfully', function(done) {
+        //uncomment below and update the code to test moveBeforeDeploymentStage
+        //instance.moveBeforeDeploymentStage(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

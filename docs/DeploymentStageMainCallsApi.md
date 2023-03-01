@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## attachServiceToDeploymentStage
 
-> DeploymentStageResponseList attachServiceToDeploymentStage(deploymentStageId)
+> DeploymentStageResponseList attachServiceToDeploymentStage(deploymentStageId, serviceId)
 
 Attach service to deployment stage
 
@@ -32,7 +32,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.DeploymentStageMainCallsApi();
 let deploymentStageId = "deploymentStageId_example"; // String | Deployment Stage ID
-apiInstance.attachServiceToDeploymentStage(deploymentStageId, (error, data, response) => {
+let serviceId = "serviceId_example"; // String | Service ID of an application/job/container/database
+apiInstance.attachServiceToDeploymentStage(deploymentStageId, serviceId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -47,6 +48,7 @@ apiInstance.attachServiceToDeploymentStage(deploymentStageId, (error, data, resp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **deploymentStageId** | **String**| Deployment Stage ID | 
+ **serviceId** | **String**| Service ID of an application/job/container/database | 
 
 ### Return type
 

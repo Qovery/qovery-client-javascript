@@ -47,18 +47,24 @@ export default class DeploymentStageMainCallsApi {
     /**
      * Attach service to deployment stage
      * @param {String} deploymentStageId Deployment Stage ID
+     * @param {String} serviceId Service ID of an application/job/container/database
      * @param {module:api/DeploymentStageMainCallsApi~attachServiceToDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentStageResponseList}
      */
-    attachServiceToDeploymentStage(deploymentStageId, callback) {
+    attachServiceToDeploymentStage(deploymentStageId, serviceId, callback) {
       let postBody = null;
       // verify the required parameter 'deploymentStageId' is set
       if (deploymentStageId === undefined || deploymentStageId === null) {
         throw new Error("Missing the required parameter 'deploymentStageId' when calling attachServiceToDeploymentStage");
       }
+      // verify the required parameter 'serviceId' is set
+      if (serviceId === undefined || serviceId === null) {
+        throw new Error("Missing the required parameter 'serviceId' when calling attachServiceToDeploymentStage");
+      }
 
       let pathParams = {
-        'deploymentStageId': deploymentStageId
+        'deploymentStageId': deploymentStageId,
+        'serviceId': serviceId
       };
       let queryParams = {
       };

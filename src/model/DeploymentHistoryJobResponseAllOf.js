@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import Commit from './Commit';
 import DeploymentHistoryJobResponseAllOfSchedule from './DeploymentHistoryJobResponseAllOfSchedule';
-import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
+import StateEnum from './StateEnum';
 
 /**
  * The DeploymentHistoryJobResponseAllOf model module.
@@ -54,7 +54,7 @@ class DeploymentHistoryJobResponseAllOf {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = DeploymentHistoryStatusEnum.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
@@ -88,7 +88,7 @@ class DeploymentHistoryJobResponseAllOf {
 DeploymentHistoryJobResponseAllOf.prototype['name'] = undefined;
 
 /**
- * @member {module:model/DeploymentHistoryStatusEnum} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryJobResponseAllOf.prototype['status'] = undefined;
 

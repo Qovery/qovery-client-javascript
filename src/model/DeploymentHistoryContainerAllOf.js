@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
+import StateEnum from './StateEnum';
 
 /**
  * The DeploymentHistoryContainerAllOf model module.
@@ -52,7 +52,7 @@ class DeploymentHistoryContainerAllOf {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = DeploymentHistoryStatusEnum.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
@@ -80,7 +80,7 @@ class DeploymentHistoryContainerAllOf {
 DeploymentHistoryContainerAllOf.prototype['name'] = undefined;
 
 /**
- * @member {module:model/DeploymentHistoryStatusEnum} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryContainerAllOf.prototype['status'] = undefined;
 

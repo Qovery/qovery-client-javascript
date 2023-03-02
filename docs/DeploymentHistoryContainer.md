@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** | name of the container | [optional] 
-**status** | [**DeploymentHistoryStatusEnum**](DeploymentHistoryStatusEnum.md) |  | [optional] 
+**status** | [**StateEnum**](StateEnum.md) |  | [optional] 
 **imageName** | **String** |  | [optional] 
 **tag** | **String** |  | [optional] 
 **_arguments** | **[String]** |  | [optional] 

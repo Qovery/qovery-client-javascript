@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import DeploymentHistoryContainerAllOf from './DeploymentHistoryContainerAllOf';
-import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
+import StateEnum from './StateEnum';
 
 /**
  * The DeploymentHistoryContainer model module.
@@ -71,7 +71,7 @@ class DeploymentHistoryContainer {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = DeploymentHistoryStatusEnum.constructFromObject(data['status']);
+                obj['status'] = StateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
@@ -114,7 +114,7 @@ DeploymentHistoryContainer.prototype['updated_at'] = undefined;
 DeploymentHistoryContainer.prototype['name'] = undefined;
 
 /**
- * @member {module:model/DeploymentHistoryStatusEnum} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryContainer.prototype['status'] = undefined;
 
@@ -159,7 +159,7 @@ Base.prototype['updated_at'] = undefined;
  */
 DeploymentHistoryContainerAllOf.prototype['name'] = undefined;
 /**
- * @member {module:model/DeploymentHistoryStatusEnum} status
+ * @member {module:model/StateEnum} status
  */
 DeploymentHistoryContainerAllOf.prototype['status'] = undefined;
 /**

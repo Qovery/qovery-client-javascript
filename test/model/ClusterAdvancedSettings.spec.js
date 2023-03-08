@@ -150,6 +150,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property awsIamAdminGroup (base name: "aws.iam.admin_group")', function() {
+      // uncomment below and update the code to test the property awsIamAdminGroup
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

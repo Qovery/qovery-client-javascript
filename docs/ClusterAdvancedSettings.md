@@ -20,5 +20,6 @@ Name | Type | Description | Notes
 **cloudProviderContainerRegistryTags** | [**ClusterAdvancedSettingsCloudProviderContainerRegistryTags**](ClusterAdvancedSettingsCloudProviderContainerRegistryTags.md) |  | [optional] 
 **loadBalancerSize** | **String** | Select the size of the main load_balancer (only effective for Scaleway) | [optional] [default to &#39;lb-s&#39;]
 **plecoResourcesTtl** | **Number** |  | [optional] [default to -1]
+**awsIamAdminGroup** | **String** | AWS IAM group name with cluster access | [optional] [default to &#39;Admins&#39;]
 
 

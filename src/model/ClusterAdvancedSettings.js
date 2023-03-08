@@ -96,6 +96,9 @@ class ClusterAdvancedSettings {
             if (data.hasOwnProperty('pleco.resources_ttl')) {
                 obj['pleco.resources_ttl'] = ApiClient.convertToType(data['pleco.resources_ttl'], 'Number');
             }
+            if (data.hasOwnProperty('aws.iam.admin_group')) {
+                obj['aws.iam.admin_group'] = ApiClient.convertToType(data['aws.iam.admin_group'], 'String');
+            }
         }
         return obj;
     }
@@ -207,6 +210,13 @@ ClusterAdvancedSettings.prototype['load_balancer.size'] = 'lb-s';
  * @default -1
  */
 ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = -1;
+
+/**
+ * AWS IAM group name with cluster access
+ * @member {String} aws.iam.admin_group
+ * @default 'Admins'
+ */
+ClusterAdvancedSettings.prototype['aws.iam.admin_group'] = 'Admins';
 
 
 

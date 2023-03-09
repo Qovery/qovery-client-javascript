@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **databaseRedisAllowedCidrs** | **[String]** | List of CIDRs allowed to access the Redis database | [optional] 
 **registryImageRetentionTime** | **Number** | Configure the number of seconds before cleaning images in the registry | [optional] [default to 31536000]
 **lokiLogRetentionInWeek** | **Number** | For how long in week loki is going to keep logs of your applications | [optional] [default to 12]
-**cloudProviderContainerRegistryTags** | [**ClusterAdvancedSettingsCloudProviderContainerRegistryTags**](ClusterAdvancedSettingsCloudProviderContainerRegistryTags.md) |  | [optional] 
+**cloudProviderContainerRegistryTags** | **{String: String}** | Add additional tags on the cluster dedicated registry | [optional] 
 **loadBalancerSize** | **String** | Select the size of the main load_balancer (only effective for Scaleway) | [optional] [default to &#39;lb-s&#39;]
 **plecoResourcesTtl** | **Number** |  | [optional] [default to -1]
 **awsIamAdminGroup** | **String** | AWS IAM group name with cluster access | [optional] [default to &#39;Admins&#39;]

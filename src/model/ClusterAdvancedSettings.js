@@ -86,8 +86,8 @@ class ClusterAdvancedSettings {
             if (data.hasOwnProperty('loki.log_retention_in_week')) {
                 obj['loki.log_retention_in_week'] = ApiClient.convertToType(data['loki.log_retention_in_week'], 'Number');
             }
-            if (data.hasOwnProperty('cloud_provider_container_registry_tags')) {
-                obj['cloud_provider_container_registry_tags'] = ApiClient.convertToType(data['cloud_provider_container_registry_tags'], {'String': 'String'});
+            if (data.hasOwnProperty('cloud_provider.container_registry.tags')) {
+                obj['cloud_provider.container_registry.tags'] = ApiClient.convertToType(data['cloud_provider.container_registry.tags'], {'String': 'String'});
             }
             if (data.hasOwnProperty('load_balancer.size')) {
                 obj['load_balancer.size'] = ApiClient.convertToType(data['load_balancer.size'], 'String');
@@ -194,9 +194,9 @@ ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
 
 /**
  * Add additional tags on the cluster dedicated registry
- * @member {Object.<String, String>} cloud_provider_container_registry_tags
+ * @member {Object.<String, String>} cloud_provider.container_registry.tags
  */
-ClusterAdvancedSettings.prototype['cloud_provider_container_registry_tags'] = undefined;
+ClusterAdvancedSettings.prototype['cloud_provider.container_registry.tags'] = undefined;
 
 /**
  * Select the size of the main load_balancer (only effective for Scaleway)

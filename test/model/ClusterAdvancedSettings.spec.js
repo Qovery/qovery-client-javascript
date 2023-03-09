@@ -132,7 +132,7 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property cloudProviderContainerRegistryTags (base name: "cloud_provider_container_registry_tags")', function() {
+    it('should have the property cloudProviderContainerRegistryTags (base name: "cloud_provider.container_registry.tags")', function() {
       // uncomment below and update the code to test the property cloudProviderContainerRegistryTags
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();

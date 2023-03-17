@@ -56,6 +56,18 @@ class ClusterAdvancedSettings {
             if (data.hasOwnProperty('aws.vpc.flow_logs_retention_days')) {
                 obj['aws.vpc.flow_logs_retention_days'] = ApiClient.convertToType(data['aws.vpc.flow_logs_retention_days'], 'Number');
             }
+            if (data.hasOwnProperty('loki.log_retention_in_week')) {
+                obj['loki.log_retention_in_week'] = ApiClient.convertToType(data['loki.log_retention_in_week'], 'Number');
+            }
+            if (data.hasOwnProperty('registry.image_retention_time')) {
+                obj['registry.image_retention_time'] = ApiClient.convertToType(data['registry.image_retention_time'], 'Number');
+            }
+            if (data.hasOwnProperty('cloud_provider.container_registry.tags')) {
+                obj['cloud_provider.container_registry.tags'] = ApiClient.convertToType(data['cloud_provider.container_registry.tags'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('load_balancer.size')) {
+                obj['load_balancer.size'] = ApiClient.convertToType(data['load_balancer.size'], 'String');
+            }
             if (data.hasOwnProperty('database.postgresql.deny_public_access')) {
                 obj['database.postgresql.deny_public_access'] = ApiClient.convertToType(data['database.postgresql.deny_public_access'], 'Boolean');
             }
@@ -80,23 +92,14 @@ class ClusterAdvancedSettings {
             if (data.hasOwnProperty('database.redis.allowed_cidrs')) {
                 obj['database.redis.allowed_cidrs'] = ApiClient.convertToType(data['database.redis.allowed_cidrs'], ['String']);
             }
-            if (data.hasOwnProperty('registry.image_retention_time')) {
-                obj['registry.image_retention_time'] = ApiClient.convertToType(data['registry.image_retention_time'], 'Number');
+            if (data.hasOwnProperty('aws.iam.admin_group')) {
+                obj['aws.iam.admin_group'] = ApiClient.convertToType(data['aws.iam.admin_group'], 'String');
             }
-            if (data.hasOwnProperty('loki.log_retention_in_week')) {
-                obj['loki.log_retention_in_week'] = ApiClient.convertToType(data['loki.log_retention_in_week'], 'Number');
-            }
-            if (data.hasOwnProperty('cloud_provider.container_registry.tags')) {
-                obj['cloud_provider.container_registry.tags'] = ApiClient.convertToType(data['cloud_provider.container_registry.tags'], {'String': 'String'});
-            }
-            if (data.hasOwnProperty('load_balancer.size')) {
-                obj['load_balancer.size'] = ApiClient.convertToType(data['load_balancer.size'], 'String');
+            if (data.hasOwnProperty('aws.eks.ec2.metadata_imds')) {
+                obj['aws.eks.ec2.metadata_imds'] = ApiClient.convertToType(data['aws.eks.ec2.metadata_imds'], 'String');
             }
             if (data.hasOwnProperty('pleco.resources_ttl')) {
                 obj['pleco.resources_ttl'] = ApiClient.convertToType(data['pleco.resources_ttl'], 'Number');
-            }
-            if (data.hasOwnProperty('aws.iam.admin_group')) {
-                obj['aws.iam.admin_group'] = ApiClient.convertToType(data['aws.iam.admin_group'], 'String');
             }
         }
         return obj;
@@ -125,6 +128,33 @@ ClusterAdvancedSettings.prototype['aws.vpc.enable_s3_flow_logs'] = false;
  * @default 365
  */
 ClusterAdvancedSettings.prototype['aws.vpc.flow_logs_retention_days'] = 365;
+
+/**
+ * For how long in week loki is going to keep logs of your applications
+ * @member {Number} loki.log_retention_in_week
+ * @default 12
+ */
+ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
+
+/**
+ * Configure the number of seconds before cleaning images in the registry
+ * @member {Number} registry.image_retention_time
+ * @default 31536000
+ */
+ClusterAdvancedSettings.prototype['registry.image_retention_time'] = 31536000;
+
+/**
+ * Add additional tags on the cluster dedicated registry
+ * @member {Object.<String, String>} cloud_provider.container_registry.tags
+ */
+ClusterAdvancedSettings.prototype['cloud_provider.container_registry.tags'] = undefined;
+
+/**
+ * Select the size of the main load_balancer (only effective for Scaleway)
+ * @member {String} load_balancer.size
+ * @default 'lb-s'
+ */
+ClusterAdvancedSettings.prototype['load_balancer.size'] = 'lb-s';
 
 /**
  * Deny public access to any PostgreSQL database
@@ -179,31 +209,18 @@ ClusterAdvancedSettings.prototype['database.redis.deny_public_access'] = false;
 ClusterAdvancedSettings.prototype['database.redis.allowed_cidrs'] = undefined;
 
 /**
- * Configure the number of seconds before cleaning images in the registry
- * @member {Number} registry.image_retention_time
- * @default 31536000
+ * AWS IAM group name with cluster access
+ * @member {String} aws.iam.admin_group
+ * @default 'Admins'
  */
-ClusterAdvancedSettings.prototype['registry.image_retention_time'] = 31536000;
+ClusterAdvancedSettings.prototype['aws.iam.admin_group'] = 'Admins';
 
 /**
- * For how long in week loki is going to keep logs of your applications
- * @member {Number} loki.log_retention_in_week
- * @default 12
+ * Specify the [IMDS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) version you want to use:   * `required`: IMDS V2 only   * `optional`: IMDS V1 + V2 
+ * @member {module:model/ClusterAdvancedSettings.AwsEksEc2MetadataImdsEnum} aws.eks.ec2.metadata_imds
+ * @default 'optional'
  */
-ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
-
-/**
- * Add additional tags on the cluster dedicated registry
- * @member {Object.<String, String>} cloud_provider.container_registry.tags
- */
-ClusterAdvancedSettings.prototype['cloud_provider.container_registry.tags'] = undefined;
-
-/**
- * Select the size of the main load_balancer (only effective for Scaleway)
- * @member {String} load_balancer.size
- * @default 'lb-s'
- */
-ClusterAdvancedSettings.prototype['load_balancer.size'] = 'lb-s';
+ClusterAdvancedSettings.prototype['aws.eks.ec2.metadata_imds'] = 'optional';
 
 /**
  * @member {Number} pleco.resources_ttl
@@ -211,15 +228,29 @@ ClusterAdvancedSettings.prototype['load_balancer.size'] = 'lb-s';
  */
 ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = -1;
 
+
+
+
+
 /**
- * AWS IAM group name with cluster access
- * @member {String} aws.iam.admin_group
- * @default 'Admins'
+ * Allowed values for the <code>aws.eks.ec2.metadata_imds</code> property.
+ * @enum {String}
+ * @readonly
  */
-ClusterAdvancedSettings.prototype['aws.iam.admin_group'] = 'Admins';
+ClusterAdvancedSettings['AwsEksEc2MetadataImdsEnum'] = {
 
+    /**
+     * value: "optional"
+     * @const
+     */
+    "optional": "optional",
 
-
+    /**
+     * value: "required"
+     * @const
+     */
+    "required": "required"
+};
 
 
 

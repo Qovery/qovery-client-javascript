@@ -72,6 +72,30 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lokiLogRetentionInWeek (base name: "loki.log_retention_in_week")', function() {
+      // uncomment below and update the code to test the property lokiLogRetentionInWeek
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registryImageRetentionTime (base name: "registry.image_retention_time")', function() {
+      // uncomment below and update the code to test the property registryImageRetentionTime
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property cloudProviderContainerRegistryTags (base name: "cloud_provider.container_registry.tags")', function() {
+      // uncomment below and update the code to test the property cloudProviderContainerRegistryTags
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property loadBalancerSize (base name: "load_balancer.size")', function() {
+      // uncomment below and update the code to test the property loadBalancerSize
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property databasePostgresqlDenyPublicAccess (base name: "database.postgresql.deny_public_access")', function() {
       // uncomment below and update the code to test the property databasePostgresqlDenyPublicAccess
       //var instance = new QoveryApi.ClusterAdvancedSettings();
@@ -120,38 +144,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property registryImageRetentionTime (base name: "registry.image_retention_time")', function() {
-      // uncomment below and update the code to test the property registryImageRetentionTime
+    it('should have the property awsIamAdminGroup (base name: "aws.iam.admin_group")', function() {
+      // uncomment below and update the code to test the property awsIamAdminGroup
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
 
-    it('should have the property lokiLogRetentionInWeek (base name: "loki.log_retention_in_week")', function() {
-      // uncomment below and update the code to test the property lokiLogRetentionInWeek
-      //var instance = new QoveryApi.ClusterAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property cloudProviderContainerRegistryTags (base name: "cloud_provider.container_registry.tags")', function() {
-      // uncomment below and update the code to test the property cloudProviderContainerRegistryTags
-      //var instance = new QoveryApi.ClusterAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property loadBalancerSize (base name: "load_balancer.size")', function() {
-      // uncomment below and update the code to test the property loadBalancerSize
+    it('should have the property awsEksEc2MetadataImds (base name: "aws.eks.ec2.metadata_imds")', function() {
+      // uncomment below and update the code to test the property awsEksEc2MetadataImds
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
 
     it('should have the property plecoResourcesTtl (base name: "pleco.resources_ttl")', function() {
       // uncomment below and update the code to test the property plecoResourcesTtl
-      //var instance = new QoveryApi.ClusterAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property awsIamAdminGroup (base name: "aws.iam.admin_group")', function() {
-      // uncomment below and update the code to test the property awsIamAdminGroup
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });

@@ -7,6 +7,10 @@ Name | Type | Description | Notes
 **awsCloudwatchEksLogsRetentionDays** | **Number** | Set the number of retention days for EKS Cloudwatch logs | [optional] [default to 90]
 **awsVpcEnableS3FlowLogs** | **Boolean** | Enable flow logs for on the VPC and store them in an S3 bucket | [optional] [default to false]
 **awsVpcFlowLogsRetentionDays** | **Number** | Set the number of retention days for flow logs. Disable with value \&quot;0\&quot; | [optional] [default to 365]
+**lokiLogRetentionInWeek** | **Number** | For how long in week loki is going to keep logs of your applications | [optional] [default to 12]
+**registryImageRetentionTime** | **Number** | Configure the number of seconds before cleaning images in the registry | [optional] [default to 31536000]
+**cloudProviderContainerRegistryTags** | **{String: String}** | Add additional tags on the cluster dedicated registry | [optional] 
+**loadBalancerSize** | **String** | Select the size of the main load_balancer (only effective for Scaleway) | [optional] [default to &#39;lb-s&#39;]
 **databasePostgresqlDenyPublicAccess** | **Boolean** | Deny public access to any PostgreSQL database | [optional] [default to false]
 **databasePostgresqlAllowedCidrs** | **[String]** | List of CIDRs allowed to access the PostgreSQL database | [optional] 
 **databaseMysqlDenyPublicAccess** | **Boolean** | Deny public access to any MySql database | [optional] [default to false]
@@ -15,11 +19,19 @@ Name | Type | Description | Notes
 **databaseMongodbAllowedCidrs** | **[String]** | List of CIDRs allowed to access the MongoDB/DocumentDB database | [optional] 
 **databaseRedisDenyPublicAccess** | **Boolean** | Deny public access to any Redis database | [optional] [default to false]
 **databaseRedisAllowedCidrs** | **[String]** | List of CIDRs allowed to access the Redis database | [optional] 
-**registryImageRetentionTime** | **Number** | Configure the number of seconds before cleaning images in the registry | [optional] [default to 31536000]
-**lokiLogRetentionInWeek** | **Number** | For how long in week loki is going to keep logs of your applications | [optional] [default to 12]
-**cloudProviderContainerRegistryTags** | **{String: String}** | Add additional tags on the cluster dedicated registry | [optional] 
-**loadBalancerSize** | **String** | Select the size of the main load_balancer (only effective for Scaleway) | [optional] [default to &#39;lb-s&#39;]
-**plecoResourcesTtl** | **Number** |  | [optional] [default to -1]
 **awsIamAdminGroup** | **String** | AWS IAM group name with cluster access | [optional] [default to &#39;Admins&#39;]
+**awsEksEc2MetadataImds** | **String** | Specify the [IMDS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) version you want to use:   * &#x60;required&#x60;: IMDS V2 only   * &#x60;optional&#x60;: IMDS V1 + V2  | [optional] [default to &#39;optional&#39;]
+**plecoResourcesTtl** | **Number** |  | [optional] [default to -1]
+
+
+
+## Enum: AwsEksEc2MetadataImdsEnum
+
+
+* `optional` (value: `"optional"`)
+
+* `required` (value: `"required"`)
+
+
 
 

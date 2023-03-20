@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property architecture (base name: "architecture")', function() {
+      // uncomment below and update the code to test the property architecture
+      //var instance = new QoveryApi.ClusterInstanceTypeResponseListResultsInner();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

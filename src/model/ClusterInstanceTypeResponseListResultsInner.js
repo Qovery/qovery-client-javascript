@@ -77,6 +77,9 @@ class ClusterInstanceTypeResponseListResultsInner {
             if (data.hasOwnProperty('bandwidth_guarantee')) {
                 obj['bandwidth_guarantee'] = ApiClient.convertToType(data['bandwidth_guarantee'], 'String');
             }
+            if (data.hasOwnProperty('architecture')) {
+                obj['architecture'] = ApiClient.convertToType(data['architecture'], 'String');
+            }
         }
         return obj;
     }
@@ -113,6 +116,11 @@ ClusterInstanceTypeResponseListResultsInner.prototype['bandwidth_in_gbps'] = und
  * @member {String} bandwidth_guarantee
  */
 ClusterInstanceTypeResponseListResultsInner.prototype['bandwidth_guarantee'] = undefined;
+
+/**
+ * @member {String} architecture
+ */
+ClusterInstanceTypeResponseListResultsInner.prototype['architecture'] = undefined;
 
 
 

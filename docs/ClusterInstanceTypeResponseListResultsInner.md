@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **ramInGb** | **Number** |  | 
 **bandwidthInGbps** | **String** |  | 
 **bandwidthGuarantee** | **String** |  | 
+**architecture** | **String** |  | [optional] 
 
 

@@ -40,7 +40,7 @@ export default class ContainerConfigurationApi {
      * Callback function to receive the result of the editContainerAdvancedSettings operation.
      * @callback module:api/ContainerConfigurationApi~editContainerAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ContainerAdvancedSettings>} data The data returned by the service call.
+     * @param {module:model/ContainerAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,9 +49,9 @@ export default class ContainerConfigurationApi {
      * Edit advanced settings by returning table of advanced settings.
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/ContainerAdvancedSettings>} opts.containerAdvancedSettings 
+     * @param {module:model/ContainerAdvancedSettings} opts.containerAdvancedSettings 
      * @param {module:api/ContainerConfigurationApi~editContainerAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ContainerAdvancedSettings>}
+     * data is of type: {@link module:model/ContainerAdvancedSettings}
      */
     editContainerAdvancedSettings(containerId, opts, callback) {
       opts = opts || {};
@@ -74,7 +74,7 @@ export default class ContainerConfigurationApi {
       let authNames = ['bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = [ContainerAdvancedSettings];
+      let returnType = ContainerAdvancedSettings;
       return this.apiClient.callApi(
         '/container/{containerId}/advancedSettings', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -132,7 +132,7 @@ export default class ContainerConfigurationApi {
      * Callback function to receive the result of the getContainerAdvancedSettings operation.
      * @callback module:api/ContainerConfigurationApi~getContainerAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ContainerAdvancedSettings>} data The data returned by the service call.
+     * @param {module:model/ContainerAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -141,7 +141,7 @@ export default class ContainerConfigurationApi {
      * Get list and values of the advanced settings of the container.
      * @param {String} containerId Container ID
      * @param {module:api/ContainerConfigurationApi~getContainerAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ContainerAdvancedSettings>}
+     * data is of type: {@link module:model/ContainerAdvancedSettings}
      */
     getContainerAdvancedSettings(containerId, callback) {
       let postBody = null;
@@ -163,7 +163,7 @@ export default class ContainerConfigurationApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = [ContainerAdvancedSettings];
+      let returnType = ContainerAdvancedSettings;
       return this.apiClient.callApi(
         '/container/{containerId}/advancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

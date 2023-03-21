@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## editContainerAdvancedSettings
 
-> [ContainerAdvancedSettings] editContainerAdvancedSettings(containerId, opts)
+> ContainerAdvancedSettings editContainerAdvancedSettings(containerId, opts)
 
 Edit advanced settings
 
@@ -31,7 +31,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ContainerConfigurationApi();
 let containerId = "containerId_example"; // String | Container ID
 let opts = {
-  'containerAdvancedSettings': [new QoveryApi.ContainerAdvancedSettings()] // [ContainerAdvancedSettings] | 
+  'containerAdvancedSettings': new QoveryApi.ContainerAdvancedSettings() // ContainerAdvancedSettings | 
 };
 apiInstance.editContainerAdvancedSettings(containerId, opts, (error, data, response) => {
   if (error) {
@@ -48,11 +48,11 @@ apiInstance.editContainerAdvancedSettings(containerId, opts, (error, data, respo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **containerId** | **String**| Container ID | 
- **containerAdvancedSettings** | [**[ContainerAdvancedSettings]**](ContainerAdvancedSettings.md)|  | [optional] 
+ **containerAdvancedSettings** | [**ContainerAdvancedSettings**](ContainerAdvancedSettings.md)|  | [optional] 
 
 ### Return type
 
-[**[ContainerAdvancedSettings]**](ContainerAdvancedSettings.md)
+[**ContainerAdvancedSettings**](ContainerAdvancedSettings.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ## getContainerAdvancedSettings
 
-> [ContainerAdvancedSettings] getContainerAdvancedSettings(containerId)
+> ContainerAdvancedSettings getContainerAdvancedSettings(containerId)
 
 Get advanced settings
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ContainerAdvancedSettings]**](ContainerAdvancedSettings.md)
+[**ContainerAdvancedSettings**](ContainerAdvancedSettings.md)
 
 ### Authorization
 

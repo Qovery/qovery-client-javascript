@@ -246,6 +246,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property securityServiceAccountName (base name: "security.service_account_name")', function() {
+      // uncomment below and update the code to test the property securityServiceAccountName
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

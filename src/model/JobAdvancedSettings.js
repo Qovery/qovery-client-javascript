@@ -104,6 +104,9 @@ class JobAdvancedSettings {
             if (data.hasOwnProperty('liveness_probe.failure_threshold')) {
                 obj['liveness_probe.failure_threshold'] = ApiClient.convertToType(data['liveness_probe.failure_threshold'], 'Number');
             }
+            if (data.hasOwnProperty('security.service_account_name')) {
+                obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
+            }
         }
         return obj;
     }
@@ -238,6 +241,13 @@ JobAdvancedSettings.prototype['liveness_probe.success_threshold'] = 0;
  * @default 0
  */
 JobAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 0;
+
+/**
+ * Allows you to set an existing Kubernetes service account name 
+ * @member {String} security.service_account_name
+ * @default ''
+ */
+JobAdvancedSettings.prototype['security.service_account_name'] = '';
 
 
 

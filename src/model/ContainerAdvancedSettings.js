@@ -143,6 +143,9 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('liveness_probe.failure_threshold')) {
                 obj['liveness_probe.failure_threshold'] = ApiClient.convertToType(data['liveness_probe.failure_threshold'], 'Number');
             }
+            if (data.hasOwnProperty('security.service_account_name')) {
+                obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
+            }
         }
         return obj;
     }
@@ -368,6 +371,13 @@ ContainerAdvancedSettings.prototype['liveness_probe.success_threshold'] = 1;
  * @default 3
  */
 ContainerAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
+
+/**
+ * Allows you to set an existing Kubernetes service account name 
+ * @member {String} security.service_account_name
+ * @default ''
+ */
+ContainerAdvancedSettings.prototype['security.service_account_name'] = '';
 
 
 

@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **livenessProbeTimeoutSeconds** | **Number** | When the probe times out | [optional] [default to 5]
 **livenessProbeSuccessThreshold** | **Number** | Minimum consecutive successes for the probe to be considered successful after having failed. | [optional] [default to 1]
 **livenessProbeFailureThreshold** | **Number** | Minimum consecutive failures for the probe to be considered failed after having succeeded. | [optional] [default to 3]
+**securityServiceAccountName** | **String** | Allows you to set an existing Kubernetes service account name  | [optional] [default to &#39;&#39;]
 
 
 

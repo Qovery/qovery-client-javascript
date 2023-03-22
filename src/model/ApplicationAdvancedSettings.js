@@ -152,6 +152,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('hpa.cpu.average_utilization_percent')) {
                 obj['hpa.cpu.average_utilization_percent'] = ApiClient.convertToType(data['hpa.cpu.average_utilization_percent'], 'Number');
             }
+            if (data.hasOwnProperty('security.service_account_name')) {
+                obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
+            }
         }
         return obj;
     }
@@ -397,6 +400,13 @@ ApplicationAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
  * @default 60
  */
 ApplicationAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = 60;
+
+/**
+ * Allows you to set an existing Kubernetes service account name 
+ * @member {String} security.service_account_name
+ * @default ''
+ */
+ApplicationAdvancedSettings.prototype['security.service_account_name'] = '';
 
 
 

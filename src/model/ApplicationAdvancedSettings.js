@@ -104,6 +104,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.basic_auth_env_var')) {
                 obj['network.ingress.basic_auth_env_var'] = ApiClient.convertToType(data['network.ingress.basic_auth_env_var'], 'String');
             }
+            if (data.hasOwnProperty('network.ingress.enable_sticky_session')) {
+                obj['network.ingress.enable_sticky_session'] = ApiClient.convertToType(data['network.ingress.enable_sticky_session'], 'Boolean');
+            }
             if (data.hasOwnProperty('readiness_probe.type')) {
                 obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
             }
@@ -282,6 +285,13 @@ ApplicationAdvancedSettings.prototype['network.ingress.denylist_source_range'] =
  * @default ''
  */
 ApplicationAdvancedSettings.prototype['network.ingress.basic_auth_env_var'] = '';
+
+/**
+ * Enable the load balancer to bind a user's session to a specific target. This ensures that all requests from the user during the session are sent to the same target 
+ * @member {Boolean} network.ingress.enable_sticky_session
+ * @default false
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.enable_sticky_session'] = false;
 
 /**
  * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 

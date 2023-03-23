@@ -146,6 +146,9 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('security.service_account_name')) {
                 obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
             }
+            if (data.hasOwnProperty('hpa.cpu.average_utilization_percent')) {
+                obj['hpa.cpu.average_utilization_percent'] = ApiClient.convertToType(data['hpa.cpu.average_utilization_percent'], 'Number');
+            }
         }
         return obj;
     }
@@ -378,6 +381,13 @@ ContainerAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
  * @default ''
  */
 ContainerAdvancedSettings.prototype['security.service_account_name'] = '';
+
+/**
+ * Percentage value of cpu usage at which point pods should scale up.
+ * @member {Number} hpa.cpu.average_utilization_percent
+ * @default 60
+ */
+ContainerAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = 60;
 
 
 

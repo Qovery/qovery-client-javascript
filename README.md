@@ -166,7 +166,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricCpu**](docs/ApplicationMetricsApi.md#getApplicationMetricCpu) | **GET** /application/{applicationId}/metric/cpu | Get CPU consumption metric over time for the application
 *QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricHealthCheck**](docs/ApplicationMetricsApi.md#getApplicationMetricHealthCheck) | **GET** /application/{applicationId}/metric/healthCheck | Get Health Check latency  metric over time for the application
 *QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricMemory**](docs/ApplicationMetricsApi.md#getApplicationMetricMemory) | **GET** /application/{applicationId}/metric/memory | Get Memory consumption metric over time for the application
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricRestart**](docs/ApplicationMetricsApi.md#getApplicationMetricRestart) | **GET** /application/{applicationId}/metric/restart | List application restarts
 *QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricStorage**](docs/ApplicationMetricsApi.md#getApplicationMetricStorage) | **GET** /application/{applicationId}/metric/storage | Get Storage consumption metric over time for the application
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecret**](docs/ApplicationSecretApi.md#createApplicationSecret) | **POST** /application/{applicationId}/secret | Add a secret to the application
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecretAlias**](docs/ApplicationSecretApi.md#createApplicationSecretAlias) | **POST** /application/{applicationId}/secret/{secretId}/alias | Create a secret alias at the application level
@@ -320,7 +319,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricCpu**](docs/DatabaseMetricsApi.md#getDatabaseMetricCpu) | **GET** /database/{databaseId}/metric/cpu | Get CPU consumption metric over time for the database
 *QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricHealthCheck**](docs/DatabaseMetricsApi.md#getDatabaseMetricHealthCheck) | **GET** /database/{databaseId}/metric/healthCheck | Get Health Check latency  metric over time for the database
 *QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricMemory**](docs/DatabaseMetricsApi.md#getDatabaseMetricMemory) | **GET** /database/{databaseId}/metric/memory | Get Memory consumption metric over time for the database
-*QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricRestart**](docs/DatabaseMetricsApi.md#getDatabaseMetricRestart) | **GET** /database/{databaseId}/metric/restart | List database restarts
 *QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricStorage**](docs/DatabaseMetricsApi.md#getDatabaseMetricStorage) | **GET** /database/{databaseId}/metric/storage | Get Storage consumption metric over time for the database
 *QoveryApi.DatabasesApi* | [**createDatabase**](docs/DatabasesApi.md#createDatabase) | **POST** /environment/{environmentId}/database | Create a database
 *QoveryApi.DatabasesApi* | [**getEnvironmentDatabaseStatus**](docs/DatabasesApi.md#getEnvironmentDatabaseStatus) | **GET** /environment/{environmentId}/database/status | List all environment databases statuses
@@ -782,8 +780,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.MetricMemoryDatapoint](docs/MetricMemoryDatapoint.md)
  - [QoveryApi.MetricMemoryDatapointResponseList](docs/MetricMemoryDatapointResponseList.md)
  - [QoveryApi.MetricMemoryResponseList](docs/MetricMemoryResponseList.md)
- - [QoveryApi.MetricRestart](docs/MetricRestart.md)
- - [QoveryApi.MetricRestartResultsInner](docs/MetricRestartResultsInner.md)
  - [QoveryApi.MetricStorage](docs/MetricStorage.md)
  - [QoveryApi.MetricStorageDatapoint](docs/MetricStorageDatapoint.md)
  - [QoveryApi.MetricStorageDatapointResponseList](docs/MetricStorageDatapointResponseList.md)

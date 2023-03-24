@@ -18,7 +18,6 @@ import InstanceResponseList from '../model/InstanceResponseList';
 import MetricCPUResponseList from '../model/MetricCPUResponseList';
 import MetricGenericResponseList from '../model/MetricGenericResponseList';
 import MetricMemoryResponseList from '../model/MetricMemoryResponseList';
-import MetricRestart from '../model/MetricRestart';
 import MetricStorageResponseList from '../model/MetricStorageResponseList';
 import StorageDiskResponseList from '../model/StorageDiskResponseList';
 
@@ -308,55 +307,6 @@ export default class ApplicationMetricsApi {
       let returnType = MetricMemoryResponseList;
       return this.apiClient.callApi(
         '/application/{applicationId}/metric/memory', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getApplicationMetricRestart operation.
-     * @callback module:api/ApplicationMetricsApi~getApplicationMetricRestartCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/MetricRestart} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List application restarts
-     * Get application restart message and timestamp.
-     * @param {String} applicationId Application ID
-     * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
-     * @param {module:api/ApplicationMetricsApi~getApplicationMetricRestartCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MetricRestart}
-     */
-    getApplicationMetricRestart(applicationId, lastSeconds, callback) {
-      let postBody = null;
-      // verify the required parameter 'applicationId' is set
-      if (applicationId === undefined || applicationId === null) {
-        throw new Error("Missing the required parameter 'applicationId' when calling getApplicationMetricRestart");
-      }
-      // verify the required parameter 'lastSeconds' is set
-      if (lastSeconds === undefined || lastSeconds === null) {
-        throw new Error("Missing the required parameter 'lastSeconds' when calling getApplicationMetricRestart");
-      }
-
-      let pathParams = {
-        'applicationId': applicationId
-      };
-      let queryParams = {
-        'lastSeconds': lastSeconds
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = MetricRestart;
-      return this.apiClient.callApi(
-        '/application/{applicationId}/metric/restart', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

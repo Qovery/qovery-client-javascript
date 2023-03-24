@@ -357,8 +357,6 @@ docs/MetricMemory.md
 docs/MetricMemoryDatapoint.md
 docs/MetricMemoryDatapointResponseList.md
 docs/MetricMemoryResponseList.md
-docs/MetricRestart.md
-docs/MetricRestartResultsInner.md
 docs/MetricStorage.md
 docs/MetricStorageDatapoint.md
 docs/MetricStorageDatapointResponseList.md
@@ -857,8 +855,6 @@ src/model/MetricMemory.js
 src/model/MetricMemoryDatapoint.js
 src/model/MetricMemoryDatapointResponseList.js
 src/model/MetricMemoryResponseList.js
-src/model/MetricRestart.js
-src/model/MetricRestartResultsInner.js
 src/model/MetricStorage.js
 src/model/MetricStorageDatapoint.js
 src/model/MetricStorageDatapointResponseList.js
@@ -1340,8 +1336,6 @@ test/model/MetricMemory.spec.js
 test/model/MetricMemoryDatapoint.spec.js
 test/model/MetricMemoryDatapointResponseList.spec.js
 test/model/MetricMemoryResponseList.spec.js
-test/model/MetricRestart.spec.js
-test/model/MetricRestartResultsInner.spec.js
 test/model/MetricStorage.spec.js
 test/model/MetricStorageDatapoint.spec.js
 test/model/MetricStorageDatapointResponseList.spec.js

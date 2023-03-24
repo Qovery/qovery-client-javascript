@@ -108,16 +108,6 @@
         done();
       });
     });
-    describe('getApplicationMetricRestart', function() {
-      it('should call getApplicationMetricRestart successfully', function(done) {
-        //uncomment below and update the code to test getApplicationMetricRestart
-        //instance.getApplicationMetricRestart(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getApplicationMetricStorage', function() {
       it('should call getApplicationMetricStorage successfully', function(done) {
         //uncomment below and update the code to test getApplicationMetricStorage

@@ -309,8 +309,6 @@ import MetricMemory from './model/MetricMemory';
 import MetricMemoryDatapoint from './model/MetricMemoryDatapoint';
 import MetricMemoryDatapointResponseList from './model/MetricMemoryDatapointResponseList';
 import MetricMemoryResponseList from './model/MetricMemoryResponseList';
-import MetricRestart from './model/MetricRestart';
-import MetricRestartResultsInner from './model/MetricRestartResultsInner';
 import MetricStorage from './model/MetricStorage';
 import MetricStorageDatapoint from './model/MetricStorageDatapoint';
 import MetricStorageDatapointResponseList from './model/MetricStorageDatapointResponseList';
@@ -2311,18 +2309,6 @@ export {
      * @property {module:model/MetricMemoryResponseList}
      */
     MetricMemoryResponseList,
-
-    /**
-     * The MetricRestart model constructor.
-     * @property {module:model/MetricRestart}
-     */
-    MetricRestart,
-
-    /**
-     * The MetricRestartResultsInner model constructor.
-     * @property {module:model/MetricRestartResultsInner}
-     */
-    MetricRestartResultsInner,
 
     /**
      * The MetricStorage model constructor.

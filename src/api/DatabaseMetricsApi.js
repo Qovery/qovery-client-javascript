@@ -17,7 +17,6 @@ import DatabaseCurrentMetric from '../model/DatabaseCurrentMetric';
 import MetricCPUDatapointResponseList from '../model/MetricCPUDatapointResponseList';
 import MetricGenericResponseList from '../model/MetricGenericResponseList';
 import MetricMemoryDatapointResponseList from '../model/MetricMemoryDatapointResponseList';
-import MetricRestart from '../model/MetricRestart';
 import MetricStorageDatapointResponseList from '../model/MetricStorageDatapointResponseList';
 
 /**
@@ -221,55 +220,6 @@ export default class DatabaseMetricsApi {
       let returnType = MetricMemoryDatapointResponseList;
       return this.apiClient.callApi(
         '/database/{databaseId}/metric/memory', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getDatabaseMetricRestart operation.
-     * @callback module:api/DatabaseMetricsApi~getDatabaseMetricRestartCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/MetricRestart} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List database restarts
-     * Get database restart message and timestamp.
-     * @param {String} databaseId Database ID
-     * @param {Number} lastSeconds Up to how many seconds in the past to ask analytics results
-     * @param {module:api/DatabaseMetricsApi~getDatabaseMetricRestartCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/MetricRestart}
-     */
-    getDatabaseMetricRestart(databaseId, lastSeconds, callback) {
-      let postBody = null;
-      // verify the required parameter 'databaseId' is set
-      if (databaseId === undefined || databaseId === null) {
-        throw new Error("Missing the required parameter 'databaseId' when calling getDatabaseMetricRestart");
-      }
-      // verify the required parameter 'lastSeconds' is set
-      if (lastSeconds === undefined || lastSeconds === null) {
-        throw new Error("Missing the required parameter 'lastSeconds' when calling getDatabaseMetricRestart");
-      }
-
-      let pathParams = {
-        'databaseId': databaseId
-      };
-      let queryParams = {
-        'lastSeconds': lastSeconds
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = MetricRestart;
-      return this.apiClient.callApi(
-        '/database/{databaseId}/metric/restart', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

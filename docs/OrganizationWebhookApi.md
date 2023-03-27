@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ## deleteOrganizationWebhook
 
-> deleteOrganizationWebhook(organizationId)
+> deleteOrganizationWebhook(organizationId, webhookId)
 
 Delete organization webhook
 
@@ -84,7 +84,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.OrganizationWebhookApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-apiInstance.deleteOrganizationWebhook(organizationId, (error, data, response) => {
+let webhookId = "webhookId_example"; // String | Webhook ID
+apiInstance.deleteOrganizationWebhook(organizationId, webhookId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -99,6 +100,7 @@ apiInstance.deleteOrganizationWebhook(organizationId, (error, data, response) =>
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **webhookId** | **String**| Webhook ID | 
 
 ### Return type
 
@@ -116,7 +118,7 @@ null (empty response body)
 
 ## editOrganizationWebhook
 
-> OrganizationWebhookCreateResponse editOrganizationWebhook(organizationId, opts)
+> OrganizationWebhookCreateResponse editOrganizationWebhook(organizationId, webhookId, opts)
 
 Edit an organization webhook
 
@@ -133,10 +135,11 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.OrganizationWebhookApi();
 let organizationId = "organizationId_example"; // String | Organization ID
+let webhookId = "webhookId_example"; // String | Webhook ID
 let opts = {
   'organizationWebhookCreateRequest': new QoveryApi.OrganizationWebhookCreateRequest() // OrganizationWebhookCreateRequest | 
 };
-apiInstance.editOrganizationWebhook(organizationId, opts, (error, data, response) => {
+apiInstance.editOrganizationWebhook(organizationId, webhookId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -151,6 +154,7 @@ apiInstance.editOrganizationWebhook(organizationId, opts, (error, data, response
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **webhookId** | **String**| Webhook ID | 
  **organizationWebhookCreateRequest** | [**OrganizationWebhookCreateRequest**](OrganizationWebhookCreateRequest.md)|  | [optional] 
 
 ### Return type

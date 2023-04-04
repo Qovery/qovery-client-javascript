@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getEnvironment**](EnvironmentMainCallsApi.md#getEnvironment) | **GET** /environment/{environmentId} | Get environment by ID
 [**getEnvironmentStatus**](EnvironmentMainCallsApi.md#getEnvironmentStatus) | **GET** /environment/{environmentId}/status | Get environment status
 [**getEnvironmentStatuses**](EnvironmentMainCallsApi.md#getEnvironmentStatuses) | **GET** /environment/{environmentId}/statuses | Get environment statuses with services status
+[**getEnvironmentStatusesWithStages**](EnvironmentMainCallsApi.md#getEnvironmentStatusesWithStages) | **GET** /environment/{environmentId}/statusesWithStages | Get environment statuses with stages
 
 
 
@@ -244,6 +245,53 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetEnvironmentStatuses200Response**](GetEnvironmentStatuses200Response.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getEnvironmentStatusesWithStages
+
+> GetEnvironmentStatusesWithStages200Response getEnvironmentStatusesWithStages(environmentId)
+
+Get environment statuses with stages
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.EnvironmentMainCallsApi();
+let environmentId = "environmentId_example"; // String | Environment ID
+apiInstance.getEnvironmentStatusesWithStages(environmentId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **environmentId** | **String**| Environment ID | 
+
+### Return type
+
+[**GetEnvironmentStatusesWithStages200Response**](GetEnvironmentStatusesWithStages200Response.md)
 
 ### Authorization
 

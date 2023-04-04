@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('getEnvironmentStatusesWithStages', function() {
+      it('should call getEnvironmentStatusesWithStages successfully', function(done) {
+        //uncomment below and update the code to test getEnvironmentStatusesWithStages
+        //instance.getEnvironmentStatusesWithStages(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

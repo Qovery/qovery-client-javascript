@@ -353,6 +353,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentMainCallsApi* | [**getEnvironment**](docs/EnvironmentMainCallsApi.md#getEnvironment) | **GET** /environment/{environmentId} | Get environment by ID
 *QoveryApi.EnvironmentMainCallsApi* | [**getEnvironmentStatus**](docs/EnvironmentMainCallsApi.md#getEnvironmentStatus) | **GET** /environment/{environmentId}/status | Get environment status
 *QoveryApi.EnvironmentMainCallsApi* | [**getEnvironmentStatuses**](docs/EnvironmentMainCallsApi.md#getEnvironmentStatuses) | **GET** /environment/{environmentId}/statuses | Get environment statuses with services status
+*QoveryApi.EnvironmentMainCallsApi* | [**getEnvironmentStatusesWithStages**](docs/EnvironmentMainCallsApi.md#getEnvironmentStatusesWithStages) | **GET** /environment/{environmentId}/statusesWithStages | Get environment statuses with stages
 *QoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecret**](docs/EnvironmentSecretApi.md#createEnvironmentSecret) | **POST** /environment/{environmentId}/secret | Add a secret to the environment
 *QoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecretAlias**](docs/EnvironmentSecretApi.md#createEnvironmentSecretAlias) | **POST** /environment/{environmentId}/secret/{secretId}/alias | Create a secret alias at the environment level
 *QoveryApi.EnvironmentSecretApi* | [**createEnvironmentSecretOverride**](docs/EnvironmentSecretApi.md#createEnvironmentSecretOverride) | **POST** /environment/{environmentId}/secret/{secretId}/override | Create a secret override at the environment level
@@ -706,6 +707,9 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EventResponseList](docs/EventResponseList.md)
  - [QoveryApi.GenericObjectCurrentCost](docs/GenericObjectCurrentCost.md)
  - [QoveryApi.GetEnvironmentStatuses200Response](docs/GetEnvironmentStatuses200Response.md)
+ - [QoveryApi.GetEnvironmentStatusesWithStages200Response](docs/GetEnvironmentStatusesWithStages200Response.md)
+ - [QoveryApi.GetEnvironmentStatusesWithStages200ResponseStages](docs/GetEnvironmentStatusesWithStages200ResponseStages.md)
+ - [QoveryApi.GetEnvironmentStatusesWithStages200ResponseStagesResultsInner](docs/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.md)
  - [QoveryApi.GitAuthProvider](docs/GitAuthProvider.md)
  - [QoveryApi.GitAuthProviderResponseList](docs/GitAuthProviderResponseList.md)
  - [QoveryApi.GitProviderEnum](docs/GitProviderEnum.md)
@@ -872,6 +876,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ServiceTypeEnum](docs/ServiceTypeEnum.md)
  - [QoveryApi.SignUp](docs/SignUp.md)
  - [QoveryApi.SignUpRequest](docs/SignUpRequest.md)
+ - [QoveryApi.Stage](docs/Stage.md)
  - [QoveryApi.StateEnum](docs/StateEnum.md)
  - [QoveryApi.Status](docs/Status.md)
  - [QoveryApi.StatusKindEnum](docs/StatusKindEnum.md)

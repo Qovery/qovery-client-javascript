@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import Environment from '../model/Environment';
 import EnvironmentEditRequest from '../model/EnvironmentEditRequest';
 import GetEnvironmentStatuses200Response from '../model/GetEnvironmentStatuses200Response';
+import GetEnvironmentStatusesWithStages200Response from '../model/GetEnvironmentStatusesWithStages200Response';
 import Status from '../model/Status';
 
 /**
@@ -246,6 +247,48 @@ export default class EnvironmentMainCallsApi {
       let returnType = GetEnvironmentStatuses200Response;
       return this.apiClient.callApi(
         '/environment/{environmentId}/statuses', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEnvironmentStatusesWithStages operation.
+     * @callback module:api/EnvironmentMainCallsApi~getEnvironmentStatusesWithStagesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetEnvironmentStatusesWithStages200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get environment statuses with stages
+     * @param {String} environmentId Environment ID
+     * @param {module:api/EnvironmentMainCallsApi~getEnvironmentStatusesWithStagesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetEnvironmentStatusesWithStages200Response}
+     */
+    getEnvironmentStatusesWithStages(environmentId, callback) {
+      let postBody = null;
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentStatusesWithStages");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetEnvironmentStatusesWithStages200Response;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/statusesWithStages', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -271,6 +271,9 @@ docs/EventPaginatedResponseListAllOf.md
 docs/EventResponseList.md
 docs/GenericObjectCurrentCost.md
 docs/GetEnvironmentStatuses200Response.md
+docs/GetEnvironmentStatusesWithStages200Response.md
+docs/GetEnvironmentStatusesWithStages200ResponseStages.md
+docs/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.md
 docs/GitAuthProvider.md
 docs/GitAuthProviderResponseList.md
 docs/GitProviderEnum.md
@@ -460,6 +463,7 @@ docs/ServiceTotalNumber.md
 docs/ServiceTypeEnum.md
 docs/SignUp.md
 docs/SignUpRequest.md
+docs/Stage.md
 docs/StateEnum.md
 docs/Status.md
 docs/StatusKindEnum.md
@@ -781,6 +785,9 @@ src/model/EventPaginatedResponseListAllOf.js
 src/model/EventResponseList.js
 src/model/GenericObjectCurrentCost.js
 src/model/GetEnvironmentStatuses200Response.js
+src/model/GetEnvironmentStatusesWithStages200Response.js
+src/model/GetEnvironmentStatusesWithStages200ResponseStages.js
+src/model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.js
 src/model/GitAuthProvider.js
 src/model/GitAuthProviderResponseList.js
 src/model/GitProviderEnum.js
@@ -947,6 +954,7 @@ src/model/ServiceTotalNumber.js
 src/model/ServiceTypeEnum.js
 src/model/SignUp.js
 src/model/SignUpRequest.js
+src/model/Stage.js
 src/model/StateEnum.js
 src/model/Status.js
 src/model/StatusKindEnum.js
@@ -1262,6 +1270,9 @@ test/model/EventPaginatedResponseListAllOf.spec.js
 test/model/EventResponseList.spec.js
 test/model/GenericObjectCurrentCost.spec.js
 test/model/GetEnvironmentStatuses200Response.spec.js
+test/model/GetEnvironmentStatusesWithStages200Response.spec.js
+test/model/GetEnvironmentStatusesWithStages200ResponseStages.spec.js
+test/model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.spec.js
 test/model/GitAuthProvider.spec.js
 test/model/GitAuthProviderResponseList.spec.js
 test/model/GitProviderEnum.spec.js
@@ -1428,6 +1439,7 @@ test/model/ServiceTotalNumber.spec.js
 test/model/ServiceTypeEnum.spec.js
 test/model/SignUp.spec.js
 test/model/SignUpRequest.spec.js
+test/model/Stage.spec.js
 test/model/StateEnum.spec.js
 test/model/Status.spec.js
 test/model/StatusKindEnum.spec.js

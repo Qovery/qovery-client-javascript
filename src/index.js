@@ -235,6 +235,9 @@ import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListA
 import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
 import GetEnvironmentStatuses200Response from './model/GetEnvironmentStatuses200Response';
+import GetEnvironmentStatusesWithStages200Response from './model/GetEnvironmentStatusesWithStages200Response';
+import GetEnvironmentStatusesWithStages200ResponseStages from './model/GetEnvironmentStatusesWithStages200ResponseStages';
+import GetEnvironmentStatusesWithStages200ResponseStagesResultsInner from './model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
 import GitProviderEnum from './model/GitProviderEnum';
@@ -401,6 +404,7 @@ import ServiceTotalNumber from './model/ServiceTotalNumber';
 import ServiceTypeEnum from './model/ServiceTypeEnum';
 import SignUp from './model/SignUp';
 import SignUpRequest from './model/SignUpRequest';
+import Stage from './model/Stage';
 import StateEnum from './model/StateEnum';
 import Status from './model/Status';
 import StatusKindEnum from './model/StatusKindEnum';
@@ -1867,6 +1871,24 @@ export {
     GetEnvironmentStatuses200Response,
 
     /**
+     * The GetEnvironmentStatusesWithStages200Response model constructor.
+     * @property {module:model/GetEnvironmentStatusesWithStages200Response}
+     */
+    GetEnvironmentStatusesWithStages200Response,
+
+    /**
+     * The GetEnvironmentStatusesWithStages200ResponseStages model constructor.
+     * @property {module:model/GetEnvironmentStatusesWithStages200ResponseStages}
+     */
+    GetEnvironmentStatusesWithStages200ResponseStages,
+
+    /**
+     * The GetEnvironmentStatusesWithStages200ResponseStagesResultsInner model constructor.
+     * @property {module:model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner}
+     */
+    GetEnvironmentStatusesWithStages200ResponseStagesResultsInner,
+
+    /**
      * The GitAuthProvider model constructor.
      * @property {module:model/GitAuthProvider}
      */
@@ -2861,6 +2883,12 @@ export {
      * @property {module:model/SignUpRequest}
      */
     SignUpRequest,
+
+    /**
+     * The Stage model constructor.
+     * @property {module:model/Stage}
+     */
+    Stage,
 
     /**
      * The StateEnum model constructor.

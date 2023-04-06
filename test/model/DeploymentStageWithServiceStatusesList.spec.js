@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.GetEnvironmentStatusesWithStages200ResponseStages();
+    instance = new QoveryApi.DeploymentStageWithServiceStatusesList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('GetEnvironmentStatusesWithStages200ResponseStages', function() {
-    it('should create an instance of GetEnvironmentStatusesWithStages200ResponseStages', function() {
-      // uncomment below and update the code to test GetEnvironmentStatusesWithStages200ResponseStages
-      //var instance = new QoveryApi.GetEnvironmentStatusesWithStages200ResponseStages();
-      //expect(instance).to.be.a(QoveryApi.GetEnvironmentStatusesWithStages200ResponseStages);
+  describe('DeploymentStageWithServiceStatusesList', function() {
+    it('should create an instance of DeploymentStageWithServiceStatusesList', function() {
+      // uncomment below and update the code to test DeploymentStageWithServiceStatusesList
+      //var instance = new QoveryApi.DeploymentStageWithServiceStatusesList();
+      //expect(instance).to.be.a(QoveryApi.DeploymentStageWithServiceStatusesList);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.GetEnvironmentStatusesWithStages200ResponseStages();
+      //var instance = new QoveryApi.DeploymentStageWithServiceStatusesList();
       //expect(instance).to.be();
     });
 

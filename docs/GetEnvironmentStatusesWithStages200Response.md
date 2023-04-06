@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **environment** | [**Status**](Status.md) |  | [optional] 
-**stages** | [**GetEnvironmentStatusesWithStages200ResponseStages**](GetEnvironmentStatusesWithStages200ResponseStages.md) |  | [optional] 
+**stages** | [**DeploymentStageWithServiceStatusesList**](DeploymentStageWithServiceStatusesList.md) |  | [optional] 
 
 

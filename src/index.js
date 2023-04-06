@@ -177,6 +177,8 @@ import DeploymentStageResponseAllOf from './model/DeploymentStageResponseAllOf';
 import DeploymentStageResponseList from './model/DeploymentStageResponseList';
 import DeploymentStageServiceResponse from './model/DeploymentStageServiceResponse';
 import DeploymentStageServiceResponseAllOf from './model/DeploymentStageServiceResponseAllOf';
+import DeploymentStageWithServiceStatusesList from './model/DeploymentStageWithServiceStatusesList';
+import DeploymentStageWithServicesStatuses from './model/DeploymentStageWithServicesStatuses';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
 import Environment from './model/Environment';
 import EnvironmentAllOf from './model/EnvironmentAllOf';
@@ -236,8 +238,6 @@ import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
 import GetEnvironmentStatuses200Response from './model/GetEnvironmentStatuses200Response';
 import GetEnvironmentStatusesWithStages200Response from './model/GetEnvironmentStatusesWithStages200Response';
-import GetEnvironmentStatusesWithStages200ResponseStages from './model/GetEnvironmentStatusesWithStages200ResponseStages';
-import GetEnvironmentStatusesWithStages200ResponseStagesResultsInner from './model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
 import GitProviderEnum from './model/GitProviderEnum';
@@ -1523,6 +1523,18 @@ export {
     DeploymentStageServiceResponseAllOf,
 
     /**
+     * The DeploymentStageWithServiceStatusesList model constructor.
+     * @property {module:model/DeploymentStageWithServiceStatusesList}
+     */
+    DeploymentStageWithServiceStatusesList,
+
+    /**
+     * The DeploymentStageWithServicesStatuses model constructor.
+     * @property {module:model/DeploymentStageWithServicesStatuses}
+     */
+    DeploymentStageWithServicesStatuses,
+
+    /**
      * The DoCredentialsRequest model constructor.
      * @property {module:model/DoCredentialsRequest}
      */
@@ -1875,18 +1887,6 @@ export {
      * @property {module:model/GetEnvironmentStatusesWithStages200Response}
      */
     GetEnvironmentStatusesWithStages200Response,
-
-    /**
-     * The GetEnvironmentStatusesWithStages200ResponseStages model constructor.
-     * @property {module:model/GetEnvironmentStatusesWithStages200ResponseStages}
-     */
-    GetEnvironmentStatusesWithStages200ResponseStages,
-
-    /**
-     * The GetEnvironmentStatusesWithStages200ResponseStagesResultsInner model constructor.
-     * @property {module:model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner}
-     */
-    GetEnvironmentStatusesWithStages200ResponseStagesResultsInner,
 
     /**
      * The GitAuthProvider model constructor.

@@ -204,6 +204,8 @@ docs/DeploymentStageResponseAllOf.md
 docs/DeploymentStageResponseList.md
 docs/DeploymentStageServiceResponse.md
 docs/DeploymentStageServiceResponseAllOf.md
+docs/DeploymentStageWithServiceStatusesList.md
+docs/DeploymentStageWithServicesStatuses.md
 docs/DoCredentialsRequest.md
 docs/Environment.md
 docs/EnvironmentActionsApi.md
@@ -272,8 +274,6 @@ docs/EventResponseList.md
 docs/GenericObjectCurrentCost.md
 docs/GetEnvironmentStatuses200Response.md
 docs/GetEnvironmentStatusesWithStages200Response.md
-docs/GetEnvironmentStatusesWithStages200ResponseStages.md
-docs/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.md
 docs/GitAuthProvider.md
 docs/GitAuthProviderResponseList.md
 docs/GitProviderEnum.md
@@ -727,6 +727,8 @@ src/model/DeploymentStageResponseAllOf.js
 src/model/DeploymentStageResponseList.js
 src/model/DeploymentStageServiceResponse.js
 src/model/DeploymentStageServiceResponseAllOf.js
+src/model/DeploymentStageWithServiceStatusesList.js
+src/model/DeploymentStageWithServicesStatuses.js
 src/model/DoCredentialsRequest.js
 src/model/Environment.js
 src/model/EnvironmentAllOf.js
@@ -786,8 +788,6 @@ src/model/EventResponseList.js
 src/model/GenericObjectCurrentCost.js
 src/model/GetEnvironmentStatuses200Response.js
 src/model/GetEnvironmentStatusesWithStages200Response.js
-src/model/GetEnvironmentStatusesWithStages200ResponseStages.js
-src/model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.js
 src/model/GitAuthProvider.js
 src/model/GitAuthProviderResponseList.js
 src/model/GitProviderEnum.js
@@ -1212,6 +1212,8 @@ test/model/DeploymentStageResponseAllOf.spec.js
 test/model/DeploymentStageResponseList.spec.js
 test/model/DeploymentStageServiceResponse.spec.js
 test/model/DeploymentStageServiceResponseAllOf.spec.js
+test/model/DeploymentStageWithServiceStatusesList.spec.js
+test/model/DeploymentStageWithServicesStatuses.spec.js
 test/model/DoCredentialsRequest.spec.js
 test/model/Environment.spec.js
 test/model/EnvironmentAllOf.spec.js
@@ -1271,8 +1273,6 @@ test/model/EventResponseList.spec.js
 test/model/GenericObjectCurrentCost.spec.js
 test/model/GetEnvironmentStatuses200Response.spec.js
 test/model/GetEnvironmentStatusesWithStages200Response.spec.js
-test/model/GetEnvironmentStatusesWithStages200ResponseStages.spec.js
-test/model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.spec.js
 test/model/GitAuthProvider.spec.js
 test/model/GitAuthProviderResponseList.spec.js
 test/model/GitProviderEnum.spec.js

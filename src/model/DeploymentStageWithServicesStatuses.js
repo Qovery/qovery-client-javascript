@@ -16,18 +16,18 @@ import Stage from './Stage';
 import Status from './Status';
 
 /**
- * The GetEnvironmentStatusesWithStages200ResponseStagesResultsInner model module.
- * @module model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner
+ * The DeploymentStageWithServicesStatuses model module.
+ * @module model/DeploymentStageWithServicesStatuses
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class GetEnvironmentStatusesWithStages200ResponseStagesResultsInner {
+class DeploymentStageWithServicesStatuses {
     /**
-     * Constructs a new <code>GetEnvironmentStatusesWithStages200ResponseStagesResultsInner</code>.
-     * @alias module:model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner
+     * Constructs a new <code>DeploymentStageWithServicesStatuses</code>.
+     * @alias module:model/DeploymentStageWithServicesStatuses
      */
     constructor() { 
         
-        GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.initialize(this);
+        DeploymentStageWithServicesStatuses.initialize(this);
     }
 
     /**
@@ -39,15 +39,15 @@ class GetEnvironmentStatusesWithStages200ResponseStagesResultsInner {
     }
 
     /**
-     * Constructs a <code>GetEnvironmentStatusesWithStages200ResponseStagesResultsInner</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentStageWithServicesStatuses</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner} obj Optional instance to populate.
-     * @return {module:model/GetEnvironmentStatusesWithStages200ResponseStagesResultsInner} The populated <code>GetEnvironmentStatusesWithStages200ResponseStagesResultsInner</code> instance.
+     * @param {module:model/DeploymentStageWithServicesStatuses} obj Optional instance to populate.
+     * @return {module:model/DeploymentStageWithServicesStatuses} The populated <code>DeploymentStageWithServicesStatuses</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new GetEnvironmentStatusesWithStages200ResponseStagesResultsInner();
+            obj = obj || new DeploymentStageWithServicesStatuses();
 
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [Status]);
@@ -74,32 +74,32 @@ class GetEnvironmentStatusesWithStages200ResponseStagesResultsInner {
 /**
  * @member {Array.<module:model/Status>} applications
  */
-GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.prototype['applications'] = undefined;
+DeploymentStageWithServicesStatuses.prototype['applications'] = undefined;
 
 /**
  * @member {Array.<module:model/Status>} containers
  */
-GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.prototype['containers'] = undefined;
+DeploymentStageWithServicesStatuses.prototype['containers'] = undefined;
 
 /**
  * @member {Array.<module:model/Status>} jobs
  */
-GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.prototype['jobs'] = undefined;
+DeploymentStageWithServicesStatuses.prototype['jobs'] = undefined;
 
 /**
  * @member {Array.<module:model/Status>} databases
  */
-GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.prototype['databases'] = undefined;
+DeploymentStageWithServicesStatuses.prototype['databases'] = undefined;
 
 /**
  * @member {module:model/Stage} stage
  */
-GetEnvironmentStatusesWithStages200ResponseStagesResultsInner.prototype['stage'] = undefined;
+DeploymentStageWithServicesStatuses.prototype['stage'] = undefined;
 
 
 
 
 
 
-export default GetEnvironmentStatusesWithStages200ResponseStagesResultsInner;
+export default DeploymentStageWithServicesStatuses;
 

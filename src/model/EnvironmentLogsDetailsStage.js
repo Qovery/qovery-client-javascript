@@ -50,6 +50,12 @@ class EnvironmentLogsDetailsStage {
             if (data.hasOwnProperty('step')) {
                 obj['step'] = ApiClient.convertToType(data['step'], 'String');
             }
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
         }
         return obj;
     }
@@ -61,6 +67,16 @@ class EnvironmentLogsDetailsStage {
  * @member {String} step
  */
 EnvironmentLogsDetailsStage.prototype['step'] = undefined;
+
+/**
+ * @member {String} id
+ */
+EnvironmentLogsDetailsStage.prototype['id'] = undefined;
+
+/**
+ * @member {String} name
+ */
+EnvironmentLogsDetailsStage.prototype['name'] = undefined;
 
 
 

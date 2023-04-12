@@ -293,10 +293,6 @@ import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
 import LogResponseList from './model/LogResponseList';
-import LogicalDatabase from './model/LogicalDatabase';
-import LogicalDatabaseAllOf from './model/LogicalDatabaseAllOf';
-import LogicalDatabaseRequest from './model/LogicalDatabaseRequest';
-import LogicalDatabaseResponseList from './model/LogicalDatabaseResponseList';
 import Member from './model/Member';
 import MemberAllOf from './model/MemberAllOf';
 import MemberResponseList from './model/MemberResponseList';
@@ -484,7 +480,6 @@ import JobMainCallsApi from './api/JobMainCallsApi';
 import JobMetricsApi from './api/JobMetricsApi';
 import JobSecretApi from './api/JobSecretApi';
 import JobsApi from './api/JobsApi';
-import LogicalDatabaseApi from './api/LogicalDatabaseApi';
 import MembersApi from './api/MembersApi';
 import OrganizationAccountGitRepositoriesApi from './api/OrganizationAccountGitRepositoriesApi';
 import OrganizationApiTokenApi from './api/OrganizationApiTokenApi';
@@ -2219,30 +2214,6 @@ export {
     LogResponseList,
 
     /**
-     * The LogicalDatabase model constructor.
-     * @property {module:model/LogicalDatabase}
-     */
-    LogicalDatabase,
-
-    /**
-     * The LogicalDatabaseAllOf model constructor.
-     * @property {module:model/LogicalDatabaseAllOf}
-     */
-    LogicalDatabaseAllOf,
-
-    /**
-     * The LogicalDatabaseRequest model constructor.
-     * @property {module:model/LogicalDatabaseRequest}
-     */
-    LogicalDatabaseRequest,
-
-    /**
-     * The LogicalDatabaseResponseList model constructor.
-     * @property {module:model/LogicalDatabaseResponseList}
-     */
-    LogicalDatabaseResponseList,
-
-    /**
      * The Member model constructor.
      * @property {module:model/Member}
      */
@@ -3363,12 +3334,6 @@ export {
     * @property {module:api/JobsApi}
     */
     JobsApi,
-
-    /**
-    * The LogicalDatabaseApi service constructor.
-    * @property {module:api/LogicalDatabaseApi}
-    */
-    LogicalDatabaseApi,
 
     /**
     * The MembersApi service constructor.

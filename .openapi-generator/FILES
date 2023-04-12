@@ -339,11 +339,6 @@ docs/Log.md
 docs/LogPaginatedResponseList.md
 docs/LogPaginatedResponseListAllOf.md
 docs/LogResponseList.md
-docs/LogicalDatabase.md
-docs/LogicalDatabaseAllOf.md
-docs/LogicalDatabaseApi.md
-docs/LogicalDatabaseRequest.md
-docs/LogicalDatabaseResponseList.md
 docs/Member.md
 docs/MemberAllOf.md
 docs/MemberResponseList.md
@@ -548,7 +543,6 @@ src/api/JobMainCallsApi.js
 src/api/JobMetricsApi.js
 src/api/JobSecretApi.js
 src/api/JobsApi.js
-src/api/LogicalDatabaseApi.js
 src/api/MembersApi.js
 src/api/OrganizationAccountGitRepositoriesApi.js
 src/api/OrganizationApiTokenApi.js
@@ -843,10 +837,6 @@ src/model/Log.js
 src/model/LogPaginatedResponseList.js
 src/model/LogPaginatedResponseListAllOf.js
 src/model/LogResponseList.js
-src/model/LogicalDatabase.js
-src/model/LogicalDatabaseAllOf.js
-src/model/LogicalDatabaseRequest.js
-src/model/LogicalDatabaseResponseList.js
 src/model/Member.js
 src/model/MemberAllOf.js
 src/model/MemberResponseList.js
@@ -1034,7 +1024,6 @@ test/api/JobMainCallsApi.spec.js
 test/api/JobMetricsApi.spec.js
 test/api/JobSecretApi.spec.js
 test/api/JobsApi.spec.js
-test/api/LogicalDatabaseApi.spec.js
 test/api/MembersApi.spec.js
 test/api/OrganizationAccountGitRepositoriesApi.spec.js
 test/api/OrganizationApiTokenApi.spec.js
@@ -1328,10 +1317,6 @@ test/model/Log.spec.js
 test/model/LogPaginatedResponseList.spec.js
 test/model/LogPaginatedResponseListAllOf.spec.js
 test/model/LogResponseList.spec.js
-test/model/LogicalDatabase.spec.js
-test/model/LogicalDatabaseAllOf.spec.js
-test/model/LogicalDatabaseRequest.spec.js
-test/model/LogicalDatabaseResponseList.spec.js
 test/model/Member.spec.js
 test/model/MemberAllOf.spec.js
 test/model/MemberResponseList.spec.js

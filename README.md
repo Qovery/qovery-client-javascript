@@ -409,15 +409,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.JobsApi* | [**getDefaultJobAdvancedSettings**](docs/JobsApi.md#getDefaultJobAdvancedSettings) | **GET** /defaultJobAdvancedSettings | List default job advanced settings
 *QoveryApi.JobsApi* | [**getEnvironmentJobStatus**](docs/JobsApi.md#getEnvironmentJobStatus) | **GET** /environment/{environmentId}/job/status | List all environment job statuses
 *QoveryApi.JobsApi* | [**listJobs**](docs/JobsApi.md#listJobs) | **GET** /environment/{environmentId}/job | List jobs
-*QoveryApi.LogicalDatabaseApi* | [**createLogicalDatabaseOnDatabase**](docs/LogicalDatabaseApi.md#createLogicalDatabaseOnDatabase) | **POST** /database/{databaseId}/logicalDatabase | Create a logical database on the database
-*QoveryApi.LogicalDatabaseApi* | [**deleteLogicalDatabase**](docs/LogicalDatabaseApi.md#deleteLogicalDatabase) | **DELETE** /logicalDatabase/{logicalDatabaseId} | Delete a Logical database
-*QoveryApi.LogicalDatabaseApi* | [**editLogicalDatabase**](docs/LogicalDatabaseApi.md#editLogicalDatabase) | **PUT** /logicalDatabase/{logicalDatabaseId} | Edit a logical database
-*QoveryApi.LogicalDatabaseApi* | [**editLogicalDatabaseCredentials**](docs/LogicalDatabaseApi.md#editLogicalDatabaseCredentials) | **PUT** /logicalDatabase/{logicalDatabaseId}/credentials | Edit logical database credentials
-*QoveryApi.LogicalDatabaseApi* | [**getLogicalDatabase**](docs/LogicalDatabaseApi.md#getLogicalDatabase) | **GET** /logicalDatabase/{logicalDatabaseId} | Get logical database by ID
-*QoveryApi.LogicalDatabaseApi* | [**getLogicalDatabaseCredentials**](docs/LogicalDatabaseApi.md#getLogicalDatabaseCredentials) | **GET** /logicalDatabase/{logicalDatabaseId}/credentials | Get  credentials of the logical database
-*QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseApplication**](docs/LogicalDatabaseApi.md#listLogicalDatabaseApplication) | **GET** /logicalDatabase/{logicalDatabaseId}/application | List linked applications
-*QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseContainer**](docs/LogicalDatabaseApi.md#listLogicalDatabaseContainer) | **GET** /logicalDatabase/{logicalDatabaseId}/container | List linked containers
-*QoveryApi.LogicalDatabaseApi* | [**listLogicalDatabaseDatabase**](docs/LogicalDatabaseApi.md#listLogicalDatabaseDatabase) | **GET** /database/{databaseId}/logicalDatabase | List logical databases of a database
 *QoveryApi.MembersApi* | [**deleteInviteMember**](docs/MembersApi.md#deleteInviteMember) | **DELETE** /organization/{organizationId}/inviteMember/{inviteId} | Remove an invited member
 *QoveryApi.MembersApi* | [**deleteMember**](docs/MembersApi.md#deleteMember) | **DELETE** /organization/{organizationId}/member | Remove a member
 *QoveryApi.MembersApi* | [**editOrganizationMemberRole**](docs/MembersApi.md#editOrganizationMemberRole) | **PUT** /organization/{organizationId}/member | Edit an organization member role
@@ -765,10 +756,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)
  - [QoveryApi.LogPaginatedResponseListAllOf](docs/LogPaginatedResponseListAllOf.md)
  - [QoveryApi.LogResponseList](docs/LogResponseList.md)
- - [QoveryApi.LogicalDatabase](docs/LogicalDatabase.md)
- - [QoveryApi.LogicalDatabaseAllOf](docs/LogicalDatabaseAllOf.md)
- - [QoveryApi.LogicalDatabaseRequest](docs/LogicalDatabaseRequest.md)
- - [QoveryApi.LogicalDatabaseResponseList](docs/LogicalDatabaseResponseList.md)
  - [QoveryApi.Member](docs/Member.md)
  - [QoveryApi.MemberAllOf](docs/MemberAllOf.md)
  - [QoveryApi.MemberResponseList](docs/MemberResponseList.md)

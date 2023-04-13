@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[Status]**](Status.md) |  | [optional] 
+**results** | [**[EnvironmentStatus]**](EnvironmentStatus.md) |  | [optional] 
 
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Status from './Status';
+import EnvironmentStatus from './EnvironmentStatus';
 
 /**
  * The EnvironmentStatusList model module.
@@ -49,7 +49,7 @@ class EnvironmentStatusList {
             obj = obj || new EnvironmentStatusList();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Status]);
+                obj['results'] = ApiClient.convertToType(data['results'], [EnvironmentStatus]);
             }
         }
         return obj;
@@ -59,7 +59,7 @@ class EnvironmentStatusList {
 }
 
 /**
- * @member {Array.<module:model/Status>} results
+ * @member {Array.<module:model/EnvironmentStatus>} results
  */
 EnvironmentStatusList.prototype['results'] = undefined;
 

@@ -684,6 +684,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentResponseList](docs/EnvironmentResponseList.md)
  - [QoveryApi.EnvironmentStats](docs/EnvironmentStats.md)
  - [QoveryApi.EnvironmentStatsResponseList](docs/EnvironmentStatsResponseList.md)
+ - [QoveryApi.EnvironmentStatus](docs/EnvironmentStatus.md)
  - [QoveryApi.EnvironmentStatusList](docs/EnvironmentStatusList.md)
  - [QoveryApi.EnvironmentTotalNumber](docs/EnvironmentTotalNumber.md)
  - [QoveryApi.EnvironmentVariable](docs/EnvironmentVariable.md)

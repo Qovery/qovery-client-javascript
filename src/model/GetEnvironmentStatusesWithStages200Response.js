@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import DeploymentStageWithServiceStatusesList from './DeploymentStageWithServiceStatusesList';
-import Status from './Status';
+import EnvironmentStatus from './EnvironmentStatus';
 
 /**
  * The GetEnvironmentStatusesWithStages200Response model module.
@@ -50,7 +50,7 @@ class GetEnvironmentStatusesWithStages200Response {
             obj = obj || new GetEnvironmentStatusesWithStages200Response();
 
             if (data.hasOwnProperty('environment')) {
-                obj['environment'] = Status.constructFromObject(data['environment']);
+                obj['environment'] = EnvironmentStatus.constructFromObject(data['environment']);
             }
             if (data.hasOwnProperty('stages')) {
                 obj['stages'] = DeploymentStageWithServiceStatusesList.constructFromObject(data['stages']);
@@ -63,7 +63,7 @@ class GetEnvironmentStatusesWithStages200Response {
 }
 
 /**
- * @member {module:model/Status} environment
+ * @member {module:model/EnvironmentStatus} environment
  */
 GetEnvironmentStatusesWithStages200Response.prototype['environment'] = undefined;
 

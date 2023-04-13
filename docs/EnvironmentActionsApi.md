@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## cancelEnvironmentDeployment
 
-> Status cancelEnvironmentDeployment(environmentId)
+> EnvironmentStatus cancelEnvironmentDeployment(environmentId)
 
 Cancel environment deployment
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**EnvironmentStatus**](EnvironmentStatus.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 ## redeployEnvironment
 
-> Status redeployEnvironment(environmentId)
+> EnvironmentStatus redeployEnvironment(environmentId)
 
 Redeploy environment
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**EnvironmentStatus**](EnvironmentStatus.md)
 
 ### Authorization
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ## restartEnvironment
 
-> Status restartEnvironment(environmentId)
+> EnvironmentStatus restartEnvironment(environmentId)
 
 Deprecated - Restart environment
 
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**EnvironmentStatus**](EnvironmentStatus.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 ## stopEnvironment
 
-> Status stopEnvironment(environmentId)
+> EnvironmentStatus stopEnvironment(environmentId)
 
 Stop environment
 
@@ -403,7 +403,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**EnvironmentStatus**](EnvironmentStatus.md)
 
 ### Authorization
 

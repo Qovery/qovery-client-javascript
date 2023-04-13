@@ -66,12 +66,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property message (base name: "message")', function() {
-      // uncomment below and update the code to test the property message
-      //var instance = new QoveryApi.Status();
-      //expect(instance).to.be();
-    });
-
     it('should have the property serviceDeploymentStatus (base name: "service_deployment_status")', function() {
       // uncomment below and update the code to test the property serviceDeploymentStatus
       //var instance = new QoveryApi.Status();

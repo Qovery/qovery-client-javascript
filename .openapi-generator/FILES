@@ -255,6 +255,7 @@ docs/EnvironmentResponseList.md
 docs/EnvironmentSecretApi.md
 docs/EnvironmentStats.md
 docs/EnvironmentStatsResponseList.md
+docs/EnvironmentStatus.md
 docs/EnvironmentStatusList.md
 docs/EnvironmentTotalNumber.md
 docs/EnvironmentVariable.md
@@ -765,6 +766,7 @@ src/model/EnvironmentModeEnum.js
 src/model/EnvironmentResponseList.js
 src/model/EnvironmentStats.js
 src/model/EnvironmentStatsResponseList.js
+src/model/EnvironmentStatus.js
 src/model/EnvironmentStatusList.js
 src/model/EnvironmentTotalNumber.js
 src/model/EnvironmentVariable.js
@@ -1245,6 +1247,7 @@ test/model/EnvironmentModeEnum.spec.js
 test/model/EnvironmentResponseList.spec.js
 test/model/EnvironmentStats.spec.js
 test/model/EnvironmentStatsResponseList.spec.js
+test/model/EnvironmentStatus.spec.js
 test/model/EnvironmentStatusList.spec.js
 test/model/EnvironmentTotalNumber.spec.js
 test/model/EnvironmentVariable.spec.js

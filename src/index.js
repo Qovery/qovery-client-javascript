@@ -221,6 +221,7 @@ import EnvironmentModeEnum from './model/EnvironmentModeEnum';
 import EnvironmentResponseList from './model/EnvironmentResponseList';
 import EnvironmentStats from './model/EnvironmentStats';
 import EnvironmentStatsResponseList from './model/EnvironmentStatsResponseList';
+import EnvironmentStatus from './model/EnvironmentStatus';
 import EnvironmentStatusList from './model/EnvironmentStatusList';
 import EnvironmentTotalNumber from './model/EnvironmentTotalNumber';
 import EnvironmentVariable from './model/EnvironmentVariable';
@@ -1780,6 +1781,12 @@ export {
      * @property {module:model/EnvironmentStatsResponseList}
      */
     EnvironmentStatsResponseList,
+
+    /**
+     * The EnvironmentStatus model constructor.
+     * @property {module:model/EnvironmentStatus}
+     */
+    EnvironmentStatus,
 
     /**
      * The EnvironmentStatusList model constructor.

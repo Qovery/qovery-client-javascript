@@ -67,9 +67,6 @@ class ReferenceObjectStatus {
             if (data.hasOwnProperty('state')) {
                 obj['state'] = StateEnum.constructFromObject(data['state']);
             }
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
-            }
             if (data.hasOwnProperty('service_deployment_status')) {
                 obj['service_deployment_status'] = ServiceDeploymentStatusEnum.constructFromObject(data['service_deployment_status']);
             }
@@ -92,12 +89,6 @@ ReferenceObjectStatus.prototype['id'] = undefined;
  * @member {module:model/StateEnum} state
  */
 ReferenceObjectStatus.prototype['state'] = undefined;
-
-/**
- * message related to the state
- * @member {String} message
- */
-ReferenceObjectStatus.prototype['message'] = undefined;
 
 /**
  * @member {module:model/ServiceDeploymentStatusEnum} service_deployment_status
@@ -124,11 +115,6 @@ Status.prototype['id'] = undefined;
  * @member {module:model/StateEnum} state
  */
 Status.prototype['state'] = undefined;
-/**
- * message related to the state
- * @member {String} message
- */
-Status.prototype['message'] = undefined;
 /**
  * @member {module:model/ServiceDeploymentStatusEnum} service_deployment_status
  */

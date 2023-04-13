@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import EnvironmentStatus from './EnvironmentStatus';
 import Status from './Status';
 
 /**
@@ -49,7 +50,7 @@ class GetEnvironmentStatuses200Response {
             obj = obj || new GetEnvironmentStatuses200Response();
 
             if (data.hasOwnProperty('environment')) {
-                obj['environment'] = Status.constructFromObject(data['environment']);
+                obj['environment'] = EnvironmentStatus.constructFromObject(data['environment']);
             }
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [Status]);
@@ -71,7 +72,7 @@ class GetEnvironmentStatuses200Response {
 }
 
 /**
- * @member {module:model/Status} environment
+ * @member {module:model/EnvironmentStatus} environment
  */
 GetEnvironmentStatuses200Response.prototype['environment'] = undefined;
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ReferenceObjectStatus();
+    instance = new QoveryApi.EnvironmentStatus();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,34 @@
       object[property] = value;
   }
 
-  describe('ReferenceObjectStatus', function() {
-    it('should create an instance of ReferenceObjectStatus', function() {
-      // uncomment below and update the code to test ReferenceObjectStatus
-      //var instance = new QoveryApi.ReferenceObjectStatus();
-      //expect(instance).to.be.a(QoveryApi.ReferenceObjectStatus);
+  describe('EnvironmentStatus', function() {
+    it('should create an instance of EnvironmentStatus', function() {
+      // uncomment below and update the code to test EnvironmentStatus
+      //var instance = new QoveryApi.EnvironmentStatus();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentStatus);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ReferenceObjectStatus();
+      //var instance = new QoveryApi.EnvironmentStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instance = new QoveryApi.ReferenceObjectStatus();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property serviceDeploymentStatus (base name: "service_deployment_status")', function() {
-      // uncomment below and update the code to test the property serviceDeploymentStatus
-      //var instance = new QoveryApi.ReferenceObjectStatus();
+      //var instance = new QoveryApi.EnvironmentStatus();
       //expect(instance).to.be();
     });
 
     it('should have the property lastDeploymentDate (base name: "last_deployment_date")', function() {
       // uncomment below and update the code to test the property lastDeploymentDate
-      //var instance = new QoveryApi.ReferenceObjectStatus();
+      //var instance = new QoveryApi.EnvironmentStatus();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property lastDeploymentState (base name: "last_deployment_state")', function() {
+      // uncomment below and update the code to test the property lastDeploymentState
+      //var instance = new QoveryApi.EnvironmentStatus();
       //expect(instance).to.be();
     });
 

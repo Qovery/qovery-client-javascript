@@ -12,25 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
-import ServiceDeploymentStatusEnum from './ServiceDeploymentStatusEnum';
 import StateEnum from './StateEnum';
 
 /**
- * The Status model module.
- * @module model/Status
+ * The EnvironmentStatus model module.
+ * @module model/EnvironmentStatus
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class Status {
+class EnvironmentStatus {
     /**
-     * Constructs a new <code>Status</code>.
-     * @alias module:model/Status
+     * Constructs a new <code>EnvironmentStatus</code>.
+     * @alias module:model/EnvironmentStatus
      * @param id {String} 
      * @param state {module:model/StateEnum} 
-     * @param serviceDeploymentStatus {module:model/ServiceDeploymentStatusEnum} 
+     * @param lastDeploymentState {module:model/StateEnum} 
      */
-    constructor(id, state, serviceDeploymentStatus) { 
+    constructor(id, state, lastDeploymentState) { 
         
-        Status.initialize(this, id, state, serviceDeploymentStatus);
+        EnvironmentStatus.initialize(this, id, state, lastDeploymentState);
     }
 
     /**
@@ -38,22 +37,22 @@ class Status {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, state, serviceDeploymentStatus) { 
+    static initialize(obj, id, state, lastDeploymentState) { 
         obj['id'] = id;
         obj['state'] = state;
-        obj['service_deployment_status'] = serviceDeploymentStatus;
+        obj['last_deployment_state'] = lastDeploymentState;
     }
 
     /**
-     * Constructs a <code>Status</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentStatus</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Status} obj Optional instance to populate.
-     * @return {module:model/Status} The populated <code>Status</code> instance.
+     * @param {module:model/EnvironmentStatus} obj Optional instance to populate.
+     * @return {module:model/EnvironmentStatus} The populated <code>EnvironmentStatus</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Status();
+            obj = obj || new EnvironmentStatus();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -61,11 +60,11 @@ class Status {
             if (data.hasOwnProperty('state')) {
                 obj['state'] = StateEnum.constructFromObject(data['state']);
             }
-            if (data.hasOwnProperty('service_deployment_status')) {
-                obj['service_deployment_status'] = ServiceDeploymentStatusEnum.constructFromObject(data['service_deployment_status']);
-            }
             if (data.hasOwnProperty('last_deployment_date')) {
                 obj['last_deployment_date'] = ApiClient.convertToType(data['last_deployment_date'], 'Date');
+            }
+            if (data.hasOwnProperty('last_deployment_state')) {
+                obj['last_deployment_state'] = StateEnum.constructFromObject(data['last_deployment_state']);
             }
         }
         return obj;
@@ -77,27 +76,27 @@ class Status {
 /**
  * @member {String} id
  */
-Status.prototype['id'] = undefined;
+EnvironmentStatus.prototype['id'] = undefined;
 
 /**
  * @member {module:model/StateEnum} state
  */
-Status.prototype['state'] = undefined;
-
-/**
- * @member {module:model/ServiceDeploymentStatusEnum} service_deployment_status
- */
-Status.prototype['service_deployment_status'] = undefined;
+EnvironmentStatus.prototype['state'] = undefined;
 
 /**
  * @member {Date} last_deployment_date
  */
-Status.prototype['last_deployment_date'] = undefined;
+EnvironmentStatus.prototype['last_deployment_date'] = undefined;
+
+/**
+ * @member {module:model/StateEnum} last_deployment_state
+ */
+EnvironmentStatus.prototype['last_deployment_state'] = undefined;
 
 
 
 
 
 
-export default Status;
+export default EnvironmentStatus;
 

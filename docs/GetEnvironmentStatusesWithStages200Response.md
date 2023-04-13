@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**environment** | [**Status**](Status.md) |  | [optional] 
+**environment** | [**EnvironmentStatus**](EnvironmentStatus.md) |  | [optional] 
 **stages** | [**DeploymentStageWithServiceStatusesList**](DeploymentStageWithServiceStatusesList.md) |  | [optional] 
 
 

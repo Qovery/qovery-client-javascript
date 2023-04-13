@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import CloneRequest from '../model/CloneRequest';
 import DeployAllRequest from '../model/DeployAllRequest';
 import Environment from '../model/Environment';
+import EnvironmentStatus from '../model/EnvironmentStatus';
 import RebootServicesRequest from '../model/RebootServicesRequest';
 import Status from '../model/Status';
 
@@ -42,7 +43,7 @@ export default class EnvironmentActionsApi {
      * Callback function to receive the result of the cancelEnvironmentDeployment operation.
      * @callback module:api/EnvironmentActionsApi~cancelEnvironmentDeploymentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
+     * @param {module:model/EnvironmentStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,7 +52,7 @@ export default class EnvironmentActionsApi {
      * Cancel the current deployment of your environment.
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentActionsApi~cancelEnvironmentDeploymentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
+     * data is of type: {@link module:model/EnvironmentStatus}
      */
     cancelEnvironmentDeployment(environmentId, callback) {
       let postBody = null;
@@ -73,7 +74,7 @@ export default class EnvironmentActionsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Status;
+      let returnType = EnvironmentStatus;
       return this.apiClient.callApi(
         '/environment/{environmentId}/cancelDeployment', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -266,7 +267,7 @@ export default class EnvironmentActionsApi {
      * Callback function to receive the result of the redeployEnvironment operation.
      * @callback module:api/EnvironmentActionsApi~redeployEnvironmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
+     * @param {module:model/EnvironmentStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -274,7 +275,7 @@ export default class EnvironmentActionsApi {
      * Redeploy environment
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentActionsApi~redeployEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
+     * data is of type: {@link module:model/EnvironmentStatus}
      */
     redeployEnvironment(environmentId, callback) {
       let postBody = null;
@@ -296,7 +297,7 @@ export default class EnvironmentActionsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Status;
+      let returnType = EnvironmentStatus;
       return this.apiClient.callApi(
         '/environment/{environmentId}/redeploy', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -308,7 +309,7 @@ export default class EnvironmentActionsApi {
      * Callback function to receive the result of the restartEnvironment operation.
      * @callback module:api/EnvironmentActionsApi~restartEnvironmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
+     * @param {module:model/EnvironmentStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -317,7 +318,7 @@ export default class EnvironmentActionsApi {
      * **Deprecated** - Please use the \"Redeploy environment\" endpoint now
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentActionsApi~restartEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
+     * data is of type: {@link module:model/EnvironmentStatus}
      */
     restartEnvironment(environmentId, callback) {
       let postBody = null;
@@ -339,7 +340,7 @@ export default class EnvironmentActionsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Status;
+      let returnType = EnvironmentStatus;
       return this.apiClient.callApi(
         '/environment/{environmentId}/restart', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -351,7 +352,7 @@ export default class EnvironmentActionsApi {
      * Callback function to receive the result of the stopEnvironment operation.
      * @callback module:api/EnvironmentActionsApi~stopEnvironmentCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
+     * @param {module:model/EnvironmentStatus} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -359,7 +360,7 @@ export default class EnvironmentActionsApi {
      * Stop environment
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentActionsApi~stopEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
+     * data is of type: {@link module:model/EnvironmentStatus}
      */
     stopEnvironment(environmentId, callback) {
       let postBody = null;
@@ -381,7 +382,7 @@ export default class EnvironmentActionsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Status;
+      let returnType = EnvironmentStatus;
       return this.apiClient.callApi(
         '/environment/{environmentId}/stop', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

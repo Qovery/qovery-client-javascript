@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isPartLastDeployment (base name: "is_part_last_deployment")', function() {
+      // uncomment below and update the code to test the property isPartLastDeployment
+      //var instance = new QoveryApi.ReferenceObjectStatus();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

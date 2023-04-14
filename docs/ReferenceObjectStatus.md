@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **state** | [**StateEnum**](StateEnum.md) |  | 
 **serviceDeploymentStatus** | [**ServiceDeploymentStatusEnum**](ServiceDeploymentStatusEnum.md) |  | 
 **lastDeploymentDate** | **Date** |  | [optional] 
+**isPartLastDeployment** | **Boolean** |  | [optional] 
 
 

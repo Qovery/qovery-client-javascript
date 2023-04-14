@@ -73,6 +73,9 @@ class ReferenceObjectStatus {
             if (data.hasOwnProperty('last_deployment_date')) {
                 obj['last_deployment_date'] = ApiClient.convertToType(data['last_deployment_date'], 'Date');
             }
+            if (data.hasOwnProperty('is_part_last_deployment')) {
+                obj['is_part_last_deployment'] = ApiClient.convertToType(data['is_part_last_deployment'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -100,6 +103,11 @@ ReferenceObjectStatus.prototype['service_deployment_status'] = undefined;
  */
 ReferenceObjectStatus.prototype['last_deployment_date'] = undefined;
 
+/**
+ * @member {Boolean} is_part_last_deployment
+ */
+ReferenceObjectStatus.prototype['is_part_last_deployment'] = undefined;
+
 
 // Implement ReferenceObject interface:
 /**
@@ -123,6 +131,10 @@ Status.prototype['service_deployment_status'] = undefined;
  * @member {Date} last_deployment_date
  */
 Status.prototype['last_deployment_date'] = undefined;
+/**
+ * @member {Boolean} is_part_last_deployment
+ */
+Status.prototype['is_part_last_deployment'] = undefined;
 
 
 

@@ -66,6 +66,9 @@ class EnvironmentStatus {
             if (data.hasOwnProperty('last_deployment_state')) {
                 obj['last_deployment_state'] = StateEnum.constructFromObject(data['last_deployment_state']);
             }
+            if (data.hasOwnProperty('last_deployment_id')) {
+                obj['last_deployment_id'] = ApiClient.convertToType(data['last_deployment_id'], 'String');
+            }
         }
         return obj;
     }
@@ -92,6 +95,11 @@ EnvironmentStatus.prototype['last_deployment_date'] = undefined;
  * @member {module:model/StateEnum} last_deployment_state
  */
 EnvironmentStatus.prototype['last_deployment_state'] = undefined;
+
+/**
+ * @member {String} last_deployment_id
+ */
+EnvironmentStatus.prototype['last_deployment_id'] = undefined;
 
 
 

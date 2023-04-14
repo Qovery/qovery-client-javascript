@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lastDeploymentId (base name: "last_deployment_id")', function() {
+      // uncomment below and update the code to test the property lastDeploymentId
+      //var instance = new QoveryApi.EnvironmentStatus();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

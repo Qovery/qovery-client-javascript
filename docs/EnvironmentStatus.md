@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **state** | [**StateEnum**](StateEnum.md) |  | 
 **lastDeploymentDate** | **Date** |  | [optional] 
 **lastDeploymentState** | [**StateEnum**](StateEnum.md) |  | 
+**lastDeploymentId** | **String** |  | [optional] 
 
 

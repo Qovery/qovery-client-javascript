@@ -27,6 +27,13 @@ export default class StateEnum {
 
     
         /**
+         * value: "BUILD_ERROR"
+         * @const
+         */
+        "BUILD_ERROR" = "BUILD_ERROR";
+
+    
+        /**
          * value: "CANCELED"
          * @const
          */
@@ -108,13 +115,6 @@ export default class StateEnum {
          * @const
          */
         "READY" = "READY";
-
-    
-        /**
-         * value: "RUNNING"
-         * @const
-         */
-        "RUNNING" = "RUNNING";
 
     
         /**

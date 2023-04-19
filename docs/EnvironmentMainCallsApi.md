@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## getEnvironmentStatus
 
-> Status getEnvironmentStatus(environmentId)
+> EnvironmentStatus getEnvironmentStatus(environmentId)
 
 Get environment status
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Status**](Status.md)
+[**EnvironmentStatus**](EnvironmentStatus.md)
 
 ### Authorization
 

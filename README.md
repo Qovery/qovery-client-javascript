@@ -433,6 +433,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationCustomRoleApi* | [**editOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#editOrganizationCustomRole) | **PUT** /organization/{organizationId}/customRole/{customRoleId} | Edit an organization custom role
 *QoveryApi.OrganizationCustomRoleApi* | [**getOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#getOrganizationCustomRole) | **GET** /organization/{organizationId}/customRole/{customRoleId} | Get an organization custom role 
 *QoveryApi.OrganizationCustomRoleApi* | [**listOrganizationCustomRoles**](docs/OrganizationCustomRoleApi.md#listOrganizationCustomRoles) | **GET** /organization/{organizationId}/customRole | List organization custom roles
+*QoveryApi.OrganizationEventApi* | [**getOrganizationEvents**](docs/OrganizationEventApi.md#getOrganizationEvents) | **GET** /organization/{organizationId}/events | Get all events inside the organization
 *QoveryApi.OrganizationMainCallsApi* | [**createOrganization**](docs/OrganizationMainCallsApi.md#createOrganization) | **POST** /organization | Create an organization
 *QoveryApi.OrganizationMainCallsApi* | [**deleteOrganization**](docs/OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
 *QoveryApi.OrganizationMainCallsApi* | [**editOrganization**](docs/OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
@@ -806,6 +807,13 @@ Class | Method | HTTP request | Description
  - [QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInner](docs/OrganizationCustomRoleUpdateRequestProjectPermissionsInner.md)
  - [QoveryApi.OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner](docs/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner.md)
  - [QoveryApi.OrganizationEditRequest](docs/OrganizationEditRequest.md)
+ - [QoveryApi.OrganizationEventOrigin](docs/OrganizationEventOrigin.md)
+ - [QoveryApi.OrganizationEventResponse](docs/OrganizationEventResponse.md)
+ - [QoveryApi.OrganizationEventResponseList](docs/OrganizationEventResponseList.md)
+ - [QoveryApi.OrganizationEventResponseListLinks](docs/OrganizationEventResponseListLinks.md)
+ - [QoveryApi.OrganizationEventSubTargetType](docs/OrganizationEventSubTargetType.md)
+ - [QoveryApi.OrganizationEventTargetType](docs/OrganizationEventTargetType.md)
+ - [QoveryApi.OrganizationEventType](docs/OrganizationEventType.md)
  - [QoveryApi.OrganizationGithubAppConnectRequest](docs/OrganizationGithubAppConnectRequest.md)
  - [QoveryApi.OrganizationRequest](docs/OrganizationRequest.md)
  - [QoveryApi.OrganizationResponseList](docs/OrganizationResponseList.md)

@@ -343,6 +343,13 @@ import OrganizationCustomRoleUpdateRequestClusterPermissionsInner from './model/
 import OrganizationCustomRoleUpdateRequestProjectPermissionsInner from './model/OrganizationCustomRoleUpdateRequestProjectPermissionsInner';
 import OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner from './model/OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner';
 import OrganizationEditRequest from './model/OrganizationEditRequest';
+import OrganizationEventOrigin from './model/OrganizationEventOrigin';
+import OrganizationEventResponse from './model/OrganizationEventResponse';
+import OrganizationEventResponseList from './model/OrganizationEventResponseList';
+import OrganizationEventResponseListLinks from './model/OrganizationEventResponseListLinks';
+import OrganizationEventSubTargetType from './model/OrganizationEventSubTargetType';
+import OrganizationEventTargetType from './model/OrganizationEventTargetType';
+import OrganizationEventType from './model/OrganizationEventType';
 import OrganizationGithubAppConnectRequest from './model/OrganizationGithubAppConnectRequest';
 import OrganizationRequest from './model/OrganizationRequest';
 import OrganizationResponseList from './model/OrganizationResponseList';
@@ -485,6 +492,7 @@ import MembersApi from './api/MembersApi';
 import OrganizationAccountGitRepositoriesApi from './api/OrganizationAccountGitRepositoriesApi';
 import OrganizationApiTokenApi from './api/OrganizationApiTokenApi';
 import OrganizationCustomRoleApi from './api/OrganizationCustomRoleApi';
+import OrganizationEventApi from './api/OrganizationEventApi';
 import OrganizationMainCallsApi from './api/OrganizationMainCallsApi';
 import OrganizationWebhookApi from './api/OrganizationWebhookApi';
 import ProjectDeploymentRuleApi from './api/ProjectDeploymentRuleApi';
@@ -2515,6 +2523,48 @@ export {
     OrganizationEditRequest,
 
     /**
+     * The OrganizationEventOrigin model constructor.
+     * @property {module:model/OrganizationEventOrigin}
+     */
+    OrganizationEventOrigin,
+
+    /**
+     * The OrganizationEventResponse model constructor.
+     * @property {module:model/OrganizationEventResponse}
+     */
+    OrganizationEventResponse,
+
+    /**
+     * The OrganizationEventResponseList model constructor.
+     * @property {module:model/OrganizationEventResponseList}
+     */
+    OrganizationEventResponseList,
+
+    /**
+     * The OrganizationEventResponseListLinks model constructor.
+     * @property {module:model/OrganizationEventResponseListLinks}
+     */
+    OrganizationEventResponseListLinks,
+
+    /**
+     * The OrganizationEventSubTargetType model constructor.
+     * @property {module:model/OrganizationEventSubTargetType}
+     */
+    OrganizationEventSubTargetType,
+
+    /**
+     * The OrganizationEventTargetType model constructor.
+     * @property {module:model/OrganizationEventTargetType}
+     */
+    OrganizationEventTargetType,
+
+    /**
+     * The OrganizationEventType model constructor.
+     * @property {module:model/OrganizationEventType}
+     */
+    OrganizationEventType,
+
+    /**
      * The OrganizationGithubAppConnectRequest model constructor.
      * @property {module:model/OrganizationGithubAppConnectRequest}
      */
@@ -3365,6 +3415,12 @@ export {
     * @property {module:api/OrganizationCustomRoleApi}
     */
     OrganizationCustomRoleApi,
+
+    /**
+    * The OrganizationEventApi service constructor.
+    * @property {module:api/OrganizationEventApi}
+    */
+    OrganizationEventApi,
 
     /**
     * The OrganizationMainCallsApi service constructor.

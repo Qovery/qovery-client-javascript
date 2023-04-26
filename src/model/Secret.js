@@ -99,6 +99,9 @@ class Secret {
             if (data.hasOwnProperty('service_type')) {
                 obj['service_type'] = LinkedServiceTypeEnum.constructFromObject(data['service_type']);
             }
+            if (data.hasOwnProperty('owned_by')) {
+                obj['owned_by'] = ApiClient.convertToType(data['owned_by'], 'String');
+            }
         }
         return obj;
     }
@@ -164,6 +167,12 @@ Secret.prototype['service_name'] = undefined;
  */
 Secret.prototype['service_type'] = undefined;
 
+/**
+ * Entity that created/own the variable (i.e: Qovery, Doppler)
+ * @member {String} owned_by
+ */
+Secret.prototype['owned_by'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -214,6 +223,11 @@ SecretAllOf.prototype['service_name'] = undefined;
  * @member {module:model/LinkedServiceTypeEnum} service_type
  */
 SecretAllOf.prototype['service_type'] = undefined;
+/**
+ * Entity that created/own the variable (i.e: Qovery, Doppler)
+ * @member {String} owned_by
+ */
+SecretAllOf.prototype['owned_by'] = undefined;
 
 
 

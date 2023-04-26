@@ -102,6 +102,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property ownedBy (base name: "owned_by")', function() {
+      // uncomment below and update the code to test the property ownedBy
+      //var instance = new QoveryApi.SecretAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

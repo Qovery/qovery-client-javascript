@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **serviceId** | **String** | present only for &#x60;BUILT_IN&#x60; variable | [optional] 
 **serviceName** | **String** | present only for &#x60;BUILT_IN&#x60; variable | [optional] 
 **serviceType** | [**LinkedServiceTypeEnum**](LinkedServiceTypeEnum.md) |  | [optional] 
+**ownedBy** | **String** | Entity that created/own the variable (i.e: Qovery, Doppler) | [optional] 
 
 

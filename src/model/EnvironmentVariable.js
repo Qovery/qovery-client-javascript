@@ -110,6 +110,9 @@ class EnvironmentVariable {
             if (data.hasOwnProperty('service_type')) {
                 obj['service_type'] = LinkedServiceTypeEnum.constructFromObject(data['service_type']);
             }
+            if (data.hasOwnProperty('owned_by')) {
+                obj['owned_by'] = ApiClient.convertToType(data['owned_by'], 'String');
+            }
         }
         return obj;
     }
@@ -187,6 +190,12 @@ EnvironmentVariable.prototype['service_name'] = undefined;
  */
 EnvironmentVariable.prototype['service_type'] = undefined;
 
+/**
+ * Entity that created/own the variable (i.e: Qovery, Doppler)
+ * @member {String} owned_by
+ */
+EnvironmentVariable.prototype['owned_by'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -248,6 +257,11 @@ EnvironmentVariableAllOf.prototype['service_name'] = undefined;
  * @member {module:model/LinkedServiceTypeEnum} service_type
  */
 EnvironmentVariableAllOf.prototype['service_type'] = undefined;
+/**
+ * Entity that created/own the variable (i.e: Qovery, Doppler)
+ * @member {String} owned_by
+ */
+EnvironmentVariableAllOf.prototype['owned_by'] = undefined;
 
 
 

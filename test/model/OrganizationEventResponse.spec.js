@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.OrganizationEventResponse);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.OrganizationEventResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property timestamp (base name: "timestamp")', function() {
       // uncomment below and update the code to test the property timestamp
       //var instance = new QoveryApi.OrganizationEventResponse();

@@ -51,9 +51,6 @@ class OrganizationEventResponse {
         if (data) {
             obj = obj || new OrganizationEventResponse();
 
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
-            }
             if (data.hasOwnProperty('timestamp')) {
                 obj['timestamp'] = ApiClient.convertToType(data['timestamp'], 'Date');
             }
@@ -93,11 +90,6 @@ class OrganizationEventResponse {
 
 
 }
-
-/**
- * @member {String} id
- */
-OrganizationEventResponse.prototype['id'] = undefined;
 
 /**
  * @member {Date} timestamp

@@ -51,13 +51,14 @@ export default class OrganizationEventApi {
      * Get all events inside the organization
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
+     * @param {Number} opts.pageSize The number of events to display in the current page (default to 10)
      * @param {Date} opts.fromTimestamp Display events triggered since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` 
      * @param {Date} opts.toTimestamp Display events triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` 
      * @param {module:model/OrganizationEventType} opts.eventType 
      * @param {module:model/OrganizationEventTargetType} opts.targetType 
-     * @param {String} opts.targetId 
-     * @param {module:model/OrganizationEventSubTargetType} opts.subTarget 
-     * @param {String} opts.user The username who has triggered the action
+     * @param {String} opts.targetId The target resource id to search.   Must be specified with the corresponding `target_type` 
+     * @param {module:model/OrganizationEventSubTargetType} opts.subTargetType 
+     * @param {String} opts.triggeredBy Information about the owner of the event (user name / apitoken / automatic action)
      * @param {module:model/OrganizationEventOrigin} opts.origin 
      * @param {module:api/OrganizationEventApi~getOrganizationEventsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationEventResponseList}
@@ -74,13 +75,14 @@ export default class OrganizationEventApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'page-size': opts['pageSize'],
         'from-timestamp': opts['fromTimestamp'],
         'to-timestamp': opts['toTimestamp'],
         'event_type': opts['eventType'],
         'target_type': opts['targetType'],
         'target_id': opts['targetId'],
-        'sub_target': opts['subTarget'],
-        'user': opts['user'],
+        'sub_target_type': opts['subTargetType'],
+        'triggered_by': opts['triggeredBy'],
         'origin': opts['origin']
       };
       let headerParams = {

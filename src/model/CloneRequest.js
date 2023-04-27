@@ -59,6 +59,9 @@ class CloneRequest {
             if (data.hasOwnProperty('mode')) {
                 obj['mode'] = EnvironmentModeEnum.constructFromObject(data['mode']);
             }
+            if (data.hasOwnProperty('apply_deployment_rule')) {
+                obj['apply_deployment_rule'] = ApiClient.convertToType(data['apply_deployment_rule'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -81,6 +84,12 @@ CloneRequest.prototype['cluster_id'] = undefined;
  * @member {module:model/EnvironmentModeEnum} mode
  */
 CloneRequest.prototype['mode'] = undefined;
+
+/**
+ * @member {Boolean} apply_deployment_rule
+ * @default false
+ */
+CloneRequest.prototype['apply_deployment_rule'] = false;
 
 
 

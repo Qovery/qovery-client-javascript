@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property applyDeploymentRule (base name: "apply_deployment_rule")', function() {
+      // uncomment below and update the code to test the property applyDeploymentRule
+      //var instance = new QoveryApi.CloneRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

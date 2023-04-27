@@ -52,8 +52,10 @@ export default class OrganizationEventApi {
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
      * @param {Number} opts.pageSize The number of events to display in the current page (default to 10)
-     * @param {Date} opts.fromTimestamp Display events triggered since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` 
-     * @param {Date} opts.toTimestamp Display events triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` 
+     * @param {String} opts.fromTimestamp Display events triggered since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` The format is a timestamp with nano precision 
+     * @param {String} opts.toTimestamp Display events triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` The format is a timestamp with nano precision 
+     * @param {String} opts.continueToken Token used to fetch the next page results The format is a timestamp with nano precision 
+     * @param {String} opts.stepBackToken Token used to fetch the previous page results The format is a timestamp with nano precision 
      * @param {module:model/OrganizationEventType} opts.eventType 
      * @param {module:model/OrganizationEventTargetType} opts.targetType 
      * @param {String} opts.targetId The target resource id to search.   Must be specified with the corresponding `target_type` 
@@ -78,6 +80,8 @@ export default class OrganizationEventApi {
         'page-size': opts['pageSize'],
         'from-timestamp': opts['fromTimestamp'],
         'to-timestamp': opts['toTimestamp'],
+        'continue-token': opts['continueToken'],
+        'step-back-token': opts['stepBackToken'],
         'event_type': opts['eventType'],
         'target_type': opts['targetType'],
         'target_id': opts['targetId'],

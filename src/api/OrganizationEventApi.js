@@ -77,16 +77,16 @@ export default class OrganizationEventApi {
         'organizationId': organizationId
       };
       let queryParams = {
-        'page-size': opts['pageSize'],
-        'from-timestamp': opts['fromTimestamp'],
-        'to-timestamp': opts['toTimestamp'],
-        'continue-token': opts['continueToken'],
-        'step-back-token': opts['stepBackToken'],
-        'event_type': opts['eventType'],
-        'target_type': opts['targetType'],
-        'target_id': opts['targetId'],
-        'sub_target_type': opts['subTargetType'],
-        'triggered_by': opts['triggeredBy'],
+        'pageSize': opts['pageSize'],
+        'fromTimestamp': opts['fromTimestamp'],
+        'toTimestamp': opts['toTimestamp'],
+        'continueToken': opts['continueToken'],
+        'stepBackToken': opts['stepBackToken'],
+        'eventType': opts['eventType'],
+        'targetType': opts['targetType'],
+        'targetId': opts['targetId'],
+        'subTargetType': opts['subTargetType'],
+        'triggeredBy': opts['triggeredBy'],
         'origin': opts['origin']
       };
       let headerParams = {

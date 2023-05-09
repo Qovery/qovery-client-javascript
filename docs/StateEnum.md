@@ -45,6 +45,6 @@
 
 * `RESTARTED` (value: `"RESTARTED"`)
 
-* `RESTART_ERROR` (value: `"RESTART_ERROR"`)
+* `RESTARTED_ERROR` (value: `"RESTARTED_ERROR"`)
 
 

@@ -6,6 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **deploymentCustomDomainCheckEnabled** | **Boolean** | disable custom domain check when deploying an application | [optional] [default to true]
 **deploymentTerminationGracePeriodSeconds** | **Number** | define how long in seconds an application is supposed to be stopped gracefully | [optional] [default to 60]
+**deploymentUpdateStrategyType** | **String** | * &#x60;RollingUpdate&#x60; gracefully rollout new versions, and automatically rollback if the new version fails to start * &#x60;Recreate&#x60; stop all current versions and create new ones once all old ones have been shutdown  | [optional] [default to &#39;RollingUpdate&#39;]
+**deploymentUpdateStrategyRollingUpdateMaxUnavailablePercent** | **Number** | Define the percentage of a maximum number of pods that can be unavailable during the update process | [optional] [default to 25]
+**deploymentUpdateStrategyRollingUpdateMaxSurgePercent** | **Number** | Define the percentage of the maximum number of pods that can be created over the desired number of pods | [optional] [default to 25]
 **networkIngressProxyBodySizeMb** | **Number** |  | [optional] [default to 100]
 **networkIngressEnableCors** | **Boolean** |  | [optional] [default to false]
 **networkIngressCorsAllowOrigin** | **String** |  | [optional] [default to &#39;*&#39;]
@@ -22,14 +25,14 @@ Name | Type | Description | Notes
 **networkIngressDenylistSourceRange** | **String** | list of source ranges to deny access to ingress proxy.  This property can be used to blacklist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1  | [optional] [default to &#39;&#39;]
 **networkIngressBasicAuthEnvVar** | **String** | Set the name of an environment variable to use as a basic authentication (&#x60;login:crypted_password&#x60;) from &#x60;htpasswd&#x60; command. You can add multiples comma separated values.  | [optional] [default to &#39;&#39;]
 **networkIngressEnableStickySession** | **Boolean** | Enable the load balancer to bind a user&#39;s session to a specific target. This ensures that all requests from the user during the session are sent to the same target  | [optional] [default to false]
-**readinessProbeType** | **String** | &#x60;NONE&#x60; disable readiness probe &#x60;TCP&#x60; enable TCP readiness probe &#x60;HTTP&#x60; enable HTTP readiness probe  | [optional] [default to &#39;TCP&#39;]
+**readinessProbeType** | **String** | * &#x60;NONE&#x60; disable readiness probe * &#x60;TCP&#x60; enable TCP readiness probe * &#x60;HTTP&#x60; enable HTTP readiness probe  | [optional] [default to &#39;TCP&#39;]
 **readinessProbeHttpGetPath** | **String** | HTTP GET path to check status (must returns 2xx E.g \&quot;/healtz\&quot;) - only usable with TYPE &#x3D; HTTP | [optional] [default to &#39;/&#39;]
 **readinessProbeInitialDelaySeconds** | **Number** | Delay before liveness probe is initiated | [optional] [default to 30]
 **readinessProbePeriodSeconds** | **Number** | How often to perform the probe | [optional] [default to 10]
 **readinessProbeTimeoutSeconds** | **Number** | When the probe times out | [optional] [default to 1]
 **readinessProbeSuccessThreshold** | **Number** | Minimum consecutive successes for the probe to be considered successful after having failed. | [optional] [default to 1]
 **readinessProbeFailureThreshold** | **Number** | Minimum consecutive failures for the probe to be considered failed after having succeeded. | [optional] [default to 3]
-**livenessProbeType** | **String** | &#x60;NONE&#x60; disable liveness probe &#x60;TCP&#x60; enable TCP liveness probe &#x60;HTTP&#x60; enable HTTP liveness probe  | [optional] [default to &#39;TCP&#39;]
+**livenessProbeType** | **String** | * &#x60;NONE&#x60; disable liveness probe * &#x60;TCP&#x60; enable TCP liveness probe * &#x60;HTTP&#x60; enable HTTP liveness probe  | [optional] [default to &#39;TCP&#39;]
 **livenessProbeHttpGetPath** | **String** | HTTP GET path to check status (must returns 2xx E.g \&quot;/healtz\&quot;) - only usable with TYPE &#x3D; HTTP | [optional] [default to &#39;/&#39;]
 **livenessProbeInitialDelaySeconds** | **Number** | Delay before liveness probe is initiated | [optional] [default to 30]
 **livenessProbePeriodSeconds** | **Number** | How often to perform the probe | [optional] [default to 10]
@@ -38,6 +41,17 @@ Name | Type | Description | Notes
 **livenessProbeFailureThreshold** | **Number** | Minimum consecutive failures for the probe to be considered failed after having succeeded. | [optional] [default to 3]
 **securityServiceAccountName** | **String** | Allows you to set an existing Kubernetes service account name  | [optional] [default to &#39;&#39;]
 **hpaCpuAverageUtilizationPercent** | **Number** | Percentage value of cpu usage at which point pods should scale up. | [optional] [default to 60]
+
+
+
+## Enum: DeploymentUpdateStrategyTypeEnum
+
+
+* `RollingUpdate` (value: `"RollingUpdate"`)
+
+* `Recreate` (value: `"Recreate"`)
+
+
 
 
 

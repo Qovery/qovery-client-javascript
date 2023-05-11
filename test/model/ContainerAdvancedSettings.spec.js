@@ -66,6 +66,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deploymentUpdateStrategyType (base name: "deployment.update_strategy.type")', function() {
+      // uncomment below and update the code to test the property deploymentUpdateStrategyType
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property deploymentUpdateStrategyRollingUpdateMaxUnavailablePercent (base name: "deployment.update_strategy.rolling_update.max_unavailable_percent")', function() {
+      // uncomment below and update the code to test the property deploymentUpdateStrategyRollingUpdateMaxUnavailablePercent
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property deploymentUpdateStrategyRollingUpdateMaxSurgePercent (base name: "deployment.update_strategy.rolling_update.max_surge_percent")', function() {
+      // uncomment below and update the code to test the property deploymentUpdateStrategyRollingUpdateMaxSurgePercent
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property networkIngressProxyBodySizeMb (base name: "network.ingress.proxy_body_size_mb")', function() {
       // uncomment below and update the code to test the property networkIngressProxyBodySizeMb
       //var instance = new QoveryApi.ContainerAdvancedSettings();

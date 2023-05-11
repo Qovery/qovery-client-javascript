@@ -56,6 +56,15 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('deployment.termination_grace_period_seconds')) {
                 obj['deployment.termination_grace_period_seconds'] = ApiClient.convertToType(data['deployment.termination_grace_period_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('deployment.update_strategy.type')) {
+                obj['deployment.update_strategy.type'] = ApiClient.convertToType(data['deployment.update_strategy.type'], 'String');
+            }
+            if (data.hasOwnProperty('deployment.update_strategy.rolling_update.max_unavailable_percent')) {
+                obj['deployment.update_strategy.rolling_update.max_unavailable_percent'] = ApiClient.convertToType(data['deployment.update_strategy.rolling_update.max_unavailable_percent'], 'Number');
+            }
+            if (data.hasOwnProperty('deployment.update_strategy.rolling_update.max_surge_percent')) {
+                obj['deployment.update_strategy.rolling_update.max_surge_percent'] = ApiClient.convertToType(data['deployment.update_strategy.rolling_update.max_surge_percent'], 'Number');
+            }
             if (data.hasOwnProperty('build.timeout_max_sec')) {
                 obj['build.timeout_max_sec'] = ApiClient.convertToType(data['build.timeout_max_sec'], 'Number');
             }
@@ -184,6 +193,27 @@ ApplicationAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] 
 ApplicationAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
 
 /**
+ * * `RollingUpdate` gracefully rollout new versions, and automatically rollback if the new version fails to start * `Recreate` stop all current versions and create new ones once all old ones have been shutdown 
+ * @member {module:model/ApplicationAdvancedSettings.DeploymentUpdateStrategyTypeEnum} deployment.update_strategy.type
+ * @default 'RollingUpdate'
+ */
+ApplicationAdvancedSettings.prototype['deployment.update_strategy.type'] = 'RollingUpdate';
+
+/**
+ * Define the percentage of a maximum number of pods that can be unavailable during the update process
+ * @member {Number} deployment.update_strategy.rolling_update.max_unavailable_percent
+ * @default 25
+ */
+ApplicationAdvancedSettings.prototype['deployment.update_strategy.rolling_update.max_unavailable_percent'] = 25;
+
+/**
+ * Define the percentage of the maximum number of pods that can be created over the desired number of pods
+ * @member {Number} deployment.update_strategy.rolling_update.max_surge_percent
+ * @default 25
+ */
+ApplicationAdvancedSettings.prototype['deployment.update_strategy.rolling_update.max_surge_percent'] = 25;
+
+/**
  * @member {Number} build.timeout_max_sec
  * @default 1800
  */
@@ -297,7 +327,7 @@ ApplicationAdvancedSettings.prototype['network.ingress.basic_auth_env_var'] = ''
 ApplicationAdvancedSettings.prototype['network.ingress.enable_sticky_session'] = false;
 
 /**
- * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 
+ * * `NONE` disable readiness probe * `TCP` enable TCP readiness probe * `HTTP` enable HTTP readiness probe 
  * @member {module:model/ApplicationAdvancedSettings.ReadinessProbeTypeEnum} readiness_probe.type
  * @default 'TCP'
  */
@@ -346,7 +376,7 @@ ApplicationAdvancedSettings.prototype['readiness_probe.success_threshold'] = 1;
 ApplicationAdvancedSettings.prototype['readiness_probe.failure_threshold'] = 3;
 
 /**
- * `NONE` disable liveness probe `TCP` enable TCP liveness probe `HTTP` enable HTTP liveness probe 
+ * * `NONE` disable liveness probe * `TCP` enable TCP liveness probe * `HTTP` enable HTTP liveness probe 
  * @member {module:model/ApplicationAdvancedSettings.LivenessProbeTypeEnum} liveness_probe.type
  * @default 'TCP'
  */
@@ -410,6 +440,27 @@ ApplicationAdvancedSettings.prototype['security.service_account_name'] = '';
 
 
 
+
+
+/**
+ * Allowed values for the <code>deployment.update_strategy.type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ApplicationAdvancedSettings['DeploymentUpdateStrategyTypeEnum'] = {
+
+    /**
+     * value: "RollingUpdate"
+     * @const
+     */
+    "RollingUpdate": "RollingUpdate",
+
+    /**
+     * value: "Recreate"
+     * @const
+     */
+    "Recreate": "Recreate"
+};
 
 
 /**

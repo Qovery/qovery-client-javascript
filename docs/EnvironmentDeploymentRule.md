@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **autoDeploy** | **Boolean** |  | [optional] [default to true]
+**onDemandPreview** | **Boolean** |  | [optional] [default to false]
 **autoStop** | **Boolean** |  | [optional] [default to false]
 **autoDelete** | **Boolean** |  | [optional] [default to false]
 **autoPreview** | **Boolean** |  | [optional] [default to false]

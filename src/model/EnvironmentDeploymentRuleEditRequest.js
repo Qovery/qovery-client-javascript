@@ -59,6 +59,12 @@ class EnvironmentDeploymentRuleEditRequest {
             if (data.hasOwnProperty('auto_deploy')) {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
+            if (data.hasOwnProperty('on_demand_preview')) {
+                obj['on_demand_preview'] = ApiClient.convertToType(data['on_demand_preview'], 'Boolean');
+            }
+            if (data.hasOwnProperty('auto_preview')) {
+                obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
+            }
             if (data.hasOwnProperty('auto_delete')) {
                 obj['auto_delete'] = ApiClient.convertToType(data['auto_delete'], 'Boolean');
             }
@@ -89,6 +95,18 @@ class EnvironmentDeploymentRuleEditRequest {
  * @default true
  */
 EnvironmentDeploymentRuleEditRequest.prototype['auto_deploy'] = true;
+
+/**
+ * @member {Boolean} on_demand_preview
+ * @default false
+ */
+EnvironmentDeploymentRuleEditRequest.prototype['on_demand_preview'] = false;
+
+/**
+ * @member {Boolean} auto_preview
+ * @default false
+ */
+EnvironmentDeploymentRuleEditRequest.prototype['auto_preview'] = false;
 
 /**
  * @member {Boolean} auto_delete

@@ -59,6 +59,9 @@ class EnvironmentDeploymentRuleAllOf {
             if (data.hasOwnProperty('auto_deploy')) {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
+            if (data.hasOwnProperty('on_demand_preview')) {
+                obj['on_demand_preview'] = ApiClient.convertToType(data['on_demand_preview'], 'Boolean');
+            }
             if (data.hasOwnProperty('auto_stop')) {
                 obj['auto_stop'] = ApiClient.convertToType(data['auto_stop'], 'Boolean');
             }
@@ -92,6 +95,12 @@ class EnvironmentDeploymentRuleAllOf {
  * @default true
  */
 EnvironmentDeploymentRuleAllOf.prototype['auto_deploy'] = true;
+
+/**
+ * @member {Boolean} on_demand_preview
+ * @default false
+ */
+EnvironmentDeploymentRuleAllOf.prototype['on_demand_preview'] = false;
 
 /**
  * @member {Boolean} auto_stop

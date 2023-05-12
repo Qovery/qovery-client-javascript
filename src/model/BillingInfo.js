@@ -22,17 +22,10 @@ class BillingInfo {
     /**
      * Constructs a new <code>BillingInfo</code>.
      * @alias module:model/BillingInfo
-     * @param firstName {String} 
-     * @param lastName {String} 
-     * @param email {String} email used for billing, and to receive all invoices by email
-     * @param address {String} 
-     * @param city {String} 
-     * @param zip {String} 
-     * @param countryCode {String} ISO code of the country
      */
-    constructor(firstName, lastName, email, address, city, zip, countryCode) { 
+    constructor() { 
         
-        BillingInfo.initialize(this, firstName, lastName, email, address, city, zip, countryCode);
+        BillingInfo.initialize(this);
     }
 
     /**
@@ -40,14 +33,7 @@ class BillingInfo {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, firstName, lastName, email, address, city, zip, countryCode) { 
-        obj['first_name'] = firstName;
-        obj['last_name'] = lastName;
-        obj['email'] = email;
-        obj['address'] = address;
-        obj['city'] = city;
-        obj['zip'] = zip;
-        obj['country_code'] = countryCode;
+    static initialize(obj) { 
     }
 
     /**

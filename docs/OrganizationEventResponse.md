@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [optional] 
 **timestamp** | **Date** |  | [optional] 
 **eventType** | [**OrganizationEventType**](OrganizationEventType.md) |  | [optional] 
 **targetId** | **String** |  | [optional] 

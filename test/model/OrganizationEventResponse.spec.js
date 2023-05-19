@@ -120,8 +120,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property projectName (base name: "project_name")', function() {
+      // uncomment below and update the code to test the property projectName
+      //var instance = new QoveryApi.OrganizationEventResponse();
+      //expect(instance).to.be();
+    });
+
     it('should have the property environmentId (base name: "environment_id")', function() {
       // uncomment below and update the code to test the property environmentId
+      //var instance = new QoveryApi.OrganizationEventResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property environmentName (base name: "environment_name")', function() {
+      // uncomment below and update the code to test the property environmentName
       //var instance = new QoveryApi.OrganizationEventResponse();
       //expect(instance).to.be();
     });

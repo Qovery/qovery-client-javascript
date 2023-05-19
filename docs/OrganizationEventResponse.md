@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **origin** | [**OrganizationEventOrigin**](OrganizationEventOrigin.md) |  | [optional] 
 **triggeredBy** | **String** |  | [optional] 
 **projectId** | **String** |  | [optional] 
+**projectName** | **String** |  | [optional] 
 **environmentId** | **String** |  | [optional] 
+**environmentName** | **String** |  | [optional] 
 
 

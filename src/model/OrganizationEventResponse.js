@@ -84,8 +84,14 @@ class OrganizationEventResponse {
             if (data.hasOwnProperty('project_id')) {
                 obj['project_id'] = ApiClient.convertToType(data['project_id'], 'String');
             }
+            if (data.hasOwnProperty('project_name')) {
+                obj['project_name'] = ApiClient.convertToType(data['project_name'], 'String');
+            }
             if (data.hasOwnProperty('environment_id')) {
                 obj['environment_id'] = ApiClient.convertToType(data['environment_id'], 'String');
+            }
+            if (data.hasOwnProperty('environment_name')) {
+                obj['environment_name'] = ApiClient.convertToType(data['environment_name'], 'String');
             }
         }
         return obj;
@@ -150,9 +156,19 @@ OrganizationEventResponse.prototype['triggered_by'] = undefined;
 OrganizationEventResponse.prototype['project_id'] = undefined;
 
 /**
+ * @member {String} project_name
+ */
+OrganizationEventResponse.prototype['project_name'] = undefined;
+
+/**
  * @member {String} environment_id
  */
 OrganizationEventResponse.prototype['environment_id'] = undefined;
+
+/**
+ * @member {String} environment_name
+ */
+OrganizationEventResponse.prototype['environment_name'] = undefined;
 
 
 

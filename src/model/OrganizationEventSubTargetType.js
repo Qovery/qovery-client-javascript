@@ -62,6 +62,13 @@ export default class OrganizationEventSubTargetType {
 
     
         /**
+         * value: "CONFIG"
+         * @const
+         */
+        "CONFIG" = "CONFIG";
+
+    
+        /**
          * value: "CREDIT_CARD"
          * @const
          */

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ProbeProbeHttp();
+    instance = new QoveryApi.ProbeTypeHttp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('ProbeProbeHttp', function() {
-    it('should create an instance of ProbeProbeHttp', function() {
-      // uncomment below and update the code to test ProbeProbeHttp
-      //var instance = new QoveryApi.ProbeProbeHttp();
-      //expect(instance).to.be.a(QoveryApi.ProbeProbeHttp);
+  describe('ProbeTypeHttp', function() {
+    it('should create an instance of ProbeTypeHttp', function() {
+      // uncomment below and update the code to test ProbeTypeHttp
+      //var instance = new QoveryApi.ProbeTypeHttp();
+      //expect(instance).to.be.a(QoveryApi.ProbeTypeHttp);
     });
 
     it('should have the property path (base name: "path")', function() {
       // uncomment below and update the code to test the property path
-      //var instance = new QoveryApi.ProbeProbeHttp();
+      //var instance = new QoveryApi.ProbeTypeHttp();
       //expect(instance).to.be();
     });
 
     it('should have the property scheme (base name: "scheme")', function() {
       // uncomment below and update the code to test the property scheme
-      //var instance = new QoveryApi.ProbeProbeHttp();
+      //var instance = new QoveryApi.ProbeTypeHttp();
       //expect(instance).to.be();
     });
 

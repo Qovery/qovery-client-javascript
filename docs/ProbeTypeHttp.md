@@ -1,4 +1,4 @@
-# QoveryApi.ProbeProbeHttp
+# QoveryApi.ProbeTypeHttp
 
 ## Properties
 

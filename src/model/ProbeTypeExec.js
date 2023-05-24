@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ProbeProbeExec model module.
- * @module model/ProbeProbeExec
+ * The ProbeTypeExec model module.
+ * @module model/ProbeTypeExec
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ProbeProbeExec {
+class ProbeTypeExec {
     /**
-     * Constructs a new <code>ProbeProbeExec</code>.
-     * @alias module:model/ProbeProbeExec
+     * Constructs a new <code>ProbeTypeExec</code>.
+     * @alias module:model/ProbeTypeExec
      */
     constructor() { 
         
-        ProbeProbeExec.initialize(this);
+        ProbeTypeExec.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ProbeProbeExec {
     }
 
     /**
-     * Constructs a <code>ProbeProbeExec</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ProbeTypeExec</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ProbeProbeExec} obj Optional instance to populate.
-     * @return {module:model/ProbeProbeExec} The populated <code>ProbeProbeExec</code> instance.
+     * @param {module:model/ProbeTypeExec} obj Optional instance to populate.
+     * @return {module:model/ProbeTypeExec} The populated <code>ProbeTypeExec</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProbeProbeExec();
+            obj = obj || new ProbeTypeExec();
 
             if (data.hasOwnProperty('command')) {
                 obj['command'] = ApiClient.convertToType(data['command'], ['String']);
@@ -60,12 +60,12 @@ class ProbeProbeExec {
 /**
  * @member {Array.<String>} command
  */
-ProbeProbeExec.prototype['command'] = undefined;
+ProbeTypeExec.prototype['command'] = undefined;
 
 
 
 
 
 
-export default ProbeProbeExec;
+export default ProbeTypeExec;
 

@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(QoveryApi.Probe);
     });
 
-    it('should have the property probe (base name: "probe")', function() {
-      // uncomment below and update the code to test the property probe
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instance = new QoveryApi.Probe();
       //expect(instance).to.be();
     });

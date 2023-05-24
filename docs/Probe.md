@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**probe** | [**ProbeProbe**](ProbeProbe.md) |  | [optional] 
+**type** | [**ProbeType**](ProbeType.md) |  | [optional] 
 **initialDelaySeconds** | **Number** |  | [optional] [default to 30]
 **periodSeconds** | **Number** |  | [optional] [default to 10]
 **timeoutSeconds** | **Number** |  | [optional] [default to 5]

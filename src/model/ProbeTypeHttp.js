@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ProbeProbeTcp model module.
- * @module model/ProbeProbeTcp
+ * The ProbeTypeHttp model module.
+ * @module model/ProbeTypeHttp
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ProbeProbeTcp {
+class ProbeTypeHttp {
     /**
-     * Constructs a new <code>ProbeProbeTcp</code>.
-     * @alias module:model/ProbeProbeTcp
+     * Constructs a new <code>ProbeTypeHttp</code>.
+     * @alias module:model/ProbeTypeHttp
      */
     constructor() { 
         
-        ProbeProbeTcp.initialize(this);
+        ProbeTypeHttp.initialize(this);
     }
 
     /**
@@ -37,18 +37,21 @@ class ProbeProbeTcp {
     }
 
     /**
-     * Constructs a <code>ProbeProbeTcp</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ProbeTypeHttp</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ProbeProbeTcp} obj Optional instance to populate.
-     * @return {module:model/ProbeProbeTcp} The populated <code>ProbeProbeTcp</code> instance.
+     * @param {module:model/ProbeTypeHttp} obj Optional instance to populate.
+     * @return {module:model/ProbeTypeHttp} The populated <code>ProbeTypeHttp</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProbeProbeTcp();
+            obj = obj || new ProbeTypeHttp();
 
-            if (data.hasOwnProperty('host')) {
-                obj['host'] = ApiClient.convertToType(data['host'], 'String');
+            if (data.hasOwnProperty('path')) {
+                obj['path'] = ApiClient.convertToType(data['path'], 'String');
+            }
+            if (data.hasOwnProperty('scheme')) {
+                obj['scheme'] = ApiClient.convertToType(data['scheme'], 'String');
             }
         }
         return obj;
@@ -58,14 +61,21 @@ class ProbeProbeTcp {
 }
 
 /**
- * @member {String} host
+ * @member {String} path
+ * @default '/'
  */
-ProbeProbeTcp.prototype['host'] = undefined;
+ProbeTypeHttp.prototype['path'] = '/';
+
+/**
+ * @member {String} scheme
+ * @default 'HTTP'
+ */
+ProbeTypeHttp.prototype['scheme'] = 'HTTP';
 
 
 
 
 
 
-export default ProbeProbeTcp;
+export default ProbeTypeHttp;
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ProbeProbeGrpc();
+    instance = new QoveryApi.ProbeTypeTcp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ProbeProbeGrpc', function() {
-    it('should create an instance of ProbeProbeGrpc', function() {
-      // uncomment below and update the code to test ProbeProbeGrpc
-      //var instance = new QoveryApi.ProbeProbeGrpc();
-      //expect(instance).to.be.a(QoveryApi.ProbeProbeGrpc);
+  describe('ProbeTypeTcp', function() {
+    it('should create an instance of ProbeTypeTcp', function() {
+      // uncomment below and update the code to test ProbeTypeTcp
+      //var instance = new QoveryApi.ProbeTypeTcp();
+      //expect(instance).to.be.a(QoveryApi.ProbeTypeTcp);
     });
 
-    it('should have the property service (base name: "service")', function() {
-      // uncomment below and update the code to test the property service
-      //var instance = new QoveryApi.ProbeProbeGrpc();
+    it('should have the property host (base name: "host")', function() {
+      // uncomment below and update the code to test the property host
+      //var instance = new QoveryApi.ProbeTypeTcp();
       //expect(instance).to.be();
     });
 

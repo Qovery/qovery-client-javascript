@@ -1,9 +1,9 @@
-# QoveryApi.ProbeProbeTcp
+# QoveryApi.ProbeTypeGrpc
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**host** | **String** |  | [optional] 
+**service** | **String** |  | [optional] 
 
 

@@ -1,9 +1,9 @@
-# QoveryApi.ProbeProbeExec
+# QoveryApi.ProbeTypeTcp
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**command** | **[String]** |  | [optional] 
+**host** | **String** |  | [optional] 
 
 

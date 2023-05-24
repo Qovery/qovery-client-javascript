@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ProbeProbeTcp();
+    instance = new QoveryApi.ProbeType();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,40 @@
       object[property] = value;
   }
 
-  describe('ProbeProbeTcp', function() {
-    it('should create an instance of ProbeProbeTcp', function() {
-      // uncomment below and update the code to test ProbeProbeTcp
-      //var instance = new QoveryApi.ProbeProbeTcp();
-      //expect(instance).to.be.a(QoveryApi.ProbeProbeTcp);
+  describe('ProbeType', function() {
+    it('should create an instance of ProbeType', function() {
+      // uncomment below and update the code to test ProbeType
+      //var instance = new QoveryApi.ProbeType();
+      //expect(instance).to.be.a(QoveryApi.ProbeType);
     });
 
-    it('should have the property host (base name: "host")', function() {
-      // uncomment below and update the code to test the property host
-      //var instance = new QoveryApi.ProbeProbeTcp();
+    it('should have the property none (base name: "none")', function() {
+      // uncomment below and update the code to test the property none
+      //var instance = new QoveryApi.ProbeType();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tcp (base name: "tcp")', function() {
+      // uncomment below and update the code to test the property tcp
+      //var instance = new QoveryApi.ProbeType();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property http (base name: "http")', function() {
+      // uncomment below and update the code to test the property http
+      //var instance = new QoveryApi.ProbeType();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property exec (base name: "exec")', function() {
+      // uncomment below and update the code to test the property exec
+      //var instance = new QoveryApi.ProbeType();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property grpc (base name: "grpc")', function() {
+      // uncomment below and update the code to test the property grpc
+      //var instance = new QoveryApi.ProbeType();
       //expect(instance).to.be();
     });
 

@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ProbeProbeGrpc model module.
- * @module model/ProbeProbeGrpc
+ * The ProbeTypeGrpc model module.
+ * @module model/ProbeTypeGrpc
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ProbeProbeGrpc {
+class ProbeTypeGrpc {
     /**
-     * Constructs a new <code>ProbeProbeGrpc</code>.
-     * @alias module:model/ProbeProbeGrpc
+     * Constructs a new <code>ProbeTypeGrpc</code>.
+     * @alias module:model/ProbeTypeGrpc
      */
     constructor() { 
         
-        ProbeProbeGrpc.initialize(this);
+        ProbeTypeGrpc.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ProbeProbeGrpc {
     }
 
     /**
-     * Constructs a <code>ProbeProbeGrpc</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ProbeTypeGrpc</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ProbeProbeGrpc} obj Optional instance to populate.
-     * @return {module:model/ProbeProbeGrpc} The populated <code>ProbeProbeGrpc</code> instance.
+     * @param {module:model/ProbeTypeGrpc} obj Optional instance to populate.
+     * @return {module:model/ProbeTypeGrpc} The populated <code>ProbeTypeGrpc</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProbeProbeGrpc();
+            obj = obj || new ProbeTypeGrpc();
 
             if (data.hasOwnProperty('service')) {
                 obj['service'] = ApiClient.convertToType(data['service'], 'String');
@@ -60,12 +60,12 @@ class ProbeProbeGrpc {
 /**
  * @member {String} service
  */
-ProbeProbeGrpc.prototype['service'] = undefined;
+ProbeTypeGrpc.prototype['service'] = undefined;
 
 
 
 
 
 
-export default ProbeProbeGrpc;
+export default ProbeTypeGrpc;
 

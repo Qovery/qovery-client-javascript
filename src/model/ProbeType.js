@@ -12,24 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
-import ProbeProbeExec from './ProbeProbeExec';
-import ProbeProbeGrpc from './ProbeProbeGrpc';
-import ProbeProbeHttp from './ProbeProbeHttp';
-import ProbeProbeTcp from './ProbeProbeTcp';
+import ProbeTypeExec from './ProbeTypeExec';
+import ProbeTypeGrpc from './ProbeTypeGrpc';
+import ProbeTypeHttp from './ProbeTypeHttp';
+import ProbeTypeTcp from './ProbeTypeTcp';
 
 /**
- * The ProbeProbe model module.
- * @module model/ProbeProbe
+ * The ProbeType model module.
+ * @module model/ProbeType
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ProbeProbe {
+class ProbeType {
     /**
-     * Constructs a new <code>ProbeProbe</code>.
-     * @alias module:model/ProbeProbe
+     * Constructs a new <code>ProbeType</code>.
+     * @alias module:model/ProbeType
      */
     constructor() { 
         
-        ProbeProbe.initialize(this);
+        ProbeType.initialize(this);
     }
 
     /**
@@ -41,30 +41,30 @@ class ProbeProbe {
     }
 
     /**
-     * Constructs a <code>ProbeProbe</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ProbeType</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ProbeProbe} obj Optional instance to populate.
-     * @return {module:model/ProbeProbe} The populated <code>ProbeProbe</code> instance.
+     * @param {module:model/ProbeType} obj Optional instance to populate.
+     * @return {module:model/ProbeType} The populated <code>ProbeType</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProbeProbe();
+            obj = obj || new ProbeType();
 
             if (data.hasOwnProperty('none')) {
                 obj['none'] = ApiClient.convertToType(data['none'], Object);
             }
             if (data.hasOwnProperty('tcp')) {
-                obj['tcp'] = ProbeProbeTcp.constructFromObject(data['tcp']);
+                obj['tcp'] = ProbeTypeTcp.constructFromObject(data['tcp']);
             }
             if (data.hasOwnProperty('http')) {
-                obj['http'] = ProbeProbeHttp.constructFromObject(data['http']);
+                obj['http'] = ProbeTypeHttp.constructFromObject(data['http']);
             }
             if (data.hasOwnProperty('exec')) {
-                obj['exec'] = ProbeProbeExec.constructFromObject(data['exec']);
+                obj['exec'] = ProbeTypeExec.constructFromObject(data['exec']);
             }
             if (data.hasOwnProperty('grpc')) {
-                obj['grpc'] = ProbeProbeGrpc.constructFromObject(data['grpc']);
+                obj['grpc'] = ProbeTypeGrpc.constructFromObject(data['grpc']);
             }
         }
         return obj;
@@ -76,32 +76,32 @@ class ProbeProbe {
 /**
  * @member {Object} none
  */
-ProbeProbe.prototype['none'] = undefined;
+ProbeType.prototype['none'] = undefined;
 
 /**
- * @member {module:model/ProbeProbeTcp} tcp
+ * @member {module:model/ProbeTypeTcp} tcp
  */
-ProbeProbe.prototype['tcp'] = undefined;
+ProbeType.prototype['tcp'] = undefined;
 
 /**
- * @member {module:model/ProbeProbeHttp} http
+ * @member {module:model/ProbeTypeHttp} http
  */
-ProbeProbe.prototype['http'] = undefined;
+ProbeType.prototype['http'] = undefined;
 
 /**
- * @member {module:model/ProbeProbeExec} exec
+ * @member {module:model/ProbeTypeExec} exec
  */
-ProbeProbe.prototype['exec'] = undefined;
+ProbeType.prototype['exec'] = undefined;
 
 /**
- * @member {module:model/ProbeProbeGrpc} grpc
+ * @member {module:model/ProbeTypeGrpc} grpc
  */
-ProbeProbe.prototype['grpc'] = undefined;
+ProbeType.prototype['grpc'] = undefined;
 
 
 
 
 
 
-export default ProbeProbe;
+export default ProbeType;
 

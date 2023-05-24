@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ProbeProbe from './ProbeProbe';
+import ProbeType from './ProbeType';
 
 /**
  * The Probe model module.
@@ -48,8 +48,8 @@ class Probe {
         if (data) {
             obj = obj || new Probe();
 
-            if (data.hasOwnProperty('probe')) {
-                obj['probe'] = ProbeProbe.constructFromObject(data['probe']);
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ProbeType.constructFromObject(data['type']);
             }
             if (data.hasOwnProperty('initial_delay_seconds')) {
                 obj['initial_delay_seconds'] = ApiClient.convertToType(data['initial_delay_seconds'], 'Number');
@@ -74,9 +74,9 @@ class Probe {
 }
 
 /**
- * @member {module:model/ProbeProbe} probe
+ * @member {module:model/ProbeType} type
  */
-Probe.prototype['probe'] = undefined;
+Probe.prototype['type'] = undefined;
 
 /**
  * @member {Number} initial_delay_seconds

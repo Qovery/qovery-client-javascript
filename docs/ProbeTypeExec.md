@@ -1,9 +1,9 @@
-# QoveryApi.ProbeProbeGrpc
+# QoveryApi.ProbeTypeExec
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**service** | **String** |  | [optional] 
+**command** | **[String]** |  | [optional] 
 
 

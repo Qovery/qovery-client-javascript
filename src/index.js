@@ -365,11 +365,11 @@ import PaidUsage from './model/PaidUsage';
 import PlanEnum from './model/PlanEnum';
 import PortProtocolEnum from './model/PortProtocolEnum';
 import Probe from './model/Probe';
-import ProbeProbe from './model/ProbeProbe';
-import ProbeProbeExec from './model/ProbeProbeExec';
-import ProbeProbeGrpc from './model/ProbeProbeGrpc';
-import ProbeProbeHttp from './model/ProbeProbeHttp';
-import ProbeProbeTcp from './model/ProbeProbeTcp';
+import ProbeType from './model/ProbeType';
+import ProbeTypeExec from './model/ProbeTypeExec';
+import ProbeTypeGrpc from './model/ProbeTypeGrpc';
+import ProbeTypeHttp from './model/ProbeTypeHttp';
+import ProbeTypeTcp from './model/ProbeTypeTcp';
 import Project from './model/Project';
 import ProjectAllOf from './model/ProjectAllOf';
 import ProjectCurrentCost from './model/ProjectCurrentCost';
@@ -2661,34 +2661,34 @@ export {
     Probe,
 
     /**
-     * The ProbeProbe model constructor.
-     * @property {module:model/ProbeProbe}
+     * The ProbeType model constructor.
+     * @property {module:model/ProbeType}
      */
-    ProbeProbe,
+    ProbeType,
 
     /**
-     * The ProbeProbeExec model constructor.
-     * @property {module:model/ProbeProbeExec}
+     * The ProbeTypeExec model constructor.
+     * @property {module:model/ProbeTypeExec}
      */
-    ProbeProbeExec,
+    ProbeTypeExec,
 
     /**
-     * The ProbeProbeGrpc model constructor.
-     * @property {module:model/ProbeProbeGrpc}
+     * The ProbeTypeGrpc model constructor.
+     * @property {module:model/ProbeTypeGrpc}
      */
-    ProbeProbeGrpc,
+    ProbeTypeGrpc,
 
     /**
-     * The ProbeProbeHttp model constructor.
-     * @property {module:model/ProbeProbeHttp}
+     * The ProbeTypeHttp model constructor.
+     * @property {module:model/ProbeTypeHttp}
      */
-    ProbeProbeHttp,
+    ProbeTypeHttp,
 
     /**
-     * The ProbeProbeTcp model constructor.
-     * @property {module:model/ProbeProbeTcp}
+     * The ProbeTypeTcp model constructor.
+     * @property {module:model/ProbeTypeTcp}
      */
-    ProbeProbeTcp,
+    ProbeTypeTcp,
 
     /**
      * The Project model constructor.

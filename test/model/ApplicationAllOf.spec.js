@@ -132,8 +132,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property healthcheck (base name: "healthcheck")', function() {
-      // uncomment below and update the code to test the property healthcheck
+    it('should have the property healthchecks (base name: "healthchecks")', function() {
+      // uncomment below and update the code to test the property healthchecks
       //var instance = new QoveryApi.ApplicationAllOf();
       //expect(instance).to.be();
     });

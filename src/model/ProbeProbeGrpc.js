@@ -12,21 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import Probe from './Probe';
 
 /**
- * The Healthcheck model module.
- * @module model/Healthcheck
+ * The ProbeProbeGrpc model module.
+ * @module model/ProbeProbeGrpc
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class Healthcheck {
+class ProbeProbeGrpc {
     /**
-     * Constructs a new <code>Healthcheck</code>.
-     * @alias module:model/Healthcheck
+     * Constructs a new <code>ProbeProbeGrpc</code>.
+     * @alias module:model/ProbeProbeGrpc
      */
     constructor() { 
         
-        Healthcheck.initialize(this);
+        ProbeProbeGrpc.initialize(this);
     }
 
     /**
@@ -38,21 +37,18 @@ class Healthcheck {
     }
 
     /**
-     * Constructs a <code>Healthcheck</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ProbeProbeGrpc</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Healthcheck} obj Optional instance to populate.
-     * @return {module:model/Healthcheck} The populated <code>Healthcheck</code> instance.
+     * @param {module:model/ProbeProbeGrpc} obj Optional instance to populate.
+     * @return {module:model/ProbeProbeGrpc} The populated <code>ProbeProbeGrpc</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Healthcheck();
+            obj = obj || new ProbeProbeGrpc();
 
-            if (data.hasOwnProperty('readiness_probe')) {
-                obj['readiness_probe'] = Probe.constructFromObject(data['readiness_probe']);
-            }
-            if (data.hasOwnProperty('liveness_probe')) {
-                obj['liveness_probe'] = Probe.constructFromObject(data['liveness_probe']);
+            if (data.hasOwnProperty('service')) {
+                obj['service'] = ApiClient.convertToType(data['service'], 'String');
             }
         }
         return obj;
@@ -62,19 +58,14 @@ class Healthcheck {
 }
 
 /**
- * @member {module:model/Probe} readiness_probe
+ * @member {String} service
  */
-Healthcheck.prototype['readiness_probe'] = undefined;
-
-/**
- * @member {module:model/Probe} liveness_probe
- */
-Healthcheck.prototype['liveness_probe'] = undefined;
+ProbeProbeGrpc.prototype['service'] = undefined;
 
 
 
 
 
 
-export default Healthcheck;
+export default ProbeProbeGrpc;
 

@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
+import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 import ServicePort from './ServicePort';
 import ServiceStorage from './ServiceStorage';
@@ -141,6 +142,9 @@ class ContainerResponse {
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
             }
+            if (data.hasOwnProperty('healthchecks')) {
+                obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
+            }
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
@@ -258,6 +262,11 @@ ContainerResponse.prototype['min_running_instances'] = 1;
 ContainerResponse.prototype['max_running_instances'] = 1;
 
 /**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+ContainerResponse.prototype['healthchecks'] = undefined;
+
+/**
  * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview
  */
@@ -357,6 +366,10 @@ ContainerResponseAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerResponseAllOf.prototype['max_running_instances'] = 1;
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+ContainerResponseAllOf.prototype['healthchecks'] = undefined;
 /**
  * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview

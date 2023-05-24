@@ -132,6 +132,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property healthchecks (base name: "healthchecks")', function() {
+      // uncomment below and update the code to test the property healthchecks
+      //var instance = new QoveryApi.JobResponseAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property schedule (base name: "schedule")', function() {
       // uncomment below and update the code to test the property schedule
       //var instance = new QoveryApi.JobResponseAllOf();

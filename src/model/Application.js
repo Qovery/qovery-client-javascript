@@ -118,8 +118,8 @@ class Application {
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
             }
-            if (data.hasOwnProperty('healthcheck')) {
-                obj['healthcheck'] = Healthcheck.constructFromObject(data['healthcheck']);
+            if (data.hasOwnProperty('healthchecks')) {
+                obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
             }
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
@@ -237,9 +237,9 @@ Application.prototype['min_running_instances'] = 1;
 Application.prototype['max_running_instances'] = 1;
 
 /**
- * @member {module:model/Healthcheck} healthcheck
+ * @member {module:model/Healthcheck} healthchecks
  */
-Application.prototype['healthcheck'] = undefined;
+Application.prototype['healthchecks'] = undefined;
 
 /**
  * Specify if the environment preview option is activated or not for this application.   If activated, a preview environment will be automatically cloned at each pull request.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
@@ -348,9 +348,9 @@ ApplicationAllOf.prototype['min_running_instances'] = 1;
  */
 ApplicationAllOf.prototype['max_running_instances'] = 1;
 /**
- * @member {module:model/Healthcheck} healthcheck
+ * @member {module:model/Healthcheck} healthchecks
  */
-ApplicationAllOf.prototype['healthcheck'] = undefined;
+ApplicationAllOf.prototype['healthchecks'] = undefined;
 /**
  * Specify if the environment preview option is activated or not for this application.   If activated, a preview environment will be automatically cloned at each pull request.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview

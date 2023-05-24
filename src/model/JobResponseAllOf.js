@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Healthcheck from './Healthcheck';
 import JobResponseAllOfSchedule from './JobResponseAllOfSchedule';
 import JobResponseAllOfSource from './JobResponseAllOfSource';
 import ReferenceObject from './ReferenceObject';
@@ -105,6 +106,9 @@ class JobResponseAllOf {
             if (data.hasOwnProperty('source')) {
                 obj['source'] = JobResponseAllOfSource.constructFromObject(data['source']);
             }
+            if (data.hasOwnProperty('healthchecks')) {
+                obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
+            }
             if (data.hasOwnProperty('schedule')) {
                 obj['schedule'] = JobResponseAllOfSchedule.constructFromObject(data['schedule']);
             }
@@ -188,6 +192,11 @@ JobResponseAllOf.prototype['port'] = undefined;
  * @member {module:model/JobResponseAllOfSource} source
  */
 JobResponseAllOf.prototype['source'] = undefined;
+
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+JobResponseAllOf.prototype['healthchecks'] = undefined;
 
 /**
  * @member {module:model/JobResponseAllOfSchedule} schedule

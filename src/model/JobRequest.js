@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Healthcheck from './Healthcheck';
 import JobRequestAllOf from './JobRequestAllOf';
 import JobRequestAllOfSchedule from './JobRequestAllOfSchedule';
 import JobRequestAllOfSource from './JobRequestAllOfSource';
@@ -81,6 +82,9 @@ class JobRequest {
             if (data.hasOwnProperty('source')) {
                 obj['source'] = JobRequestAllOfSource.constructFromObject(data['source']);
             }
+            if (data.hasOwnProperty('healthchecks')) {
+                obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
+            }
             if (data.hasOwnProperty('schedule')) {
                 obj['schedule'] = JobRequestAllOfSchedule.constructFromObject(data['schedule']);
             }
@@ -147,6 +151,11 @@ JobRequest.prototype['port'] = undefined;
 JobRequest.prototype['source'] = undefined;
 
 /**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+JobRequest.prototype['healthchecks'] = undefined;
+
+/**
  * @member {module:model/JobRequestAllOfSchedule} schedule
  */
 JobRequest.prototype['schedule'] = undefined;
@@ -199,6 +208,10 @@ JobRequestAllOf.prototype['port'] = undefined;
  * @member {module:model/JobRequestAllOfSource} source
  */
 JobRequestAllOf.prototype['source'] = undefined;
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+JobRequestAllOf.prototype['healthchecks'] = undefined;
 /**
  * @member {module:model/JobRequestAllOfSchedule} schedule
  */

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Healthcheck from './Healthcheck';
 
 /**
  * The ContainerRequestAllOf model module.
@@ -87,6 +88,9 @@ class ContainerRequestAllOf {
             }
             if (data.hasOwnProperty('max_running_instances')) {
                 obj['max_running_instances'] = ApiClient.convertToType(data['max_running_instances'], 'Number');
+            }
+            if (data.hasOwnProperty('healthchecks')) {
+                obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
             }
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
@@ -166,6 +170,11 @@ ContainerRequestAllOf.prototype['min_running_instances'] = 1;
  * @default 1
  */
 ContainerRequestAllOf.prototype['max_running_instances'] = 1;
+
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+ContainerRequestAllOf.prototype['healthchecks'] = undefined;
 
 /**
  * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 

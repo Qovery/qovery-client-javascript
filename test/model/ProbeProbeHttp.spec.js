@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.Healthcheck();
+    instance = new QoveryApi.ProbeProbeHttp();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('Healthcheck', function() {
-    it('should create an instance of Healthcheck', function() {
-      // uncomment below and update the code to test Healthcheck
-      //var instance = new QoveryApi.Healthcheck();
-      //expect(instance).to.be.a(QoveryApi.Healthcheck);
+  describe('ProbeProbeHttp', function() {
+    it('should create an instance of ProbeProbeHttp', function() {
+      // uncomment below and update the code to test ProbeProbeHttp
+      //var instance = new QoveryApi.ProbeProbeHttp();
+      //expect(instance).to.be.a(QoveryApi.ProbeProbeHttp);
     });
 
-    it('should have the property readinessProbe (base name: "readiness_probe")', function() {
-      // uncomment below and update the code to test the property readinessProbe
-      //var instance = new QoveryApi.Healthcheck();
+    it('should have the property path (base name: "path")', function() {
+      // uncomment below and update the code to test the property path
+      //var instance = new QoveryApi.ProbeProbeHttp();
       //expect(instance).to.be();
     });
 
-    it('should have the property livenessProbe (base name: "liveness_probe")', function() {
-      // uncomment below and update the code to test the property livenessProbe
-      //var instance = new QoveryApi.Healthcheck();
+    it('should have the property scheme (base name: "scheme")', function() {
+      // uncomment below and update the code to test the property scheme
+      //var instance = new QoveryApi.ProbeProbeHttp();
       //expect(instance).to.be();
     });
 

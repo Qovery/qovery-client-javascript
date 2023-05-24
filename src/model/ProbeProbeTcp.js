@@ -12,21 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import Probe from './Probe';
 
 /**
- * The Healthcheck model module.
- * @module model/Healthcheck
+ * The ProbeProbeTcp model module.
+ * @module model/ProbeProbeTcp
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class Healthcheck {
+class ProbeProbeTcp {
     /**
-     * Constructs a new <code>Healthcheck</code>.
-     * @alias module:model/Healthcheck
+     * Constructs a new <code>ProbeProbeTcp</code>.
+     * @alias module:model/ProbeProbeTcp
      */
     constructor() { 
         
-        Healthcheck.initialize(this);
+        ProbeProbeTcp.initialize(this);
     }
 
     /**
@@ -38,21 +37,18 @@ class Healthcheck {
     }
 
     /**
-     * Constructs a <code>Healthcheck</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ProbeProbeTcp</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Healthcheck} obj Optional instance to populate.
-     * @return {module:model/Healthcheck} The populated <code>Healthcheck</code> instance.
+     * @param {module:model/ProbeProbeTcp} obj Optional instance to populate.
+     * @return {module:model/ProbeProbeTcp} The populated <code>ProbeProbeTcp</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Healthcheck();
+            obj = obj || new ProbeProbeTcp();
 
-            if (data.hasOwnProperty('readiness_probe')) {
-                obj['readiness_probe'] = Probe.constructFromObject(data['readiness_probe']);
-            }
-            if (data.hasOwnProperty('liveness_probe')) {
-                obj['liveness_probe'] = Probe.constructFromObject(data['liveness_probe']);
+            if (data.hasOwnProperty('host')) {
+                obj['host'] = ApiClient.convertToType(data['host'], 'String');
             }
         }
         return obj;
@@ -62,19 +58,14 @@ class Healthcheck {
 }
 
 /**
- * @member {module:model/Probe} readiness_probe
+ * @member {String} host
  */
-Healthcheck.prototype['readiness_probe'] = undefined;
-
-/**
- * @member {module:model/Probe} liveness_probe
- */
-Healthcheck.prototype['liveness_probe'] = undefined;
+ProbeProbeTcp.prototype['host'] = undefined;
 
 
 
 
 
 
-export default Healthcheck;
+export default ProbeProbeTcp;
 

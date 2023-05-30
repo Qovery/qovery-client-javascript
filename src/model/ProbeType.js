@@ -51,9 +51,6 @@ class ProbeType {
         if (data) {
             obj = obj || new ProbeType();
 
-            if (data.hasOwnProperty('none')) {
-                obj['none'] = ApiClient.convertToType(data['none'], Object);
-            }
             if (data.hasOwnProperty('tcp')) {
                 obj['tcp'] = ProbeTypeTcp.constructFromObject(data['tcp']);
             }
@@ -72,11 +69,6 @@ class ProbeType {
 
 
 }
-
-/**
- * @member {Object} none
- */
-ProbeType.prototype['none'] = undefined;
 
 /**
  * @member {module:model/ProbeTypeTcp} tcp

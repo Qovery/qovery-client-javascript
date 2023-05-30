@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.ProbeType);
     });
 
-    it('should have the property none (base name: "none")', function() {
-      // uncomment below and update the code to test the property none
-      //var instance = new QoveryApi.ProbeType();
-      //expect(instance).to.be();
-    });
-
     it('should have the property tcp (base name: "tcp")', function() {
       // uncomment below and update the code to test the property tcp
       //var instance = new QoveryApi.ProbeType();

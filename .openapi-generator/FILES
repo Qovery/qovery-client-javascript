@@ -340,6 +340,10 @@ docs/Log.md
 docs/LogPaginatedResponseList.md
 docs/LogPaginatedResponseListAllOf.md
 docs/LogResponseList.md
+docs/ManagedDatabaseInstanceTypeResponse.md
+docs/ManagedDatabaseInstanceTypeResponseList.md
+docs/ManagedDatabaseTypeResponse.md
+docs/ManagedDatabaseTypeResponseList.md
 docs/Member.md
 docs/MemberAllOf.md
 docs/MemberResponseList.md
@@ -854,6 +858,10 @@ src/model/Log.js
 src/model/LogPaginatedResponseList.js
 src/model/LogPaginatedResponseListAllOf.js
 src/model/LogResponseList.js
+src/model/ManagedDatabaseInstanceTypeResponse.js
+src/model/ManagedDatabaseInstanceTypeResponseList.js
+src/model/ManagedDatabaseTypeResponse.js
+src/model/ManagedDatabaseTypeResponseList.js
 src/model/Member.js
 src/model/MemberAllOf.js
 src/model/MemberResponseList.js
@@ -1349,6 +1357,10 @@ test/model/Log.spec.js
 test/model/LogPaginatedResponseList.spec.js
 test/model/LogPaginatedResponseListAllOf.spec.js
 test/model/LogResponseList.spec.js
+test/model/ManagedDatabaseInstanceTypeResponse.spec.js
+test/model/ManagedDatabaseInstanceTypeResponseList.spec.js
+test/model/ManagedDatabaseTypeResponse.spec.js
+test/model/ManagedDatabaseTypeResponseList.spec.js
 test/model/Member.spec.js
 test/model/MemberAllOf.spec.js
 test/model/MemberResponseList.spec.js

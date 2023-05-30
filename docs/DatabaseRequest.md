@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **mode** | [**DatabaseModeEnum**](DatabaseModeEnum.md) |  | 
 **accessibility** | [**DatabaseAccessibilityEnum**](DatabaseAccessibilityEnum.md) |  | [optional] 
 **cpu** | **Number** | unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] [default to 250]
+**instanceType** | **String** | Database instance type to be used for this database. The list of values can be retrieved via the endpoint /{CloudProvider}/managedDatabase/instanceType/{region}/{dbType}. This field SHOULD NOT be set for container DB. | [optional] 
 **memory** | **Number** | unit is MB. 1024 MB &#x3D; 1GB   Default value is linked to the database type: - MANAGED: &#x60;100&#x60; - CONTAINER   - POSTGRES: &#x60;100&#x60;   - REDIS: &#x60;100&#x60;   - MYSQL: &#x60;512&#x60;   - MONGODB: &#x60;256&#x60;  | [optional] 
 **storage** | **Number** | unit is GB | [optional] [default to 10]
 

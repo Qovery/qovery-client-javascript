@@ -66,6 +66,9 @@ class DatabaseAllOf {
             if (data.hasOwnProperty('disk_encrypted')) {
                 obj['disk_encrypted'] = ApiClient.convertToType(data['disk_encrypted'], 'Boolean');
             }
+            if (data.hasOwnProperty('instance_type')) {
+                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            }
         }
         return obj;
     }
@@ -105,6 +108,12 @@ DatabaseAllOf.prototype['maximum_memory'] = undefined;
  * @member {Boolean} disk_encrypted
  */
 DatabaseAllOf.prototype['disk_encrypted'] = undefined;
+
+/**
+ * Database instance type to be used for this database. The list of values can be retrieved via the endpoint /{CloudProvider}/managedDatabase/instanceType/{region}/{dbType}. This field is null for container DB.
+ * @member {String} instance_type
+ */
+DatabaseAllOf.prototype['instance_type'] = undefined;
 
 
 

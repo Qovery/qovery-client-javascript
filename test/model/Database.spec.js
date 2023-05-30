@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property instanceType (base name: "instance_type")', function() {
+      // uncomment below and update the code to test the property instanceType
+      //var instance = new QoveryApi.Database();
+      //expect(instance).to.be();
+    });
+
     it('should have the property memory (base name: "memory")', function() {
       // uncomment below and update the code to test the property memory
       //var instance = new QoveryApi.Database();

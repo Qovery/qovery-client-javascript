@@ -201,11 +201,17 @@ Class | Method | HTTP request | Description
 *QoveryApi.CloudProviderApi* | [**listAWSEc2InstanceType**](docs/CloudProviderApi.md#listAWSEc2InstanceType) | **GET** /aws/ec2/instanceType/{region} | List AWS EC2 available instance types
 *QoveryApi.CloudProviderApi* | [**listAWSFeatures**](docs/CloudProviderApi.md#listAWSFeatures) | **GET** /aws/clusterFeature | List AWS features available
 *QoveryApi.CloudProviderApi* | [**listAWSInstanceType**](docs/CloudProviderApi.md#listAWSInstanceType) | **GET** /aws/instanceType | List AWS available instance types
+*QoveryApi.CloudProviderApi* | [**listAWSManagedDatabaseInstanceType**](docs/CloudProviderApi.md#listAWSManagedDatabaseInstanceType) | **GET** /aws/managedDatabase/instanceType/{region}/{databaseType} | List AWS available managed database instance types
+*QoveryApi.CloudProviderApi* | [**listAWSManagedDatabaseType**](docs/CloudProviderApi.md#listAWSManagedDatabaseType) | **GET** /aws/managedDatabase/type | List AWS available managed database types
 *QoveryApi.CloudProviderApi* | [**listAWSRegions**](docs/CloudProviderApi.md#listAWSRegions) | **GET** /aws/region | List AWS regions
 *QoveryApi.CloudProviderApi* | [**listCloudProvider**](docs/CloudProviderApi.md#listCloudProvider) | **GET** /cloudProvider | List Cloud providers available
 *QoveryApi.CloudProviderApi* | [**listDOFeatures**](docs/CloudProviderApi.md#listDOFeatures) | **GET** /digitalOcean/clusterFeature | List DO features available
 *QoveryApi.CloudProviderApi* | [**listDOInstanceType**](docs/CloudProviderApi.md#listDOInstanceType) | **GET** /digitalOcean/instanceType | List DO available instance types
+*QoveryApi.CloudProviderApi* | [**listDOManagedDatabaseInstanceType**](docs/CloudProviderApi.md#listDOManagedDatabaseInstanceType) | **GET** /digitalOcean/managedDatabase/instanceType/{region}/{databaseType} | List Digital Ocean available managed database instance types
+*QoveryApi.CloudProviderApi* | [**listDOManagedDatabaseType**](docs/CloudProviderApi.md#listDOManagedDatabaseType) | **GET** /digitalOcean/managedDatabase/type | List Digital Ocean available managed database types
 *QoveryApi.CloudProviderApi* | [**listDORegions**](docs/CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
+*QoveryApi.CloudProviderApi* | [**listSCWManagedDatabaseInstanceType**](docs/CloudProviderApi.md#listSCWManagedDatabaseInstanceType) | **GET** /scaleway/managedDatabase/instanceType/{zone}/{databaseType} | List Scaleway available managed database instance types
+*QoveryApi.CloudProviderApi* | [**listSCWManagedDatabaseType**](docs/CloudProviderApi.md#listSCWManagedDatabaseType) | **GET** /scaleway/managedDatabase/type | List Scaleway available managed database types
 *QoveryApi.CloudProviderApi* | [**listScalewayFeatures**](docs/CloudProviderApi.md#listScalewayFeatures) | **GET** /scaleway/clusterFeature | List Scaleway features available
 *QoveryApi.CloudProviderApi* | [**listScalewayInstanceType**](docs/CloudProviderApi.md#listScalewayInstanceType) | **GET** /scaleway/instanceType | List Scaleway available instance types
 *QoveryApi.CloudProviderApi* | [**listScalewayKapsuleInstanceType**](docs/CloudProviderApi.md#listScalewayKapsuleInstanceType) | **GET** /scaleway/instanceType/{zone} | List Scaleway Kapsule available instance types
@@ -758,6 +764,10 @@ Class | Method | HTTP request | Description
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)
  - [QoveryApi.LogPaginatedResponseListAllOf](docs/LogPaginatedResponseListAllOf.md)
  - [QoveryApi.LogResponseList](docs/LogResponseList.md)
+ - [QoveryApi.ManagedDatabaseInstanceTypeResponse](docs/ManagedDatabaseInstanceTypeResponse.md)
+ - [QoveryApi.ManagedDatabaseInstanceTypeResponseList](docs/ManagedDatabaseInstanceTypeResponseList.md)
+ - [QoveryApi.ManagedDatabaseTypeResponse](docs/ManagedDatabaseTypeResponse.md)
+ - [QoveryApi.ManagedDatabaseTypeResponseList](docs/ManagedDatabaseTypeResponseList.md)
  - [QoveryApi.Member](docs/Member.md)
  - [QoveryApi.MemberAllOf](docs/MemberAllOf.md)
  - [QoveryApi.MemberResponseList](docs/MemberResponseList.md)

@@ -294,6 +294,10 @@ import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
 import LogResponseList from './model/LogResponseList';
+import ManagedDatabaseInstanceTypeResponse from './model/ManagedDatabaseInstanceTypeResponse';
+import ManagedDatabaseInstanceTypeResponseList from './model/ManagedDatabaseInstanceTypeResponseList';
+import ManagedDatabaseTypeResponse from './model/ManagedDatabaseTypeResponse';
+import ManagedDatabaseTypeResponseList from './model/ManagedDatabaseTypeResponseList';
 import Member from './model/Member';
 import MemberAllOf from './model/MemberAllOf';
 import MemberResponseList from './model/MemberResponseList';
@@ -2233,6 +2237,30 @@ export {
      * @property {module:model/LogResponseList}
      */
     LogResponseList,
+
+    /**
+     * The ManagedDatabaseInstanceTypeResponse model constructor.
+     * @property {module:model/ManagedDatabaseInstanceTypeResponse}
+     */
+    ManagedDatabaseInstanceTypeResponse,
+
+    /**
+     * The ManagedDatabaseInstanceTypeResponseList model constructor.
+     * @property {module:model/ManagedDatabaseInstanceTypeResponseList}
+     */
+    ManagedDatabaseInstanceTypeResponseList,
+
+    /**
+     * The ManagedDatabaseTypeResponse model constructor.
+     * @property {module:model/ManagedDatabaseTypeResponse}
+     */
+    ManagedDatabaseTypeResponse,
+
+    /**
+     * The ManagedDatabaseTypeResponseList model constructor.
+     * @property {module:model/ManagedDatabaseTypeResponseList}
+     */
+    ManagedDatabaseTypeResponseList,
 
     /**
      * The Member model constructor.

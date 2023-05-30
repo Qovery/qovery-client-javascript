@@ -88,6 +88,26 @@
         done();
       });
     });
+    describe('listAWSManagedDatabaseInstanceType', function() {
+      it('should call listAWSManagedDatabaseInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listAWSManagedDatabaseInstanceType
+        //instance.listAWSManagedDatabaseInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listAWSManagedDatabaseType', function() {
+      it('should call listAWSManagedDatabaseType successfully', function(done) {
+        //uncomment below and update the code to test listAWSManagedDatabaseType
+        //instance.listAWSManagedDatabaseType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listAWSRegions', function() {
       it('should call listAWSRegions successfully', function(done) {
         //uncomment below and update the code to test listAWSRegions
@@ -128,10 +148,50 @@
         done();
       });
     });
+    describe('listDOManagedDatabaseInstanceType', function() {
+      it('should call listDOManagedDatabaseInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listDOManagedDatabaseInstanceType
+        //instance.listDOManagedDatabaseInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listDOManagedDatabaseType', function() {
+      it('should call listDOManagedDatabaseType successfully', function(done) {
+        //uncomment below and update the code to test listDOManagedDatabaseType
+        //instance.listDOManagedDatabaseType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listDORegions', function() {
       it('should call listDORegions successfully', function(done) {
         //uncomment below and update the code to test listDORegions
         //instance.listDORegions(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listSCWManagedDatabaseInstanceType', function() {
+      it('should call listSCWManagedDatabaseInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listSCWManagedDatabaseInstanceType
+        //instance.listSCWManagedDatabaseInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listSCWManagedDatabaseType', function() {
+      it('should call listSCWManagedDatabaseType successfully', function(done) {
+        //uncomment below and update the code to test listSCWManagedDatabaseType
+        //instance.listSCWManagedDatabaseType(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

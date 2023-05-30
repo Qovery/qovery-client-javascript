@@ -8,11 +8,17 @@ Method | HTTP request | Description
 [**listAWSEc2InstanceType**](CloudProviderApi.md#listAWSEc2InstanceType) | **GET** /aws/ec2/instanceType/{region} | List AWS EC2 available instance types
 [**listAWSFeatures**](CloudProviderApi.md#listAWSFeatures) | **GET** /aws/clusterFeature | List AWS features available
 [**listAWSInstanceType**](CloudProviderApi.md#listAWSInstanceType) | **GET** /aws/instanceType | List AWS available instance types
+[**listAWSManagedDatabaseInstanceType**](CloudProviderApi.md#listAWSManagedDatabaseInstanceType) | **GET** /aws/managedDatabase/instanceType/{region}/{databaseType} | List AWS available managed database instance types
+[**listAWSManagedDatabaseType**](CloudProviderApi.md#listAWSManagedDatabaseType) | **GET** /aws/managedDatabase/type | List AWS available managed database types
 [**listAWSRegions**](CloudProviderApi.md#listAWSRegions) | **GET** /aws/region | List AWS regions
 [**listCloudProvider**](CloudProviderApi.md#listCloudProvider) | **GET** /cloudProvider | List Cloud providers available
 [**listDOFeatures**](CloudProviderApi.md#listDOFeatures) | **GET** /digitalOcean/clusterFeature | List DO features available
 [**listDOInstanceType**](CloudProviderApi.md#listDOInstanceType) | **GET** /digitalOcean/instanceType | List DO available instance types
+[**listDOManagedDatabaseInstanceType**](CloudProviderApi.md#listDOManagedDatabaseInstanceType) | **GET** /digitalOcean/managedDatabase/instanceType/{region}/{databaseType} | List Digital Ocean available managed database instance types
+[**listDOManagedDatabaseType**](CloudProviderApi.md#listDOManagedDatabaseType) | **GET** /digitalOcean/managedDatabase/type | List Digital Ocean available managed database types
 [**listDORegions**](CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
+[**listSCWManagedDatabaseInstanceType**](CloudProviderApi.md#listSCWManagedDatabaseInstanceType) | **GET** /scaleway/managedDatabase/instanceType/{zone}/{databaseType} | List Scaleway available managed database instance types
+[**listSCWManagedDatabaseType**](CloudProviderApi.md#listSCWManagedDatabaseType) | **GET** /scaleway/managedDatabase/type | List Scaleway available managed database types
 [**listScalewayFeatures**](CloudProviderApi.md#listScalewayFeatures) | **GET** /scaleway/clusterFeature | List Scaleway features available
 [**listScalewayInstanceType**](CloudProviderApi.md#listScalewayInstanceType) | **GET** /scaleway/instanceType | List Scaleway available instance types
 [**listScalewayKapsuleInstanceType**](CloudProviderApi.md#listScalewayKapsuleInstanceType) | **GET** /scaleway/instanceType/{zone} | List Scaleway Kapsule available instance types
@@ -200,6 +206,98 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
+## listAWSManagedDatabaseInstanceType
+
+> ManagedDatabaseInstanceTypeResponseList listAWSManagedDatabaseInstanceType(region, databaseType)
+
+List AWS available managed database instance types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+let region = us-east-2; // String | region name
+let databaseType = MYSQL; // String | Database type
+apiInstance.listAWSManagedDatabaseInstanceType(region, databaseType, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **String**| region name | 
+ **databaseType** | **String**| Database type | 
+
+### Return type
+
+[**ManagedDatabaseInstanceTypeResponseList**](ManagedDatabaseInstanceTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listAWSManagedDatabaseType
+
+> ManagedDatabaseTypeResponseList listAWSManagedDatabaseType()
+
+List AWS available managed database types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+apiInstance.listAWSManagedDatabaseType((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ManagedDatabaseTypeResponseList**](ManagedDatabaseTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listAWSRegions
 
 > ClusterRegionResponseList listAWSRegions()
@@ -372,6 +470,98 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
+## listDOManagedDatabaseInstanceType
+
+> ManagedDatabaseInstanceTypeResponseList listDOManagedDatabaseInstanceType(region, databaseType)
+
+List Digital Ocean available managed database instance types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+let region = us-east-2; // String | region name
+let databaseType = MYSQL; // String | Database type
+apiInstance.listDOManagedDatabaseInstanceType(region, databaseType, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **String**| region name | 
+ **databaseType** | **String**| Database type | 
+
+### Return type
+
+[**ManagedDatabaseInstanceTypeResponseList**](ManagedDatabaseInstanceTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listDOManagedDatabaseType
+
+> ManagedDatabaseTypeResponseList listDOManagedDatabaseType()
+
+List Digital Ocean available managed database types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+apiInstance.listDOManagedDatabaseType((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ManagedDatabaseTypeResponseList**](ManagedDatabaseTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## listDORegions
 
 > ClusterRegionResponseList listDORegions()
@@ -404,6 +594,96 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ClusterRegionResponseList**](ClusterRegionResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listSCWManagedDatabaseInstanceType
+
+> ManagedDatabaseInstanceTypeResponseList listSCWManagedDatabaseInstanceType(databaseType)
+
+List Scaleway available managed database instance types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+let databaseType = MYSQL; // String | Database type
+apiInstance.listSCWManagedDatabaseInstanceType(databaseType, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **databaseType** | **String**| Database type | 
+
+### Return type
+
+[**ManagedDatabaseInstanceTypeResponseList**](ManagedDatabaseInstanceTypeResponseList.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listSCWManagedDatabaseType
+
+> ManagedDatabaseTypeResponseList listSCWManagedDatabaseType()
+
+List Scaleway available managed database types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+apiInstance.listSCWManagedDatabaseType((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ManagedDatabaseTypeResponseList**](ManagedDatabaseTypeResponseList.md)
 
 ### Authorization
 

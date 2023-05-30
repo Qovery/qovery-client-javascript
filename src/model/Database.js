@@ -102,6 +102,9 @@ class Database {
             if (data.hasOwnProperty('cpu')) {
                 obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
             }
+            if (data.hasOwnProperty('instance_type')) {
+                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            }
             if (data.hasOwnProperty('memory')) {
                 obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
             }
@@ -186,6 +189,12 @@ Database.prototype['accessibility'] = undefined;
  * @default 250
  */
 Database.prototype['cpu'] = 250;
+
+/**
+ * Database instance type to be used for this database. The list of values can be retrieved via the endpoint /{CloudProvider}/managedDatabase/instanceType/{region}/{dbType}. This field is null for container DB.
+ * @member {String} instance_type
+ */
+Database.prototype['instance_type'] = undefined;
 
 /**
  * unit is MB. 1024 MB = 1GB   Default value is linked to the database type: - MANAGED: `100` - CONTAINER   - POSTGRES: `100`   - REDIS: `100`   - MYSQL: `512`   - MONGODB: `256` 
@@ -281,6 +290,11 @@ DatabaseRequest.prototype['accessibility'] = undefined;
  */
 DatabaseRequest.prototype['cpu'] = 250;
 /**
+ * Database instance type to be used for this database. The list of values can be retrieved via the endpoint /{CloudProvider}/managedDatabase/instanceType/{region}/{dbType}. This field SHOULD NOT be set for container DB.
+ * @member {String} instance_type
+ */
+DatabaseRequest.prototype['instance_type'] = undefined;
+/**
  * unit is MB. 1024 MB = 1GB   Default value is linked to the database type: - MANAGED: `100` - CONTAINER   - POSTGRES: `100`   - REDIS: `100`   - MYSQL: `512`   - MONGODB: `256` 
  * @member {Number} memory
  */
@@ -319,6 +333,11 @@ DatabaseAllOf.prototype['maximum_memory'] = undefined;
  * @member {Boolean} disk_encrypted
  */
 DatabaseAllOf.prototype['disk_encrypted'] = undefined;
+/**
+ * Database instance type to be used for this database. The list of values can be retrieved via the endpoint /{CloudProvider}/managedDatabase/instanceType/{region}/{dbType}. This field is null for container DB.
+ * @member {String} instance_type
+ */
+DatabaseAllOf.prototype['instance_type'] = undefined;
 
 
 

@@ -17,6 +17,8 @@ import CloudProviderResponseList from '../model/CloudProviderResponseList';
 import ClusterFeatureResponseList from '../model/ClusterFeatureResponseList';
 import ClusterInstanceTypeResponseList from '../model/ClusterInstanceTypeResponseList';
 import ClusterRegionResponseList from '../model/ClusterRegionResponseList';
+import ManagedDatabaseInstanceTypeResponseList from '../model/ManagedDatabaseInstanceTypeResponseList';
+import ManagedDatabaseTypeResponseList from '../model/ManagedDatabaseTypeResponseList';
 
 /**
 * CloudProvider service.
@@ -194,6 +196,90 @@ export default class CloudProviderApi {
     }
 
     /**
+     * Callback function to receive the result of the listAWSManagedDatabaseInstanceType operation.
+     * @callback module:api/CloudProviderApi~listAWSManagedDatabaseInstanceTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ManagedDatabaseInstanceTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List AWS available managed database instance types
+     * @param {String} region region name
+     * @param {String} databaseType Database type
+     * @param {module:api/CloudProviderApi~listAWSManagedDatabaseInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ManagedDatabaseInstanceTypeResponseList}
+     */
+    listAWSManagedDatabaseInstanceType(region, databaseType, callback) {
+      let postBody = null;
+      // verify the required parameter 'region' is set
+      if (region === undefined || region === null) {
+        throw new Error("Missing the required parameter 'region' when calling listAWSManagedDatabaseInstanceType");
+      }
+      // verify the required parameter 'databaseType' is set
+      if (databaseType === undefined || databaseType === null) {
+        throw new Error("Missing the required parameter 'databaseType' when calling listAWSManagedDatabaseInstanceType");
+      }
+
+      let pathParams = {
+        'region': region,
+        'databaseType': databaseType
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ManagedDatabaseInstanceTypeResponseList;
+      return this.apiClient.callApi(
+        '/aws/managedDatabase/instanceType/{region}/{databaseType}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listAWSManagedDatabaseType operation.
+     * @callback module:api/CloudProviderApi~listAWSManagedDatabaseTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ManagedDatabaseTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List AWS available managed database types
+     * @param {module:api/CloudProviderApi~listAWSManagedDatabaseTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ManagedDatabaseTypeResponseList}
+     */
+    listAWSManagedDatabaseType(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ManagedDatabaseTypeResponseList;
+      return this.apiClient.callApi(
+        '/aws/managedDatabase/type', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listAWSRegions operation.
      * @callback module:api/CloudProviderApi~listAWSRegionsCallback
      * @param {String} error Error message, if any.
@@ -338,6 +424,90 @@ export default class CloudProviderApi {
     }
 
     /**
+     * Callback function to receive the result of the listDOManagedDatabaseInstanceType operation.
+     * @callback module:api/CloudProviderApi~listDOManagedDatabaseInstanceTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ManagedDatabaseInstanceTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List Digital Ocean available managed database instance types
+     * @param {String} region region name
+     * @param {String} databaseType Database type
+     * @param {module:api/CloudProviderApi~listDOManagedDatabaseInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ManagedDatabaseInstanceTypeResponseList}
+     */
+    listDOManagedDatabaseInstanceType(region, databaseType, callback) {
+      let postBody = null;
+      // verify the required parameter 'region' is set
+      if (region === undefined || region === null) {
+        throw new Error("Missing the required parameter 'region' when calling listDOManagedDatabaseInstanceType");
+      }
+      // verify the required parameter 'databaseType' is set
+      if (databaseType === undefined || databaseType === null) {
+        throw new Error("Missing the required parameter 'databaseType' when calling listDOManagedDatabaseInstanceType");
+      }
+
+      let pathParams = {
+        'region': region,
+        'databaseType': databaseType
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ManagedDatabaseInstanceTypeResponseList;
+      return this.apiClient.callApi(
+        '/digitalOcean/managedDatabase/instanceType/{region}/{databaseType}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listDOManagedDatabaseType operation.
+     * @callback module:api/CloudProviderApi~listDOManagedDatabaseTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ManagedDatabaseTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List Digital Ocean available managed database types
+     * @param {module:api/CloudProviderApi~listDOManagedDatabaseTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ManagedDatabaseTypeResponseList}
+     */
+    listDOManagedDatabaseType(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ManagedDatabaseTypeResponseList;
+      return this.apiClient.callApi(
+        '/digitalOcean/managedDatabase/type', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listDORegions operation.
      * @callback module:api/CloudProviderApi~listDORegionsCallback
      * @param {String} error Error message, if any.
@@ -368,6 +538,84 @@ export default class CloudProviderApi {
       let returnType = ClusterRegionResponseList;
       return this.apiClient.callApi(
         '/digitalOcean/region', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listSCWManagedDatabaseInstanceType operation.
+     * @callback module:api/CloudProviderApi~listSCWManagedDatabaseInstanceTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ManagedDatabaseInstanceTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List Scaleway available managed database instance types
+     * @param {String} databaseType Database type
+     * @param {module:api/CloudProviderApi~listSCWManagedDatabaseInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ManagedDatabaseInstanceTypeResponseList}
+     */
+    listSCWManagedDatabaseInstanceType(databaseType, callback) {
+      let postBody = null;
+      // verify the required parameter 'databaseType' is set
+      if (databaseType === undefined || databaseType === null) {
+        throw new Error("Missing the required parameter 'databaseType' when calling listSCWManagedDatabaseInstanceType");
+      }
+
+      let pathParams = {
+        'databaseType': databaseType
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ManagedDatabaseInstanceTypeResponseList;
+      return this.apiClient.callApi(
+        '/scaleway/managedDatabase/instanceType/{zone}/{databaseType}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listSCWManagedDatabaseType operation.
+     * @callback module:api/CloudProviderApi~listSCWManagedDatabaseTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ManagedDatabaseTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List Scaleway available managed database types
+     * @param {module:api/CloudProviderApi~listSCWManagedDatabaseTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ManagedDatabaseTypeResponseList}
+     */
+    listSCWManagedDatabaseType(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ManagedDatabaseTypeResponseList;
+      return this.apiClient.callApi(
+        '/scaleway/managedDatabase/type', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

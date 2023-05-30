@@ -74,6 +74,12 @@ class ServicePort {
             if (data.hasOwnProperty('is_default')) {
                 obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
             }
+            if (data.hasOwnProperty('has_readiness_probe')) {
+                obj['has_readiness_probe'] = ApiClient.convertToType(data['has_readiness_probe'], 'Boolean');
+            }
+            if (data.hasOwnProperty('has_liveness_probe')) {
+                obj['has_liveness_probe'] = ApiClient.convertToType(data['has_liveness_probe'], 'Boolean');
+            }
             if (data.hasOwnProperty('protocol')) {
                 obj['protocol'] = PortProtocolEnum.constructFromObject(data['protocol']);
             }
@@ -113,10 +119,22 @@ ServicePort.prototype['external_port'] = undefined;
 ServicePort.prototype['publicly_accessible'] = undefined;
 
 /**
- * is the default port to use for domain & probes check
+ * is the default port to use for domain
  * @member {Boolean} is_default
  */
 ServicePort.prototype['is_default'] = undefined;
+
+/**
+ * is port to use for probe readiness check
+ * @member {Boolean} has_readiness_probe
+ */
+ServicePort.prototype['has_readiness_probe'] = undefined;
+
+/**
+ * is port to use for probe liveness check
+ * @member {Boolean} has_liveness_probe
+ */
+ServicePort.prototype['has_liveness_probe'] = undefined;
 
 /**
  * @member {module:model/PortProtocolEnum} protocol

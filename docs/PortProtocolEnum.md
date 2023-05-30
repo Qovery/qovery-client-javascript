@@ -5,4 +5,6 @@
 
 * `HTTP` (value: `"HTTP"`)
 
+* `GRPC` (value: `"GRPC"`)
+
 

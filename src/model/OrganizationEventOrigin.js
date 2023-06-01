@@ -48,6 +48,13 @@ export default class OrganizationEventOrigin {
 
     
         /**
+         * value: "QOVERY_INTERNAL"
+         * @const
+         */
+        "QOVERY_INTERNAL" = "QOVERY_INTERNAL";
+
+    
+        /**
          * value: "TERRAFORM_PROVIDER"
          * @const
          */

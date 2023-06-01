@@ -50,8 +50,11 @@ class Link {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
-            if (data.hasOwnProperty('port')) {
-                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
+            if (data.hasOwnProperty('internal_port')) {
+                obj['internal_port'] = ApiClient.convertToType(data['internal_port'], 'Number');
+            }
+            if (data.hasOwnProperty('external_port')) {
+                obj['external_port'] = ApiClient.convertToType(data['external_port'], 'Number');
             }
             if (data.hasOwnProperty('is_qovery_domain')) {
                 obj['is_qovery_domain'] = ApiClient.convertToType(data['is_qovery_domain'], 'Boolean');
@@ -72,9 +75,14 @@ class Link {
 Link.prototype['url'] = undefined;
 
 /**
- * @member {Number} port
+ * @member {Number} internal_port
  */
-Link.prototype['port'] = undefined;
+Link.prototype['internal_port'] = undefined;
+
+/**
+ * @member {Number} external_port
+ */
+Link.prototype['external_port'] = undefined;
 
 /**
  * @member {Boolean} is_qovery_domain

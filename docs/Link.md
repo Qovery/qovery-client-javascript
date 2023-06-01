@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** |  | [optional] 
-**port** | **Number** |  | [optional] 
+**internalPort** | **Number** |  | [optional] 
+**externalPort** | **Number** |  | [optional] 
 **isQoveryDomain** | **Boolean** |  | [optional] 
 **isDefault** | **Boolean** |  | [optional] 
 

@@ -60,8 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property port (base name: "port")', function() {
-      // uncomment below and update the code to test the property port
+    it('should have the property internalPort (base name: "internal_port")', function() {
+      // uncomment below and update the code to test the property internalPort
+      //var instance = new QoveryApi.Link();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property externalPort (base name: "external_port")', function() {
+      // uncomment below and update the code to test the property externalPort
       //var instance = new QoveryApi.Link();
       //expect(instance).to.be();
     });

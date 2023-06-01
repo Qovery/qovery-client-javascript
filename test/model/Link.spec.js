@@ -60,6 +60,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property port (base name: "port")', function() {
+      // uncomment below and update the code to test the property port
+      //var instance = new QoveryApi.Link();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isQoveryDomain (base name: "is_qovery_domain")', function() {
+      // uncomment below and update the code to test the property isQoveryDomain
+      //var instance = new QoveryApi.Link();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isDefault (base name: "is_default")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new QoveryApi.Link();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

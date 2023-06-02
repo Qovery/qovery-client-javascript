@@ -102,14 +102,14 @@ DatabaseEditRequest.prototype['version'] = undefined;
 DatabaseEditRequest.prototype['accessibility'] = undefined;
 
 /**
- * unit is millicores (m). 1000m = 1 cpu
+ * unit is millicores (m). 1000m = 1 cpu. This field will be ignored for managed DB (instance type will be used instead). 
  * @member {Number} cpu
  * @default 250
  */
 DatabaseEditRequest.prototype['cpu'] = 250;
 
 /**
- * unit is MB. 1024 MB = 1GB   Default value is linked to the database type: - MANAGED: 100 - CONTAINER   - POSTGRES: 100   - REDIS: 100   - MYSQL: 512   - MONGODB: 256 
+ * unit is MB. 1024 MB = 1GB This field will be ignored for managed DB (instance type will be used instead). Default value is linked to the database type: - MANAGED: 100 - CONTAINER   - POSTGRES: 100   - REDIS: 100   - MYSQL: 512   - MONGODB: 256 
  * @member {Number} memory
  */
 DatabaseEditRequest.prototype['memory'] = undefined;

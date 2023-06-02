@@ -96,6 +96,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property instanceType (base name: "instance_type")', function() {
+      // uncomment below and update the code to test the property instanceType
+      //var instance = new QoveryApi.DatabaseEditRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

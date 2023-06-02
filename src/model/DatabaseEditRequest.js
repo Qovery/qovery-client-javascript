@@ -69,6 +69,9 @@ class DatabaseEditRequest {
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], 'Number');
             }
+            if (data.hasOwnProperty('instance_type')) {
+                obj['instance_type'] = ApiClient.convertToType(data['instance_type'], 'String');
+            }
         }
         return obj;
     }
@@ -116,6 +119,12 @@ DatabaseEditRequest.prototype['memory'] = undefined;
  * @member {Number} storage
  */
 DatabaseEditRequest.prototype['storage'] = undefined;
+
+/**
+ * Database instance type to be used for this database. The list of values can be retrieved via the endpoint /{CloudProvider}/managedDatabase/instanceType/{region}/{dbType}. This field SHOULD NOT be set for container DB.
+ * @member {String} instance_type
+ */
+DatabaseEditRequest.prototype['instance_type'] = undefined;
 
 
 

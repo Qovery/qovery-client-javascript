@@ -53,6 +53,9 @@ class ProbeTypeHttp {
             if (data.hasOwnProperty('scheme')) {
                 obj['scheme'] = ApiClient.convertToType(data['scheme'], 'String');
             }
+            if (data.hasOwnProperty('port')) {
+                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
+            }
         }
         return obj;
     }
@@ -71,6 +74,11 @@ ProbeTypeHttp.prototype['path'] = '/';
  * @default 'HTTP'
  */
 ProbeTypeHttp.prototype['scheme'] = 'HTTP';
+
+/**
+ * @member {Number} port
+ */
+ProbeTypeHttp.prototype['port'] = undefined;
 
 
 

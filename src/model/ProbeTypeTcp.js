@@ -47,6 +47,9 @@ class ProbeTypeTcp {
         if (data) {
             obj = obj || new ProbeTypeTcp();
 
+            if (data.hasOwnProperty('port')) {
+                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
+            }
             if (data.hasOwnProperty('host')) {
                 obj['host'] = ApiClient.convertToType(data['host'], 'String');
             }
@@ -56,6 +59,11 @@ class ProbeTypeTcp {
 
 
 }
+
+/**
+ * @member {Number} port
+ */
+ProbeTypeTcp.prototype['port'] = undefined;
 
 /**
  * @member {String} host

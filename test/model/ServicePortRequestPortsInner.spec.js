@@ -84,18 +84,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property hasReadinessProbe (base name: "has_readiness_probe")', function() {
-      // uncomment below and update the code to test the property hasReadinessProbe
-      //var instance = new QoveryApi.ServicePortRequestPortsInner();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property hasLivenessProbe (base name: "has_liveness_probe")', function() {
-      // uncomment below and update the code to test the property hasLivenessProbe
-      //var instance = new QoveryApi.ServicePortRequestPortsInner();
-      //expect(instance).to.be();
-    });
-
     it('should have the property protocol (base name: "protocol")', function() {
       // uncomment below and update the code to test the property protocol
       //var instance = new QoveryApi.ServicePortRequestPortsInner();

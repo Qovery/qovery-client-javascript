@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(QoveryApi.ProbeTypeTcp);
     });
 
+    it('should have the property port (base name: "port")', function() {
+      // uncomment below and update the code to test the property port
+      //var instance = new QoveryApi.ProbeTypeTcp();
+      //expect(instance).to.be();
+    });
+
     it('should have the property host (base name: "host")', function() {
       // uncomment below and update the code to test the property host
       //var instance = new QoveryApi.ProbeTypeTcp();

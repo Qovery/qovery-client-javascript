@@ -50,6 +50,9 @@ class ProbeTypeGrpc {
             if (data.hasOwnProperty('service')) {
                 obj['service'] = ApiClient.convertToType(data['service'], 'String');
             }
+            if (data.hasOwnProperty('port')) {
+                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
+            }
         }
         return obj;
     }
@@ -61,6 +64,11 @@ class ProbeTypeGrpc {
  * @member {String} service
  */
 ProbeTypeGrpc.prototype['service'] = undefined;
+
+/**
+ * @member {Number} port
+ */
+ProbeTypeGrpc.prototype['port'] = undefined;
 
 
 

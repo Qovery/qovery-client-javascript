@@ -90,10 +90,13 @@ export default class EnvironmentLogsApi {
      * List environment deployment logs v2
      * This returns the last 1000 environment deployment logs v2
      * @param {String} environmentId Environment ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.version 
      * @param {module:api/EnvironmentLogsApi~listEnvironmentLogsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/EnvironmentLogs>}
      */
-    listEnvironmentLogs(environmentId, callback) {
+    listEnvironmentLogs(environmentId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
@@ -104,6 +107,7 @@ export default class EnvironmentLogsApi {
         'environmentId': environmentId
       };
       let queryParams = {
+        'version': opts['version']
       };
       let headerParams = {
       };

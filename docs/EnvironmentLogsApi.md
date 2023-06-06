@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ## listEnvironmentLogs
 
-> [EnvironmentLogs] listEnvironmentLogs(environmentId)
+> [EnvironmentLogs] listEnvironmentLogs(environmentId, opts)
 
 List environment deployment logs v2
 
@@ -77,7 +77,10 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.EnvironmentLogsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
-apiInstance.listEnvironmentLogs(environmentId, (error, data, response) => {
+let opts = {
+  'version': "version_example" // String | 
+};
+apiInstance.listEnvironmentLogs(environmentId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -92,6 +95,7 @@ apiInstance.listEnvironmentLogs(environmentId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **environmentId** | **String**| Environment ID | 
+ **version** | **String**|  | [optional] 
 
 ### Return type
 

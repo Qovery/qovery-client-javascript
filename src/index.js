@@ -483,6 +483,7 @@ import EnvironmentApi from './api/EnvironmentApi';
 import EnvironmentActionsApi from './api/EnvironmentActionsApi';
 import EnvironmentDeploymentHistoryApi from './api/EnvironmentDeploymentHistoryApi';
 import EnvironmentDeploymentRuleApi from './api/EnvironmentDeploymentRuleApi';
+import EnvironmentExportApi from './api/EnvironmentExportApi';
 import EnvironmentLogsApi from './api/EnvironmentLogsApi';
 import EnvironmentMainCallsApi from './api/EnvironmentMainCallsApi';
 import EnvironmentSecretApi from './api/EnvironmentSecretApi';
@@ -3371,6 +3372,12 @@ export {
     * @property {module:api/EnvironmentDeploymentRuleApi}
     */
     EnvironmentDeploymentRuleApi,
+
+    /**
+    * The EnvironmentExportApi service constructor.
+    * @property {module:api/EnvironmentExportApi}
+    */
+    EnvironmentExportApi,
 
     /**
     * The EnvironmentLogsApi service constructor.

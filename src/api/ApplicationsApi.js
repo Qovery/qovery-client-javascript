@@ -87,6 +87,52 @@ export default class ApplicationsApi {
     }
 
     /**
+     * Callback function to receive the result of the exportEnvironmentConfigurationIntoTerraform operation.
+     * @callback module:api/ApplicationsApi~exportEnvironmentConfigurationIntoTerraformCallback
+     * @param {String} error Error message, if any.
+     * @param {File} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Export full environment and its resources into Terraform manifests
+     * @param {String} environmentId Environment ID
+     * @param {Object} opts Optional parameters
+     * @param {Boolean} opts.exportSecrets export Secrets from configuration and include them into Terraform export (default to false)
+     * @param {module:api/ApplicationsApi~exportEnvironmentConfigurationIntoTerraformCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link File}
+     */
+    exportEnvironmentConfigurationIntoTerraform(environmentId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling exportEnvironmentConfigurationIntoTerraform");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+        'exportSecrets': opts['exportSecrets']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/zip'];
+      let returnType = File;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/terraformExport', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getDefaultApplicationAdvancedSettings operation.
      * @callback module:api/ApplicationsApi~getDefaultApplicationAdvancedSettingsCallback
      * @param {String} error Error message, if any.

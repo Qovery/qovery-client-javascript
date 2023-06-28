@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('exportEnvironmentConfigurationIntoTerraform', function() {
+      it('should call exportEnvironmentConfigurationIntoTerraform successfully', function(done) {
+        //uncomment below and update the code to test exportEnvironmentConfigurationIntoTerraform
+        //instance.exportEnvironmentConfigurationIntoTerraform(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getDefaultApplicationAdvancedSettings', function() {
       it('should call getDefaultApplicationAdvancedSettings successfully', function(done) {
         //uncomment below and update the code to test getDefaultApplicationAdvancedSettings

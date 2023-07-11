@@ -36,12 +36,11 @@ class EnvironmentVariable {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param key {String} key is case sensitive.
-     * @param value {String} value of the env variable.
      * @param scope {module:model/APIVariableScopeEnum} 
      */
-    constructor(id, createdAt, key, value, scope) { 
-        Base.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key, value);EnvironmentVariableAllOf.initialize(this, scope);
-        EnvironmentVariable.initialize(this, id, createdAt, key, value, scope);
+    constructor(id, createdAt, key, scope) { 
+        Base.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key);EnvironmentVariableAllOf.initialize(this, scope);
+        EnvironmentVariable.initialize(this, id, createdAt, key, scope);
     }
 
     /**
@@ -49,11 +48,10 @@ class EnvironmentVariable {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, key, value, scope) { 
+    static initialize(obj, id, createdAt, key, scope) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['key'] = key;
-        obj['value'] = value;
         obj['scope'] = scope;
     }
 

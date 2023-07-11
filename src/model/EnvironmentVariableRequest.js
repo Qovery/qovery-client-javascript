@@ -23,11 +23,10 @@ class EnvironmentVariableRequest {
      * Constructs a new <code>EnvironmentVariableRequest</code>.
      * @alias module:model/EnvironmentVariableRequest
      * @param key {String} key is case sensitive.
-     * @param value {String} value of the env variable.
      */
-    constructor(key, value) { 
+    constructor(key) { 
         
-        EnvironmentVariableRequest.initialize(this, key, value);
+        EnvironmentVariableRequest.initialize(this, key);
     }
 
     /**
@@ -35,9 +34,8 @@ class EnvironmentVariableRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, key, value) { 
+    static initialize(obj, key) { 
         obj['key'] = key;
-        obj['value'] = value;
     }
 
     /**

@@ -22,11 +22,10 @@ class Value {
     /**
      * Constructs a new <code>Value</code>.
      * @alias module:model/Value
-     * @param value {String} 
      */
-    constructor(value) { 
+    constructor() { 
         
-        Value.initialize(this, value);
+        Value.initialize(this);
     }
 
     /**
@@ -34,8 +33,7 @@ class Value {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, value) { 
-        obj['value'] = value;
+    static initialize(obj) { 
     }
 
     /**

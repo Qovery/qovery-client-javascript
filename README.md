@@ -440,6 +440,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationCustomRoleApi* | [**editOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#editOrganizationCustomRole) | **PUT** /organization/{organizationId}/customRole/{customRoleId} | Edit an organization custom role
 *QoveryApi.OrganizationCustomRoleApi* | [**getOrganizationCustomRole**](docs/OrganizationCustomRoleApi.md#getOrganizationCustomRole) | **GET** /organization/{organizationId}/customRole/{customRoleId} | Get an organization custom role 
 *QoveryApi.OrganizationCustomRoleApi* | [**listOrganizationCustomRoles**](docs/OrganizationCustomRoleApi.md#listOrganizationCustomRoles) | **GET** /organization/{organizationId}/customRole | List organization custom roles
+*QoveryApi.OrganizationEventApi* | [**getOrganizationEventTargets**](docs/OrganizationEventApi.md#getOrganizationEventTargets) | **GET** /organization/{organizationId}/targets | Get available event targets to filter events
 *QoveryApi.OrganizationEventApi* | [**getOrganizationEvents**](docs/OrganizationEventApi.md#getOrganizationEvents) | **GET** /organization/{organizationId}/events | Get all events inside the organization
 *QoveryApi.OrganizationMainCallsApi* | [**createOrganization**](docs/OrganizationMainCallsApi.md#createOrganization) | **POST** /organization | Create an organization
 *QoveryApi.OrganizationMainCallsApi* | [**deleteOrganization**](docs/OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
@@ -531,7 +532,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterAdvancedSettings](docs/ClusterAdvancedSettings.md)
  - [QoveryApi.ClusterAllOf](docs/ClusterAllOf.md)
  - [QoveryApi.ClusterCloudProviderInfo](docs/ClusterCloudProviderInfo.md)
- - [QoveryApi.ClusterCloudProviderInfoCredentials](docs/ClusterCloudProviderInfoCredentials.md)
  - [QoveryApi.ClusterCloudProviderInfoRequest](docs/ClusterCloudProviderInfoRequest.md)
  - [QoveryApi.ClusterCredentials](docs/ClusterCredentials.md)
  - [QoveryApi.ClusterCredentialsResponseList](docs/ClusterCredentialsResponseList.md)
@@ -710,6 +710,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GenericObjectCurrentCost](docs/GenericObjectCurrentCost.md)
  - [QoveryApi.GetEnvironmentStatuses200Response](docs/GetEnvironmentStatuses200Response.md)
  - [QoveryApi.GetEnvironmentStatusesWithStages200Response](docs/GetEnvironmentStatusesWithStages200Response.md)
+ - [QoveryApi.GetOrganizationEventTargets200Response](docs/GetOrganizationEventTargets200Response.md)
+ - [QoveryApi.GetOrganizationEventTargets200ResponseTargetsInner](docs/GetOrganizationEventTargets200ResponseTargetsInner.md)
  - [QoveryApi.GitAuthProvider](docs/GitAuthProvider.md)
  - [QoveryApi.GitAuthProviderResponseList](docs/GitAuthProviderResponseList.md)
  - [QoveryApi.GitProviderEnum](docs/GitProviderEnum.md)

@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
-import ClusterCloudProviderInfoCredentials from './ClusterCloudProviderInfoCredentials';
+import GetOrganizationEventTargets200ResponseTargetsInner from './GetOrganizationEventTargets200ResponseTargetsInner';
 
 /**
  * The ClusterCloudProviderInfoRequest model module.
@@ -53,7 +53,7 @@ class ClusterCloudProviderInfoRequest {
                 obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
             }
             if (data.hasOwnProperty('credentials')) {
-                obj['credentials'] = ClusterCloudProviderInfoCredentials.constructFromObject(data['credentials']);
+                obj['credentials'] = GetOrganizationEventTargets200ResponseTargetsInner.constructFromObject(data['credentials']);
             }
             if (data.hasOwnProperty('region')) {
                 obj['region'] = ApiClient.convertToType(data['region'], 'String');
@@ -71,7 +71,7 @@ class ClusterCloudProviderInfoRequest {
 ClusterCloudProviderInfoRequest.prototype['cloud_provider'] = undefined;
 
 /**
- * @member {module:model/ClusterCloudProviderInfoCredentials} credentials
+ * @member {module:model/GetOrganizationEventTargets200ResponseTargetsInner} credentials
  */
 ClusterCloudProviderInfoRequest.prototype['credentials'] = undefined;
 

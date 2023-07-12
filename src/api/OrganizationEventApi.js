@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import GetOrganizationEventTargets200Response from '../model/GetOrganizationEventTargets200Response';
 import OrganizationEventOrigin from '../model/OrganizationEventOrigin';
 import OrganizationEventResponseList from '../model/OrganizationEventResponseList';
 import OrganizationEventSubTargetType from '../model/OrganizationEventSubTargetType';
@@ -37,6 +38,67 @@ export default class OrganizationEventApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the getOrganizationEventTargets operation.
+     * @callback module:api/OrganizationEventApi~getOrganizationEventTargetsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetOrganizationEventTargets200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get available event targets to filter events
+     * Get available event targets to filter events
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.fromTimestamp Display targets available since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` The format is a timestamp with nano precision 
+     * @param {String} opts.toTimestamp Display targets triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` The format is a timestamp with nano precision 
+     * @param {module:model/OrganizationEventType} opts.eventType 
+     * @param {module:model/OrganizationEventTargetType} opts.targetType 
+     * @param {String} opts.triggeredBy Information about the owner of the event (user name / apitoken / automatic action)
+     * @param {module:model/OrganizationEventOrigin} opts.origin 
+     * @param {String} opts.projectId Mandatory when requesting an environment or a service
+     * @param {String} opts.environmentId Mandatory when requesting a service
+     * @param {module:api/OrganizationEventApi~getOrganizationEventTargetsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetOrganizationEventTargets200Response}
+     */
+    getOrganizationEventTargets(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationEventTargets");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+        'fromTimestamp': opts['fromTimestamp'],
+        'toTimestamp': opts['toTimestamp'],
+        'eventType': opts['eventType'],
+        'targetType': opts['targetType'],
+        'triggeredBy': opts['triggeredBy'],
+        'origin': opts['origin'],
+        'projectId': opts['projectId'],
+        'environmentId': opts['environmentId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetOrganizationEventTargets200Response;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/targets', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the getOrganizationEvents operation.

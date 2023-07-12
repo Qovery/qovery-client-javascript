@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cloudProvider** | [**CloudProviderEnum**](CloudProviderEnum.md) |  | [optional] 
-**credentials** | [**ClusterCloudProviderInfoCredentials**](ClusterCloudProviderInfoCredentials.md) |  | [optional] 
+**credentials** | [**GetOrganizationEventTargets200ResponseTargetsInner**](GetOrganizationEventTargets200ResponseTargetsInner.md) |  | [optional] 
 **region** | **String** |  | [optional] 
 
 

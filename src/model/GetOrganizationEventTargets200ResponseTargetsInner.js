@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ClusterCloudProviderInfoCredentials model module.
- * @module model/ClusterCloudProviderInfoCredentials
+ * The GetOrganizationEventTargets200ResponseTargetsInner model module.
+ * @module model/GetOrganizationEventTargets200ResponseTargetsInner
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ClusterCloudProviderInfoCredentials {
+class GetOrganizationEventTargets200ResponseTargetsInner {
     /**
-     * Constructs a new <code>ClusterCloudProviderInfoCredentials</code>.
-     * @alias module:model/ClusterCloudProviderInfoCredentials
+     * Constructs a new <code>GetOrganizationEventTargets200ResponseTargetsInner</code>.
+     * @alias module:model/GetOrganizationEventTargets200ResponseTargetsInner
      */
     constructor() { 
         
-        ClusterCloudProviderInfoCredentials.initialize(this);
+        GetOrganizationEventTargets200ResponseTargetsInner.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ClusterCloudProviderInfoCredentials {
     }
 
     /**
-     * Constructs a <code>ClusterCloudProviderInfoCredentials</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>GetOrganizationEventTargets200ResponseTargetsInner</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ClusterCloudProviderInfoCredentials} obj Optional instance to populate.
-     * @return {module:model/ClusterCloudProviderInfoCredentials} The populated <code>ClusterCloudProviderInfoCredentials</code> instance.
+     * @param {module:model/GetOrganizationEventTargets200ResponseTargetsInner} obj Optional instance to populate.
+     * @return {module:model/GetOrganizationEventTargets200ResponseTargetsInner} The populated <code>GetOrganizationEventTargets200ResponseTargetsInner</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ClusterCloudProviderInfoCredentials();
+            obj = obj || new GetOrganizationEventTargets200ResponseTargetsInner();
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -63,17 +63,17 @@ class ClusterCloudProviderInfoCredentials {
 /**
  * @member {String} id
  */
-ClusterCloudProviderInfoCredentials.prototype['id'] = undefined;
+GetOrganizationEventTargets200ResponseTargetsInner.prototype['id'] = undefined;
 
 /**
  * @member {String} name
  */
-ClusterCloudProviderInfoCredentials.prototype['name'] = undefined;
+GetOrganizationEventTargets200ResponseTargetsInner.prototype['name'] = undefined;
 
 
 
 
 
 
-export default ClusterCloudProviderInfoCredentials;
+export default GetOrganizationEventTargets200ResponseTargetsInner;
 

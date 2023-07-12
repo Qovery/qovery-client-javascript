@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.OrganizationEventApi();
+    instance = new QoveryApi.GetOrganizationEventTargets200Response();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,27 +47,19 @@
       object[property] = value;
   }
 
-  describe('OrganizationEventApi', function() {
-    describe('getOrganizationEventTargets', function() {
-      it('should call getOrganizationEventTargets successfully', function(done) {
-        //uncomment below and update the code to test getOrganizationEventTargets
-        //instance.getOrganizationEventTargets(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('GetOrganizationEventTargets200Response', function() {
+    it('should create an instance of GetOrganizationEventTargets200Response', function() {
+      // uncomment below and update the code to test GetOrganizationEventTargets200Response
+      //var instance = new QoveryApi.GetOrganizationEventTargets200Response();
+      //expect(instance).to.be.a(QoveryApi.GetOrganizationEventTargets200Response);
     });
-    describe('getOrganizationEvents', function() {
-      it('should call getOrganizationEvents successfully', function(done) {
-        //uncomment below and update the code to test getOrganizationEvents
-        //instance.getOrganizationEvents(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property targets (base name: "targets")', function() {
+      // uncomment below and update the code to test the property targets
+      //var instance = new QoveryApi.GetOrganizationEventTargets200Response();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

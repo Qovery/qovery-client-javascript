@@ -4,6 +4,7 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cloneApplication**](ApplicationsApi.md#cloneApplication) | **POST** /application/{applicationId}/clone | Clone application
 [**createApplication**](ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 [**getDefaultApplicationAdvancedSettings**](ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
 [**getEnvironmentApplicationCurrentScale**](ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
@@ -12,6 +13,59 @@ Method | HTTP request | Description
 [**getEnvironmentApplicationSupportedLanguages**](ApplicationsApi.md#getEnvironmentApplicationSupportedLanguages) | **GET** /environment/{environmentId}/application/supportedLanguage | List supported languages
 [**listApplication**](ApplicationsApi.md#listApplication) | **GET** /environment/{environmentId}/application | List applications
 
+
+
+## cloneApplication
+
+> Application cloneApplication(applicationId, opts)
+
+Clone application
+
+This will create a new application with the same configuration on the targeted environment Id.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ApplicationsApi();
+let applicationId = "applicationId_example"; // String | Application ID
+let opts = {
+  'cloneApplicationRequest': new QoveryApi.CloneApplicationRequest() // CloneApplicationRequest | 
+};
+apiInstance.cloneApplication(applicationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **applicationId** | **String**| Application ID | 
+ **cloneApplicationRequest** | [**CloneApplicationRequest**](CloneApplicationRequest.md)|  | [optional] 
+
+### Return type
+
+[**Application**](Application.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## createApplication

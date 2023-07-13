@@ -5,6 +5,7 @@ All URIs are relative to *https://api.qovery.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**autoDeployContainerEnvironments**](ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
+[**cloneContainer**](ContainersApi.md#cloneContainer) | **POST** /container/{containerId}/clone | Clone container
 [**createContainer**](ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 [**getContainerRegistryContainerStatus**](ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 [**getDefaultContainerAdvancedSettings**](ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings
@@ -58,6 +59,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Status**](Status.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## cloneContainer
+
+> ContainerResponse cloneContainer(containerId, opts)
+
+Clone container
+
+This will create a new container with the same configuration on the targeted environment Id.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ContainersApi();
+let containerId = "containerId_example"; // String | Container ID
+let opts = {
+  'cloneContainerRequest': new QoveryApi.CloneContainerRequest() // CloneContainerRequest | 
+};
+apiInstance.cloneContainer(containerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **containerId** | **String**| Container ID | 
+ **cloneContainerRequest** | [**CloneContainerRequest**](CloneContainerRequest.md)|  | [optional] 
+
+### Return type
+
+[**ContainerResponse**](ContainerResponse.md)
 
 ### Authorization
 

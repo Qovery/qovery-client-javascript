@@ -48,6 +48,16 @@
   }
 
   describe('ApplicationsApi', function() {
+    describe('cloneApplication', function() {
+      it('should call cloneApplication successfully', function(done) {
+        //uncomment below and update the code to test cloneApplication
+        //instance.cloneApplication(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createApplication', function() {
       it('should call createApplication successfully', function(done) {
         //uncomment below and update the code to test createApplication

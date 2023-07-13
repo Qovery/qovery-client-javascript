@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('cloneContainer', function() {
+      it('should call cloneContainer successfully', function(done) {
+        //uncomment below and update the code to test cloneContainer
+        //instance.cloneContainer(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createContainer', function() {
       it('should call createContainer successfully', function(done) {
         //uncomment below and update the code to test createContainer

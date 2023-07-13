@@ -48,6 +48,16 @@
   }
 
   describe('DatabasesApi', function() {
+    describe('cloneDatabase', function() {
+      it('should call cloneDatabase successfully', function(done) {
+        //uncomment below and update the code to test cloneDatabase
+        //instance.cloneDatabase(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createDatabase', function() {
       it('should call createDatabase successfully', function(done) {
         //uncomment below and update the code to test createDatabase

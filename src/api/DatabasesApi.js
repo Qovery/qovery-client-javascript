@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CloneDatabaseRequest from '../model/CloneDatabaseRequest';
 import Database from '../model/Database';
 import DatabaseConfigurationResponseList from '../model/DatabaseConfigurationResponseList';
 import DatabaseRequest from '../model/DatabaseRequest';
@@ -38,6 +39,52 @@ export default class DatabasesApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the cloneDatabase operation.
+     * @callback module:api/DatabasesApi~cloneDatabaseCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Database} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone database
+     * This will create a new database with the same configuration on the targeted environment Id.
+     * @param {String} databaseId Database ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CloneDatabaseRequest} opts.cloneDatabaseRequest 
+     * @param {module:api/DatabasesApi~cloneDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Database}
+     */
+    cloneDatabase(databaseId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['cloneDatabaseRequest'];
+      // verify the required parameter 'databaseId' is set
+      if (databaseId === undefined || databaseId === null) {
+        throw new Error("Missing the required parameter 'databaseId' when calling cloneDatabase");
+      }
+
+      let pathParams = {
+        'databaseId': databaseId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Database;
+      return this.apiClient.callApi(
+        '/database/{databaseId}/clone', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the createDatabase operation.

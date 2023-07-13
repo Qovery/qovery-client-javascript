@@ -173,6 +173,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationSecretApi* | [**deleteApplicationSecret**](docs/ApplicationSecretApi.md#deleteApplicationSecret) | **DELETE** /application/{applicationId}/secret/{secretId} | Delete a secret from an application
 *QoveryApi.ApplicationSecretApi* | [**editApplicationSecret**](docs/ApplicationSecretApi.md#editApplicationSecret) | **PUT** /application/{applicationId}/secret/{secretId} | Edit a secret belonging to the application
 *QoveryApi.ApplicationSecretApi* | [**listApplicationSecrets**](docs/ApplicationSecretApi.md#listApplicationSecrets) | **GET** /application/{applicationId}/secret | List application secrets
+*QoveryApi.ApplicationsApi* | [**cloneApplication**](docs/ApplicationsApi.md#cloneApplication) | **POST** /application/{applicationId}/clone | Clone application
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 *QoveryApi.ApplicationsApi* | [**getDefaultApplicationAdvancedSettings**](docs/ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
@@ -292,6 +293,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerSecretApi* | [**editContainerSecret**](docs/ContainerSecretApi.md#editContainerSecret) | **PUT** /container/{containerId}/secret/{secretId} | Edit a secret belonging to the container
 *QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets
 *QoveryApi.ContainersApi* | [**autoDeployContainerEnvironments**](docs/ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
+*QoveryApi.ContainersApi* | [**cloneContainer**](docs/ContainersApi.md#cloneContainer) | **POST** /container/{containerId}/clone | Clone container
 *QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 *QoveryApi.ContainersApi* | [**getContainerRegistryContainerStatus**](docs/ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 *QoveryApi.ContainersApi* | [**getDefaultContainerAdvancedSettings**](docs/ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings
@@ -326,6 +328,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricHealthCheck**](docs/DatabaseMetricsApi.md#getDatabaseMetricHealthCheck) | **GET** /database/{databaseId}/metric/healthCheck | Get Health Check latency  metric over time for the database
 *QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricMemory**](docs/DatabaseMetricsApi.md#getDatabaseMetricMemory) | **GET** /database/{databaseId}/metric/memory | Get Memory consumption metric over time for the database
 *QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricStorage**](docs/DatabaseMetricsApi.md#getDatabaseMetricStorage) | **GET** /database/{databaseId}/metric/storage | Get Storage consumption metric over time for the database
+*QoveryApi.DatabasesApi* | [**cloneDatabase**](docs/DatabasesApi.md#cloneDatabase) | **POST** /database/{databaseId}/clone | Clone database
 *QoveryApi.DatabasesApi* | [**createDatabase**](docs/DatabasesApi.md#createDatabase) | **POST** /environment/{environmentId}/database | Create a database
 *QoveryApi.DatabasesApi* | [**getEnvironmentDatabaseStatus**](docs/DatabasesApi.md#getEnvironmentDatabaseStatus) | **GET** /environment/{environmentId}/database/status | List all environment databases statuses
 *QoveryApi.DatabasesApi* | [**listDatabase**](docs/DatabasesApi.md#listDatabase) | **GET** /environment/{environmentId}/database | List environment databases
@@ -412,6 +415,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.JobSecretApi* | [**deleteJobSecret**](docs/JobSecretApi.md#deleteJobSecret) | **DELETE** /job/{jobId}/secret/{secretId} | Delete a secret from an job
 *QoveryApi.JobSecretApi* | [**editJobSecret**](docs/JobSecretApi.md#editJobSecret) | **PUT** /job/{jobId}/secret/{secretId} | Edit a secret belonging to the job
 *QoveryApi.JobSecretApi* | [**listJobSecrets**](docs/JobSecretApi.md#listJobSecrets) | **GET** /job/{jobId}/secret | List job secrets
+*QoveryApi.JobsApi* | [**cloneJob**](docs/JobsApi.md#cloneJob) | **POST** /job/{jobId}/clone | Clone job
 *QoveryApi.JobsApi* | [**createJob**](docs/JobsApi.md#createJob) | **POST** /environment/{environmentId}/job | Create a job
 *QoveryApi.JobsApi* | [**getDefaultJobAdvancedSettings**](docs/JobsApi.md#getDefaultJobAdvancedSettings) | **GET** /defaultJobAdvancedSettings | List default job advanced settings
 *QoveryApi.JobsApi* | [**getEnvironmentJobStatus**](docs/JobsApi.md#getEnvironmentJobStatus) | **GET** /environment/{environmentId}/job/status | List all environment job statuses
@@ -524,6 +528,10 @@ Class | Method | HTTP request | Description
  - [QoveryApi.BudgetThreshold](docs/BudgetThreshold.md)
  - [QoveryApi.BuildModeEnum](docs/BuildModeEnum.md)
  - [QoveryApi.BuildPackLanguageEnum](docs/BuildPackLanguageEnum.md)
+ - [QoveryApi.CloneApplicationRequest](docs/CloneApplicationRequest.md)
+ - [QoveryApi.CloneContainerRequest](docs/CloneContainerRequest.md)
+ - [QoveryApi.CloneDatabaseRequest](docs/CloneDatabaseRequest.md)
+ - [QoveryApi.CloneJobRequest](docs/CloneJobRequest.md)
  - [QoveryApi.CloneRequest](docs/CloneRequest.md)
  - [QoveryApi.CloudProvider](docs/CloudProvider.md)
  - [QoveryApi.CloudProviderEnum](docs/CloudProviderEnum.md)

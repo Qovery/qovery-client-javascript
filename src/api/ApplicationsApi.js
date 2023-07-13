@@ -17,6 +17,7 @@ import Application from '../model/Application';
 import ApplicationAdvancedSettings from '../model/ApplicationAdvancedSettings';
 import ApplicationRequest from '../model/ApplicationRequest';
 import ApplicationResponseList from '../model/ApplicationResponseList';
+import CloneApplicationRequest from '../model/CloneApplicationRequest';
 import EnvironmentApplicationsCurrentScaleResponseList from '../model/EnvironmentApplicationsCurrentScaleResponseList';
 import EnvironmentApplicationsStorageResponseList from '../model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguageList from '../model/EnvironmentApplicationsSupportedLanguageList';
@@ -40,6 +41,52 @@ export default class ApplicationsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the cloneApplication operation.
+     * @callback module:api/ApplicationsApi~cloneApplicationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Application} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone application
+     * This will create a new application with the same configuration on the targeted environment Id.
+     * @param {String} applicationId Application ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CloneApplicationRequest} opts.cloneApplicationRequest 
+     * @param {module:api/ApplicationsApi~cloneApplicationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Application}
+     */
+    cloneApplication(applicationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['cloneApplicationRequest'];
+      // verify the required parameter 'applicationId' is set
+      if (applicationId === undefined || applicationId === null) {
+        throw new Error("Missing the required parameter 'applicationId' when calling cloneApplication");
+      }
+
+      let pathParams = {
+        'applicationId': applicationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Application;
+      return this.apiClient.callApi(
+        '/application/{applicationId}/clone', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the createApplication operation.

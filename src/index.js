@@ -52,6 +52,10 @@ import Budget from './model/Budget';
 import BudgetThreshold from './model/BudgetThreshold';
 import BuildModeEnum from './model/BuildModeEnum';
 import BuildPackLanguageEnum from './model/BuildPackLanguageEnum';
+import CloneApplicationRequest from './model/CloneApplicationRequest';
+import CloneContainerRequest from './model/CloneContainerRequest';
+import CloneDatabaseRequest from './model/CloneDatabaseRequest';
+import CloneJobRequest from './model/CloneJobRequest';
 import CloneRequest from './model/CloneRequest';
 import CloudProvider from './model/CloudProvider';
 import CloudProviderEnum from './model/CloudProviderEnum';
@@ -787,6 +791,30 @@ export {
      * @property {module:model/BuildPackLanguageEnum}
      */
     BuildPackLanguageEnum,
+
+    /**
+     * The CloneApplicationRequest model constructor.
+     * @property {module:model/CloneApplicationRequest}
+     */
+    CloneApplicationRequest,
+
+    /**
+     * The CloneContainerRequest model constructor.
+     * @property {module:model/CloneContainerRequest}
+     */
+    CloneContainerRequest,
+
+    /**
+     * The CloneDatabaseRequest model constructor.
+     * @property {module:model/CloneDatabaseRequest}
+     */
+    CloneDatabaseRequest,
+
+    /**
+     * The CloneJobRequest model constructor.
+     * @property {module:model/CloneJobRequest}
+     */
+    CloneJobRequest,
 
     /**
      * The CloneRequest model constructor.

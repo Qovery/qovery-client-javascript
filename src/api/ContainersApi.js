@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CloneContainerRequest from '../model/CloneContainerRequest';
 import ContainerAdvancedSettings from '../model/ContainerAdvancedSettings';
 import ContainerRequest from '../model/ContainerRequest';
 import ContainerResponse from '../model/ContainerResponse';
@@ -84,6 +85,52 @@ export default class ContainersApi {
       let returnType = Status;
       return this.apiClient.callApi(
         '/organization/{organizationId}/container/deploy', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the cloneContainer operation.
+     * @callback module:api/ContainersApi~cloneContainerCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ContainerResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone container
+     * This will create a new container with the same configuration on the targeted environment Id.
+     * @param {String} containerId Container ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CloneContainerRequest} opts.cloneContainerRequest 
+     * @param {module:api/ContainersApi~cloneContainerCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ContainerResponse}
+     */
+    cloneContainer(containerId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['cloneContainerRequest'];
+      // verify the required parameter 'containerId' is set
+      if (containerId === undefined || containerId === null) {
+        throw new Error("Missing the required parameter 'containerId' when calling cloneContainer");
+      }
+
+      let pathParams = {
+        'containerId': containerId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ContainerResponse;
+      return this.apiClient.callApi(
+        '/container/{containerId}/clone', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CloneJobRequest from '../model/CloneJobRequest';
 import JobAdvancedSettings from '../model/JobAdvancedSettings';
 import JobRequest from '../model/JobRequest';
 import JobResponse from '../model/JobResponse';
@@ -37,6 +38,52 @@ export default class JobsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the cloneJob operation.
+     * @callback module:api/JobsApi~cloneJobCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/JobResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone job
+     * This will create a new job with the same configuration on the targeted environment Id.
+     * @param {String} jobId Job ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CloneJobRequest} opts.cloneJobRequest 
+     * @param {module:api/JobsApi~cloneJobCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/JobResponse}
+     */
+    cloneJob(jobId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['cloneJobRequest'];
+      // verify the required parameter 'jobId' is set
+      if (jobId === undefined || jobId === null) {
+        throw new Error("Missing the required parameter 'jobId' when calling cloneJob");
+      }
+
+      let pathParams = {
+        'jobId': jobId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = JobResponse;
+      return this.apiClient.callApi(
+        '/job/{jobId}/clone', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the createJob operation.

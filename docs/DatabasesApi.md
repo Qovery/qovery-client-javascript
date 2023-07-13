@@ -4,12 +4,66 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cloneDatabase**](DatabasesApi.md#cloneDatabase) | **POST** /database/{databaseId}/clone | Clone database
 [**createDatabase**](DatabasesApi.md#createDatabase) | **POST** /environment/{environmentId}/database | Create a database
 [**getEnvironmentDatabaseStatus**](DatabasesApi.md#getEnvironmentDatabaseStatus) | **GET** /environment/{environmentId}/database/status | List all environment databases statuses
 [**listDatabase**](DatabasesApi.md#listDatabase) | **GET** /environment/{environmentId}/database | List environment databases
 [**listEnvironmentDatabaseConfig**](DatabasesApi.md#listEnvironmentDatabaseConfig) | **GET** /environment/{environmentId}/databaseConfiguration | List eligible database types, versions and modes for the environment
 [**listEnvironmentDatabaseCurrentMetric**](DatabasesApi.md#listEnvironmentDatabaseCurrentMetric) | **GET** /environment/{environmentId}/database/currentMetric | List current metric consumption for each database
 
+
+
+## cloneDatabase
+
+> Database cloneDatabase(databaseId, opts)
+
+Clone database
+
+This will create a new database with the same configuration on the targeted environment Id.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.DatabasesApi();
+let databaseId = "databaseId_example"; // String | Database ID
+let opts = {
+  'cloneDatabaseRequest': new QoveryApi.CloneDatabaseRequest() // CloneDatabaseRequest | 
+};
+apiInstance.cloneDatabase(databaseId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **databaseId** | **String**| Database ID | 
+ **cloneDatabaseRequest** | [**CloneDatabaseRequest**](CloneDatabaseRequest.md)|  | [optional] 
+
+### Return type
+
+[**Database**](Database.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## createDatabase

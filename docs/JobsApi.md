@@ -4,11 +4,65 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cloneJob**](JobsApi.md#cloneJob) | **POST** /job/{jobId}/clone | Clone job
 [**createJob**](JobsApi.md#createJob) | **POST** /environment/{environmentId}/job | Create a job
 [**getDefaultJobAdvancedSettings**](JobsApi.md#getDefaultJobAdvancedSettings) | **GET** /defaultJobAdvancedSettings | List default job advanced settings
 [**getEnvironmentJobStatus**](JobsApi.md#getEnvironmentJobStatus) | **GET** /environment/{environmentId}/job/status | List all environment job statuses
 [**listJobs**](JobsApi.md#listJobs) | **GET** /environment/{environmentId}/job | List jobs
 
+
+
+## cloneJob
+
+> JobResponse cloneJob(jobId, opts)
+
+Clone job
+
+This will create a new job with the same configuration on the targeted environment Id.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.JobsApi();
+let jobId = "jobId_example"; // String | Job ID
+let opts = {
+  'cloneJobRequest': new QoveryApi.CloneJobRequest() // CloneJobRequest | 
+};
+apiInstance.cloneJob(jobId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jobId** | **String**| Job ID | 
+ **cloneJobRequest** | [**CloneJobRequest**](CloneJobRequest.md)|  | [optional] 
+
+### Return type
+
+[**JobResponse**](JobResponse.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## createJob

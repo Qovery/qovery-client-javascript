@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import GetOrganizationEventTargets200Response from '../model/GetOrganizationEventTargets200Response';
 import OrganizationEventOrigin from '../model/OrganizationEventOrigin';
 import OrganizationEventResponseList from '../model/OrganizationEventResponseList';
 import OrganizationEventSubTargetType from '../model/OrganizationEventSubTargetType';
+import OrganizationEventTargetResponseList from '../model/OrganizationEventTargetResponseList';
 import OrganizationEventTargetType from '../model/OrganizationEventTargetType';
 import OrganizationEventType from '../model/OrganizationEventType';
 
@@ -43,7 +43,7 @@ export default class OrganizationEventApi {
      * Callback function to receive the result of the getOrganizationEventTargets operation.
      * @callback module:api/OrganizationEventApi~getOrganizationEventTargetsCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GetOrganizationEventTargets200Response} data The data returned by the service call.
+     * @param {module:model/OrganizationEventTargetResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -61,7 +61,7 @@ export default class OrganizationEventApi {
      * @param {String} opts.projectId Mandatory when requesting an environment or a service
      * @param {String} opts.environmentId Mandatory when requesting a service
      * @param {module:api/OrganizationEventApi~getOrganizationEventTargetsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetOrganizationEventTargets200Response}
+     * data is of type: {@link module:model/OrganizationEventTargetResponseList}
      */
     getOrganizationEventTargets(organizationId, opts, callback) {
       opts = opts || {};
@@ -92,7 +92,7 @@ export default class OrganizationEventApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GetOrganizationEventTargets200Response;
+      let returnType = OrganizationEventTargetResponseList;
       return this.apiClient.callApi(
         '/organization/{organizationId}/targets', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

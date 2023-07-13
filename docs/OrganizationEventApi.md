@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getOrganizationEventTargets
 
-> GetOrganizationEventTargets200Response getOrganizationEventTargets(organizationId, opts)
+> OrganizationEventTargetResponseList getOrganizationEventTargets(organizationId, opts)
 
 Get available event targets to filter events
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetOrganizationEventTargets200Response**](GetOrganizationEventTargets200Response.md)
+[**OrganizationEventTargetResponseList**](OrganizationEventTargetResponseList.md)
 
 ### Authorization
 

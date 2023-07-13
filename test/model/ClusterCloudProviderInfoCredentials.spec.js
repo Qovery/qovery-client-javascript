@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.GetOrganizationEventTargets200ResponseTargetsInner();
+    instance = new QoveryApi.ClusterCloudProviderInfoCredentials();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('GetOrganizationEventTargets200ResponseTargetsInner', function() {
-    it('should create an instance of GetOrganizationEventTargets200ResponseTargetsInner', function() {
-      // uncomment below and update the code to test GetOrganizationEventTargets200ResponseTargetsInner
-      //var instance = new QoveryApi.GetOrganizationEventTargets200ResponseTargetsInner();
-      //expect(instance).to.be.a(QoveryApi.GetOrganizationEventTargets200ResponseTargetsInner);
+  describe('ClusterCloudProviderInfoCredentials', function() {
+    it('should create an instance of ClusterCloudProviderInfoCredentials', function() {
+      // uncomment below and update the code to test ClusterCloudProviderInfoCredentials
+      //var instance = new QoveryApi.ClusterCloudProviderInfoCredentials();
+      //expect(instance).to.be.a(QoveryApi.ClusterCloudProviderInfoCredentials);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.GetOrganizationEventTargets200ResponseTargetsInner();
+      //var instance = new QoveryApi.ClusterCloudProviderInfoCredentials();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.GetOrganizationEventTargets200ResponseTargetsInner();
+      //var instance = new QoveryApi.ClusterCloudProviderInfoCredentials();
       //expect(instance).to.be();
     });
 

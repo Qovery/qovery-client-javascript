@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import GetOrganizationEventTargets200ResponseTargetsInner from './GetOrganizationEventTargets200ResponseTargetsInner';
+import ClusterCloudProviderInfoCredentials from './ClusterCloudProviderInfoCredentials';
 
 /**
- * The GetOrganizationEventTargets200Response model module.
- * @module model/GetOrganizationEventTargets200Response
+ * The OrganizationEventTargetResponseList model module.
+ * @module model/OrganizationEventTargetResponseList
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class GetOrganizationEventTargets200Response {
+class OrganizationEventTargetResponseList {
     /**
-     * Constructs a new <code>GetOrganizationEventTargets200Response</code>.
-     * @alias module:model/GetOrganizationEventTargets200Response
+     * Constructs a new <code>OrganizationEventTargetResponseList</code>.
+     * @alias module:model/OrganizationEventTargetResponseList
      */
     constructor() { 
         
-        GetOrganizationEventTargets200Response.initialize(this);
+        OrganizationEventTargetResponseList.initialize(this);
     }
 
     /**
@@ -38,18 +38,18 @@ class GetOrganizationEventTargets200Response {
     }
 
     /**
-     * Constructs a <code>GetOrganizationEventTargets200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>OrganizationEventTargetResponseList</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/GetOrganizationEventTargets200Response} obj Optional instance to populate.
-     * @return {module:model/GetOrganizationEventTargets200Response} The populated <code>GetOrganizationEventTargets200Response</code> instance.
+     * @param {module:model/OrganizationEventTargetResponseList} obj Optional instance to populate.
+     * @return {module:model/OrganizationEventTargetResponseList} The populated <code>OrganizationEventTargetResponseList</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new GetOrganizationEventTargets200Response();
+            obj = obj || new OrganizationEventTargetResponseList();
 
             if (data.hasOwnProperty('targets')) {
-                obj['targets'] = ApiClient.convertToType(data['targets'], [GetOrganizationEventTargets200ResponseTargetsInner]);
+                obj['targets'] = ApiClient.convertToType(data['targets'], [ClusterCloudProviderInfoCredentials]);
             }
         }
         return obj;
@@ -59,14 +59,14 @@ class GetOrganizationEventTargets200Response {
 }
 
 /**
- * @member {Array.<module:model/GetOrganizationEventTargets200ResponseTargetsInner>} targets
+ * @member {Array.<module:model/ClusterCloudProviderInfoCredentials>} targets
  */
-GetOrganizationEventTargets200Response.prototype['targets'] = undefined;
+OrganizationEventTargetResponseList.prototype['targets'] = undefined;
 
 
 
 
 
 
-export default GetOrganizationEventTargets200Response;
+export default OrganizationEventTargetResponseList;
 

@@ -64,6 +64,7 @@ import Cluster from './model/Cluster';
 import ClusterAdvancedSettings from './model/ClusterAdvancedSettings';
 import ClusterAllOf from './model/ClusterAllOf';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
+import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
 import ClusterCredentials from './model/ClusterCredentials';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
@@ -242,8 +243,6 @@ import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
 import GetEnvironmentStatuses200Response from './model/GetEnvironmentStatuses200Response';
 import GetEnvironmentStatusesWithStages200Response from './model/GetEnvironmentStatusesWithStages200Response';
-import GetOrganizationEventTargets200Response from './model/GetOrganizationEventTargets200Response';
-import GetOrganizationEventTargets200ResponseTargetsInner from './model/GetOrganizationEventTargets200ResponseTargetsInner';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
 import GitProviderEnum from './model/GitProviderEnum';
@@ -357,6 +356,7 @@ import OrganizationEventResponse from './model/OrganizationEventResponse';
 import OrganizationEventResponseList from './model/OrganizationEventResponseList';
 import OrganizationEventResponseListLinks from './model/OrganizationEventResponseListLinks';
 import OrganizationEventSubTargetType from './model/OrganizationEventSubTargetType';
+import OrganizationEventTargetResponseList from './model/OrganizationEventTargetResponseList';
 import OrganizationEventTargetType from './model/OrganizationEventTargetType';
 import OrganizationEventType from './model/OrganizationEventType';
 import OrganizationGithubAppConnectRequest from './model/OrganizationGithubAppConnectRequest';
@@ -863,6 +863,12 @@ export {
      * @property {module:model/ClusterCloudProviderInfo}
      */
     ClusterCloudProviderInfo,
+
+    /**
+     * The ClusterCloudProviderInfoCredentials model constructor.
+     * @property {module:model/ClusterCloudProviderInfoCredentials}
+     */
+    ClusterCloudProviderInfoCredentials,
 
     /**
      * The ClusterCloudProviderInfoRequest model constructor.
@@ -1933,18 +1939,6 @@ export {
     GetEnvironmentStatusesWithStages200Response,
 
     /**
-     * The GetOrganizationEventTargets200Response model constructor.
-     * @property {module:model/GetOrganizationEventTargets200Response}
-     */
-    GetOrganizationEventTargets200Response,
-
-    /**
-     * The GetOrganizationEventTargets200ResponseTargetsInner model constructor.
-     * @property {module:model/GetOrganizationEventTargets200ResponseTargetsInner}
-     */
-    GetOrganizationEventTargets200ResponseTargetsInner,
-
-    /**
      * The GitAuthProvider model constructor.
      * @property {module:model/GitAuthProvider}
      */
@@ -2621,6 +2615,12 @@ export {
      * @property {module:model/OrganizationEventSubTargetType}
      */
     OrganizationEventSubTargetType,
+
+    /**
+     * The OrganizationEventTargetResponseList model constructor.
+     * @property {module:model/OrganizationEventTargetResponseList}
+     */
+    OrganizationEventTargetResponseList,
 
     /**
      * The OrganizationEventTargetType model constructor.

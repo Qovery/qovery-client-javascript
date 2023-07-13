@@ -1,4 +1,4 @@
-# QoveryApi.GetOrganizationEventTargets200ResponseTargetsInner
+# QoveryApi.ClusterCloudProviderInfoCredentials
 
 ## Properties
 

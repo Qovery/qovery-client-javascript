@@ -70,6 +70,7 @@ docs/Cluster.md
 docs/ClusterAdvancedSettings.md
 docs/ClusterAllOf.md
 docs/ClusterCloudProviderInfo.md
+docs/ClusterCloudProviderInfoCredentials.md
 docs/ClusterCloudProviderInfoRequest.md
 docs/ClusterCredentials.md
 docs/ClusterCredentialsResponseList.md
@@ -279,8 +280,6 @@ docs/EventResponseList.md
 docs/GenericObjectCurrentCost.md
 docs/GetEnvironmentStatuses200Response.md
 docs/GetEnvironmentStatusesWithStages200Response.md
-docs/GetOrganizationEventTargets200Response.md
-docs/GetOrganizationEventTargets200ResponseTargetsInner.md
 docs/GitAuthProvider.md
 docs/GitAuthProviderResponseList.md
 docs/GitProviderEnum.md
@@ -409,6 +408,7 @@ docs/OrganizationEventResponse.md
 docs/OrganizationEventResponseList.md
 docs/OrganizationEventResponseListLinks.md
 docs/OrganizationEventSubTargetType.md
+docs/OrganizationEventTargetResponseList.md
 docs/OrganizationEventTargetType.md
 docs/OrganizationEventType.md
 docs/OrganizationGithubAppConnectRequest.md
@@ -635,6 +635,7 @@ src/model/Cluster.js
 src/model/ClusterAdvancedSettings.js
 src/model/ClusterAllOf.js
 src/model/ClusterCloudProviderInfo.js
+src/model/ClusterCloudProviderInfoCredentials.js
 src/model/ClusterCloudProviderInfoRequest.js
 src/model/ClusterCredentials.js
 src/model/ClusterCredentialsResponseList.js
@@ -813,8 +814,6 @@ src/model/EventResponseList.js
 src/model/GenericObjectCurrentCost.js
 src/model/GetEnvironmentStatuses200Response.js
 src/model/GetEnvironmentStatusesWithStages200Response.js
-src/model/GetOrganizationEventTargets200Response.js
-src/model/GetOrganizationEventTargets200ResponseTargetsInner.js
 src/model/GitAuthProvider.js
 src/model/GitAuthProviderResponseList.js
 src/model/GitProviderEnum.js
@@ -928,6 +927,7 @@ src/model/OrganizationEventResponse.js
 src/model/OrganizationEventResponseList.js
 src/model/OrganizationEventResponseListLinks.js
 src/model/OrganizationEventSubTargetType.js
+src/model/OrganizationEventTargetResponseList.js
 src/model/OrganizationEventTargetType.js
 src/model/OrganizationEventType.js
 src/model/OrganizationGithubAppConnectRequest.js
@@ -1140,6 +1140,7 @@ test/model/Cluster.spec.js
 test/model/ClusterAdvancedSettings.spec.js
 test/model/ClusterAllOf.spec.js
 test/model/ClusterCloudProviderInfo.spec.js
+test/model/ClusterCloudProviderInfoCredentials.spec.js
 test/model/ClusterCloudProviderInfoRequest.spec.js
 test/model/ClusterCredentials.spec.js
 test/model/ClusterCredentialsResponseList.spec.js
@@ -1318,8 +1319,6 @@ test/model/EventResponseList.spec.js
 test/model/GenericObjectCurrentCost.spec.js
 test/model/GetEnvironmentStatuses200Response.spec.js
 test/model/GetEnvironmentStatusesWithStages200Response.spec.js
-test/model/GetOrganizationEventTargets200Response.spec.js
-test/model/GetOrganizationEventTargets200ResponseTargetsInner.spec.js
 test/model/GitAuthProvider.spec.js
 test/model/GitAuthProviderResponseList.spec.js
 test/model/GitProviderEnum.spec.js
@@ -1433,6 +1432,7 @@ test/model/OrganizationEventResponse.spec.js
 test/model/OrganizationEventResponseList.spec.js
 test/model/OrganizationEventResponseListLinks.spec.js
 test/model/OrganizationEventSubTargetType.spec.js
+test/model/OrganizationEventTargetResponseList.spec.js
 test/model/OrganizationEventTargetType.spec.js
 test/model/OrganizationEventType.spec.js
 test/model/OrganizationGithubAppConnectRequest.spec.js

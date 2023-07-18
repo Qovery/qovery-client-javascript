@@ -440,10 +440,13 @@ import UnexpectedError from './model/UnexpectedError';
 import User from './model/User';
 import UserResponseList from './model/UserResponseList';
 import Value from './model/Value';
+import VariableAliasRequest from './model/VariableAliasRequest';
 import VariableImport from './model/VariableImport';
 import VariableImportRequest from './model/VariableImportRequest';
 import VariableImportRequestVarsInner from './model/VariableImportRequestVarsInner';
 import VariableImportSuccessfulImportedVariablesInner from './model/VariableImportSuccessfulImportedVariablesInner';
+import VariableResponse from './model/VariableResponse';
+import VariableResponseAllOf from './model/VariableResponseAllOf';
 import Version from './model/Version';
 import VersionResponseList from './model/VersionResponseList';
 import WeekdayEnum from './model/WeekdayEnum';
@@ -518,6 +521,7 @@ import ProjectSecretApi from './api/ProjectSecretApi';
 import ProjectsApi from './api/ProjectsApi';
 import ReferralRewardsApi from './api/ReferralRewardsApi';
 import UserSignUpApi from './api/UserSignUpApi';
+import VariableMainCallsApi from './api/VariableMainCallsApi';
 
 
 /**
@@ -3121,6 +3125,12 @@ export {
     Value,
 
     /**
+     * The VariableAliasRequest model constructor.
+     * @property {module:model/VariableAliasRequest}
+     */
+    VariableAliasRequest,
+
+    /**
      * The VariableImport model constructor.
      * @property {module:model/VariableImport}
      */
@@ -3143,6 +3153,18 @@ export {
      * @property {module:model/VariableImportSuccessfulImportedVariablesInner}
      */
     VariableImportSuccessfulImportedVariablesInner,
+
+    /**
+     * The VariableResponse model constructor.
+     * @property {module:model/VariableResponse}
+     */
+    VariableResponse,
+
+    /**
+     * The VariableResponseAllOf model constructor.
+     * @property {module:model/VariableResponseAllOf}
+     */
+    VariableResponseAllOf,
 
     /**
      * The Version model constructor.
@@ -3586,5 +3608,11 @@ export {
     * The UserSignUpApi service constructor.
     * @property {module:api/UserSignUpApi}
     */
-    UserSignUpApi
+    UserSignUpApi,
+
+    /**
+    * The VariableMainCallsApi service constructor.
+    * @property {module:api/VariableMainCallsApi}
+    */
+    VariableMainCallsApi
 };

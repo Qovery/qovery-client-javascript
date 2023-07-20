@@ -23,11 +23,10 @@ class SecretRequest {
      * Constructs a new <code>SecretRequest</code>.
      * @alias module:model/SecretRequest
      * @param key {String} key is case sensitive
-     * @param value {String} value of the secret. Clear value will never be returned
      */
-    constructor(key, value) { 
+    constructor(key) { 
         
-        SecretRequest.initialize(this, key, value);
+        SecretRequest.initialize(this, key);
     }
 
     /**
@@ -35,9 +34,8 @@ class SecretRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, key, value) { 
+    static initialize(obj, key) { 
         obj['key'] = key;
-        obj['value'] = value;
     }
 
     /**

@@ -44,7 +44,7 @@ export default class VariableMainCallsApi {
      */
 
     /**
-     * Create a variable alias
+     * WIP: Create a variable alias
      * - Allows you to add an alias at the level defined in the request body on an existing variable having a higher scope, in order to customize its key. - You have to specify a key in the request body and the scope and the parent id of the alias - The system will create a new variable at the requested level with the same value as the one corresponding to the variable id in the path - The response body will contain the newly created variable - Information regarding the aliased_variable will be exposed in the \"aliased_variable\" or in the \"aliased_secret\" field of the newly created variable - Only 1 alias level is allowed. You can't create an alias on an alias 
      * @param {String} variableId Variable ID
      * @param {Object} opts Optional parameters

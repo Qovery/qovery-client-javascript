@@ -14,11 +14,9 @@
 import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
 import APIVariableTypeEnum from './APIVariableTypeEnum';
-import EnvironmentVariableAlias from './EnvironmentVariableAlias';
-import EnvironmentVariableOverride from './EnvironmentVariableOverride';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
-import SecretAlias from './SecretAlias';
-import SecretOverride from './SecretOverride';
+import VariableAlias from './VariableAlias';
+import VariableOverride from './VariableOverride';
 
 /**
  * The VariableResponseAllOf model module.
@@ -57,16 +55,10 @@ class VariableResponseAllOf {
             obj = obj || new VariableResponseAllOf();
 
             if (data.hasOwnProperty('overridden_variable')) {
-                obj['overridden_variable'] = EnvironmentVariableOverride.constructFromObject(data['overridden_variable']);
+                obj['overridden_variable'] = VariableOverride.constructFromObject(data['overridden_variable']);
             }
             if (data.hasOwnProperty('aliased_variable')) {
-                obj['aliased_variable'] = EnvironmentVariableAlias.constructFromObject(data['aliased_variable']);
-            }
-            if (data.hasOwnProperty('overridden_secret')) {
-                obj['overridden_secret'] = SecretOverride.constructFromObject(data['overridden_secret']);
-            }
-            if (data.hasOwnProperty('aliased_secret')) {
-                obj['aliased_secret'] = SecretAlias.constructFromObject(data['aliased_secret']);
+                obj['aliased_variable'] = VariableAlias.constructFromObject(data['aliased_variable']);
             }
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = APIVariableScopeEnum.constructFromObject(data['scope']);
@@ -94,24 +86,14 @@ class VariableResponseAllOf {
 }
 
 /**
- * @member {module:model/EnvironmentVariableOverride} overridden_variable
+ * @member {module:model/VariableOverride} overridden_variable
  */
 VariableResponseAllOf.prototype['overridden_variable'] = undefined;
 
 /**
- * @member {module:model/EnvironmentVariableAlias} aliased_variable
+ * @member {module:model/VariableAlias} aliased_variable
  */
 VariableResponseAllOf.prototype['aliased_variable'] = undefined;
-
-/**
- * @member {module:model/SecretOverride} overridden_secret
- */
-VariableResponseAllOf.prototype['overridden_secret'] = undefined;
-
-/**
- * @member {module:model/SecretAlias} aliased_secret
- */
-VariableResponseAllOf.prototype['aliased_secret'] = undefined;
 
 /**
  * @member {module:model/APIVariableScopeEnum} scope

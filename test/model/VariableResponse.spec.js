@@ -84,18 +84,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property overriddenSecret (base name: "overridden_secret")', function() {
-      // uncomment below and update the code to test the property overriddenSecret
-      //var instance = new QoveryApi.VariableResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property aliasedSecret (base name: "aliased_secret")', function() {
-      // uncomment below and update the code to test the property aliasedSecret
-      //var instance = new QoveryApi.VariableResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property scope (base name: "scope")', function() {
       // uncomment below and update the code to test the property scope
       //var instance = new QoveryApi.VariableResponse();

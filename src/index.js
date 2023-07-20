@@ -440,11 +440,13 @@ import UnexpectedError from './model/UnexpectedError';
 import User from './model/User';
 import UserResponseList from './model/UserResponseList';
 import Value from './model/Value';
+import VariableAlias from './model/VariableAlias';
 import VariableAliasRequest from './model/VariableAliasRequest';
 import VariableImport from './model/VariableImport';
 import VariableImportRequest from './model/VariableImportRequest';
 import VariableImportRequestVarsInner from './model/VariableImportRequestVarsInner';
 import VariableImportSuccessfulImportedVariablesInner from './model/VariableImportSuccessfulImportedVariablesInner';
+import VariableOverride from './model/VariableOverride';
 import VariableResponse from './model/VariableResponse';
 import VariableResponseAllOf from './model/VariableResponseAllOf';
 import Version from './model/Version';
@@ -3125,6 +3127,12 @@ export {
     Value,
 
     /**
+     * The VariableAlias model constructor.
+     * @property {module:model/VariableAlias}
+     */
+    VariableAlias,
+
+    /**
      * The VariableAliasRequest model constructor.
      * @property {module:model/VariableAliasRequest}
      */
@@ -3153,6 +3161,12 @@ export {
      * @property {module:model/VariableImportSuccessfulImportedVariablesInner}
      */
     VariableImportSuccessfulImportedVariablesInner,
+
+    /**
+     * The VariableOverride model constructor.
+     * @property {module:model/VariableOverride}
+     */
+    VariableOverride,
 
     /**
      * The VariableResponse model constructor.

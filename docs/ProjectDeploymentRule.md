@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **clusterId** | **String** |  | 
 **autoDeploy** | **Boolean** |  | [optional] [default to false]
 **autoStop** | **Boolean** |  | [optional] [default to false]
-**autoDelete** | **Boolean** |  | [optional] [default to false]
 **timezone** | **String** |  | 
 **startTime** | **Date** |  | 
 **stopTime** | **Date** |  | 

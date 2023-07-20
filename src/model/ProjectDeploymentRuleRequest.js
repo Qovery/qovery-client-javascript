@@ -83,9 +83,6 @@ class ProjectDeploymentRuleRequest {
             if (data.hasOwnProperty('auto_stop')) {
                 obj['auto_stop'] = ApiClient.convertToType(data['auto_stop'], 'Boolean');
             }
-            if (data.hasOwnProperty('auto_delete')) {
-                obj['auto_delete'] = ApiClient.convertToType(data['auto_delete'], 'Boolean');
-            }
             if (data.hasOwnProperty('timezone')) {
                 obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
             }
@@ -140,12 +137,6 @@ ProjectDeploymentRuleRequest.prototype['auto_deploy'] = false;
  * @default false
  */
 ProjectDeploymentRuleRequest.prototype['auto_stop'] = false;
-
-/**
- * @member {Boolean} auto_delete
- * @default false
- */
-ProjectDeploymentRuleRequest.prototype['auto_delete'] = false;
 
 /**
  * @member {String} timezone

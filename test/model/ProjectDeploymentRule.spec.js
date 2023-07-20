@@ -108,12 +108,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property autoDelete (base name: "auto_delete")', function() {
-      // uncomment below and update the code to test the property autoDelete
-      //var instance = new QoveryApi.ProjectDeploymentRule();
-      //expect(instance).to.be();
-    });
-
     it('should have the property timezone (base name: "timezone")', function() {
       // uncomment below and update the code to test the property timezone
       //var instance = new QoveryApi.ProjectDeploymentRule();

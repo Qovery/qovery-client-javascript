@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property autoDelete (base name: "auto_delete")', function() {
-      // uncomment below and update the code to test the property autoDelete
-      //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();
-      //expect(instance).to.be();
-    });
-
     it('should have the property autoStop (base name: "auto_stop")', function() {
       // uncomment below and update the code to test the property autoStop
       //var instance = new QoveryApi.EnvironmentDeploymentRuleEditRequest();

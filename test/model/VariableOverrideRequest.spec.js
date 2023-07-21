@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.VariableAliasRequest();
+    instance = new QoveryApi.VariableOverrideRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('VariableAliasRequest', function() {
-    it('should create an instance of VariableAliasRequest', function() {
-      // uncomment below and update the code to test VariableAliasRequest
-      //var instance = new QoveryApi.VariableAliasRequest();
-      //expect(instance).to.be.a(QoveryApi.VariableAliasRequest);
+  describe('VariableOverrideRequest', function() {
+    it('should create an instance of VariableOverrideRequest', function() {
+      // uncomment below and update the code to test VariableOverrideRequest
+      //var instance = new QoveryApi.VariableOverrideRequest();
+      //expect(instance).to.be.a(QoveryApi.VariableOverrideRequest);
     });
 
-    it('should have the property key (base name: "key")', function() {
-      // uncomment below and update the code to test the property key
-      //var instance = new QoveryApi.VariableAliasRequest();
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instance = new QoveryApi.VariableOverrideRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property aliasScope (base name: "alias_scope")', function() {
       // uncomment below and update the code to test the property aliasScope
-      //var instance = new QoveryApi.VariableAliasRequest();
+      //var instance = new QoveryApi.VariableOverrideRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property aliasParentId (base name: "alias_parent_id")', function() {
       // uncomment below and update the code to test the property aliasParentId
-      //var instance = new QoveryApi.VariableAliasRequest();
+      //var instance = new QoveryApi.VariableOverrideRequest();
       //expect(instance).to.be();
     });
 

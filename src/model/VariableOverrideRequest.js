@@ -15,21 +15,21 @@ import ApiClient from '../ApiClient';
 import APIVariableScopeEnum from './APIVariableScopeEnum';
 
 /**
- * The VariableAliasRequest model module.
- * @module model/VariableAliasRequest
+ * The VariableOverrideRequest model module.
+ * @module model/VariableOverrideRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class VariableAliasRequest {
+class VariableOverrideRequest {
     /**
-     * Constructs a new <code>VariableAliasRequest</code>.
-     * @alias module:model/VariableAliasRequest
-     * @param key {String} 
+     * Constructs a new <code>VariableOverrideRequest</code>.
+     * @alias module:model/VariableOverrideRequest
+     * @param value {String} 
      * @param aliasScope {module:model/APIVariableScopeEnum} 
      * @param aliasParentId {String} 
      */
-    constructor(key, aliasScope, aliasParentId) { 
+    constructor(value, aliasScope, aliasParentId) { 
         
-        VariableAliasRequest.initialize(this, key, aliasScope, aliasParentId);
+        VariableOverrideRequest.initialize(this, value, aliasScope, aliasParentId);
     }
 
     /**
@@ -37,25 +37,25 @@ class VariableAliasRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, key, aliasScope, aliasParentId) { 
-        obj['key'] = key;
+    static initialize(obj, value, aliasScope, aliasParentId) { 
+        obj['value'] = value;
         obj['alias_scope'] = aliasScope;
         obj['alias_parent_id'] = aliasParentId;
     }
 
     /**
-     * Constructs a <code>VariableAliasRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>VariableOverrideRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/VariableAliasRequest} obj Optional instance to populate.
-     * @return {module:model/VariableAliasRequest} The populated <code>VariableAliasRequest</code> instance.
+     * @param {module:model/VariableOverrideRequest} obj Optional instance to populate.
+     * @return {module:model/VariableOverrideRequest} The populated <code>VariableOverrideRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new VariableAliasRequest();
+            obj = obj || new VariableOverrideRequest();
 
-            if (data.hasOwnProperty('key')) {
-                obj['key'] = ApiClient.convertToType(data['key'], 'String');
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('alias_scope')) {
                 obj['alias_scope'] = APIVariableScopeEnum.constructFromObject(data['alias_scope']);
@@ -71,24 +71,24 @@ class VariableAliasRequest {
 }
 
 /**
- * @member {String} key
+ * @member {String} value
  */
-VariableAliasRequest.prototype['key'] = undefined;
+VariableOverrideRequest.prototype['value'] = undefined;
 
 /**
  * @member {module:model/APIVariableScopeEnum} alias_scope
  */
-VariableAliasRequest.prototype['alias_scope'] = undefined;
+VariableOverrideRequest.prototype['alias_scope'] = undefined;
 
 /**
  * @member {String} alias_parent_id
  */
-VariableAliasRequest.prototype['alias_parent_id'] = undefined;
+VariableOverrideRequest.prototype['alias_parent_id'] = undefined;
 
 
 
 
 
 
-export default VariableAliasRequest;
+export default VariableOverrideRequest;
 

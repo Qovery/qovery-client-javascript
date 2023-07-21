@@ -485,7 +485,8 @@ Class | Method | HTTP request | Description
 *QoveryApi.ReferralRewardsApi* | [**postAccountRewardClaim**](docs/ReferralRewardsApi.md#postAccountRewardClaim) | **POST** /account/rewardClaim | Claim a reward
 *QoveryApi.UserSignUpApi* | [**createUserSignUp**](docs/UserSignUpApi.md#createUserSignUp) | **POST** /admin/userSignUp | Send Sign Up request
 *QoveryApi.UserSignUpApi* | [**getUserSignUp**](docs/UserSignUpApi.md#getUserSignUp) | **GET** /admin/userSignUp | Get Sign up information
-*QoveryApi.VariableMainCallsApi* | [**createVariableAlias**](docs/VariableMainCallsApi.md#createVariableAlias) | **POST** /variable/{variableId}/alias | WIP: Create a variable alias
+*QoveryApi.VariableMainCallsApi* | [**createVariableAlias**](docs/VariableMainCallsApi.md#createVariableAlias) | **POST** /variable/{variableId}/alias | Create a variable alias
+*QoveryApi.VariableMainCallsApi* | [**createVariableOverride**](docs/VariableMainCallsApi.md#createVariableOverride) | **POST** /variable/{variableId}/override | Create a variable override
 
 
 ## Documentation for Models
@@ -924,6 +925,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.VariableImportRequestVarsInner](docs/VariableImportRequestVarsInner.md)
  - [QoveryApi.VariableImportSuccessfulImportedVariablesInner](docs/VariableImportSuccessfulImportedVariablesInner.md)
  - [QoveryApi.VariableOverride](docs/VariableOverride.md)
+ - [QoveryApi.VariableOverrideRequest](docs/VariableOverrideRequest.md)
  - [QoveryApi.VariableResponse](docs/VariableResponse.md)
  - [QoveryApi.VariableResponseAllOf](docs/VariableResponseAllOf.md)
  - [QoveryApi.Version](docs/Version.md)

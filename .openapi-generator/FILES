@@ -509,6 +509,7 @@ docs/VariableImportRequestVarsInner.md
 docs/VariableImportSuccessfulImportedVariablesInner.md
 docs/VariableMainCallsApi.md
 docs/VariableOverride.md
+docs/VariableOverrideRequest.md
 docs/VariableResponse.md
 docs/VariableResponseAllOf.md
 docs/Version.md
@@ -1025,6 +1026,7 @@ src/model/VariableImportRequest.js
 src/model/VariableImportRequestVarsInner.js
 src/model/VariableImportSuccessfulImportedVariablesInner.js
 src/model/VariableOverride.js
+src/model/VariableOverrideRequest.js
 src/model/VariableResponse.js
 src/model/VariableResponseAllOf.js
 src/model/Version.js
@@ -1536,6 +1538,7 @@ test/model/VariableImportRequest.spec.js
 test/model/VariableImportRequestVarsInner.spec.js
 test/model/VariableImportSuccessfulImportedVariablesInner.spec.js
 test/model/VariableOverride.spec.js
+test/model/VariableOverrideRequest.spec.js
 test/model/VariableResponse.spec.js
 test/model/VariableResponseAllOf.spec.js
 test/model/Version.spec.js

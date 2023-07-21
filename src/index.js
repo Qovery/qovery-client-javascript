@@ -447,6 +447,7 @@ import VariableImportRequest from './model/VariableImportRequest';
 import VariableImportRequestVarsInner from './model/VariableImportRequestVarsInner';
 import VariableImportSuccessfulImportedVariablesInner from './model/VariableImportSuccessfulImportedVariablesInner';
 import VariableOverride from './model/VariableOverride';
+import VariableOverrideRequest from './model/VariableOverrideRequest';
 import VariableResponse from './model/VariableResponse';
 import VariableResponseAllOf from './model/VariableResponseAllOf';
 import Version from './model/Version';
@@ -3167,6 +3168,12 @@ export {
      * @property {module:model/VariableOverride}
      */
     VariableOverride,
+
+    /**
+     * The VariableOverrideRequest model constructor.
+     * @property {module:model/VariableOverrideRequest}
+     */
+    VariableOverrideRequest,
 
     /**
      * The VariableResponse model constructor.

@@ -13,9 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
+import APIVariableScopeEnum from '../model/APIVariableScopeEnum';
 import VariableAliasRequest from '../model/VariableAliasRequest';
+import VariableEditRequest from '../model/VariableEditRequest';
 import VariableOverrideRequest from '../model/VariableOverrideRequest';
+import VariableRequest from '../model/VariableRequest';
 import VariableResponse from '../model/VariableResponse';
+import VariableResponseList from '../model/VariableResponseList';
 
 /**
 * VariableMainCalls service.
@@ -35,6 +39,46 @@ export default class VariableMainCallsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the createVariable operation.
+     * @callback module:api/VariableMainCallsApi~createVariableCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/VariableResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a variable
+     * - Create a variable at the level defined in the request body. 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/VariableRequest} opts.variableRequest 
+     * @param {module:api/VariableMainCallsApi~createVariableCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/VariableResponse}
+     */
+    createVariable(opts, callback) {
+      opts = opts || {};
+      let postBody = opts['variableRequest'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = VariableResponse;
+      return this.apiClient.callApi(
+        '/variable', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the createVariableAlias operation.
@@ -123,6 +167,141 @@ export default class VariableMainCallsApi {
       let returnType = VariableResponse;
       return this.apiClient.callApi(
         '/variable/{variableId}/override', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteVariable operation.
+     * @callback module:api/VariableMainCallsApi~deleteVariableCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a variable
+     * - To delete a variable - You can't delete a BUILT_IN variable - If you delete a variable having override or alias, the associated override/alias will be deleted as well 
+     * @param {String} variableId Variable ID
+     * @param {module:api/VariableMainCallsApi~deleteVariableCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteVariable(variableId, callback) {
+      let postBody = null;
+      // verify the required parameter 'variableId' is set
+      if (variableId === undefined || variableId === null) {
+        throw new Error("Missing the required parameter 'variableId' when calling deleteVariable");
+      }
+
+      let pathParams = {
+        'variableId': variableId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/variable/{variableId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editVariable operation.
+     * @callback module:api/VariableMainCallsApi~editVariableCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/VariableResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit a variable
+     * - You can't edit a BUILT_IN variable - For an override, you can't edit the key - For an alias, you can't edit the value 
+     * @param {String} variableId Variable ID
+     * @param {module:model/VariableEditRequest} variableEditRequest 
+     * @param {module:api/VariableMainCallsApi~editVariableCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/VariableResponse}
+     */
+    editVariable(variableId, variableEditRequest, callback) {
+      let postBody = variableEditRequest;
+      // verify the required parameter 'variableId' is set
+      if (variableId === undefined || variableId === null) {
+        throw new Error("Missing the required parameter 'variableId' when calling editVariable");
+      }
+      // verify the required parameter 'variableEditRequest' is set
+      if (variableEditRequest === undefined || variableEditRequest === null) {
+        throw new Error("Missing the required parameter 'variableEditRequest' when calling editVariable");
+      }
+
+      let pathParams = {
+        'variableId': variableId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = VariableResponse;
+      return this.apiClient.callApi(
+        '/variable/{variableId}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listVariables operation.
+     * @callback module:api/VariableMainCallsApi~listVariablesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/VariableResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List variables
+     * Returns a list of variables
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.parentId the id where the variable will be added
+     * @param {module:model/APIVariableScopeEnum} opts.scope the scope of the parent where the variable will be added
+     * @param {Boolean} opts.isSecret 
+     * @param {module:api/VariableMainCallsApi~listVariablesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/VariableResponseList}
+     */
+    listVariables(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'parent_id': opts['parentId'],
+        'scope': opts['scope'],
+        'is_secret': opts['isSecret']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = VariableResponseList;
+      return this.apiClient.callApi(
+        '/variable', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

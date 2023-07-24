@@ -48,6 +48,16 @@
   }
 
   describe('VariableMainCallsApi', function() {
+    describe('createVariable', function() {
+      it('should call createVariable successfully', function(done) {
+        //uncomment below and update the code to test createVariable
+        //instance.createVariable(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createVariableAlias', function() {
       it('should call createVariableAlias successfully', function(done) {
         //uncomment below and update the code to test createVariableAlias
@@ -62,6 +72,36 @@
       it('should call createVariableOverride successfully', function(done) {
         //uncomment below and update the code to test createVariableOverride
         //instance.createVariableOverride(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteVariable', function() {
+      it('should call deleteVariable successfully', function(done) {
+        //uncomment below and update the code to test deleteVariable
+        //instance.deleteVariable(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editVariable', function() {
+      it('should call editVariable successfully', function(done) {
+        //uncomment below and update the code to test editVariable
+        //instance.editVariable(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listVariables', function() {
+      it('should call listVariables successfully', function(done) {
+        //uncomment below and update the code to test listVariables
+        //instance.listVariables(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

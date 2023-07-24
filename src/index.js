@@ -442,14 +442,17 @@ import UserResponseList from './model/UserResponseList';
 import Value from './model/Value';
 import VariableAlias from './model/VariableAlias';
 import VariableAliasRequest from './model/VariableAliasRequest';
+import VariableEditRequest from './model/VariableEditRequest';
 import VariableImport from './model/VariableImport';
 import VariableImportRequest from './model/VariableImportRequest';
 import VariableImportRequestVarsInner from './model/VariableImportRequestVarsInner';
 import VariableImportSuccessfulImportedVariablesInner from './model/VariableImportSuccessfulImportedVariablesInner';
 import VariableOverride from './model/VariableOverride';
 import VariableOverrideRequest from './model/VariableOverrideRequest';
+import VariableRequest from './model/VariableRequest';
 import VariableResponse from './model/VariableResponse';
 import VariableResponseAllOf from './model/VariableResponseAllOf';
+import VariableResponseList from './model/VariableResponseList';
 import Version from './model/Version';
 import VersionResponseList from './model/VersionResponseList';
 import WeekdayEnum from './model/WeekdayEnum';
@@ -3140,6 +3143,12 @@ export {
     VariableAliasRequest,
 
     /**
+     * The VariableEditRequest model constructor.
+     * @property {module:model/VariableEditRequest}
+     */
+    VariableEditRequest,
+
+    /**
      * The VariableImport model constructor.
      * @property {module:model/VariableImport}
      */
@@ -3176,6 +3185,12 @@ export {
     VariableOverrideRequest,
 
     /**
+     * The VariableRequest model constructor.
+     * @property {module:model/VariableRequest}
+     */
+    VariableRequest,
+
+    /**
      * The VariableResponse model constructor.
      * @property {module:model/VariableResponse}
      */
@@ -3186,6 +3201,12 @@ export {
      * @property {module:model/VariableResponseAllOf}
      */
     VariableResponseAllOf,
+
+    /**
+     * The VariableResponseList model constructor.
+     * @property {module:model/VariableResponseList}
+     */
+    VariableResponseList,
 
     /**
      * The Version model constructor.

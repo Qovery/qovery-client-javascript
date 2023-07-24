@@ -485,8 +485,12 @@ Class | Method | HTTP request | Description
 *QoveryApi.ReferralRewardsApi* | [**postAccountRewardClaim**](docs/ReferralRewardsApi.md#postAccountRewardClaim) | **POST** /account/rewardClaim | Claim a reward
 *QoveryApi.UserSignUpApi* | [**createUserSignUp**](docs/UserSignUpApi.md#createUserSignUp) | **POST** /admin/userSignUp | Send Sign Up request
 *QoveryApi.UserSignUpApi* | [**getUserSignUp**](docs/UserSignUpApi.md#getUserSignUp) | **GET** /admin/userSignUp | Get Sign up information
+*QoveryApi.VariableMainCallsApi* | [**createVariable**](docs/VariableMainCallsApi.md#createVariable) | **POST** /variable | Create a variable
 *QoveryApi.VariableMainCallsApi* | [**createVariableAlias**](docs/VariableMainCallsApi.md#createVariableAlias) | **POST** /variable/{variableId}/alias | Create a variable alias
 *QoveryApi.VariableMainCallsApi* | [**createVariableOverride**](docs/VariableMainCallsApi.md#createVariableOverride) | **POST** /variable/{variableId}/override | Create a variable override
+*QoveryApi.VariableMainCallsApi* | [**deleteVariable**](docs/VariableMainCallsApi.md#deleteVariable) | **DELETE** /variable/{variableId} | Delete a variable
+*QoveryApi.VariableMainCallsApi* | [**editVariable**](docs/VariableMainCallsApi.md#editVariable) | **PUT** /variable/{variableId} | Edit a variable
+*QoveryApi.VariableMainCallsApi* | [**listVariables**](docs/VariableMainCallsApi.md#listVariables) | **GET** /variable | List variables
 
 
 ## Documentation for Models
@@ -920,14 +924,17 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Value](docs/Value.md)
  - [QoveryApi.VariableAlias](docs/VariableAlias.md)
  - [QoveryApi.VariableAliasRequest](docs/VariableAliasRequest.md)
+ - [QoveryApi.VariableEditRequest](docs/VariableEditRequest.md)
  - [QoveryApi.VariableImport](docs/VariableImport.md)
  - [QoveryApi.VariableImportRequest](docs/VariableImportRequest.md)
  - [QoveryApi.VariableImportRequestVarsInner](docs/VariableImportRequestVarsInner.md)
  - [QoveryApi.VariableImportSuccessfulImportedVariablesInner](docs/VariableImportSuccessfulImportedVariablesInner.md)
  - [QoveryApi.VariableOverride](docs/VariableOverride.md)
  - [QoveryApi.VariableOverrideRequest](docs/VariableOverrideRequest.md)
+ - [QoveryApi.VariableRequest](docs/VariableRequest.md)
  - [QoveryApi.VariableResponse](docs/VariableResponse.md)
  - [QoveryApi.VariableResponseAllOf](docs/VariableResponseAllOf.md)
+ - [QoveryApi.VariableResponseList](docs/VariableResponseList.md)
  - [QoveryApi.Version](docs/Version.md)
  - [QoveryApi.VersionResponseList](docs/VersionResponseList.md)
  - [QoveryApi.WeekdayEnum](docs/WeekdayEnum.md)

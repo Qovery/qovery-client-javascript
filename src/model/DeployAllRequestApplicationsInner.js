@@ -23,11 +23,10 @@ class DeployAllRequestApplicationsInner {
      * Constructs a new <code>DeployAllRequestApplicationsInner</code>.
      * @alias module:model/DeployAllRequestApplicationsInner
      * @param applicationId {String} id of the application to be deployed.
-     * @param gitCommitId {String} Commit ID to deploy.
      */
-    constructor(applicationId, gitCommitId) { 
+    constructor(applicationId) { 
         
-        DeployAllRequestApplicationsInner.initialize(this, applicationId, gitCommitId);
+        DeployAllRequestApplicationsInner.initialize(this, applicationId);
     }
 
     /**
@@ -35,9 +34,8 @@ class DeployAllRequestApplicationsInner {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, applicationId, gitCommitId) { 
+    static initialize(obj, applicationId) { 
         obj['application_id'] = applicationId;
-        obj['git_commit_id'] = gitCommitId;
     }
 
     /**
@@ -71,7 +69,7 @@ class DeployAllRequestApplicationsInner {
 DeployAllRequestApplicationsInner.prototype['application_id'] = undefined;
 
 /**
- * Commit ID to deploy.
+ * Commit ID to deploy. Can be empty only if the service has been already deployed (in this case the service version won't be changed)
  * @member {String} git_commit_id
  */
 DeployAllRequestApplicationsInner.prototype['git_commit_id'] = undefined;

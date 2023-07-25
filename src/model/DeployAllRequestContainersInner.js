@@ -23,11 +23,10 @@ class DeployAllRequestContainersInner {
      * Constructs a new <code>DeployAllRequestContainersInner</code>.
      * @alias module:model/DeployAllRequestContainersInner
      * @param id {String} id of the container to be updated.
-     * @param imageTag {String} new tag for the container.
      */
-    constructor(id, imageTag) { 
+    constructor(id) { 
         
-        DeployAllRequestContainersInner.initialize(this, id, imageTag);
+        DeployAllRequestContainersInner.initialize(this, id);
     }
 
     /**
@@ -35,9 +34,8 @@ class DeployAllRequestContainersInner {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, imageTag) { 
+    static initialize(obj, id) { 
         obj['id'] = id;
-        obj['image_tag'] = imageTag;
     }
 
     /**
@@ -71,7 +69,7 @@ class DeployAllRequestContainersInner {
 DeployAllRequestContainersInner.prototype['id'] = undefined;
 
 /**
- * new tag for the container.
+ * new tag for the container. Can be empty only if the service has been already deployed (in this case the service version won't be changed)
  * @member {String} image_tag
  */
 DeployAllRequestContainersInner.prototype['image_tag'] = undefined;

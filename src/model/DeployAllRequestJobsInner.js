@@ -70,13 +70,13 @@ class DeployAllRequestJobsInner {
 DeployAllRequestJobsInner.prototype['id'] = undefined;
 
 /**
- * new tag for the job image. Use only if job is an image source
+ * new tag for the job image. Use only if job is an image source. Can be empty only if the service has been already deployed (in this case the service version won't be changed)
  * @member {String} image_tag
  */
 DeployAllRequestJobsInner.prototype['image_tag'] = undefined;
 
 /**
- * Commit ID to deploy. Use only if job is a repository source
+ * Commit ID to deploy. Use only if job is a repository source. Can be empty only if the service has been already deployed (in this case the service version won't be changed)
  * @member {String} git_commit_id
  */
 DeployAllRequestJobsInner.prototype['git_commit_id'] = undefined;

@@ -153,6 +153,13 @@ export default class OrganizationEventSubTargetType {
 
     
         /**
+         * value: "TERRAFORM"
+         * @const
+         */
+        "TERRAFORM" = "TERRAFORM";
+
+    
+        /**
          * value: "TRANSFER_OWNERSHIP"
          * @const
          */

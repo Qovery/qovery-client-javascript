@@ -48,6 +48,13 @@ export default class OrganizationEventType {
 
     
         /**
+         * value: "EXPORT"
+         * @const
+         */
+        "EXPORT" = "EXPORT";
+
+    
+        /**
          * value: "TRIGGER_DEPLOY"
          * @const
          */

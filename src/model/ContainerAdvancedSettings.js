@@ -98,6 +98,12 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.proxy_read_timeout_seconds')) {
                 obj['network.ingress.proxy_read_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.proxy_read_timeout_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('network.ingress.grpc_send_timeout_seconds')) {
+                obj['network.ingress.grpc_send_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.grpc_send_timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.grpc_read_timeout_seconds')) {
+                obj['network.ingress.grpc_read_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.grpc_read_timeout_seconds'], 'Number');
+            }
             if (data.hasOwnProperty('network.ingress.whitelist_source_range')) {
                 obj['network.ingress.whitelist_source_range'] = ApiClient.convertToType(data['network.ingress.whitelist_source_range'], 'String');
             }
@@ -109,48 +115,6 @@ class ContainerAdvancedSettings {
             }
             if (data.hasOwnProperty('network.ingress.enable_sticky_session')) {
                 obj['network.ingress.enable_sticky_session'] = ApiClient.convertToType(data['network.ingress.enable_sticky_session'], 'Boolean');
-            }
-            if (data.hasOwnProperty('readiness_probe.type')) {
-                obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
-            }
-            if (data.hasOwnProperty('readiness_probe.http_get.path')) {
-                obj['readiness_probe.http_get.path'] = ApiClient.convertToType(data['readiness_probe.http_get.path'], 'String');
-            }
-            if (data.hasOwnProperty('readiness_probe.initial_delay_seconds')) {
-                obj['readiness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['readiness_probe.initial_delay_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.period_seconds')) {
-                obj['readiness_probe.period_seconds'] = ApiClient.convertToType(data['readiness_probe.period_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.timeout_seconds')) {
-                obj['readiness_probe.timeout_seconds'] = ApiClient.convertToType(data['readiness_probe.timeout_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.success_threshold')) {
-                obj['readiness_probe.success_threshold'] = ApiClient.convertToType(data['readiness_probe.success_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.failure_threshold')) {
-                obj['readiness_probe.failure_threshold'] = ApiClient.convertToType(data['readiness_probe.failure_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.type')) {
-                obj['liveness_probe.type'] = ApiClient.convertToType(data['liveness_probe.type'], 'String');
-            }
-            if (data.hasOwnProperty('liveness_probe.http_get.path')) {
-                obj['liveness_probe.http_get.path'] = ApiClient.convertToType(data['liveness_probe.http_get.path'], 'String');
-            }
-            if (data.hasOwnProperty('liveness_probe.initial_delay_seconds')) {
-                obj['liveness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['liveness_probe.initial_delay_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.period_seconds')) {
-                obj['liveness_probe.period_seconds'] = ApiClient.convertToType(data['liveness_probe.period_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.timeout_seconds')) {
-                obj['liveness_probe.timeout_seconds'] = ApiClient.convertToType(data['liveness_probe.timeout_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.success_threshold')) {
-                obj['liveness_probe.success_threshold'] = ApiClient.convertToType(data['liveness_probe.success_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.failure_threshold')) {
-                obj['liveness_probe.failure_threshold'] = ApiClient.convertToType(data['liveness_probe.failure_threshold'], 'Number');
             }
             if (data.hasOwnProperty('security.service_account_name')) {
                 obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
@@ -280,6 +244,20 @@ ContainerAdvancedSettings.prototype['network.ingress.proxy_send_timeout_seconds'
 ContainerAdvancedSettings.prototype['network.ingress.proxy_read_timeout_seconds'] = 60;
 
 /**
+ * Sets a timeout (in seconds) for transmitting a request to the grpc server
+ * @member {Number} network.ingress.grpc_send_timeout_seconds
+ * @default 60
+ */
+ContainerAdvancedSettings.prototype['network.ingress.grpc_send_timeout_seconds'] = 60;
+
+/**
+ * Sets a timeout (in seconds) for transmitting a request to the grpc server
+ * @member {Number} network.ingress.grpc_read_timeout_seconds
+ * @default 60
+ */
+ContainerAdvancedSettings.prototype['network.ingress.grpc_read_timeout_seconds'] = 60;
+
+/**
  * list of source ranges to allow access to ingress proxy.  This property can be used to whitelist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 To allow all source ranges, set 0.0.0.0/0. 
  * @member {String} network.ingress.whitelist_source_range
  * @default '0.0.0.0/0'
@@ -306,104 +284,6 @@ ContainerAdvancedSettings.prototype['network.ingress.basic_auth_env_var'] = '';
  * @default false
  */
 ContainerAdvancedSettings.prototype['network.ingress.enable_sticky_session'] = false;
-
-/**
- * * `NONE` disable readiness probe * `TCP` enable TCP readiness probe * `HTTP` enable HTTP readiness probe 
- * @member {module:model/ContainerAdvancedSettings.ReadinessProbeTypeEnum} readiness_probe.type
- * @default 'TCP'
- */
-ContainerAdvancedSettings.prototype['readiness_probe.type'] = 'TCP';
-
-/**
- * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
- * @member {String} readiness_probe.http_get.path
- * @default '/'
- */
-ContainerAdvancedSettings.prototype['readiness_probe.http_get.path'] = '/';
-
-/**
- * Delay before liveness probe is initiated
- * @member {Number} readiness_probe.initial_delay_seconds
- * @default 30
- */
-ContainerAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = 30;
-
-/**
- * How often to perform the probe
- * @member {Number} readiness_probe.period_seconds
- * @default 10
- */
-ContainerAdvancedSettings.prototype['readiness_probe.period_seconds'] = 10;
-
-/**
- * When the probe times out
- * @member {Number} readiness_probe.timeout_seconds
- * @default 1
- */
-ContainerAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = 1;
-
-/**
- * Minimum consecutive successes for the probe to be considered successful after having failed.
- * @member {Number} readiness_probe.success_threshold
- * @default 1
- */
-ContainerAdvancedSettings.prototype['readiness_probe.success_threshold'] = 1;
-
-/**
- * Minimum consecutive failures for the probe to be considered failed after having succeeded.
- * @member {Number} readiness_probe.failure_threshold
- * @default 3
- */
-ContainerAdvancedSettings.prototype['readiness_probe.failure_threshold'] = 3;
-
-/**
- * * `NONE` disable liveness probe * `TCP` enable TCP liveness probe * `HTTP` enable HTTP liveness probe 
- * @member {module:model/ContainerAdvancedSettings.LivenessProbeTypeEnum} liveness_probe.type
- * @default 'TCP'
- */
-ContainerAdvancedSettings.prototype['liveness_probe.type'] = 'TCP';
-
-/**
- * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
- * @member {String} liveness_probe.http_get.path
- * @default '/'
- */
-ContainerAdvancedSettings.prototype['liveness_probe.http_get.path'] = '/';
-
-/**
- * Delay before liveness probe is initiated
- * @member {Number} liveness_probe.initial_delay_seconds
- * @default 30
- */
-ContainerAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = 30;
-
-/**
- * How often to perform the probe
- * @member {Number} liveness_probe.period_seconds
- * @default 10
- */
-ContainerAdvancedSettings.prototype['liveness_probe.period_seconds'] = 10;
-
-/**
- * When the probe times out
- * @member {Number} liveness_probe.timeout_seconds
- * @default 5
- */
-ContainerAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = 5;
-
-/**
- * Minimum consecutive successes for the probe to be considered successful after having failed.
- * @member {Number} liveness_probe.success_threshold
- * @default 1
- */
-ContainerAdvancedSettings.prototype['liveness_probe.success_threshold'] = 1;
-
-/**
- * Minimum consecutive failures for the probe to be considered failed after having succeeded.
- * @member {Number} liveness_probe.failure_threshold
- * @default 3
- */
-ContainerAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
 
 /**
  * Allows you to set an existing Kubernetes service account name 
@@ -441,60 +321,6 @@ ContainerAdvancedSettings['DeploymentUpdateStrategyTypeEnum'] = {
      * @const
      */
     "Recreate": "Recreate"
-};
-
-
-/**
- * Allowed values for the <code>readiness_probe.type</code> property.
- * @enum {String}
- * @readonly
- */
-ContainerAdvancedSettings['ReadinessProbeTypeEnum'] = {
-
-    /**
-     * value: "NONE"
-     * @const
-     */
-    "NONE": "NONE",
-
-    /**
-     * value: "TCP"
-     * @const
-     */
-    "TCP": "TCP",
-
-    /**
-     * value: "HTTP"
-     * @const
-     */
-    "HTTP": "HTTP"
-};
-
-
-/**
- * Allowed values for the <code>liveness_probe.type</code> property.
- * @enum {String}
- * @readonly
- */
-ContainerAdvancedSettings['LivenessProbeTypeEnum'] = {
-
-    /**
-     * value: "NONE"
-     * @const
-     */
-    "NONE": "NONE",
-
-    /**
-     * value: "TCP"
-     * @const
-     */
-    "TCP": "TCP",
-
-    /**
-     * value: "HTTP"
-     * @const
-     */
-    "HTTP": "HTTP"
 };
 
 

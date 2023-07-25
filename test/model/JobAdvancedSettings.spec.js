@@ -54,6 +54,24 @@
       //expect(instance).to.be.a(QoveryApi.JobAdvancedSettings);
     });
 
+    it('should have the property buildTimeoutMaxSec (base name: "build.timeout_max_sec")', function() {
+      // uncomment below and update the code to test the property buildTimeoutMaxSec
+      //var instance = new QoveryApi.JobAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property buildCpuMaxInMilli (base name: "build.cpu_max_in_milli")', function() {
+      // uncomment below and update the code to test the property buildCpuMaxInMilli
+      //var instance = new QoveryApi.JobAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property buildRamMaxInGib (base name: "build.ram_max_in_gib")', function() {
+      // uncomment below and update the code to test the property buildRamMaxInGib
+      //var instance = new QoveryApi.JobAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property deploymentTerminationGracePeriodSeconds (base name: "deployment.termination_grace_period_seconds")', function() {
       // uncomment below and update the code to test the property deploymentTerminationGracePeriodSeconds
       //var instance = new QoveryApi.JobAdvancedSettings();
@@ -80,90 +98,6 @@
 
     it('should have the property cronjobSuccessJobsHistoryLimit (base name: "cronjob.success_jobs_history_limit")', function() {
       // uncomment below and update the code to test the property cronjobSuccessJobsHistoryLimit
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeType (base name: "readiness_probe.type")', function() {
-      // uncomment below and update the code to test the property readinessProbeType
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeHttpGetPath (base name: "readiness_probe.http_get.path")', function() {
-      // uncomment below and update the code to test the property readinessProbeHttpGetPath
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeInitialDelaySeconds (base name: "readiness_probe.initial_delay_seconds")', function() {
-      // uncomment below and update the code to test the property readinessProbeInitialDelaySeconds
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbePeriodSeconds (base name: "readiness_probe.period_seconds")', function() {
-      // uncomment below and update the code to test the property readinessProbePeriodSeconds
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeTimeoutSeconds (base name: "readiness_probe.timeout_seconds")', function() {
-      // uncomment below and update the code to test the property readinessProbeTimeoutSeconds
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeSuccessThreshold (base name: "readiness_probe.success_threshold")', function() {
-      // uncomment below and update the code to test the property readinessProbeSuccessThreshold
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeFailureThreshold (base name: "readiness_probe.failure_threshold")', function() {
-      // uncomment below and update the code to test the property readinessProbeFailureThreshold
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeType (base name: "liveness_probe.type")', function() {
-      // uncomment below and update the code to test the property livenessProbeType
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeHttpGetPath (base name: "liveness_probe.http_get.path")', function() {
-      // uncomment below and update the code to test the property livenessProbeHttpGetPath
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeInitialDelaySeconds (base name: "liveness_probe.initial_delay_seconds")', function() {
-      // uncomment below and update the code to test the property livenessProbeInitialDelaySeconds
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbePeriodSeconds (base name: "liveness_probe.period_seconds")', function() {
-      // uncomment below and update the code to test the property livenessProbePeriodSeconds
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeTimeoutSeconds (base name: "liveness_probe.timeout_seconds")', function() {
-      // uncomment below and update the code to test the property livenessProbeTimeoutSeconds
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeSuccessThreshold (base name: "liveness_probe.success_threshold")', function() {
-      // uncomment below and update the code to test the property livenessProbeSuccessThreshold
-      //var instance = new QoveryApi.JobAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeFailureThreshold (base name: "liveness_probe.failure_threshold")', function() {
-      // uncomment below and update the code to test the property livenessProbeFailureThreshold
       //var instance = new QoveryApi.JobAdvancedSettings();
       //expect(instance).to.be();
     });

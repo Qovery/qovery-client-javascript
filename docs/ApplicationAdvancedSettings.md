@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **deploymentUpdateStrategyRollingUpdateMaxUnavailablePercent** | **Number** | Define the percentage of a maximum number of pods that can be unavailable during the update process | [optional] [default to 25]
 **deploymentUpdateStrategyRollingUpdateMaxSurgePercent** | **Number** | Define the percentage of the maximum number of pods that can be created over the desired number of pods | [optional] [default to 25]
 **buildTimeoutMaxSec** | **Number** |  | [optional] [default to 1800]
+**buildCpuMaxInMilli** | **Number** | define the max cpu resources (in milli) | [optional] [default to 4000]
+**buildRamMaxInGib** | **Number** | define the max ram resources (in gib) | [optional] [default to 8]
 **networkIngressProxyBodySizeMb** | **Number** |  | [optional] [default to 100]
 **networkIngressEnableCors** | **Boolean** |  | [optional] [default to false]
 **networkIngressCorsAllowOrigin** | **String** |  | [optional] [default to &#39;*&#39;]
@@ -27,20 +29,8 @@ Name | Type | Description | Notes
 **networkIngressDenylistSourceRange** | **String** | list of source ranges to deny access to ingress proxy.  This property can be used to blacklist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1  | [optional] [default to &#39;&#39;]
 **networkIngressBasicAuthEnvVar** | **String** | Set the name of an environment variable to use as a basic authentication (&#x60;login:crypted_password&#x60;) from &#x60;htpasswd&#x60; command.  | [optional] [default to &#39;&#39;]
 **networkIngressEnableStickySession** | **Boolean** | Enable the load balancer to bind a user&#39;s session to a specific target. This ensures that all requests from the user during the session are sent to the same target  | [optional] [default to false]
-**readinessProbeType** | **String** | * &#x60;NONE&#x60; disable readiness probe * &#x60;TCP&#x60; enable TCP readiness probe * &#x60;HTTP&#x60; enable HTTP readiness probe  | [optional] [default to &#39;TCP&#39;]
-**readinessProbeHttpGetPath** | **String** | HTTP GET path to check status (must returns 2xx E.g \&quot;/healtz\&quot;) - only usable with TYPE &#x3D; HTTP | [optional] [default to &#39;/&#39;]
-**readinessProbeInitialDelaySeconds** | **Number** | Delay before liveness probe is initiated | [optional] [default to 30]
-**readinessProbePeriodSeconds** | **Number** | How often to perform the probe | [optional] [default to 10]
-**readinessProbeTimeoutSeconds** | **Number** | When the probe times out | [optional] [default to 1]
-**readinessProbeSuccessThreshold** | **Number** | Minimum consecutive successes for the probe to be considered successful after having failed. | [optional] [default to 1]
-**readinessProbeFailureThreshold** | **Number** | Minimum consecutive failures for the probe to be considered failed after having succeeded. | [optional] [default to 3]
-**livenessProbeType** | **String** | * &#x60;NONE&#x60; disable liveness probe * &#x60;TCP&#x60; enable TCP liveness probe * &#x60;HTTP&#x60; enable HTTP liveness probe  | [optional] [default to &#39;TCP&#39;]
-**livenessProbeHttpGetPath** | **String** | HTTP GET path to check status (must returns 2xx E.g \&quot;/healtz\&quot;) - only usable with TYPE &#x3D; HTTP | [optional] [default to &#39;/&#39;]
-**livenessProbeInitialDelaySeconds** | **Number** | Delay before liveness probe is initiated | [optional] [default to 30]
-**livenessProbePeriodSeconds** | **Number** | How often to perform the probe | [optional] [default to 10]
-**livenessProbeTimeoutSeconds** | **Number** | When the probe times out | [optional] [default to 5]
-**livenessProbeSuccessThreshold** | **Number** | Minimum consecutive successes for the probe to be considered successful after having failed. | [optional] [default to 1]
-**livenessProbeFailureThreshold** | **Number** | Minimum consecutive failures for the probe to be considered failed after having succeeded. | [optional] [default to 3]
+**networkIngressGrpcSendTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for transmitting a request to the grpc server | [optional] [default to 60]
+**networkIngressGrpcReadTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for transmitting a request to the grpc server | [optional] [default to 60]
 **hpaCpuAverageUtilizationPercent** | **Number** | Percentage value of cpu usage at which point pods should scale up. | [optional] [default to 60]
 **securityServiceAccountName** | **String** | Allows you to set an existing Kubernetes service account name  | [optional] [default to &#39;&#39;]
 
@@ -52,32 +42,6 @@ Name | Type | Description | Notes
 * `RollingUpdate` (value: `"RollingUpdate"`)
 
 * `Recreate` (value: `"Recreate"`)
-
-
-
-
-
-## Enum: ReadinessProbeTypeEnum
-
-
-* `NONE` (value: `"NONE"`)
-
-* `TCP` (value: `"TCP"`)
-
-* `HTTP` (value: `"HTTP"`)
-
-
-
-
-
-## Enum: LivenessProbeTypeEnum
-
-
-* `NONE` (value: `"NONE"`)
-
-* `TCP` (value: `"TCP"`)
-
-* `HTTP` (value: `"HTTP"`)
 
 
 

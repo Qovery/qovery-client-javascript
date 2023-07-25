@@ -156,6 +156,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property networkIngressGrpcSendTimeoutSeconds (base name: "network.ingress.grpc_send_timeout_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressGrpcSendTimeoutSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressGrpcReadTimeoutSeconds (base name: "network.ingress.grpc_read_timeout_seconds")', function() {
+      // uncomment below and update the code to test the property networkIngressGrpcReadTimeoutSeconds
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property networkIngressWhitelistSourceRange (base name: "network.ingress.whitelist_source_range")', function() {
       // uncomment below and update the code to test the property networkIngressWhitelistSourceRange
       //var instance = new QoveryApi.ContainerAdvancedSettings();
@@ -176,90 +188,6 @@
 
     it('should have the property networkIngressEnableStickySession (base name: "network.ingress.enable_sticky_session")', function() {
       // uncomment below and update the code to test the property networkIngressEnableStickySession
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeType (base name: "readiness_probe.type")', function() {
-      // uncomment below and update the code to test the property readinessProbeType
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeHttpGetPath (base name: "readiness_probe.http_get.path")', function() {
-      // uncomment below and update the code to test the property readinessProbeHttpGetPath
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeInitialDelaySeconds (base name: "readiness_probe.initial_delay_seconds")', function() {
-      // uncomment below and update the code to test the property readinessProbeInitialDelaySeconds
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbePeriodSeconds (base name: "readiness_probe.period_seconds")', function() {
-      // uncomment below and update the code to test the property readinessProbePeriodSeconds
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeTimeoutSeconds (base name: "readiness_probe.timeout_seconds")', function() {
-      // uncomment below and update the code to test the property readinessProbeTimeoutSeconds
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeSuccessThreshold (base name: "readiness_probe.success_threshold")', function() {
-      // uncomment below and update the code to test the property readinessProbeSuccessThreshold
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property readinessProbeFailureThreshold (base name: "readiness_probe.failure_threshold")', function() {
-      // uncomment below and update the code to test the property readinessProbeFailureThreshold
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeType (base name: "liveness_probe.type")', function() {
-      // uncomment below and update the code to test the property livenessProbeType
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeHttpGetPath (base name: "liveness_probe.http_get.path")', function() {
-      // uncomment below and update the code to test the property livenessProbeHttpGetPath
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeInitialDelaySeconds (base name: "liveness_probe.initial_delay_seconds")', function() {
-      // uncomment below and update the code to test the property livenessProbeInitialDelaySeconds
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbePeriodSeconds (base name: "liveness_probe.period_seconds")', function() {
-      // uncomment below and update the code to test the property livenessProbePeriodSeconds
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeTimeoutSeconds (base name: "liveness_probe.timeout_seconds")', function() {
-      // uncomment below and update the code to test the property livenessProbeTimeoutSeconds
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeSuccessThreshold (base name: "liveness_probe.success_threshold")', function() {
-      // uncomment below and update the code to test the property livenessProbeSuccessThreshold
-      //var instance = new QoveryApi.ContainerAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property livenessProbeFailureThreshold (base name: "liveness_probe.failure_threshold")', function() {
-      // uncomment below and update the code to test the property livenessProbeFailureThreshold
       //var instance = new QoveryApi.ContainerAdvancedSettings();
       //expect(instance).to.be();
     });

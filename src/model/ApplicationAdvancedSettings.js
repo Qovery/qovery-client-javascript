@@ -68,6 +68,12 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('build.timeout_max_sec')) {
                 obj['build.timeout_max_sec'] = ApiClient.convertToType(data['build.timeout_max_sec'], 'Number');
             }
+            if (data.hasOwnProperty('build.cpu_max_in_milli')) {
+                obj['build.cpu_max_in_milli'] = ApiClient.convertToType(data['build.cpu_max_in_milli'], 'Number');
+            }
+            if (data.hasOwnProperty('build.ram_max_in_gib')) {
+                obj['build.ram_max_in_gib'] = ApiClient.convertToType(data['build.ram_max_in_gib'], 'Number');
+            }
             if (data.hasOwnProperty('network.ingress.proxy_body_size_mb')) {
                 obj['network.ingress.proxy_body_size_mb'] = ApiClient.convertToType(data['network.ingress.proxy_body_size_mb'], 'Number');
             }
@@ -116,47 +122,11 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.enable_sticky_session')) {
                 obj['network.ingress.enable_sticky_session'] = ApiClient.convertToType(data['network.ingress.enable_sticky_session'], 'Boolean');
             }
-            if (data.hasOwnProperty('readiness_probe.type')) {
-                obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
+            if (data.hasOwnProperty('network.ingress.grpc_send_timeout_seconds')) {
+                obj['network.ingress.grpc_send_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.grpc_send_timeout_seconds'], 'Number');
             }
-            if (data.hasOwnProperty('readiness_probe.http_get.path')) {
-                obj['readiness_probe.http_get.path'] = ApiClient.convertToType(data['readiness_probe.http_get.path'], 'String');
-            }
-            if (data.hasOwnProperty('readiness_probe.initial_delay_seconds')) {
-                obj['readiness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['readiness_probe.initial_delay_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.period_seconds')) {
-                obj['readiness_probe.period_seconds'] = ApiClient.convertToType(data['readiness_probe.period_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.timeout_seconds')) {
-                obj['readiness_probe.timeout_seconds'] = ApiClient.convertToType(data['readiness_probe.timeout_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.success_threshold')) {
-                obj['readiness_probe.success_threshold'] = ApiClient.convertToType(data['readiness_probe.success_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.failure_threshold')) {
-                obj['readiness_probe.failure_threshold'] = ApiClient.convertToType(data['readiness_probe.failure_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.type')) {
-                obj['liveness_probe.type'] = ApiClient.convertToType(data['liveness_probe.type'], 'String');
-            }
-            if (data.hasOwnProperty('liveness_probe.http_get.path')) {
-                obj['liveness_probe.http_get.path'] = ApiClient.convertToType(data['liveness_probe.http_get.path'], 'String');
-            }
-            if (data.hasOwnProperty('liveness_probe.initial_delay_seconds')) {
-                obj['liveness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['liveness_probe.initial_delay_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.period_seconds')) {
-                obj['liveness_probe.period_seconds'] = ApiClient.convertToType(data['liveness_probe.period_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.timeout_seconds')) {
-                obj['liveness_probe.timeout_seconds'] = ApiClient.convertToType(data['liveness_probe.timeout_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.success_threshold')) {
-                obj['liveness_probe.success_threshold'] = ApiClient.convertToType(data['liveness_probe.success_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.failure_threshold')) {
-                obj['liveness_probe.failure_threshold'] = ApiClient.convertToType(data['liveness_probe.failure_threshold'], 'Number');
+            if (data.hasOwnProperty('network.ingress.grpc_read_timeout_seconds')) {
+                obj['network.ingress.grpc_read_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.grpc_read_timeout_seconds'], 'Number');
             }
             if (data.hasOwnProperty('hpa.cpu.average_utilization_percent')) {
                 obj['hpa.cpu.average_utilization_percent'] = ApiClient.convertToType(data['hpa.cpu.average_utilization_percent'], 'Number');
@@ -218,6 +188,20 @@ ApplicationAdvancedSettings.prototype['deployment.update_strategy.rolling_update
  * @default 1800
  */
 ApplicationAdvancedSettings.prototype['build.timeout_max_sec'] = 1800;
+
+/**
+ * define the max cpu resources (in milli)
+ * @member {Number} build.cpu_max_in_milli
+ * @default 4000
+ */
+ApplicationAdvancedSettings.prototype['build.cpu_max_in_milli'] = 4000;
+
+/**
+ * define the max ram resources (in gib)
+ * @member {Number} build.ram_max_in_gib
+ * @default 8
+ */
+ApplicationAdvancedSettings.prototype['build.ram_max_in_gib'] = 8;
 
 /**
  * @member {Number} network.ingress.proxy_body_size_mb
@@ -327,102 +311,18 @@ ApplicationAdvancedSettings.prototype['network.ingress.basic_auth_env_var'] = ''
 ApplicationAdvancedSettings.prototype['network.ingress.enable_sticky_session'] = false;
 
 /**
- * * `NONE` disable readiness probe * `TCP` enable TCP readiness probe * `HTTP` enable HTTP readiness probe 
- * @member {module:model/ApplicationAdvancedSettings.ReadinessProbeTypeEnum} readiness_probe.type
- * @default 'TCP'
+ * Sets a timeout (in seconds) for transmitting a request to the grpc server
+ * @member {Number} network.ingress.grpc_send_timeout_seconds
+ * @default 60
  */
-ApplicationAdvancedSettings.prototype['readiness_probe.type'] = 'TCP';
+ApplicationAdvancedSettings.prototype['network.ingress.grpc_send_timeout_seconds'] = 60;
 
 /**
- * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
- * @member {String} readiness_probe.http_get.path
- * @default '/'
+ * Sets a timeout (in seconds) for transmitting a request to the grpc server
+ * @member {Number} network.ingress.grpc_read_timeout_seconds
+ * @default 60
  */
-ApplicationAdvancedSettings.prototype['readiness_probe.http_get.path'] = '/';
-
-/**
- * Delay before liveness probe is initiated
- * @member {Number} readiness_probe.initial_delay_seconds
- * @default 30
- */
-ApplicationAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = 30;
-
-/**
- * How often to perform the probe
- * @member {Number} readiness_probe.period_seconds
- * @default 10
- */
-ApplicationAdvancedSettings.prototype['readiness_probe.period_seconds'] = 10;
-
-/**
- * When the probe times out
- * @member {Number} readiness_probe.timeout_seconds
- * @default 1
- */
-ApplicationAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = 1;
-
-/**
- * Minimum consecutive successes for the probe to be considered successful after having failed.
- * @member {Number} readiness_probe.success_threshold
- * @default 1
- */
-ApplicationAdvancedSettings.prototype['readiness_probe.success_threshold'] = 1;
-
-/**
- * Minimum consecutive failures for the probe to be considered failed after having succeeded.
- * @member {Number} readiness_probe.failure_threshold
- * @default 3
- */
-ApplicationAdvancedSettings.prototype['readiness_probe.failure_threshold'] = 3;
-
-/**
- * * `NONE` disable liveness probe * `TCP` enable TCP liveness probe * `HTTP` enable HTTP liveness probe 
- * @member {module:model/ApplicationAdvancedSettings.LivenessProbeTypeEnum} liveness_probe.type
- * @default 'TCP'
- */
-ApplicationAdvancedSettings.prototype['liveness_probe.type'] = 'TCP';
-
-/**
- * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
- * @member {String} liveness_probe.http_get.path
- * @default '/'
- */
-ApplicationAdvancedSettings.prototype['liveness_probe.http_get.path'] = '/';
-
-/**
- * Delay before liveness probe is initiated
- * @member {Number} liveness_probe.initial_delay_seconds
- * @default 30
- */
-ApplicationAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = 30;
-
-/**
- * How often to perform the probe
- * @member {Number} liveness_probe.period_seconds
- * @default 10
- */
-ApplicationAdvancedSettings.prototype['liveness_probe.period_seconds'] = 10;
-
-/**
- * When the probe times out
- * @member {Number} liveness_probe.timeout_seconds
- * @default 5
- */
-ApplicationAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = 5;
-
-/**
- * Minimum consecutive successes for the probe to be considered successful after having failed.
- * @member {Number} liveness_probe.success_threshold
- * @default 1
- */
-ApplicationAdvancedSettings.prototype['liveness_probe.success_threshold'] = 1;
-
-/**
- * Minimum consecutive failures for the probe to be considered failed after having succeeded.
- * @member {Number} liveness_probe.failure_threshold
- * @default 3
- */
-ApplicationAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 3;
+ApplicationAdvancedSettings.prototype['network.ingress.grpc_read_timeout_seconds'] = 60;
 
 /**
  * Percentage value of cpu usage at which point pods should scale up.
@@ -460,60 +360,6 @@ ApplicationAdvancedSettings['DeploymentUpdateStrategyTypeEnum'] = {
      * @const
      */
     "Recreate": "Recreate"
-};
-
-
-/**
- * Allowed values for the <code>readiness_probe.type</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationAdvancedSettings['ReadinessProbeTypeEnum'] = {
-
-    /**
-     * value: "NONE"
-     * @const
-     */
-    "NONE": "NONE",
-
-    /**
-     * value: "TCP"
-     * @const
-     */
-    "TCP": "TCP",
-
-    /**
-     * value: "HTTP"
-     * @const
-     */
-    "HTTP": "HTTP"
-};
-
-
-/**
- * Allowed values for the <code>liveness_probe.type</code> property.
- * @enum {String}
- * @readonly
- */
-ApplicationAdvancedSettings['LivenessProbeTypeEnum'] = {
-
-    /**
-     * value: "NONE"
-     * @const
-     */
-    "NONE": "NONE",
-
-    /**
-     * value: "TCP"
-     * @const
-     */
-    "TCP": "TCP",
-
-    /**
-     * value: "HTTP"
-     * @const
-     */
-    "HTTP": "HTTP"
 };
 
 

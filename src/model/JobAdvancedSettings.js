@@ -47,6 +47,15 @@ class JobAdvancedSettings {
         if (data) {
             obj = obj || new JobAdvancedSettings();
 
+            if (data.hasOwnProperty('build.timeout_max_sec')) {
+                obj['build.timeout_max_sec'] = ApiClient.convertToType(data['build.timeout_max_sec'], 'Number');
+            }
+            if (data.hasOwnProperty('build.cpu_max_in_milli')) {
+                obj['build.cpu_max_in_milli'] = ApiClient.convertToType(data['build.cpu_max_in_milli'], 'Number');
+            }
+            if (data.hasOwnProperty('build.ram_max_in_gib')) {
+                obj['build.ram_max_in_gib'] = ApiClient.convertToType(data['build.ram_max_in_gib'], 'Number');
+            }
             if (data.hasOwnProperty('deployment.termination_grace_period_seconds')) {
                 obj['deployment.termination_grace_period_seconds'] = ApiClient.convertToType(data['deployment.termination_grace_period_seconds'], 'Number');
             }
@@ -62,48 +71,6 @@ class JobAdvancedSettings {
             if (data.hasOwnProperty('cronjob.success_jobs_history_limit')) {
                 obj['cronjob.success_jobs_history_limit'] = ApiClient.convertToType(data['cronjob.success_jobs_history_limit'], 'Number');
             }
-            if (data.hasOwnProperty('readiness_probe.type')) {
-                obj['readiness_probe.type'] = ApiClient.convertToType(data['readiness_probe.type'], 'String');
-            }
-            if (data.hasOwnProperty('readiness_probe.http_get.path')) {
-                obj['readiness_probe.http_get.path'] = ApiClient.convertToType(data['readiness_probe.http_get.path'], 'String');
-            }
-            if (data.hasOwnProperty('readiness_probe.initial_delay_seconds')) {
-                obj['readiness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['readiness_probe.initial_delay_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.period_seconds')) {
-                obj['readiness_probe.period_seconds'] = ApiClient.convertToType(data['readiness_probe.period_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.timeout_seconds')) {
-                obj['readiness_probe.timeout_seconds'] = ApiClient.convertToType(data['readiness_probe.timeout_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.success_threshold')) {
-                obj['readiness_probe.success_threshold'] = ApiClient.convertToType(data['readiness_probe.success_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('readiness_probe.failure_threshold')) {
-                obj['readiness_probe.failure_threshold'] = ApiClient.convertToType(data['readiness_probe.failure_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.type')) {
-                obj['liveness_probe.type'] = ApiClient.convertToType(data['liveness_probe.type'], 'String');
-            }
-            if (data.hasOwnProperty('liveness_probe.http_get.path')) {
-                obj['liveness_probe.http_get.path'] = ApiClient.convertToType(data['liveness_probe.http_get.path'], 'String');
-            }
-            if (data.hasOwnProperty('liveness_probe.initial_delay_seconds')) {
-                obj['liveness_probe.initial_delay_seconds'] = ApiClient.convertToType(data['liveness_probe.initial_delay_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.period_seconds')) {
-                obj['liveness_probe.period_seconds'] = ApiClient.convertToType(data['liveness_probe.period_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.timeout_seconds')) {
-                obj['liveness_probe.timeout_seconds'] = ApiClient.convertToType(data['liveness_probe.timeout_seconds'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.success_threshold')) {
-                obj['liveness_probe.success_threshold'] = ApiClient.convertToType(data['liveness_probe.success_threshold'], 'Number');
-            }
-            if (data.hasOwnProperty('liveness_probe.failure_threshold')) {
-                obj['liveness_probe.failure_threshold'] = ApiClient.convertToType(data['liveness_probe.failure_threshold'], 'Number');
-            }
             if (data.hasOwnProperty('security.service_account_name')) {
                 obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
             }
@@ -113,6 +80,27 @@ class JobAdvancedSettings {
 
 
 }
+
+/**
+ * define the max timeout for the build
+ * @member {Number} build.timeout_max_sec
+ * @default 1800
+ */
+JobAdvancedSettings.prototype['build.timeout_max_sec'] = 1800;
+
+/**
+ * define the max cpu resources (in milli)
+ * @member {Number} build.cpu_max_in_milli
+ * @default 4000
+ */
+JobAdvancedSettings.prototype['build.cpu_max_in_milli'] = 4000;
+
+/**
+ * define the max ram resources (in gib)
+ * @member {Number} build.ram_max_in_gib
+ * @default 8
+ */
+JobAdvancedSettings.prototype['build.ram_max_in_gib'] = 8;
 
 /**
  * define how long in seconds an application is supposed to be stopped gracefully
@@ -145,104 +133,6 @@ JobAdvancedSettings.prototype['cronjob.failed_jobs_history_limit'] = 1;
 JobAdvancedSettings.prototype['cronjob.success_jobs_history_limit'] = 1;
 
 /**
- * `NONE` disable readiness probe `TCP` enable TCP readiness probe `HTTP` enable HTTP readiness probe 
- * @member {module:model/JobAdvancedSettings.ReadinessProbeTypeEnum} readiness_probe.type
- * @default 'NONE'
- */
-JobAdvancedSettings.prototype['readiness_probe.type'] = 'NONE';
-
-/**
- * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
- * @member {String} readiness_probe.http_get.path
- * @default ''
- */
-JobAdvancedSettings.prototype['readiness_probe.http_get.path'] = '';
-
-/**
- * Delay before liveness probe is initiated
- * @member {Number} readiness_probe.initial_delay_seconds
- * @default 0
- */
-JobAdvancedSettings.prototype['readiness_probe.initial_delay_seconds'] = 0;
-
-/**
- * How often to perform the probe
- * @member {Number} readiness_probe.period_seconds
- * @default 0
- */
-JobAdvancedSettings.prototype['readiness_probe.period_seconds'] = 0;
-
-/**
- * When the probe times out
- * @member {Number} readiness_probe.timeout_seconds
- * @default 0
- */
-JobAdvancedSettings.prototype['readiness_probe.timeout_seconds'] = 0;
-
-/**
- * Minimum consecutive successes for the probe to be considered successful after having failed.
- * @member {Number} readiness_probe.success_threshold
- * @default 0
- */
-JobAdvancedSettings.prototype['readiness_probe.success_threshold'] = 0;
-
-/**
- * Minimum consecutive failures for the probe to be considered failed after having succeeded.
- * @member {Number} readiness_probe.failure_threshold
- * @default 0
- */
-JobAdvancedSettings.prototype['readiness_probe.failure_threshold'] = 0;
-
-/**
- * `NONE` disable liveness probe `TCP` enable TCP liveness probe `HTTP` enable HTTP liveness probe 
- * @member {module:model/JobAdvancedSettings.LivenessProbeTypeEnum} liveness_probe.type
- * @default 'NONE'
- */
-JobAdvancedSettings.prototype['liveness_probe.type'] = 'NONE';
-
-/**
- * HTTP GET path to check status (must returns 2xx E.g \"/healtz\") - only usable with TYPE = HTTP
- * @member {String} liveness_probe.http_get.path
- * @default ''
- */
-JobAdvancedSettings.prototype['liveness_probe.http_get.path'] = '';
-
-/**
- * Delay before liveness probe is initiated
- * @member {Number} liveness_probe.initial_delay_seconds
- * @default 0
- */
-JobAdvancedSettings.prototype['liveness_probe.initial_delay_seconds'] = 0;
-
-/**
- * How often to perform the probe
- * @member {Number} liveness_probe.period_seconds
- * @default 0
- */
-JobAdvancedSettings.prototype['liveness_probe.period_seconds'] = 0;
-
-/**
- * When the probe times out
- * @member {Number} liveness_probe.timeout_seconds
- * @default 0
- */
-JobAdvancedSettings.prototype['liveness_probe.timeout_seconds'] = 0;
-
-/**
- * Minimum consecutive successes for the probe to be considered successful after having failed.
- * @member {Number} liveness_probe.success_threshold
- * @default 0
- */
-JobAdvancedSettings.prototype['liveness_probe.success_threshold'] = 0;
-
-/**
- * Minimum consecutive failures for the probe to be considered failed after having succeeded.
- * @member {Number} liveness_probe.failure_threshold
- * @default 0
- */
-JobAdvancedSettings.prototype['liveness_probe.failure_threshold'] = 0;
-
-/**
  * Allows you to set an existing Kubernetes service account name 
  * @member {String} security.service_account_name
  * @default ''
@@ -251,60 +141,6 @@ JobAdvancedSettings.prototype['security.service_account_name'] = '';
 
 
 
-
-
-/**
- * Allowed values for the <code>readiness_probe.type</code> property.
- * @enum {String}
- * @readonly
- */
-JobAdvancedSettings['ReadinessProbeTypeEnum'] = {
-
-    /**
-     * value: "NONE"
-     * @const
-     */
-    "NONE": "NONE",
-
-    /**
-     * value: "TCP"
-     * @const
-     */
-    "TCP": "TCP",
-
-    /**
-     * value: "HTTP"
-     * @const
-     */
-    "HTTP": "HTTP"
-};
-
-
-/**
- * Allowed values for the <code>liveness_probe.type</code> property.
- * @enum {String}
- * @readonly
- */
-JobAdvancedSettings['LivenessProbeTypeEnum'] = {
-
-    /**
-     * value: "NONE"
-     * @const
-     */
-    "NONE": "NONE",
-
-    /**
-     * value: "TCP"
-     * @const
-     */
-    "TCP": "TCP",
-
-    /**
-     * value: "HTTP"
-     * @const
-     */
-    "HTTP": "HTTP"
-};
 
 
 

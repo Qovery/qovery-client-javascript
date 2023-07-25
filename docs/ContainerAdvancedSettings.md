@@ -21,24 +21,12 @@ Name | Type | Description | Notes
 **networkIngressProxyConnectTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for establishing a connection to a proxied server | [optional] [default to 60]
 **networkIngressProxySendTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for transmitting a request to the proxied server | [optional] [default to 60]
 **networkIngressProxyReadTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for reading a response from the proxied server | [optional] [default to 60]
+**networkIngressGrpcSendTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for transmitting a request to the grpc server | [optional] [default to 60]
+**networkIngressGrpcReadTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for transmitting a request to the grpc server | [optional] [default to 60]
 **networkIngressWhitelistSourceRange** | **String** | list of source ranges to allow access to ingress proxy.  This property can be used to whitelist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 To allow all source ranges, set 0.0.0.0/0.  | [optional] [default to &#39;0.0.0.0/0&#39;]
 **networkIngressDenylistSourceRange** | **String** | list of source ranges to deny access to ingress proxy.  This property can be used to blacklist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1  | [optional] [default to &#39;&#39;]
 **networkIngressBasicAuthEnvVar** | **String** | Set the name of an environment variable to use as a basic authentication (&#x60;login:crypted_password&#x60;) from &#x60;htpasswd&#x60; command. You can add multiples comma separated values.  | [optional] [default to &#39;&#39;]
 **networkIngressEnableStickySession** | **Boolean** | Enable the load balancer to bind a user&#39;s session to a specific target. This ensures that all requests from the user during the session are sent to the same target  | [optional] [default to false]
-**readinessProbeType** | **String** | * &#x60;NONE&#x60; disable readiness probe * &#x60;TCP&#x60; enable TCP readiness probe * &#x60;HTTP&#x60; enable HTTP readiness probe  | [optional] [default to &#39;TCP&#39;]
-**readinessProbeHttpGetPath** | **String** | HTTP GET path to check status (must returns 2xx E.g \&quot;/healtz\&quot;) - only usable with TYPE &#x3D; HTTP | [optional] [default to &#39;/&#39;]
-**readinessProbeInitialDelaySeconds** | **Number** | Delay before liveness probe is initiated | [optional] [default to 30]
-**readinessProbePeriodSeconds** | **Number** | How often to perform the probe | [optional] [default to 10]
-**readinessProbeTimeoutSeconds** | **Number** | When the probe times out | [optional] [default to 1]
-**readinessProbeSuccessThreshold** | **Number** | Minimum consecutive successes for the probe to be considered successful after having failed. | [optional] [default to 1]
-**readinessProbeFailureThreshold** | **Number** | Minimum consecutive failures for the probe to be considered failed after having succeeded. | [optional] [default to 3]
-**livenessProbeType** | **String** | * &#x60;NONE&#x60; disable liveness probe * &#x60;TCP&#x60; enable TCP liveness probe * &#x60;HTTP&#x60; enable HTTP liveness probe  | [optional] [default to &#39;TCP&#39;]
-**livenessProbeHttpGetPath** | **String** | HTTP GET path to check status (must returns 2xx E.g \&quot;/healtz\&quot;) - only usable with TYPE &#x3D; HTTP | [optional] [default to &#39;/&#39;]
-**livenessProbeInitialDelaySeconds** | **Number** | Delay before liveness probe is initiated | [optional] [default to 30]
-**livenessProbePeriodSeconds** | **Number** | How often to perform the probe | [optional] [default to 10]
-**livenessProbeTimeoutSeconds** | **Number** | When the probe times out | [optional] [default to 5]
-**livenessProbeSuccessThreshold** | **Number** | Minimum consecutive successes for the probe to be considered successful after having failed. | [optional] [default to 1]
-**livenessProbeFailureThreshold** | **Number** | Minimum consecutive failures for the probe to be considered failed after having succeeded. | [optional] [default to 3]
 **securityServiceAccountName** | **String** | Allows you to set an existing Kubernetes service account name  | [optional] [default to &#39;&#39;]
 **hpaCpuAverageUtilizationPercent** | **Number** | Percentage value of cpu usage at which point pods should scale up. | [optional] [default to 60]
 
@@ -50,32 +38,6 @@ Name | Type | Description | Notes
 * `RollingUpdate` (value: `"RollingUpdate"`)
 
 * `Recreate` (value: `"Recreate"`)
-
-
-
-
-
-## Enum: ReadinessProbeTypeEnum
-
-
-* `NONE` (value: `"NONE"`)
-
-* `TCP` (value: `"TCP"`)
-
-* `HTTP` (value: `"HTTP"`)
-
-
-
-
-
-## Enum: LivenessProbeTypeEnum
-
-
-* `NONE` (value: `"NONE"`)
-
-* `TCP` (value: `"TCP"`)
-
-* `HTTP` (value: `"HTTP"`)
 
 
 

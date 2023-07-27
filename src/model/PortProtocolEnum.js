@@ -33,6 +33,20 @@ export default class PortProtocolEnum {
         "GRPC" = "GRPC";
 
     
+        /**
+         * value: "TCP"
+         * @const
+         */
+        "TCP" = "TCP";
+
+    
+        /**
+         * value: "UDP"
+         * @const
+         */
+        "UDP" = "UDP";
+
+    
 
     /**
     * Returns a <code>PortProtocolEnum</code> enum value from a Javascript object name.

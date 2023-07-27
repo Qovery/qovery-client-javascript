@@ -7,4 +7,8 @@
 
 * `GRPC` (value: `"GRPC"`)
 
+* `TCP` (value: `"TCP"`)
+
+* `UDP` (value: `"UDP"`)
+
 

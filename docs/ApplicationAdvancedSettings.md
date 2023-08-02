@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **deploymentDelayStartTimeSec** | **Number** | please use &#x60;readiness_probe.initial_delay_seconds&#x60; and &#x60;liveness_probe.initial_delay_seconds&#x60; instead | [optional] [default to 30]
 **deploymentCustomDomainCheckEnabled** | **Boolean** | disable custom domain check when deploying an application | [optional] [default to true]
 **deploymentTerminationGracePeriodSeconds** | **Number** | define how long in seconds an application is supposed to be stopped gracefully | [optional] [default to 60]
+**deploymentAffinityNodeRequired** | **{String: String}** | Set pod placement on specific Kubernetes nodes labels | [optional] 
+**deploymentAntiaffinityPod** | **String** | Define how you want pods affinity to behave: * &#x60;Preferred&#x60; allows, but does not require, pods of a given service are not co-located (or co-hosted) on a single node * &#x60;Requirred&#x60; ensures that the pods of a given service are not co-located (or co-hosted) on a single node (safer in term of availability but can be expensive depending on the number of replicas)  | [optional] [default to &#39;Preferred&#39;]
 **deploymentUpdateStrategyType** | **String** | * &#x60;RollingUpdate&#x60; gracefully rollout new versions, and automatically rollback if the new version fails to start * &#x60;Recreate&#x60; stop all current versions and create new ones once all old ones have been shutdown  | [optional] [default to &#39;RollingUpdate&#39;]
 **deploymentUpdateStrategyRollingUpdateMaxUnavailablePercent** | **Number** | Define the percentage of a maximum number of pods that can be unavailable during the update process | [optional] [default to 25]
 **deploymentUpdateStrategyRollingUpdateMaxSurgePercent** | **Number** | Define the percentage of the maximum number of pods that can be created over the desired number of pods | [optional] [default to 25]
@@ -33,6 +35,17 @@ Name | Type | Description | Notes
 **networkIngressGrpcReadTimeoutSeconds** | **Number** | Sets a timeout (in seconds) for transmitting a request to the grpc server | [optional] [default to 60]
 **hpaCpuAverageUtilizationPercent** | **Number** | Percentage value of cpu usage at which point pods should scale up. | [optional] [default to 60]
 **securityServiceAccountName** | **String** | Allows you to set an existing Kubernetes service account name  | [optional] [default to &#39;&#39;]
+
+
+
+## Enum: DeploymentAntiaffinityPodEnum
+
+
+* `Preferred` (value: `"Preferred"`)
+
+* `Requirred` (value: `"Requirred"`)
+
+
 
 
 

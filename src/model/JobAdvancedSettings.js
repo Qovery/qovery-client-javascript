@@ -59,6 +59,9 @@ class JobAdvancedSettings {
             if (data.hasOwnProperty('deployment.termination_grace_period_seconds')) {
                 obj['deployment.termination_grace_period_seconds'] = ApiClient.convertToType(data['deployment.termination_grace_period_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('deployment.affinity.node.required')) {
+                obj['deployment.affinity.node.required'] = ApiClient.convertToType(data['deployment.affinity.node.required'], {'String': 'String'});
+            }
             if (data.hasOwnProperty('job.delete_ttl_seconds_after_finished')) {
                 obj['job.delete_ttl_seconds_after_finished'] = ApiClient.convertToType(data['job.delete_ttl_seconds_after_finished'], 'Number');
             }
@@ -108,6 +111,12 @@ JobAdvancedSettings.prototype['build.ram_max_in_gib'] = 8;
  * @default 60
  */
 JobAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
+
+/**
+ * Set pod placement on specific Kubernetes nodes labels
+ * @member {Object.<String, String>} deployment.affinity.node.required
+ */
+JobAdvancedSettings.prototype['deployment.affinity.node.required'] = undefined;
 
 /**
  * @member {Number} job.delete_ttl_seconds_after_finished

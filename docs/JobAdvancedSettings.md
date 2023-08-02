@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **buildCpuMaxInMilli** | **Number** | define the max cpu resources (in milli) | [optional] [default to 4000]
 **buildRamMaxInGib** | **Number** | define the max ram resources (in gib) | [optional] [default to 8]
 **deploymentTerminationGracePeriodSeconds** | **Number** | define how long in seconds an application is supposed to be stopped gracefully | [optional] [default to 60]
+**deploymentAffinityNodeRequired** | **{String: String}** | Set pod placement on specific Kubernetes nodes labels | [optional] 
 **jobDeleteTtlSecondsAfterFinished** | **Number** |  | [optional] 
 **cronjobConcurrencyPolicy** | **String** |  | [optional] [default to &#39;Forbid&#39;]
 **cronjobFailedJobsHistoryLimit** | **Number** |  | [optional] [default to 1]

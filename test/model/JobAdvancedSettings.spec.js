@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deploymentAffinityNodeRequired (base name: "deployment.affinity.node.required")', function() {
+      // uncomment below and update the code to test the property deploymentAffinityNodeRequired
+      //var instance = new QoveryApi.JobAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property jobDeleteTtlSecondsAfterFinished (base name: "job.delete_ttl_seconds_after_finished")', function() {
       // uncomment below and update the code to test the property jobDeleteTtlSecondsAfterFinished
       //var instance = new QoveryApi.JobAdvancedSettings();

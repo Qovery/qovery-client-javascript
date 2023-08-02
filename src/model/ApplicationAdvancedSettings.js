@@ -56,6 +56,12 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('deployment.termination_grace_period_seconds')) {
                 obj['deployment.termination_grace_period_seconds'] = ApiClient.convertToType(data['deployment.termination_grace_period_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('deployment.affinity.node.required')) {
+                obj['deployment.affinity.node.required'] = ApiClient.convertToType(data['deployment.affinity.node.required'], {'String': 'String'});
+            }
+            if (data.hasOwnProperty('deployment.antiaffinity.pod')) {
+                obj['deployment.antiaffinity.pod'] = ApiClient.convertToType(data['deployment.antiaffinity.pod'], 'String');
+            }
             if (data.hasOwnProperty('deployment.update_strategy.type')) {
                 obj['deployment.update_strategy.type'] = ApiClient.convertToType(data['deployment.update_strategy.type'], 'String');
             }
@@ -161,6 +167,19 @@ ApplicationAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] 
  * @default 60
  */
 ApplicationAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
+
+/**
+ * Set pod placement on specific Kubernetes nodes labels
+ * @member {Object.<String, String>} deployment.affinity.node.required
+ */
+ApplicationAdvancedSettings.prototype['deployment.affinity.node.required'] = undefined;
+
+/**
+ * Define how you want pods affinity to behave: * `Preferred` allows, but does not require, pods of a given service are not co-located (or co-hosted) on a single node * `Requirred` ensures that the pods of a given service are not co-located (or co-hosted) on a single node (safer in term of availability but can be expensive depending on the number of replicas) 
+ * @member {module:model/ApplicationAdvancedSettings.DeploymentAntiaffinityPodEnum} deployment.antiaffinity.pod
+ * @default 'Preferred'
+ */
+ApplicationAdvancedSettings.prototype['deployment.antiaffinity.pod'] = 'Preferred';
 
 /**
  * * `RollingUpdate` gracefully rollout new versions, and automatically rollback if the new version fails to start * `Recreate` stop all current versions and create new ones once all old ones have been shutdown 
@@ -340,6 +359,27 @@ ApplicationAdvancedSettings.prototype['security.service_account_name'] = '';
 
 
 
+
+
+/**
+ * Allowed values for the <code>deployment.antiaffinity.pod</code> property.
+ * @enum {String}
+ * @readonly
+ */
+ApplicationAdvancedSettings['DeploymentAntiaffinityPodEnum'] = {
+
+    /**
+     * value: "Preferred"
+     * @const
+     */
+    "Preferred": "Preferred",
+
+    /**
+     * value: "Requirred"
+     * @const
+     */
+    "Requirred": "Requirred"
+};
 
 
 /**

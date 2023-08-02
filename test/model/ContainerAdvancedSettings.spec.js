@@ -66,6 +66,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deploymentAffinityNodeRequired (base name: "deployment.affinity.node.required")', function() {
+      // uncomment below and update the code to test the property deploymentAffinityNodeRequired
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property deploymentAntiaffinityPod (base name: "deployment.antiaffinity.pod")', function() {
+      // uncomment below and update the code to test the property deploymentAntiaffinityPod
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property deploymentUpdateStrategyType (base name: "deployment.update_strategy.type")', function() {
       // uncomment below and update the code to test the property deploymentUpdateStrategyType
       //var instance = new QoveryApi.ContainerAdvancedSettings();

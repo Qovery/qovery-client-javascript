@@ -54,12 +54,6 @@
       //expect(instance).to.be.a(QoveryApi.ApplicationAdvancedSettings);
     });
 
-    it('should have the property deploymentDelayStartTimeSec (base name: "deployment.delay_start_time_sec")', function() {
-      // uncomment below and update the code to test the property deploymentDelayStartTimeSec
-      //var instance = new QoveryApi.ApplicationAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
     it('should have the property deploymentCustomDomainCheckEnabled (base name: "deployment.custom_domain_check_enabled")', function() {
       // uncomment below and update the code to test the property deploymentCustomDomainCheckEnabled
       //var instance = new QoveryApi.ApplicationAdvancedSettings();

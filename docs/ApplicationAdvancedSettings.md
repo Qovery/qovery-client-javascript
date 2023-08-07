@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deploymentDelayStartTimeSec** | **Number** | please use &#x60;readiness_probe.initial_delay_seconds&#x60; and &#x60;liveness_probe.initial_delay_seconds&#x60; instead | [optional] [default to 30]
 **deploymentCustomDomainCheckEnabled** | **Boolean** | disable custom domain check when deploying an application | [optional] [default to true]
 **deploymentTerminationGracePeriodSeconds** | **Number** | define how long in seconds an application is supposed to be stopped gracefully | [optional] [default to 60]
 **deploymentAffinityNodeRequired** | **{String: String}** | Set pod placement on specific Kubernetes nodes labels | [optional] 

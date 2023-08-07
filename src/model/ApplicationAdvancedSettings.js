@@ -47,9 +47,6 @@ class ApplicationAdvancedSettings {
         if (data) {
             obj = obj || new ApplicationAdvancedSettings();
 
-            if (data.hasOwnProperty('deployment.delay_start_time_sec')) {
-                obj['deployment.delay_start_time_sec'] = ApiClient.convertToType(data['deployment.delay_start_time_sec'], 'Number');
-            }
             if (data.hasOwnProperty('deployment.custom_domain_check_enabled')) {
                 obj['deployment.custom_domain_check_enabled'] = ApiClient.convertToType(data['deployment.custom_domain_check_enabled'], 'Boolean');
             }
@@ -146,13 +143,6 @@ class ApplicationAdvancedSettings {
 
 
 }
-
-/**
- * please use `readiness_probe.initial_delay_seconds` and `liveness_probe.initial_delay_seconds` instead
- * @member {Number} deployment.delay_start_time_sec
- * @default 30
- */
-ApplicationAdvancedSettings.prototype['deployment.delay_start_time_sec'] = 30;
 
 /**
  * disable custom domain check when deploying an application

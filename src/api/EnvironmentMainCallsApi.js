@@ -17,7 +17,7 @@ import Environment from '../model/Environment';
 import EnvironmentEditRequest from '../model/EnvironmentEditRequest';
 import EnvironmentStatus from '../model/EnvironmentStatus';
 import EnvironmentStatuses from '../model/EnvironmentStatuses';
-import GetEnvironmentStatusesWithStages200Response from '../model/GetEnvironmentStatusesWithStages200Response';
+import EnvironmentStatusesWithStages from '../model/EnvironmentStatusesWithStages';
 
 /**
 * EnvironmentMainCalls service.
@@ -256,7 +256,7 @@ export default class EnvironmentMainCallsApi {
      * Callback function to receive the result of the getEnvironmentStatusesWithStages operation.
      * @callback module:api/EnvironmentMainCallsApi~getEnvironmentStatusesWithStagesCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GetEnvironmentStatusesWithStages200Response} data The data returned by the service call.
+     * @param {module:model/EnvironmentStatusesWithStages} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -264,7 +264,7 @@ export default class EnvironmentMainCallsApi {
      * Get environment statuses with stages
      * @param {String} environmentId Environment ID
      * @param {module:api/EnvironmentMainCallsApi~getEnvironmentStatusesWithStagesCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GetEnvironmentStatusesWithStages200Response}
+     * data is of type: {@link module:model/EnvironmentStatusesWithStages}
      */
     getEnvironmentStatusesWithStages(environmentId, callback) {
       let postBody = null;
@@ -286,7 +286,7 @@ export default class EnvironmentMainCallsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GetEnvironmentStatusesWithStages200Response;
+      let returnType = EnvironmentStatusesWithStages;
       return this.apiClient.callApi(
         '/environment/{environmentId}/statusesWithStages', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

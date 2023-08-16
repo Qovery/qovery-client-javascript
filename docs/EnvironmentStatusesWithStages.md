@@ -1,4 +1,4 @@
-# QoveryApi.GetEnvironmentStatusesWithStages200Response
+# QoveryApi.EnvironmentStatusesWithStages
 
 ## Properties
 

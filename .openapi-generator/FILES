@@ -263,6 +263,7 @@ docs/EnvironmentStatsResponseList.md
 docs/EnvironmentStatus.md
 docs/EnvironmentStatusList.md
 docs/EnvironmentStatuses.md
+docs/EnvironmentStatusesWithStages.md
 docs/EnvironmentTotalNumber.md
 docs/EnvironmentVariable.md
 docs/EnvironmentVariableAlias.md
@@ -279,7 +280,6 @@ docs/EventPaginatedResponseList.md
 docs/EventPaginatedResponseListAllOf.md
 docs/EventResponseList.md
 docs/GenericObjectCurrentCost.md
-docs/GetEnvironmentStatusesWithStages200Response.md
 docs/GitAuthProvider.md
 docs/GitAuthProviderResponseList.md
 docs/GitProviderEnum.md
@@ -810,6 +810,7 @@ src/model/EnvironmentStatsResponseList.js
 src/model/EnvironmentStatus.js
 src/model/EnvironmentStatusList.js
 src/model/EnvironmentStatuses.js
+src/model/EnvironmentStatusesWithStages.js
 src/model/EnvironmentTotalNumber.js
 src/model/EnvironmentVariable.js
 src/model/EnvironmentVariableAlias.js
@@ -824,7 +825,6 @@ src/model/EventPaginatedResponseList.js
 src/model/EventPaginatedResponseListAllOf.js
 src/model/EventResponseList.js
 src/model/GenericObjectCurrentCost.js
-src/model/GetEnvironmentStatusesWithStages200Response.js
 src/model/GitAuthProvider.js
 src/model/GitAuthProviderResponseList.js
 src/model/GitProviderEnum.js
@@ -1325,6 +1325,7 @@ test/model/EnvironmentStatsResponseList.spec.js
 test/model/EnvironmentStatus.spec.js
 test/model/EnvironmentStatusList.spec.js
 test/model/EnvironmentStatuses.spec.js
+test/model/EnvironmentStatusesWithStages.spec.js
 test/model/EnvironmentTotalNumber.spec.js
 test/model/EnvironmentVariable.spec.js
 test/model/EnvironmentVariableAlias.spec.js
@@ -1339,7 +1340,6 @@ test/model/EventPaginatedResponseList.spec.js
 test/model/EventPaginatedResponseListAllOf.spec.js
 test/model/EventResponseList.spec.js
 test/model/GenericObjectCurrentCost.spec.js
-test/model/GetEnvironmentStatusesWithStages200Response.spec.js
 test/model/GitAuthProvider.spec.js
 test/model/GitAuthProviderResponseList.spec.js
 test/model/GitProviderEnum.spec.js

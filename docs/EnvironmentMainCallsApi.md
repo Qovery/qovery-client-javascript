@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ## getEnvironmentStatusesWithStages
 
-> GetEnvironmentStatusesWithStages200Response getEnvironmentStatusesWithStages(environmentId)
+> EnvironmentStatusesWithStages getEnvironmentStatusesWithStages(environmentId)
 
 Get environment statuses with stages
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetEnvironmentStatusesWithStages200Response**](GetEnvironmentStatusesWithStages200Response.md)
+[**EnvironmentStatusesWithStages**](EnvironmentStatusesWithStages.md)
 
 ### Authorization
 

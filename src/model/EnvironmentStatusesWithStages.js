@@ -16,18 +16,18 @@ import DeploymentStageWithServiceStatusesList from './DeploymentStageWithService
 import EnvironmentStatus from './EnvironmentStatus';
 
 /**
- * The GetEnvironmentStatusesWithStages200Response model module.
- * @module model/GetEnvironmentStatusesWithStages200Response
+ * The EnvironmentStatusesWithStages model module.
+ * @module model/EnvironmentStatusesWithStages
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class GetEnvironmentStatusesWithStages200Response {
+class EnvironmentStatusesWithStages {
     /**
-     * Constructs a new <code>GetEnvironmentStatusesWithStages200Response</code>.
-     * @alias module:model/GetEnvironmentStatusesWithStages200Response
+     * Constructs a new <code>EnvironmentStatusesWithStages</code>.
+     * @alias module:model/EnvironmentStatusesWithStages
      */
     constructor() { 
         
-        GetEnvironmentStatusesWithStages200Response.initialize(this);
+        EnvironmentStatusesWithStages.initialize(this);
     }
 
     /**
@@ -39,15 +39,15 @@ class GetEnvironmentStatusesWithStages200Response {
     }
 
     /**
-     * Constructs a <code>GetEnvironmentStatusesWithStages200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentStatusesWithStages</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/GetEnvironmentStatusesWithStages200Response} obj Optional instance to populate.
-     * @return {module:model/GetEnvironmentStatusesWithStages200Response} The populated <code>GetEnvironmentStatusesWithStages200Response</code> instance.
+     * @param {module:model/EnvironmentStatusesWithStages} obj Optional instance to populate.
+     * @return {module:model/EnvironmentStatusesWithStages} The populated <code>EnvironmentStatusesWithStages</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new GetEnvironmentStatusesWithStages200Response();
+            obj = obj || new EnvironmentStatusesWithStages();
 
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = EnvironmentStatus.constructFromObject(data['environment']);
@@ -65,17 +65,17 @@ class GetEnvironmentStatusesWithStages200Response {
 /**
  * @member {module:model/EnvironmentStatus} environment
  */
-GetEnvironmentStatusesWithStages200Response.prototype['environment'] = undefined;
+EnvironmentStatusesWithStages.prototype['environment'] = undefined;
 
 /**
  * @member {module:model/DeploymentStageWithServiceStatusesList} stages
  */
-GetEnvironmentStatusesWithStages200Response.prototype['stages'] = undefined;
+EnvironmentStatusesWithStages.prototype['stages'] = undefined;
 
 
 
 
 
 
-export default GetEnvironmentStatusesWithStages200Response;
+export default EnvironmentStatusesWithStages;
 

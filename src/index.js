@@ -227,6 +227,7 @@ import EnvironmentStats from './model/EnvironmentStats';
 import EnvironmentStatsResponseList from './model/EnvironmentStatsResponseList';
 import EnvironmentStatus from './model/EnvironmentStatus';
 import EnvironmentStatusList from './model/EnvironmentStatusList';
+import EnvironmentStatuses from './model/EnvironmentStatuses';
 import EnvironmentTotalNumber from './model/EnvironmentTotalNumber';
 import EnvironmentVariable from './model/EnvironmentVariable';
 import EnvironmentVariableAlias from './model/EnvironmentVariableAlias';
@@ -241,7 +242,6 @@ import EventPaginatedResponseList from './model/EventPaginatedResponseList';
 import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListAllOf';
 import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
-import GetEnvironmentStatuses200Response from './model/GetEnvironmentStatuses200Response';
 import GetEnvironmentStatusesWithStages200Response from './model/GetEnvironmentStatusesWithStages200Response';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
@@ -1853,6 +1853,12 @@ export {
     EnvironmentStatusList,
 
     /**
+     * The EnvironmentStatuses model constructor.
+     * @property {module:model/EnvironmentStatuses}
+     */
+    EnvironmentStatuses,
+
+    /**
      * The EnvironmentTotalNumber model constructor.
      * @property {module:model/EnvironmentTotalNumber}
      */
@@ -1935,12 +1941,6 @@ export {
      * @property {module:model/GenericObjectCurrentCost}
      */
     GenericObjectCurrentCost,
-
-    /**
-     * The GetEnvironmentStatuses200Response model constructor.
-     * @property {module:model/GetEnvironmentStatuses200Response}
-     */
-    GetEnvironmentStatuses200Response,
 
     /**
      * The GetEnvironmentStatusesWithStages200Response model constructor.

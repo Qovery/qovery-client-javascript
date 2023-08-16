@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.GetEnvironmentStatuses200Response();
+    instance = new QoveryApi.EnvironmentStatuses();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,40 +47,40 @@
       object[property] = value;
   }
 
-  describe('GetEnvironmentStatuses200Response', function() {
-    it('should create an instance of GetEnvironmentStatuses200Response', function() {
-      // uncomment below and update the code to test GetEnvironmentStatuses200Response
-      //var instance = new QoveryApi.GetEnvironmentStatuses200Response();
-      //expect(instance).to.be.a(QoveryApi.GetEnvironmentStatuses200Response);
+  describe('EnvironmentStatuses', function() {
+    it('should create an instance of EnvironmentStatuses', function() {
+      // uncomment below and update the code to test EnvironmentStatuses
+      //var instance = new QoveryApi.EnvironmentStatuses();
+      //expect(instance).to.be.a(QoveryApi.EnvironmentStatuses);
     });
 
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
-      //var instance = new QoveryApi.GetEnvironmentStatuses200Response();
+      //var instance = new QoveryApi.EnvironmentStatuses();
       //expect(instance).to.be();
     });
 
     it('should have the property applications (base name: "applications")', function() {
       // uncomment below and update the code to test the property applications
-      //var instance = new QoveryApi.GetEnvironmentStatuses200Response();
+      //var instance = new QoveryApi.EnvironmentStatuses();
       //expect(instance).to.be();
     });
 
     it('should have the property containers (base name: "containers")', function() {
       // uncomment below and update the code to test the property containers
-      //var instance = new QoveryApi.GetEnvironmentStatuses200Response();
+      //var instance = new QoveryApi.EnvironmentStatuses();
       //expect(instance).to.be();
     });
 
     it('should have the property jobs (base name: "jobs")', function() {
       // uncomment below and update the code to test the property jobs
-      //var instance = new QoveryApi.GetEnvironmentStatuses200Response();
+      //var instance = new QoveryApi.EnvironmentStatuses();
       //expect(instance).to.be();
     });
 
     it('should have the property databases (base name: "databases")', function() {
       // uncomment below and update the code to test the property databases
-      //var instance = new QoveryApi.GetEnvironmentStatuses200Response();
+      //var instance = new QoveryApi.EnvironmentStatuses();
       //expect(instance).to.be();
     });
 

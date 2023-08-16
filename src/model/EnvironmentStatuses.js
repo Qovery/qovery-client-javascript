@@ -16,18 +16,18 @@ import EnvironmentStatus from './EnvironmentStatus';
 import Status from './Status';
 
 /**
- * The GetEnvironmentStatuses200Response model module.
- * @module model/GetEnvironmentStatuses200Response
+ * The EnvironmentStatuses model module.
+ * @module model/EnvironmentStatuses
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class GetEnvironmentStatuses200Response {
+class EnvironmentStatuses {
     /**
-     * Constructs a new <code>GetEnvironmentStatuses200Response</code>.
-     * @alias module:model/GetEnvironmentStatuses200Response
+     * Constructs a new <code>EnvironmentStatuses</code>.
+     * @alias module:model/EnvironmentStatuses
      */
     constructor() { 
         
-        GetEnvironmentStatuses200Response.initialize(this);
+        EnvironmentStatuses.initialize(this);
     }
 
     /**
@@ -39,15 +39,15 @@ class GetEnvironmentStatuses200Response {
     }
 
     /**
-     * Constructs a <code>GetEnvironmentStatuses200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>EnvironmentStatuses</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/GetEnvironmentStatuses200Response} obj Optional instance to populate.
-     * @return {module:model/GetEnvironmentStatuses200Response} The populated <code>GetEnvironmentStatuses200Response</code> instance.
+     * @param {module:model/EnvironmentStatuses} obj Optional instance to populate.
+     * @return {module:model/EnvironmentStatuses} The populated <code>EnvironmentStatuses</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new GetEnvironmentStatuses200Response();
+            obj = obj || new EnvironmentStatuses();
 
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = EnvironmentStatus.constructFromObject(data['environment']);
@@ -74,32 +74,32 @@ class GetEnvironmentStatuses200Response {
 /**
  * @member {module:model/EnvironmentStatus} environment
  */
-GetEnvironmentStatuses200Response.prototype['environment'] = undefined;
+EnvironmentStatuses.prototype['environment'] = undefined;
 
 /**
  * @member {Array.<module:model/Status>} applications
  */
-GetEnvironmentStatuses200Response.prototype['applications'] = undefined;
+EnvironmentStatuses.prototype['applications'] = undefined;
 
 /**
  * @member {Array.<module:model/Status>} containers
  */
-GetEnvironmentStatuses200Response.prototype['containers'] = undefined;
+EnvironmentStatuses.prototype['containers'] = undefined;
 
 /**
  * @member {Array.<module:model/Status>} jobs
  */
-GetEnvironmentStatuses200Response.prototype['jobs'] = undefined;
+EnvironmentStatuses.prototype['jobs'] = undefined;
 
 /**
  * @member {Array.<module:model/Status>} databases
  */
-GetEnvironmentStatuses200Response.prototype['databases'] = undefined;
+EnvironmentStatuses.prototype['databases'] = undefined;
 
 
 
 
 
 
-export default GetEnvironmentStatuses200Response;
+export default EnvironmentStatuses;
 

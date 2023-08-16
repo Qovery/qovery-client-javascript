@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ## getEnvironmentStatuses
 
-> GetEnvironmentStatuses200Response getEnvironmentStatuses(environmentId)
+> EnvironmentStatuses getEnvironmentStatuses(environmentId)
 
 Get environment statuses with services status
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetEnvironmentStatuses200Response**](GetEnvironmentStatuses200Response.md)
+[**EnvironmentStatuses**](EnvironmentStatuses.md)
 
 ### Authorization
 

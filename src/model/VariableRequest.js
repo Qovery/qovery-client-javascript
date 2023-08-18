@@ -23,11 +23,11 @@ class VariableRequest {
     /**
      * Constructs a new <code>VariableRequest</code>.
      * @alias module:model/VariableRequest
-     * @param key {String} 
-     * @param value {String} 
-     * @param isSecret {Boolean} 
+     * @param key {String} the key of the environment variable
+     * @param value {String} the value of the environment variable
+     * @param isSecret {Boolean} if true, the variable will be considered as a secret and will not be accessible after its creation. Only your applications will be able to access its value at build and run time.
      * @param variableScope {module:model/APIVariableScopeEnum} 
-     * @param variableParentId {String} 
+     * @param variableParentId {String} based on the selected scope, it contains the ID of the service, environment or project where the variable is attached
      */
     constructor(key, value, isSecret, variableScope, variableParentId) { 
         
@@ -84,21 +84,25 @@ class VariableRequest {
 }
 
 /**
+ * the key of the environment variable
  * @member {String} key
  */
 VariableRequest.prototype['key'] = undefined;
 
 /**
+ * the value of the environment variable
  * @member {String} value
  */
 VariableRequest.prototype['value'] = undefined;
 
 /**
+ * the path where the file will be mounted (only if type =file)
  * @member {String} mount_path
  */
 VariableRequest.prototype['mount_path'] = undefined;
 
 /**
+ * if true, the variable will be considered as a secret and will not be accessible after its creation. Only your applications will be able to access its value at build and run time.
  * @member {Boolean} is_secret
  */
 VariableRequest.prototype['is_secret'] = undefined;
@@ -109,6 +113,7 @@ VariableRequest.prototype['is_secret'] = undefined;
 VariableRequest.prototype['variable_scope'] = undefined;
 
 /**
+ * based on the selected scope, it contains the ID of the service, environment or project where the variable is attached
  * @member {String} variable_parent_id
  */
 VariableRequest.prototype['variable_parent_id'] = undefined;

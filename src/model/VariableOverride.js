@@ -24,9 +24,9 @@ class VariableOverride {
     /**
      * Constructs a new <code>VariableOverride</code>.
      * @alias module:model/VariableOverride
-     * @param id {String} 
-     * @param key {String} 
-     * @param mountPath {String} 
+     * @param id {String} The id of the overriden variable
+     * @param key {String} The key of the overriden variable
+     * @param mountPath {String} The mounth path of the overriden variable (only if environment variable type is 'file')
      * @param scope {module:model/APIVariableScopeEnum} 
      * @param variableType {module:model/APIVariableTypeEnum} 
      */
@@ -85,21 +85,25 @@ class VariableOverride {
 }
 
 /**
+ * The id of the overriden variable
  * @member {String} id
  */
 VariableOverride.prototype['id'] = undefined;
 
 /**
+ * The key of the overriden variable
  * @member {String} key
  */
 VariableOverride.prototype['key'] = undefined;
 
 /**
+ * The value of the overriden variable
  * @member {String} value
  */
 VariableOverride.prototype['value'] = undefined;
 
 /**
+ * The mounth path of the overriden variable (only if environment variable type is 'file')
  * @member {String} mount_path
  */
 VariableOverride.prototype['mount_path'] = undefined;

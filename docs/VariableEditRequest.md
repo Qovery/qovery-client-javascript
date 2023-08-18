@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**key** | **String** |  | 
-**value** | **String** |  | 
+**key** | **String** | the key of the environment variable | 
+**value** | **String** | the value of the environment variable | 
 
 

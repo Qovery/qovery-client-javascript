@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**value** | **String** |  | 
-**aliasScope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 
-**aliasParentId** | **String** |  | 
+**value** | **String** | the value to be used as Override of the targeted environment variable. | 
+**overrideScope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 
+**overrideParentId** | **String** | the id of the variable that is aliased. | 
 
 

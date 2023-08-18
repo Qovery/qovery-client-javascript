@@ -23,9 +23,9 @@ class VariableAliasRequest {
     /**
      * Constructs a new <code>VariableAliasRequest</code>.
      * @alias module:model/VariableAliasRequest
-     * @param key {String} 
+     * @param key {String} the value to be used as Alias of the targeted environment variable.
      * @param aliasScope {module:model/APIVariableScopeEnum} 
-     * @param aliasParentId {String} 
+     * @param aliasParentId {String} the id of the variable that is aliased.
      */
     constructor(key, aliasScope, aliasParentId) { 
         
@@ -71,6 +71,7 @@ class VariableAliasRequest {
 }
 
 /**
+ * the value to be used as Alias of the targeted environment variable.
  * @member {String} key
  */
 VariableAliasRequest.prototype['key'] = undefined;
@@ -81,6 +82,7 @@ VariableAliasRequest.prototype['key'] = undefined;
 VariableAliasRequest.prototype['alias_scope'] = undefined;
 
 /**
+ * the id of the variable that is aliased.
  * @member {String} alias_parent_id
  */
 VariableAliasRequest.prototype['alias_parent_id'] = undefined;

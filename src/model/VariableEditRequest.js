@@ -22,8 +22,8 @@ class VariableEditRequest {
     /**
      * Constructs a new <code>VariableEditRequest</code>.
      * @alias module:model/VariableEditRequest
-     * @param key {String} 
-     * @param value {String} 
+     * @param key {String} the key of the environment variable
+     * @param value {String} the value of the environment variable
      */
     constructor(key, value) { 
         
@@ -65,11 +65,13 @@ class VariableEditRequest {
 }
 
 /**
+ * the key of the environment variable
  * @member {String} key
  */
 VariableEditRequest.prototype['key'] = undefined;
 
 /**
+ * the value of the environment variable
  * @member {String} value
  */
 VariableEditRequest.prototype['value'] = undefined;

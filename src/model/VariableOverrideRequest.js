@@ -23,13 +23,13 @@ class VariableOverrideRequest {
     /**
      * Constructs a new <code>VariableOverrideRequest</code>.
      * @alias module:model/VariableOverrideRequest
-     * @param value {String} 
-     * @param aliasScope {module:model/APIVariableScopeEnum} 
-     * @param aliasParentId {String} 
+     * @param value {String} the value to be used as Override of the targeted environment variable.
+     * @param overrideScope {module:model/APIVariableScopeEnum} 
+     * @param overrideParentId {String} the id of the variable that is aliased.
      */
-    constructor(value, aliasScope, aliasParentId) { 
+    constructor(value, overrideScope, overrideParentId) { 
         
-        VariableOverrideRequest.initialize(this, value, aliasScope, aliasParentId);
+        VariableOverrideRequest.initialize(this, value, overrideScope, overrideParentId);
     }
 
     /**
@@ -37,10 +37,10 @@ class VariableOverrideRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, value, aliasScope, aliasParentId) { 
+    static initialize(obj, value, overrideScope, overrideParentId) { 
         obj['value'] = value;
-        obj['alias_scope'] = aliasScope;
-        obj['alias_parent_id'] = aliasParentId;
+        obj['override_scope'] = overrideScope;
+        obj['override_parent_id'] = overrideParentId;
     }
 
     /**
@@ -57,11 +57,11 @@ class VariableOverrideRequest {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
-            if (data.hasOwnProperty('alias_scope')) {
-                obj['alias_scope'] = APIVariableScopeEnum.constructFromObject(data['alias_scope']);
+            if (data.hasOwnProperty('override_scope')) {
+                obj['override_scope'] = APIVariableScopeEnum.constructFromObject(data['override_scope']);
             }
-            if (data.hasOwnProperty('alias_parent_id')) {
-                obj['alias_parent_id'] = ApiClient.convertToType(data['alias_parent_id'], 'String');
+            if (data.hasOwnProperty('override_parent_id')) {
+                obj['override_parent_id'] = ApiClient.convertToType(data['override_parent_id'], 'String');
             }
         }
         return obj;
@@ -71,19 +71,21 @@ class VariableOverrideRequest {
 }
 
 /**
+ * the value to be used as Override of the targeted environment variable.
  * @member {String} value
  */
 VariableOverrideRequest.prototype['value'] = undefined;
 
 /**
- * @member {module:model/APIVariableScopeEnum} alias_scope
+ * @member {module:model/APIVariableScopeEnum} override_scope
  */
-VariableOverrideRequest.prototype['alias_scope'] = undefined;
+VariableOverrideRequest.prototype['override_scope'] = undefined;
 
 /**
- * @member {String} alias_parent_id
+ * the id of the variable that is aliased.
+ * @member {String} override_parent_id
  */
-VariableOverrideRequest.prototype['alias_parent_id'] = undefined;
+VariableOverrideRequest.prototype['override_parent_id'] = undefined;
 
 
 

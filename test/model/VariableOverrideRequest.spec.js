@@ -60,14 +60,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property aliasScope (base name: "alias_scope")', function() {
-      // uncomment below and update the code to test the property aliasScope
+    it('should have the property overrideScope (base name: "override_scope")', function() {
+      // uncomment below and update the code to test the property overrideScope
       //var instance = new QoveryApi.VariableOverrideRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property aliasParentId (base name: "alias_parent_id")', function() {
-      // uncomment below and update the code to test the property aliasParentId
+    it('should have the property overrideParentId (base name: "override_parent_id")', function() {
+      // uncomment below and update the code to test the property overrideParentId
       //var instance = new QoveryApi.VariableOverrideRequest();
       //expect(instance).to.be();
     });

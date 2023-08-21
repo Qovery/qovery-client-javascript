@@ -4,8 +4,58 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**editAccountInformation**](AccountInfoApi.md#editAccountInformation) | **PUT** /account | Edit account information
 [**getAccountInformation**](AccountInfoApi.md#getAccountInformation) | **GET** /account | Get Account information
 
+
+
+## editAccountInformation
+
+> AccountInfo editAccountInformation(opts)
+
+Edit account information
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.AccountInfoApi();
+let opts = {
+  'accountInfoEditRequest': new QoveryApi.AccountInfoEditRequest() // AccountInfoEditRequest | 
+};
+apiInstance.editAccountInformation(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountInfoEditRequest** | [**AccountInfoEditRequest**](AccountInfoEditRequest.md)|  | [optional] 
+
+### Return type
+
+[**AccountInfo**](AccountInfo.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## getAccountInformation

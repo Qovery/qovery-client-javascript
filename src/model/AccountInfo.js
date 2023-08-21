@@ -65,6 +65,9 @@ class AccountInfo {
             if (data.hasOwnProperty('profile_picture_url')) {
                 obj['profile_picture_url'] = ApiClient.convertToType(data['profile_picture_url'], 'String');
             }
+            if (data.hasOwnProperty('communication_email')) {
+                obj['communication_email'] = ApiClient.convertToType(data['communication_email'], 'String');
+            }
         }
         return obj;
     }
@@ -101,6 +104,11 @@ AccountInfo.prototype['last_name'] = undefined;
  * @member {String} profile_picture_url
  */
 AccountInfo.prototype['profile_picture_url'] = undefined;
+
+/**
+ * @member {String} communication_email
+ */
+AccountInfo.prototype['communication_email'] = undefined;
 
 
 

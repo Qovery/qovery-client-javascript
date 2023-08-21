@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import AccountInfo from '../model/AccountInfo';
+import AccountInfoEditRequest from '../model/AccountInfoEditRequest';
 
 /**
 * AccountInfo service.
@@ -33,6 +34,45 @@ export default class AccountInfoApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the editAccountInformation operation.
+     * @callback module:api/AccountInfoApi~editAccountInformationCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/AccountInfo} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit account information
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AccountInfoEditRequest} opts.accountInfoEditRequest 
+     * @param {module:api/AccountInfoApi~editAccountInformationCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/AccountInfo}
+     */
+    editAccountInformation(opts, callback) {
+      opts = opts || {};
+      let postBody = opts['accountInfoEditRequest'];
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = AccountInfo;
+      return this.apiClient.callApi(
+        '/account', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the getAccountInformation operation.

@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**firstName** | **String** |  | [optional] 
-**lastName** | **String** |  | [optional] 
-**profilePictureUrl** | **String** |  | [optional] 
+**communicationEmail** | **String** | The email to be used for official Qovery communications | [optional] 
 
 

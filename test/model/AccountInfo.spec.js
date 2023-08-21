@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property communicationEmail (base name: "communication_email")', function() {
+      // uncomment below and update the code to test the property communicationEmail
+      //var instance = new QoveryApi.AccountInfo();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -48,6 +48,16 @@
   }
 
   describe('AccountInfoApi', function() {
+    describe('editAccountInformation', function() {
+      it('should call editAccountInformation successfully', function(done) {
+        //uncomment below and update the code to test editAccountInformation
+        //instance.editAccountInformation(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getAccountInformation', function() {
       it('should call getAccountInformation successfully', function(done) {
         //uncomment below and update the code to test getAccountInformation

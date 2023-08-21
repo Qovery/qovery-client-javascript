@@ -109,6 +109,9 @@ var bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 var api = new QoveryApi.AccountInfoApi()
+var opts = {
+  'accountInfoEditRequest': new QoveryApi.AccountInfoEditRequest() // {AccountInfoEditRequest} 
+};
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -116,7 +119,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getAccountInformation(callback);
+api.editAccountInformation(opts, callback);
 
 ```
 
@@ -126,6 +129,7 @@ All URIs are relative to *https://api.qovery.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*QoveryApi.AccountInfoApi* | [**editAccountInformation**](docs/AccountInfoApi.md#editAccountInformation) | **PUT** /account | Edit account information
 *QoveryApi.AccountInfoApi* | [**getAccountInformation**](docs/AccountInfoApi.md#getAccountInformation) | **GET** /account | Get Account information
 *QoveryApi.ApplicationActionsApi* | [**deployApplication**](docs/ApplicationActionsApi.md#deployApplication) | **POST** /application/{applicationId}/deploy | Deploy application
 *QoveryApi.ApplicationActionsApi* | [**rebootApplication**](docs/ApplicationActionsApi.md#rebootApplication) | **POST** /application/{applicationId}/restart-service | Reboot application

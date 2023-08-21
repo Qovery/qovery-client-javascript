@@ -47,14 +47,8 @@ class AccountInfoEditRequest {
         if (data) {
             obj = obj || new AccountInfoEditRequest();
 
-            if (data.hasOwnProperty('first_name')) {
-                obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
-            }
-            if (data.hasOwnProperty('last_name')) {
-                obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
-            }
-            if (data.hasOwnProperty('profile_picture_url')) {
-                obj['profile_picture_url'] = ApiClient.convertToType(data['profile_picture_url'], 'String');
+            if (data.hasOwnProperty('communication_email')) {
+                obj['communication_email'] = ApiClient.convertToType(data['communication_email'], 'String');
             }
         }
         return obj;
@@ -64,19 +58,10 @@ class AccountInfoEditRequest {
 }
 
 /**
- * @member {String} first_name
+ * The email to be used for official Qovery communications
+ * @member {String} communication_email
  */
-AccountInfoEditRequest.prototype['first_name'] = undefined;
-
-/**
- * @member {String} last_name
- */
-AccountInfoEditRequest.prototype['last_name'] = undefined;
-
-/**
- * @member {String} profile_picture_url
- */
-AccountInfoEditRequest.prototype['profile_picture_url'] = undefined;
+AccountInfoEditRequest.prototype['communication_email'] = undefined;
 
 
 

@@ -54,20 +54,8 @@
       //expect(instance).to.be.a(QoveryApi.AccountInfoEditRequest);
     });
 
-    it('should have the property firstName (base name: "first_name")', function() {
-      // uncomment below and update the code to test the property firstName
-      //var instance = new QoveryApi.AccountInfoEditRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property lastName (base name: "last_name")', function() {
-      // uncomment below and update the code to test the property lastName
-      //var instance = new QoveryApi.AccountInfoEditRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property profilePictureUrl (base name: "profile_picture_url")', function() {
-      // uncomment below and update the code to test the property profilePictureUrl
+    it('should have the property communicationEmail (base name: "communication_email")', function() {
+      // uncomment below and update the code to test the property communicationEmail
       //var instance = new QoveryApi.AccountInfoEditRequest();
       //expect(instance).to.be();
     });

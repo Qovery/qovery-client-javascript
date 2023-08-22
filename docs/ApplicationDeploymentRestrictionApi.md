@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## deleteApplicationDeploymentRestriction
 
-> deleteApplicationDeploymentRestriction(applicationId)
+> deleteApplicationDeploymentRestriction(applicationId, deploymentRestrictionId)
 
 Delete an application deployment restriction
 
@@ -83,7 +83,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.ApplicationDeploymentRestrictionApi();
 let applicationId = "applicationId_example"; // String | Application ID
-apiInstance.deleteApplicationDeploymentRestriction(applicationId, (error, data, response) => {
+let deploymentRestrictionId = "deploymentRestrictionId_example"; // String | Deployment Restriction ID
+apiInstance.deleteApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -98,6 +99,7 @@ apiInstance.deleteApplicationDeploymentRestriction(applicationId, (error, data, 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **applicationId** | **String**| Application ID | 
+ **deploymentRestrictionId** | **String**| Deployment Restriction ID | 
 
 ### Return type
 

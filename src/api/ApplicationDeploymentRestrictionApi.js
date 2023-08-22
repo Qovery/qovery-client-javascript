@@ -94,17 +94,23 @@ export default class ApplicationDeploymentRestrictionApi {
      * Delete an application deployment restriction
      * Delete an application deployment restriction
      * @param {String} applicationId Application ID
+     * @param {String} deploymentRestrictionId Deployment Restriction ID
      * @param {module:api/ApplicationDeploymentRestrictionApi~deleteApplicationDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteApplicationDeploymentRestriction(applicationId, callback) {
+    deleteApplicationDeploymentRestriction(applicationId, deploymentRestrictionId, callback) {
       let postBody = null;
       // verify the required parameter 'applicationId' is set
       if (applicationId === undefined || applicationId === null) {
         throw new Error("Missing the required parameter 'applicationId' when calling deleteApplicationDeploymentRestriction");
       }
+      // verify the required parameter 'deploymentRestrictionId' is set
+      if (deploymentRestrictionId === undefined || deploymentRestrictionId === null) {
+        throw new Error("Missing the required parameter 'deploymentRestrictionId' when calling deleteApplicationDeploymentRestriction");
+      }
 
       let pathParams = {
-        'applicationId': applicationId
+        'applicationId': applicationId,
+        'deploymentRestrictionId': deploymentRestrictionId
       };
       let queryParams = {
       };

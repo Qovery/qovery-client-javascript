@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**deploymentRestrictions** | [**[ApplicationDeploymentRestriction]**](ApplicationDeploymentRestriction.md) |  | [optional] 
+**results** | [**[ApplicationDeploymentRestriction]**](ApplicationDeploymentRestriction.md) |  | [optional] 
 
 

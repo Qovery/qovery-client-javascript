@@ -48,8 +48,8 @@ class ApplicationDeploymentRestrictionResponseList {
         if (data) {
             obj = obj || new ApplicationDeploymentRestrictionResponseList();
 
-            if (data.hasOwnProperty('deployment_restrictions')) {
-                obj['deployment_restrictions'] = ApiClient.convertToType(data['deployment_restrictions'], [ApplicationDeploymentRestriction]);
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [ApplicationDeploymentRestriction]);
             }
         }
         return obj;
@@ -59,9 +59,9 @@ class ApplicationDeploymentRestrictionResponseList {
 }
 
 /**
- * @member {Array.<module:model/ApplicationDeploymentRestriction>} deployment_restrictions
+ * @member {Array.<module:model/ApplicationDeploymentRestriction>} results
  */
-ApplicationDeploymentRestrictionResponseList.prototype['deployment_restrictions'] = undefined;
+ApplicationDeploymentRestrictionResponseList.prototype['results'] = undefined;
 
 
 

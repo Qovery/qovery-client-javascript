@@ -54,8 +54,8 @@
       //expect(instance).to.be.a(QoveryApi.ApplicationDeploymentRestrictionResponseList);
     });
 
-    it('should have the property deploymentRestrictions (base name: "deployment_restrictions")', function() {
-      // uncomment below and update the code to test the property deploymentRestrictions
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
       //var instance = new QoveryApi.ApplicationDeploymentRestrictionResponseList();
       //expect(instance).to.be();
     });

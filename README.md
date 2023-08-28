@@ -154,16 +154,13 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationEnvironmentVariableApi* | [**listApplicationEnvironmentVariable**](docs/ApplicationEnvironmentVariableApi.md#listApplicationEnvironmentVariable) | **GET** /application/{applicationId}/environmentVariable | List environment variables
 *QoveryApi.ApplicationEventApi* | [**listApplicationEvent**](docs/ApplicationEventApi.md#listApplicationEvent) | **GET** /application/{applicationId}/event | List application events
 *QoveryApi.ApplicationLogsApi* | [**listApplicationLog**](docs/ApplicationLogsApi.md#listApplicationLog) | **GET** /application/{applicationId}/log | List logs
-*QoveryApi.ApplicationMainCallsApi* | [**createApplicationTag**](docs/ApplicationMainCallsApi.md#createApplicationTag) | **POST** /application/{applicationId}/tag | Add application tag
 *QoveryApi.ApplicationMainCallsApi* | [**deleteApplication**](docs/ApplicationMainCallsApi.md#deleteApplication) | **DELETE** /application/{applicationId} | Delete application
-*QoveryApi.ApplicationMainCallsApi* | [**deleteApplicationTag**](docs/ApplicationMainCallsApi.md#deleteApplicationTag) | **DELETE** /application/{applicationId}/tag/{tagId} | Delete application tag
 *QoveryApi.ApplicationMainCallsApi* | [**editApplication**](docs/ApplicationMainCallsApi.md#editApplication) | **PUT** /application/{applicationId} | Edit application
 *QoveryApi.ApplicationMainCallsApi* | [**getApplication**](docs/ApplicationMainCallsApi.md#getApplication) | **GET** /application/{applicationId} | Get application by ID
 *QoveryApi.ApplicationMainCallsApi* | [**getApplicationStatus**](docs/ApplicationMainCallsApi.md#getApplicationStatus) | **GET** /application/{applicationId}/status | Get application status
 *QoveryApi.ApplicationMainCallsApi* | [**listApplicationCommit**](docs/ApplicationMainCallsApi.md#listApplicationCommit) | **GET** /application/{applicationId}/commit | List last commits
 *QoveryApi.ApplicationMainCallsApi* | [**listApplicationContributor**](docs/ApplicationMainCallsApi.md#listApplicationContributor) | **GET** /application/{applicationId}/contributor | List contributors
 *QoveryApi.ApplicationMainCallsApi* | [**listApplicationLinks**](docs/ApplicationMainCallsApi.md#listApplicationLinks) | **GET** /application/{applicationId}/link | List all URLs of the application
-*QoveryApi.ApplicationMainCallsApi* | [**listApplicationTag**](docs/ApplicationMainCallsApi.md#listApplicationTag) | **GET** /application/{applicationId}/tag | List tags
 *QoveryApi.ApplicationMetricsApi* | [**getApplicationCurrentInstance**](docs/ApplicationMetricsApi.md#getApplicationCurrentInstance) | **GET** /application/{applicationId}/instance | List currently running instances of the application with their CPU and RAM metrics
 *QoveryApi.ApplicationMetricsApi* | [**getApplicationCurrentScale**](docs/ApplicationMetricsApi.md#getApplicationCurrentScale) | **GET** /application/{applicationId}/currentScale | Get current scaling of the application
 *QoveryApi.ApplicationMetricsApi* | [**getApplicationCurrentStorageDisk**](docs/ApplicationMetricsApi.md#getApplicationCurrentStorageDisk) | **GET** /application/{applicationId}/currentStorage | List current storage disk usage
@@ -916,9 +913,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.StorageDisk](docs/StorageDisk.md)
  - [QoveryApi.StorageDiskResponseList](docs/StorageDiskResponseList.md)
  - [QoveryApi.StorageTypeEnum](docs/StorageTypeEnum.md)
- - [QoveryApi.Tag](docs/Tag.md)
- - [QoveryApi.TagRequest](docs/TagRequest.md)
- - [QoveryApi.TagResponseList](docs/TagResponseList.md)
  - [QoveryApi.ThresholdMetricStatusEnum](docs/ThresholdMetricStatusEnum.md)
  - [QoveryApi.TransferOwnershipRequest](docs/TransferOwnershipRequest.md)
  - [QoveryApi.TypeOfUseEnum](docs/TypeOfUseEnum.md)

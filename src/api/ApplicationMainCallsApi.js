@@ -18,8 +18,6 @@ import ApplicationEditRequest from '../model/ApplicationEditRequest';
 import CommitResponseList from '../model/CommitResponseList';
 import LinkResponseList from '../model/LinkResponseList';
 import Status from '../model/Status';
-import TagRequest from '../model/TagRequest';
-import TagResponseList from '../model/TagResponseList';
 import UserResponseList from '../model/UserResponseList';
 
 /**
@@ -40,51 +38,6 @@ export default class ApplicationMainCallsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
-
-    /**
-     * Callback function to receive the result of the createApplicationTag operation.
-     * @callback module:api/ApplicationMainCallsApi~createApplicationTagCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TagResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Add application tag
-     * @param {String} applicationId Application ID
-     * @param {Object} opts Optional parameters
-     * @param {module:model/TagRequest} opts.tagRequest 
-     * @param {module:api/ApplicationMainCallsApi~createApplicationTagCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TagResponseList}
-     */
-    createApplicationTag(applicationId, opts, callback) {
-      opts = opts || {};
-      let postBody = opts['tagRequest'];
-      // verify the required parameter 'applicationId' is set
-      if (applicationId === undefined || applicationId === null) {
-        throw new Error("Missing the required parameter 'applicationId' when calling createApplicationTag");
-      }
-
-      let pathParams = {
-        'applicationId': applicationId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = TagResponseList;
-      return this.apiClient.callApi(
-        '/application/{applicationId}/tag', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
 
     /**
      * Callback function to receive the result of the deleteApplication operation.
@@ -123,53 +76,6 @@ export default class ApplicationMainCallsApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/application/{applicationId}', 'DELETE',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the deleteApplicationTag operation.
-     * @callback module:api/ApplicationMainCallsApi~deleteApplicationTagCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Delete application tag
-     * @param {String} applicationId Application ID
-     * @param {String} tagId Tag ID
-     * @param {module:api/ApplicationMainCallsApi~deleteApplicationTagCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    deleteApplicationTag(applicationId, tagId, callback) {
-      let postBody = null;
-      // verify the required parameter 'applicationId' is set
-      if (applicationId === undefined || applicationId === null) {
-        throw new Error("Missing the required parameter 'applicationId' when calling deleteApplicationTag");
-      }
-      // verify the required parameter 'tagId' is set
-      if (tagId === undefined || tagId === null) {
-        throw new Error("Missing the required parameter 'tagId' when calling deleteApplicationTag");
-      }
-
-      let pathParams = {
-        'applicationId': applicationId,
-        'tagId': tagId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/application/{applicationId}/tag/{tagId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -434,48 +340,6 @@ export default class ApplicationMainCallsApi {
       let returnType = LinkResponseList;
       return this.apiClient.callApi(
         '/application/{applicationId}/link', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listApplicationTag operation.
-     * @callback module:api/ApplicationMainCallsApi~listApplicationTagCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TagResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List tags
-     * @param {String} applicationId Application ID
-     * @param {module:api/ApplicationMainCallsApi~listApplicationTagCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TagResponseList}
-     */
-    listApplicationTag(applicationId, callback) {
-      let postBody = null;
-      // verify the required parameter 'applicationId' is set
-      if (applicationId === undefined || applicationId === null) {
-        throw new Error("Missing the required parameter 'applicationId' when calling listApplicationTag");
-      }
-
-      let pathParams = {
-        'applicationId': applicationId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = TagResponseList;
-      return this.apiClient.callApi(
-        '/application/{applicationId}/tag', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

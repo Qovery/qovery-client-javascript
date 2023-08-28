@@ -430,9 +430,6 @@ import StatusKindEnum from './model/StatusKindEnum';
 import StorageDisk from './model/StorageDisk';
 import StorageDiskResponseList from './model/StorageDiskResponseList';
 import StorageTypeEnum from './model/StorageTypeEnum';
-import Tag from './model/Tag';
-import TagRequest from './model/TagRequest';
-import TagResponseList from './model/TagResponseList';
 import ThresholdMetricStatusEnum from './model/ThresholdMetricStatusEnum';
 import TransferOwnershipRequest from './model/TransferOwnershipRequest';
 import TypeOfUseEnum from './model/TypeOfUseEnum';
@@ -3069,24 +3066,6 @@ export {
      * @property {module:model/StorageTypeEnum}
      */
     StorageTypeEnum,
-
-    /**
-     * The Tag model constructor.
-     * @property {module:model/Tag}
-     */
-    Tag,
-
-    /**
-     * The TagRequest model constructor.
-     * @property {module:model/TagRequest}
-     */
-    TagRequest,
-
-    /**
-     * The TagResponseList model constructor.
-     * @property {module:model/TagResponseList}
-     */
-    TagResponseList,
 
     /**
      * The ThresholdMetricStatusEnum model constructor.

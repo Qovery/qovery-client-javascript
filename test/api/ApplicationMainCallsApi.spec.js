@@ -48,30 +48,10 @@
   }
 
   describe('ApplicationMainCallsApi', function() {
-    describe('createApplicationTag', function() {
-      it('should call createApplicationTag successfully', function(done) {
-        //uncomment below and update the code to test createApplicationTag
-        //instance.createApplicationTag(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('deleteApplication', function() {
       it('should call deleteApplication successfully', function(done) {
         //uncomment below and update the code to test deleteApplication
         //instance.deleteApplication(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteApplicationTag', function() {
-      it('should call deleteApplicationTag successfully', function(done) {
-        //uncomment below and update the code to test deleteApplicationTag
-        //instance.deleteApplicationTag(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -132,16 +112,6 @@
       it('should call listApplicationLinks successfully', function(done) {
         //uncomment below and update the code to test listApplicationLinks
         //instance.listApplicationLinks(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listApplicationTag', function() {
-      it('should call listApplicationTag successfully', function(done) {
-        //uncomment below and update the code to test listApplicationTag
-        //instance.listApplicationTag(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

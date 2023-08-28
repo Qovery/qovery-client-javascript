@@ -490,9 +490,6 @@ docs/StatusKindEnum.md
 docs/StorageDisk.md
 docs/StorageDiskResponseList.md
 docs/StorageTypeEnum.md
-docs/Tag.md
-docs/TagRequest.md
-docs/TagResponseList.md
 docs/ThresholdMetricStatusEnum.md
 docs/TransferOwnershipRequest.md
 docs/TypeOfUseEnum.md
@@ -1012,9 +1009,6 @@ src/model/StatusKindEnum.js
 src/model/StorageDisk.js
 src/model/StorageDiskResponseList.js
 src/model/StorageTypeEnum.js
-src/model/Tag.js
-src/model/TagRequest.js
-src/model/TagResponseList.js
 src/model/ThresholdMetricStatusEnum.js
 src/model/TransferOwnershipRequest.js
 src/model/TypeOfUseEnum.js
@@ -1527,9 +1521,6 @@ test/model/StatusKindEnum.spec.js
 test/model/StorageDisk.spec.js
 test/model/StorageDiskResponseList.spec.js
 test/model/StorageTypeEnum.spec.js
-test/model/Tag.spec.js
-test/model/TagRequest.spec.js
-test/model/TagResponseList.spec.js
 test/model/ThresholdMetricStatusEnum.spec.js
 test/model/TransferOwnershipRequest.spec.js
 test/model/TypeOfUseEnum.spec.js

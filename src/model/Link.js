@@ -75,21 +75,25 @@ class Link {
 Link.prototype['url'] = undefined;
 
 /**
+ * The port from which the service is reachable from within the cluster
  * @member {Number} internal_port
  */
 Link.prototype['internal_port'] = undefined;
 
 /**
+ * The port from which the service is reachable from externally (i.e: 443 for HTTPS)
  * @member {Number} external_port
  */
 Link.prototype['external_port'] = undefined;
 
 /**
+ * True if the domain is managed by Qovery, false if it belongs to the user
  * @member {Boolean} is_qovery_domain
  */
 Link.prototype['is_qovery_domain'] = undefined;
 
 /**
+ * Indicate if the link is using the root of the domain and not one derivated from port i.e: p8080.zxxxx.jvm.worl      => is_default = false, is_qovery = true zxxxx.jvm.world           => is_default = true, is_qovery = true p8080-my-super-domain.com => is_default = false, is_qovery = false my-super-domain.com       => is_default = true, is_qovery = false 
  * @member {Boolean} is_default
  */
 Link.prototype['is_default'] = undefined;

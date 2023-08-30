@@ -67,7 +67,7 @@ export default class ContainerMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = InstanceResponseList;
@@ -110,7 +110,7 @@ export default class ContainerMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ContainerCurrentScale;
@@ -152,7 +152,7 @@ export default class ContainerMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = StorageDiskResponseList;

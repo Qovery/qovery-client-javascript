@@ -71,7 +71,7 @@ export default class ContainerRegistriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ContainerRegistryResponse;
@@ -118,7 +118,7 @@ export default class ContainerRegistriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -169,7 +169,7 @@ export default class ContainerRegistriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ContainerRegistryResponse;
@@ -217,7 +217,7 @@ export default class ContainerRegistriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ContainerRegistryResponse;
@@ -254,7 +254,7 @@ export default class ContainerRegistriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = AvailableContainerRegistryResponseList;
@@ -296,7 +296,7 @@ export default class ContainerRegistriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ContainerRegistryResponseList;

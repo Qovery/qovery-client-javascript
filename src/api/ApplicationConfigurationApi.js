@@ -71,7 +71,7 @@ export default class ApplicationConfigurationApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ApplicationAdvancedSettings;
@@ -117,7 +117,7 @@ export default class ApplicationConfigurationApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ApplicationNetwork;
@@ -160,7 +160,7 @@ export default class ApplicationConfigurationApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ApplicationAdvancedSettings;
@@ -203,7 +203,7 @@ export default class ApplicationConfigurationApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ApplicationNetwork;

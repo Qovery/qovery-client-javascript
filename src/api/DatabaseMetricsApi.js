@@ -69,7 +69,7 @@ export default class DatabaseMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = DatabaseCurrentMetric;
@@ -117,7 +117,7 @@ export default class DatabaseMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = MetricCPUDatapointResponseList;
@@ -166,7 +166,7 @@ export default class DatabaseMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = MetricGenericResponseList;
@@ -214,7 +214,7 @@ export default class DatabaseMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = MetricMemoryDatapointResponseList;
@@ -262,7 +262,7 @@ export default class DatabaseMetricsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = MetricStorageDatapointResponseList;

@@ -76,7 +76,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -120,7 +120,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;
@@ -165,7 +165,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;
@@ -213,7 +213,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = InviteMember;
@@ -255,7 +255,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = InviteMemberResponseList;
@@ -297,7 +297,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = MemberResponseList;
@@ -345,7 +345,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = InviteMember;
@@ -390,7 +390,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = InviteMember;
@@ -434,7 +434,7 @@ export default class MembersApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;

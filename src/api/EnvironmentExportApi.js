@@ -68,7 +68,7 @@ export default class EnvironmentExportApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/zip'];
       let returnType = File;

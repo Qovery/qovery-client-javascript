@@ -67,7 +67,7 @@ export default class EnvironmentLogsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = EnvironmentLogResponseList;
@@ -114,7 +114,7 @@ export default class EnvironmentLogsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = [EnvironmentLogs];

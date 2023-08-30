@@ -61,7 +61,7 @@ export default class GitRepositoriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GitRepositoryResponseList;
@@ -101,7 +101,7 @@ export default class GitRepositoriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GitRepositoryBranchResponseList;
@@ -137,7 +137,7 @@ export default class GitRepositoriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GitAuthProviderResponseList;
@@ -173,7 +173,7 @@ export default class GitRepositoriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GitRepositoryResponseList;
@@ -213,7 +213,7 @@ export default class GitRepositoriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GitRepositoryBranchResponseList;
@@ -249,7 +249,7 @@ export default class GitRepositoriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GitRepositoryResponseList;
@@ -289,7 +289,7 @@ export default class GitRepositoriesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GitRepositoryBranchResponseList;

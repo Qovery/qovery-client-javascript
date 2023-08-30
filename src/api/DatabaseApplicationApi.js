@@ -65,7 +65,7 @@ export default class DatabaseApplicationApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ApplicationResponseList;
@@ -112,7 +112,7 @@ export default class DatabaseApplicationApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;

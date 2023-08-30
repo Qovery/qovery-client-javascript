@@ -72,7 +72,7 @@ export default class ProjectDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ProjectDeploymentRule;
@@ -120,7 +120,7 @@ export default class ProjectDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = [];
       let returnType = null;
@@ -172,7 +172,7 @@ export default class ProjectDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = ProjectDeploymentRule;
@@ -221,7 +221,7 @@ export default class ProjectDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProjectDeploymentRule;
@@ -264,7 +264,7 @@ export default class ProjectDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = ProjectDeploymentRuleResponseList;
@@ -309,7 +309,7 @@ export default class ProjectDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = [];
       let returnType = null;

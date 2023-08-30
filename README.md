@@ -104,6 +104,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 var QoveryApi = require('qovery_api');
 
 var defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix['Token'] = "Token"
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 var bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
@@ -939,6 +944,15 @@ Class | Method | HTTP request | Description
 
 
 ## Documentation for Authorization
+
+
+
+### ApiKeyAuth
+
+
+- **Type**: API key
+- **API key parameter name**: Token
+- **Location**: HTTP header
 
 
 

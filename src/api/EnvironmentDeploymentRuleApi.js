@@ -75,7 +75,7 @@ export default class EnvironmentDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = EnvironmentDeploymentRule;
@@ -117,7 +117,7 @@ export default class EnvironmentDeploymentRuleApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = EnvironmentDeploymentRule;

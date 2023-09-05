@@ -308,6 +308,10 @@ docs/JobAdvancedSettings.md
 docs/JobConfigurationApi.md
 docs/JobDeployRequest.md
 docs/JobDeploymentHistoryApi.md
+docs/JobDeploymentRestrictionApi.md
+docs/JobDeploymentRestrictionRequest.md
+docs/JobDeploymentRestrictionResponse.md
+docs/JobDeploymentRestrictionResponseList.md
 docs/JobEnvironmentVariableApi.md
 docs/JobForceEvent.md
 docs/JobMainCallsApi.md
@@ -571,6 +575,7 @@ src/api/GithubAppApi.js
 src/api/JobActionsApi.js
 src/api/JobConfigurationApi.js
 src/api/JobDeploymentHistoryApi.js
+src/api/JobDeploymentRestrictionApi.js
 src/api/JobEnvironmentVariableApi.js
 src/api/JobMainCallsApi.js
 src/api/JobMetricsApi.js
@@ -845,6 +850,9 @@ src/model/InvoiceResponseList.js
 src/model/InvoiceStatusEnum.js
 src/model/JobAdvancedSettings.js
 src/model/JobDeployRequest.js
+src/model/JobDeploymentRestrictionRequest.js
+src/model/JobDeploymentRestrictionResponse.js
+src/model/JobDeploymentRestrictionResponseList.js
 src/model/JobForceEvent.js
 src/model/JobRequest.js
 src/model/JobRequestAllOf.js
@@ -1084,6 +1092,7 @@ test/api/GithubAppApi.spec.js
 test/api/JobActionsApi.spec.js
 test/api/JobConfigurationApi.spec.js
 test/api/JobDeploymentHistoryApi.spec.js
+test/api/JobDeploymentRestrictionApi.spec.js
 test/api/JobEnvironmentVariableApi.spec.js
 test/api/JobMainCallsApi.spec.js
 test/api/JobMetricsApi.spec.js
@@ -1357,6 +1366,9 @@ test/model/InvoiceResponseList.spec.js
 test/model/InvoiceStatusEnum.spec.js
 test/model/JobAdvancedSettings.spec.js
 test/model/JobDeployRequest.spec.js
+test/model/JobDeploymentRestrictionRequest.spec.js
+test/model/JobDeploymentRestrictionResponse.spec.js
+test/model/JobDeploymentRestrictionResponseList.spec.js
 test/model/JobForceEvent.spec.js
 test/model/JobRequest.spec.js
 test/model/JobRequestAllOf.spec.js

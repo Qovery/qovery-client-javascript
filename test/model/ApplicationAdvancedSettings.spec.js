@@ -186,6 +186,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property networkIngressProxyBuffering (base name: "network.ingress.proxy_buffering")', function() {
+      // uncomment below and update the code to test the property networkIngressProxyBuffering
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressProxyRequestBuffering (base name: "network.ingress.proxy_request_buffering")', function() {
+      // uncomment below and update the code to test the property networkIngressProxyRequestBuffering
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property networkIngressWhitelistSourceRange (base name: "network.ingress.whitelist_source_range")', function() {
       // uncomment below and update the code to test the property networkIngressWhitelistSourceRange
       //var instance = new QoveryApi.ApplicationAdvancedSettings();
@@ -218,6 +230,12 @@
 
     it('should have the property networkIngressGrpcReadTimeoutSeconds (base name: "network.ingress.grpc_read_timeout_seconds")', function() {
       // uncomment below and update the code to test the property networkIngressGrpcReadTimeoutSeconds
+      //var instance = new QoveryApi.ApplicationAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property networkIngressExtraHeaders (base name: "network.ingress.extra_headers")', function() {
+      // uncomment below and update the code to test the property networkIngressExtraHeaders
       //var instance = new QoveryApi.ApplicationAdvancedSettings();
       //expect(instance).to.be();
     });

@@ -113,6 +113,12 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.proxy_read_timeout_seconds')) {
                 obj['network.ingress.proxy_read_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.proxy_read_timeout_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('network.ingress.proxy_buffering')) {
+                obj['network.ingress.proxy_buffering'] = ApiClient.convertToType(data['network.ingress.proxy_buffering'], 'String');
+            }
+            if (data.hasOwnProperty('network.ingress.proxy_request_buffering')) {
+                obj['network.ingress.proxy_request_buffering'] = ApiClient.convertToType(data['network.ingress.proxy_request_buffering'], 'String');
+            }
             if (data.hasOwnProperty('network.ingress.whitelist_source_range')) {
                 obj['network.ingress.whitelist_source_range'] = ApiClient.convertToType(data['network.ingress.whitelist_source_range'], 'String');
             }
@@ -130,6 +136,9 @@ class ApplicationAdvancedSettings {
             }
             if (data.hasOwnProperty('network.ingress.grpc_read_timeout_seconds')) {
                 obj['network.ingress.grpc_read_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.grpc_read_timeout_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('network.ingress.extra_headers')) {
+                obj['network.ingress.extra_headers'] = ApiClient.convertToType(data['network.ingress.extra_headers'], 'String');
             }
             if (data.hasOwnProperty('hpa.cpu.average_utilization_percent')) {
                 obj['hpa.cpu.average_utilization_percent'] = ApiClient.convertToType(data['hpa.cpu.average_utilization_percent'], 'Number');
@@ -292,6 +301,20 @@ ApplicationAdvancedSettings.prototype['network.ingress.proxy_send_timeout_second
 ApplicationAdvancedSettings.prototype['network.ingress.proxy_read_timeout_seconds'] = 60;
 
 /**
+ * Allows to enable or disable nginx `proxy-buffering`
+ * @member {String} network.ingress.proxy_buffering
+ * @default 'on'
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.proxy_buffering'] = 'on';
+
+/**
+ * Allows to enable or disable nginx `proxy-request-buffering`
+ * @member {String} network.ingress.proxy_request_buffering
+ * @default 'on'
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.proxy_request_buffering'] = 'on';
+
+/**
  * list of source ranges to allow access to ingress proxy.  This property can be used to whitelist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 To allow all source ranges, set 0.0.0.0/0. 
  * @member {String} network.ingress.whitelist_source_range
  * @default '0.0.0.0/0'
@@ -332,6 +355,13 @@ ApplicationAdvancedSettings.prototype['network.ingress.grpc_send_timeout_seconds
  * @default 60
  */
 ApplicationAdvancedSettings.prototype['network.ingress.grpc_read_timeout_seconds'] = 60;
+
+/**
+ * Allows to define response headers
+ * @member {String} network.ingress.extra_headers
+ * @default '{}'
+ */
+ApplicationAdvancedSettings.prototype['network.ingress.extra_headers'] = '{}';
 
 /**
  * Percentage value of cpu usage at which point pods should scale up.

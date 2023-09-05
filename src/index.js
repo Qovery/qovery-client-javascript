@@ -266,6 +266,9 @@ import InvoiceResponseList from './model/InvoiceResponseList';
 import InvoiceStatusEnum from './model/InvoiceStatusEnum';
 import JobAdvancedSettings from './model/JobAdvancedSettings';
 import JobDeployRequest from './model/JobDeployRequest';
+import JobDeploymentRestrictionRequest from './model/JobDeploymentRestrictionRequest';
+import JobDeploymentRestrictionResponse from './model/JobDeploymentRestrictionResponse';
+import JobDeploymentRestrictionResponseList from './model/JobDeploymentRestrictionResponseList';
 import JobForceEvent from './model/JobForceEvent';
 import JobRequest from './model/JobRequest';
 import JobRequestAllOf from './model/JobRequestAllOf';
@@ -505,6 +508,7 @@ import GithubAppApi from './api/GithubAppApi';
 import JobActionsApi from './api/JobActionsApi';
 import JobConfigurationApi from './api/JobConfigurationApi';
 import JobDeploymentHistoryApi from './api/JobDeploymentHistoryApi';
+import JobDeploymentRestrictionApi from './api/JobDeploymentRestrictionApi';
 import JobEnvironmentVariableApi from './api/JobEnvironmentVariableApi';
 import JobMainCallsApi from './api/JobMainCallsApi';
 import JobMetricsApi from './api/JobMetricsApi';
@@ -2084,6 +2088,24 @@ export {
     JobDeployRequest,
 
     /**
+     * The JobDeploymentRestrictionRequest model constructor.
+     * @property {module:model/JobDeploymentRestrictionRequest}
+     */
+    JobDeploymentRestrictionRequest,
+
+    /**
+     * The JobDeploymentRestrictionResponse model constructor.
+     * @property {module:model/JobDeploymentRestrictionResponse}
+     */
+    JobDeploymentRestrictionResponse,
+
+    /**
+     * The JobDeploymentRestrictionResponseList model constructor.
+     * @property {module:model/JobDeploymentRestrictionResponseList}
+     */
+    JobDeploymentRestrictionResponseList,
+
+    /**
      * The JobForceEvent model constructor.
      * @property {module:model/JobForceEvent}
      */
@@ -3516,6 +3538,12 @@ export {
     * @property {module:api/JobDeploymentHistoryApi}
     */
     JobDeploymentHistoryApi,
+
+    /**
+    * The JobDeploymentRestrictionApi service constructor.
+    * @property {module:api/JobDeploymentRestrictionApi}
+    */
+    JobDeploymentRestrictionApi,
 
     /**
     * The JobEnvironmentVariableApi service constructor.

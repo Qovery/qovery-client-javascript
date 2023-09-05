@@ -104,6 +104,12 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('network.ingress.proxy_read_timeout_seconds')) {
                 obj['network.ingress.proxy_read_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.proxy_read_timeout_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('network.ingress.proxy_buffering')) {
+                obj['network.ingress.proxy_buffering'] = ApiClient.convertToType(data['network.ingress.proxy_buffering'], 'String');
+            }
+            if (data.hasOwnProperty('network.ingress.proxy_request_buffering')) {
+                obj['network.ingress.proxy_request_buffering'] = ApiClient.convertToType(data['network.ingress.proxy_request_buffering'], 'String');
+            }
             if (data.hasOwnProperty('network.ingress.grpc_send_timeout_seconds')) {
                 obj['network.ingress.grpc_send_timeout_seconds'] = ApiClient.convertToType(data['network.ingress.grpc_send_timeout_seconds'], 'Number');
             }
@@ -115,6 +121,9 @@ class ContainerAdvancedSettings {
             }
             if (data.hasOwnProperty('network.ingress.denylist_source_range')) {
                 obj['network.ingress.denylist_source_range'] = ApiClient.convertToType(data['network.ingress.denylist_source_range'], 'String');
+            }
+            if (data.hasOwnProperty('network.ingress.extra_headers')) {
+                obj['network.ingress.extra_headers'] = ApiClient.convertToType(data['network.ingress.extra_headers'], 'String');
             }
             if (data.hasOwnProperty('network.ingress.basic_auth_env_var')) {
                 obj['network.ingress.basic_auth_env_var'] = ApiClient.convertToType(data['network.ingress.basic_auth_env_var'], 'String');
@@ -263,6 +272,20 @@ ContainerAdvancedSettings.prototype['network.ingress.proxy_send_timeout_seconds'
 ContainerAdvancedSettings.prototype['network.ingress.proxy_read_timeout_seconds'] = 60;
 
 /**
+ * Allows to enable or disable nginx `proxy-buffering`
+ * @member {String} network.ingress.proxy_buffering
+ * @default 'on'
+ */
+ContainerAdvancedSettings.prototype['network.ingress.proxy_buffering'] = 'on';
+
+/**
+ * Allows to enable or disable nginx `proxy-request-buffering`
+ * @member {String} network.ingress.proxy_request_buffering
+ * @default 'on'
+ */
+ContainerAdvancedSettings.prototype['network.ingress.proxy_request_buffering'] = 'on';
+
+/**
  * Sets a timeout (in seconds) for transmitting a request to the grpc server
  * @member {Number} network.ingress.grpc_send_timeout_seconds
  * @default 60
@@ -289,6 +312,13 @@ ContainerAdvancedSettings.prototype['network.ingress.whitelist_source_range'] = 
  * @default ''
  */
 ContainerAdvancedSettings.prototype['network.ingress.denylist_source_range'] = '';
+
+/**
+ * Allows to define response headers
+ * @member {String} network.ingress.extra_headers
+ * @default '{}'
+ */
+ContainerAdvancedSettings.prototype['network.ingress.extra_headers'] = '{}';
 
 /**
  * Set the name of an environment variable to use as a basic authentication (`login:crypted_password`) from `htpasswd` command. You can add multiples comma separated values. 

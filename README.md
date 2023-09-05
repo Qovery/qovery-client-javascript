@@ -402,6 +402,10 @@ Class | Method | HTTP request | Description
 *QoveryApi.JobConfigurationApi* | [**editJobAdvancedSettings**](docs/JobConfigurationApi.md#editJobAdvancedSettings) | **PUT** /job/{jobId}/advancedSettings | Edit advanced settings
 *QoveryApi.JobConfigurationApi* | [**getJobAdvancedSettings**](docs/JobConfigurationApi.md#getJobAdvancedSettings) | **GET** /job/{jobId}/advancedSettings | Get advanced settings
 *QoveryApi.JobDeploymentHistoryApi* | [**listJobDeploymentHistory**](docs/JobDeploymentHistoryApi.md#listJobDeploymentHistory) | **GET** /job/{jobId}/deploymentHistory | List job deployments
+*QoveryApi.JobDeploymentRestrictionApi* | [**createJobDeploymentRestriction**](docs/JobDeploymentRestrictionApi.md#createJobDeploymentRestriction) | **POST** /job/{jobId}/deploymentRestriction | Create a job deployment restriction
+*QoveryApi.JobDeploymentRestrictionApi* | [**deleteJobDeploymentRestriction**](docs/JobDeploymentRestrictionApi.md#deleteJobDeploymentRestriction) | **DELETE** /job/{jobId}/deploymentRestriction/{deploymentRestrictionId} | Delete a job deployment restriction
+*QoveryApi.JobDeploymentRestrictionApi* | [**editJobDeploymentRestriction**](docs/JobDeploymentRestrictionApi.md#editJobDeploymentRestriction) | **PUT** /job/{jobId}/deploymentRestriction/{deploymentRestrictionId} | Edit a job deployment restriction
+*QoveryApi.JobDeploymentRestrictionApi* | [**getJobDeploymentRestrictions**](docs/JobDeploymentRestrictionApi.md#getJobDeploymentRestrictions) | **GET** /job/{jobId}/deploymentRestriction | Get job deployment restrictions
 *QoveryApi.JobEnvironmentVariableApi* | [**createJobEnvironmentVariable**](docs/JobEnvironmentVariableApi.md#createJobEnvironmentVariable) | **POST** /job/{jobId}/environmentVariable | Add an environment variable to the job
 *QoveryApi.JobEnvironmentVariableApi* | [**createJobEnvironmentVariableAlias**](docs/JobEnvironmentVariableApi.md#createJobEnvironmentVariableAlias) | **POST** /job/{jobId}/environmentVariable/{environmentVariableId}/alias | Create an environment variable alias at the job level
 *QoveryApi.JobEnvironmentVariableApi* | [**createJobEnvironmentVariableOverride**](docs/JobEnvironmentVariableApi.md#createJobEnvironmentVariableOverride) | **POST** /job/{jobId}/environmentVariable/{environmentVariableId}/override | Create an environment variable override at the job level
@@ -754,6 +758,9 @@ Class | Method | HTTP request | Description
  - [QoveryApi.InvoiceStatusEnum](docs/InvoiceStatusEnum.md)
  - [QoveryApi.JobAdvancedSettings](docs/JobAdvancedSettings.md)
  - [QoveryApi.JobDeployRequest](docs/JobDeployRequest.md)
+ - [QoveryApi.JobDeploymentRestrictionRequest](docs/JobDeploymentRestrictionRequest.md)
+ - [QoveryApi.JobDeploymentRestrictionResponse](docs/JobDeploymentRestrictionResponse.md)
+ - [QoveryApi.JobDeploymentRestrictionResponseList](docs/JobDeploymentRestrictionResponseList.md)
  - [QoveryApi.JobForceEvent](docs/JobForceEvent.md)
  - [QoveryApi.JobRequest](docs/JobRequest.md)
  - [QoveryApi.JobRequestAllOf](docs/JobRequestAllOf.md)

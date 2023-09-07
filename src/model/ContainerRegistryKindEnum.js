@@ -41,6 +41,20 @@ export default class ContainerRegistryKindEnum {
 
     
         /**
+         * value: "GITHUB_CR"
+         * @const
+         */
+        "GITHUB_CR" = "GITHUB_CR";
+
+    
+        /**
+         * value: "GITLAB_CR"
+         * @const
+         */
+        "GITLAB_CR" = "GITLAB_CR";
+
+    
+        /**
          * value: "PUBLIC_ECR"
          * @const
          */
@@ -52,6 +66,13 @@ export default class ContainerRegistryKindEnum {
          * @const
          */
         "DOCR" = "DOCR";
+
+    
+        /**
+         * value: "GENERIC_CR"
+         * @const
+         */
+        "GENERIC_CR" = "GENERIC_CR";
 
     
 

@@ -21,7 +21,7 @@ import ApiClient from '../ApiClient';
 class ContainerRegistryRequestConfig {
     /**
      * Constructs a new <code>ContainerRegistryRequestConfig</code>.
-     * This field is dependent of the container registry kind: * &#x60;ECR&#x60; needs in the config: region, access_key_id, secret_access_key * &#x60;SCALEWAY_CR&#x60; needs in the config: region, scaleway_access_key, scaleway_secret_key * &#x60;DOCKER_HUB&#x60; needs in the config (optional): username, password * &#x60;PUBLIC_ECR&#x60; doesn&#39;t need credentials info * &#x60;DOCR&#x60; is not supported anymore 
+     * This field is dependent of the container registry kind: * &#x60;ECR&#x60; needs in the config: region, access_key_id, secret_access_key * &#x60;SCALEWAY_CR&#x60; needs in the config: region, scaleway_access_key, scaleway_secret_key * &#x60;DOCKER_HUB&#x60; needs in the config (optional): username, password * &#x60;GITHUB_CR&#x60; needs in the config: username, password * &#x60;GITLAB_CR&#x60; needs in the config: username, password * &#x60;PUBLIC_ECR&#x60; doesn&#39;t need credentials info * &#x60;GENERIC_CR&#x60; needs in the config: username, password * &#x60;DOCR&#x60; is not supported anymore 
      * @alias module:model/ContainerRegistryRequestConfig
      */
     constructor() { 

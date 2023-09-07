@@ -74,6 +74,7 @@ docs/ClusterCloudProviderInfoCredentials.md
 docs/ClusterCloudProviderInfoRequest.md
 docs/ClusterCredentials.md
 docs/ClusterCredentialsResponseList.md
+docs/ClusterDeploymentStatusEnum.md
 docs/ClusterFeature.md
 docs/ClusterFeatureAcceptedValuesInner.md
 docs/ClusterFeatureResponseList.md
@@ -652,6 +653,7 @@ src/model/ClusterCloudProviderInfoCredentials.js
 src/model/ClusterCloudProviderInfoRequest.js
 src/model/ClusterCredentials.js
 src/model/ClusterCredentialsResponseList.js
+src/model/ClusterDeploymentStatusEnum.js
 src/model/ClusterFeature.js
 src/model/ClusterFeatureAcceptedValuesInner.js
 src/model/ClusterFeatureResponseList.js
@@ -1168,6 +1170,7 @@ test/model/ClusterCloudProviderInfoCredentials.spec.js
 test/model/ClusterCloudProviderInfoRequest.spec.js
 test/model/ClusterCredentials.spec.js
 test/model/ClusterCredentialsResponseList.spec.js
+test/model/ClusterDeploymentStatusEnum.spec.js
 test/model/ClusterFeature.spec.js
 test/model/ClusterFeatureAcceptedValuesInner.spec.js
 test/model/ClusterFeatureResponseList.spec.js

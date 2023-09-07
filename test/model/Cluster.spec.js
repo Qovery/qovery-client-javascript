@@ -186,6 +186,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property deploymentStatus (base name: "deployment_status")', function() {
+      // uncomment below and update the code to test the property deploymentStatus
+      //var instance = new QoveryApi.Cluster();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

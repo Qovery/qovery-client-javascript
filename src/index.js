@@ -68,6 +68,7 @@ import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInf
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
 import ClusterCredentials from './model/ClusterCredentials';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
+import ClusterDeploymentStatusEnum from './model/ClusterDeploymentStatusEnum';
 import ClusterFeature from './model/ClusterFeature';
 import ClusterFeatureAcceptedValuesInner from './model/ClusterFeatureAcceptedValuesInner';
 import ClusterFeatureResponseList from './model/ClusterFeatureResponseList';
@@ -898,6 +899,12 @@ export {
      * @property {module:model/ClusterCredentialsResponseList}
      */
     ClusterCredentialsResponseList,
+
+    /**
+     * The ClusterDeploymentStatusEnum model constructor.
+     * @property {module:model/ClusterDeploymentStatusEnum}
+     */
+    ClusterDeploymentStatusEnum,
 
     /**
      * The ClusterFeature model constructor.

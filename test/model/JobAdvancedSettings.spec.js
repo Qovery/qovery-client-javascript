@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property securityReadOnlyRootFilesystem (base name: "security.read_only_root_filesystem")', function() {
+      // uncomment below and update the code to test the property securityReadOnlyRootFilesystem
+      //var instance = new QoveryApi.JobAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

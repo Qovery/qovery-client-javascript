@@ -146,6 +146,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('security.service_account_name')) {
                 obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
             }
+            if (data.hasOwnProperty('security.read_only_root_filesystem')) {
+                obj['security.read_only_root_filesystem'] = ApiClient.convertToType(data['security.read_only_root_filesystem'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -376,6 +379,13 @@ ApplicationAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = 6
  * @default ''
  */
 ApplicationAdvancedSettings.prototype['security.service_account_name'] = '';
+
+/**
+ * Mounts the container's root filesystem as read-only 
+ * @member {Boolean} security.read_only_root_filesystem
+ * @default false
+ */
+ApplicationAdvancedSettings.prototype['security.read_only_root_filesystem'] = false;
 
 
 

@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **cronjobFailedJobsHistoryLimit** | **Number** |  | [optional] [default to 1]
 **cronjobSuccessJobsHistoryLimit** | **Number** |  | [optional] [default to 1]
 **securityServiceAccountName** | **String** | Allows you to set an existing Kubernetes service account name  | [optional] [default to &#39;&#39;]
+**securityReadOnlyRootFilesystem** | **Boolean** | Mounts the container&#39;s root filesystem as read-only  | [optional] [default to false]
 
 

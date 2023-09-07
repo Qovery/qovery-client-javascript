@@ -137,6 +137,9 @@ class ContainerAdvancedSettings {
             if (data.hasOwnProperty('hpa.cpu.average_utilization_percent')) {
                 obj['hpa.cpu.average_utilization_percent'] = ApiClient.convertToType(data['hpa.cpu.average_utilization_percent'], 'Number');
             }
+            if (data.hasOwnProperty('security.read_only_root_filesystem')) {
+                obj['security.read_only_root_filesystem'] = ApiClient.convertToType(data['security.read_only_root_filesystem'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -347,6 +350,13 @@ ContainerAdvancedSettings.prototype['security.service_account_name'] = '';
  * @default 60
  */
 ContainerAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = 60;
+
+/**
+ * Mounts the container's root filesystem as read-only 
+ * @member {Boolean} security.read_only_root_filesystem
+ * @default false
+ */
+ContainerAdvancedSettings.prototype['security.read_only_root_filesystem'] = false;
 
 
 

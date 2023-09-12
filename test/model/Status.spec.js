@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property metrics (base name: "metrics")', function() {
+      // uncomment below and update the code to test the property metrics
+      //var instance = new QoveryApi.Status();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

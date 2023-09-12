@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import ReferenceObject from './ReferenceObject';
 import ServiceDeploymentStatusEnum from './ServiceDeploymentStatusEnum';
+import ServiceStepMetrics from './ServiceStepMetrics';
 import StateEnum from './StateEnum';
 import Status from './Status';
 
@@ -76,6 +77,9 @@ class ReferenceObjectStatus {
             if (data.hasOwnProperty('is_part_last_deployment')) {
                 obj['is_part_last_deployment'] = ApiClient.convertToType(data['is_part_last_deployment'], 'Boolean');
             }
+            if (data.hasOwnProperty('metrics')) {
+                obj['metrics'] = ServiceStepMetrics.constructFromObject(data['metrics']);
+            }
         }
         return obj;
     }
@@ -108,6 +112,11 @@ ReferenceObjectStatus.prototype['last_deployment_date'] = undefined;
  */
 ReferenceObjectStatus.prototype['is_part_last_deployment'] = undefined;
 
+/**
+ * @member {module:model/ServiceStepMetrics} metrics
+ */
+ReferenceObjectStatus.prototype['metrics'] = undefined;
+
 
 // Implement ReferenceObject interface:
 /**
@@ -135,6 +144,10 @@ Status.prototype['last_deployment_date'] = undefined;
  * @member {Boolean} is_part_last_deployment
  */
 Status.prototype['is_part_last_deployment'] = undefined;
+/**
+ * @member {module:model/ServiceStepMetrics} metrics
+ */
+Status.prototype['metrics'] = undefined;
 
 
 

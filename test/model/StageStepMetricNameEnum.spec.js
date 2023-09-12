@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.Stage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,29 +46,11 @@
       object[property] = value;
   }
 
-  describe('Stage', function() {
-    it('should create an instance of Stage', function() {
-      // uncomment below and update the code to test Stage
-      //var instance = new QoveryApi.Stage();
-      //expect(instance).to.be.a(QoveryApi.Stage);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.Stage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.Stage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property metrics (base name: "metrics")', function() {
-      // uncomment below and update the code to test the property metrics
-      //var instance = new QoveryApi.Stage();
-      //expect(instance).to.be();
+  describe('StageStepMetricNameEnum', function() {
+    it('should create an instance of StageStepMetricNameEnum', function() {
+      // uncomment below and update the code to test StageStepMetricNameEnum
+      //var instance = new QoveryApi.StageStepMetricNameEnum();
+      //expect(instance).to.be.a(QoveryApi.StageStepMetricNameEnum);
     });
 
   });

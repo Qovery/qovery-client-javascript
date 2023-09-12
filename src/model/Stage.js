@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import StageStepMetrics from './StageStepMetrics';
 
 /**
  * The Stage model module.
@@ -57,6 +58,9 @@ class Stage {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('metrics')) {
+                obj['metrics'] = StageStepMetrics.constructFromObject(data['metrics']);
+            }
         }
         return obj;
     }
@@ -74,6 +78,11 @@ Stage.prototype['id'] = undefined;
  * @member {String} name
  */
 Stage.prototype['name'] = undefined;
+
+/**
+ * @member {module:model/StageStepMetrics} metrics
+ */
+Stage.prototype['metrics'] = undefined;
 
 
 

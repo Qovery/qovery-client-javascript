@@ -419,6 +419,9 @@ import ServicePort from './model/ServicePort';
 import ServicePortRequest from './model/ServicePortRequest';
 import ServicePortRequestPortsInner from './model/ServicePortRequestPortsInner';
 import ServiceResponseList from './model/ServiceResponseList';
+import ServiceStepMetric from './model/ServiceStepMetric';
+import ServiceStepMetricNameEnum from './model/ServiceStepMetricNameEnum';
+import ServiceStepMetrics from './model/ServiceStepMetrics';
 import ServiceStorage from './model/ServiceStorage';
 import ServiceStorageRequest from './model/ServiceStorageRequest';
 import ServiceStorageRequestStorageInner from './model/ServiceStorageRequestStorageInner';
@@ -428,9 +431,13 @@ import ServiceTypeEnum from './model/ServiceTypeEnum';
 import SignUp from './model/SignUp';
 import SignUpRequest from './model/SignUpRequest';
 import Stage from './model/Stage';
+import StageStepMetric from './model/StageStepMetric';
+import StageStepMetricNameEnum from './model/StageStepMetricNameEnum';
+import StageStepMetrics from './model/StageStepMetrics';
 import StateEnum from './model/StateEnum';
 import Status from './model/Status';
 import StatusKindEnum from './model/StatusKindEnum';
+import StepMetricStatusEnum from './model/StepMetricStatusEnum';
 import StorageDisk from './model/StorageDisk';
 import StorageDiskResponseList from './model/StorageDiskResponseList';
 import StorageTypeEnum from './model/StorageTypeEnum';
@@ -3007,6 +3014,24 @@ export {
     ServiceResponseList,
 
     /**
+     * The ServiceStepMetric model constructor.
+     * @property {module:model/ServiceStepMetric}
+     */
+    ServiceStepMetric,
+
+    /**
+     * The ServiceStepMetricNameEnum model constructor.
+     * @property {module:model/ServiceStepMetricNameEnum}
+     */
+    ServiceStepMetricNameEnum,
+
+    /**
+     * The ServiceStepMetrics model constructor.
+     * @property {module:model/ServiceStepMetrics}
+     */
+    ServiceStepMetrics,
+
+    /**
      * The ServiceStorage model constructor.
      * @property {module:model/ServiceStorage}
      */
@@ -3061,6 +3086,24 @@ export {
     Stage,
 
     /**
+     * The StageStepMetric model constructor.
+     * @property {module:model/StageStepMetric}
+     */
+    StageStepMetric,
+
+    /**
+     * The StageStepMetricNameEnum model constructor.
+     * @property {module:model/StageStepMetricNameEnum}
+     */
+    StageStepMetricNameEnum,
+
+    /**
+     * The StageStepMetrics model constructor.
+     * @property {module:model/StageStepMetrics}
+     */
+    StageStepMetrics,
+
+    /**
      * The StateEnum model constructor.
      * @property {module:model/StateEnum}
      */
@@ -3077,6 +3120,12 @@ export {
      * @property {module:model/StatusKindEnum}
      */
     StatusKindEnum,
+
+    /**
+     * The StepMetricStatusEnum model constructor.
+     * @property {module:model/StepMetricStatusEnum}
+     */
+    StepMetricStatusEnum,
 
     /**
      * The StorageDisk model constructor.

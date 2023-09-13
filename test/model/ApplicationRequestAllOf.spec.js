@@ -138,6 +138,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property autoDeploy (base name: "auto_deploy")', function() {
+      // uncomment below and update the code to test the property autoDeploy
+      //var instance = new QoveryApi.ApplicationRequestAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

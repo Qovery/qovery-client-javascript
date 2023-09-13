@@ -48,6 +48,16 @@
   }
 
   describe('JobsApi', function() {
+    describe('autoDeployJobEnvironments', function() {
+      it('should call autoDeployJobEnvironments successfully', function(done) {
+        //uncomment below and update the code to test autoDeployJobEnvironments
+        //instance.autoDeployJobEnvironments(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('cloneJob', function() {
       it('should call cloneJob successfully', function(done) {
         //uncomment below and update the code to test cloneJob

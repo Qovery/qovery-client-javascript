@@ -425,6 +425,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.JobSecretApi* | [**deleteJobSecret**](docs/JobSecretApi.md#deleteJobSecret) | **DELETE** /job/{jobId}/secret/{secretId} | Delete a secret from an job
 *QoveryApi.JobSecretApi* | [**editJobSecret**](docs/JobSecretApi.md#editJobSecret) | **PUT** /job/{jobId}/secret/{secretId} | Edit a secret belonging to the job
 *QoveryApi.JobSecretApi* | [**listJobSecrets**](docs/JobSecretApi.md#listJobSecrets) | **GET** /job/{jobId}/secret | List job secrets
+*QoveryApi.JobsApi* | [**autoDeployJobEnvironments**](docs/JobsApi.md#autoDeployJobEnvironments) | **POST** /organization/{organizationId}/job/deploy | Auto deploy jobs
 *QoveryApi.JobsApi* | [**cloneJob**](docs/JobsApi.md#cloneJob) | **POST** /job/{jobId}/clone | Clone job
 *QoveryApi.JobsApi* | [**createJob**](docs/JobsApi.md#createJob) | **POST** /environment/{environmentId}/job | Create a job
 *QoveryApi.JobsApi* | [**getDefaultJobAdvancedSettings**](docs/JobsApi.md#getDefaultJobAdvancedSettings) | **GET** /defaultJobAdvancedSettings | List default job advanced settings
@@ -856,6 +857,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.OrganizationEventTargetType](docs/OrganizationEventTargetType.md)
  - [QoveryApi.OrganizationEventType](docs/OrganizationEventType.md)
  - [QoveryApi.OrganizationGithubAppConnectRequest](docs/OrganizationGithubAppConnectRequest.md)
+ - [QoveryApi.OrganizationJobAutoDeployRequest](docs/OrganizationJobAutoDeployRequest.md)
  - [QoveryApi.OrganizationRequest](docs/OrganizationRequest.md)
  - [QoveryApi.OrganizationResponseList](docs/OrganizationResponseList.md)
  - [QoveryApi.OrganizationWebhookCreateRequest](docs/OrganizationWebhookCreateRequest.md)

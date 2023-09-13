@@ -112,6 +112,9 @@ class ContainerRequest {
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
+            if (data.hasOwnProperty('auto_deploy')) {
+                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -209,6 +212,12 @@ ContainerRequest.prototype['healthchecks'] = undefined;
  */
 ContainerRequest.prototype['auto_preview'] = undefined;
 
+/**
+ * Specify if the container will be automatically updated after receiving a new image tag.  The new image tag shall be communicated via the \"Auto Deploy container\" endpoint https://api-doc.qovery.com/#tag/Containers/operation/autoDeployContainerEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+ContainerRequest.prototype['auto_deploy'] = undefined;
+
 
 // Implement ServiceStorageRequest interface:
 /**
@@ -288,6 +297,11 @@ ContainerRequestAllOf.prototype['healthchecks'] = undefined;
  * @member {Boolean} auto_preview
  */
 ContainerRequestAllOf.prototype['auto_preview'] = undefined;
+/**
+ * Specify if the container will be automatically updated after receiving a new image tag.  The new image tag shall be communicated via the \"Auto Deploy container\" endpoint https://api-doc.qovery.com/#tag/Containers/operation/autoDeployContainerEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+ContainerRequestAllOf.prototype['auto_deploy'] = undefined;
 
 
 

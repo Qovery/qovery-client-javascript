@@ -417,6 +417,7 @@ docs/OrganizationEventTargetResponseList.md
 docs/OrganizationEventTargetType.md
 docs/OrganizationEventType.md
 docs/OrganizationGithubAppConnectRequest.md
+docs/OrganizationJobAutoDeployRequest.md
 docs/OrganizationMainCallsApi.md
 docs/OrganizationRequest.md
 docs/OrganizationResponseList.md
@@ -956,6 +957,7 @@ src/model/OrganizationEventTargetResponseList.js
 src/model/OrganizationEventTargetType.js
 src/model/OrganizationEventType.js
 src/model/OrganizationGithubAppConnectRequest.js
+src/model/OrganizationJobAutoDeployRequest.js
 src/model/OrganizationRequest.js
 src/model/OrganizationResponseList.js
 src/model/OrganizationWebhookCreateRequest.js
@@ -1480,6 +1482,7 @@ test/model/OrganizationEventTargetResponseList.spec.js
 test/model/OrganizationEventTargetType.spec.js
 test/model/OrganizationEventType.spec.js
 test/model/OrganizationGithubAppConnectRequest.spec.js
+test/model/OrganizationJobAutoDeployRequest.spec.js
 test/model/OrganizationRequest.spec.js
 test/model/OrganizationResponseList.spec.js
 test/model/OrganizationWebhookCreateRequest.spec.js

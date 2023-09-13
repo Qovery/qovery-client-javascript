@@ -151,6 +151,9 @@ class ContainerResponse {
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [ServicePort]);
             }
+            if (data.hasOwnProperty('auto_deploy')) {
+                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -277,6 +280,12 @@ ContainerResponse.prototype['auto_preview'] = undefined;
  */
 ContainerResponse.prototype['ports'] = undefined;
 
+/**
+ * Specify if the container will be automatically updated after receiving a new image tag.  The new image tag shall be communicated via the \"Auto Deploy container\" endpoint https://api-doc.qovery.com/#tag/Containers/operation/autoDeployContainerEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+ContainerResponse.prototype['auto_deploy'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -379,6 +388,11 @@ ContainerResponseAllOf.prototype['auto_preview'] = undefined;
  * @member {Array.<module:model/ServicePort>} ports
  */
 ContainerResponseAllOf.prototype['ports'] = undefined;
+/**
+ * Specify if the container will be automatically updated after receiving a new image tag.  The new image tag shall be communicated via the \"Auto Deploy container\" endpoint https://api-doc.qovery.com/#tag/Containers/operation/autoDeployContainerEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+ContainerResponseAllOf.prototype['auto_deploy'] = undefined;
 
 
 

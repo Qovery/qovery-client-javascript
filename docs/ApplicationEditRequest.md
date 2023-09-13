@@ -20,5 +20,6 @@ Name | Type | Description | Notes
 **ports** | [**[ServicePort]**](ServicePort.md) |  | [optional] 
 **_arguments** | **[String]** |  | [optional] 
 **entrypoint** | **String** | optional entrypoint when launching container | [optional] 
+**autoDeploy** | **Boolean** | Specify if the application will be automatically updated after receiving a new commit. | [optional] 
 
 

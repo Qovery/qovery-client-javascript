@@ -18,7 +18,9 @@ import JobAdvancedSettings from '../model/JobAdvancedSettings';
 import JobRequest from '../model/JobRequest';
 import JobResponse from '../model/JobResponse';
 import JobResponseList from '../model/JobResponseList';
+import OrganizationJobAutoDeployRequest from '../model/OrganizationJobAutoDeployRequest';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
+import Status from '../model/Status';
 
 /**
 * Jobs service.
@@ -38,6 +40,52 @@ export default class JobsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the autoDeployJobEnvironments operation.
+     * @callback module:api/JobsApi~autoDeployJobEnvironmentsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Status} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Auto deploy jobs
+     * Triggers a new job deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the job should have the same image name and a different tag 
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/OrganizationJobAutoDeployRequest} opts.organizationJobAutoDeployRequest 
+     * @param {module:api/JobsApi~autoDeployJobEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Status}
+     */
+    autoDeployJobEnvironments(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['organizationJobAutoDeployRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling autoDeployJobEnvironments");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = Status;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/job/deploy', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the cloneJob operation.

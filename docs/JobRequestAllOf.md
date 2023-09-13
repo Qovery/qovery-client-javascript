@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **source** | [**JobRequestAllOfSource**](JobRequestAllOfSource.md) |  | [optional] 
 **healthchecks** | [**Healthcheck**](Healthcheck.md) |  | [optional] 
 **schedule** | [**JobRequestAllOfSchedule**](JobRequestAllOfSchedule.md) |  | [optional] 
+**autoDeploy** | **Boolean** | Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \&quot;Auto Deploy job\&quot; endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments  | [optional] 
 
 

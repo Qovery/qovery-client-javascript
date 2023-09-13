@@ -107,6 +107,9 @@ class ApplicationEditRequest {
             if (data.hasOwnProperty('entrypoint')) {
                 obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
+            if (data.hasOwnProperty('auto_deploy')) {
+                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -208,6 +211,12 @@ ApplicationEditRequest.prototype['arguments'] = undefined;
  */
 ApplicationEditRequest.prototype['entrypoint'] = undefined;
 
+/**
+ * Specify if the application will be automatically updated after receiving a new commit.
+ * @member {Boolean} auto_deploy
+ */
+ApplicationEditRequest.prototype['auto_deploy'] = undefined;
+
 
 // Implement ServiceStorageRequest interface:
 /**
@@ -289,6 +298,11 @@ ApplicationEditRequestAllOf.prototype['arguments'] = undefined;
  * @member {String} entrypoint
  */
 ApplicationEditRequestAllOf.prototype['entrypoint'] = undefined;
+/**
+ * Specify if the application will be automatically updated after receiving a new commit.
+ * @member {Boolean} auto_deploy
+ */
+ApplicationEditRequestAllOf.prototype['auto_deploy'] = undefined;
 
 
 

@@ -97,6 +97,9 @@ class ApplicationRequestAllOf {
             if (data.hasOwnProperty('entrypoint')) {
                 obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
+            if (data.hasOwnProperty('auto_deploy')) {
+                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -187,6 +190,12 @@ ApplicationRequestAllOf.prototype['arguments'] = undefined;
  * @member {String} entrypoint
  */
 ApplicationRequestAllOf.prototype['entrypoint'] = undefined;
+
+/**
+ * Specify if the application will be automatically updated after receiving a new commit.
+ * @member {Boolean} auto_deploy
+ */
+ApplicationRequestAllOf.prototype['auto_deploy'] = undefined;
 
 
 

@@ -364,6 +364,7 @@ import OrganizationEventTargetResponseList from './model/OrganizationEventTarget
 import OrganizationEventTargetType from './model/OrganizationEventTargetType';
 import OrganizationEventType from './model/OrganizationEventType';
 import OrganizationGithubAppConnectRequest from './model/OrganizationGithubAppConnectRequest';
+import OrganizationJobAutoDeployRequest from './model/OrganizationJobAutoDeployRequest';
 import OrganizationRequest from './model/OrganizationRequest';
 import OrganizationResponseList from './model/OrganizationResponseList';
 import OrganizationWebhookCreateRequest from './model/OrganizationWebhookCreateRequest';
@@ -2682,6 +2683,12 @@ export {
      * @property {module:model/OrganizationGithubAppConnectRequest}
      */
     OrganizationGithubAppConnectRequest,
+
+    /**
+     * The OrganizationJobAutoDeployRequest model constructor.
+     * @property {module:model/OrganizationJobAutoDeployRequest}
+     */
+    OrganizationJobAutoDeployRequest,
 
     /**
      * The OrganizationRequest model constructor.

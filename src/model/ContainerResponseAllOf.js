@@ -36,11 +36,12 @@ class ContainerResponseAllOf {
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param minRunningInstances {Number} Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
      * @param maxRunningInstances {Number} Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
+     * @param healthchecks {module:model/Healthcheck} 
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      */
-    constructor(environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+    constructor(environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
         
-        ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview);
+        ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
     }
 
     /**
@@ -48,7 +49,7 @@ class ContainerResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, autoPreview) { 
+    static initialize(obj, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
         obj['environment'] = environment;
         obj['registry'] = registry;
         obj['maximum_cpu'] = maximumCpu;
@@ -60,6 +61,7 @@ class ContainerResponseAllOf {
         obj['memory'] = memory;
         obj['min_running_instances'] = minRunningInstances || 1;
         obj['max_running_instances'] = maxRunningInstances || 1;
+        obj['healthchecks'] = healthchecks;
         obj['auto_preview'] = autoPreview;
     }
 

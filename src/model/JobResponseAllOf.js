@@ -34,10 +34,11 @@ class JobResponseAllOf {
      * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+     * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview) { 
+    constructor(environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
         
-        JobResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview);
+        JobResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks);
     }
 
     /**
@@ -45,7 +46,7 @@ class JobResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview) { 
+    static initialize(obj, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
         obj['environment'] = environment;
         obj['registry'] = registry;
         obj['maximum_cpu'] = maximumCpu;
@@ -54,6 +55,7 @@ class JobResponseAllOf {
         obj['cpu'] = cpu;
         obj['memory'] = memory;
         obj['auto_preview'] = autoPreview;
+        obj['healthchecks'] = healthchecks;
     }
 
     /**

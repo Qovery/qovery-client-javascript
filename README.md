@@ -108,7 +108,7 @@ var defaultClient = QoveryApi.ApiClient.instance;
 var ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix['Token'] = "Token"
+//ApiKeyAuth.apiKeyPrefix['Authorization'] = "Token"
 // Configure Bearer (JWT) access token for authorization: bearerAuth
 var bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
@@ -968,7 +968,7 @@ Class | Method | HTTP request | Description
 
 
 - **Type**: API key
-- **API key parameter name**: Token
+- **API key parameter name**: Authorization
 - **Location**: HTTP header
 
 

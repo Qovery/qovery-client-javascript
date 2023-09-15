@@ -26,10 +26,11 @@ class JobRequestAllOf {
      * Constructs a new <code>JobRequestAllOf</code>.
      * @alias module:model/JobRequestAllOf
      * @param name {String} name is case insensitive
+     * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(name) { 
+    constructor(name, healthchecks) { 
         
-        JobRequestAllOf.initialize(this, name);
+        JobRequestAllOf.initialize(this, name, healthchecks);
     }
 
     /**
@@ -37,8 +38,9 @@ class JobRequestAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
+    static initialize(obj, name, healthchecks) { 
         obj['name'] = name;
+        obj['healthchecks'] = healthchecks;
     }
 
     /**

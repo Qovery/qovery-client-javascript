@@ -35,10 +35,11 @@ class ContainerRequest {
      * @param registryId {String} id of the linked registry
      * @param imageName {String} The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
      * @param tag {String} tag of the image container
+     * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(name, registryId, imageName, tag) { 
-        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ContainerRequestAllOf.initialize(this, name, registryId, imageName, tag);
-        ContainerRequest.initialize(this, name, registryId, imageName, tag);
+    constructor(name, registryId, imageName, tag, healthchecks) { 
+        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ContainerRequestAllOf.initialize(this, name, registryId, imageName, tag, healthchecks);
+        ContainerRequest.initialize(this, name, registryId, imageName, tag, healthchecks);
     }
 
     /**
@@ -46,11 +47,12 @@ class ContainerRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, registryId, imageName, tag) { 
+    static initialize(obj, name, registryId, imageName, tag, healthchecks) { 
         obj['name'] = name;
         obj['registry_id'] = registryId;
         obj['image_name'] = imageName;
         obj['tag'] = tag;
+        obj['healthchecks'] = healthchecks;
     }
 
     /**

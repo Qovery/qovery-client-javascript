@@ -36,10 +36,11 @@ class ApplicationRequest {
      * @implements module:model/ApplicationRequestAllOf
      * @param name {String} name is case insensitive
      * @param gitRepository {module:model/ApplicationGitRepositoryRequest} 
+     * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(name, gitRepository) { 
-        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ApplicationRequestAllOf.initialize(this, name, gitRepository);
-        ApplicationRequest.initialize(this, name, gitRepository);
+    constructor(name, gitRepository, healthchecks) { 
+        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ApplicationRequestAllOf.initialize(this, name, gitRepository, healthchecks);
+        ApplicationRequest.initialize(this, name, gitRepository, healthchecks);
     }
 
     /**
@@ -47,9 +48,10 @@ class ApplicationRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, gitRepository) { 
+    static initialize(obj, name, gitRepository, healthchecks) { 
         obj['name'] = name;
         obj['git_repository'] = gitRepository;
+        obj['healthchecks'] = healthchecks;
     }
 
     /**

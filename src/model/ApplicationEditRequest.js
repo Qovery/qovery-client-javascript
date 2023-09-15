@@ -32,10 +32,11 @@ class ApplicationEditRequest {
      * @alias module:model/ApplicationEditRequest
      * @implements module:model/ServiceStorageRequest
      * @implements module:model/ApplicationEditRequestAllOf
+     * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor() { 
-        ServiceStorageRequest.initialize(this);ApplicationEditRequestAllOf.initialize(this);
-        ApplicationEditRequest.initialize(this);
+    constructor(healthchecks) { 
+        ServiceStorageRequest.initialize(this);ApplicationEditRequestAllOf.initialize(this, healthchecks);
+        ApplicationEditRequest.initialize(this, healthchecks);
     }
 
     /**
@@ -43,7 +44,8 @@ class ApplicationEditRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, healthchecks) { 
+        obj['healthchecks'] = healthchecks;
     }
 
     /**

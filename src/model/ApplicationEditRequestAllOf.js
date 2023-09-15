@@ -27,10 +27,11 @@ class ApplicationEditRequestAllOf {
     /**
      * Constructs a new <code>ApplicationEditRequestAllOf</code>.
      * @alias module:model/ApplicationEditRequestAllOf
+     * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor() { 
+    constructor(healthchecks) { 
         
-        ApplicationEditRequestAllOf.initialize(this);
+        ApplicationEditRequestAllOf.initialize(this, healthchecks);
     }
 
     /**
@@ -38,7 +39,8 @@ class ApplicationEditRequestAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, healthchecks) { 
+        obj['healthchecks'] = healthchecks;
     }
 
     /**

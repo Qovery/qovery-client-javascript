@@ -69,6 +69,9 @@ class EnvironmentStatus {
             if (data.hasOwnProperty('last_deployment_id')) {
                 obj['last_deployment_id'] = ApiClient.convertToType(data['last_deployment_id'], 'String');
             }
+            if (data.hasOwnProperty('total_deployment_duration_in_seconds')) {
+                obj['total_deployment_duration_in_seconds'] = ApiClient.convertToType(data['total_deployment_duration_in_seconds'], 'Number');
+            }
         }
         return obj;
     }
@@ -100,6 +103,11 @@ EnvironmentStatus.prototype['last_deployment_state'] = undefined;
  * @member {String} last_deployment_id
  */
 EnvironmentStatus.prototype['last_deployment_id'] = undefined;
+
+/**
+ * @member {Number} total_deployment_duration_in_seconds
+ */
+EnvironmentStatus.prototype['total_deployment_duration_in_seconds'] = undefined;
 
 
 

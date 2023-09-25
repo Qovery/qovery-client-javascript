@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **lastDeploymentDate** | **Date** |  | [optional] 
 **lastDeploymentState** | [**StateEnum**](StateEnum.md) |  | 
 **lastDeploymentId** | **String** |  | [optional] 
+**totalDeploymentDurationInSeconds** | **Number** |  | [optional] 
 
 

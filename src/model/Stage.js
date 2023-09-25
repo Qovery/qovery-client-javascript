@@ -58,8 +58,8 @@ class Stage {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('metrics')) {
-                obj['metrics'] = StageStepMetrics.constructFromObject(data['metrics']);
+            if (data.hasOwnProperty('steps')) {
+                obj['steps'] = StageStepMetrics.constructFromObject(data['steps']);
             }
         }
         return obj;
@@ -80,9 +80,9 @@ Stage.prototype['id'] = undefined;
 Stage.prototype['name'] = undefined;
 
 /**
- * @member {module:model/StageStepMetrics} metrics
+ * @member {module:model/StageStepMetrics} steps
  */
-Stage.prototype['metrics'] = undefined;
+Stage.prototype['steps'] = undefined;
 
 
 

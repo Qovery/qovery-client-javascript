@@ -77,8 +77,8 @@ class ReferenceObjectStatus {
             if (data.hasOwnProperty('is_part_last_deployment')) {
                 obj['is_part_last_deployment'] = ApiClient.convertToType(data['is_part_last_deployment'], 'Boolean');
             }
-            if (data.hasOwnProperty('metrics')) {
-                obj['metrics'] = ServiceStepMetrics.constructFromObject(data['metrics']);
+            if (data.hasOwnProperty('steps')) {
+                obj['steps'] = ServiceStepMetrics.constructFromObject(data['steps']);
             }
         }
         return obj;
@@ -113,9 +113,9 @@ ReferenceObjectStatus.prototype['last_deployment_date'] = undefined;
 ReferenceObjectStatus.prototype['is_part_last_deployment'] = undefined;
 
 /**
- * @member {module:model/ServiceStepMetrics} metrics
+ * @member {module:model/ServiceStepMetrics} steps
  */
-ReferenceObjectStatus.prototype['metrics'] = undefined;
+ReferenceObjectStatus.prototype['steps'] = undefined;
 
 
 // Implement ReferenceObject interface:
@@ -145,9 +145,9 @@ Status.prototype['last_deployment_date'] = undefined;
  */
 Status.prototype['is_part_last_deployment'] = undefined;
 /**
- * @member {module:model/ServiceStepMetrics} metrics
+ * @member {module:model/ServiceStepMetrics} steps
  */
-Status.prototype['metrics'] = undefined;
+Status.prototype['steps'] = undefined;
 
 
 

@@ -84,6 +84,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property totalDeploymentDurationInSeconds (base name: "total_deployment_duration_in_seconds")', function() {
+      // uncomment below and update the code to test the property totalDeploymentDurationInSeconds
+      //var instance = new QoveryApi.EnvironmentStatus();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

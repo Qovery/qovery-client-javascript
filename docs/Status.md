@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **serviceDeploymentStatus** | [**ServiceDeploymentStatusEnum**](ServiceDeploymentStatusEnum.md) |  | 
 **lastDeploymentDate** | **Date** |  | [optional] 
 **isPartLastDeployment** | **Boolean** |  | [optional] 
-**metrics** | [**ServiceStepMetrics**](ServiceStepMetrics.md) |  | [optional] 
+**steps** | [**ServiceStepMetrics**](ServiceStepMetrics.md) |  | [optional] 
 
 

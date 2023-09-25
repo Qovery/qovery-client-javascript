@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property metrics (base name: "metrics")', function() {
-      // uncomment below and update the code to test the property metrics
+    it('should have the property steps (base name: "steps")', function() {
+      // uncomment below and update the code to test the property steps
       //var instance = new QoveryApi.Stage();
       //expect(instance).to.be();
     });

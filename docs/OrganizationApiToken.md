@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**scope** | [**OrganizationApiTokenScope**](OrganizationApiTokenScope.md) |  | [optional] 
+**roleName** | **String** |  | [optional] 
+**roleId** | **String** |  | [optional] 
 
 

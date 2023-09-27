@@ -24,11 +24,11 @@ class OrganizationApiTokenCreateRequest {
      * Constructs a new <code>OrganizationApiTokenCreateRequest</code>.
      * @alias module:model/OrganizationApiTokenCreateRequest
      * @param name {String} 
-     * @param scope {module:model/OrganizationApiTokenScope} 
+     * @param roleId {String} the roleId provided by the \"List organization custom roles\" endpoint.
      */
-    constructor(name, scope) { 
+    constructor(name, roleId) { 
         
-        OrganizationApiTokenCreateRequest.initialize(this, name, scope);
+        OrganizationApiTokenCreateRequest.initialize(this, name, roleId);
     }
 
     /**
@@ -36,9 +36,9 @@ class OrganizationApiTokenCreateRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, scope) { 
+    static initialize(obj, name, roleId) { 
         obj['name'] = name;
-        obj['scope'] = scope;
+        obj['roleId'] = roleId;
     }
 
     /**
@@ -61,6 +61,9 @@ class OrganizationApiTokenCreateRequest {
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = OrganizationApiTokenScope.constructFromObject(data['scope']);
             }
+            if (data.hasOwnProperty('roleId')) {
+                obj['roleId'] = ApiClient.convertToType(data['roleId'], 'String');
+            }
         }
         return obj;
     }
@@ -82,6 +85,12 @@ OrganizationApiTokenCreateRequest.prototype['description'] = undefined;
  * @member {module:model/OrganizationApiTokenScope} scope
  */
 OrganizationApiTokenCreateRequest.prototype['scope'] = undefined;
+
+/**
+ * the roleId provided by the \"List organization custom roles\" endpoint.
+ * @member {String} roleId
+ */
+OrganizationApiTokenCreateRequest.prototype['roleId'] = undefined;
 
 
 

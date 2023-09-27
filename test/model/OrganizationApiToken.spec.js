@@ -84,8 +84,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property scope (base name: "scope")', function() {
-      // uncomment below and update the code to test the property scope
+    it('should have the property roleName (base name: "roleName")', function() {
+      // uncomment below and update the code to test the property roleName
+      //var instance = new QoveryApi.OrganizationApiToken();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property roleId (base name: "roleId")', function() {
+      // uncomment below and update the code to test the property roleId
       //var instance = new QoveryApi.OrganizationApiToken();
       //expect(instance).to.be();
     });

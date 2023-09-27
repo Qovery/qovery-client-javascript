@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import OrganizationApiTokenScope from './OrganizationApiTokenScope';
 
 /**
  * The OrganizationApiTokenAllOf model module.
@@ -54,8 +53,11 @@ class OrganizationApiTokenAllOf {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('scope')) {
-                obj['scope'] = OrganizationApiTokenScope.constructFromObject(data['scope']);
+            if (data.hasOwnProperty('roleName')) {
+                obj['roleName'] = ApiClient.convertToType(data['roleName'], 'String');
+            }
+            if (data.hasOwnProperty('roleId')) {
+                obj['roleId'] = ApiClient.convertToType(data['roleId'], 'String');
             }
         }
         return obj;
@@ -75,9 +77,14 @@ OrganizationApiTokenAllOf.prototype['name'] = undefined;
 OrganizationApiTokenAllOf.prototype['description'] = undefined;
 
 /**
- * @member {module:model/OrganizationApiTokenScope} scope
+ * @member {String} roleName
  */
-OrganizationApiTokenAllOf.prototype['scope'] = undefined;
+OrganizationApiTokenAllOf.prototype['roleName'] = undefined;
+
+/**
+ * @member {String} roleId
+ */
+OrganizationApiTokenAllOf.prototype['roleId'] = undefined;
 
 
 

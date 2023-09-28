@@ -20,6 +20,13 @@ import ApiClient from '../ApiClient';
 export default class StageStepMetricNameEnum {
     
         /**
+         * value: "QUEUEING"
+         * @const
+         */
+        "QUEUEING" = "QUEUEING";
+
+    
+        /**
          * value: "PROVISION_BUILDER"
          * @const
          */

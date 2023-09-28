@@ -34,10 +34,24 @@ export default class ServiceStepMetricNameEnum {
 
     
         /**
+         * value: "BUILD_QUEUEING"
+         * @const
+         */
+        "BUILD_QUEUEING" = "BUILD_QUEUEING";
+
+    
+        /**
          * value: "BUILD"
          * @const
          */
         "BUILD" = "BUILD";
+
+    
+        /**
+         * value: "DEPLOYMENT_QUEUEING"
+         * @const
+         */
+        "DEPLOYMENT_QUEUEING" = "DEPLOYMENT_QUEUEING";
 
     
         /**

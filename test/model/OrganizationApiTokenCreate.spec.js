@@ -90,13 +90,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property roleName (base name: "roleName")', function() {
+    it('should have the property roleName (base name: "role_name")', function() {
       // uncomment below and update the code to test the property roleName
       //var instance = new QoveryApi.OrganizationApiTokenCreate();
       //expect(instance).to.be();
     });
 
-    it('should have the property roleId (base name: "roleId")', function() {
+    it('should have the property roleId (base name: "role_id")', function() {
       // uncomment below and update the code to test the property roleId
       //var instance = new QoveryApi.OrganizationApiTokenCreate();
       //expect(instance).to.be();

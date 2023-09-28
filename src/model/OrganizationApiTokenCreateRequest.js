@@ -38,7 +38,7 @@ class OrganizationApiTokenCreateRequest {
      */
     static initialize(obj, name, roleId) { 
         obj['name'] = name;
-        obj['roleId'] = roleId;
+        obj['role_id'] = roleId;
     }
 
     /**
@@ -61,8 +61,8 @@ class OrganizationApiTokenCreateRequest {
             if (data.hasOwnProperty('scope')) {
                 obj['scope'] = OrganizationApiTokenScope.constructFromObject(data['scope']);
             }
-            if (data.hasOwnProperty('roleId')) {
-                obj['roleId'] = ApiClient.convertToType(data['roleId'], 'String');
+            if (data.hasOwnProperty('role_id')) {
+                obj['role_id'] = ApiClient.convertToType(data['role_id'], 'String');
             }
         }
         return obj;
@@ -88,9 +88,9 @@ OrganizationApiTokenCreateRequest.prototype['scope'] = undefined;
 
 /**
  * the roleId provided by the \"List organization custom roles\" endpoint.
- * @member {String} roleId
+ * @member {String} role_id
  */
-OrganizationApiTokenCreateRequest.prototype['roleId'] = undefined;
+OrganizationApiTokenCreateRequest.prototype['role_id'] = undefined;
 
 
 

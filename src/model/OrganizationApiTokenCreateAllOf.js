@@ -56,11 +56,11 @@ class OrganizationApiTokenCreateAllOf {
             if (data.hasOwnProperty('token')) {
                 obj['token'] = ApiClient.convertToType(data['token'], 'String');
             }
-            if (data.hasOwnProperty('roleName')) {
-                obj['roleName'] = ApiClient.convertToType(data['roleName'], 'String');
+            if (data.hasOwnProperty('role_name')) {
+                obj['role_name'] = ApiClient.convertToType(data['role_name'], 'String');
             }
-            if (data.hasOwnProperty('roleId')) {
-                obj['roleId'] = ApiClient.convertToType(data['roleId'], 'String');
+            if (data.hasOwnProperty('role_id')) {
+                obj['role_id'] = ApiClient.convertToType(data['role_id'], 'String');
             }
         }
         return obj;
@@ -86,14 +86,14 @@ OrganizationApiTokenCreateAllOf.prototype['description'] = undefined;
 OrganizationApiTokenCreateAllOf.prototype['token'] = undefined;
 
 /**
- * @member {String} roleName
+ * @member {String} role_name
  */
-OrganizationApiTokenCreateAllOf.prototype['roleName'] = undefined;
+OrganizationApiTokenCreateAllOf.prototype['role_name'] = undefined;
 
 /**
- * @member {String} roleId
+ * @member {String} role_id
  */
-OrganizationApiTokenCreateAllOf.prototype['roleId'] = undefined;
+OrganizationApiTokenCreateAllOf.prototype['role_id'] = undefined;
 
 
 

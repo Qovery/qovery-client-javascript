@@ -72,11 +72,11 @@ class OrganizationApiToken {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
-            if (data.hasOwnProperty('roleName')) {
-                obj['roleName'] = ApiClient.convertToType(data['roleName'], 'String');
+            if (data.hasOwnProperty('role_name')) {
+                obj['role_name'] = ApiClient.convertToType(data['role_name'], 'String');
             }
-            if (data.hasOwnProperty('roleId')) {
-                obj['roleId'] = ApiClient.convertToType(data['roleId'], 'String');
+            if (data.hasOwnProperty('role_id')) {
+                obj['role_id'] = ApiClient.convertToType(data['role_id'], 'String');
             }
         }
         return obj;
@@ -111,14 +111,14 @@ OrganizationApiToken.prototype['name'] = undefined;
 OrganizationApiToken.prototype['description'] = undefined;
 
 /**
- * @member {String} roleName
+ * @member {String} role_name
  */
-OrganizationApiToken.prototype['roleName'] = undefined;
+OrganizationApiToken.prototype['role_name'] = undefined;
 
 /**
- * @member {String} roleId
+ * @member {String} role_id
  */
-OrganizationApiToken.prototype['roleId'] = undefined;
+OrganizationApiToken.prototype['role_id'] = undefined;
 
 
 // Implement Base interface:
@@ -144,13 +144,13 @@ OrganizationApiTokenAllOf.prototype['name'] = undefined;
  */
 OrganizationApiTokenAllOf.prototype['description'] = undefined;
 /**
- * @member {String} roleName
+ * @member {String} role_name
  */
-OrganizationApiTokenAllOf.prototype['roleName'] = undefined;
+OrganizationApiTokenAllOf.prototype['role_name'] = undefined;
 /**
- * @member {String} roleId
+ * @member {String} role_id
  */
-OrganizationApiTokenAllOf.prototype['roleId'] = undefined;
+OrganizationApiTokenAllOf.prototype['role_id'] = undefined;
 
 
 

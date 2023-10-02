@@ -99,6 +99,7 @@ docs/ClusterRoutingTable.md
 docs/ClusterRoutingTableRequest.md
 docs/ClusterRoutingTableRequestRoutesInner.md
 docs/ClusterRoutingTableResultsInner.md
+docs/ClusterStateEnum.md
 docs/ClusterStatus.md
 docs/ClusterStatusGet.md
 docs/ClusterStatusResponseList.md
@@ -686,6 +687,7 @@ src/model/ClusterRoutingTable.js
 src/model/ClusterRoutingTableRequest.js
 src/model/ClusterRoutingTableRequestRoutesInner.js
 src/model/ClusterRoutingTableResultsInner.js
+src/model/ClusterStateEnum.js
 src/model/ClusterStatus.js
 src/model/ClusterStatusGet.js
 src/model/ClusterStatusResponseList.js
@@ -1211,6 +1213,7 @@ test/model/ClusterRoutingTable.spec.js
 test/model/ClusterRoutingTableRequest.spec.js
 test/model/ClusterRoutingTableRequestRoutesInner.spec.js
 test/model/ClusterRoutingTableResultsInner.spec.js
+test/model/ClusterStateEnum.spec.js
 test/model/ClusterStatus.spec.js
 test/model/ClusterStatusGet.spec.js
 test/model/ClusterStatusResponseList.spec.js

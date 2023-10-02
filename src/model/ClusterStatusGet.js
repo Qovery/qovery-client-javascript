@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import StateEnum from './StateEnum';
+import ClusterStateEnum from './ClusterStateEnum';
 
 /**
  * The ClusterStatusGet model module.
@@ -52,7 +52,7 @@ class ClusterStatusGet {
                 obj['cluster_id'] = ApiClient.convertToType(data['cluster_id'], 'String');
             }
             if (data.hasOwnProperty('status')) {
-                obj['status'] = StateEnum.constructFromObject(data['status']);
+                obj['status'] = ClusterStateEnum.constructFromObject(data['status']);
             }
             if (data.hasOwnProperty('is_deployed')) {
                 obj['is_deployed'] = ApiClient.convertToType(data['is_deployed'], 'Boolean');
@@ -73,7 +73,7 @@ class ClusterStatusGet {
 ClusterStatusGet.prototype['cluster_id'] = undefined;
 
 /**
- * @member {module:model/StateEnum} status
+ * @member {module:model/ClusterStateEnum} status
  */
 ClusterStatusGet.prototype['status'] = undefined;
 

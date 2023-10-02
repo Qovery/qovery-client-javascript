@@ -586,6 +586,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterRoutingTableRequest](docs/ClusterRoutingTableRequest.md)
  - [QoveryApi.ClusterRoutingTableRequestRoutesInner](docs/ClusterRoutingTableRequestRoutesInner.md)
  - [QoveryApi.ClusterRoutingTableResultsInner](docs/ClusterRoutingTableResultsInner.md)
+ - [QoveryApi.ClusterStateEnum](docs/ClusterStateEnum.md)
  - [QoveryApi.ClusterStatus](docs/ClusterStatus.md)
  - [QoveryApi.ClusterStatusGet](docs/ClusterStatusGet.md)
  - [QoveryApi.ClusterStatusResponseList](docs/ClusterStatusResponseList.md)

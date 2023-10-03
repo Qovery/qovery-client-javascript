@@ -164,6 +164,11 @@ CustomDomainAllOf.prototype['validation_domain'] = undefined;
  * @member {module:model/CustomDomainStatusEnum} status
  */
 CustomDomainAllOf.prototype['status'] = undefined;
+/**
+ * to control if a certificate has to be generated for this custom domain by Qovery. The default value is `true`. This flag should be set to `false` if a CDN or other entities are managing the certificate for the specified domain and the traffic is proxied by the CDN to Qovery.
+ * @member {Boolean} generate_certificate
+ */
+CustomDomainAllOf.prototype['generate_certificate'] = undefined;
 
 
 

@@ -140,7 +140,7 @@ export default class CustomDomainApi {
 
     /**
      * Edit a Custom Domain
-     * To edit a Custom Domain  you must have the project user permission
+     * To edit a Custom Domain you must have the project user permission
      * @param {String} applicationId Application ID
      * @param {String} customDomainId Custom Domain ID
      * @param {Object} opts Optional parameters

@@ -52,6 +52,9 @@ class CustomDomainRequest {
             if (data.hasOwnProperty('domain')) {
                 obj['domain'] = ApiClient.convertToType(data['domain'], 'String');
             }
+            if (data.hasOwnProperty('generate_certificate')) {
+                obj['generate_certificate'] = ApiClient.convertToType(data['generate_certificate'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -64,6 +67,12 @@ class CustomDomainRequest {
  * @member {String} domain
  */
 CustomDomainRequest.prototype['domain'] = undefined;
+
+/**
+ * to control if a certificate has to be generated for this custom domain by Qovery. The default value is `true`. This flag should be set to `false` if a CDN or other entities are managing the certificate for the specified domain and the traffic is proxied by the CDN to Qovery.
+ * @member {Boolean} generate_certificate
+ */
+CustomDomainRequest.prototype['generate_certificate'] = undefined;
 
 
 

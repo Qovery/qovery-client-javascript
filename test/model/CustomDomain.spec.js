@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property generateCertificate (base name: "generate_certificate")', function() {
+      // uncomment below and update the code to test the property generateCertificate
+      //var instance = new QoveryApi.CustomDomain();
+      //expect(instance).to.be();
+    });
+
     it('should have the property validationDomain (base name: "validation_domain")', function() {
       // uncomment below and update the code to test the property validationDomain
       //var instance = new QoveryApi.CustomDomain();

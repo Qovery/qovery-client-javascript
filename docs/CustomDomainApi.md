@@ -132,7 +132,7 @@ null (empty response body)
 
 Edit a Custom Domain
 
-To edit a Custom Domain  you must have the project user permission
+To edit a Custom Domain you must have the project user permission
 
 ### Example
 

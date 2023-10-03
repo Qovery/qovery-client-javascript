@@ -75,6 +75,9 @@ class CustomDomain {
             if (data.hasOwnProperty('domain')) {
                 obj['domain'] = ApiClient.convertToType(data['domain'], 'String');
             }
+            if (data.hasOwnProperty('generate_certificate')) {
+                obj['generate_certificate'] = ApiClient.convertToType(data['generate_certificate'], 'Boolean');
+            }
             if (data.hasOwnProperty('validation_domain')) {
                 obj['validation_domain'] = ApiClient.convertToType(data['validation_domain'], 'String');
             }
@@ -110,6 +113,12 @@ CustomDomain.prototype['updated_at'] = undefined;
 CustomDomain.prototype['domain'] = undefined;
 
 /**
+ * to control if a certificate has to be generated for this custom domain by Qovery. The default value is `true`. This flag should be set to `false` if a CDN or other entities are managing the certificate for the specified domain and the traffic is proxied by the CDN to Qovery.
+ * @member {Boolean} generate_certificate
+ */
+CustomDomain.prototype['generate_certificate'] = undefined;
+
+/**
  * URL provided by Qovery. You must create a CNAME on your DNS provider using that URL
  * @member {String} validation_domain
  */
@@ -140,6 +149,11 @@ Base.prototype['updated_at'] = undefined;
  * @member {String} domain
  */
 CustomDomainRequest.prototype['domain'] = undefined;
+/**
+ * to control if a certificate has to be generated for this custom domain by Qovery. The default value is `true`. This flag should be set to `false` if a CDN or other entities are managing the certificate for the specified domain and the traffic is proxied by the CDN to Qovery.
+ * @member {Boolean} generate_certificate
+ */
+CustomDomainRequest.prototype['generate_certificate'] = undefined;
 // Implement CustomDomainAllOf interface:
 /**
  * URL provided by Qovery. You must create a CNAME on your DNS provider using that URL

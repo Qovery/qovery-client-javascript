@@ -125,6 +125,7 @@ docs/ContainerNetwork.md
 docs/ContainerNetworkRequest.md
 docs/ContainerRegistriesApi.md
 docs/ContainerRegistryKindEnum.md
+docs/ContainerRegistryProviderDetailsResponse.md
 docs/ContainerRegistryRequest.md
 docs/ContainerRegistryRequestConfig.md
 docs/ContainerRegistryResponse.md
@@ -332,6 +333,7 @@ docs/JobResponseAllOfSchedule.md
 docs/JobResponseAllOfScheduleCronjob.md
 docs/JobResponseAllOfSource.md
 docs/JobResponseAllOfSourceDocker.md
+docs/JobResponseAllOfSourceImage.md
 docs/JobResponseList.md
 docs/JobScheduleEvent.md
 docs/JobSecretApi.md
@@ -703,6 +705,7 @@ src/model/ContainerDeployRequest.js
 src/model/ContainerNetwork.js
 src/model/ContainerNetworkRequest.js
 src/model/ContainerRegistryKindEnum.js
+src/model/ContainerRegistryProviderDetailsResponse.js
 src/model/ContainerRegistryRequest.js
 src/model/ContainerRegistryRequestConfig.js
 src/model/ContainerRegistryResponse.js
@@ -880,6 +883,7 @@ src/model/JobResponseAllOfSchedule.js
 src/model/JobResponseAllOfScheduleCronjob.js
 src/model/JobResponseAllOfSource.js
 src/model/JobResponseAllOfSourceDocker.js
+src/model/JobResponseAllOfSourceImage.js
 src/model/JobResponseList.js
 src/model/JobScheduleEvent.js
 src/model/Key.js
@@ -1229,6 +1233,7 @@ test/model/ContainerDeployRequest.spec.js
 test/model/ContainerNetwork.spec.js
 test/model/ContainerNetworkRequest.spec.js
 test/model/ContainerRegistryKindEnum.spec.js
+test/model/ContainerRegistryProviderDetailsResponse.spec.js
 test/model/ContainerRegistryRequest.spec.js
 test/model/ContainerRegistryRequestConfig.spec.js
 test/model/ContainerRegistryResponse.spec.js
@@ -1406,6 +1411,7 @@ test/model/JobResponseAllOfSchedule.spec.js
 test/model/JobResponseAllOfScheduleCronjob.spec.js
 test/model/JobResponseAllOfSource.spec.js
 test/model/JobResponseAllOfSourceDocker.spec.js
+test/model/JobResponseAllOfSourceImage.spec.js
 test/model/JobResponseList.spec.js
 test/model/JobScheduleEvent.spec.js
 test/model/Key.spec.js

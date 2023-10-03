@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ContainerRegistryProviderDetailsResponse from './ContainerRegistryProviderDetailsResponse';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 import ServicePort from './ServicePort';
@@ -26,7 +27,7 @@ class ContainerResponseAllOf {
      * Constructs a new <code>ContainerResponseAllOf</code>.
      * @alias module:model/ContainerResponseAllOf
      * @param environment {module:model/ReferenceObject} 
-     * @param registry {module:model/ReferenceObject} 
+     * @param registry {module:model/ContainerRegistryProviderDetailsResponse} 
      * @param maximumCpu {Number} Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
      * @param maximumMemory {Number} Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
      * @param name {String} name is case insensitive
@@ -80,7 +81,7 @@ class ContainerResponseAllOf {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
             if (data.hasOwnProperty('registry')) {
-                obj['registry'] = ReferenceObject.constructFromObject(data['registry']);
+                obj['registry'] = ContainerRegistryProviderDetailsResponse.constructFromObject(data['registry']);
             }
             if (data.hasOwnProperty('maximum_cpu')) {
                 obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
@@ -143,7 +144,7 @@ class ContainerResponseAllOf {
 ContainerResponseAllOf.prototype['environment'] = undefined;
 
 /**
- * @member {module:model/ReferenceObject} registry
+ * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
  */
 ContainerResponseAllOf.prototype['registry'] = undefined;
 

@@ -78,12 +78,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property registry (base name: "registry")', function() {
-      // uncomment below and update the code to test the property registry
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be();
-    });
-
     it('should have the property maximumCpu (base name: "maximum_cpu")', function() {
       // uncomment below and update the code to test the property maximumCpu
       //var instance = new QoveryApi.JobResponse();

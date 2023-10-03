@@ -109,6 +109,7 @@ import ContainerDeployRequest from './model/ContainerDeployRequest';
 import ContainerNetwork from './model/ContainerNetwork';
 import ContainerNetworkRequest from './model/ContainerNetworkRequest';
 import ContainerRegistryKindEnum from './model/ContainerRegistryKindEnum';
+import ContainerRegistryProviderDetailsResponse from './model/ContainerRegistryProviderDetailsResponse';
 import ContainerRegistryRequest from './model/ContainerRegistryRequest';
 import ContainerRegistryRequestConfig from './model/ContainerRegistryRequestConfig';
 import ContainerRegistryResponse from './model/ContainerRegistryResponse';
@@ -286,6 +287,7 @@ import JobResponseAllOfSchedule from './model/JobResponseAllOfSchedule';
 import JobResponseAllOfScheduleCronjob from './model/JobResponseAllOfScheduleCronjob';
 import JobResponseAllOfSource from './model/JobResponseAllOfSource';
 import JobResponseAllOfSourceDocker from './model/JobResponseAllOfSourceDocker';
+import JobResponseAllOfSourceImage from './model/JobResponseAllOfSourceImage';
 import JobResponseList from './model/JobResponseList';
 import JobScheduleEvent from './model/JobScheduleEvent';
 import Key from './model/Key';
@@ -1154,6 +1156,12 @@ export {
      * @property {module:model/ContainerRegistryKindEnum}
      */
     ContainerRegistryKindEnum,
+
+    /**
+     * The ContainerRegistryProviderDetailsResponse model constructor.
+     * @property {module:model/ContainerRegistryProviderDetailsResponse}
+     */
+    ContainerRegistryProviderDetailsResponse,
 
     /**
      * The ContainerRegistryRequest model constructor.
@@ -2216,6 +2224,12 @@ export {
      * @property {module:model/JobResponseAllOfSourceDocker}
      */
     JobResponseAllOfSourceDocker,
+
+    /**
+     * The JobResponseAllOfSourceImage model constructor.
+     * @property {module:model/JobResponseAllOfSourceImage}
+     */
+    JobResponseAllOfSourceImage,
 
     /**
      * The JobResponseList model constructor.

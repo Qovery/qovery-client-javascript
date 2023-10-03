@@ -89,9 +89,6 @@ class JobResponse {
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
-            if (data.hasOwnProperty('registry')) {
-                obj['registry'] = ReferenceObject.constructFromObject(data['registry']);
-            }
             if (data.hasOwnProperty('maximum_cpu')) {
                 obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
             }
@@ -160,11 +157,6 @@ JobResponse.prototype['updated_at'] = undefined;
  * @member {module:model/ReferenceObject} environment
  */
 JobResponse.prototype['environment'] = undefined;
-
-/**
- * @member {module:model/ReferenceObject} registry
- */
-JobResponse.prototype['registry'] = undefined;
 
 /**
  * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
@@ -265,10 +257,6 @@ Base.prototype['updated_at'] = undefined;
  * @member {module:model/ReferenceObject} environment
  */
 JobResponseAllOf.prototype['environment'] = undefined;
-/**
- * @member {module:model/ReferenceObject} registry
- */
-JobResponseAllOf.prototype['registry'] = undefined;
 /**
  * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu

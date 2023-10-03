@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import ContainerRegistryProviderDetailsResponse from './ContainerRegistryProviderDetailsResponse';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
@@ -35,7 +36,7 @@ class ContainerResponse {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
-     * @param registry {module:model/ReferenceObject} 
+     * @param registry {module:model/ContainerRegistryProviderDetailsResponse} 
      * @param maximumCpu {Number} Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
      * @param maximumMemory {Number} Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
      * @param name {String} name is case insensitive
@@ -106,7 +107,7 @@ class ContainerResponse {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
             if (data.hasOwnProperty('registry')) {
-                obj['registry'] = ReferenceObject.constructFromObject(data['registry']);
+                obj['registry'] = ContainerRegistryProviderDetailsResponse.constructFromObject(data['registry']);
             }
             if (data.hasOwnProperty('maximum_cpu')) {
                 obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
@@ -189,7 +190,7 @@ ContainerResponse.prototype['storage'] = undefined;
 ContainerResponse.prototype['environment'] = undefined;
 
 /**
- * @member {module:model/ReferenceObject} registry
+ * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
  */
 ContainerResponse.prototype['registry'] = undefined;
 
@@ -313,7 +314,7 @@ ServiceStorage.prototype['storage'] = undefined;
  */
 ContainerResponseAllOf.prototype['environment'] = undefined;
 /**
- * @member {module:model/ReferenceObject} registry
+ * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
  */
 ContainerResponseAllOf.prototype['registry'] = undefined;
 /**

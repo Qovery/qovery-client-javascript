@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**image** | [**JobRequestAllOfSourceImage**](JobRequestAllOfSourceImage.md) |  | [optional] 
+**image** | [**JobResponseAllOfSourceImage**](JobResponseAllOfSourceImage.md) |  | [optional] 
 **docker** | [**JobResponseAllOfSourceDocker**](JobResponseAllOfSourceDocker.md) |  | [optional] 
 
 

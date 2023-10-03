@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import JobRequestAllOfSourceImage from './JobRequestAllOfSourceImage';
 import JobResponseAllOfSourceDocker from './JobResponseAllOfSourceDocker';
+import JobResponseAllOfSourceImage from './JobResponseAllOfSourceImage';
 
 /**
  * The JobResponseAllOfSource model module.
@@ -50,7 +50,7 @@ class JobResponseAllOfSource {
             obj = obj || new JobResponseAllOfSource();
 
             if (data.hasOwnProperty('image')) {
-                obj['image'] = JobRequestAllOfSourceImage.constructFromObject(data['image']);
+                obj['image'] = JobResponseAllOfSourceImage.constructFromObject(data['image']);
             }
             if (data.hasOwnProperty('docker')) {
                 obj['docker'] = JobResponseAllOfSourceDocker.constructFromObject(data['docker']);
@@ -63,7 +63,7 @@ class JobResponseAllOfSource {
 }
 
 /**
- * @member {module:model/JobRequestAllOfSourceImage} image
+ * @member {module:model/JobResponseAllOfSourceImage} image
  */
 JobResponseAllOfSource.prototype['image'] = undefined;
 

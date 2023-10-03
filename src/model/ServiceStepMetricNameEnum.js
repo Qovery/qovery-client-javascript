@@ -68,6 +68,13 @@ export default class ServiceStepMetricNameEnum {
         "ROUTER_DEPLOYMENT" = "ROUTER_DEPLOYMENT";
 
     
+        /**
+         * value: "MIRROR_IMAGE"
+         * @const
+         */
+        "MIRROR_IMAGE" = "MIRROR_IMAGE";
+
+    
 
     /**
     * Returns a <code>ServiceStepMetricNameEnum</code> enum value from a Javascript object name.

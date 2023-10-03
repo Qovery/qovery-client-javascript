@@ -17,4 +17,6 @@
 
 * `ROUTER_DEPLOYMENT` (value: `"ROUTER_DEPLOYMENT"`)
 
+* `MIRROR_IMAGE` (value: `"MIRROR_IMAGE"`)
+
 

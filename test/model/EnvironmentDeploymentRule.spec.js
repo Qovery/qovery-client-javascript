@@ -72,12 +72,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property autoDeploy (base name: "auto_deploy")', function() {
-      // uncomment below and update the code to test the property autoDeploy
-      //var instance = new QoveryApi.EnvironmentDeploymentRule();
-      //expect(instance).to.be();
-    });
-
     it('should have the property onDemandPreview (base name: "on_demand_preview")', function() {
       // uncomment below and update the code to test the property onDemandPreview
       //var instance = new QoveryApi.EnvironmentDeploymentRule();

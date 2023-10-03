@@ -69,9 +69,6 @@ class DeploymentRuleRequest {
             if (data.hasOwnProperty('cluster')) {
                 obj['cluster'] = ApiClient.convertToType(data['cluster'], 'String');
             }
-            if (data.hasOwnProperty('auto_deploy')) {
-                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
-            }
             if (data.hasOwnProperty('auto_stop')) {
                 obj['auto_stop'] = ApiClient.convertToType(data['auto_stop'], 'Boolean');
             }
@@ -114,12 +111,6 @@ DeploymentRuleRequest.prototype['mode'] = undefined;
  * @member {String} cluster
  */
 DeploymentRuleRequest.prototype['cluster'] = undefined;
-
-/**
- * @member {Boolean} auto_deploy
- * @default true
- */
-DeploymentRuleRequest.prototype['auto_deploy'] = true;
 
 /**
  * @member {Boolean} auto_stop

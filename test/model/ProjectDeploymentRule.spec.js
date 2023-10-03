@@ -96,12 +96,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property autoDeploy (base name: "auto_deploy")', function() {
-      // uncomment below and update the code to test the property autoDeploy
-      //var instance = new QoveryApi.ProjectDeploymentRule();
-      //expect(instance).to.be();
-    });
-
     it('should have the property autoStop (base name: "auto_stop")', function() {
       // uncomment below and update the code to test the property autoStop
       //var instance = new QoveryApi.ProjectDeploymentRule();

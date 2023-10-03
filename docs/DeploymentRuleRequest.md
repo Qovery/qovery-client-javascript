@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **mode** | [**EnvironmentModeEnum**](EnvironmentModeEnum.md) |  | 
 **cluster** | **String** |  | 
-**autoDeploy** | **Boolean** |  | [optional] [default to true]
 **autoStop** | **Boolean** |  | [default to false]
 **timezone** | **String** | specify value only if auto_stop &#x3D; false | [optional] [default to &#39;Europe/London&#39;]
 **startTime** | **Date** | specify value only if auto_stop &#x3D; false | [optional] 

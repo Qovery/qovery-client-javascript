@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **mode** | [**EnvironmentModeEnum**](EnvironmentModeEnum.md) |  | 
 **clusterId** | **String** |  | 
-**autoDeploy** | **Boolean** |  | [optional] [default to false]
 **autoStop** | **Boolean** |  | [optional] [default to false]
 **timezone** | **String** |  | 
 **startTime** | **Date** |  | 

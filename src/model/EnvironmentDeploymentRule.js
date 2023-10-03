@@ -75,9 +75,6 @@ class EnvironmentDeploymentRule {
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
             }
-            if (data.hasOwnProperty('auto_deploy')) {
-                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
-            }
             if (data.hasOwnProperty('on_demand_preview')) {
                 obj['on_demand_preview'] = ApiClient.convertToType(data['on_demand_preview'], 'Boolean');
             }
@@ -120,12 +117,6 @@ EnvironmentDeploymentRule.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 EnvironmentDeploymentRule.prototype['updated_at'] = undefined;
-
-/**
- * @member {Boolean} auto_deploy
- * @default true
- */
-EnvironmentDeploymentRule.prototype['auto_deploy'] = true;
 
 /**
  * @member {Boolean} on_demand_preview
@@ -180,11 +171,6 @@ Base.prototype['created_at'] = undefined;
  */
 Base.prototype['updated_at'] = undefined;
 // Implement EnvironmentDeploymentRuleAllOf interface:
-/**
- * @member {Boolean} auto_deploy
- * @default true
- */
-EnvironmentDeploymentRuleAllOf.prototype['auto_deploy'] = true;
 /**
  * @member {Boolean} on_demand_preview
  * @default false

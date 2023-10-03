@@ -56,9 +56,6 @@ class EnvironmentDeploymentRuleAllOf {
         if (data) {
             obj = obj || new EnvironmentDeploymentRuleAllOf();
 
-            if (data.hasOwnProperty('auto_deploy')) {
-                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
-            }
             if (data.hasOwnProperty('on_demand_preview')) {
                 obj['on_demand_preview'] = ApiClient.convertToType(data['on_demand_preview'], 'Boolean');
             }
@@ -86,12 +83,6 @@ class EnvironmentDeploymentRuleAllOf {
 
 
 }
-
-/**
- * @member {Boolean} auto_deploy
- * @default true
- */
-EnvironmentDeploymentRuleAllOf.prototype['auto_deploy'] = true;
 
 /**
  * @member {Boolean} on_demand_preview

@@ -33,7 +33,6 @@ class JobResponse {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
-     * @param registry {module:model/ReferenceObject} 
      * @param maximumCpu {Number} Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
      * @param maximumMemory {Number} Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
      * @param name {String} name is case insensitive
@@ -42,9 +41,9 @@ class JobResponse {
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(id, createdAt, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
-        Base.initialize(this, id, createdAt);JobResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks);
-        JobResponse.initialize(this, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks);
+    constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
+        Base.initialize(this, id, createdAt);JobResponseAllOf.initialize(this, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks);
+        JobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks);
     }
 
     /**
@@ -52,11 +51,10 @@ class JobResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
+    static initialize(obj, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['environment'] = environment;
-        obj['registry'] = registry;
         obj['maximum_cpu'] = maximumCpu;
         obj['maximum_memory'] = maximumMemory;
         obj['name'] = name;

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**url** | **String** | URL of the container registry | [optional] 
-**kind** | [**ContainerRegistryKindEnum**](ContainerRegistryKindEnum.md) |  | [optional] 
+**id** | **String** |  | 
+**name** | **String** |  | 
+**url** | **String** | URL of the container registry | 
+**kind** | [**ContainerRegistryKindEnum**](ContainerRegistryKindEnum.md) |  | 
 
 

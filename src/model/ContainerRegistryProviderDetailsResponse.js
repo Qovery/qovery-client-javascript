@@ -23,10 +23,14 @@ class ContainerRegistryProviderDetailsResponse {
     /**
      * Constructs a new <code>ContainerRegistryProviderDetailsResponse</code>.
      * @alias module:model/ContainerRegistryProviderDetailsResponse
+     * @param id {String} 
+     * @param name {String} 
+     * @param url {String} URL of the container registry
+     * @param kind {module:model/ContainerRegistryKindEnum} 
      */
-    constructor() { 
+    constructor(id, name, url, kind) { 
         
-        ContainerRegistryProviderDetailsResponse.initialize(this);
+        ContainerRegistryProviderDetailsResponse.initialize(this, id, name, url, kind);
     }
 
     /**
@@ -34,7 +38,11 @@ class ContainerRegistryProviderDetailsResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, name, url, kind) { 
+        obj['id'] = id;
+        obj['name'] = name;
+        obj['url'] = url;
+        obj['kind'] = kind;
     }
 
     /**

@@ -262,6 +262,7 @@ docs/EnvironmentMainCallsApi.md
 docs/EnvironmentModeEnum.md
 docs/EnvironmentResponseList.md
 docs/EnvironmentSecretApi.md
+docs/EnvironmentServiceIdsAllRequest.md
 docs/EnvironmentStats.md
 docs/EnvironmentStatsResponseList.md
 docs/EnvironmentStatus.md
@@ -824,6 +825,7 @@ src/model/EnvironmentLogsErrorUnderlyingError.js
 src/model/EnvironmentLogsMessage.js
 src/model/EnvironmentModeEnum.js
 src/model/EnvironmentResponseList.js
+src/model/EnvironmentServiceIdsAllRequest.js
 src/model/EnvironmentStats.js
 src/model/EnvironmentStatsResponseList.js
 src/model/EnvironmentStatus.js
@@ -1353,6 +1355,7 @@ test/model/EnvironmentLogsErrorUnderlyingError.spec.js
 test/model/EnvironmentLogsMessage.spec.js
 test/model/EnvironmentModeEnum.spec.js
 test/model/EnvironmentResponseList.spec.js
+test/model/EnvironmentServiceIdsAllRequest.spec.js
 test/model/EnvironmentStats.spec.js
 test/model/EnvironmentStatsResponseList.spec.js
 test/model/EnvironmentStatus.spec.js

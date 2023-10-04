@@ -16,6 +16,7 @@ import ApiClient from "../ApiClient";
 import CloneRequest from '../model/CloneRequest';
 import DeployAllRequest from '../model/DeployAllRequest';
 import Environment from '../model/Environment';
+import EnvironmentServiceIdsAllRequest from '../model/EnvironmentServiceIdsAllRequest';
 import EnvironmentStatus from '../model/EnvironmentStatus';
 import RebootServicesRequest from '../model/RebootServicesRequest';
 import Status from '../model/Status';
@@ -123,6 +124,51 @@ export default class EnvironmentActionsApi {
       let returnType = Environment;
       return this.apiClient.callApi(
         '/environment/{environmentId}/clone', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteSelectedServices operation.
+     * @callback module:api/EnvironmentActionsApi~deleteSelectedServicesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete services
+     * Delete selected services
+     * @param {String} environmentId Environment ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/EnvironmentServiceIdsAllRequest} opts.environmentServiceIdsAllRequest 
+     * @param {module:api/EnvironmentActionsApi~deleteSelectedServicesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteSelectedServices(environmentId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['environmentServiceIdsAllRequest'];
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling deleteSelectedServices");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/service/delete', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -385,6 +431,51 @@ export default class EnvironmentActionsApi {
       let returnType = EnvironmentStatus;
       return this.apiClient.callApi(
         '/environment/{environmentId}/stop', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the stopSelectedServices operation.
+     * @callback module:api/EnvironmentActionsApi~stopSelectedServicesCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Stop services
+     * Stop selected services
+     * @param {String} environmentId Environment ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/EnvironmentServiceIdsAllRequest} opts.environmentServiceIdsAllRequest 
+     * @param {module:api/EnvironmentActionsApi~stopSelectedServicesCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    stopSelectedServices(environmentId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['environmentServiceIdsAllRequest'];
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling stopSelectedServices");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/service/stop', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

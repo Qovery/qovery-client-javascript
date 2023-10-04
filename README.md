@@ -352,12 +352,14 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentApi* | [**deployAllApplications**](docs/EnvironmentApi.md#deployAllApplications) | **POST** /environment/{environmentId}/application/deploy | Deploy applications
 *QoveryApi.EnvironmentActionsApi* | [**cancelEnvironmentDeployment**](docs/EnvironmentActionsApi.md#cancelEnvironmentDeployment) | **POST** /environment/{environmentId}/cancelDeployment | Cancel environment deployment
 *QoveryApi.EnvironmentActionsApi* | [**cloneEnvironment**](docs/EnvironmentActionsApi.md#cloneEnvironment) | **POST** /environment/{environmentId}/clone | Clone environment
+*QoveryApi.EnvironmentActionsApi* | [**deleteSelectedServices**](docs/EnvironmentActionsApi.md#deleteSelectedServices) | **POST** /environment/{environmentId}/service/delete | Delete services
 *QoveryApi.EnvironmentActionsApi* | [**deployAllServices**](docs/EnvironmentActionsApi.md#deployAllServices) | **POST** /environment/{environmentId}/service/deploy | Deploy services
 *QoveryApi.EnvironmentActionsApi* | [**deployEnvironment**](docs/EnvironmentActionsApi.md#deployEnvironment) | **POST** /environment/{environmentId}/deploy | Deploy environment
 *QoveryApi.EnvironmentActionsApi* | [**rebootServices**](docs/EnvironmentActionsApi.md#rebootServices) | **POST** /environment/{environmentId}/service/restart-service | Reboot services
 *QoveryApi.EnvironmentActionsApi* | [**redeployEnvironment**](docs/EnvironmentActionsApi.md#redeployEnvironment) | **POST** /environment/{environmentId}/redeploy | Redeploy environment
 *QoveryApi.EnvironmentActionsApi* | [**restartEnvironment**](docs/EnvironmentActionsApi.md#restartEnvironment) | **POST** /environment/{environmentId}/restart | Deprecated - Restart environment
 *QoveryApi.EnvironmentActionsApi* | [**stopEnvironment**](docs/EnvironmentActionsApi.md#stopEnvironment) | **POST** /environment/{environmentId}/stop | Stop environment
+*QoveryApi.EnvironmentActionsApi* | [**stopSelectedServices**](docs/EnvironmentActionsApi.md#stopSelectedServices) | **POST** /environment/{environmentId}/service/stop | Stop services
 *QoveryApi.EnvironmentDeploymentHistoryApi* | [**listEnvironmentDeploymentHistory**](docs/EnvironmentDeploymentHistoryApi.md#listEnvironmentDeploymentHistory) | **GET** /environment/{environmentId}/deploymentHistory | List environment deployments
 *QoveryApi.EnvironmentDeploymentRuleApi* | [**editEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#editEnvironmentDeploymentRule) | **PUT** /environment/{environmentId}/deploymentRule/{deploymentRuleId} | Edit an environment deployment rule
 *QoveryApi.EnvironmentDeploymentRuleApi* | [**getEnvironmentDeploymentRule**](docs/EnvironmentDeploymentRuleApi.md#getEnvironmentDeploymentRule) | **GET** /environment/{environmentId}/deploymentRule | Get environment deployment rule
@@ -720,6 +722,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentLogsMessage](docs/EnvironmentLogsMessage.md)
  - [QoveryApi.EnvironmentModeEnum](docs/EnvironmentModeEnum.md)
  - [QoveryApi.EnvironmentResponseList](docs/EnvironmentResponseList.md)
+ - [QoveryApi.EnvironmentServiceIdsAllRequest](docs/EnvironmentServiceIdsAllRequest.md)
  - [QoveryApi.EnvironmentStats](docs/EnvironmentStats.md)
  - [QoveryApi.EnvironmentStatsResponseList](docs/EnvironmentStatsResponseList.md)
  - [QoveryApi.EnvironmentStatus](docs/EnvironmentStatus.md)

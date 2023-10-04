@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('deleteSelectedServices', function() {
+      it('should call deleteSelectedServices successfully', function(done) {
+        //uncomment below and update the code to test deleteSelectedServices
+        //instance.deleteSelectedServices(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deployAllServices', function() {
       it('should call deployAllServices successfully', function(done) {
         //uncomment below and update the code to test deployAllServices
@@ -122,6 +132,16 @@
       it('should call stopEnvironment successfully', function(done) {
         //uncomment below and update the code to test stopEnvironment
         //instance.stopEnvironment(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('stopSelectedServices', function() {
+      it('should call stopSelectedServices successfully', function(done) {
+        //uncomment below and update the code to test stopSelectedServices
+        //instance.stopSelectedServices(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

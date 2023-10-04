@@ -227,6 +227,7 @@ import EnvironmentLogsErrorUnderlyingError from './model/EnvironmentLogsErrorUnd
 import EnvironmentLogsMessage from './model/EnvironmentLogsMessage';
 import EnvironmentModeEnum from './model/EnvironmentModeEnum';
 import EnvironmentResponseList from './model/EnvironmentResponseList';
+import EnvironmentServiceIdsAllRequest from './model/EnvironmentServiceIdsAllRequest';
 import EnvironmentStats from './model/EnvironmentStats';
 import EnvironmentStatsResponseList from './model/EnvironmentStatsResponseList';
 import EnvironmentStatus from './model/EnvironmentStatus';
@@ -1865,6 +1866,12 @@ export {
      * @property {module:model/EnvironmentResponseList}
      */
     EnvironmentResponseList,
+
+    /**
+     * The EnvironmentServiceIdsAllRequest model constructor.
+     * @property {module:model/EnvironmentServiceIdsAllRequest}
+     */
+    EnvironmentServiceIdsAllRequest,
 
     /**
      * The EnvironmentStats model constructor.

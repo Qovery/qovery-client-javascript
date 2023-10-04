@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## deleteCluster
 
-> deleteCluster(organizationId, clusterId)
+> deleteCluster(organizationId, clusterId, opts)
 
 Delete a cluster
 
@@ -103,7 +103,10 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
-apiInstance.deleteCluster(organizationId, clusterId, (error, data, response) => {
+let opts = {
+  'deleteMode': DEFAULT // String | 
+};
+apiInstance.deleteCluster(organizationId, clusterId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -119,6 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
  **clusterId** | **String**| Cluster ID | 
+ **deleteMode** | **String**|  | [optional] [default to &#39;DEFAULT&#39;]
 
 ### Return type
 

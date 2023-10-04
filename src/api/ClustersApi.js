@@ -103,9 +103,12 @@ export default class ClustersApi {
      * Delete a cluster
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.deleteMode  (default to 'DEFAULT')
      * @param {module:api/ClustersApi~deleteClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteCluster(organizationId, clusterId, callback) {
+    deleteCluster(organizationId, clusterId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
@@ -121,6 +124,7 @@ export default class ClustersApi {
         'clusterId': clusterId
       };
       let queryParams = {
+        'deleteMode': opts['deleteMode']
       };
       let headerParams = {
       };

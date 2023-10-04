@@ -561,6 +561,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterCloudProviderInfoRequest](docs/ClusterCloudProviderInfoRequest.md)
  - [QoveryApi.ClusterCredentials](docs/ClusterCredentials.md)
  - [QoveryApi.ClusterCredentialsResponseList](docs/ClusterCredentialsResponseList.md)
+ - [QoveryApi.ClusterDeleteMode](docs/ClusterDeleteMode.md)
  - [QoveryApi.ClusterDeploymentStatusEnum](docs/ClusterDeploymentStatusEnum.md)
  - [QoveryApi.ClusterFeature](docs/ClusterFeature.md)
  - [QoveryApi.ClusterFeatureAcceptedValuesInner](docs/ClusterFeatureAcceptedValuesInner.md)

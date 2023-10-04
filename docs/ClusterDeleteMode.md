@@ -1,0 +1,12 @@
+# QoveryApi.ClusterDeleteMode
+
+## Enum
+
+
+* `DEFAULT` (value: `"DEFAULT"`)
+
+* `DELETE_CLUSTER_AND_QOVERY_CONFIG` (value: `"DELETE_CLUSTER_AND_QOVERY_CONFIG"`)
+
+* `DELETE_QOVERY_CONFIG` (value: `"DELETE_QOVERY_CONFIG"`)
+
+

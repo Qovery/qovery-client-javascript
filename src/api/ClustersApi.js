@@ -17,6 +17,7 @@ import Cluster from '../model/Cluster';
 import ClusterAdvancedSettings from '../model/ClusterAdvancedSettings';
 import ClusterCloudProviderInfo from '../model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoRequest from '../model/ClusterCloudProviderInfoRequest';
+import ClusterDeleteMode from '../model/ClusterDeleteMode';
 import ClusterLogsResponseList from '../model/ClusterLogsResponseList';
 import ClusterReadinessStatus from '../model/ClusterReadinessStatus';
 import ClusterRequest from '../model/ClusterRequest';
@@ -104,7 +105,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.deleteMode  (default to 'DEFAULT')
+     * @param {module:model/ClusterDeleteMode} opts.deleteMode 
      * @param {module:api/ClustersApi~deleteClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deleteCluster(organizationId, clusterId, opts, callback) {

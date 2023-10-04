@@ -68,6 +68,7 @@ import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInf
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
 import ClusterCredentials from './model/ClusterCredentials';
 import ClusterCredentialsResponseList from './model/ClusterCredentialsResponseList';
+import ClusterDeleteMode from './model/ClusterDeleteMode';
 import ClusterDeploymentStatusEnum from './model/ClusterDeploymentStatusEnum';
 import ClusterFeature from './model/ClusterFeature';
 import ClusterFeatureAcceptedValuesInner from './model/ClusterFeatureAcceptedValuesInner';
@@ -910,6 +911,12 @@ export {
      * @property {module:model/ClusterCredentialsResponseList}
      */
     ClusterCredentialsResponseList,
+
+    /**
+     * The ClusterDeleteMode model constructor.
+     * @property {module:model/ClusterDeleteMode}
+     */
+    ClusterDeleteMode,
 
     /**
      * The ClusterDeploymentStatusEnum model constructor.

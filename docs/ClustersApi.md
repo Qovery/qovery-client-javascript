@@ -104,7 +104,7 @@ let apiInstance = new QoveryApi.ClustersApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let clusterId = "clusterId_example"; // String | Cluster ID
 let opts = {
-  'deleteMode': DEFAULT // String | 
+  'deleteMode': new QoveryApi.ClusterDeleteMode() // ClusterDeleteMode | 
 };
 apiInstance.deleteCluster(organizationId, clusterId, opts, (error, data, response) => {
   if (error) {
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
  **clusterId** | **String**| Cluster ID | 
- **deleteMode** | **String**|  | [optional] [default to &#39;DEFAULT&#39;]
+ **deleteMode** | [**ClusterDeleteMode**](.md)|  | [optional] 
 
 ### Return type
 

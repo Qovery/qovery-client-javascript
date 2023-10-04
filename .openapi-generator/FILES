@@ -74,6 +74,7 @@ docs/ClusterCloudProviderInfoCredentials.md
 docs/ClusterCloudProviderInfoRequest.md
 docs/ClusterCredentials.md
 docs/ClusterCredentialsResponseList.md
+docs/ClusterDeleteMode.md
 docs/ClusterDeploymentStatusEnum.md
 docs/ClusterFeature.md
 docs/ClusterFeatureAcceptedValuesInner.md
@@ -664,6 +665,7 @@ src/model/ClusterCloudProviderInfoCredentials.js
 src/model/ClusterCloudProviderInfoRequest.js
 src/model/ClusterCredentials.js
 src/model/ClusterCredentialsResponseList.js
+src/model/ClusterDeleteMode.js
 src/model/ClusterDeploymentStatusEnum.js
 src/model/ClusterFeature.js
 src/model/ClusterFeatureAcceptedValuesInner.js
@@ -1192,6 +1194,7 @@ test/model/ClusterCloudProviderInfoCredentials.spec.js
 test/model/ClusterCloudProviderInfoRequest.spec.js
 test/model/ClusterCredentials.spec.js
 test/model/ClusterCredentialsResponseList.spec.js
+test/model/ClusterDeleteMode.spec.js
 test/model/ClusterDeploymentStatusEnum.spec.js
 test/model/ClusterFeature.spec.js
 test/model/ClusterFeatureAcceptedValuesInner.spec.js

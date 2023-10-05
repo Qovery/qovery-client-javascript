@@ -23,10 +23,11 @@ class CustomDomainRequest {
      * Constructs a new <code>CustomDomainRequest</code>.
      * @alias module:model/CustomDomainRequest
      * @param domain {String} your custom domain
+     * @param generateCertificate {Boolean} to control if a certificate has to be generated for this custom domain by Qovery. The default value is `true`. This flag should be set to `false` if a CDN or other entities are managing the certificate for the specified domain and the traffic is proxied by the CDN to Qovery.
      */
-    constructor(domain) { 
+    constructor(domain, generateCertificate) { 
         
-        CustomDomainRequest.initialize(this, domain);
+        CustomDomainRequest.initialize(this, domain, generateCertificate);
     }
 
     /**
@@ -34,8 +35,9 @@ class CustomDomainRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, domain) { 
+    static initialize(obj, domain, generateCertificate) { 
         obj['domain'] = domain;
+        obj['generate_certificate'] = generateCertificate;
     }
 
     /**

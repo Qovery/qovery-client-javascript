@@ -476,7 +476,6 @@ import ApplicationConfigurationApi from './api/ApplicationConfigurationApi';
 import ApplicationDeploymentHistoryApi from './api/ApplicationDeploymentHistoryApi';
 import ApplicationDeploymentRestrictionApi from './api/ApplicationDeploymentRestrictionApi';
 import ApplicationEnvironmentVariableApi from './api/ApplicationEnvironmentVariableApi';
-import ApplicationEventApi from './api/ApplicationEventApi';
 import ApplicationLogsApi from './api/ApplicationLogsApi';
 import ApplicationMainCallsApi from './api/ApplicationMainCallsApi';
 import ApplicationMetricsApi from './api/ApplicationMetricsApi';
@@ -502,7 +501,6 @@ import CustomDomainApi from './api/CustomDomainApi';
 import DatabaseActionsApi from './api/DatabaseActionsApi';
 import DatabaseApplicationApi from './api/DatabaseApplicationApi';
 import DatabaseDeploymentHistoryApi from './api/DatabaseDeploymentHistoryApi';
-import DatabaseEventApi from './api/DatabaseEventApi';
 import DatabaseMainCallsApi from './api/DatabaseMainCallsApi';
 import DatabaseMetricsApi from './api/DatabaseMetricsApi';
 import DatabasesApi from './api/DatabasesApi';
@@ -3362,12 +3360,6 @@ export {
     ApplicationEnvironmentVariableApi,
 
     /**
-    * The ApplicationEventApi service constructor.
-    * @property {module:api/ApplicationEventApi}
-    */
-    ApplicationEventApi,
-
-    /**
     * The ApplicationLogsApi service constructor.
     * @property {module:api/ApplicationLogsApi}
     */
@@ -3516,12 +3508,6 @@ export {
     * @property {module:api/DatabaseDeploymentHistoryApi}
     */
     DatabaseDeploymentHistoryApi,
-
-    /**
-    * The DatabaseEventApi service constructor.
-    * @property {module:api/DatabaseEventApi}
-    */
-    DatabaseEventApi,
 
     /**
     * The DatabaseMainCallsApi service constructor.

@@ -22,7 +22,6 @@ docs/ApplicationDeploymentRestrictionResponseList.md
 docs/ApplicationEditRequest.md
 docs/ApplicationEditRequestAllOf.md
 docs/ApplicationEnvironmentVariableApi.md
-docs/ApplicationEventApi.md
 docs/ApplicationGitRepository.md
 docs/ApplicationGitRepositoryRequest.md
 docs/ApplicationLogsApi.md
@@ -168,7 +167,6 @@ docs/DatabaseCurrentMetricMemory.md
 docs/DatabaseCurrentMetricStorage.md
 docs/DatabaseDeploymentHistoryApi.md
 docs/DatabaseEditRequest.md
-docs/DatabaseEventApi.md
 docs/DatabaseMainCallsApi.md
 docs/DatabaseMetricsApi.md
 docs/DatabaseModeEnum.md
@@ -543,7 +541,6 @@ src/api/ApplicationConfigurationApi.js
 src/api/ApplicationDeploymentHistoryApi.js
 src/api/ApplicationDeploymentRestrictionApi.js
 src/api/ApplicationEnvironmentVariableApi.js
-src/api/ApplicationEventApi.js
 src/api/ApplicationLogsApi.js
 src/api/ApplicationMainCallsApi.js
 src/api/ApplicationMetricsApi.js
@@ -569,7 +566,6 @@ src/api/CustomDomainApi.js
 src/api/DatabaseActionsApi.js
 src/api/DatabaseApplicationApi.js
 src/api/DatabaseDeploymentHistoryApi.js
-src/api/DatabaseEventApi.js
 src/api/DatabaseMainCallsApi.js
 src/api/DatabaseMetricsApi.js
 src/api/DatabasesApi.js
@@ -1074,7 +1070,6 @@ test/api/ApplicationConfigurationApi.spec.js
 test/api/ApplicationDeploymentHistoryApi.spec.js
 test/api/ApplicationDeploymentRestrictionApi.spec.js
 test/api/ApplicationEnvironmentVariableApi.spec.js
-test/api/ApplicationEventApi.spec.js
 test/api/ApplicationLogsApi.spec.js
 test/api/ApplicationMainCallsApi.spec.js
 test/api/ApplicationMetricsApi.spec.js
@@ -1100,7 +1095,6 @@ test/api/CustomDomainApi.spec.js
 test/api/DatabaseActionsApi.spec.js
 test/api/DatabaseApplicationApi.spec.js
 test/api/DatabaseDeploymentHistoryApi.spec.js
-test/api/DatabaseEventApi.spec.js
 test/api/DatabaseMainCallsApi.spec.js
 test/api/DatabaseMetricsApi.spec.js
 test/api/DatabasesApi.spec.js

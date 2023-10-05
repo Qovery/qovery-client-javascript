@@ -157,7 +157,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationEnvironmentVariableApi* | [**editApplicationEnvironmentVariable**](docs/ApplicationEnvironmentVariableApi.md#editApplicationEnvironmentVariable) | **PUT** /application/{applicationId}/environmentVariable/{environmentVariableId} | Edit an environment variable belonging to the application
 *QoveryApi.ApplicationEnvironmentVariableApi* | [**importEnvironmentVariable**](docs/ApplicationEnvironmentVariableApi.md#importEnvironmentVariable) | **POST** /application/{applicationId}/environmentVariable/import | Import variables
 *QoveryApi.ApplicationEnvironmentVariableApi* | [**listApplicationEnvironmentVariable**](docs/ApplicationEnvironmentVariableApi.md#listApplicationEnvironmentVariable) | **GET** /application/{applicationId}/environmentVariable | List environment variables
-*QoveryApi.ApplicationEventApi* | [**listApplicationEvent**](docs/ApplicationEventApi.md#listApplicationEvent) | **GET** /application/{applicationId}/event | List application events
 *QoveryApi.ApplicationLogsApi* | [**listApplicationLog**](docs/ApplicationLogsApi.md#listApplicationLog) | **GET** /application/{applicationId}/log | List logs
 *QoveryApi.ApplicationMainCallsApi* | [**deleteApplication**](docs/ApplicationMainCallsApi.md#deleteApplication) | **DELETE** /application/{applicationId} | Delete application
 *QoveryApi.ApplicationMainCallsApi* | [**editApplication**](docs/ApplicationMainCallsApi.md#editApplication) | **PUT** /application/{applicationId} | Edit application
@@ -321,7 +320,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabaseApplicationApi* | [**listDatabaseApplication**](docs/DatabaseApplicationApi.md#listDatabaseApplication) | **GET** /database/{databaseId}/application | List applications using the database
 *QoveryApi.DatabaseApplicationApi* | [**removeApplicationFromDatabase**](docs/DatabaseApplicationApi.md#removeApplicationFromDatabase) | **DELETE** /database/{databaseId}/application/{targetApplicationId} | Remove an application from this database 
 *QoveryApi.DatabaseDeploymentHistoryApi* | [**listDatabaseDeploymentHistory**](docs/DatabaseDeploymentHistoryApi.md#listDatabaseDeploymentHistory) | **GET** /database/{databaseId}/deploymentHistory | List database deploys
-*QoveryApi.DatabaseEventApi* | [**listDatabaseEvent**](docs/DatabaseEventApi.md#listDatabaseEvent) | **GET** /database/{databaseId}/event | List database  events
 *QoveryApi.DatabaseMainCallsApi* | [**deleteDatabase**](docs/DatabaseMainCallsApi.md#deleteDatabase) | **DELETE** /database/{databaseId} | Delete a database 
 *QoveryApi.DatabaseMainCallsApi* | [**editDatabase**](docs/DatabaseMainCallsApi.md#editDatabase) | **PUT** /database/{databaseId} | Edit a database 
 *QoveryApi.DatabaseMainCallsApi* | [**editDatabaseCredentials**](docs/DatabaseMainCallsApi.md#editDatabaseCredentials) | **PUT** /database/{databaseId}/masterCredentials | Edit database  master credentials

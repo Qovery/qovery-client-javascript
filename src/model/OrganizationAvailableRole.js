@@ -22,10 +22,12 @@ class OrganizationAvailableRole {
     /**
      * Constructs a new <code>OrganizationAvailableRole</code>.
      * @alias module:model/OrganizationAvailableRole
+     * @param id {String} 
+     * @param name {String} 
      */
-    constructor() { 
+    constructor(id, name) { 
         
-        OrganizationAvailableRole.initialize(this);
+        OrganizationAvailableRole.initialize(this, id, name);
     }
 
     /**
@@ -33,7 +35,9 @@ class OrganizationAvailableRole {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id, name) { 
+        obj['id'] = id;
+        obj['name'] = name;
     }
 
     /**

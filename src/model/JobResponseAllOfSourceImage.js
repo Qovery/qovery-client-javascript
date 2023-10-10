@@ -23,10 +23,14 @@ class JobResponseAllOfSourceImage {
     /**
      * Constructs a new <code>JobResponseAllOfSourceImage</code>.
      * @alias module:model/JobResponseAllOfSourceImage
+     * @param imageName {String} The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+     * @param tag {String} tag of the image container
+     * @param registryId {String} tag of the image container
+     * @param registry {module:model/ContainerRegistryProviderDetailsResponse} 
      */
-    constructor() { 
+    constructor(imageName, tag, registryId, registry) { 
         
-        JobResponseAllOfSourceImage.initialize(this);
+        JobResponseAllOfSourceImage.initialize(this, imageName, tag, registryId, registry);
     }
 
     /**
@@ -34,7 +38,11 @@ class JobResponseAllOfSourceImage {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, imageName, tag, registryId, registry) { 
+        obj['image_name'] = imageName;
+        obj['tag'] = tag;
+        obj['registry_id'] = registryId;
+        obj['registry'] = registry;
     }
 
     /**

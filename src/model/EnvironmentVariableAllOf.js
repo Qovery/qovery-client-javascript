@@ -106,13 +106,11 @@ EnvironmentVariableAllOf.prototype['scope'] = undefined;
 EnvironmentVariableAllOf.prototype['variable_type'] = undefined;
 
 /**
- * present only for `BUILT_IN` variable
  * @member {String} service_id
  */
 EnvironmentVariableAllOf.prototype['service_id'] = undefined;
 
 /**
- * present only for `BUILT_IN` variable
  * @member {String} service_name
  */
 EnvironmentVariableAllOf.prototype['service_name'] = undefined;

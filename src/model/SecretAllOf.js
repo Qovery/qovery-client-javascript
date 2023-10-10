@@ -117,13 +117,11 @@ SecretAllOf.prototype['scope'] = undefined;
 SecretAllOf.prototype['variable_type'] = undefined;
 
 /**
- * present only for `BUILT_IN` variable
  * @member {String} service_id
  */
 SecretAllOf.prototype['service_id'] = undefined;
 
 /**
- * present only for `BUILT_IN` variable
  * @member {String} service_name
  */
 SecretAllOf.prototype['service_name'] = undefined;

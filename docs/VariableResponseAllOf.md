@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **aliasedVariable** | [**VariableAlias**](VariableAlias.md) |  | [optional] 
 **scope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 
 **variableType** | [**APIVariableTypeEnum**](APIVariableTypeEnum.md) |  | [optional] 
-**serviceId** | **String** | The id of the service referenced by this variable. present only for &#x60;BUILT_IN&#x60; variable | [optional] 
-**serviceName** | **String** | The name of the service referenced by this variable. present only for &#x60;BUILT_IN&#x60; variable | [optional] 
+**serviceId** | **String** | The id of the service referenced by this variable. | [optional] 
+**serviceName** | **String** | The name of the service referenced by this variable. | [optional] 
 **serviceType** | [**LinkedServiceTypeEnum**](LinkedServiceTypeEnum.md) |  | [optional] 
 **ownedBy** | **String** | Entity that created/own the variable (i.e: Qovery, Doppler) | [optional] 
 

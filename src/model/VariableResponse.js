@@ -140,13 +140,13 @@ VariableResponse.prototype['scope'] = undefined;
 VariableResponse.prototype['variable_type'] = undefined;
 
 /**
- * The id of the service referenced by this variable. present only for `BUILT_IN` variable
+ * The id of the service referenced by this variable.
  * @member {String} service_id
  */
 VariableResponse.prototype['service_id'] = undefined;
 
 /**
- * The name of the service referenced by this variable. present only for `BUILT_IN` variable
+ * The name of the service referenced by this variable.
  * @member {String} service_name
  */
 VariableResponse.prototype['service_name'] = undefined;
@@ -194,12 +194,12 @@ VariableResponseAllOf.prototype['scope'] = undefined;
  */
 VariableResponseAllOf.prototype['variable_type'] = undefined;
 /**
- * The id of the service referenced by this variable. present only for `BUILT_IN` variable
+ * The id of the service referenced by this variable.
  * @member {String} service_id
  */
 VariableResponseAllOf.prototype['service_id'] = undefined;
 /**
- * The name of the service referenced by this variable. present only for `BUILT_IN` variable
+ * The name of the service referenced by this variable.
  * @member {String} service_name
  */
 VariableResponseAllOf.prototype['service_name'] = undefined;

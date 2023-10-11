@@ -78,14 +78,32 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property environment (base name: "environment")', function() {
-      // uncomment below and update the code to test the property environment
+    it('should have the property imageName (base name: "image_name")', function() {
+      // uncomment below and update the code to test the property imageName
+      //var instance = new QoveryApi.ContainerResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property tag (base name: "tag")', function() {
+      // uncomment below and update the code to test the property tag
+      //var instance = new QoveryApi.ContainerResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registryId (base name: "registry_id")', function() {
+      // uncomment below and update the code to test the property registryId
       //var instance = new QoveryApi.ContainerResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property registry (base name: "registry")', function() {
       // uncomment below and update the code to test the property registry
+      //var instance = new QoveryApi.ContainerResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property environment (base name: "environment")', function() {
+      // uncomment below and update the code to test the property environment
       //var instance = new QoveryApi.ContainerResponse();
       //expect(instance).to.be();
     });
@@ -110,18 +128,6 @@
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.ContainerResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property imageName (base name: "image_name")', function() {
-      // uncomment below and update the code to test the property imageName
-      //var instance = new QoveryApi.ContainerResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property tag (base name: "tag")', function() {
-      // uncomment below and update the code to test the property tag
       //var instance = new QoveryApi.ContainerResponse();
       //expect(instance).to.be();
     });

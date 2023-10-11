@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property registry (base name: "registry")', function() {
-      // uncomment below and update the code to test the property registry
-      //var instance = new QoveryApi.ContainerResponseAllOf();
-      //expect(instance).to.be();
-    });
-
     it('should have the property maximumCpu (base name: "maximum_cpu")', function() {
       // uncomment below and update the code to test the property maximumCpu
       //var instance = new QoveryApi.ContainerResponseAllOf();
@@ -86,18 +80,6 @@
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.ContainerResponseAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property imageName (base name: "image_name")', function() {
-      // uncomment below and update the code to test the property imageName
-      //var instance = new QoveryApi.ContainerResponseAllOf();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property tag (base name: "tag")', function() {
-      // uncomment below and update the code to test the property tag
       //var instance = new QoveryApi.ContainerResponseAllOf();
       //expect(instance).to.be();
     });

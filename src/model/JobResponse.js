@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApplicationGitRepository from './ApplicationGitRepository';
 import Base from './Base';
+import ContainerSource from './ContainerSource';
 import Healthcheck from './Healthcheck';
 import JobResponseAllOf from './JobResponseAllOf';
 import JobResponseAllOfSchedule from './JobResponseAllOfSchedule';
-import JobResponseAllOfSource from './JobResponseAllOfSource';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -39,11 +40,12 @@ class JobResponse {
      * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+     * @param source {module:model/OneOfobjectobject} 
      * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
-        Base.initialize(this, id, createdAt);JobResponseAllOf.initialize(this, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks);
-        JobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks);
+    constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks) { 
+        Base.initialize(this, id, createdAt);JobResponseAllOf.initialize(this, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);
+        JobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);
     }
 
     /**
@@ -51,7 +53,7 @@ class JobResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, healthchecks) { 
+    static initialize(obj, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['environment'] = environment;
@@ -61,6 +63,7 @@ class JobResponse {
         obj['cpu'] = cpu;
         obj['memory'] = memory;
         obj['auto_preview'] = autoPreview;
+        obj['source'] = source;
         obj['healthchecks'] = healthchecks;
     }
 
@@ -120,7 +123,7 @@ class JobResponse {
                 obj['port'] = ApiClient.convertToType(data['port'], 'Number');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = JobResponseAllOfSource.constructFromObject(data['source']);
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
             if (data.hasOwnProperty('healthchecks')) {
                 obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
@@ -218,7 +221,7 @@ JobResponse.prototype['auto_preview'] = undefined;
 JobResponse.prototype['port'] = undefined;
 
 /**
- * @member {module:model/JobResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 JobResponse.prototype['source'] = undefined;
 
@@ -307,7 +310,7 @@ JobResponseAllOf.prototype['auto_preview'] = undefined;
  */
 JobResponseAllOf.prototype['port'] = undefined;
 /**
- * @member {module:model/JobResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 JobResponseAllOf.prototype['source'] = undefined;
 /**

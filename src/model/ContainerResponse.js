@@ -15,6 +15,7 @@ import ApiClient from '../ApiClient';
 import Base from './Base';
 import ContainerRegistryProviderDetailsResponse from './ContainerRegistryProviderDetailsResponse';
 import ContainerResponseAllOf from './ContainerResponseAllOf';
+import ContainerSource from './ContainerSource';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 import ServicePort from './ServicePort';
@@ -32,16 +33,17 @@ class ContainerResponse {
      * @alias module:model/ContainerResponse
      * @implements module:model/Base
      * @implements module:model/ServiceStorage
+     * @implements module:model/ContainerSource
      * @implements module:model/ContainerResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
-     * @param environment {module:model/ReferenceObject} 
+     * @param imageName {String} The image name pattern differs according to chosen container registry provider: * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+     * @param tag {String} tag of the image container
      * @param registry {module:model/ContainerRegistryProviderDetailsResponse} 
+     * @param environment {module:model/ReferenceObject} 
      * @param maximumCpu {Number} Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
      * @param maximumMemory {Number} Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
      * @param name {String} name is case insensitive
-     * @param imageName {String} name of the image container
-     * @param tag {String} tag of the image container
      * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param minRunningInstances {Number} Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
@@ -49,9 +51,9 @@ class ContainerResponse {
      * @param healthchecks {module:model/Healthcheck} 
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      */
-    constructor(id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
-        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
-        ContainerResponse.initialize(this, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
+    constructor(id, createdAt, imageName, tag, registry, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ContainerSource.initialize(this, imageName, tag, registry);ContainerResponseAllOf.initialize(this, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
+        ContainerResponse.initialize(this, id, createdAt, imageName, tag, registry, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
     }
 
     /**
@@ -59,16 +61,16 @@ class ContainerResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
+    static initialize(obj, id, createdAt, imageName, tag, registry, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
-        obj['environment'] = environment;
+        obj['image_name'] = imageName;
+        obj['tag'] = tag;
         obj['registry'] = registry;
+        obj['environment'] = environment;
         obj['maximum_cpu'] = maximumCpu;
         obj['maximum_memory'] = maximumMemory;
         obj['name'] = name;
-        obj['image_name'] = imageName;
-        obj['tag'] = tag;
         obj['cpu'] = cpu;
         obj['memory'] = memory;
         obj['min_running_instances'] = minRunningInstances || 1;
@@ -89,6 +91,7 @@ class ContainerResponse {
             obj = obj || new ContainerResponse();
             Base.constructFromObject(data, obj);
             ServiceStorage.constructFromObject(data, obj);
+            ContainerSource.constructFromObject(data, obj);
             ContainerResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
@@ -103,11 +106,20 @@ class ContainerResponse {
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageStorageInner]);
             }
-            if (data.hasOwnProperty('environment')) {
-                obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
+            if (data.hasOwnProperty('image_name')) {
+                obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
+            }
+            if (data.hasOwnProperty('tag')) {
+                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
+            }
+            if (data.hasOwnProperty('registry_id')) {
+                obj['registry_id'] = ApiClient.convertToType(data['registry_id'], 'String');
             }
             if (data.hasOwnProperty('registry')) {
                 obj['registry'] = ContainerRegistryProviderDetailsResponse.constructFromObject(data['registry']);
+            }
+            if (data.hasOwnProperty('environment')) {
+                obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
             if (data.hasOwnProperty('maximum_cpu')) {
                 obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
@@ -120,12 +132,6 @@ class ContainerResponse {
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('image_name')) {
-                obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
-            }
-            if (data.hasOwnProperty('tag')) {
-                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -185,14 +191,32 @@ ContainerResponse.prototype['updated_at'] = undefined;
 ContainerResponse.prototype['storage'] = undefined;
 
 /**
- * @member {module:model/ReferenceObject} environment
+ * The image name pattern differs according to chosen container registry provider: * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+ * @member {String} image_name
  */
-ContainerResponse.prototype['environment'] = undefined;
+ContainerResponse.prototype['image_name'] = undefined;
+
+/**
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerResponse.prototype['tag'] = undefined;
+
+/**
+ * tag of the image container
+ * @member {String} registry_id
+ */
+ContainerResponse.prototype['registry_id'] = undefined;
 
 /**
  * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
  */
 ContainerResponse.prototype['registry'] = undefined;
+
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+ContainerResponse.prototype['environment'] = undefined;
 
 /**
  * Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
@@ -217,18 +241,6 @@ ContainerResponse.prototype['name'] = undefined;
  * @member {String} description
  */
 ContainerResponse.prototype['description'] = undefined;
-
-/**
- * name of the image container
- * @member {String} image_name
- */
-ContainerResponse.prototype['image_name'] = undefined;
-
-/**
- * tag of the image container
- * @member {String} tag
- */
-ContainerResponse.prototype['tag'] = undefined;
 
 /**
  * @member {Array.<String>} arguments
@@ -308,15 +320,31 @@ Base.prototype['updated_at'] = undefined;
  * @member {Array.<module:model/ServiceStorageStorageInner>} storage
  */
 ServiceStorage.prototype['storage'] = undefined;
+// Implement ContainerSource interface:
+/**
+ * The image name pattern differs according to chosen container registry provider: * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+ * @member {String} image_name
+ */
+ContainerSource.prototype['image_name'] = undefined;
+/**
+ * tag of the image container
+ * @member {String} tag
+ */
+ContainerSource.prototype['tag'] = undefined;
+/**
+ * tag of the image container
+ * @member {String} registry_id
+ */
+ContainerSource.prototype['registry_id'] = undefined;
+/**
+ * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
+ */
+ContainerSource.prototype['registry'] = undefined;
 // Implement ContainerResponseAllOf interface:
 /**
  * @member {module:model/ReferenceObject} environment
  */
 ContainerResponseAllOf.prototype['environment'] = undefined;
-/**
- * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
- */
-ContainerResponseAllOf.prototype['registry'] = undefined;
 /**
  * Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
@@ -337,16 +365,6 @@ ContainerResponseAllOf.prototype['name'] = undefined;
  * @member {String} description
  */
 ContainerResponseAllOf.prototype['description'] = undefined;
-/**
- * name of the image container
- * @member {String} image_name
- */
-ContainerResponseAllOf.prototype['image_name'] = undefined;
-/**
- * tag of the image container
- * @member {String} tag
- */
-ContainerResponseAllOf.prototype['tag'] = undefined;
 /**
  * @member {Array.<String>} arguments
  */

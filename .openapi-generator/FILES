@@ -137,6 +137,7 @@ docs/ContainerResponse.md
 docs/ContainerResponseAllOf.md
 docs/ContainerResponseList.md
 docs/ContainerSecretApi.md
+docs/ContainerSource.md
 docs/ContainersApi.md
 docs/Cost.md
 docs/CostRange.md
@@ -331,9 +332,6 @@ docs/JobResponse.md
 docs/JobResponseAllOf.md
 docs/JobResponseAllOfSchedule.md
 docs/JobResponseAllOfScheduleCronjob.md
-docs/JobResponseAllOfSource.md
-docs/JobResponseAllOfSourceDocker.md
-docs/JobResponseAllOfSourceImage.md
 docs/JobResponseList.md
 docs/JobScheduleEvent.md
 docs/JobSecretApi.md
@@ -716,6 +714,7 @@ src/model/ContainerRequestAllOf.js
 src/model/ContainerResponse.js
 src/model/ContainerResponseAllOf.js
 src/model/ContainerResponseList.js
+src/model/ContainerSource.js
 src/model/Cost.js
 src/model/CostRange.js
 src/model/CreateEnvironmentModeEnum.js
@@ -882,9 +881,6 @@ src/model/JobResponse.js
 src/model/JobResponseAllOf.js
 src/model/JobResponseAllOfSchedule.js
 src/model/JobResponseAllOfScheduleCronjob.js
-src/model/JobResponseAllOfSource.js
-src/model/JobResponseAllOfSourceDocker.js
-src/model/JobResponseAllOfSourceImage.js
 src/model/JobResponseList.js
 src/model/JobScheduleEvent.js
 src/model/Key.js
@@ -1245,6 +1241,7 @@ test/model/ContainerRequestAllOf.spec.js
 test/model/ContainerResponse.spec.js
 test/model/ContainerResponseAllOf.spec.js
 test/model/ContainerResponseList.spec.js
+test/model/ContainerSource.spec.js
 test/model/Cost.spec.js
 test/model/CostRange.spec.js
 test/model/CreateEnvironmentModeEnum.spec.js
@@ -1411,9 +1408,6 @@ test/model/JobResponse.spec.js
 test/model/JobResponseAllOf.spec.js
 test/model/JobResponseAllOfSchedule.spec.js
 test/model/JobResponseAllOfScheduleCronjob.spec.js
-test/model/JobResponseAllOfSource.spec.js
-test/model/JobResponseAllOfSourceDocker.spec.js
-test/model/JobResponseAllOfSourceImage.spec.js
 test/model/JobResponseList.spec.js
 test/model/JobScheduleEvent.spec.js
 test/model/Key.spec.js

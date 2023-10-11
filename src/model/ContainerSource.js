@@ -15,22 +15,21 @@ import ApiClient from '../ApiClient';
 import ContainerRegistryProviderDetailsResponse from './ContainerRegistryProviderDetailsResponse';
 
 /**
- * The JobResponseAllOfSourceImage model module.
- * @module model/JobResponseAllOfSourceImage
+ * The ContainerSource model module.
+ * @module model/ContainerSource
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class JobResponseAllOfSourceImage {
+class ContainerSource {
     /**
-     * Constructs a new <code>JobResponseAllOfSourceImage</code>.
-     * @alias module:model/JobResponseAllOfSourceImage
-     * @param imageName {String} The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+     * Constructs a new <code>ContainerSource</code>.
+     * @alias module:model/ContainerSource
+     * @param imageName {String} The image name pattern differs according to chosen container registry provider: * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
      * @param tag {String} tag of the image container
-     * @param registryId {String} tag of the image container
      * @param registry {module:model/ContainerRegistryProviderDetailsResponse} 
      */
-    constructor(imageName, tag, registryId, registry) { 
+    constructor(imageName, tag, registry) { 
         
-        JobResponseAllOfSourceImage.initialize(this, imageName, tag, registryId, registry);
+        ContainerSource.initialize(this, imageName, tag, registry);
     }
 
     /**
@@ -38,23 +37,22 @@ class JobResponseAllOfSourceImage {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, imageName, tag, registryId, registry) { 
+    static initialize(obj, imageName, tag, registry) { 
         obj['image_name'] = imageName;
         obj['tag'] = tag;
-        obj['registry_id'] = registryId;
         obj['registry'] = registry;
     }
 
     /**
-     * Constructs a <code>JobResponseAllOfSourceImage</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ContainerSource</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/JobResponseAllOfSourceImage} obj Optional instance to populate.
-     * @return {module:model/JobResponseAllOfSourceImage} The populated <code>JobResponseAllOfSourceImage</code> instance.
+     * @param {module:model/ContainerSource} obj Optional instance to populate.
+     * @return {module:model/ContainerSource} The populated <code>ContainerSource</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new JobResponseAllOfSourceImage();
+            obj = obj || new ContainerSource();
 
             if (data.hasOwnProperty('image_name')) {
                 obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
@@ -76,32 +74,32 @@ class JobResponseAllOfSourceImage {
 }
 
 /**
- * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
+ * The image name pattern differs according to chosen container registry provider: * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
  * @member {String} image_name
  */
-JobResponseAllOfSourceImage.prototype['image_name'] = undefined;
+ContainerSource.prototype['image_name'] = undefined;
 
 /**
  * tag of the image container
  * @member {String} tag
  */
-JobResponseAllOfSourceImage.prototype['tag'] = undefined;
+ContainerSource.prototype['tag'] = undefined;
 
 /**
  * tag of the image container
  * @member {String} registry_id
  */
-JobResponseAllOfSourceImage.prototype['registry_id'] = undefined;
+ContainerSource.prototype['registry_id'] = undefined;
 
 /**
  * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
  */
-JobResponseAllOfSourceImage.prototype['registry'] = undefined;
+ContainerSource.prototype['registry'] = undefined;
 
 
 
 
 
 
-export default JobResponseAllOfSourceImage;
+export default ContainerSource;
 

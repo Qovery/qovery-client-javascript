@@ -121,6 +121,7 @@ import ContainerRequestAllOf from './model/ContainerRequestAllOf';
 import ContainerResponse from './model/ContainerResponse';
 import ContainerResponseAllOf from './model/ContainerResponseAllOf';
 import ContainerResponseList from './model/ContainerResponseList';
+import ContainerSource from './model/ContainerSource';
 import Cost from './model/Cost';
 import CostRange from './model/CostRange';
 import CreateEnvironmentModeEnum from './model/CreateEnvironmentModeEnum';
@@ -287,9 +288,6 @@ import JobResponse from './model/JobResponse';
 import JobResponseAllOf from './model/JobResponseAllOf';
 import JobResponseAllOfSchedule from './model/JobResponseAllOfSchedule';
 import JobResponseAllOfScheduleCronjob from './model/JobResponseAllOfScheduleCronjob';
-import JobResponseAllOfSource from './model/JobResponseAllOfSource';
-import JobResponseAllOfSourceDocker from './model/JobResponseAllOfSourceDocker';
-import JobResponseAllOfSourceImage from './model/JobResponseAllOfSourceImage';
 import JobResponseList from './model/JobResponseList';
 import JobScheduleEvent from './model/JobScheduleEvent';
 import Key from './model/Key';
@@ -1229,6 +1227,12 @@ export {
      * @property {module:model/ContainerResponseList}
      */
     ContainerResponseList,
+
+    /**
+     * The ContainerSource model constructor.
+     * @property {module:model/ContainerSource}
+     */
+    ContainerSource,
 
     /**
      * The Cost model constructor.
@@ -2225,24 +2229,6 @@ export {
      * @property {module:model/JobResponseAllOfScheduleCronjob}
      */
     JobResponseAllOfScheduleCronjob,
-
-    /**
-     * The JobResponseAllOfSource model constructor.
-     * @property {module:model/JobResponseAllOfSource}
-     */
-    JobResponseAllOfSource,
-
-    /**
-     * The JobResponseAllOfSourceDocker model constructor.
-     * @property {module:model/JobResponseAllOfSourceDocker}
-     */
-    JobResponseAllOfSourceDocker,
-
-    /**
-     * The JobResponseAllOfSourceImage model constructor.
-     * @property {module:model/JobResponseAllOfSourceImage}
-     */
-    JobResponseAllOfSourceImage,
 
     /**
      * The JobResponseList model constructor.

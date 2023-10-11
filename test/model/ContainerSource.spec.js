@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.JobResponseAllOfSourceDocker();
+    instance = new QoveryApi.ContainerSource();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,34 @@
       object[property] = value;
   }
 
-  describe('JobResponseAllOfSourceDocker', function() {
-    it('should create an instance of JobResponseAllOfSourceDocker', function() {
-      // uncomment below and update the code to test JobResponseAllOfSourceDocker
-      //var instance = new QoveryApi.JobResponseAllOfSourceDocker();
-      //expect(instance).to.be.a(QoveryApi.JobResponseAllOfSourceDocker);
+  describe('ContainerSource', function() {
+    it('should create an instance of ContainerSource', function() {
+      // uncomment below and update the code to test ContainerSource
+      //var instance = new QoveryApi.ContainerSource();
+      //expect(instance).to.be.a(QoveryApi.ContainerSource);
     });
 
-    it('should have the property dockerfilePath (base name: "dockerfile_path")', function() {
-      // uncomment below and update the code to test the property dockerfilePath
-      //var instance = new QoveryApi.JobResponseAllOfSourceDocker();
+    it('should have the property imageName (base name: "image_name")', function() {
+      // uncomment below and update the code to test the property imageName
+      //var instance = new QoveryApi.ContainerSource();
       //expect(instance).to.be();
     });
 
-    it('should have the property gitRepository (base name: "git_repository")', function() {
-      // uncomment below and update the code to test the property gitRepository
-      //var instance = new QoveryApi.JobResponseAllOfSourceDocker();
+    it('should have the property tag (base name: "tag")', function() {
+      // uncomment below and update the code to test the property tag
+      //var instance = new QoveryApi.ContainerSource();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registryId (base name: "registry_id")', function() {
+      // uncomment below and update the code to test the property registryId
+      //var instance = new QoveryApi.ContainerSource();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property registry (base name: "registry")', function() {
+      // uncomment below and update the code to test the property registry
+      //var instance = new QoveryApi.ContainerSource();
       //expect(instance).to.be();
     });
 

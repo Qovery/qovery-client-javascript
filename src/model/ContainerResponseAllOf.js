@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import ContainerRegistryProviderDetailsResponse from './ContainerRegistryProviderDetailsResponse';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 import ServicePort from './ServicePort';
@@ -27,12 +26,9 @@ class ContainerResponseAllOf {
      * Constructs a new <code>ContainerResponseAllOf</code>.
      * @alias module:model/ContainerResponseAllOf
      * @param environment {module:model/ReferenceObject} 
-     * @param registry {module:model/ContainerRegistryProviderDetailsResponse} 
      * @param maximumCpu {Number} Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
      * @param maximumMemory {Number} Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
      * @param name {String} name is case insensitive
-     * @param imageName {String} name of the image container
-     * @param tag {String} tag of the image container
      * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param minRunningInstances {Number} Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
@@ -40,9 +36,9 @@ class ContainerResponseAllOf {
      * @param healthchecks {module:model/Healthcheck} 
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      */
-    constructor(environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
+    constructor(environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
         
-        ContainerResponseAllOf.initialize(this, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
+        ContainerResponseAllOf.initialize(this, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
     }
 
     /**
@@ -50,14 +46,11 @@ class ContainerResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, environment, registry, maximumCpu, maximumMemory, name, imageName, tag, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
+    static initialize(obj, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
         obj['environment'] = environment;
-        obj['registry'] = registry;
         obj['maximum_cpu'] = maximumCpu;
         obj['maximum_memory'] = maximumMemory;
         obj['name'] = name;
-        obj['image_name'] = imageName;
-        obj['tag'] = tag;
         obj['cpu'] = cpu;
         obj['memory'] = memory;
         obj['min_running_instances'] = minRunningInstances || 1;
@@ -80,9 +73,6 @@ class ContainerResponseAllOf {
             if (data.hasOwnProperty('environment')) {
                 obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
             }
-            if (data.hasOwnProperty('registry')) {
-                obj['registry'] = ContainerRegistryProviderDetailsResponse.constructFromObject(data['registry']);
-            }
             if (data.hasOwnProperty('maximum_cpu')) {
                 obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
             }
@@ -94,12 +84,6 @@ class ContainerResponseAllOf {
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
-            }
-            if (data.hasOwnProperty('image_name')) {
-                obj['image_name'] = ApiClient.convertToType(data['image_name'], 'String');
-            }
-            if (data.hasOwnProperty('tag')) {
-                obj['tag'] = ApiClient.convertToType(data['tag'], 'String');
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -144,11 +128,6 @@ class ContainerResponseAllOf {
 ContainerResponseAllOf.prototype['environment'] = undefined;
 
 /**
- * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
- */
-ContainerResponseAllOf.prototype['registry'] = undefined;
-
-/**
  * Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
  */
@@ -171,18 +150,6 @@ ContainerResponseAllOf.prototype['name'] = undefined;
  * @member {String} description
  */
 ContainerResponseAllOf.prototype['description'] = undefined;
-
-/**
- * name of the image container
- * @member {String} image_name
- */
-ContainerResponseAllOf.prototype['image_name'] = undefined;
-
-/**
- * tag of the image container
- * @member {String} tag
- */
-ContainerResponseAllOf.prototype['tag'] = undefined;
 
 /**
  * @member {Array.<String>} arguments

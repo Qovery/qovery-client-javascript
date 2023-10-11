@@ -901,6 +901,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ReferenceObjectStatus](docs/ReferenceObjectStatus.md)
  - [QoveryApi.ReferenceObjectStatusResponseList](docs/ReferenceObjectStatusResponseList.md)
  - [QoveryApi.Referral](docs/Referral.md)
+ - [QoveryApi.RegistryMirroringModeEnum](docs/RegistryMirroringModeEnum.md)
  - [QoveryApi.RemainingCredits](docs/RemainingCredits.md)
  - [QoveryApi.RewardClaim](docs/RewardClaim.md)
  - [QoveryApi.ScalewayCredentialsRequest](docs/ScalewayCredentialsRequest.md)

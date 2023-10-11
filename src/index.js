@@ -408,6 +408,7 @@ import ReferenceObject from './model/ReferenceObject';
 import ReferenceObjectStatus from './model/ReferenceObjectStatus';
 import ReferenceObjectStatusResponseList from './model/ReferenceObjectStatusResponseList';
 import Referral from './model/Referral';
+import RegistryMirroringModeEnum from './model/RegistryMirroringModeEnum';
 import RemainingCredits from './model/RemainingCredits';
 import RewardClaim from './model/RewardClaim';
 import ScalewayCredentialsRequest from './model/ScalewayCredentialsRequest';
@@ -2950,6 +2951,12 @@ export {
      * @property {module:model/Referral}
      */
     Referral,
+
+    /**
+     * The RegistryMirroringModeEnum model constructor.
+     * @property {module:model/RegistryMirroringModeEnum}
+     */
+    RegistryMirroringModeEnum,
 
     /**
      * The RemainingCredits model constructor.

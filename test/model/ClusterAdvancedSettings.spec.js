@@ -162,6 +162,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property registryMirroringMode (base name: "registry.mirroring_mode")', function() {
+      // uncomment below and update the code to test the property registryMirroringMode
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

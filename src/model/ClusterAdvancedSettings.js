@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import RegistryMirroringModeEnum from './RegistryMirroringModeEnum';
 
 /**
  * The ClusterAdvancedSettings model module.
@@ -100,6 +101,9 @@ class ClusterAdvancedSettings {
             }
             if (data.hasOwnProperty('pleco.resources_ttl')) {
                 obj['pleco.resources_ttl'] = ApiClient.convertToType(data['pleco.resources_ttl'], 'Number');
+            }
+            if (data.hasOwnProperty('registry.mirroring_mode')) {
+                obj['registry.mirroring_mode'] = RegistryMirroringModeEnum.constructFromObject(data['registry.mirroring_mode']);
             }
         }
         return obj;
@@ -227,6 +231,11 @@ ClusterAdvancedSettings.prototype['aws.eks.ec2.metadata_imds'] = 'optional';
  * @default -1
  */
 ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = -1;
+
+/**
+ * @member {module:model/RegistryMirroringModeEnum} registry.mirroring_mode
+ */
+ClusterAdvancedSettings.prototype['registry.mirroring_mode'] = undefined;
 
 
 

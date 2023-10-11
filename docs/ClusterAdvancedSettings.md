@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **awsIamAdminGroup** | **String** | AWS IAM group name with cluster access | [optional] [default to &#39;Admins&#39;]
 **awsEksEc2MetadataImds** | **String** | Specify the [IMDS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) version you want to use:   * &#x60;required&#x60;: IMDS V2 only   * &#x60;optional&#x60;: IMDS V1 + V2  | [optional] [default to &#39;optional&#39;]
 **plecoResourcesTtl** | **Number** |  | [optional] [default to -1]
+**registryMirroringMode** | [**RegistryMirroringModeEnum**](RegistryMirroringModeEnum.md) |  | [optional] 
 
 
 

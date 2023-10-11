@@ -467,6 +467,7 @@ docs/ReferenceObjectStatus.md
 docs/ReferenceObjectStatusResponseList.md
 docs/Referral.md
 docs/ReferralRewardsApi.md
+docs/RegistryMirroringModeEnum.md
 docs/RemainingCredits.md
 docs/RewardClaim.md
 docs/ScalewayCredentialsRequest.md
@@ -1002,6 +1003,7 @@ src/model/ReferenceObject.js
 src/model/ReferenceObjectStatus.js
 src/model/ReferenceObjectStatusResponseList.js
 src/model/Referral.js
+src/model/RegistryMirroringModeEnum.js
 src/model/RemainingCredits.js
 src/model/RewardClaim.js
 src/model/ScalewayCredentialsRequest.js
@@ -1530,6 +1532,7 @@ test/model/ReferenceObject.spec.js
 test/model/ReferenceObjectStatus.spec.js
 test/model/ReferenceObjectStatusResponseList.spec.js
 test/model/Referral.spec.js
+test/model/RegistryMirroringModeEnum.spec.js
 test/model/RemainingCredits.spec.js
 test/model/RewardClaim.spec.js
 test/model/ScalewayCredentialsRequest.spec.js

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import DeploymentStageWithServiceStatusesList from './DeploymentStageWithServiceStatusesList';
+import DeploymentStageWithServicesStatuses from './DeploymentStageWithServicesStatuses';
 import EnvironmentStatus from './EnvironmentStatus';
 
 /**
@@ -53,7 +53,7 @@ class EnvironmentStatusesWithStages {
                 obj['environment'] = EnvironmentStatus.constructFromObject(data['environment']);
             }
             if (data.hasOwnProperty('stages')) {
-                obj['stages'] = DeploymentStageWithServiceStatusesList.constructFromObject(data['stages']);
+                obj['stages'] = ApiClient.convertToType(data['stages'], [DeploymentStageWithServicesStatuses]);
             }
         }
         return obj;
@@ -68,7 +68,7 @@ class EnvironmentStatusesWithStages {
 EnvironmentStatusesWithStages.prototype['environment'] = undefined;
 
 /**
- * @member {module:model/DeploymentStageWithServiceStatusesList} stages
+ * @member {Array.<module:model/DeploymentStageWithServicesStatuses>} stages
  */
 EnvironmentStatusesWithStages.prototype['stages'] = undefined;
 

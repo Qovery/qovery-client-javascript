@@ -679,7 +679,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DeploymentStageResponseList](docs/DeploymentStageResponseList.md)
  - [QoveryApi.DeploymentStageServiceResponse](docs/DeploymentStageServiceResponse.md)
  - [QoveryApi.DeploymentStageServiceResponseAllOf](docs/DeploymentStageServiceResponseAllOf.md)
- - [QoveryApi.DeploymentStageWithServiceStatusesList](docs/DeploymentStageWithServiceStatusesList.md)
  - [QoveryApi.DeploymentStageWithServicesStatuses](docs/DeploymentStageWithServicesStatuses.md)
  - [QoveryApi.DoCredentialsRequest](docs/DoCredentialsRequest.md)
  - [QoveryApi.Environment](docs/Environment.md)

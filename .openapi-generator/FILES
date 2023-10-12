@@ -211,7 +211,6 @@ docs/DeploymentStageResponseAllOf.md
 docs/DeploymentStageResponseList.md
 docs/DeploymentStageServiceResponse.md
 docs/DeploymentStageServiceResponseAllOf.md
-docs/DeploymentStageWithServiceStatusesList.md
 docs/DeploymentStageWithServicesStatuses.md
 docs/DoCredentialsRequest.md
 docs/Environment.md
@@ -779,7 +778,6 @@ src/model/DeploymentStageResponseAllOf.js
 src/model/DeploymentStageResponseList.js
 src/model/DeploymentStageServiceResponse.js
 src/model/DeploymentStageServiceResponseAllOf.js
-src/model/DeploymentStageWithServiceStatusesList.js
 src/model/DeploymentStageWithServicesStatuses.js
 src/model/DoCredentialsRequest.js
 src/model/Environment.js
@@ -1306,7 +1304,6 @@ test/model/DeploymentStageResponseAllOf.spec.js
 test/model/DeploymentStageResponseList.spec.js
 test/model/DeploymentStageServiceResponse.spec.js
 test/model/DeploymentStageServiceResponseAllOf.spec.js
-test/model/DeploymentStageWithServiceStatusesList.spec.js
 test/model/DeploymentStageWithServicesStatuses.spec.js
 test/model/DoCredentialsRequest.spec.js
 test/model/Environment.spec.js

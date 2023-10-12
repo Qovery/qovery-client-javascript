@@ -186,7 +186,6 @@ import DeploymentStageResponseAllOf from './model/DeploymentStageResponseAllOf';
 import DeploymentStageResponseList from './model/DeploymentStageResponseList';
 import DeploymentStageServiceResponse from './model/DeploymentStageServiceResponse';
 import DeploymentStageServiceResponseAllOf from './model/DeploymentStageServiceResponseAllOf';
-import DeploymentStageWithServiceStatusesList from './model/DeploymentStageWithServiceStatusesList';
 import DeploymentStageWithServicesStatuses from './model/DeploymentStageWithServicesStatuses';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
 import Environment from './model/Environment';
@@ -1617,12 +1616,6 @@ export {
      * @property {module:model/DeploymentStageServiceResponseAllOf}
      */
     DeploymentStageServiceResponseAllOf,
-
-    /**
-     * The DeploymentStageWithServiceStatusesList model constructor.
-     * @property {module:model/DeploymentStageWithServiceStatusesList}
-     */
-    DeploymentStageWithServiceStatusesList,
 
     /**
      * The DeploymentStageWithServicesStatuses model constructor.

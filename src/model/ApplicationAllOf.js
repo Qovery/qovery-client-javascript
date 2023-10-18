@@ -28,11 +28,13 @@ class ApplicationAllOf {
     /**
      * Constructs a new <code>ApplicationAllOf</code>.
      * @alias module:model/ApplicationAllOf
+     * @param environment {module:model/ReferenceObject} 
+     * @param name {String} name is case insensitive
      * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(healthchecks) { 
+    constructor(environment, name, healthchecks) { 
         
-        ApplicationAllOf.initialize(this, healthchecks);
+        ApplicationAllOf.initialize(this, environment, name, healthchecks);
     }
 
     /**
@@ -40,7 +42,9 @@ class ApplicationAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, healthchecks) { 
+    static initialize(obj, environment, name, healthchecks) { 
+        obj['environment'] = environment;
+        obj['name'] = name;
         obj['healthchecks'] = healthchecks;
     }
 

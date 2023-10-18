@@ -26,13 +26,14 @@ class EnvironmentAllOf {
      * Constructs a new <code>EnvironmentAllOf</code>.
      * @alias module:model/EnvironmentAllOf
      * @param name {String} name is case insensitive
+     * @param project {module:model/ReferenceObject} 
      * @param cloudProvider {module:model/EnvironmentAllOfCloudProvider} 
      * @param mode {module:model/EnvironmentModeEnum} 
      * @param clusterId {String} 
      */
-    constructor(name, cloudProvider, mode, clusterId) { 
+    constructor(name, project, cloudProvider, mode, clusterId) { 
         
-        EnvironmentAllOf.initialize(this, name, cloudProvider, mode, clusterId);
+        EnvironmentAllOf.initialize(this, name, project, cloudProvider, mode, clusterId);
     }
 
     /**
@@ -40,8 +41,9 @@ class EnvironmentAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, cloudProvider, mode, clusterId) { 
+    static initialize(obj, name, project, cloudProvider, mode, clusterId) { 
         obj['name'] = name;
+        obj['project'] = project;
         obj['cloud_provider'] = cloudProvider;
         obj['mode'] = mode;
         obj['cluster_id'] = clusterId;

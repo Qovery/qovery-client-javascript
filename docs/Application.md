@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **storage** | [**[ServiceStorageStorageInner]**](ServiceStorageStorageInner.md) |  | [optional] 
-**environment** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
+**environment** | [**ReferenceObject**](ReferenceObject.md) |  | 
 **gitRepository** | [**ApplicationGitRepository**](ApplicationGitRepository.md) |  | [optional] 
 **maximumCpu** | **Number** | Maximum cpu that can be allocated to the application based on organization cluster configuration. unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] 
 **maximumMemory** | **Number** | Maximum memory that can be allocated to the application based on organization cluster configuration. unit is MB. 1024 MB &#x3D; 1GB | [optional] 
-**name** | **String** | name is case insensitive | [optional] 
+**name** | **String** | name is case insensitive | 
 **description** | **String** | give a description to this application | [optional] 
 **buildMode** | [**BuildModeEnum**](BuildModeEnum.md) |  | [optional] 
 **dockerfilePath** | **String** | The path of the associated Dockerfile. Only if you are using build_mode &#x3D; DOCKER | [optional] 

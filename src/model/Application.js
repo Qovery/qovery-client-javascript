@@ -37,11 +37,13 @@ class Application {
      * @implements module:model/ApplicationAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param environment {module:model/ReferenceObject} 
+     * @param name {String} name is case insensitive
      * @param healthchecks {module:model/Healthcheck} 
      */
-    constructor(id, createdAt, healthchecks) { 
-        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ApplicationAllOf.initialize(this, healthchecks);
-        Application.initialize(this, id, createdAt, healthchecks);
+    constructor(id, createdAt, environment, name, healthchecks) { 
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ApplicationAllOf.initialize(this, environment, name, healthchecks);
+        Application.initialize(this, id, createdAt, environment, name, healthchecks);
     }
 
     /**
@@ -49,9 +51,11 @@ class Application {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, healthchecks) { 
+    static initialize(obj, id, createdAt, environment, name, healthchecks) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
+        obj['environment'] = environment;
+        obj['name'] = name;
         obj['healthchecks'] = healthchecks;
     }
 

@@ -32,13 +32,14 @@ class Environment {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
+     * @param project {module:model/ReferenceObject} 
      * @param cloudProvider {module:model/EnvironmentAllOfCloudProvider} 
      * @param mode {module:model/EnvironmentModeEnum} 
      * @param clusterId {String} 
      */
-    constructor(id, createdAt, name, cloudProvider, mode, clusterId) { 
-        Base.initialize(this, id, createdAt);EnvironmentAllOf.initialize(this, name, cloudProvider, mode, clusterId);
-        Environment.initialize(this, id, createdAt, name, cloudProvider, mode, clusterId);
+    constructor(id, createdAt, name, project, cloudProvider, mode, clusterId) { 
+        Base.initialize(this, id, createdAt);EnvironmentAllOf.initialize(this, name, project, cloudProvider, mode, clusterId);
+        Environment.initialize(this, id, createdAt, name, project, cloudProvider, mode, clusterId);
     }
 
     /**
@@ -46,10 +47,11 @@ class Environment {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, name, cloudProvider, mode, clusterId) { 
+    static initialize(obj, id, createdAt, name, project, cloudProvider, mode, clusterId) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['name'] = name;
+        obj['project'] = project;
         obj['cloud_provider'] = cloudProvider;
         obj['mode'] = mode;
         obj['cluster_id'] = clusterId;

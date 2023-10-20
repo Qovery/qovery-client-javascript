@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import GitTokenResponse from './GitTokenResponse';
 
 /**
- * The ListOrganizationGitTokens200Response model module.
- * @module model/ListOrganizationGitTokens200Response
+ * The GitTokenResponseList model module.
+ * @module model/GitTokenResponseList
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListOrganizationGitTokens200Response {
+class GitTokenResponseList {
     /**
-     * Constructs a new <code>ListOrganizationGitTokens200Response</code>.
-     * @alias module:model/ListOrganizationGitTokens200Response
+     * Constructs a new <code>GitTokenResponseList</code>.
+     * @alias module:model/GitTokenResponseList
      */
     constructor() { 
         
-        ListOrganizationGitTokens200Response.initialize(this);
+        GitTokenResponseList.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class ListOrganizationGitTokens200Response {
     }
 
     /**
-     * Constructs a <code>ListOrganizationGitTokens200Response</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>GitTokenResponseList</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListOrganizationGitTokens200Response} obj Optional instance to populate.
-     * @return {module:model/ListOrganizationGitTokens200Response} The populated <code>ListOrganizationGitTokens200Response</code> instance.
+     * @param {module:model/GitTokenResponseList} obj Optional instance to populate.
+     * @return {module:model/GitTokenResponseList} The populated <code>GitTokenResponseList</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListOrganizationGitTokens200Response();
+            obj = obj || new GitTokenResponseList();
 
             if (data.hasOwnProperty('results')) {
                 obj['results'] = ApiClient.convertToType(data['results'], [GitTokenResponse]);
@@ -61,12 +61,12 @@ class ListOrganizationGitTokens200Response {
 /**
  * @member {Array.<module:model/GitTokenResponse>} results
  */
-ListOrganizationGitTokens200Response.prototype['results'] = undefined;
+GitTokenResponseList.prototype['results'] = undefined;
 
 
 
 
 
 
-export default ListOrganizationGitTokens200Response;
+export default GitTokenResponseList;
 

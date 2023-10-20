@@ -293,6 +293,7 @@ docs/GitRepositoryBranchResponseList.md
 docs/GitRepositoryResponseList.md
 docs/GitTokenResponse.md
 docs/GitTokenResponseAllOf.md
+docs/GitTokenResponseList.md
 docs/GithubAppApi.md
 docs/Healthcheck.md
 docs/Instance.md
@@ -348,7 +349,6 @@ docs/ListDatabaseDeploymentHistory200Response.md
 docs/ListDatabaseDeploymentHistory200ResponseAllOf.md
 docs/ListJobDeploymentHistory200Response.md
 docs/ListJobDeploymentHistory200ResponseAllOf.md
-docs/ListOrganizationGitTokens200Response.md
 docs/Log.md
 docs/LogPaginatedResponseList.md
 docs/LogPaginatedResponseListAllOf.md
@@ -852,6 +852,7 @@ src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponseList.js
 src/model/GitTokenResponse.js
 src/model/GitTokenResponseAllOf.js
+src/model/GitTokenResponseList.js
 src/model/Healthcheck.js
 src/model/Instance.js
 src/model/InstanceMemory.js
@@ -897,7 +898,6 @@ src/model/ListDatabaseDeploymentHistory200Response.js
 src/model/ListDatabaseDeploymentHistory200ResponseAllOf.js
 src/model/ListJobDeploymentHistory200Response.js
 src/model/ListJobDeploymentHistory200ResponseAllOf.js
-src/model/ListOrganizationGitTokens200Response.js
 src/model/Log.js
 src/model/LogPaginatedResponseList.js
 src/model/LogPaginatedResponseListAllOf.js
@@ -1381,6 +1381,7 @@ test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponseList.spec.js
 test/model/GitTokenResponse.spec.js
 test/model/GitTokenResponseAllOf.spec.js
+test/model/GitTokenResponseList.spec.js
 test/model/Healthcheck.spec.js
 test/model/Instance.spec.js
 test/model/InstanceMemory.spec.js
@@ -1426,7 +1427,6 @@ test/model/ListDatabaseDeploymentHistory200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200ResponseAllOf.spec.js
 test/model/ListJobDeploymentHistory200Response.spec.js
 test/model/ListJobDeploymentHistory200ResponseAllOf.spec.js
-test/model/ListOrganizationGitTokens200Response.spec.js
 test/model/Log.spec.js
 test/model/LogPaginatedResponseList.spec.js
 test/model/LogPaginatedResponseListAllOf.spec.js

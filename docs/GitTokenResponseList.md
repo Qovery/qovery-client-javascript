@@ -1,4 +1,4 @@
-# QoveryApi.ListOrganizationGitTokens200Response
+# QoveryApi.GitTokenResponseList
 
 ## Properties
 

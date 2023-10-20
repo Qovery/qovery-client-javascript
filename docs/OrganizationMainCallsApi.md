@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ## listOrganizationGitTokens
 
-> ListOrganizationGitTokens200Response listOrganizationGitTokens(organizationId)
+> GitTokenResponseList listOrganizationGitTokens(organizationId)
 
 List organization git tokens
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListOrganizationGitTokens200Response**](ListOrganizationGitTokens200Response.md)
+[**GitTokenResponseList**](GitTokenResponseList.md)
 
 ### Authorization
 

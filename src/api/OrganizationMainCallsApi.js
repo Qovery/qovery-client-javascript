@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import ListOrganizationGitTokens200Response from '../model/ListOrganizationGitTokens200Response';
+import GitTokenResponseList from '../model/GitTokenResponseList';
 import Organization from '../model/Organization';
 import OrganizationAvailableRoleList from '../model/OrganizationAvailableRoleList';
 import OrganizationEditRequest from '../model/OrganizationEditRequest';
@@ -291,7 +291,7 @@ export default class OrganizationMainCallsApi {
      * Callback function to receive the result of the listOrganizationGitTokens operation.
      * @callback module:api/OrganizationMainCallsApi~listOrganizationGitTokensCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ListOrganizationGitTokens200Response} data The data returned by the service call.
+     * @param {module:model/GitTokenResponseList} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -300,7 +300,7 @@ export default class OrganizationMainCallsApi {
      * List organization git tokens
      * @param {String} organizationId Organization ID
      * @param {module:api/OrganizationMainCallsApi~listOrganizationGitTokensCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ListOrganizationGitTokens200Response}
+     * data is of type: {@link module:model/GitTokenResponseList}
      */
     listOrganizationGitTokens(organizationId, callback) {
       let postBody = null;
@@ -322,7 +322,7 @@ export default class OrganizationMainCallsApi {
       let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = ListOrganizationGitTokens200Response;
+      let returnType = GitTokenResponseList;
       return this.apiClient.callApi(
         '/organization/{organizationId}/gitToken', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

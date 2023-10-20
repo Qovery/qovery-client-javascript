@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListOrganizationGitTokens200Response();
+    instance = new QoveryApi.GitTokenResponseList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,16 @@
       object[property] = value;
   }
 
-  describe('ListOrganizationGitTokens200Response', function() {
-    it('should create an instance of ListOrganizationGitTokens200Response', function() {
-      // uncomment below and update the code to test ListOrganizationGitTokens200Response
-      //var instance = new QoveryApi.ListOrganizationGitTokens200Response();
-      //expect(instance).to.be.a(QoveryApi.ListOrganizationGitTokens200Response);
+  describe('GitTokenResponseList', function() {
+    it('should create an instance of GitTokenResponseList', function() {
+      // uncomment below and update the code to test GitTokenResponseList
+      //var instance = new QoveryApi.GitTokenResponseList();
+      //expect(instance).to.be.a(QoveryApi.GitTokenResponseList);
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instance = new QoveryApi.ListOrganizationGitTokens200Response();
+      //var instance = new QoveryApi.GitTokenResponseList();
       //expect(instance).to.be();
     });
 

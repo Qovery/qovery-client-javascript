@@ -58,6 +58,9 @@ class ApplicationGitRepositoryRequest {
             if (data.hasOwnProperty('root_path')) {
                 obj['root_path'] = ApiClient.convertToType(data['root_path'], 'String');
             }
+            if (data.hasOwnProperty('git_token_id')) {
+                obj['git_token_id'] = ApiClient.convertToType(data['git_token_id'], 'String');
+            }
         }
         return obj;
     }
@@ -83,6 +86,12 @@ ApplicationGitRepositoryRequest.prototype['branch'] = undefined;
  * @default '/'
  */
 ApplicationGitRepositoryRequest.prototype['root_path'] = '/';
+
+/**
+ * The git token id on Qovery side
+ * @member {String} git_token_id
+ */
+ApplicationGitRepositoryRequest.prototype['git_token_id'] = undefined;
 
 
 

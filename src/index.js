@@ -255,6 +255,8 @@ import GitRepository from './model/GitRepository';
 import GitRepositoryBranch from './model/GitRepositoryBranch';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
+import GitTokenResponse from './model/GitTokenResponse';
+import GitTokenResponseAllOf from './model/GitTokenResponseAllOf';
 import Healthcheck from './model/Healthcheck';
 import Instance from './model/Instance';
 import InstanceMemory from './model/InstanceMemory';
@@ -300,6 +302,7 @@ import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploy
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
 import ListJobDeploymentHistory200Response from './model/ListJobDeploymentHistory200Response';
 import ListJobDeploymentHistory200ResponseAllOf from './model/ListJobDeploymentHistory200ResponseAllOf';
+import ListOrganizationGitTokens200Response from './model/ListOrganizationGitTokens200Response';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
 import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
@@ -2032,6 +2035,18 @@ export {
     GitRepositoryResponseList,
 
     /**
+     * The GitTokenResponse model constructor.
+     * @property {module:model/GitTokenResponse}
+     */
+    GitTokenResponse,
+
+    /**
+     * The GitTokenResponseAllOf model constructor.
+     * @property {module:model/GitTokenResponseAllOf}
+     */
+    GitTokenResponseAllOf,
+
+    /**
      * The Healthcheck model constructor.
      * @property {module:model/Healthcheck}
      */
@@ -2300,6 +2315,12 @@ export {
      * @property {module:model/ListJobDeploymentHistory200ResponseAllOf}
      */
     ListJobDeploymentHistory200ResponseAllOf,
+
+    /**
+     * The ListOrganizationGitTokens200Response model constructor.
+     * @property {module:model/ListOrganizationGitTokens200Response}
+     */
+    ListOrganizationGitTokens200Response,
 
     /**
      * The Log model constructor.

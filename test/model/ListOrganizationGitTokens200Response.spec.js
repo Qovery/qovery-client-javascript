@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationGitRepositoryRequest();
+    instance = new QoveryApi.ListOrganizationGitTokens200Response();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,16 @@
       object[property] = value;
   }
 
-  describe('ApplicationGitRepositoryRequest', function() {
-    it('should create an instance of ApplicationGitRepositoryRequest', function() {
-      // uncomment below and update the code to test ApplicationGitRepositoryRequest
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
-      //expect(instance).to.be.a(QoveryApi.ApplicationGitRepositoryRequest);
+  describe('ListOrganizationGitTokens200Response', function() {
+    it('should create an instance of ListOrganizationGitTokens200Response', function() {
+      // uncomment below and update the code to test ListOrganizationGitTokens200Response
+      //var instance = new QoveryApi.ListOrganizationGitTokens200Response();
+      //expect(instance).to.be.a(QoveryApi.ListOrganizationGitTokens200Response);
     });
 
-    it('should have the property url (base name: "url")', function() {
-      // uncomment below and update the code to test the property url
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property branch (base name: "branch")', function() {
-      // uncomment below and update the code to test the property branch
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property rootPath (base name: "root_path")', function() {
-      // uncomment below and update the code to test the property rootPath
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property gitTokenId (base name: "git_token_id")', function() {
-      // uncomment below and update the code to test the property gitTokenId
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
+    it('should have the property results (base name: "results")', function() {
+      // uncomment below and update the code to test the property results
+      //var instance = new QoveryApi.ListOrganizationGitTokens200Response();
       //expect(instance).to.be();
     });
 

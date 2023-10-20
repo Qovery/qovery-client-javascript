@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getOrganization**](OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
 [**listOrganization**](OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
 [**listOrganizationAvailableRoles**](OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
+[**listOrganizationGitTokens**](OrganizationMainCallsApi.md#listOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken | List organization git tokens
 
 
 
@@ -322,6 +323,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrganizationAvailableRoleList**](OrganizationAvailableRoleList.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listOrganizationGitTokens
+
+> ListOrganizationGitTokens200Response listOrganizationGitTokens(organizationId)
+
+List organization git tokens
+
+List organization git tokens
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+apiInstance.listOrganizationGitTokens(organizationId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+
+### Return type
+
+[**ListOrganizationGitTokens200Response**](ListOrganizationGitTokens200Response.md)
 
 ### Authorization
 

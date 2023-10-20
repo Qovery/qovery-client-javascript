@@ -47,10 +47,13 @@ export default class OrganizationAccountGitRepositoriesApi {
     /**
      * Get bitbucket repositories of the connected user
      * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationBitbucketRepositoriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryResponseList}
      */
-    getOrganizationBitbucketRepositories(organizationId, callback) {
+    getOrganizationBitbucketRepositories(organizationId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
@@ -61,6 +64,7 @@ export default class OrganizationAccountGitRepositoriesApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'gitTokenId': opts['gitTokenId']
       };
       let headerParams = {
       };
@@ -90,6 +94,7 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get bitbucket branches of the specified repository
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
      * @param {String} opts.name The name of the repository where to retrieve the branches
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationBitbucketRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
@@ -106,6 +111,7 @@ export default class OrganizationAccountGitRepositoriesApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'gitTokenId': opts['gitTokenId'],
         'name': opts['name']
       };
       let headerParams = {
@@ -177,10 +183,13 @@ export default class OrganizationAccountGitRepositoriesApi {
     /**
      * Get github repositories of the connected user
      * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGithubRepositoriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryResponseList}
      */
-    getOrganizationGithubRepositories(organizationId, callback) {
+    getOrganizationGithubRepositories(organizationId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
@@ -191,6 +200,7 @@ export default class OrganizationAccountGitRepositoriesApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'gitTokenId': opts['gitTokenId']
       };
       let headerParams = {
       };
@@ -220,6 +230,7 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get github branches of the specified repository
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
      * @param {String} opts.name The name of the repository where to retrieve the branches
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGithubRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
@@ -236,6 +247,7 @@ export default class OrganizationAccountGitRepositoriesApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'gitTokenId': opts['gitTokenId'],
         'name': opts['name']
       };
       let headerParams = {
@@ -265,10 +277,13 @@ export default class OrganizationAccountGitRepositoriesApi {
     /**
      * Get gitlab repositories of the connected user
      * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitlabRepositoriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryResponseList}
      */
-    getOrganizationGitlabRepositories(organizationId, callback) {
+    getOrganizationGitlabRepositories(organizationId, opts, callback) {
+      opts = opts || {};
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
@@ -279,6 +294,7 @@ export default class OrganizationAccountGitRepositoriesApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'gitTokenId': opts['gitTokenId']
       };
       let headerParams = {
       };
@@ -308,6 +324,7 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get gitlab branches of the specified repository
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
      * @param {String} opts.name The name of the repository to retrieve the branches
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitlabRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
@@ -324,6 +341,7 @@ export default class OrganizationAccountGitRepositoriesApi {
         'organizationId': organizationId
       };
       let queryParams = {
+        'gitTokenId': opts['gitTokenId'],
         'name': opts['name']
       };
       let headerParams = {

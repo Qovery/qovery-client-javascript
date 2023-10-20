@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ApplicationGitRepositoryRequest();
+    instance = new QoveryApi.GitTokenResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,46 @@
       object[property] = value;
   }
 
-  describe('ApplicationGitRepositoryRequest', function() {
-    it('should create an instance of ApplicationGitRepositoryRequest', function() {
-      // uncomment below and update the code to test ApplicationGitRepositoryRequest
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
-      //expect(instance).to.be.a(QoveryApi.ApplicationGitRepositoryRequest);
+  describe('GitTokenResponse', function() {
+    it('should create an instance of GitTokenResponse', function() {
+      // uncomment below and update the code to test GitTokenResponse
+      //var instance = new QoveryApi.GitTokenResponse();
+      //expect(instance).to.be.a(QoveryApi.GitTokenResponse);
     });
 
-    it('should have the property url (base name: "url")', function() {
-      // uncomment below and update the code to test the property url
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new QoveryApi.GitTokenResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property branch (base name: "branch")', function() {
-      // uncomment below and update the code to test the property branch
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
+    it('should have the property createdAt (base name: "created_at")', function() {
+      // uncomment below and update the code to test the property createdAt
+      //var instance = new QoveryApi.GitTokenResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property rootPath (base name: "root_path")', function() {
-      // uncomment below and update the code to test the property rootPath
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
+    it('should have the property updatedAt (base name: "updated_at")', function() {
+      // uncomment below and update the code to test the property updatedAt
+      //var instance = new QoveryApi.GitTokenResponse();
       //expect(instance).to.be();
     });
 
-    it('should have the property gitTokenId (base name: "git_token_id")', function() {
-      // uncomment below and update the code to test the property gitTokenId
-      //var instance = new QoveryApi.ApplicationGitRepositoryRequest();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instance = new QoveryApi.GitTokenResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property description (base name: "description")', function() {
+      // uncomment below and update the code to test the property description
+      //var instance = new QoveryApi.GitTokenResponse();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instance = new QoveryApi.GitTokenResponse();
       //expect(instance).to.be();
     });
 

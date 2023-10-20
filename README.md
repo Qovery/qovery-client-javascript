@@ -463,6 +463,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationMainCallsApi* | [**getOrganization**](docs/OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganization**](docs/OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganizationAvailableRoles**](docs/OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
+*QoveryApi.OrganizationMainCallsApi* | [**listOrganizationGitTokens**](docs/OrganizationMainCallsApi.md#listOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken | List organization git tokens
 *QoveryApi.OrganizationWebhookApi* | [**createOrganizationWebhook**](docs/OrganizationWebhookApi.md#createOrganizationWebhook) | **POST** /organization/{organizationId}/webhook | Create an organization webhook
 *QoveryApi.OrganizationWebhookApi* | [**deleteOrganizationWebhook**](docs/OrganizationWebhookApi.md#deleteOrganizationWebhook) | **DELETE** /organization/{organizationId}/webhook/{webhookId} | Delete organization webhook
 *QoveryApi.OrganizationWebhookApi* | [**editOrganizationWebhook**](docs/OrganizationWebhookApi.md#editOrganizationWebhook) | **PUT** /organization/{organizationId}/webhook/{webhookId} | Edit an organization webhook
@@ -748,6 +749,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryBranch](docs/GitRepositoryBranch.md)
  - [QoveryApi.GitRepositoryBranchResponseList](docs/GitRepositoryBranchResponseList.md)
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
+ - [QoveryApi.GitTokenResponse](docs/GitTokenResponse.md)
+ - [QoveryApi.GitTokenResponseAllOf](docs/GitTokenResponseAllOf.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
  - [QoveryApi.Instance](docs/Instance.md)
  - [QoveryApi.InstanceMemory](docs/InstanceMemory.md)
@@ -793,6 +796,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ListDatabaseDeploymentHistory200ResponseAllOf](docs/ListDatabaseDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.ListJobDeploymentHistory200Response](docs/ListJobDeploymentHistory200Response.md)
  - [QoveryApi.ListJobDeploymentHistory200ResponseAllOf](docs/ListJobDeploymentHistory200ResponseAllOf.md)
+ - [QoveryApi.ListOrganizationGitTokens200Response](docs/ListOrganizationGitTokens200Response.md)
  - [QoveryApi.Log](docs/Log.md)
  - [QoveryApi.LogPaginatedResponseList](docs/LogPaginatedResponseList.md)
  - [QoveryApi.LogPaginatedResponseListAllOf](docs/LogPaginatedResponseListAllOf.md)

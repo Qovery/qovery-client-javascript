@@ -395,6 +395,25 @@ Class | Method | HTTP request | Description
 *QoveryApi.GitRepositoriesApi* | [**getGitlabRepositoryBranches**](docs/GitRepositoriesApi.md#getGitlabRepositoryBranches) | **GET** /account/gitlab/repository/branch | Get gitlab branches of the specified repository
 *QoveryApi.GithubAppApi* | [**organizationGithubAppConnect**](docs/GithubAppApi.md#organizationGithubAppConnect) | **POST** /organization/{organizationId}/github/connect | Connect a github account to an organization
 *QoveryApi.GithubAppApi* | [**organizationGithubAppDisconnect**](docs/GithubAppApi.md#organizationGithubAppDisconnect) | **DELETE** /organization/{organizationId}/github/disconnect | Disconnect a github account from an organization
+*QoveryApi.HelmApi* | [**getDefaultHelmAdvancedSettings**](docs/HelmApi.md#getDefaultHelmAdvancedSettings) | **GET** /defaultHelmAdvancedSettings | List default helm advanced settings
+*QoveryApi.HelmActionsApi* | [**deployHelm**](docs/HelmActionsApi.md#deployHelm) | **POST** /helm/{helmId}/deploy | Deploy helm
+*QoveryApi.HelmActionsApi* | [**redeployHelm**](docs/HelmActionsApi.md#redeployHelm) | **POST** /helm/{helmId}/redeploy | Redeploy helm
+*QoveryApi.HelmActionsApi* | [**restartHelm**](docs/HelmActionsApi.md#restartHelm) | **POST** /helm/{helmId}/restart | Deprecated - Restart helm
+*QoveryApi.HelmActionsApi* | [**stopHelm**](docs/HelmActionsApi.md#stopHelm) | **POST** /helm/{helmId}/stop | Stop helm
+*QoveryApi.HelmConfigurationApi* | [**editHelmAdvancedSettings**](docs/HelmConfigurationApi.md#editHelmAdvancedSettings) | **PUT** /helm/{helmId}/advancedSettings | Edit advanced settings
+*QoveryApi.HelmConfigurationApi* | [**getHelmAdvancedSettings**](docs/HelmConfigurationApi.md#getHelmAdvancedSettings) | **GET** /helm/{helmId}/advancedSettings | Get advanced settings
+*QoveryApi.HelmDeploymentHistoryApi* | [**listHelmDeploymentHistory**](docs/HelmDeploymentHistoryApi.md#listHelmDeploymentHistory) | **GET** /helm/{helmId}/deploymentHistory | List helm deployments
+*QoveryApi.HelmDeploymentRestrictionApi* | [**createHelmDeploymentRestriction**](docs/HelmDeploymentRestrictionApi.md#createHelmDeploymentRestriction) | **POST** /helm/{helmId}/deploymentRestriction | Create a helm deployment restriction
+*QoveryApi.HelmDeploymentRestrictionApi* | [**deleteHelmDeploymentRestriction**](docs/HelmDeploymentRestrictionApi.md#deleteHelmDeploymentRestriction) | **DELETE** /helm/{helmId}/deploymentRestriction/{deploymentRestrictionId} | Delete a helm deployment restriction
+*QoveryApi.HelmDeploymentRestrictionApi* | [**editHelmDeploymentRestriction**](docs/HelmDeploymentRestrictionApi.md#editHelmDeploymentRestriction) | **PUT** /helm/{helmId}/deploymentRestriction/{deploymentRestrictionId} | Edit a helm deployment restriction
+*QoveryApi.HelmDeploymentRestrictionApi* | [**getHelmDeploymentRestrictions**](docs/HelmDeploymentRestrictionApi.md#getHelmDeploymentRestrictions) | **GET** /helm/{helmId}/deploymentRestriction | Get helm deployment restrictions
+*QoveryApi.HelmMainCallsApi* | [**deleteHelm**](docs/HelmMainCallsApi.md#deleteHelm) | **DELETE** /helm/{helmId} | Delete helm
+*QoveryApi.HelmMainCallsApi* | [**editHelm**](docs/HelmMainCallsApi.md#editHelm) | **PUT** /helm/{helmId} | Edit helm
+*QoveryApi.HelmMainCallsApi* | [**getHelm**](docs/HelmMainCallsApi.md#getHelm) | **GET** /helm/{helmId} | Get helm by ID
+*QoveryApi.HelmMainCallsApi* | [**getHelmStatus**](docs/HelmMainCallsApi.md#getHelmStatus) | **GET** /helm/{helmId}/status | Get helm status
+*QoveryApi.HelmsApi* | [**createHelm**](docs/HelmsApi.md#createHelm) | **POST** /environment/{environmentId}/helm | Create a helm
+*QoveryApi.HelmsApi* | [**getEnvironmentHelmStatus**](docs/HelmsApi.md#getEnvironmentHelmStatus) | **GET** /environment/{environmentId}/helm/status | List all environment helm statuses
+*QoveryApi.HelmsApi* | [**listHelms**](docs/HelmsApi.md#listHelms) | **GET** /environment/{environmentId}/helm | List helms
 *QoveryApi.JobActionsApi* | [**deployJob**](docs/JobActionsApi.md#deployJob) | **POST** /job/{jobId}/deploy | Deploy job
 *QoveryApi.JobActionsApi* | [**redeployJob**](docs/JobActionsApi.md#redeployJob) | **POST** /job/{jobId}/redeploy | Redeploy job
 *QoveryApi.JobActionsApi* | [**restartJob**](docs/JobActionsApi.md#restartJob) | **POST** /job/{jobId}/restart | Deprecated - Restart job
@@ -651,6 +670,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DeployAllRequestApplicationsInner](docs/DeployAllRequestApplicationsInner.md)
  - [QoveryApi.DeployAllRequestContainersInner](docs/DeployAllRequestContainersInner.md)
  - [QoveryApi.DeployAllRequestJobsInner](docs/DeployAllRequestJobsInner.md)
+ - [QoveryApi.DeployHelmRequest](docs/DeployHelmRequest.md)
  - [QoveryApi.DeployRequest](docs/DeployRequest.md)
  - [QoveryApi.DeploymentHistory](docs/DeploymentHistory.md)
  - [QoveryApi.DeploymentHistoryAllOf](docs/DeploymentHistoryAllOf.md)
@@ -753,6 +773,23 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitTokenResponseAllOf](docs/GitTokenResponseAllOf.md)
  - [QoveryApi.GitTokenResponseList](docs/GitTokenResponseList.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
+ - [QoveryApi.HelmDeploymentRestrictionRequest](docs/HelmDeploymentRestrictionRequest.md)
+ - [QoveryApi.HelmDeploymentRestrictionResponse](docs/HelmDeploymentRestrictionResponse.md)
+ - [QoveryApi.HelmDeploymentRestrictionResponseList](docs/HelmDeploymentRestrictionResponseList.md)
+ - [QoveryApi.HelmForceEvent](docs/HelmForceEvent.md)
+ - [QoveryApi.HelmRequest](docs/HelmRequest.md)
+ - [QoveryApi.HelmRequestAllOf](docs/HelmRequestAllOf.md)
+ - [QoveryApi.HelmRequestAllOfSource](docs/HelmRequestAllOfSource.md)
+ - [QoveryApi.HelmRequestAllOfSourceGit](docs/HelmRequestAllOfSourceGit.md)
+ - [QoveryApi.HelmRequestAllOfSourceRepository](docs/HelmRequestAllOfSourceRepository.md)
+ - [QoveryApi.HelmRequestAllOfValuesOverride](docs/HelmRequestAllOfValuesOverride.md)
+ - [QoveryApi.HelmRequestAllOfValuesOverrideFile](docs/HelmRequestAllOfValuesOverrideFile.md)
+ - [QoveryApi.HelmRequestAllOfValuesOverrideFileGit](docs/HelmRequestAllOfValuesOverrideFileGit.md)
+ - [QoveryApi.HelmRequestAllOfValuesOverrideFileRaw](docs/HelmRequestAllOfValuesOverrideFileRaw.md)
+ - [QoveryApi.HelmRequestAllOfValuesOverrideFileRawValues](docs/HelmRequestAllOfValuesOverrideFileRawValues.md)
+ - [QoveryApi.HelmResponse](docs/HelmResponse.md)
+ - [QoveryApi.HelmResponseAllOf](docs/HelmResponseAllOf.md)
+ - [QoveryApi.HelmResponseList](docs/HelmResponseList.md)
  - [QoveryApi.Instance](docs/Instance.md)
  - [QoveryApi.InstanceMemory](docs/InstanceMemory.md)
  - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
@@ -795,6 +832,10 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ListContainerDeploymentHistory200ResponseAllOf](docs/ListContainerDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200Response](docs/ListDatabaseDeploymentHistory200Response.md)
  - [QoveryApi.ListDatabaseDeploymentHistory200ResponseAllOf](docs/ListDatabaseDeploymentHistory200ResponseAllOf.md)
+ - [QoveryApi.ListHelmDeploymentHistory200Response](docs/ListHelmDeploymentHistory200Response.md)
+ - [QoveryApi.ListHelmDeploymentHistory200ResponseAllOf](docs/ListHelmDeploymentHistory200ResponseAllOf.md)
+ - [QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner](docs/ListHelmDeploymentHistory200ResponseAllOfResultsInner.md)
+ - [QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf](docs/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.md)
  - [QoveryApi.ListJobDeploymentHistory200Response](docs/ListJobDeploymentHistory200Response.md)
  - [QoveryApi.ListJobDeploymentHistory200ResponseAllOf](docs/ListJobDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.Log](docs/Log.md)

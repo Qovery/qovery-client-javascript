@@ -157,6 +157,7 @@ import DeployAllRequest from './model/DeployAllRequest';
 import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
 import DeployAllRequestContainersInner from './model/DeployAllRequestContainersInner';
 import DeployAllRequestJobsInner from './model/DeployAllRequestJobsInner';
+import DeployHelmRequest from './model/DeployHelmRequest';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistory from './model/DeploymentHistory';
 import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
@@ -259,6 +260,23 @@ import GitTokenResponse from './model/GitTokenResponse';
 import GitTokenResponseAllOf from './model/GitTokenResponseAllOf';
 import GitTokenResponseList from './model/GitTokenResponseList';
 import Healthcheck from './model/Healthcheck';
+import HelmDeploymentRestrictionRequest from './model/HelmDeploymentRestrictionRequest';
+import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestrictionResponse';
+import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
+import HelmForceEvent from './model/HelmForceEvent';
+import HelmRequest from './model/HelmRequest';
+import HelmRequestAllOf from './model/HelmRequestAllOf';
+import HelmRequestAllOfSource from './model/HelmRequestAllOfSource';
+import HelmRequestAllOfSourceGit from './model/HelmRequestAllOfSourceGit';
+import HelmRequestAllOfSourceRepository from './model/HelmRequestAllOfSourceRepository';
+import HelmRequestAllOfValuesOverride from './model/HelmRequestAllOfValuesOverride';
+import HelmRequestAllOfValuesOverrideFile from './model/HelmRequestAllOfValuesOverrideFile';
+import HelmRequestAllOfValuesOverrideFileGit from './model/HelmRequestAllOfValuesOverrideFileGit';
+import HelmRequestAllOfValuesOverrideFileRaw from './model/HelmRequestAllOfValuesOverrideFileRaw';
+import HelmRequestAllOfValuesOverrideFileRawValues from './model/HelmRequestAllOfValuesOverrideFileRawValues';
+import HelmResponse from './model/HelmResponse';
+import HelmResponseAllOf from './model/HelmResponseAllOf';
+import HelmResponseList from './model/HelmResponseList';
 import Instance from './model/Instance';
 import InstanceMemory from './model/InstanceMemory';
 import InstanceResponseList from './model/InstanceResponseList';
@@ -301,6 +319,10 @@ import ListContainerDeploymentHistory200Response from './model/ListContainerDepl
 import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
+import ListHelmDeploymentHistory200Response from './model/ListHelmDeploymentHistory200Response';
+import ListHelmDeploymentHistory200ResponseAllOf from './model/ListHelmDeploymentHistory200ResponseAllOf';
+import ListHelmDeploymentHistory200ResponseAllOfResultsInner from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInner';
+import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf';
 import ListJobDeploymentHistory200Response from './model/ListJobDeploymentHistory200Response';
 import ListJobDeploymentHistory200ResponseAllOf from './model/ListJobDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
@@ -518,6 +540,13 @@ import EnvironmentVariableApi from './api/EnvironmentVariableApi';
 import EnvironmentsApi from './api/EnvironmentsApi';
 import GitRepositoriesApi from './api/GitRepositoriesApi';
 import GithubAppApi from './api/GithubAppApi';
+import HelmApi from './api/HelmApi';
+import HelmActionsApi from './api/HelmActionsApi';
+import HelmConfigurationApi from './api/HelmConfigurationApi';
+import HelmDeploymentHistoryApi from './api/HelmDeploymentHistoryApi';
+import HelmDeploymentRestrictionApi from './api/HelmDeploymentRestrictionApi';
+import HelmMainCallsApi from './api/HelmMainCallsApi';
+import HelmsApi from './api/HelmsApi';
 import JobActionsApi from './api/JobActionsApi';
 import JobConfigurationApi from './api/JobConfigurationApi';
 import JobDeploymentHistoryApi from './api/JobDeploymentHistoryApi';
@@ -1447,6 +1476,12 @@ export {
     DeployAllRequestJobsInner,
 
     /**
+     * The DeployHelmRequest model constructor.
+     * @property {module:model/DeployHelmRequest}
+     */
+    DeployHelmRequest,
+
+    /**
      * The DeployRequest model constructor.
      * @property {module:model/DeployRequest}
      */
@@ -2059,6 +2094,108 @@ export {
     Healthcheck,
 
     /**
+     * The HelmDeploymentRestrictionRequest model constructor.
+     * @property {module:model/HelmDeploymentRestrictionRequest}
+     */
+    HelmDeploymentRestrictionRequest,
+
+    /**
+     * The HelmDeploymentRestrictionResponse model constructor.
+     * @property {module:model/HelmDeploymentRestrictionResponse}
+     */
+    HelmDeploymentRestrictionResponse,
+
+    /**
+     * The HelmDeploymentRestrictionResponseList model constructor.
+     * @property {module:model/HelmDeploymentRestrictionResponseList}
+     */
+    HelmDeploymentRestrictionResponseList,
+
+    /**
+     * The HelmForceEvent model constructor.
+     * @property {module:model/HelmForceEvent}
+     */
+    HelmForceEvent,
+
+    /**
+     * The HelmRequest model constructor.
+     * @property {module:model/HelmRequest}
+     */
+    HelmRequest,
+
+    /**
+     * The HelmRequestAllOf model constructor.
+     * @property {module:model/HelmRequestAllOf}
+     */
+    HelmRequestAllOf,
+
+    /**
+     * The HelmRequestAllOfSource model constructor.
+     * @property {module:model/HelmRequestAllOfSource}
+     */
+    HelmRequestAllOfSource,
+
+    /**
+     * The HelmRequestAllOfSourceGit model constructor.
+     * @property {module:model/HelmRequestAllOfSourceGit}
+     */
+    HelmRequestAllOfSourceGit,
+
+    /**
+     * The HelmRequestAllOfSourceRepository model constructor.
+     * @property {module:model/HelmRequestAllOfSourceRepository}
+     */
+    HelmRequestAllOfSourceRepository,
+
+    /**
+     * The HelmRequestAllOfValuesOverride model constructor.
+     * @property {module:model/HelmRequestAllOfValuesOverride}
+     */
+    HelmRequestAllOfValuesOverride,
+
+    /**
+     * The HelmRequestAllOfValuesOverrideFile model constructor.
+     * @property {module:model/HelmRequestAllOfValuesOverrideFile}
+     */
+    HelmRequestAllOfValuesOverrideFile,
+
+    /**
+     * The HelmRequestAllOfValuesOverrideFileGit model constructor.
+     * @property {module:model/HelmRequestAllOfValuesOverrideFileGit}
+     */
+    HelmRequestAllOfValuesOverrideFileGit,
+
+    /**
+     * The HelmRequestAllOfValuesOverrideFileRaw model constructor.
+     * @property {module:model/HelmRequestAllOfValuesOverrideFileRaw}
+     */
+    HelmRequestAllOfValuesOverrideFileRaw,
+
+    /**
+     * The HelmRequestAllOfValuesOverrideFileRawValues model constructor.
+     * @property {module:model/HelmRequestAllOfValuesOverrideFileRawValues}
+     */
+    HelmRequestAllOfValuesOverrideFileRawValues,
+
+    /**
+     * The HelmResponse model constructor.
+     * @property {module:model/HelmResponse}
+     */
+    HelmResponse,
+
+    /**
+     * The HelmResponseAllOf model constructor.
+     * @property {module:model/HelmResponseAllOf}
+     */
+    HelmResponseAllOf,
+
+    /**
+     * The HelmResponseList model constructor.
+     * @property {module:model/HelmResponseList}
+     */
+    HelmResponseList,
+
+    /**
      * The Instance model constructor.
      * @property {module:model/Instance}
      */
@@ -2309,6 +2446,30 @@ export {
      * @property {module:model/ListDatabaseDeploymentHistory200ResponseAllOf}
      */
     ListDatabaseDeploymentHistory200ResponseAllOf,
+
+    /**
+     * The ListHelmDeploymentHistory200Response model constructor.
+     * @property {module:model/ListHelmDeploymentHistory200Response}
+     */
+    ListHelmDeploymentHistory200Response,
+
+    /**
+     * The ListHelmDeploymentHistory200ResponseAllOf model constructor.
+     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOf}
+     */
+    ListHelmDeploymentHistory200ResponseAllOf,
+
+    /**
+     * The ListHelmDeploymentHistory200ResponseAllOfResultsInner model constructor.
+     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInner}
+     */
+    ListHelmDeploymentHistory200ResponseAllOfResultsInner,
+
+    /**
+     * The ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf model constructor.
+     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf}
+     */
+    ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf,
 
     /**
      * The ListJobDeploymentHistory200Response model constructor.
@@ -3611,6 +3772,48 @@ export {
     * @property {module:api/GithubAppApi}
     */
     GithubAppApi,
+
+    /**
+    * The HelmApi service constructor.
+    * @property {module:api/HelmApi}
+    */
+    HelmApi,
+
+    /**
+    * The HelmActionsApi service constructor.
+    * @property {module:api/HelmActionsApi}
+    */
+    HelmActionsApi,
+
+    /**
+    * The HelmConfigurationApi service constructor.
+    * @property {module:api/HelmConfigurationApi}
+    */
+    HelmConfigurationApi,
+
+    /**
+    * The HelmDeploymentHistoryApi service constructor.
+    * @property {module:api/HelmDeploymentHistoryApi}
+    */
+    HelmDeploymentHistoryApi,
+
+    /**
+    * The HelmDeploymentRestrictionApi service constructor.
+    * @property {module:api/HelmDeploymentRestrictionApi}
+    */
+    HelmDeploymentRestrictionApi,
+
+    /**
+    * The HelmMainCallsApi service constructor.
+    * @property {module:api/HelmMainCallsApi}
+    */
+    HelmMainCallsApi,
+
+    /**
+    * The HelmsApi service constructor.
+    * @property {module:api/HelmsApi}
+    */
+    HelmsApi,
 
     /**
     * The JobActionsApi service constructor.

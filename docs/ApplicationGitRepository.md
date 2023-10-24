@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **deployedCommitDate** | **Date** | Git commit date corresponding to the deployed version of the app | [optional] [readonly] 
 **deployedCommitContributor** | **String** | Git commit user corresponding to the deployed version of the app | [optional] 
 **deployedCommitTag** | **String** |  | [optional] 
+**gitTokenId** | **String** |  | [optional] 
 
 

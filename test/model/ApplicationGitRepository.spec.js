@@ -120,6 +120,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property gitTokenId (base name: "git_token_id")', function() {
+      // uncomment below and update the code to test the property gitTokenId
+      //var instance = new QoveryApi.ApplicationGitRepository();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

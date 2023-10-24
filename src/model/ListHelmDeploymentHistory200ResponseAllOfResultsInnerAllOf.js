@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import Commit from './Commit';
+import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository from './ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository';
 import StateEnum from './StateEnum';
 
 /**
@@ -54,6 +56,12 @@ class ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = StateEnum.constructFromObject(data['status']);
             }
+            if (data.hasOwnProperty('commit')) {
+                obj['commit'] = Commit.constructFromObject(data['commit']);
+            }
+            if (data.hasOwnProperty('repository')) {
+                obj['repository'] = ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.constructFromObject(data['repository']);
+            }
         }
         return obj;
     }
@@ -71,6 +79,16 @@ ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['name'] = u
  * @member {module:model/StateEnum} status
  */
 ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['status'] = undefined;
+
+/**
+ * @member {module:model/Commit} commit
+ */
+ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['commit'] = undefined;
+
+/**
+ * @member {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository} repository
+ */
+ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['repository'] = undefined;
 
 
 

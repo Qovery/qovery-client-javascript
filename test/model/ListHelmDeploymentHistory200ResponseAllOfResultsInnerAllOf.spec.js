@@ -66,6 +66,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property commit (base name: "commit")', function() {
+      // uncomment below and update the code to test the property commit
+      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property repository (base name: "repository")', function() {
+      // uncomment below and update the code to test the property repository
+      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

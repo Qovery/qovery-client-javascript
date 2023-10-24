@@ -836,6 +836,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ListHelmDeploymentHistory200ResponseAllOf](docs/ListHelmDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner](docs/ListHelmDeploymentHistory200ResponseAllOfResultsInner.md)
  - [QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf](docs/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.md)
+ - [QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository](docs/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.md)
  - [QoveryApi.ListJobDeploymentHistory200Response](docs/ListJobDeploymentHistory200Response.md)
  - [QoveryApi.ListJobDeploymentHistory200ResponseAllOf](docs/ListJobDeploymentHistory200ResponseAllOf.md)
  - [QoveryApi.Log](docs/Log.md)

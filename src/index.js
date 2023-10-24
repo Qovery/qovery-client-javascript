@@ -323,6 +323,7 @@ import ListHelmDeploymentHistory200Response from './model/ListHelmDeploymentHist
 import ListHelmDeploymentHistory200ResponseAllOf from './model/ListHelmDeploymentHistory200ResponseAllOf';
 import ListHelmDeploymentHistory200ResponseAllOfResultsInner from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInner';
 import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf';
+import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository';
 import ListJobDeploymentHistory200Response from './model/ListJobDeploymentHistory200Response';
 import ListJobDeploymentHistory200ResponseAllOf from './model/ListJobDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
@@ -2470,6 +2471,12 @@ export {
      * @property {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf}
      */
     ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf,
+
+    /**
+     * The ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository model constructor.
+     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository}
+     */
+    ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository,
 
     /**
      * The ListJobDeploymentHistory200Response model constructor.

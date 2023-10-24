@@ -13,7 +13,9 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import Commit from './Commit';
 import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf from './ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf';
+import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository from './ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository';
 import StateEnum from './StateEnum';
 
 /**
@@ -73,6 +75,12 @@ class ListHelmDeploymentHistory200ResponseAllOfResultsInner {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = StateEnum.constructFromObject(data['status']);
             }
+            if (data.hasOwnProperty('commit')) {
+                obj['commit'] = Commit.constructFromObject(data['commit']);
+            }
+            if (data.hasOwnProperty('repository')) {
+                obj['repository'] = ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.constructFromObject(data['repository']);
+            }
         }
         return obj;
     }
@@ -106,6 +114,16 @@ ListHelmDeploymentHistory200ResponseAllOfResultsInner.prototype['name'] = undefi
  */
 ListHelmDeploymentHistory200ResponseAllOfResultsInner.prototype['status'] = undefined;
 
+/**
+ * @member {module:model/Commit} commit
+ */
+ListHelmDeploymentHistory200ResponseAllOfResultsInner.prototype['commit'] = undefined;
+
+/**
+ * @member {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository} repository
+ */
+ListHelmDeploymentHistory200ResponseAllOfResultsInner.prototype['repository'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -130,6 +148,14 @@ ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['name'] = u
  * @member {module:model/StateEnum} status
  */
 ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['status'] = undefined;
+/**
+ * @member {module:model/Commit} commit
+ */
+ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['commit'] = undefined;
+/**
+ * @member {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository} repository
+ */
+ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['repository'] = undefined;
 
 
 

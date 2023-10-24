@@ -376,6 +376,7 @@ docs/ListHelmDeploymentHistory200Response.md
 docs/ListHelmDeploymentHistory200ResponseAllOf.md
 docs/ListHelmDeploymentHistory200ResponseAllOfResultsInner.md
 docs/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.md
+docs/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.md
 docs/ListJobDeploymentHistory200Response.md
 docs/ListJobDeploymentHistory200ResponseAllOf.md
 docs/Log.md
@@ -954,6 +955,7 @@ src/model/ListHelmDeploymentHistory200Response.js
 src/model/ListHelmDeploymentHistory200ResponseAllOf.js
 src/model/ListHelmDeploymentHistory200ResponseAllOfResultsInner.js
 src/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.js
+src/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.js
 src/model/ListJobDeploymentHistory200Response.js
 src/model/ListJobDeploymentHistory200ResponseAllOf.js
 src/model/Log.js
@@ -1512,6 +1514,7 @@ test/model/ListHelmDeploymentHistory200Response.spec.js
 test/model/ListHelmDeploymentHistory200ResponseAllOf.spec.js
 test/model/ListHelmDeploymentHistory200ResponseAllOfResultsInner.spec.js
 test/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.spec.js
+test/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.spec.js
 test/model/ListJobDeploymentHistory200Response.spec.js
 test/model/ListJobDeploymentHistory200ResponseAllOf.spec.js
 test/model/Log.spec.js

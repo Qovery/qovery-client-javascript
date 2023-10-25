@@ -105,6 +105,30 @@ class ClusterAdvancedSettings {
             if (data.hasOwnProperty('registry.mirroring_mode')) {
                 obj['registry.mirroring_mode'] = RegistryMirroringModeEnum.constructFromObject(data['registry.mirroring_mode']);
             }
+            if (data.hasOwnProperty('nginx.vcpu.request_in_milli')) {
+                obj['nginx.vcpu.request_in_milli'] = ApiClient.convertToType(data['nginx.vcpu.request_in_milli'], 'Number');
+            }
+            if (data.hasOwnProperty('nginx.vcpu.limit_in_milli')) {
+                obj['nginx.vcpu.limit_in_milli'] = ApiClient.convertToType(data['nginx.vcpu.limit_in_milli'], 'Number');
+            }
+            if (data.hasOwnProperty('nginx.memory.request_in_mib')) {
+                obj['nginx.memory.request_in_mib'] = ApiClient.convertToType(data['nginx.memory.request_in_mib'], 'Number');
+            }
+            if (data.hasOwnProperty('nginx.memory.limit_in_mib')) {
+                obj['nginx.memory.limit_in_mib'] = ApiClient.convertToType(data['nginx.memory.limit_in_mib'], 'Number');
+            }
+            if (data.hasOwnProperty('nginx.hpa.cpu_utilization_percentage_threshold')) {
+                obj['nginx.hpa.cpu_utilization_percentage_threshold'] = ApiClient.convertToType(data['nginx.hpa.cpu_utilization_percentage_threshold'], 'Number');
+            }
+            if (data.hasOwnProperty('nginx.hpa.memory_utilization_percentage_threshold')) {
+                obj['nginx.hpa.memory_utilization_percentage_threshold'] = ApiClient.convertToType(data['nginx.hpa.memory_utilization_percentage_threshold'], 'Number');
+            }
+            if (data.hasOwnProperty('nginx.hpa.min_number_instances')) {
+                obj['nginx.hpa.min_number_instances'] = ApiClient.convertToType(data['nginx.hpa.min_number_instances'], 'Number');
+            }
+            if (data.hasOwnProperty('nginx.hpa.max_number_instances')) {
+                obj['nginx.hpa.max_number_instances'] = ApiClient.convertToType(data['nginx.hpa.max_number_instances'], 'Number');
+            }
         }
         return obj;
     }
@@ -236,6 +260,62 @@ ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = -1;
  * @member {module:model/RegistryMirroringModeEnum} registry.mirroring_mode
  */
 ClusterAdvancedSettings.prototype['registry.mirroring_mode'] = undefined;
+
+/**
+ * vcpu request in millicores
+ * @member {Number} nginx.vcpu.request_in_milli
+ * @default 100
+ */
+ClusterAdvancedSettings.prototype['nginx.vcpu.request_in_milli'] = 100;
+
+/**
+ * vcpu limit in millicores
+ * @member {Number} nginx.vcpu.limit_in_milli
+ * @default 500
+ */
+ClusterAdvancedSettings.prototype['nginx.vcpu.limit_in_milli'] = 500;
+
+/**
+ * memory request in MiB
+ * @member {Number} nginx.memory.request_in_mib
+ * @default 768
+ */
+ClusterAdvancedSettings.prototype['nginx.memory.request_in_mib'] = 768;
+
+/**
+ * memory limit in MiB
+ * @member {Number} nginx.memory.limit_in_mib
+ * @default 768
+ */
+ClusterAdvancedSettings.prototype['nginx.memory.limit_in_mib'] = 768;
+
+/**
+ * hpa cpu threshold in percentage
+ * @member {Number} nginx.hpa.cpu_utilization_percentage_threshold
+ * @default 50
+ */
+ClusterAdvancedSettings.prototype['nginx.hpa.cpu_utilization_percentage_threshold'] = 50;
+
+/**
+ * hpa memory threshold in percentage
+ * @member {Number} nginx.hpa.memory_utilization_percentage_threshold
+ * @default 50
+ */
+ClusterAdvancedSettings.prototype['nginx.hpa.memory_utilization_percentage_threshold'] = 50;
+
+/**
+ * hpa minimum number of instances
+ * @member {Number} nginx.hpa.min_number_instances
+ * @default 2
+ */
+ClusterAdvancedSettings.prototype['nginx.hpa.min_number_instances'] = 2;
+
+/**
+ * hpa maximum number of instances
+ * @member {Number} nginx.hpa.max_number_instances
+ * @default 25
+ */
+ClusterAdvancedSettings.prototype['nginx.hpa.max_number_instances'] = 25;
 
 
 

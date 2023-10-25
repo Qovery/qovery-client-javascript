@@ -23,6 +23,14 @@ Name | Type | Description | Notes
 **awsEksEc2MetadataImds** | **String** | Specify the [IMDS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) version you want to use:   * &#x60;required&#x60;: IMDS V2 only   * &#x60;optional&#x60;: IMDS V1 + V2  | [optional] [default to &#39;optional&#39;]
 **plecoResourcesTtl** | **Number** |  | [optional] [default to -1]
 **registryMirroringMode** | [**RegistryMirroringModeEnum**](RegistryMirroringModeEnum.md) |  | [optional] 
+**nginxVcpuRequestInMilli** | **Number** | vcpu request in millicores | [optional] [default to 100]
+**nginxVcpuLimitInMilli** | **Number** | vcpu limit in millicores | [optional] [default to 500]
+**nginxMemoryRequestInMib** | **Number** | memory request in MiB | [optional] [default to 768]
+**nginxMemoryLimitInMib** | **Number** | memory limit in MiB | [optional] [default to 768]
+**nginxHpaCpuUtilizationPercentageThreshold** | **Number** | hpa cpu threshold in percentage | [optional] [default to 50]
+**nginxHpaMemoryUtilizationPercentageThreshold** | **Number** | hpa memory threshold in percentage | [optional] [default to 50]
+**nginxHpaMinNumberInstances** | **Number** | hpa minimum number of instances | [optional] [default to 2]
+**nginxHpaMaxNumberInstances** | **Number** | hpa maximum number of instances | [optional] [default to 25]
 
 
 

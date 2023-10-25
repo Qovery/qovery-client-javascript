@@ -168,6 +168,54 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property nginxVcpuRequestInMilli (base name: "nginx.vcpu.request_in_milli")', function() {
+      // uncomment below and update the code to test the property nginxVcpuRequestInMilli
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nginxVcpuLimitInMilli (base name: "nginx.vcpu.limit_in_milli")', function() {
+      // uncomment below and update the code to test the property nginxVcpuLimitInMilli
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nginxMemoryRequestInMib (base name: "nginx.memory.request_in_mib")', function() {
+      // uncomment below and update the code to test the property nginxMemoryRequestInMib
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nginxMemoryLimitInMib (base name: "nginx.memory.limit_in_mib")', function() {
+      // uncomment below and update the code to test the property nginxMemoryLimitInMib
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nginxHpaCpuUtilizationPercentageThreshold (base name: "nginx.hpa.cpu_utilization_percentage_threshold")', function() {
+      // uncomment below and update the code to test the property nginxHpaCpuUtilizationPercentageThreshold
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nginxHpaMemoryUtilizationPercentageThreshold (base name: "nginx.hpa.memory_utilization_percentage_threshold")', function() {
+      // uncomment below and update the code to test the property nginxHpaMemoryUtilizationPercentageThreshold
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nginxHpaMinNumberInstances (base name: "nginx.hpa.min_number_instances")', function() {
+      // uncomment below and update the code to test the property nginxHpaMinNumberInstances
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nginxHpaMaxNumberInstances (base name: "nginx.hpa.max_number_instances")', function() {
+      // uncomment below and update the code to test the property nginxHpaMaxNumberInstances
+      //var instance = new QoveryApi.ClusterAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -93,8 +93,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationAccountGitRepositoriesApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'gitTokenId': "gitTokenId_example", // String | The git token id that must be used for the application
-  'name': "name_example" // String | The name of the repository where to retrieve the branches
+  'name': "name_example", // String | The name of the repository where to retrieve the branches
+  'gitTokenId': "gitTokenId_example" // String | The git token id that must be used for the application
 };
 apiInstance.getOrganizationBitbucketRepositoryBranches(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -111,8 +111,8 @@ apiInstance.getOrganizationBitbucketRepositoryBranches(organizationId, opts, (er
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **gitTokenId** | **String**| The git token id that must be used for the application | [optional] 
  **name** | **String**| The name of the repository where to retrieve the branches | [optional] 
+ **gitTokenId** | **String**| The git token id that must be used for the application | [optional] 
 
 ### Return type
 
@@ -259,8 +259,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationAccountGitRepositoriesApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'gitTokenId': "gitTokenId_example", // String | The git token id that must be used for the application
-  'name': "name_example" // String | The name of the repository where to retrieve the branches
+  'name': "name_example", // String | The name of the repository where to retrieve the branches
+  'gitTokenId': "gitTokenId_example" // String | The git token id that must be used for the application
 };
 apiInstance.getOrganizationGithubRepositoryBranches(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -277,8 +277,8 @@ apiInstance.getOrganizationGithubRepositoryBranches(organizationId, opts, (error
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **gitTokenId** | **String**| The git token id that must be used for the application | [optional] 
  **name** | **String**| The name of the repository where to retrieve the branches | [optional] 
+ **gitTokenId** | **String**| The git token id that must be used for the application | [optional] 
 
 ### Return type
 
@@ -373,8 +373,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationAccountGitRepositoriesApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
-  'gitTokenId': "gitTokenId_example", // String | The git token id that must be used for the application
-  'name': "name_example" // String | The name of the repository to retrieve the branches
+  'name': "name_example", // String | The name of the repository to retrieve the branches
+  'gitTokenId': "gitTokenId_example" // String | The git token id that must be used for the application
 };
 apiInstance.getOrganizationGitlabRepositoryBranches(organizationId, opts, (error, data, response) => {
   if (error) {
@@ -391,8 +391,8 @@ apiInstance.getOrganizationGitlabRepositoryBranches(organizationId, opts, (error
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
- **gitTokenId** | **String**| The git token id that must be used for the application | [optional] 
  **name** | **String**| The name of the repository to retrieve the branches | [optional] 
+ **gitTokenId** | **String**| The git token id that must be used for the application | [optional] 
 
 ### Return type
 

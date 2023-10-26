@@ -168,14 +168,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property nginxVcpuRequestInMilli (base name: "nginx.vcpu.request_in_milli")', function() {
-      // uncomment below and update the code to test the property nginxVcpuRequestInMilli
+    it('should have the property nginxVcpuRequestInMilliCpu (base name: "nginx.vcpu.request_in_milli_cpu")', function() {
+      // uncomment below and update the code to test the property nginxVcpuRequestInMilliCpu
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
 
-    it('should have the property nginxVcpuLimitInMilli (base name: "nginx.vcpu.limit_in_milli")', function() {
-      // uncomment below and update the code to test the property nginxVcpuLimitInMilli
+    it('should have the property nginxVcpuLimitInMilliCpu (base name: "nginx.vcpu.limit_in_milli_cpu")', function() {
+      // uncomment below and update the code to test the property nginxVcpuLimitInMilliCpu
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });
@@ -194,12 +194,6 @@
 
     it('should have the property nginxHpaCpuUtilizationPercentageThreshold (base name: "nginx.hpa.cpu_utilization_percentage_threshold")', function() {
       // uncomment below and update the code to test the property nginxHpaCpuUtilizationPercentageThreshold
-      //var instance = new QoveryApi.ClusterAdvancedSettings();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property nginxHpaMemoryUtilizationPercentageThreshold (base name: "nginx.hpa.memory_utilization_percentage_threshold")', function() {
-      // uncomment below and update the code to test the property nginxHpaMemoryUtilizationPercentageThreshold
       //var instance = new QoveryApi.ClusterAdvancedSettings();
       //expect(instance).to.be();
     });

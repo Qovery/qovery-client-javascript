@@ -80,6 +80,9 @@ class GitTokenResponse {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = GitProviderEnum.constructFromObject(data['type']);
             }
+            if (data.hasOwnProperty('expired_at')) {
+                obj['expired_at'] = ApiClient.convertToType(data['expired_at'], 'Date');
+            }
         }
         return obj;
     }
@@ -117,6 +120,11 @@ GitTokenResponse.prototype['description'] = undefined;
  */
 GitTokenResponse.prototype['type'] = undefined;
 
+/**
+ * @member {Date} expired_at
+ */
+GitTokenResponse.prototype['expired_at'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -144,6 +152,10 @@ GitTokenResponseAllOf.prototype['description'] = undefined;
  * @member {module:model/GitProviderEnum} type
  */
 GitTokenResponseAllOf.prototype['type'] = undefined;
+/**
+ * @member {Date} expired_at
+ */
+GitTokenResponseAllOf.prototype['expired_at'] = undefined;
 
 
 

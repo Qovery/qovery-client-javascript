@@ -4,14 +4,75 @@ All URIs are relative to *https://api.qovery.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**createGitToken**](OrganizationMainCallsApi.md#createGitToken) | **POST** /organization/{organizationId}/gitToken | Create a git token
 [**createOrganization**](OrganizationMainCallsApi.md#createOrganization) | **POST** /organization | Create an organization
+[**deleteGitToken**](OrganizationMainCallsApi.md#deleteGitToken) | **DELETE** /organization/{organizationId}/gitToken/{gitTokenId} | Delete a git token
 [**deleteOrganization**](OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
+[**editGitToken**](OrganizationMainCallsApi.md#editGitToken) | **PUT** /organization/{organizationId}/gitToken/{gitTokenId} | Edit a git token
 [**editOrganization**](OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
 [**getOrganization**](OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
 [**listOrganization**](OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
 [**listOrganizationAvailableRoles**](OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
 [**listOrganizationGitTokens**](OrganizationMainCallsApi.md#listOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken | List organization git tokens
 
+
+
+## createGitToken
+
+> GitTokenResponse createGitToken(organizationId, opts)
+
+Create a git token
+
+Create a new git token to be used as a git provider by a service
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let opts = {
+  'gitTokenRequest': new QoveryApi.GitTokenRequest() // GitTokenRequest | 
+};
+apiInstance.createGitToken(organizationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **gitTokenRequest** | [**GitTokenRequest**](GitTokenRequest.md)|  | [optional] 
+
+### Return type
+
+[**GitTokenResponse**](GitTokenResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## createOrganization
@@ -68,6 +129,60 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## deleteGitToken
+
+> deleteGitToken(organizationId, gitTokenId)
+
+Delete a git token
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let gitTokenId = "gitTokenId_example"; // String | Git Token ID
+apiInstance.deleteGitToken(organizationId, gitTokenId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **gitTokenId** | **String**| Git Token ID | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+
 ## deleteOrganization
 
 > deleteOrganization(organizationId)
@@ -120,6 +235,64 @@ null (empty response body)
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+
+## editGitToken
+
+> GitTokenResponse editGitToken(organizationId, gitTokenId, opts)
+
+Edit a git token
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let gitTokenId = "gitTokenId_example"; // String | Git Token ID
+let opts = {
+  'gitTokenRequest': new QoveryApi.GitTokenRequest() // GitTokenRequest | 
+};
+apiInstance.editGitToken(organizationId, gitTokenId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **gitTokenId** | **String**| Git Token ID | 
+ **gitTokenRequest** | [**GitTokenRequest**](GitTokenRequest.md)|  | [optional] 
+
+### Return type
+
+[**GitTokenResponse**](GitTokenResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 
 ## editOrganization

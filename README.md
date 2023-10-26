@@ -476,8 +476,11 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationCustomRoleApi* | [**listOrganizationCustomRoles**](docs/OrganizationCustomRoleApi.md#listOrganizationCustomRoles) | **GET** /organization/{organizationId}/customRole | List organization custom roles
 *QoveryApi.OrganizationEventApi* | [**getOrganizationEventTargets**](docs/OrganizationEventApi.md#getOrganizationEventTargets) | **GET** /organization/{organizationId}/targets | Get available event targets to filter events
 *QoveryApi.OrganizationEventApi* | [**getOrganizationEvents**](docs/OrganizationEventApi.md#getOrganizationEvents) | **GET** /organization/{organizationId}/events | Get all events inside the organization
+*QoveryApi.OrganizationMainCallsApi* | [**createGitToken**](docs/OrganizationMainCallsApi.md#createGitToken) | **POST** /organization/{organizationId}/gitToken | Create a git token
 *QoveryApi.OrganizationMainCallsApi* | [**createOrganization**](docs/OrganizationMainCallsApi.md#createOrganization) | **POST** /organization | Create an organization
+*QoveryApi.OrganizationMainCallsApi* | [**deleteGitToken**](docs/OrganizationMainCallsApi.md#deleteGitToken) | **DELETE** /organization/{organizationId}/gitToken/{gitTokenId} | Delete a git token
 *QoveryApi.OrganizationMainCallsApi* | [**deleteOrganization**](docs/OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
+*QoveryApi.OrganizationMainCallsApi* | [**editGitToken**](docs/OrganizationMainCallsApi.md#editGitToken) | **PUT** /organization/{organizationId}/gitToken/{gitTokenId} | Edit a git token
 *QoveryApi.OrganizationMainCallsApi* | [**editOrganization**](docs/OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
 *QoveryApi.OrganizationMainCallsApi* | [**getOrganization**](docs/OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganization**](docs/OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
@@ -769,6 +772,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryBranch](docs/GitRepositoryBranch.md)
  - [QoveryApi.GitRepositoryBranchResponseList](docs/GitRepositoryBranchResponseList.md)
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
+ - [QoveryApi.GitTokenRequest](docs/GitTokenRequest.md)
  - [QoveryApi.GitTokenResponse](docs/GitTokenResponse.md)
  - [QoveryApi.GitTokenResponseAllOf](docs/GitTokenResponseAllOf.md)
  - [QoveryApi.GitTokenResponseList](docs/GitTokenResponseList.md)

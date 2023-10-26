@@ -48,6 +48,16 @@
   }
 
   describe('OrganizationMainCallsApi', function() {
+    describe('createGitToken', function() {
+      it('should call createGitToken successfully', function(done) {
+        //uncomment below and update the code to test createGitToken
+        //instance.createGitToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createOrganization', function() {
       it('should call createOrganization successfully', function(done) {
         //uncomment below and update the code to test createOrganization
@@ -58,10 +68,30 @@
         done();
       });
     });
+    describe('deleteGitToken', function() {
+      it('should call deleteGitToken successfully', function(done) {
+        //uncomment below and update the code to test deleteGitToken
+        //instance.deleteGitToken(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteOrganization', function() {
       it('should call deleteOrganization successfully', function(done) {
         //uncomment below and update the code to test deleteOrganization
         //instance.deleteOrganization(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('editGitToken', function() {
+      it('should call editGitToken successfully', function(done) {
+        //uncomment below and update the code to test editGitToken
+        //instance.editGitToken(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

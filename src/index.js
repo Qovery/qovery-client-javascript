@@ -256,6 +256,7 @@ import GitRepository from './model/GitRepository';
 import GitRepositoryBranch from './model/GitRepositoryBranch';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
+import GitTokenRequest from './model/GitTokenRequest';
 import GitTokenResponse from './model/GitTokenResponse';
 import GitTokenResponseAllOf from './model/GitTokenResponseAllOf';
 import GitTokenResponseList from './model/GitTokenResponseList';
@@ -2069,6 +2070,12 @@ export {
      * @property {module:model/GitRepositoryResponseList}
      */
     GitRepositoryResponseList,
+
+    /**
+     * The GitTokenRequest model constructor.
+     * @property {module:model/GitTokenRequest}
+     */
+    GitTokenRequest,
 
     /**
      * The GitTokenResponse model constructor.

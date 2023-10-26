@@ -13,6 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import GitTokenRequest from '../model/GitTokenRequest';
+import GitTokenResponse from '../model/GitTokenResponse';
 import GitTokenResponseList from '../model/GitTokenResponseList';
 import Organization from '../model/Organization';
 import OrganizationAvailableRoleList from '../model/OrganizationAvailableRoleList';
@@ -38,6 +40,52 @@ export default class OrganizationMainCallsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the createGitToken operation.
+     * @callback module:api/OrganizationMainCallsApi~createGitTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitTokenResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create a git token
+     * Create a new git token to be used as a git provider by a service
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GitTokenRequest} opts.gitTokenRequest 
+     * @param {module:api/OrganizationMainCallsApi~createGitTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitTokenResponse}
+     */
+    createGitToken(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['gitTokenRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling createGitToken");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = GitTokenResponse;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gitToken', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the createOrganization operation.
@@ -73,6 +121,53 @@ export default class OrganizationMainCallsApi {
       let returnType = Organization;
       return this.apiClient.callApi(
         '/organization', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteGitToken operation.
+     * @callback module:api/OrganizationMainCallsApi~deleteGitTokenCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a git token
+     * @param {String} organizationId Organization ID
+     * @param {String} gitTokenId Git Token ID
+     * @param {module:api/OrganizationMainCallsApi~deleteGitTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteGitToken(organizationId, gitTokenId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling deleteGitToken");
+      }
+      // verify the required parameter 'gitTokenId' is set
+      if (gitTokenId === undefined || gitTokenId === null) {
+        throw new Error("Missing the required parameter 'gitTokenId' when calling deleteGitToken");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'gitTokenId': gitTokenId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gitToken/{gitTokenId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -115,6 +210,57 @@ export default class OrganizationMainCallsApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/organization/{organizationId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the editGitToken operation.
+     * @callback module:api/OrganizationMainCallsApi~editGitTokenCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitTokenResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit a git token
+     * @param {String} organizationId Organization ID
+     * @param {String} gitTokenId Git Token ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GitTokenRequest} opts.gitTokenRequest 
+     * @param {module:api/OrganizationMainCallsApi~editGitTokenCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitTokenResponse}
+     */
+    editGitToken(organizationId, gitTokenId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['gitTokenRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling editGitToken");
+      }
+      // verify the required parameter 'gitTokenId' is set
+      if (gitTokenId === undefined || gitTokenId === null) {
+        throw new Error("Missing the required parameter 'gitTokenId' when calling editGitToken");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'gitTokenId': gitTokenId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = GitTokenResponse;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gitToken/{gitTokenId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

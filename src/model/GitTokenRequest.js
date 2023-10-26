@@ -15,20 +15,21 @@ import ApiClient from '../ApiClient';
 import GitProviderEnum from './GitProviderEnum';
 
 /**
- * The GitTokenResponseAllOf model module.
- * @module model/GitTokenResponseAllOf
+ * The GitTokenRequest model module.
+ * @module model/GitTokenRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class GitTokenResponseAllOf {
+class GitTokenRequest {
     /**
-     * Constructs a new <code>GitTokenResponseAllOf</code>.
-     * @alias module:model/GitTokenResponseAllOf
+     * Constructs a new <code>GitTokenRequest</code>.
+     * @alias module:model/GitTokenRequest
      * @param name {String} 
      * @param type {module:model/GitProviderEnum} 
+     * @param token {String} The token from your git provider side
      */
-    constructor(name, type) { 
+    constructor(name, type, token) { 
         
-        GitTokenResponseAllOf.initialize(this, name, type);
+        GitTokenRequest.initialize(this, name, type, token);
     }
 
     /**
@@ -36,21 +37,22 @@ class GitTokenResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, type) { 
+    static initialize(obj, name, type, token) { 
         obj['name'] = name;
         obj['type'] = type;
+        obj['token'] = token;
     }
 
     /**
-     * Constructs a <code>GitTokenResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>GitTokenRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/GitTokenResponseAllOf} obj Optional instance to populate.
-     * @return {module:model/GitTokenResponseAllOf} The populated <code>GitTokenResponseAllOf</code> instance.
+     * @param {module:model/GitTokenRequest} obj Optional instance to populate.
+     * @return {module:model/GitTokenRequest} The populated <code>GitTokenRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new GitTokenResponseAllOf();
+            obj = obj || new GitTokenRequest();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -61,8 +63,11 @@ class GitTokenResponseAllOf {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = GitProviderEnum.constructFromObject(data['type']);
             }
-            if (data.hasOwnProperty('expired_at')) {
-                obj['expired_at'] = ApiClient.convertToType(data['expired_at'], 'Date');
+            if (data.hasOwnProperty('token')) {
+                obj['token'] = ApiClient.convertToType(data['token'], 'String');
+            }
+            if (data.hasOwnProperty('workspace')) {
+                obj['workspace'] = ApiClient.convertToType(data['workspace'], 'String');
             }
         }
         return obj;
@@ -74,27 +79,34 @@ class GitTokenResponseAllOf {
 /**
  * @member {String} name
  */
-GitTokenResponseAllOf.prototype['name'] = undefined;
+GitTokenRequest.prototype['name'] = undefined;
 
 /**
  * @member {String} description
  */
-GitTokenResponseAllOf.prototype['description'] = undefined;
+GitTokenRequest.prototype['description'] = undefined;
 
 /**
  * @member {module:model/GitProviderEnum} type
  */
-GitTokenResponseAllOf.prototype['type'] = undefined;
+GitTokenRequest.prototype['type'] = undefined;
 
 /**
- * @member {Date} expired_at
+ * The token from your git provider side
+ * @member {String} token
  */
-GitTokenResponseAllOf.prototype['expired_at'] = undefined;
+GitTokenRequest.prototype['token'] = undefined;
+
+/**
+ * Mandatory only for BITBUCKET git provider, to allow us to fetch repositories at creation/edition of a service
+ * @member {String} workspace
+ */
+GitTokenRequest.prototype['workspace'] = undefined;
 
 
 
 
 
 
-export default GitTokenResponseAllOf;
+export default GitTokenRequest;
 

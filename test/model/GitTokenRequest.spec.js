@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.GitTokenResponse();
+    instance = new QoveryApi.GitTokenRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,52 +47,40 @@
       object[property] = value;
   }
 
-  describe('GitTokenResponse', function() {
-    it('should create an instance of GitTokenResponse', function() {
-      // uncomment below and update the code to test GitTokenResponse
-      //var instance = new QoveryApi.GitTokenResponse();
-      //expect(instance).to.be.a(QoveryApi.GitTokenResponse);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.GitTokenResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.GitTokenResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
-      //var instance = new QoveryApi.GitTokenResponse();
-      //expect(instance).to.be();
+  describe('GitTokenRequest', function() {
+    it('should create an instance of GitTokenRequest', function() {
+      // uncomment below and update the code to test GitTokenRequest
+      //var instance = new QoveryApi.GitTokenRequest();
+      //expect(instance).to.be.a(QoveryApi.GitTokenRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.GitTokenResponse();
+      //var instance = new QoveryApi.GitTokenRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.GitTokenResponse();
+      //var instance = new QoveryApi.GitTokenRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instance = new QoveryApi.GitTokenResponse();
+      //var instance = new QoveryApi.GitTokenRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property expiredAt (base name: "expired_at")', function() {
-      // uncomment below and update the code to test the property expiredAt
-      //var instance = new QoveryApi.GitTokenResponse();
+    it('should have the property token (base name: "token")', function() {
+      // uncomment below and update the code to test the property token
+      //var instance = new QoveryApi.GitTokenRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property workspace (base name: "workspace")', function() {
+      // uncomment below and update the code to test the property workspace
+      //var instance = new QoveryApi.GitTokenRequest();
       //expect(instance).to.be();
     });
 

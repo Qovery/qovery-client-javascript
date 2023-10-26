@@ -72,6 +72,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property expiredAt (base name: "expired_at")', function() {
+      // uncomment below and update the code to test the property expiredAt
+      //var instance = new QoveryApi.GitTokenResponseAllOf();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

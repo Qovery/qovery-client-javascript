@@ -84,6 +84,9 @@ class ApplicationGitRepository {
             if (data.hasOwnProperty('git_token_id')) {
                 obj['git_token_id'] = ApiClient.convertToType(data['git_token_id'], 'String');
             }
+            if (data.hasOwnProperty('git_token_name')) {
+                obj['git_token_name'] = ApiClient.convertToType(data['git_token_name'], 'String');
+            }
         }
         return obj;
     }
@@ -154,6 +157,11 @@ ApplicationGitRepository.prototype['deployed_commit_tag'] = undefined;
  * @member {String} git_token_id
  */
 ApplicationGitRepository.prototype['git_token_id'] = undefined;
+
+/**
+ * @member {String} git_token_name
+ */
+ApplicationGitRepository.prototype['git_token_name'] = undefined;
 
 
 

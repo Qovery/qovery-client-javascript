@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**deleteOrganization**](OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
 [**editGitToken**](OrganizationMainCallsApi.md#editGitToken) | **PUT** /organization/{organizationId}/gitToken/{gitTokenId} | Edit a git token
 [**editOrganization**](OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
+[**getGitTokenAssociatedServices**](OrganizationMainCallsApi.md#getGitTokenAssociatedServices) | **GET** /organization/{organizationId}/gitToken/{gitTokenId}/associatedServices | Get organization git token associated services
 [**getOrganization**](OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
+[**getOrganizationGitTokens**](OrganizationMainCallsApi.md#getOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken/{gitTokenId} | Get organization git token
 [**listOrganization**](OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
 [**listOrganizationAvailableRoles**](OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
 [**listOrganizationGitTokens**](OrganizationMainCallsApi.md#listOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken | List organization git tokens
@@ -353,6 +355,62 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## getGitTokenAssociatedServices
+
+> GitTokenAssociatedServicesResponseList getGitTokenAssociatedServices(organizationId, gitTokenId)
+
+Get organization git token associated services
+
+Get organization git tokens associated services
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let gitTokenId = "gitTokenId_example"; // String | Git Token ID
+apiInstance.getGitTokenAssociatedServices(organizationId, gitTokenId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **gitTokenId** | **String**| Git Token ID | 
+
+### Return type
+
+[**GitTokenAssociatedServicesResponseList**](GitTokenAssociatedServicesResponseList.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
 ## getOrganization
 
 > Organization getOrganization(organizationId)
@@ -394,6 +452,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Organization**](Organization.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getOrganizationGitTokens
+
+> GitTokenResponse getOrganizationGitTokens(organizationId, gitTokenId)
+
+Get organization git token
+
+Get organization git tokens
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.OrganizationMainCallsApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let gitTokenId = "gitTokenId_example"; // String | Git Token ID
+apiInstance.getOrganizationGitTokens(organizationId, gitTokenId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **gitTokenId** | **String**| Git Token ID | 
+
+### Return type
+
+[**GitTokenResponse**](GitTokenResponse.md)
 
 ### Authorization
 

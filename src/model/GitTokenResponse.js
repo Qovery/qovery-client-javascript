@@ -31,10 +31,11 @@ class GitTokenResponse {
      * @param createdAt {Date} 
      * @param name {String} 
      * @param type {module:model/GitProviderEnum} 
+     * @param associatedServicesCount {Number} The number of services using this git token
      */
-    constructor(id, createdAt, name, type) { 
-        Base.initialize(this, id, createdAt);GitTokenResponseAllOf.initialize(this, name, type);
-        GitTokenResponse.initialize(this, id, createdAt, name, type);
+    constructor(id, createdAt, name, type, associatedServicesCount) { 
+        Base.initialize(this, id, createdAt);GitTokenResponseAllOf.initialize(this, name, type, associatedServicesCount);
+        GitTokenResponse.initialize(this, id, createdAt, name, type, associatedServicesCount);
     }
 
     /**
@@ -42,11 +43,12 @@ class GitTokenResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, name, type) { 
+    static initialize(obj, id, createdAt, name, type, associatedServicesCount) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['name'] = name;
         obj['type'] = type;
+        obj['associated_services_count'] = associatedServicesCount;
     }
 
     /**
@@ -82,6 +84,9 @@ class GitTokenResponse {
             }
             if (data.hasOwnProperty('expired_at')) {
                 obj['expired_at'] = ApiClient.convertToType(data['expired_at'], 'Date');
+            }
+            if (data.hasOwnProperty('associated_services_count')) {
+                obj['associated_services_count'] = ApiClient.convertToType(data['associated_services_count'], 'Number');
             }
         }
         return obj;
@@ -125,6 +130,12 @@ GitTokenResponse.prototype['type'] = undefined;
  */
 GitTokenResponse.prototype['expired_at'] = undefined;
 
+/**
+ * The number of services using this git token
+ * @member {Number} associated_services_count
+ */
+GitTokenResponse.prototype['associated_services_count'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -156,6 +167,11 @@ GitTokenResponseAllOf.prototype['type'] = undefined;
  * @member {Date} expired_at
  */
 GitTokenResponseAllOf.prototype['expired_at'] = undefined;
+/**
+ * The number of services using this git token
+ * @member {Number} associated_services_count
+ */
+GitTokenResponseAllOf.prototype['associated_services_count'] = undefined;
 
 
 

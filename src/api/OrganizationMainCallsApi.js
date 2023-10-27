@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import GitTokenAssociatedServicesResponseList from '../model/GitTokenAssociatedServicesResponseList';
 import GitTokenRequest from '../model/GitTokenRequest';
 import GitTokenResponse from '../model/GitTokenResponse';
 import GitTokenResponseList from '../model/GitTokenResponseList';
@@ -313,6 +314,55 @@ export default class OrganizationMainCallsApi {
     }
 
     /**
+     * Callback function to receive the result of the getGitTokenAssociatedServices operation.
+     * @callback module:api/OrganizationMainCallsApi~getGitTokenAssociatedServicesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitTokenAssociatedServicesResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get organization git token associated services
+     * Get organization git tokens associated services
+     * @param {String} organizationId Organization ID
+     * @param {String} gitTokenId Git Token ID
+     * @param {module:api/OrganizationMainCallsApi~getGitTokenAssociatedServicesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitTokenAssociatedServicesResponseList}
+     */
+    getGitTokenAssociatedServices(organizationId, gitTokenId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getGitTokenAssociatedServices");
+      }
+      // verify the required parameter 'gitTokenId' is set
+      if (gitTokenId === undefined || gitTokenId === null) {
+        throw new Error("Missing the required parameter 'gitTokenId' when calling getGitTokenAssociatedServices");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'gitTokenId': gitTokenId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GitTokenAssociatedServicesResponseList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gitToken/{gitTokenId}/associatedServices', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getOrganization operation.
      * @callback module:api/OrganizationMainCallsApi~getOrganizationCallback
      * @param {String} error Error message, if any.
@@ -349,6 +399,55 @@ export default class OrganizationMainCallsApi {
       let returnType = Organization;
       return this.apiClient.callApi(
         '/organization/{organizationId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrganizationGitTokens operation.
+     * @callback module:api/OrganizationMainCallsApi~getOrganizationGitTokensCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitTokenResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get organization git token
+     * Get organization git tokens
+     * @param {String} organizationId Organization ID
+     * @param {String} gitTokenId Git Token ID
+     * @param {module:api/OrganizationMainCallsApi~getOrganizationGitTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitTokenResponse}
+     */
+    getOrganizationGitTokens(organizationId, gitTokenId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationGitTokens");
+      }
+      // verify the required parameter 'gitTokenId' is set
+      if (gitTokenId === undefined || gitTokenId === null) {
+        throw new Error("Missing the required parameter 'gitTokenId' when calling getOrganizationGitTokens");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'gitTokenId': gitTokenId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GitTokenResponse;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gitToken/{gitTokenId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

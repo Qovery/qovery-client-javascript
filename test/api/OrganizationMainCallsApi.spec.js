@@ -108,10 +108,30 @@
         done();
       });
     });
+    describe('getGitTokenAssociatedServices', function() {
+      it('should call getGitTokenAssociatedServices successfully', function(done) {
+        //uncomment below and update the code to test getGitTokenAssociatedServices
+        //instance.getGitTokenAssociatedServices(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrganization', function() {
       it('should call getOrganization successfully', function(done) {
         //uncomment below and update the code to test getOrganization
         //instance.getOrganization(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getOrganizationGitTokens', function() {
+      it('should call getOrganizationGitTokens successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationGitTokens
+        //instance.getOrganizationGitTokens(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

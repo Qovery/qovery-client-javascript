@@ -256,6 +256,9 @@ import GitRepository from './model/GitRepository';
 import GitRepositoryBranch from './model/GitRepositoryBranch';
 import GitRepositoryBranchResponseList from './model/GitRepositoryBranchResponseList';
 import GitRepositoryResponseList from './model/GitRepositoryResponseList';
+import GitTokenAssociatedServiceResponse from './model/GitTokenAssociatedServiceResponse';
+import GitTokenAssociatedServiceType from './model/GitTokenAssociatedServiceType';
+import GitTokenAssociatedServicesResponseList from './model/GitTokenAssociatedServicesResponseList';
 import GitTokenRequest from './model/GitTokenRequest';
 import GitTokenResponse from './model/GitTokenResponse';
 import GitTokenResponseAllOf from './model/GitTokenResponseAllOf';
@@ -2070,6 +2073,24 @@ export {
      * @property {module:model/GitRepositoryResponseList}
      */
     GitRepositoryResponseList,
+
+    /**
+     * The GitTokenAssociatedServiceResponse model constructor.
+     * @property {module:model/GitTokenAssociatedServiceResponse}
+     */
+    GitTokenAssociatedServiceResponse,
+
+    /**
+     * The GitTokenAssociatedServiceType model constructor.
+     * @property {module:model/GitTokenAssociatedServiceType}
+     */
+    GitTokenAssociatedServiceType,
+
+    /**
+     * The GitTokenAssociatedServicesResponseList model constructor.
+     * @property {module:model/GitTokenAssociatedServicesResponseList}
+     */
+    GitTokenAssociatedServicesResponseList,
 
     /**
      * The GitTokenRequest model constructor.

@@ -486,7 +486,9 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationMainCallsApi* | [**deleteOrganization**](docs/OrganizationMainCallsApi.md#deleteOrganization) | **DELETE** /organization/{organizationId} | Delete an organization
 *QoveryApi.OrganizationMainCallsApi* | [**editGitToken**](docs/OrganizationMainCallsApi.md#editGitToken) | **PUT** /organization/{organizationId}/gitToken/{gitTokenId} | Edit a git token
 *QoveryApi.OrganizationMainCallsApi* | [**editOrganization**](docs/OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
+*QoveryApi.OrganizationMainCallsApi* | [**getGitTokenAssociatedServices**](docs/OrganizationMainCallsApi.md#getGitTokenAssociatedServices) | **GET** /organization/{organizationId}/gitToken/{gitTokenId}/associatedServices | Get organization git token associated services
 *QoveryApi.OrganizationMainCallsApi* | [**getOrganization**](docs/OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
+*QoveryApi.OrganizationMainCallsApi* | [**getOrganizationGitTokens**](docs/OrganizationMainCallsApi.md#getOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken/{gitTokenId} | Get organization git token
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganization**](docs/OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganizationAvailableRoles**](docs/OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganizationGitTokens**](docs/OrganizationMainCallsApi.md#listOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken | List organization git tokens
@@ -776,6 +778,9 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitRepositoryBranch](docs/GitRepositoryBranch.md)
  - [QoveryApi.GitRepositoryBranchResponseList](docs/GitRepositoryBranchResponseList.md)
  - [QoveryApi.GitRepositoryResponseList](docs/GitRepositoryResponseList.md)
+ - [QoveryApi.GitTokenAssociatedServiceResponse](docs/GitTokenAssociatedServiceResponse.md)
+ - [QoveryApi.GitTokenAssociatedServiceType](docs/GitTokenAssociatedServiceType.md)
+ - [QoveryApi.GitTokenAssociatedServicesResponseList](docs/GitTokenAssociatedServicesResponseList.md)
  - [QoveryApi.GitTokenRequest](docs/GitTokenRequest.md)
  - [QoveryApi.GitTokenResponse](docs/GitTokenResponse.md)
  - [QoveryApi.GitTokenResponseAllOf](docs/GitTokenResponseAllOf.md)

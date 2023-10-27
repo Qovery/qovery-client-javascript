@@ -292,6 +292,9 @@ docs/GitRepository.md
 docs/GitRepositoryBranch.md
 docs/GitRepositoryBranchResponseList.md
 docs/GitRepositoryResponseList.md
+docs/GitTokenAssociatedServiceResponse.md
+docs/GitTokenAssociatedServiceType.md
+docs/GitTokenAssociatedServicesResponseList.md
 docs/GitTokenRequest.md
 docs/GitTokenResponse.md
 docs/GitTokenResponseAllOf.md
@@ -889,6 +892,9 @@ src/model/GitRepository.js
 src/model/GitRepositoryBranch.js
 src/model/GitRepositoryBranchResponseList.js
 src/model/GitRepositoryResponseList.js
+src/model/GitTokenAssociatedServiceResponse.js
+src/model/GitTokenAssociatedServiceType.js
+src/model/GitTokenAssociatedServicesResponseList.js
 src/model/GitTokenRequest.js
 src/model/GitTokenResponse.js
 src/model/GitTokenResponseAllOf.js
@@ -1449,6 +1455,9 @@ test/model/GitRepository.spec.js
 test/model/GitRepositoryBranch.spec.js
 test/model/GitRepositoryBranchResponseList.spec.js
 test/model/GitRepositoryResponseList.spec.js
+test/model/GitTokenAssociatedServiceResponse.spec.js
+test/model/GitTokenAssociatedServiceType.spec.js
+test/model/GitTokenAssociatedServicesResponseList.spec.js
 test/model/GitTokenRequest.spec.js
 test/model/GitTokenResponse.spec.js
 test/model/GitTokenResponseAllOf.spec.js

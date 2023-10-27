@@ -25,10 +25,11 @@ class GitTokenResponseAllOf {
      * @alias module:model/GitTokenResponseAllOf
      * @param name {String} 
      * @param type {module:model/GitProviderEnum} 
+     * @param associatedServicesCount {Number} The number of services using this git token
      */
-    constructor(name, type) { 
+    constructor(name, type, associatedServicesCount) { 
         
-        GitTokenResponseAllOf.initialize(this, name, type);
+        GitTokenResponseAllOf.initialize(this, name, type, associatedServicesCount);
     }
 
     /**
@@ -36,9 +37,10 @@ class GitTokenResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, type) { 
+    static initialize(obj, name, type, associatedServicesCount) { 
         obj['name'] = name;
         obj['type'] = type;
+        obj['associated_services_count'] = associatedServicesCount;
     }
 
     /**
@@ -63,6 +65,9 @@ class GitTokenResponseAllOf {
             }
             if (data.hasOwnProperty('expired_at')) {
                 obj['expired_at'] = ApiClient.convertToType(data['expired_at'], 'Date');
+            }
+            if (data.hasOwnProperty('associated_services_count')) {
+                obj['associated_services_count'] = ApiClient.convertToType(data['associated_services_count'], 'Number');
             }
         }
         return obj;
@@ -90,6 +95,12 @@ GitTokenResponseAllOf.prototype['type'] = undefined;
  * @member {Date} expired_at
  */
 GitTokenResponseAllOf.prototype['expired_at'] = undefined;
+
+/**
+ * The number of services using this git token
+ * @member {Number} associated_services_count
+ */
+GitTokenResponseAllOf.prototype['associated_services_count'] = undefined;
 
 
 

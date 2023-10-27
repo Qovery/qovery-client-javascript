@@ -96,6 +96,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property associatedServicesCount (base name: "associated_services_count")', function() {
+      // uncomment below and update the code to test the property associatedServicesCount
+      //var instance = new QoveryApi.GitTokenResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

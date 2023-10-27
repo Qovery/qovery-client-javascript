@@ -83,6 +83,52 @@ export default class OrganizationAccountGitRepositoriesApi {
     }
 
     /**
+     * Callback function to receive the result of the getOrganizationBitbucketRepositoriesTemp operation.
+     * @callback module:api/OrganizationAccountGitRepositoriesApi~getOrganizationBitbucketRepositoriesTempCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitRepositoryResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get bitbucket repositories of the connected user
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationBitbucketRepositoriesTempCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitRepositoryResponseList}
+     */
+    getOrganizationBitbucketRepositoriesTemp(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationBitbucketRepositoriesTemp");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+        'gitTokenId': opts['gitTokenId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GitRepositoryResponseList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/account/bitbucket/repositoryTemp', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getOrganizationBitbucketRepositoryBranches operation.
      * @callback module:api/OrganizationAccountGitRepositoriesApi~getOrganizationBitbucketRepositoryBranchesCallback
      * @param {String} error Error message, if any.
@@ -173,6 +219,48 @@ export default class OrganizationAccountGitRepositoriesApi {
     }
 
     /**
+     * Callback function to receive the result of the getOrganizationGitProviderAccountTemp operation.
+     * @callback module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitProviderAccountTempCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitAuthProviderResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get git provider accounts
+     * @param {String} organizationId Organization ID
+     * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitProviderAccountTempCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitAuthProviderResponseList}
+     */
+    getOrganizationGitProviderAccountTemp(organizationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationGitProviderAccountTemp");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GitAuthProviderResponseList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/account/gitAuthProviderTemp', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getOrganizationGithubRepositories operation.
      * @callback module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGithubRepositoriesCallback
      * @param {String} error Error message, if any.
@@ -213,6 +301,52 @@ export default class OrganizationAccountGitRepositoriesApi {
       let returnType = GitRepositoryResponseList;
       return this.apiClient.callApi(
         '/organization/{organizationId}/account/github/repository', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrganizationGithubRepositoriesTemp operation.
+     * @callback module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGithubRepositoriesTempCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitRepositoryResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get github repositories of the connected user
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGithubRepositoriesTempCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitRepositoryResponseList}
+     */
+    getOrganizationGithubRepositoriesTemp(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationGithubRepositoriesTemp");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+        'gitTokenId': opts['gitTokenId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GitRepositoryResponseList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/account/github/repositoryTemp', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -307,6 +441,52 @@ export default class OrganizationAccountGitRepositoriesApi {
       let returnType = GitRepositoryResponseList;
       return this.apiClient.callApi(
         '/organization/{organizationId}/account/gitlab/repository', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrganizationGitlabRepositoriesTemp operation.
+     * @callback module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitlabRepositoriesTempCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GitRepositoryResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get gitlab repositories of the connected user
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitlabRepositoriesTempCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GitRepositoryResponseList}
+     */
+    getOrganizationGitlabRepositoriesTemp(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationGitlabRepositoriesTemp");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+        'gitTokenId': opts['gitTokenId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GitRepositoryResponseList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/account/gitlab/repositoryTemp', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

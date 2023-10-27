@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('getOrganizationBitbucketRepositoriesTemp', function() {
+      it('should call getOrganizationBitbucketRepositoriesTemp successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationBitbucketRepositoriesTemp
+        //instance.getOrganizationBitbucketRepositoriesTemp(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrganizationBitbucketRepositoryBranches', function() {
       it('should call getOrganizationBitbucketRepositoryBranches successfully', function(done) {
         //uncomment below and update the code to test getOrganizationBitbucketRepositoryBranches
@@ -78,10 +88,30 @@
         done();
       });
     });
+    describe('getOrganizationGitProviderAccountTemp', function() {
+      it('should call getOrganizationGitProviderAccountTemp successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationGitProviderAccountTemp
+        //instance.getOrganizationGitProviderAccountTemp(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrganizationGithubRepositories', function() {
       it('should call getOrganizationGithubRepositories successfully', function(done) {
         //uncomment below and update the code to test getOrganizationGithubRepositories
         //instance.getOrganizationGithubRepositories(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getOrganizationGithubRepositoriesTemp', function() {
+      it('should call getOrganizationGithubRepositoriesTemp successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationGithubRepositoriesTemp
+        //instance.getOrganizationGithubRepositoriesTemp(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -102,6 +132,16 @@
       it('should call getOrganizationGitlabRepositories successfully', function(done) {
         //uncomment below and update the code to test getOrganizationGitlabRepositories
         //instance.getOrganizationGitlabRepositories(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getOrganizationGitlabRepositoriesTemp', function() {
+      it('should call getOrganizationGitlabRepositoriesTemp successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationGitlabRepositoriesTemp
+        //instance.getOrganizationGitlabRepositoriesTemp(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

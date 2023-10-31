@@ -66,6 +66,9 @@ class GitTokenResponseAllOf {
             if (data.hasOwnProperty('expired_at')) {
                 obj['expired_at'] = ApiClient.convertToType(data['expired_at'], 'Date');
             }
+            if (data.hasOwnProperty('workspace')) {
+                obj['workspace'] = ApiClient.convertToType(data['workspace'], 'String');
+            }
             if (data.hasOwnProperty('associated_services_count')) {
                 obj['associated_services_count'] = ApiClient.convertToType(data['associated_services_count'], 'Number');
             }
@@ -95,6 +98,12 @@ GitTokenResponseAllOf.prototype['type'] = undefined;
  * @member {Date} expired_at
  */
 GitTokenResponseAllOf.prototype['expired_at'] = undefined;
+
+/**
+ * Mandatory only for BITBUCKET git provider
+ * @member {String} workspace
+ */
+GitTokenResponseAllOf.prototype['workspace'] = undefined;
 
 /**
  * The number of services using this git token

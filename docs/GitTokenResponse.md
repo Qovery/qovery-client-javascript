@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **type** | [**GitProviderEnum**](GitProviderEnum.md) |  | 
 **expiredAt** | **Date** |  | [optional] 
+**workspace** | **String** | Mandatory only for BITBUCKET git provider | [optional] 
 **associatedServicesCount** | **Number** | The number of services using this git token | 
 
 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **containers** | [**[Status]**](Status.md) |  | [optional] 
 **jobs** | [**[Status]**](Status.md) |  | [optional] 
 **databases** | [**[Status]**](Status.md) |  | [optional] 
+**helms** | [**[Status]**](Status.md) |  | [optional] 
 **stage** | [**Stage**](Stage.md) |  | [optional] 
 
 

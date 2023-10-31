@@ -61,6 +61,9 @@ class DeploymentStageWithServicesStatuses {
             if (data.hasOwnProperty('databases')) {
                 obj['databases'] = ApiClient.convertToType(data['databases'], [Status]);
             }
+            if (data.hasOwnProperty('helms')) {
+                obj['helms'] = ApiClient.convertToType(data['helms'], [Status]);
+            }
             if (data.hasOwnProperty('stage')) {
                 obj['stage'] = Stage.constructFromObject(data['stage']);
             }
@@ -90,6 +93,11 @@ DeploymentStageWithServicesStatuses.prototype['jobs'] = undefined;
  * @member {Array.<module:model/Status>} databases
  */
 DeploymentStageWithServicesStatuses.prototype['databases'] = undefined;
+
+/**
+ * @member {Array.<module:model/Status>} helms
+ */
+DeploymentStageWithServicesStatuses.prototype['helms'] = undefined;
 
 /**
  * @member {module:model/Stage} stage

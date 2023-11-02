@@ -125,6 +125,13 @@ export default class OrganizationEventSubTargetType {
 
     
         /**
+         * value: "GIT_TOKEN"
+         * @const
+         */
+        "GIT_TOKEN" = "GIT_TOKEN";
+
+    
+        /**
          * value: "INVITATION"
          * @const
          */

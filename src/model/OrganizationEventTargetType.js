@@ -69,6 +69,13 @@ export default class OrganizationEventTargetType {
 
     
         /**
+         * value: "HELM"
+         * @const
+         */
+        "HELM" = "HELM";
+
+    
+        /**
          * value: "MEMBERS_AND_ROLES"
          * @const
          */

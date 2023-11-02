@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**editOrganization**](OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
 [**getGitTokenAssociatedServices**](OrganizationMainCallsApi.md#getGitTokenAssociatedServices) | **GET** /organization/{organizationId}/gitToken/{gitTokenId}/associatedServices | Get organization git token associated services
 [**getOrganization**](OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
-[**getOrganizationGitTokens**](OrganizationMainCallsApi.md#getOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken/{gitTokenId} | Get organization git token
+[**getOrganizationGitToken**](OrganizationMainCallsApi.md#getOrganizationGitToken) | **GET** /organization/{organizationId}/gitToken/{gitTokenId} | Get organization git token
 [**listOrganization**](OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
 [**listOrganizationAvailableRoles**](OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
 [**listOrganizationGitTokens**](OrganizationMainCallsApi.md#listOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken | List organization git tokens
@@ -463,13 +463,13 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## getOrganizationGitTokens
+## getOrganizationGitToken
 
-> GitTokenResponse getOrganizationGitTokens(organizationId, gitTokenId)
+> GitTokenResponse getOrganizationGitToken(organizationId, gitTokenId)
 
 Get organization git token
 
-Get organization git tokens
+Get organization git token
 
 ### Example
 
@@ -488,7 +488,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.OrganizationMainCallsApi();
 let organizationId = "organizationId_example"; // String | Organization ID
 let gitTokenId = "gitTokenId_example"; // String | Git Token ID
-apiInstance.getOrganizationGitTokens(organizationId, gitTokenId, (error, data, response) => {
+apiInstance.getOrganizationGitToken(organizationId, gitTokenId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

@@ -128,10 +128,10 @@
         done();
       });
     });
-    describe('getOrganizationGitTokens', function() {
-      it('should call getOrganizationGitTokens successfully', function(done) {
-        //uncomment below and update the code to test getOrganizationGitTokens
-        //instance.getOrganizationGitTokens(function(error) {
+    describe('getOrganizationGitToken', function() {
+      it('should call getOrganizationGitToken successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationGitToken
+        //instance.getOrganizationGitToken(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

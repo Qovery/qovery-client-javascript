@@ -488,7 +488,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.OrganizationMainCallsApi* | [**editOrganization**](docs/OrganizationMainCallsApi.md#editOrganization) | **PUT** /organization/{organizationId} | Edit an organization
 *QoveryApi.OrganizationMainCallsApi* | [**getGitTokenAssociatedServices**](docs/OrganizationMainCallsApi.md#getGitTokenAssociatedServices) | **GET** /organization/{organizationId}/gitToken/{gitTokenId}/associatedServices | Get organization git token associated services
 *QoveryApi.OrganizationMainCallsApi* | [**getOrganization**](docs/OrganizationMainCallsApi.md#getOrganization) | **GET** /organization/{organizationId} | Get organization by ID
-*QoveryApi.OrganizationMainCallsApi* | [**getOrganizationGitTokens**](docs/OrganizationMainCallsApi.md#getOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken/{gitTokenId} | Get organization git token
+*QoveryApi.OrganizationMainCallsApi* | [**getOrganizationGitToken**](docs/OrganizationMainCallsApi.md#getOrganizationGitToken) | **GET** /organization/{organizationId}/gitToken/{gitTokenId} | Get organization git token
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganization**](docs/OrganizationMainCallsApi.md#listOrganization) | **GET** /organization | List user organizations
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganizationAvailableRoles**](docs/OrganizationMainCallsApi.md#listOrganizationAvailableRoles) | **GET** /organization/{organizationId}/availableRole | List organization available roles
 *QoveryApi.OrganizationMainCallsApi* | [**listOrganizationGitTokens**](docs/OrganizationMainCallsApi.md#listOrganizationGitTokens) | **GET** /organization/{organizationId}/gitToken | List organization git tokens

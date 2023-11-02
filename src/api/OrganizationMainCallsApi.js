@@ -405,8 +405,8 @@ export default class OrganizationMainCallsApi {
     }
 
     /**
-     * Callback function to receive the result of the getOrganizationGitTokens operation.
-     * @callback module:api/OrganizationMainCallsApi~getOrganizationGitTokensCallback
+     * Callback function to receive the result of the getOrganizationGitToken operation.
+     * @callback module:api/OrganizationMainCallsApi~getOrganizationGitTokenCallback
      * @param {String} error Error message, if any.
      * @param {module:model/GitTokenResponse} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -414,21 +414,21 @@ export default class OrganizationMainCallsApi {
 
     /**
      * Get organization git token
-     * Get organization git tokens
+     * Get organization git token
      * @param {String} organizationId Organization ID
      * @param {String} gitTokenId Git Token ID
-     * @param {module:api/OrganizationMainCallsApi~getOrganizationGitTokensCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/OrganizationMainCallsApi~getOrganizationGitTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitTokenResponse}
      */
-    getOrganizationGitTokens(organizationId, gitTokenId, callback) {
+    getOrganizationGitToken(organizationId, gitTokenId, callback) {
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
-        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationGitTokens");
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationGitToken");
       }
       // verify the required parameter 'gitTokenId' is set
       if (gitTokenId === undefined || gitTokenId === null) {
-        throw new Error("Missing the required parameter 'gitTokenId' when calling getOrganizationGitTokens");
+        throw new Error("Missing the required parameter 'gitTokenId' when calling getOrganizationGitToken");
       }
 
       let pathParams = {

@@ -78,6 +78,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property origin (base name: "origin")', function() {
+      // uncomment below and update the code to test the property origin
+      //var instance = new QoveryApi.DeploymentHistoryEnvironment();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property triggeredBy (base name: "triggered_by")', function() {
+      // uncomment below and update the code to test the property triggeredBy
+      //var instance = new QoveryApi.DeploymentHistoryEnvironment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property applications (base name: "applications")', function() {
       // uncomment below and update the code to test the property applications
       //var instance = new QoveryApi.DeploymentHistoryEnvironment();

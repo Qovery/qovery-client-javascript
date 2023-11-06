@@ -16,6 +16,7 @@ import DeploymentHistoryApplication from './DeploymentHistoryApplication';
 import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
 import DeploymentHistoryJobResponse from './DeploymentHistoryJobResponse';
+import OrganizationEventOrigin from './OrganizationEventOrigin';
 import StateEnum from './StateEnum';
 
 /**
@@ -55,6 +56,12 @@ class DeploymentHistoryEnvironmentAllOf {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = StateEnum.constructFromObject(data['status']);
             }
+            if (data.hasOwnProperty('origin')) {
+                obj['origin'] = OrganizationEventOrigin.constructFromObject(data['origin']);
+            }
+            if (data.hasOwnProperty('triggered_by')) {
+                obj['triggered_by'] = ApiClient.convertToType(data['triggered_by'], 'String');
+            }
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [DeploymentHistoryApplication]);
             }
@@ -78,6 +85,16 @@ class DeploymentHistoryEnvironmentAllOf {
  * @member {module:model/StateEnum} status
  */
 DeploymentHistoryEnvironmentAllOf.prototype['status'] = undefined;
+
+/**
+ * @member {module:model/OrganizationEventOrigin} origin
+ */
+DeploymentHistoryEnvironmentAllOf.prototype['origin'] = undefined;
+
+/**
+ * @member {String} triggered_by
+ */
+DeploymentHistoryEnvironmentAllOf.prototype['triggered_by'] = undefined;
 
 /**
  * @member {Array.<module:model/DeploymentHistoryApplication>} applications

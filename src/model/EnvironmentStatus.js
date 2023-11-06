@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import OrganizationEventOrigin from './OrganizationEventOrigin';
 import StateEnum from './StateEnum';
 
 /**
@@ -72,6 +73,12 @@ class EnvironmentStatus {
             if (data.hasOwnProperty('total_deployment_duration_in_seconds')) {
                 obj['total_deployment_duration_in_seconds'] = ApiClient.convertToType(data['total_deployment_duration_in_seconds'], 'Number');
             }
+            if (data.hasOwnProperty('origin')) {
+                obj['origin'] = OrganizationEventOrigin.constructFromObject(data['origin']);
+            }
+            if (data.hasOwnProperty('triggered_by')) {
+                obj['triggered_by'] = ApiClient.convertToType(data['triggered_by'], 'String');
+            }
         }
         return obj;
     }
@@ -108,6 +115,16 @@ EnvironmentStatus.prototype['last_deployment_id'] = undefined;
  * @member {Number} total_deployment_duration_in_seconds
  */
 EnvironmentStatus.prototype['total_deployment_duration_in_seconds'] = undefined;
+
+/**
+ * @member {module:model/OrganizationEventOrigin} origin
+ */
+EnvironmentStatus.prototype['origin'] = undefined;
+
+/**
+ * @member {String} triggered_by
+ */
+EnvironmentStatus.prototype['triggered_by'] = undefined;
 
 
 

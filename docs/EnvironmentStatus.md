@@ -10,5 +10,7 @@ Name | Type | Description | Notes
 **lastDeploymentState** | [**StateEnum**](StateEnum.md) |  | 
 **lastDeploymentId** | **String** |  | [optional] 
 **totalDeploymentDurationInSeconds** | **Number** |  | [optional] 
+**origin** | [**OrganizationEventOrigin**](OrganizationEventOrigin.md) |  | [optional] 
+**triggeredBy** | **String** |  | [optional] 
 
 

@@ -18,6 +18,7 @@ import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
 import DeploymentHistoryEnvironmentAllOf from './DeploymentHistoryEnvironmentAllOf';
 import DeploymentHistoryJobResponse from './DeploymentHistoryJobResponse';
+import OrganizationEventOrigin from './OrganizationEventOrigin';
 import StateEnum from './StateEnum';
 
 /**
@@ -74,6 +75,12 @@ class DeploymentHistoryEnvironment {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = StateEnum.constructFromObject(data['status']);
             }
+            if (data.hasOwnProperty('origin')) {
+                obj['origin'] = OrganizationEventOrigin.constructFromObject(data['origin']);
+            }
+            if (data.hasOwnProperty('triggered_by')) {
+                obj['triggered_by'] = ApiClient.convertToType(data['triggered_by'], 'String');
+            }
             if (data.hasOwnProperty('applications')) {
                 obj['applications'] = ApiClient.convertToType(data['applications'], [DeploymentHistoryApplication]);
             }
@@ -114,6 +121,16 @@ DeploymentHistoryEnvironment.prototype['updated_at'] = undefined;
 DeploymentHistoryEnvironment.prototype['status'] = undefined;
 
 /**
+ * @member {module:model/OrganizationEventOrigin} origin
+ */
+DeploymentHistoryEnvironment.prototype['origin'] = undefined;
+
+/**
+ * @member {String} triggered_by
+ */
+DeploymentHistoryEnvironment.prototype['triggered_by'] = undefined;
+
+/**
  * @member {Array.<module:model/DeploymentHistoryApplication>} applications
  */
 DeploymentHistoryEnvironment.prototype['applications'] = undefined;
@@ -152,6 +169,14 @@ Base.prototype['updated_at'] = undefined;
  * @member {module:model/StateEnum} status
  */
 DeploymentHistoryEnvironmentAllOf.prototype['status'] = undefined;
+/**
+ * @member {module:model/OrganizationEventOrigin} origin
+ */
+DeploymentHistoryEnvironmentAllOf.prototype['origin'] = undefined;
+/**
+ * @member {String} triggered_by
+ */
+DeploymentHistoryEnvironmentAllOf.prototype['triggered_by'] = undefined;
 /**
  * @member {Array.<module:model/DeploymentHistoryApplication>} applications
  */

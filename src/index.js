@@ -35,6 +35,8 @@ import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AvailableContainerRegistryResponseList from './model/AvailableContainerRegistryResponseList';
+import AvailableHelmRepositoryResponse from './model/AvailableHelmRepositoryResponse';
+import AvailableHelmRepositoryResponseList from './model/AvailableHelmRepositoryResponseList';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import Backup from './model/Backup';
 import BackupAllOf from './model/BackupAllOf';
@@ -268,6 +270,7 @@ import HelmDeploymentRestrictionRequest from './model/HelmDeploymentRestrictionR
 import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestrictionResponse';
 import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
 import HelmForceEvent from './model/HelmForceEvent';
+import HelmRepositoryKindEnum from './model/HelmRepositoryKindEnum';
 import HelmRequest from './model/HelmRequest';
 import HelmRequestAllOf from './model/HelmRequestAllOf';
 import HelmRequestAllOfSource from './model/HelmRequestAllOfSource';
@@ -750,6 +753,18 @@ export {
      * @property {module:model/AvailableContainerRegistryResponseList}
      */
     AvailableContainerRegistryResponseList,
+
+    /**
+     * The AvailableHelmRepositoryResponse model constructor.
+     * @property {module:model/AvailableHelmRepositoryResponse}
+     */
+    AvailableHelmRepositoryResponse,
+
+    /**
+     * The AvailableHelmRepositoryResponseList model constructor.
+     * @property {module:model/AvailableHelmRepositoryResponseList}
+     */
+    AvailableHelmRepositoryResponseList,
 
     /**
      * The AwsCredentialsRequest model constructor.
@@ -2148,6 +2163,12 @@ export {
      * @property {module:model/HelmForceEvent}
      */
     HelmForceEvent,
+
+    /**
+     * The HelmRepositoryKindEnum model constructor.
+     * @property {module:model/HelmRepositoryKindEnum}
+     */
+    HelmRepositoryKindEnum,
 
     /**
      * The HelmRequest model constructor.

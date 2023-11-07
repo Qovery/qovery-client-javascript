@@ -36,6 +36,8 @@ docs/ApplicationSecretApi.md
 docs/ApplicationsApi.md
 docs/AvailableContainerRegistryResponse.md
 docs/AvailableContainerRegistryResponseList.md
+docs/AvailableHelmRepositoryResponse.md
+docs/AvailableHelmRepositoryResponseList.md
 docs/AwsCredentialsRequest.md
 docs/Backup.md
 docs/BackupAllOf.md
@@ -311,6 +313,7 @@ docs/HelmDeploymentRestrictionResponse.md
 docs/HelmDeploymentRestrictionResponseList.md
 docs/HelmForceEvent.md
 docs/HelmMainCallsApi.md
+docs/HelmRepositoryKindEnum.md
 docs/HelmRequest.md
 docs/HelmRequestAllOf.md
 docs/HelmRequestAllOfSource.md
@@ -674,6 +677,8 @@ src/model/ApplicationRequestAllOf.js
 src/model/ApplicationResponseList.js
 src/model/AvailableContainerRegistryResponse.js
 src/model/AvailableContainerRegistryResponseList.js
+src/model/AvailableHelmRepositoryResponse.js
+src/model/AvailableHelmRepositoryResponseList.js
 src/model/AwsCredentialsRequest.js
 src/model/Backup.js
 src/model/BackupAllOf.js
@@ -907,6 +912,7 @@ src/model/HelmDeploymentRestrictionRequest.js
 src/model/HelmDeploymentRestrictionResponse.js
 src/model/HelmDeploymentRestrictionResponseList.js
 src/model/HelmForceEvent.js
+src/model/HelmRepositoryKindEnum.js
 src/model/HelmRequest.js
 src/model/HelmRequestAllOf.js
 src/model/HelmRequestAllOfSource.js
@@ -1240,6 +1246,8 @@ test/model/ApplicationRequestAllOf.spec.js
 test/model/ApplicationResponseList.spec.js
 test/model/AvailableContainerRegistryResponse.spec.js
 test/model/AvailableContainerRegistryResponseList.spec.js
+test/model/AvailableHelmRepositoryResponse.spec.js
+test/model/AvailableHelmRepositoryResponseList.spec.js
 test/model/AwsCredentialsRequest.spec.js
 test/model/Backup.spec.js
 test/model/BackupAllOf.spec.js
@@ -1473,6 +1481,7 @@ test/model/HelmDeploymentRestrictionRequest.spec.js
 test/model/HelmDeploymentRestrictionResponse.spec.js
 test/model/HelmDeploymentRestrictionResponseList.spec.js
 test/model/HelmForceEvent.spec.js
+test/model/HelmRepositoryKindEnum.spec.js
 test/model/HelmRequest.spec.js
 test/model/HelmRequestAllOf.spec.js
 test/model/HelmRequestAllOfSource.spec.js

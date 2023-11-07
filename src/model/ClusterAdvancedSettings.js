@@ -136,37 +136,32 @@ class ClusterAdvancedSettings {
 /**
  * Set the number of retention days for EKS Cloudwatch logs
  * @member {Number} aws.cloudwatch.eks_logs_retention_days
- * @default 90
  */
-ClusterAdvancedSettings.prototype['aws.cloudwatch.eks_logs_retention_days'] = 90;
+ClusterAdvancedSettings.prototype['aws.cloudwatch.eks_logs_retention_days'] = undefined;
 
 /**
  * Enable flow logs for on the VPC and store them in an S3 bucket
  * @member {Boolean} aws.vpc.enable_s3_flow_logs
- * @default false
  */
-ClusterAdvancedSettings.prototype['aws.vpc.enable_s3_flow_logs'] = false;
+ClusterAdvancedSettings.prototype['aws.vpc.enable_s3_flow_logs'] = undefined;
 
 /**
  * Set the number of retention days for flow logs. Disable with value \"0\"
  * @member {Number} aws.vpc.flow_logs_retention_days
- * @default 365
  */
-ClusterAdvancedSettings.prototype['aws.vpc.flow_logs_retention_days'] = 365;
+ClusterAdvancedSettings.prototype['aws.vpc.flow_logs_retention_days'] = undefined;
 
 /**
  * For how long in week loki is going to keep logs of your applications
  * @member {Number} loki.log_retention_in_week
- * @default 12
  */
-ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = 12;
+ClusterAdvancedSettings.prototype['loki.log_retention_in_week'] = undefined;
 
 /**
  * Configure the number of seconds before cleaning images in the registry
  * @member {Number} registry.image_retention_time
- * @default 31536000
  */
-ClusterAdvancedSettings.prototype['registry.image_retention_time'] = 31536000;
+ClusterAdvancedSettings.prototype['registry.image_retention_time'] = undefined;
 
 /**
  * Add additional tags on the cluster dedicated registry
@@ -177,16 +172,14 @@ ClusterAdvancedSettings.prototype['cloud_provider.container_registry.tags'] = un
 /**
  * Select the size of the main load_balancer (only effective for Scaleway)
  * @member {String} load_balancer.size
- * @default 'lb-s'
  */
-ClusterAdvancedSettings.prototype['load_balancer.size'] = 'lb-s';
+ClusterAdvancedSettings.prototype['load_balancer.size'] = undefined;
 
 /**
  * Deny public access to any PostgreSQL database
  * @member {Boolean} database.postgresql.deny_public_access
- * @default false
  */
-ClusterAdvancedSettings.prototype['database.postgresql.deny_public_access'] = false;
+ClusterAdvancedSettings.prototype['database.postgresql.deny_public_access'] = undefined;
 
 /**
  * List of CIDRs allowed to access the PostgreSQL database
@@ -197,9 +190,8 @@ ClusterAdvancedSettings.prototype['database.postgresql.allowed_cidrs'] = undefin
 /**
  * Deny public access to any MySql database
  * @member {Boolean} database.mysql.deny_public_access
- * @default false
  */
-ClusterAdvancedSettings.prototype['database.mysql.deny_public_access'] = false;
+ClusterAdvancedSettings.prototype['database.mysql.deny_public_access'] = undefined;
 
 /**
  * List of CIDRs allowed to access the MySql database
@@ -210,9 +202,8 @@ ClusterAdvancedSettings.prototype['database.mysql.allowed_cidrs'] = undefined;
 /**
  * Deny public access to any MongoDB/DocumentDB database
  * @member {Boolean} database.mongodb.deny_public_access
- * @default false
  */
-ClusterAdvancedSettings.prototype['database.mongodb.deny_public_access'] = false;
+ClusterAdvancedSettings.prototype['database.mongodb.deny_public_access'] = undefined;
 
 /**
  * List of CIDRs allowed to access the MongoDB/DocumentDB database
@@ -223,9 +214,8 @@ ClusterAdvancedSettings.prototype['database.mongodb.allowed_cidrs'] = undefined;
 /**
  * Deny public access to any Redis database
  * @member {Boolean} database.redis.deny_public_access
- * @default false
  */
-ClusterAdvancedSettings.prototype['database.redis.deny_public_access'] = false;
+ClusterAdvancedSettings.prototype['database.redis.deny_public_access'] = undefined;
 
 /**
  * List of CIDRs allowed to access the Redis database
@@ -236,22 +226,19 @@ ClusterAdvancedSettings.prototype['database.redis.allowed_cidrs'] = undefined;
 /**
  * AWS IAM group name with cluster access
  * @member {String} aws.iam.admin_group
- * @default 'Admins'
  */
-ClusterAdvancedSettings.prototype['aws.iam.admin_group'] = 'Admins';
+ClusterAdvancedSettings.prototype['aws.iam.admin_group'] = undefined;
 
 /**
  * Specify the [IMDS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) version you want to use:   * `required`: IMDS V2 only   * `optional`: IMDS V1 + V2 
  * @member {module:model/ClusterAdvancedSettings.AwsEksEc2MetadataImdsEnum} aws.eks.ec2.metadata_imds
- * @default 'optional'
  */
-ClusterAdvancedSettings.prototype['aws.eks.ec2.metadata_imds'] = 'optional';
+ClusterAdvancedSettings.prototype['aws.eks.ec2.metadata_imds'] = undefined;
 
 /**
  * @member {Number} pleco.resources_ttl
- * @default -1
  */
-ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = -1;
+ClusterAdvancedSettings.prototype['pleco.resources_ttl'] = undefined;
 
 /**
  * @member {module:model/RegistryMirroringModeEnum} registry.mirroring_mode
@@ -261,51 +248,44 @@ ClusterAdvancedSettings.prototype['registry.mirroring_mode'] = undefined;
 /**
  * vcpu request in millicores
  * @member {Number} nginx.vcpu.request_in_milli_cpu
- * @default 100
  */
-ClusterAdvancedSettings.prototype['nginx.vcpu.request_in_milli_cpu'] = 100;
+ClusterAdvancedSettings.prototype['nginx.vcpu.request_in_milli_cpu'] = undefined;
 
 /**
  * vcpu limit in millicores
  * @member {Number} nginx.vcpu.limit_in_milli_cpu
- * @default 500
  */
-ClusterAdvancedSettings.prototype['nginx.vcpu.limit_in_milli_cpu'] = 500;
+ClusterAdvancedSettings.prototype['nginx.vcpu.limit_in_milli_cpu'] = undefined;
 
 /**
  * memory request in MiB
  * @member {Number} nginx.memory.request_in_mib
- * @default 768
  */
-ClusterAdvancedSettings.prototype['nginx.memory.request_in_mib'] = 768;
+ClusterAdvancedSettings.prototype['nginx.memory.request_in_mib'] = undefined;
 
 /**
  * memory limit in MiB
  * @member {Number} nginx.memory.limit_in_mib
- * @default 768
  */
-ClusterAdvancedSettings.prototype['nginx.memory.limit_in_mib'] = 768;
+ClusterAdvancedSettings.prototype['nginx.memory.limit_in_mib'] = undefined;
 
 /**
  * hpa cpu threshold in percentage
  * @member {Number} nginx.hpa.cpu_utilization_percentage_threshold
- * @default 50
  */
-ClusterAdvancedSettings.prototype['nginx.hpa.cpu_utilization_percentage_threshold'] = 50;
+ClusterAdvancedSettings.prototype['nginx.hpa.cpu_utilization_percentage_threshold'] = undefined;
 
 /**
  * hpa minimum number of instances
  * @member {Number} nginx.hpa.min_number_instances
- * @default 2
  */
-ClusterAdvancedSettings.prototype['nginx.hpa.min_number_instances'] = 2;
+ClusterAdvancedSettings.prototype['nginx.hpa.min_number_instances'] = undefined;
 
 /**
  * hpa maximum number of instances
  * @member {Number} nginx.hpa.max_number_instances
- * @default 25
  */
-ClusterAdvancedSettings.prototype['nginx.hpa.max_number_instances'] = 25;
+ClusterAdvancedSettings.prototype['nginx.hpa.max_number_instances'] = undefined;
 
 
 

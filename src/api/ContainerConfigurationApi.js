@@ -138,7 +138,7 @@ export default class ContainerConfigurationApi {
 
     /**
      * Get advanced settings
-     * Get list and values of the advanced settings of the container.
+     * Get list and values of the advanced settings of the container. Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/advanced-settings/) 
      * @param {String} containerId Container ID
      * @param {module:api/ContainerConfigurationApi~getContainerAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerAdvancedSettings}

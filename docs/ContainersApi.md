@@ -251,6 +251,8 @@ Name | Type | Description  | Notes
 
 List default container advanced settings
 
+Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/advanced-settings/)
+
 ### Example
 
 ```javascript

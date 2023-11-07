@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 Get advanced settings
 
-Get list and values of the advanced settings of the cluster.
+Get the list and values of the advanced settings of the cluster. Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/cluster-advanced-settings/) 
 
 ### Example
 
@@ -541,6 +541,8 @@ Name | Type | Description  | Notes
 > ClusterAdvancedSettings getDefaultClusterAdvancedSettings()
 
 List default cluster advanced settings
+
+Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/cluster-advanced-settings/)
 
 ### Example
 

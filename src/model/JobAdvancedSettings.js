@@ -90,30 +90,26 @@ class JobAdvancedSettings {
 /**
  * define the max timeout for the build
  * @member {Number} build.timeout_max_sec
- * @default 1800
  */
-JobAdvancedSettings.prototype['build.timeout_max_sec'] = 1800;
+JobAdvancedSettings.prototype['build.timeout_max_sec'] = undefined;
 
 /**
  * define the max cpu resources (in milli)
  * @member {Number} build.cpu_max_in_milli
- * @default 4000
  */
-JobAdvancedSettings.prototype['build.cpu_max_in_milli'] = 4000;
+JobAdvancedSettings.prototype['build.cpu_max_in_milli'] = undefined;
 
 /**
  * define the max ram resources (in gib)
  * @member {Number} build.ram_max_in_gib
- * @default 8
  */
-JobAdvancedSettings.prototype['build.ram_max_in_gib'] = 8;
+JobAdvancedSettings.prototype['build.ram_max_in_gib'] = undefined;
 
 /**
  * define how long in seconds an application is supposed to be stopped gracefully
  * @member {Number} deployment.termination_grace_period_seconds
- * @default 60
  */
-JobAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
+JobAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = undefined;
 
 /**
  * Set pod placement on specific Kubernetes nodes labels
@@ -128,35 +124,30 @@ JobAdvancedSettings.prototype['job.delete_ttl_seconds_after_finished'] = undefin
 
 /**
  * @member {String} cronjob.concurrency_policy
- * @default 'Forbid'
  */
-JobAdvancedSettings.prototype['cronjob.concurrency_policy'] = 'Forbid';
+JobAdvancedSettings.prototype['cronjob.concurrency_policy'] = undefined;
 
 /**
  * @member {Number} cronjob.failed_jobs_history_limit
- * @default 1
  */
-JobAdvancedSettings.prototype['cronjob.failed_jobs_history_limit'] = 1;
+JobAdvancedSettings.prototype['cronjob.failed_jobs_history_limit'] = undefined;
 
 /**
  * @member {Number} cronjob.success_jobs_history_limit
- * @default 1
  */
-JobAdvancedSettings.prototype['cronjob.success_jobs_history_limit'] = 1;
+JobAdvancedSettings.prototype['cronjob.success_jobs_history_limit'] = undefined;
 
 /**
  * Allows you to set an existing Kubernetes service account name 
  * @member {String} security.service_account_name
- * @default ''
  */
-JobAdvancedSettings.prototype['security.service_account_name'] = '';
+JobAdvancedSettings.prototype['security.service_account_name'] = undefined;
 
 /**
  * Mounts the container's root filesystem as read-only 
  * @member {Boolean} security.read_only_root_filesystem
- * @default false
  */
-JobAdvancedSettings.prototype['security.read_only_root_filesystem'] = false;
+JobAdvancedSettings.prototype['security.read_only_root_filesystem'] = undefined;
 
 
 

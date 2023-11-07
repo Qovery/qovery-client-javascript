@@ -357,7 +357,7 @@ export default class ClustersApi {
 
     /**
      * Get advanced settings
-     * Get list and values of the advanced settings of the cluster.
+     * Get the list and values of the advanced settings of the cluster. Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/cluster-advanced-settings/) 
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {module:api/ClustersApi~getClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -502,6 +502,7 @@ export default class ClustersApi {
 
     /**
      * List default cluster advanced settings
+     * Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/cluster-advanced-settings/)
      * @param {module:api/ClustersApi~getDefaultClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterAdvancedSettings}
      */

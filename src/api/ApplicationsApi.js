@@ -143,6 +143,7 @@ export default class ApplicationsApi {
 
     /**
      * List default application advanced settings
+     * Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/advanced-settings/)
      * @param {module:api/ApplicationsApi~getDefaultApplicationAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApplicationAdvancedSettings}
      */

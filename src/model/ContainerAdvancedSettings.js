@@ -150,16 +150,14 @@ class ContainerAdvancedSettings {
 /**
  * disable custom domain check when deploying an application
  * @member {Boolean} deployment.custom_domain_check_enabled
- * @default true
  */
-ContainerAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = true;
+ContainerAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = undefined;
 
 /**
  * define how long in seconds an application is supposed to be stopped gracefully
  * @member {Number} deployment.termination_grace_period_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = 60;
+ContainerAdvancedSettings.prototype['deployment.termination_grace_period_seconds'] = undefined;
 
 /**
  * Set pod placement on specific Kubernetes nodes labels
@@ -170,193 +168,165 @@ ContainerAdvancedSettings.prototype['deployment.affinity.node.required'] = undef
 /**
  * Define how you want pods affinity to behave: * `Preferred` allows, but does not require, pods of a given service are not co-located (or co-hosted) on a single node * `Requirred` ensures that the pods of a given service are not co-located (or co-hosted) on a single node (safer in term of availability but can be expensive depending on the number of replicas) 
  * @member {module:model/ContainerAdvancedSettings.DeploymentAntiaffinityPodEnum} deployment.antiaffinity.pod
- * @default 'Preferred'
  */
-ContainerAdvancedSettings.prototype['deployment.antiaffinity.pod'] = 'Preferred';
+ContainerAdvancedSettings.prototype['deployment.antiaffinity.pod'] = undefined;
 
 /**
  * * `RollingUpdate` gracefully rollout new versions, and automatically rollback if the new version fails to start * `Recreate` stop all current versions and create new ones once all old ones have been shutdown 
  * @member {module:model/ContainerAdvancedSettings.DeploymentUpdateStrategyTypeEnum} deployment.update_strategy.type
- * @default 'RollingUpdate'
  */
-ContainerAdvancedSettings.prototype['deployment.update_strategy.type'] = 'RollingUpdate';
+ContainerAdvancedSettings.prototype['deployment.update_strategy.type'] = undefined;
 
 /**
  * Define the percentage of a maximum number of pods that can be unavailable during the update process
  * @member {Number} deployment.update_strategy.rolling_update.max_unavailable_percent
- * @default 25
  */
-ContainerAdvancedSettings.prototype['deployment.update_strategy.rolling_update.max_unavailable_percent'] = 25;
+ContainerAdvancedSettings.prototype['deployment.update_strategy.rolling_update.max_unavailable_percent'] = undefined;
 
 /**
  * Define the percentage of the maximum number of pods that can be created over the desired number of pods
  * @member {Number} deployment.update_strategy.rolling_update.max_surge_percent
- * @default 25
  */
-ContainerAdvancedSettings.prototype['deployment.update_strategy.rolling_update.max_surge_percent'] = 25;
+ContainerAdvancedSettings.prototype['deployment.update_strategy.rolling_update.max_surge_percent'] = undefined;
 
 /**
  * @member {Number} network.ingress.proxy_body_size_mb
- * @default 100
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_body_size_mb'] = 100;
+ContainerAdvancedSettings.prototype['network.ingress.proxy_body_size_mb'] = undefined;
 
 /**
  * @member {Boolean} network.ingress.enable_cors
- * @default false
  */
-ContainerAdvancedSettings.prototype['network.ingress.enable_cors'] = false;
+ContainerAdvancedSettings.prototype['network.ingress.enable_cors'] = undefined;
 
 /**
  * @member {String} network.ingress.cors_allow_origin
- * @default '*'
  */
-ContainerAdvancedSettings.prototype['network.ingress.cors_allow_origin'] = '*';
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_origin'] = undefined;
 
 /**
  * @member {String} network.ingress.cors_allow_methods
- * @default 'GET, PUT, POST, DELETE, PATCH, OPTIONS'
  */
-ContainerAdvancedSettings.prototype['network.ingress.cors_allow_methods'] = 'GET, PUT, POST, DELETE, PATCH, OPTIONS';
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_methods'] = undefined;
 
 /**
  * @member {String} network.ingress.cors_allow_headers
- * @default 'DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization'
  */
-ContainerAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = 'DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization';
+ContainerAdvancedSettings.prototype['network.ingress.cors_allow_headers'] = undefined;
 
 /**
  * header buffer size used while reading response header from upstream
  * @member {Number} network.ingress.proxy_buffer_size_kb
- * @default 4
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_buffer_size_kb'] = 4;
+ContainerAdvancedSettings.prototype['network.ingress.proxy_buffer_size_kb'] = undefined;
 
 /**
  * Limits the maximum time (in seconds) during which requests can be processed through one keepalive connection
  * @member {Number} network.ingress.keepalive_time_seconds
- * @default 3600
  */
-ContainerAdvancedSettings.prototype['network.ingress.keepalive_time_seconds'] = 3600;
+ContainerAdvancedSettings.prototype['network.ingress.keepalive_time_seconds'] = undefined;
 
 /**
  * Sets a timeout (in seconds) during which an idle keepalive connection to an upstream server will stay open.
  * @member {Number} network.ingress.keepalive_timeout_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['network.ingress.keepalive_timeout_seconds'] = 60;
+ContainerAdvancedSettings.prototype['network.ingress.keepalive_timeout_seconds'] = undefined;
 
 /**
  * Sets a timeout (in seconds) for transmitting a response to the client
  * @member {Number} network.ingress.send_timeout_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['network.ingress.send_timeout_seconds'] = 60;
+ContainerAdvancedSettings.prototype['network.ingress.send_timeout_seconds'] = undefined;
 
 /**
  * Sets a timeout (in seconds) for establishing a connection to a proxied server
  * @member {Number} network.ingress.proxy_connect_timeout_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_connect_timeout_seconds'] = 60;
+ContainerAdvancedSettings.prototype['network.ingress.proxy_connect_timeout_seconds'] = undefined;
 
 /**
  * Sets a timeout (in seconds) for transmitting a request to the proxied server
  * @member {Number} network.ingress.proxy_send_timeout_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_send_timeout_seconds'] = 60;
+ContainerAdvancedSettings.prototype['network.ingress.proxy_send_timeout_seconds'] = undefined;
 
 /**
  * Sets a timeout (in seconds) for reading a response from the proxied server
  * @member {Number} network.ingress.proxy_read_timeout_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_read_timeout_seconds'] = 60;
+ContainerAdvancedSettings.prototype['network.ingress.proxy_read_timeout_seconds'] = undefined;
 
 /**
  * Allows to enable or disable nginx `proxy-buffering`
  * @member {String} network.ingress.proxy_buffering
- * @default 'on'
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_buffering'] = 'on';
+ContainerAdvancedSettings.prototype['network.ingress.proxy_buffering'] = undefined;
 
 /**
  * Allows to enable or disable nginx `proxy-request-buffering`
  * @member {String} network.ingress.proxy_request_buffering
- * @default 'on'
  */
-ContainerAdvancedSettings.prototype['network.ingress.proxy_request_buffering'] = 'on';
+ContainerAdvancedSettings.prototype['network.ingress.proxy_request_buffering'] = undefined;
 
 /**
  * Sets a timeout (in seconds) for transmitting a request to the grpc server
  * @member {Number} network.ingress.grpc_send_timeout_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['network.ingress.grpc_send_timeout_seconds'] = 60;
+ContainerAdvancedSettings.prototype['network.ingress.grpc_send_timeout_seconds'] = undefined;
 
 /**
  * Sets a timeout (in seconds) for transmitting a request to the grpc server
  * @member {Number} network.ingress.grpc_read_timeout_seconds
- * @default 60
  */
-ContainerAdvancedSettings.prototype['network.ingress.grpc_read_timeout_seconds'] = 60;
+ContainerAdvancedSettings.prototype['network.ingress.grpc_read_timeout_seconds'] = undefined;
 
 /**
  * list of source ranges to allow access to ingress proxy.  This property can be used to whitelist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 To allow all source ranges, set 0.0.0.0/0. 
  * @member {String} network.ingress.whitelist_source_range
- * @default '0.0.0.0/0'
  */
-ContainerAdvancedSettings.prototype['network.ingress.whitelist_source_range'] = '0.0.0.0/0';
+ContainerAdvancedSettings.prototype['network.ingress.whitelist_source_range'] = undefined;
 
 /**
  * list of source ranges to deny access to ingress proxy.  This property can be used to blacklist source IP ranges for ingress proxy. The value is a comma separated list of CIDRs, e.g. 10.0.0.0/24,172.10.0.1 
  * @member {String} network.ingress.denylist_source_range
- * @default ''
  */
-ContainerAdvancedSettings.prototype['network.ingress.denylist_source_range'] = '';
+ContainerAdvancedSettings.prototype['network.ingress.denylist_source_range'] = undefined;
 
 /**
  * Allows to define response headers
  * @member {String} network.ingress.extra_headers
- * @default '{}'
  */
-ContainerAdvancedSettings.prototype['network.ingress.extra_headers'] = '{}';
+ContainerAdvancedSettings.prototype['network.ingress.extra_headers'] = undefined;
 
 /**
  * Set the name of an environment variable to use as a basic authentication (`login:crypted_password`) from `htpasswd` command. You can add multiples comma separated values. 
  * @member {String} network.ingress.basic_auth_env_var
- * @default ''
  */
-ContainerAdvancedSettings.prototype['network.ingress.basic_auth_env_var'] = '';
+ContainerAdvancedSettings.prototype['network.ingress.basic_auth_env_var'] = undefined;
 
 /**
  * Enable the load balancer to bind a user's session to a specific target. This ensures that all requests from the user during the session are sent to the same target 
  * @member {Boolean} network.ingress.enable_sticky_session
- * @default false
  */
-ContainerAdvancedSettings.prototype['network.ingress.enable_sticky_session'] = false;
+ContainerAdvancedSettings.prototype['network.ingress.enable_sticky_session'] = undefined;
 
 /**
  * Allows you to set an existing Kubernetes service account name 
  * @member {String} security.service_account_name
- * @default ''
  */
-ContainerAdvancedSettings.prototype['security.service_account_name'] = '';
+ContainerAdvancedSettings.prototype['security.service_account_name'] = undefined;
 
 /**
  * Percentage value of cpu usage at which point pods should scale up.
  * @member {Number} hpa.cpu.average_utilization_percent
- * @default 60
  */
-ContainerAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = 60;
+ContainerAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = undefined;
 
 /**
  * Mounts the container's root filesystem as read-only 
  * @member {Boolean} security.read_only_root_filesystem
- * @default false
  */
-ContainerAdvancedSettings.prototype['security.read_only_root_filesystem'] = false;
+ContainerAdvancedSettings.prototype['security.read_only_root_filesystem'] = undefined;
 
 
 

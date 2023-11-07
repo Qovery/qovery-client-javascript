@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 Get advanced settings
 
-Get list and values of the advanced settings of the application.
+Get list and values of the advanced settings of the application. Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/advanced-settings/) 
 
 ### Example
 

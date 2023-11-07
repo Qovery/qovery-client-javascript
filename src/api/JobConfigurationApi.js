@@ -90,7 +90,7 @@ export default class JobConfigurationApi {
 
     /**
      * Get advanced settings
-     * Get list and values of the advanced settings of the job.
+     * Get list and values of the advanced settings of the job. Default values for each setting are available in [our documentation](https://hub.qovery.com/docs/using-qovery/configuration/advanced-settings/) 
      * @param {String} jobId Job ID
      * @param {module:api/JobConfigurationApi~getJobAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobAdvancedSettings}

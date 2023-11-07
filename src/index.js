@@ -271,6 +271,11 @@ import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestriction
 import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
 import HelmForceEvent from './model/HelmForceEvent';
 import HelmRepositoryKindEnum from './model/HelmRepositoryKindEnum';
+import HelmRepositoryRequest from './model/HelmRepositoryRequest';
+import HelmRepositoryRequestConfig from './model/HelmRepositoryRequestConfig';
+import HelmRepositoryResponse from './model/HelmRepositoryResponse';
+import HelmRepositoryResponseAllOf from './model/HelmRepositoryResponseAllOf';
+import HelmRepositoryResponseList from './model/HelmRepositoryResponseList';
 import HelmRequest from './model/HelmRequest';
 import HelmRequestAllOf from './model/HelmRequestAllOf';
 import HelmRequestAllOfSource from './model/HelmRequestAllOfSource';
@@ -2169,6 +2174,36 @@ export {
      * @property {module:model/HelmRepositoryKindEnum}
      */
     HelmRepositoryKindEnum,
+
+    /**
+     * The HelmRepositoryRequest model constructor.
+     * @property {module:model/HelmRepositoryRequest}
+     */
+    HelmRepositoryRequest,
+
+    /**
+     * The HelmRepositoryRequestConfig model constructor.
+     * @property {module:model/HelmRepositoryRequestConfig}
+     */
+    HelmRepositoryRequestConfig,
+
+    /**
+     * The HelmRepositoryResponse model constructor.
+     * @property {module:model/HelmRepositoryResponse}
+     */
+    HelmRepositoryResponse,
+
+    /**
+     * The HelmRepositoryResponseAllOf model constructor.
+     * @property {module:model/HelmRepositoryResponseAllOf}
+     */
+    HelmRepositoryResponseAllOf,
+
+    /**
+     * The HelmRepositoryResponseList model constructor.
+     * @property {module:model/HelmRepositoryResponseList}
+     */
+    HelmRepositoryResponseList,
 
     /**
      * The HelmRequest model constructor.

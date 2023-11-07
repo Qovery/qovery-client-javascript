@@ -314,6 +314,11 @@ docs/HelmDeploymentRestrictionResponseList.md
 docs/HelmForceEvent.md
 docs/HelmMainCallsApi.md
 docs/HelmRepositoryKindEnum.md
+docs/HelmRepositoryRequest.md
+docs/HelmRepositoryRequestConfig.md
+docs/HelmRepositoryResponse.md
+docs/HelmRepositoryResponseAllOf.md
+docs/HelmRepositoryResponseList.md
 docs/HelmRequest.md
 docs/HelmRequestAllOf.md
 docs/HelmRequestAllOfSource.md
@@ -913,6 +918,11 @@ src/model/HelmDeploymentRestrictionResponse.js
 src/model/HelmDeploymentRestrictionResponseList.js
 src/model/HelmForceEvent.js
 src/model/HelmRepositoryKindEnum.js
+src/model/HelmRepositoryRequest.js
+src/model/HelmRepositoryRequestConfig.js
+src/model/HelmRepositoryResponse.js
+src/model/HelmRepositoryResponseAllOf.js
+src/model/HelmRepositoryResponseList.js
 src/model/HelmRequest.js
 src/model/HelmRequestAllOf.js
 src/model/HelmRequestAllOfSource.js
@@ -1482,6 +1492,11 @@ test/model/HelmDeploymentRestrictionResponse.spec.js
 test/model/HelmDeploymentRestrictionResponseList.spec.js
 test/model/HelmForceEvent.spec.js
 test/model/HelmRepositoryKindEnum.spec.js
+test/model/HelmRepositoryRequest.spec.js
+test/model/HelmRepositoryRequestConfig.spec.js
+test/model/HelmRepositoryResponse.spec.js
+test/model/HelmRepositoryResponseAllOf.spec.js
+test/model/HelmRepositoryResponseList.spec.js
 test/model/HelmRequest.spec.js
 test/model/HelmRequestAllOf.spec.js
 test/model/HelmRequestAllOfSource.spec.js

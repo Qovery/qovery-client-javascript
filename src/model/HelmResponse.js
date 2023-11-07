@@ -13,9 +13,9 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import HelmRequestAllOfSource from './HelmRequestAllOfSource';
 import HelmRequestAllOfValuesOverride from './HelmRequestAllOfValuesOverride';
 import HelmResponseAllOf from './HelmResponseAllOf';
+import HelmResponseAllOfSource from './HelmResponseAllOfSource';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -35,7 +35,7 @@ class HelmResponse {
      * @param name {String} name is case insensitive
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      * @param autoDeploy {Boolean} Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type.  
-     * @param source {module:model/HelmRequestAllOfSource} 
+     * @param source {module:model/HelmResponseAllOfSource} 
      */
     constructor(id, createdAt, environment, name, autoPreview, autoDeploy, source) { 
         Base.initialize(this, id, createdAt);HelmResponseAllOf.initialize(this, environment, name, autoPreview, autoDeploy, source);
@@ -95,7 +95,7 @@ class HelmResponse {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = HelmRequestAllOfSource.constructFromObject(data['source']);
+                obj['source'] = HelmResponseAllOfSource.constructFromObject(data['source']);
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -157,7 +157,7 @@ HelmResponse.prototype['auto_preview'] = undefined;
 HelmResponse.prototype['auto_deploy'] = undefined;
 
 /**
- * @member {module:model/HelmRequestAllOfSource} source
+ * @member {module:model/HelmResponseAllOfSource} source
  */
 HelmResponse.prototype['source'] = undefined;
 
@@ -218,7 +218,7 @@ HelmResponseAllOf.prototype['auto_preview'] = undefined;
  */
 HelmResponseAllOf.prototype['auto_deploy'] = undefined;
 /**
- * @member {module:model/HelmRequestAllOfSource} source
+ * @member {module:model/HelmResponseAllOfSource} source
  */
 HelmResponseAllOf.prototype['source'] = undefined;
 /**

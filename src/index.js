@@ -280,6 +280,9 @@ import HelmRequestAllOfValuesOverrideFileRaw from './model/HelmRequestAllOfValue
 import HelmRequestAllOfValuesOverrideFileRawValues from './model/HelmRequestAllOfValuesOverrideFileRawValues';
 import HelmResponse from './model/HelmResponse';
 import HelmResponseAllOf from './model/HelmResponseAllOf';
+import HelmResponseAllOfSource from './model/HelmResponseAllOfSource';
+import HelmResponseAllOfSourceRepository from './model/HelmResponseAllOfSourceRepository';
+import HelmResponseAllOfSourceRepositoryRepository from './model/HelmResponseAllOfSourceRepositoryRepository';
 import HelmResponseList from './model/HelmResponseList';
 import Instance from './model/Instance';
 import InstanceMemory from './model/InstanceMemory';
@@ -2217,6 +2220,24 @@ export {
      * @property {module:model/HelmResponseAllOf}
      */
     HelmResponseAllOf,
+
+    /**
+     * The HelmResponseAllOfSource model constructor.
+     * @property {module:model/HelmResponseAllOfSource}
+     */
+    HelmResponseAllOfSource,
+
+    /**
+     * The HelmResponseAllOfSourceRepository model constructor.
+     * @property {module:model/HelmResponseAllOfSourceRepository}
+     */
+    HelmResponseAllOfSourceRepository,
+
+    /**
+     * The HelmResponseAllOfSourceRepositoryRepository model constructor.
+     * @property {module:model/HelmResponseAllOfSourceRepositoryRepository}
+     */
+    HelmResponseAllOfSourceRepositoryRepository,
 
     /**
      * The HelmResponseList model constructor.

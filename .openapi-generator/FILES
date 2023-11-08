@@ -313,6 +313,7 @@ docs/HelmDeploymentRestrictionResponse.md
 docs/HelmDeploymentRestrictionResponseList.md
 docs/HelmForceEvent.md
 docs/HelmMainCallsApi.md
+docs/HelmRepositoriesApi.md
 docs/HelmRepositoryKindEnum.md
 docs/HelmRepositoryRequest.md
 docs/HelmRepositoryRequestConfig.md
@@ -634,6 +635,7 @@ src/api/HelmConfigurationApi.js
 src/api/HelmDeploymentHistoryApi.js
 src/api/HelmDeploymentRestrictionApi.js
 src/api/HelmMainCallsApi.js
+src/api/HelmRepositoriesApi.js
 src/api/HelmsApi.js
 src/api/JobActionsApi.js
 src/api/JobConfigurationApi.js
@@ -1209,6 +1211,7 @@ test/api/HelmConfigurationApi.spec.js
 test/api/HelmDeploymentHistoryApi.spec.js
 test/api/HelmDeploymentRestrictionApi.spec.js
 test/api/HelmMainCallsApi.spec.js
+test/api/HelmRepositoriesApi.spec.js
 test/api/HelmsApi.spec.js
 test/api/JobActionsApi.spec.js
 test/api/JobConfigurationApi.spec.js

@@ -411,6 +411,12 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmMainCallsApi* | [**editHelm**](docs/HelmMainCallsApi.md#editHelm) | **PUT** /helm/{helmId} | Edit helm
 *QoveryApi.HelmMainCallsApi* | [**getHelm**](docs/HelmMainCallsApi.md#getHelm) | **GET** /helm/{helmId} | Get helm by ID
 *QoveryApi.HelmMainCallsApi* | [**getHelmStatus**](docs/HelmMainCallsApi.md#getHelmStatus) | **GET** /helm/{helmId}/status | Get helm status
+*QoveryApi.HelmRepositoriesApi* | [**createHelmRepository**](docs/HelmRepositoriesApi.md#createHelmRepository) | **POST** /organization/{organizationId}/helmRepository | Create a helm repository
+*QoveryApi.HelmRepositoriesApi* | [**deleteHelmRepository**](docs/HelmRepositoriesApi.md#deleteHelmRepository) | **DELETE** /organization/{organizationId}/helmRepository/{helmRepositoryId} | Delete a helm repository
+*QoveryApi.HelmRepositoriesApi* | [**editHelmRepository**](docs/HelmRepositoriesApi.md#editHelmRepository) | **PUT** /organization/{organizationId}/helmRepository/{helmRepositoryId} | Edit a helm repository
+*QoveryApi.HelmRepositoriesApi* | [**getHelmRepository**](docs/HelmRepositoriesApi.md#getHelmRepository) | **GET** /organization/{organizationId}/helmRepository/{helmRepositoryId} | Get a helm repository
+*QoveryApi.HelmRepositoriesApi* | [**listAvailableHelmRepository**](docs/HelmRepositoriesApi.md#listAvailableHelmRepository) | **GET** /availableHelmRepository | List supported helm repository
+*QoveryApi.HelmRepositoriesApi* | [**listHelmRepository**](docs/HelmRepositoriesApi.md#listHelmRepository) | **GET** /organization/{organizationId}/helmRepository | List organization helm repositories
 *QoveryApi.HelmsApi* | [**createHelm**](docs/HelmsApi.md#createHelm) | **POST** /environment/{environmentId}/helm | Create a helm
 *QoveryApi.HelmsApi* | [**getEnvironmentHelmStatus**](docs/HelmsApi.md#getEnvironmentHelmStatus) | **GET** /environment/{environmentId}/helm/status | List all environment helm statuses
 *QoveryApi.HelmsApi* | [**listHelms**](docs/HelmsApi.md#listHelms) | **GET** /environment/{environmentId}/helm | List helms

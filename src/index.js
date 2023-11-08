@@ -562,6 +562,7 @@ import HelmConfigurationApi from './api/HelmConfigurationApi';
 import HelmDeploymentHistoryApi from './api/HelmDeploymentHistoryApi';
 import HelmDeploymentRestrictionApi from './api/HelmDeploymentRestrictionApi';
 import HelmMainCallsApi from './api/HelmMainCallsApi';
+import HelmRepositoriesApi from './api/HelmRepositoriesApi';
 import HelmsApi from './api/HelmsApi';
 import JobActionsApi from './api/JobActionsApi';
 import JobConfigurationApi from './api/JobConfigurationApi';
@@ -3920,6 +3921,12 @@ export {
     * @property {module:api/HelmMainCallsApi}
     */
     HelmMainCallsApi,
+
+    /**
+    * The HelmRepositoriesApi service constructor.
+    * @property {module:api/HelmRepositoriesApi}
+    */
+    HelmRepositoriesApi,
 
     /**
     * The HelmsApi service constructor.

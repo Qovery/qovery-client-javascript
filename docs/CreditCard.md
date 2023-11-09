@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **expiryYear** | **Number** |  | 
 **lastDigit** | **String** |  | 
 **isExpired** | **Boolean** |  | 
+**brand** | **String** |  | 
 
 

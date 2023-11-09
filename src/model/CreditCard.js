@@ -28,10 +28,11 @@ class CreditCard {
      * @param expiryYear {Number} 
      * @param lastDigit {String} 
      * @param isExpired {Boolean} 
+     * @param brand {String} 
      */
-    constructor(id, createdAt, expiryMonth, expiryYear, lastDigit, isExpired) { 
+    constructor(id, createdAt, expiryMonth, expiryYear, lastDigit, isExpired, brand) { 
         
-        CreditCard.initialize(this, id, createdAt, expiryMonth, expiryYear, lastDigit, isExpired);
+        CreditCard.initialize(this, id, createdAt, expiryMonth, expiryYear, lastDigit, isExpired, brand);
     }
 
     /**
@@ -39,13 +40,14 @@ class CreditCard {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, expiryMonth, expiryYear, lastDigit, isExpired) { 
+    static initialize(obj, id, createdAt, expiryMonth, expiryYear, lastDigit, isExpired, brand) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['expiry_month'] = expiryMonth;
         obj['expiry_year'] = expiryYear;
         obj['last_digit'] = lastDigit;
         obj['is_expired'] = isExpired;
+        obj['brand'] = brand;
     }
 
     /**
@@ -76,6 +78,9 @@ class CreditCard {
             }
             if (data.hasOwnProperty('is_expired')) {
                 obj['is_expired'] = ApiClient.convertToType(data['is_expired'], 'Boolean');
+            }
+            if (data.hasOwnProperty('brand')) {
+                obj['brand'] = ApiClient.convertToType(data['brand'], 'String');
             }
         }
         return obj;
@@ -113,6 +118,11 @@ CreditCard.prototype['last_digit'] = undefined;
  * @member {Boolean} is_expired
  */
 CreditCard.prototype['is_expired'] = undefined;
+
+/**
+ * @member {String} brand
+ */
+CreditCard.prototype['brand'] = undefined;
 
 
 

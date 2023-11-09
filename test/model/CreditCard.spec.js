@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property brand (base name: "brand")', function() {
+      // uncomment below and update the code to test the property brand
+      //var instance = new QoveryApi.CreditCard();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

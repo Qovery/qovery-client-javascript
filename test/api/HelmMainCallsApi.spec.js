@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('getDefaultValues', function() {
+      it('should call getDefaultValues successfully', function(done) {
+        //uncomment below and update the code to test getDefaultValues
+        //instance.getDefaultValues(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getHelm', function() {
       it('should call getHelm successfully', function(done) {
         //uncomment below and update the code to test getHelm

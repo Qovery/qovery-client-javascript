@@ -409,6 +409,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmDeploymentRestrictionApi* | [**getHelmDeploymentRestrictions**](docs/HelmDeploymentRestrictionApi.md#getHelmDeploymentRestrictions) | **GET** /helm/{helmId}/deploymentRestriction | Get helm deployment restrictions
 *QoveryApi.HelmMainCallsApi* | [**deleteHelm**](docs/HelmMainCallsApi.md#deleteHelm) | **DELETE** /helm/{helmId} | Delete helm
 *QoveryApi.HelmMainCallsApi* | [**editHelm**](docs/HelmMainCallsApi.md#editHelm) | **PUT** /helm/{helmId} | Edit helm
+*QoveryApi.HelmMainCallsApi* | [**getDefaultValues**](docs/HelmMainCallsApi.md#getDefaultValues) | **GET** /helm/{helmId}/defaultValues | Display the contents of the values.yaml file
 *QoveryApi.HelmMainCallsApi* | [**getHelm**](docs/HelmMainCallsApi.md#getHelm) | **GET** /helm/{helmId} | Get helm by ID
 *QoveryApi.HelmMainCallsApi* | [**getHelmStatus**](docs/HelmMainCallsApi.md#getHelmStatus) | **GET** /helm/{helmId}/status | Get helm status
 *QoveryApi.HelmRepositoriesApi* | [**createHelmRepository**](docs/HelmRepositoriesApi.md#createHelmRepository) | **POST** /organization/{organizationId}/helmRepository | Create a helm repository

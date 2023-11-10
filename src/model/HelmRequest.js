@@ -27,10 +27,14 @@ class HelmRequest {
      * @alias module:model/HelmRequest
      * @implements module:model/HelmRequestAllOf
      * @param name {String} name is case insensitive
+     * @param autoDeploy {Boolean} Specify if the helm will be automatically updated after receiving a new image tag or a new commit according to the source type.  
+     * @param source {module:model/HelmRequestAllOfSource} 
+     * @param _arguments {Array.<String>} The extra arguments to pass to helm
+     * @param valuesOverride {module:model/HelmRequestAllOfValuesOverride} 
      */
-    constructor(name) { 
-        HelmRequestAllOf.initialize(this, name);
-        HelmRequest.initialize(this, name);
+    constructor(name, autoDeploy, source, _arguments, valuesOverride) { 
+        HelmRequestAllOf.initialize(this, name, autoDeploy, source, _arguments, valuesOverride);
+        HelmRequest.initialize(this, name, autoDeploy, source, _arguments, valuesOverride);
     }
 
     /**
@@ -38,8 +42,12 @@ class HelmRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
+    static initialize(obj, name, autoDeploy, source, _arguments, valuesOverride) { 
         obj['name'] = name;
+        obj['auto_deploy'] = autoDeploy;
+        obj['source'] = source;
+        obj['arguments'] = _arguments;
+        obj['values_override'] = valuesOverride;
     }
 
     /**

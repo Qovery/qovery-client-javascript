@@ -30,10 +30,13 @@ class HelmResponseAllOf {
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      * @param autoDeploy {Boolean} Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type.  
      * @param source {module:model/HelmResponseAllOfSource} 
+     * @param _arguments {Array.<String>} The extra arguments to pass to helm
+     * @param allowClusterWideResources {Boolean} If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights 
+     * @param valuesOverride {module:model/HelmRequestAllOfValuesOverride} 
      */
-    constructor(environment, name, autoPreview, autoDeploy, source) { 
+    constructor(environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride) { 
         
-        HelmResponseAllOf.initialize(this, environment, name, autoPreview, autoDeploy, source);
+        HelmResponseAllOf.initialize(this, environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride);
     }
 
     /**
@@ -41,12 +44,15 @@ class HelmResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, environment, name, autoPreview, autoDeploy, source) { 
+    static initialize(obj, environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride) { 
         obj['environment'] = environment;
         obj['name'] = name;
         obj['auto_preview'] = autoPreview;
         obj['auto_deploy'] = autoDeploy;
         obj['source'] = source;
+        obj['arguments'] = _arguments;
+        obj['allow_cluster_wide_resources'] = allowClusterWideResources || false;
+        obj['values_override'] = valuesOverride;
     }
 
     /**

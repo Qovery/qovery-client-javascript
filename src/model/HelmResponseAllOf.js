@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import HelmRequestAllOfValuesOverride from './HelmRequestAllOfValuesOverride';
-import HelmResponseAllOfSource from './HelmResponseAllOfSource';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -29,7 +29,7 @@ class HelmResponseAllOf {
      * @param name {String} name is case insensitive
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      * @param autoDeploy {Boolean} Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type.  
-     * @param source {module:model/HelmResponseAllOfSource} 
+     * @param source {module:model/OneOfobjectobject} 
      * @param _arguments {Array.<String>} The extra arguments to pass to helm
      * @param allowClusterWideResources {Boolean} If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights 
      * @param valuesOverride {module:model/HelmRequestAllOfValuesOverride} 
@@ -82,7 +82,7 @@ class HelmResponseAllOf {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = HelmResponseAllOfSource.constructFromObject(data['source']);
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -129,7 +129,7 @@ HelmResponseAllOf.prototype['auto_preview'] = undefined;
 HelmResponseAllOf.prototype['auto_deploy'] = undefined;
 
 /**
- * @member {module:model/HelmResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 HelmResponseAllOf.prototype['source'] = undefined;
 

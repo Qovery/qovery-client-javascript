@@ -332,9 +332,6 @@ docs/HelmRequestAllOfValuesOverrideFileRaw.md
 docs/HelmRequestAllOfValuesOverrideFileRawValues.md
 docs/HelmResponse.md
 docs/HelmResponseAllOf.md
-docs/HelmResponseAllOfSource.md
-docs/HelmResponseAllOfSourceRepository.md
-docs/HelmResponseAllOfSourceRepositoryRepository.md
 docs/HelmResponseList.md
 docs/HelmsApi.md
 docs/Instance.md
@@ -937,9 +934,6 @@ src/model/HelmRequestAllOfValuesOverrideFileRaw.js
 src/model/HelmRequestAllOfValuesOverrideFileRawValues.js
 src/model/HelmResponse.js
 src/model/HelmResponseAllOf.js
-src/model/HelmResponseAllOfSource.js
-src/model/HelmResponseAllOfSourceRepository.js
-src/model/HelmResponseAllOfSourceRepositoryRepository.js
 src/model/HelmResponseList.js
 src/model/Instance.js
 src/model/InstanceMemory.js
@@ -1512,9 +1506,6 @@ test/model/HelmRequestAllOfValuesOverrideFileRaw.spec.js
 test/model/HelmRequestAllOfValuesOverrideFileRawValues.spec.js
 test/model/HelmResponse.spec.js
 test/model/HelmResponseAllOf.spec.js
-test/model/HelmResponseAllOfSource.spec.js
-test/model/HelmResponseAllOfSourceRepository.spec.js
-test/model/HelmResponseAllOfSourceRepositoryRepository.spec.js
 test/model/HelmResponseList.spec.js
 test/model/Instance.spec.js
 test/model/InstanceMemory.spec.js

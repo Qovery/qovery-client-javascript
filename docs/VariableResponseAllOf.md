@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**key** | **String** |  | 
+**value** | **String** |  | 
 **overriddenVariable** | [**VariableOverride**](VariableOverride.md) |  | [optional] 
 **aliasedVariable** | [**VariableAlias**](VariableAlias.md) |  | [optional] 
 **scope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 

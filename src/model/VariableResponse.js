@@ -33,11 +33,13 @@ class VariableResponse {
      * @implements module:model/VariableResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
+     * @param key {String} 
+     * @param value {String} 
      * @param scope {module:model/APIVariableScopeEnum} 
      */
-    constructor(id, createdAt, scope) { 
-        Base.initialize(this, id, createdAt);VariableResponseAllOf.initialize(this, scope);
-        VariableResponse.initialize(this, id, createdAt, scope);
+    constructor(id, createdAt, key, value, scope) { 
+        Base.initialize(this, id, createdAt);VariableResponseAllOf.initialize(this, key, value, scope);
+        VariableResponse.initialize(this, id, createdAt, key, value, scope);
     }
 
     /**
@@ -45,9 +47,11 @@ class VariableResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, scope) { 
+    static initialize(obj, id, createdAt, key, value, scope) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
+        obj['key'] = key;
+        obj['value'] = value;
         obj['scope'] = scope;
     }
 
@@ -72,6 +76,12 @@ class VariableResponse {
             }
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
+            if (data.hasOwnProperty('key')) {
+                obj['key'] = ApiClient.convertToType(data['key'], 'String');
+            }
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
             if (data.hasOwnProperty('overridden_variable')) {
                 obj['overridden_variable'] = VariableOverride.constructFromObject(data['overridden_variable']);
@@ -118,6 +128,16 @@ VariableResponse.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 VariableResponse.prototype['updated_at'] = undefined;
+
+/**
+ * @member {String} key
+ */
+VariableResponse.prototype['key'] = undefined;
+
+/**
+ * @member {String} value
+ */
+VariableResponse.prototype['value'] = undefined;
 
 /**
  * @member {module:model/VariableOverride} overridden_variable
@@ -177,6 +197,14 @@ Base.prototype['created_at'] = undefined;
  */
 Base.prototype['updated_at'] = undefined;
 // Implement VariableResponseAllOf interface:
+/**
+ * @member {String} key
+ */
+VariableResponseAllOf.prototype['key'] = undefined;
+/**
+ * @member {String} value
+ */
+VariableResponseAllOf.prototype['value'] = undefined;
 /**
  * @member {module:model/VariableOverride} overridden_variable
  */

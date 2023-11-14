@@ -27,11 +27,13 @@ class VariableResponseAllOf {
     /**
      * Constructs a new <code>VariableResponseAllOf</code>.
      * @alias module:model/VariableResponseAllOf
+     * @param key {String} 
+     * @param value {String} 
      * @param scope {module:model/APIVariableScopeEnum} 
      */
-    constructor(scope) { 
+    constructor(key, value, scope) { 
         
-        VariableResponseAllOf.initialize(this, scope);
+        VariableResponseAllOf.initialize(this, key, value, scope);
     }
 
     /**
@@ -39,7 +41,9 @@ class VariableResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, scope) { 
+    static initialize(obj, key, value, scope) { 
+        obj['key'] = key;
+        obj['value'] = value;
         obj['scope'] = scope;
     }
 
@@ -54,6 +58,12 @@ class VariableResponseAllOf {
         if (data) {
             obj = obj || new VariableResponseAllOf();
 
+            if (data.hasOwnProperty('key')) {
+                obj['key'] = ApiClient.convertToType(data['key'], 'String');
+            }
+            if (data.hasOwnProperty('value')) {
+                obj['value'] = ApiClient.convertToType(data['value'], 'String');
+            }
             if (data.hasOwnProperty('overridden_variable')) {
                 obj['overridden_variable'] = VariableOverride.constructFromObject(data['overridden_variable']);
             }
@@ -84,6 +94,16 @@ class VariableResponseAllOf {
 
 
 }
+
+/**
+ * @member {String} key
+ */
+VariableResponseAllOf.prototype['key'] = undefined;
+
+/**
+ * @member {String} value
+ */
+VariableResponseAllOf.prototype['value'] = undefined;
 
 /**
  * @member {module:model/VariableOverride} overridden_variable

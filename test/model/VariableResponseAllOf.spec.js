@@ -54,6 +54,18 @@
       //expect(instance).to.be.a(QoveryApi.VariableResponseAllOf);
     });
 
+    it('should have the property key (base name: "key")', function() {
+      // uncomment below and update the code to test the property key
+      //var instance = new QoveryApi.VariableResponseAllOf();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property value (base name: "value")', function() {
+      // uncomment below and update the code to test the property value
+      //var instance = new QoveryApi.VariableResponseAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property overriddenVariable (base name: "overridden_variable")', function() {
       // uncomment below and update the code to test the property overriddenVariable
       //var instance = new QoveryApi.VariableResponseAllOf();

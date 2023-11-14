@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
+**key** | **String** |  | 
+**value** | **String** |  | 
 **overriddenVariable** | [**VariableOverride**](VariableOverride.md) |  | [optional] 
 **aliasedVariable** | [**VariableAlias**](VariableAlias.md) |  | [optional] 
 **scope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 

@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ## listVariables
 
-> VariableResponseList listVariables(opts)
+> VariableResponseList listVariables(parentId, scope, opts)
 
 List variables
 
@@ -318,12 +318,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.VariableMainCallsApi();
+let parentId = "parentId_example"; // String | it filters the list by returning only the variables accessible by the selected parent_id. This field shall contain the id of a project, environment or service depending on the selected scope. Example, if scope = APPLICATION and parent_id=<application_id>, the result will contain any variable accessible by the application. The result will contain also any variable declared at an higher scope.
+let scope = new QoveryApi.APIVariableScopeEnum(); // APIVariableScopeEnum | the type of the parent_id (application, project, environment etc..).
 let opts = {
-  'parentId': "parentId_example", // String | it filters the list by returning only the variables accessible by the selected parent_id. This field shall contain the id of a project, environment or service depending on the selected scope. Example, if scope = APPLICATION and parent_id=<application_id>, the result will contain any variable accessible by the application. The result will contain also any variable declared at an higher scope.
-  'scope': new QoveryApi.APIVariableScopeEnum(), // APIVariableScopeEnum | the type of the parent_id (application, project, environment etc..).
   'isSecret': true // Boolean | 
 };
-apiInstance.listVariables(opts, (error, data, response) => {
+apiInstance.listVariables(parentId, scope, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -337,8 +337,8 @@ apiInstance.listVariables(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **parentId** | **String**| it filters the list by returning only the variables accessible by the selected parent_id. This field shall contain the id of a project, environment or service depending on the selected scope. Example, if scope &#x3D; APPLICATION and parent_id&#x3D;&lt;application_id&gt;, the result will contain any variable accessible by the application. The result will contain also any variable declared at an higher scope. | [optional] 
- **scope** | [**APIVariableScopeEnum**](.md)| the type of the parent_id (application, project, environment etc..). | [optional] 
+ **parentId** | **String**| it filters the list by returning only the variables accessible by the selected parent_id. This field shall contain the id of a project, environment or service depending on the selected scope. Example, if scope &#x3D; APPLICATION and parent_id&#x3D;&lt;application_id&gt;, the result will contain any variable accessible by the application. The result will contain also any variable declared at an higher scope. | 
+ **scope** | [**APIVariableScopeEnum**](.md)| the type of the parent_id (application, project, environment etc..). | 
  **isSecret** | **Boolean**|  | [optional] 
 
 ### Return type

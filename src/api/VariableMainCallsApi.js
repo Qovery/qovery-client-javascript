@@ -273,22 +273,30 @@ export default class VariableMainCallsApi {
     /**
      * List variables
      * Returns a list of variables. The result can be filtered by using the query parameters.
+     * @param {String} parentId it filters the list by returning only the variables accessible by the selected parent_id. This field shall contain the id of a project, environment or service depending on the selected scope. Example, if scope = APPLICATION and parent_id=<application_id>, the result will contain any variable accessible by the application. The result will contain also any variable declared at an higher scope.
+     * @param {module:model/APIVariableScopeEnum} scope the type of the parent_id (application, project, environment etc..).
      * @param {Object} opts Optional parameters
-     * @param {String} opts.parentId it filters the list by returning only the variables accessible by the selected parent_id. This field shall contain the id of a project, environment or service depending on the selected scope. Example, if scope = APPLICATION and parent_id=<application_id>, the result will contain any variable accessible by the application. The result will contain also any variable declared at an higher scope.
-     * @param {module:model/APIVariableScopeEnum} opts.scope the type of the parent_id (application, project, environment etc..).
      * @param {Boolean} opts.isSecret 
      * @param {module:api/VariableMainCallsApi~listVariablesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableResponseList}
      */
-    listVariables(opts, callback) {
+    listVariables(parentId, scope, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'parentId' is set
+      if (parentId === undefined || parentId === null) {
+        throw new Error("Missing the required parameter 'parentId' when calling listVariables");
+      }
+      // verify the required parameter 'scope' is set
+      if (scope === undefined || scope === null) {
+        throw new Error("Missing the required parameter 'scope' when calling listVariables");
+      }
 
       let pathParams = {
       };
       let queryParams = {
-        'parent_id': opts['parentId'],
-        'scope': opts['scope'],
+        'parent_id': parentId,
+        'scope': scope,
         'is_secret': opts['isSecret']
       };
       let headerParams = {

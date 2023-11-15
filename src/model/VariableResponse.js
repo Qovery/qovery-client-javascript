@@ -83,6 +83,9 @@ class VariableResponse {
             if (data.hasOwnProperty('value')) {
                 obj['value'] = ApiClient.convertToType(data['value'], 'String');
             }
+            if (data.hasOwnProperty('mount_path')) {
+                obj['mount_path'] = ApiClient.convertToType(data['mount_path'], 'String');
+            }
             if (data.hasOwnProperty('overridden_variable')) {
                 obj['overridden_variable'] = VariableOverride.constructFromObject(data['overridden_variable']);
             }
@@ -138,6 +141,11 @@ VariableResponse.prototype['key'] = undefined;
  * @member {String} value
  */
 VariableResponse.prototype['value'] = undefined;
+
+/**
+ * @member {String} mount_path
+ */
+VariableResponse.prototype['mount_path'] = undefined;
 
 /**
  * @member {module:model/VariableOverride} overridden_variable
@@ -205,6 +213,10 @@ VariableResponseAllOf.prototype['key'] = undefined;
  * @member {String} value
  */
 VariableResponseAllOf.prototype['value'] = undefined;
+/**
+ * @member {String} mount_path
+ */
+VariableResponseAllOf.prototype['mount_path'] = undefined;
 /**
  * @member {module:model/VariableOverride} overridden_variable
  */

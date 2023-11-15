@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **key** | **String** |  | 
 **value** | **String** |  | 
+**mountPath** | **String** |  | [optional] 
 **overriddenVariable** | [**VariableOverride**](VariableOverride.md) |  | [optional] 
 **aliasedVariable** | [**VariableAlias**](VariableAlias.md) |  | [optional] 
 **scope** | [**APIVariableScopeEnum**](APIVariableScopeEnum.md) |  | 

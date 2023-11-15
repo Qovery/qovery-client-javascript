@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property mountPath (base name: "mount_path")', function() {
+      // uncomment below and update the code to test the property mountPath
+      //var instance = new QoveryApi.VariableResponseAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property overriddenVariable (base name: "overridden_variable")', function() {
       // uncomment below and update the code to test the property overriddenVariable
       //var instance = new QoveryApi.VariableResponseAllOf();

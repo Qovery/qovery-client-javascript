@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('importEnvironmentVariables', function() {
+      it('should call importEnvironmentVariables successfully', function(done) {
+        //uncomment below and update the code to test importEnvironmentVariables
+        //instance.importEnvironmentVariables(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listVariables', function() {
       it('should call listVariables successfully', function(done) {
         //uncomment below and update the code to test listVariables

@@ -16,6 +16,8 @@ import ApiClient from "../ApiClient";
 import APIVariableScopeEnum from '../model/APIVariableScopeEnum';
 import VariableAliasRequest from '../model/VariableAliasRequest';
 import VariableEditRequest from '../model/VariableEditRequest';
+import VariableImport from '../model/VariableImport';
+import VariableImportRequest from '../model/VariableImportRequest';
 import VariableOverrideRequest from '../model/VariableOverrideRequest';
 import VariableRequest from '../model/VariableRequest';
 import VariableResponse from '../model/VariableResponse';
@@ -257,6 +259,58 @@ export default class VariableMainCallsApi {
       let returnType = VariableResponse;
       return this.apiClient.callApi(
         '/variable/{variableId}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the importEnvironmentVariables operation.
+     * @callback module:api/VariableMainCallsApi~importEnvironmentVariablesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/VariableImport} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Import variables
+     * Import environment variables in a defined scope, with a defined visibility.
+     * @param {String} serviceId service id
+     * @param {module:model/APIVariableScopeEnum} scope scope
+     * @param {Object} opts Optional parameters
+     * @param {module:model/VariableImportRequest} opts.variableImportRequest 
+     * @param {module:api/VariableMainCallsApi~importEnvironmentVariablesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/VariableImport}
+     */
+    importEnvironmentVariables(serviceId, scope, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['variableImportRequest'];
+      // verify the required parameter 'serviceId' is set
+      if (serviceId === undefined || serviceId === null) {
+        throw new Error("Missing the required parameter 'serviceId' when calling importEnvironmentVariables");
+      }
+      // verify the required parameter 'scope' is set
+      if (scope === undefined || scope === null) {
+        throw new Error("Missing the required parameter 'scope' when calling importEnvironmentVariables");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'service_id': serviceId,
+        'scope': scope
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = VariableImport;
+      return this.apiClient.callApi(
+        '/variable/import', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

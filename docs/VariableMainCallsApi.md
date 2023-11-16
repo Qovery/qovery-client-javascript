@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**createVariableOverride**](VariableMainCallsApi.md#createVariableOverride) | **POST** /variable/{variableId}/override | Create a variable override
 [**deleteVariable**](VariableMainCallsApi.md#deleteVariable) | **DELETE** /variable/{variableId} | Delete a variable
 [**editVariable**](VariableMainCallsApi.md#editVariable) | **PUT** /variable/{variableId} | Edit a variable
+[**importEnvironmentVariables**](VariableMainCallsApi.md#importEnvironmentVariables) | **POST** /variable/import | Import variables
 [**listVariables**](VariableMainCallsApi.md#listVariables) | **GET** /variable | List variables
 
 
@@ -284,6 +285,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**VariableResponse**](VariableResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## importEnvironmentVariables
+
+> VariableImport importEnvironmentVariables(serviceId, scope, opts)
+
+Import variables
+
+Import environment variables in a defined scope, with a defined visibility.
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.VariableMainCallsApi();
+let serviceId = "serviceId_example"; // String | service id
+let scope = new QoveryApi.APIVariableScopeEnum(); // APIVariableScopeEnum | scope
+let opts = {
+  'variableImportRequest': new QoveryApi.VariableImportRequest() // VariableImportRequest | 
+};
+apiInstance.importEnvironmentVariables(serviceId, scope, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **serviceId** | **String**| service id | 
+ **scope** | [**APIVariableScopeEnum**](.md)| scope | 
+ **variableImportRequest** | [**VariableImportRequest**](VariableImportRequest.md)|  | [optional] 
+
+### Return type
+
+[**VariableImport**](VariableImport.md)
 
 ### Authorization
 

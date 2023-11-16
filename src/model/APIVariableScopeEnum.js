@@ -61,6 +61,13 @@ export default class APIVariableScopeEnum {
         "JOB" = "JOB";
 
     
+        /**
+         * value: "HELM"
+         * @const
+         */
+        "HELM" = "HELM";
+
+    
 
     /**
     * Returns a <code>APIVariableScopeEnum</code> enum value from a Javascript object name.

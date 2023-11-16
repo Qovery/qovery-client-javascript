@@ -533,6 +533,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.VariableMainCallsApi* | [**createVariableOverride**](docs/VariableMainCallsApi.md#createVariableOverride) | **POST** /variable/{variableId}/override | Create a variable override
 *QoveryApi.VariableMainCallsApi* | [**deleteVariable**](docs/VariableMainCallsApi.md#deleteVariable) | **DELETE** /variable/{variableId} | Delete a variable
 *QoveryApi.VariableMainCallsApi* | [**editVariable**](docs/VariableMainCallsApi.md#editVariable) | **PUT** /variable/{variableId} | Edit a variable
+*QoveryApi.VariableMainCallsApi* | [**importEnvironmentVariables**](docs/VariableMainCallsApi.md#importEnvironmentVariables) | **POST** /variable/import | Import variables
 *QoveryApi.VariableMainCallsApi* | [**listVariables**](docs/VariableMainCallsApi.md#listVariables) | **GET** /variable | List variables
 
 

@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import APIVariableScopeEnum from '../model/APIVariableScopeEnum';
+import ServiceTypeForVariableEnum from '../model/ServiceTypeForVariableEnum';
 import VariableAliasRequest from '../model/VariableAliasRequest';
 import VariableEditRequest from '../model/VariableEditRequest';
 import VariableImport from '../model/VariableImport';
@@ -276,29 +277,29 @@ export default class VariableMainCallsApi {
      * Import variables
      * Import environment variables in a defined scope, with a defined visibility.
      * @param {String} serviceId service id
-     * @param {module:model/APIVariableScopeEnum} scope scope
+     * @param {module:model/ServiceTypeForVariableEnum} serviceType service type
      * @param {Object} opts Optional parameters
      * @param {module:model/VariableImportRequest} opts.variableImportRequest 
      * @param {module:api/VariableMainCallsApi~importEnvironmentVariablesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableImport}
      */
-    importEnvironmentVariables(serviceId, scope, opts, callback) {
+    importEnvironmentVariables(serviceId, serviceType, opts, callback) {
       opts = opts || {};
       let postBody = opts['variableImportRequest'];
       // verify the required parameter 'serviceId' is set
       if (serviceId === undefined || serviceId === null) {
         throw new Error("Missing the required parameter 'serviceId' when calling importEnvironmentVariables");
       }
-      // verify the required parameter 'scope' is set
-      if (scope === undefined || scope === null) {
-        throw new Error("Missing the required parameter 'scope' when calling importEnvironmentVariables");
+      // verify the required parameter 'serviceType' is set
+      if (serviceType === undefined || serviceType === null) {
+        throw new Error("Missing the required parameter 'serviceType' when calling importEnvironmentVariables");
       }
 
       let pathParams = {
       };
       let queryParams = {
         'service_id': serviceId,
-        'scope': scope
+        'service_type': serviceType
       };
       let headerParams = {
       };

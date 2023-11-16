@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 ## importEnvironmentVariables
 
-> VariableImport importEnvironmentVariables(serviceId, scope, opts)
+> VariableImport importEnvironmentVariables(serviceId, serviceType, opts)
 
 Import variables
 
@@ -320,11 +320,11 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.VariableMainCallsApi();
 let serviceId = "serviceId_example"; // String | service id
-let scope = new QoveryApi.APIVariableScopeEnum(); // APIVariableScopeEnum | scope
+let serviceType = new QoveryApi.ServiceTypeForVariableEnum(); // ServiceTypeForVariableEnum | service type
 let opts = {
   'variableImportRequest': new QoveryApi.VariableImportRequest() // VariableImportRequest | 
 };
-apiInstance.importEnvironmentVariables(serviceId, scope, opts, (error, data, response) => {
+apiInstance.importEnvironmentVariables(serviceId, serviceType, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -339,7 +339,7 @@ apiInstance.importEnvironmentVariables(serviceId, scope, opts, (error, data, res
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **serviceId** | **String**| service id | 
- **scope** | [**APIVariableScopeEnum**](.md)| scope | 
+ **serviceType** | [**ServiceTypeForVariableEnum**](.md)| service type | 
  **variableImportRequest** | [**VariableImportRequest**](VariableImportRequest.md)|  | [optional] 
 
 ### Return type

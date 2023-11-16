@@ -470,6 +470,7 @@ import ServiceStorageRequestStorageInner from './model/ServiceStorageRequestStor
 import ServiceStorageStorageInner from './model/ServiceStorageStorageInner';
 import ServiceTotalNumber from './model/ServiceTotalNumber';
 import ServiceTypeEnum from './model/ServiceTypeEnum';
+import ServiceTypeForVariableEnum from './model/ServiceTypeForVariableEnum';
 import SignUp from './model/SignUp';
 import SignUpRequest from './model/SignUpRequest';
 import Stage from './model/Stage';
@@ -3366,6 +3367,12 @@ export {
      * @property {module:model/ServiceTypeEnum}
      */
     ServiceTypeEnum,
+
+    /**
+     * The ServiceTypeForVariableEnum model constructor.
+     * @property {module:model/ServiceTypeForVariableEnum}
+     */
+    ServiceTypeForVariableEnum,
 
     /**
      * The SignUp model constructor.

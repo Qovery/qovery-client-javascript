@@ -996,6 +996,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ServiceStorageStorageInner](docs/ServiceStorageStorageInner.md)
  - [QoveryApi.ServiceTotalNumber](docs/ServiceTotalNumber.md)
  - [QoveryApi.ServiceTypeEnum](docs/ServiceTypeEnum.md)
+ - [QoveryApi.ServiceTypeForVariableEnum](docs/ServiceTypeForVariableEnum.md)
  - [QoveryApi.SignUp](docs/SignUp.md)
  - [QoveryApi.SignUpRequest](docs/SignUpRequest.md)
  - [QoveryApi.Stage](docs/Stage.md)

@@ -537,6 +537,7 @@ docs/ServiceStorageRequestStorageInner.md
 docs/ServiceStorageStorageInner.md
 docs/ServiceTotalNumber.md
 docs/ServiceTypeEnum.md
+docs/ServiceTypeForVariableEnum.md
 docs/SignUp.md
 docs/SignUpRequest.md
 docs/Stage.md
@@ -1116,6 +1117,7 @@ src/model/ServiceStorageRequestStorageInner.js
 src/model/ServiceStorageStorageInner.js
 src/model/ServiceTotalNumber.js
 src/model/ServiceTypeEnum.js
+src/model/ServiceTypeForVariableEnum.js
 src/model/SignUp.js
 src/model/SignUpRequest.js
 src/model/Stage.js
@@ -1688,6 +1690,7 @@ test/model/ServiceStorageRequestStorageInner.spec.js
 test/model/ServiceStorageStorageInner.spec.js
 test/model/ServiceTotalNumber.spec.js
 test/model/ServiceTypeEnum.spec.js
+test/model/ServiceTypeForVariableEnum.spec.js
 test/model/SignUp.spec.js
 test/model/SignUpRequest.spec.js
 test/model/Stage.spec.js

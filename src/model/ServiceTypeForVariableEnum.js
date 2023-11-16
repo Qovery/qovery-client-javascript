@@ -13,11 +13,11 @@
 
 import ApiClient from '../ApiClient';
 /**
-* Enum class LinkedServiceTypeEnum.
+* Enum class ServiceTypeForVariableEnum.
 * @enum {}
 * @readonly
 */
-export default class LinkedServiceTypeEnum {
+export default class ServiceTypeForVariableEnum {
     
         /**
          * value: "APPLICATION"
@@ -31,13 +31,6 @@ export default class LinkedServiceTypeEnum {
          * @const
          */
         "CONTAINER" = "CONTAINER";
-
-    
-        /**
-         * value: "DATABASE"
-         * @const
-         */
-        "DATABASE" = "DATABASE";
 
     
         /**
@@ -56,9 +49,9 @@ export default class LinkedServiceTypeEnum {
     
 
     /**
-    * Returns a <code>LinkedServiceTypeEnum</code> enum value from a Javascript object name.
+    * Returns a <code>ServiceTypeForVariableEnum</code> enum value from a Javascript object name.
     * @param {Object} data The plain JavaScript object containing the name of the enum value.
-    * @return {module:model/LinkedServiceTypeEnum} The enum <code>LinkedServiceTypeEnum</code> value.
+    * @return {module:model/ServiceTypeForVariableEnum} The enum <code>ServiceTypeForVariableEnum</code> value.
     */
     static constructFromObject(object) {
         return object;

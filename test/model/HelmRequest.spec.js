@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(QoveryApi.HelmRequest);
     });
 
+    it('should have the property ports (base name: "ports")', function() {
+      // uncomment below and update the code to test the property ports
+      //var instance = new QoveryApi.HelmRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.HelmRequest();

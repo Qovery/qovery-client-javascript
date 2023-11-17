@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ports** | [**[HelmPortRequestPortsInner]**](HelmPortRequestPortsInner.md) |  | [optional] 
 **name** | **String** | name is case insensitive | 
 **description** | **String** |  | [optional] 
 **timeoutSec** | **Number** | Maximum number of seconds allowed for helm to run before killing it and mark it as failed  | [optional] [default to 600]

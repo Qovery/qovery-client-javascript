@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import HelmPortRequest from './HelmPortRequest';
+import HelmPortRequestPortsInner from './HelmPortRequestPortsInner';
 import HelmRequestAllOf from './HelmRequestAllOf';
 import HelmRequestAllOfSource from './HelmRequestAllOfSource';
 import HelmRequestAllOfValuesOverride from './HelmRequestAllOfValuesOverride';
@@ -25,6 +27,7 @@ class HelmRequest {
     /**
      * Constructs a new <code>HelmRequest</code>.
      * @alias module:model/HelmRequest
+     * @implements module:model/HelmPortRequest
      * @implements module:model/HelmRequestAllOf
      * @param name {String} name is case insensitive
      * @param autoDeploy {Boolean} Specify if the helm will be automatically updated after receiving a new image tag or a new commit according to the source type.  
@@ -33,7 +36,7 @@ class HelmRequest {
      * @param valuesOverride {module:model/HelmRequestAllOfValuesOverride} 
      */
     constructor(name, autoDeploy, source, _arguments, valuesOverride) { 
-        HelmRequestAllOf.initialize(this, name, autoDeploy, source, _arguments, valuesOverride);
+        HelmPortRequest.initialize(this);HelmRequestAllOf.initialize(this, name, autoDeploy, source, _arguments, valuesOverride);
         HelmRequest.initialize(this, name, autoDeploy, source, _arguments, valuesOverride);
     }
 
@@ -60,8 +63,12 @@ class HelmRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new HelmRequest();
+            HelmPortRequest.constructFromObject(data, obj);
             HelmRequestAllOf.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [HelmPortRequestPortsInner]);
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -95,6 +102,11 @@ class HelmRequest {
 
 
 }
+
+/**
+ * @member {Array.<module:model/HelmPortRequestPortsInner>} ports
+ */
+HelmRequest.prototype['ports'] = undefined;
 
 /**
  * name is case insensitive
@@ -150,6 +162,11 @@ HelmRequest.prototype['allow_cluster_wide_resources'] = false;
 HelmRequest.prototype['values_override'] = undefined;
 
 
+// Implement HelmPortRequest interface:
+/**
+ * @member {Array.<module:model/HelmPortRequestPortsInner>} ports
+ */
+HelmPortRequest.prototype['ports'] = undefined;
 // Implement HelmRequestAllOf interface:
 /**
  * name is case insensitive

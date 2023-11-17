@@ -313,6 +313,9 @@ docs/HelmDeploymentRestrictionResponse.md
 docs/HelmDeploymentRestrictionResponseList.md
 docs/HelmForceEvent.md
 docs/HelmMainCallsApi.md
+docs/HelmPortProtocolEnum.md
+docs/HelmPortRequest.md
+docs/HelmPortRequestPortsInner.md
 docs/HelmRepositoriesApi.md
 docs/HelmRepositoryKindEnum.md
 docs/HelmRepositoryRequest.md
@@ -332,6 +335,7 @@ docs/HelmRequestAllOfValuesOverrideFileRaw.md
 docs/HelmRequestAllOfValuesOverrideFileRawValues.md
 docs/HelmResponse.md
 docs/HelmResponseAllOf.md
+docs/HelmResponseAllOfPorts.md
 docs/HelmResponseList.md
 docs/HelmsApi.md
 docs/Instance.md
@@ -917,6 +921,9 @@ src/model/HelmDeploymentRestrictionRequest.js
 src/model/HelmDeploymentRestrictionResponse.js
 src/model/HelmDeploymentRestrictionResponseList.js
 src/model/HelmForceEvent.js
+src/model/HelmPortProtocolEnum.js
+src/model/HelmPortRequest.js
+src/model/HelmPortRequestPortsInner.js
 src/model/HelmRepositoryKindEnum.js
 src/model/HelmRepositoryRequest.js
 src/model/HelmRepositoryRequestConfig.js
@@ -935,6 +942,7 @@ src/model/HelmRequestAllOfValuesOverrideFileRaw.js
 src/model/HelmRequestAllOfValuesOverrideFileRawValues.js
 src/model/HelmResponse.js
 src/model/HelmResponseAllOf.js
+src/model/HelmResponseAllOfPorts.js
 src/model/HelmResponseList.js
 src/model/Instance.js
 src/model/InstanceMemory.js
@@ -1490,6 +1498,9 @@ test/model/HelmDeploymentRestrictionRequest.spec.js
 test/model/HelmDeploymentRestrictionResponse.spec.js
 test/model/HelmDeploymentRestrictionResponseList.spec.js
 test/model/HelmForceEvent.spec.js
+test/model/HelmPortProtocolEnum.spec.js
+test/model/HelmPortRequest.spec.js
+test/model/HelmPortRequestPortsInner.spec.js
 test/model/HelmRepositoryKindEnum.spec.js
 test/model/HelmRepositoryRequest.spec.js
 test/model/HelmRepositoryRequestConfig.spec.js
@@ -1508,6 +1519,7 @@ test/model/HelmRequestAllOfValuesOverrideFileRaw.spec.js
 test/model/HelmRequestAllOfValuesOverrideFileRawValues.spec.js
 test/model/HelmResponse.spec.js
 test/model/HelmResponseAllOf.spec.js
+test/model/HelmResponseAllOfPorts.spec.js
 test/model/HelmResponseList.spec.js
 test/model/Instance.spec.js
 test/model/InstanceMemory.spec.js

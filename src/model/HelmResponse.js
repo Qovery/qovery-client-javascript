@@ -16,6 +16,7 @@ import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import Base from './Base';
 import HelmRequestAllOfValuesOverride from './HelmRequestAllOfValuesOverride';
 import HelmResponseAllOf from './HelmResponseAllOf';
+import HelmResponseAllOfPorts from './HelmResponseAllOfPorts';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -34,7 +35,7 @@ class HelmResponse {
      * @param environment {module:model/ReferenceObject} 
      * @param name {String} name is case insensitive
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
-     * @param autoDeploy {Boolean} Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type.  
+     * @param autoDeploy {Boolean} Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type. 
      * @param source {module:model/OneOfobjectobject} 
      * @param _arguments {Array.<String>} The extra arguments to pass to helm
      * @param allowClusterWideResources {Boolean} If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights 
@@ -100,6 +101,9 @@ class HelmResponse {
             if (data.hasOwnProperty('auto_deploy')) {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
+            if (data.hasOwnProperty('ports')) {
+                obj['ports'] = ApiClient.convertToType(data['ports'], [HelmResponseAllOfPorts]);
+            }
             if (data.hasOwnProperty('source')) {
                 obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
@@ -157,10 +161,15 @@ HelmResponse.prototype['description'] = undefined;
 HelmResponse.prototype['auto_preview'] = undefined;
 
 /**
- * Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type.  
+ * Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type. 
  * @member {Boolean} auto_deploy
  */
 HelmResponse.prototype['auto_deploy'] = undefined;
+
+/**
+ * @member {Array.<module:model/HelmResponseAllOfPorts>} ports
+ */
+HelmResponse.prototype['ports'] = undefined;
 
 /**
  * @member {module:model/OneOfobjectobject} source
@@ -219,10 +228,14 @@ HelmResponseAllOf.prototype['description'] = undefined;
  */
 HelmResponseAllOf.prototype['auto_preview'] = undefined;
 /**
- * Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type.  
+ * Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type. 
  * @member {Boolean} auto_deploy
  */
 HelmResponseAllOf.prototype['auto_deploy'] = undefined;
+/**
+ * @member {Array.<module:model/HelmResponseAllOfPorts>} ports
+ */
+HelmResponseAllOf.prototype['ports'] = undefined;
 /**
  * @member {module:model/OneOfobjectobject} source
  */

@@ -270,6 +270,9 @@ import HelmDeploymentRestrictionRequest from './model/HelmDeploymentRestrictionR
 import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestrictionResponse';
 import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
 import HelmForceEvent from './model/HelmForceEvent';
+import HelmPortProtocolEnum from './model/HelmPortProtocolEnum';
+import HelmPortRequest from './model/HelmPortRequest';
+import HelmPortRequestPortsInner from './model/HelmPortRequestPortsInner';
 import HelmRepositoryKindEnum from './model/HelmRepositoryKindEnum';
 import HelmRepositoryRequest from './model/HelmRepositoryRequest';
 import HelmRepositoryRequestConfig from './model/HelmRepositoryRequestConfig';
@@ -288,6 +291,7 @@ import HelmRequestAllOfValuesOverrideFileRaw from './model/HelmRequestAllOfValue
 import HelmRequestAllOfValuesOverrideFileRawValues from './model/HelmRequestAllOfValuesOverrideFileRawValues';
 import HelmResponse from './model/HelmResponse';
 import HelmResponseAllOf from './model/HelmResponseAllOf';
+import HelmResponseAllOfPorts from './model/HelmResponseAllOfPorts';
 import HelmResponseList from './model/HelmResponseList';
 import Instance from './model/Instance';
 import InstanceMemory from './model/InstanceMemory';
@@ -2169,6 +2173,24 @@ export {
     HelmForceEvent,
 
     /**
+     * The HelmPortProtocolEnum model constructor.
+     * @property {module:model/HelmPortProtocolEnum}
+     */
+    HelmPortProtocolEnum,
+
+    /**
+     * The HelmPortRequest model constructor.
+     * @property {module:model/HelmPortRequest}
+     */
+    HelmPortRequest,
+
+    /**
+     * The HelmPortRequestPortsInner model constructor.
+     * @property {module:model/HelmPortRequestPortsInner}
+     */
+    HelmPortRequestPortsInner,
+
+    /**
      * The HelmRepositoryKindEnum model constructor.
      * @property {module:model/HelmRepositoryKindEnum}
      */
@@ -2275,6 +2297,12 @@ export {
      * @property {module:model/HelmResponseAllOf}
      */
     HelmResponseAllOf,
+
+    /**
+     * The HelmResponseAllOfPorts model constructor.
+     * @property {module:model/HelmResponseAllOfPorts}
+     */
+    HelmResponseAllOfPorts,
 
     /**
      * The HelmResponseList model constructor.

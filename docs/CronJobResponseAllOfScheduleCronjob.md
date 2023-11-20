@@ -1,4 +1,4 @@
-# QoveryApi.JobResponseAllOfScheduleCronjob
+# QoveryApi.CronJobResponseAllOfScheduleCronjob
 
 ## Properties
 

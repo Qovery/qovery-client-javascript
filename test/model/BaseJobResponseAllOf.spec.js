@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.JobResponse();
+    instance = new QoveryApi.BaseJobResponseAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,124 +47,94 @@
       object[property] = value;
   }
 
-  describe('JobResponse', function() {
-    it('should create an instance of JobResponse', function() {
-      // uncomment below and update the code to test JobResponse
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be.a(QoveryApi.JobResponse);
-    });
-
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property updatedAt (base name: "updated_at")', function() {
-      // uncomment below and update the code to test the property updatedAt
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be();
+  describe('BaseJobResponseAllOf', function() {
+    it('should create an instance of BaseJobResponseAllOf', function() {
+      // uncomment below and update the code to test BaseJobResponseAllOf
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
+      //expect(instance).to.be.a(QoveryApi.BaseJobResponseAllOf);
     });
 
     it('should have the property environment (base name: "environment")', function() {
       // uncomment below and update the code to test the property environment
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property maximumCpu (base name: "maximum_cpu")', function() {
       // uncomment below and update the code to test the property maximumCpu
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property maximumMemory (base name: "maximum_memory")', function() {
       // uncomment below and update the code to test the property maximumMemory
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property cpu (base name: "cpu")', function() {
       // uncomment below and update the code to test the property cpu
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property memory (base name: "memory")', function() {
       // uncomment below and update the code to test the property memory
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property maxNbRestart (base name: "max_nb_restart")', function() {
       // uncomment below and update the code to test the property maxNbRestart
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property maxDurationSeconds (base name: "max_duration_seconds")', function() {
       // uncomment below and update the code to test the property maxDurationSeconds
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property autoPreview (base name: "auto_preview")', function() {
       // uncomment below and update the code to test the property autoPreview
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property port (base name: "port")', function() {
       // uncomment below and update the code to test the property port
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property source (base name: "source")', function() {
       // uncomment below and update the code to test the property source
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property healthchecks (base name: "healthchecks")', function() {
       // uncomment below and update the code to test the property healthchecks
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property autoDeploy (base name: "auto_deploy")', function() {
       // uncomment below and update the code to test the property autoDeploy
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property jobType (base name: "job_type")', function() {
-      // uncomment below and update the code to test the property jobType
-      //var instance = new QoveryApi.JobResponse();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property schedule (base name: "schedule")', function() {
-      // uncomment below and update the code to test the property schedule
-      //var instance = new QoveryApi.JobResponse();
+      //var instance = new QoveryApi.BaseJobResponseAllOf();
       //expect(instance).to.be();
     });
 

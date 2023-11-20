@@ -44,6 +44,8 @@ import BackupPaginatedResponseList from './model/BackupPaginatedResponseList';
 import BackupRequest from './model/BackupRequest';
 import BackupResponseList from './model/BackupResponseList';
 import Base from './model/Base';
+import BaseJobResponse from './model/BaseJobResponse';
+import BaseJobResponseAllOf from './model/BaseJobResponseAllOf';
 import BillingEnd from './model/BillingEnd';
 import BillingInfo from './model/BillingInfo';
 import BillingInfoRequest from './model/BillingInfoRequest';
@@ -133,6 +135,10 @@ import CredentialsRequest from './model/CredentialsRequest';
 import CreditCard from './model/CreditCard';
 import CreditCardRequest from './model/CreditCardRequest';
 import CreditCardResponseList from './model/CreditCardResponseList';
+import CronJobResponse from './model/CronJobResponse';
+import CronJobResponseAllOf from './model/CronJobResponseAllOf';
+import CronJobResponseAllOfSchedule from './model/CronJobResponseAllOfSchedule';
+import CronJobResponseAllOfScheduleCronjob from './model/CronJobResponseAllOfScheduleCronjob';
 import CurrentCost from './model/CurrentCost';
 import CustomDomain from './model/CustomDomain';
 import CustomDomainAllOf from './model/CustomDomainAllOf';
@@ -321,13 +327,13 @@ import JobRequestAllOfSource from './model/JobRequestAllOfSource';
 import JobRequestAllOfSourceDocker from './model/JobRequestAllOfSourceDocker';
 import JobRequestAllOfSourceImage from './model/JobRequestAllOfSourceImage';
 import JobResponse from './model/JobResponse';
-import JobResponseAllOf from './model/JobResponseAllOf';
-import JobResponseAllOfSchedule from './model/JobResponseAllOfSchedule';
-import JobResponseAllOfScheduleCronjob from './model/JobResponseAllOfScheduleCronjob';
 import JobResponseList from './model/JobResponseList';
 import JobScheduleEvent from './model/JobScheduleEvent';
 import Key from './model/Key';
 import KubernetesEnum from './model/KubernetesEnum';
+import LifecycleJobResponse from './model/LifecycleJobResponse';
+import LifecycleJobResponseAllOf from './model/LifecycleJobResponseAllOf';
+import LifecycleJobResponseAllOfSchedule from './model/LifecycleJobResponseAllOfSchedule';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import LinkedServiceTypeEnum from './model/LinkedServiceTypeEnum';
@@ -815,6 +821,18 @@ export {
      * @property {module:model/Base}
      */
     Base,
+
+    /**
+     * The BaseJobResponse model constructor.
+     * @property {module:model/BaseJobResponse}
+     */
+    BaseJobResponse,
+
+    /**
+     * The BaseJobResponseAllOf model constructor.
+     * @property {module:model/BaseJobResponseAllOf}
+     */
+    BaseJobResponseAllOf,
 
     /**
      * The BillingEnd model constructor.
@@ -1349,6 +1367,30 @@ export {
      * @property {module:model/CreditCardResponseList}
      */
     CreditCardResponseList,
+
+    /**
+     * The CronJobResponse model constructor.
+     * @property {module:model/CronJobResponse}
+     */
+    CronJobResponse,
+
+    /**
+     * The CronJobResponseAllOf model constructor.
+     * @property {module:model/CronJobResponseAllOf}
+     */
+    CronJobResponseAllOf,
+
+    /**
+     * The CronJobResponseAllOfSchedule model constructor.
+     * @property {module:model/CronJobResponseAllOfSchedule}
+     */
+    CronJobResponseAllOfSchedule,
+
+    /**
+     * The CronJobResponseAllOfScheduleCronjob model constructor.
+     * @property {module:model/CronJobResponseAllOfScheduleCronjob}
+     */
+    CronJobResponseAllOfScheduleCronjob,
 
     /**
      * The CurrentCost model constructor.
@@ -2479,24 +2521,6 @@ export {
     JobResponse,
 
     /**
-     * The JobResponseAllOf model constructor.
-     * @property {module:model/JobResponseAllOf}
-     */
-    JobResponseAllOf,
-
-    /**
-     * The JobResponseAllOfSchedule model constructor.
-     * @property {module:model/JobResponseAllOfSchedule}
-     */
-    JobResponseAllOfSchedule,
-
-    /**
-     * The JobResponseAllOfScheduleCronjob model constructor.
-     * @property {module:model/JobResponseAllOfScheduleCronjob}
-     */
-    JobResponseAllOfScheduleCronjob,
-
-    /**
      * The JobResponseList model constructor.
      * @property {module:model/JobResponseList}
      */
@@ -2519,6 +2543,24 @@ export {
      * @property {module:model/KubernetesEnum}
      */
     KubernetesEnum,
+
+    /**
+     * The LifecycleJobResponse model constructor.
+     * @property {module:model/LifecycleJobResponse}
+     */
+    LifecycleJobResponse,
+
+    /**
+     * The LifecycleJobResponseAllOf model constructor.
+     * @property {module:model/LifecycleJobResponseAllOf}
+     */
+    LifecycleJobResponseAllOf,
+
+    /**
+     * The LifecycleJobResponseAllOfSchedule model constructor.
+     * @property {module:model/LifecycleJobResponseAllOfSchedule}
+     */
+    LifecycleJobResponseAllOfSchedule,
 
     /**
      * The Link model constructor.

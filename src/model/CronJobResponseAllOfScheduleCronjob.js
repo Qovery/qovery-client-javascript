@@ -14,19 +14,19 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The JobResponseAllOfScheduleCronjob model module.
- * @module model/JobResponseAllOfScheduleCronjob
+ * The CronJobResponseAllOfScheduleCronjob model module.
+ * @module model/CronJobResponseAllOfScheduleCronjob
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class JobResponseAllOfScheduleCronjob {
+class CronJobResponseAllOfScheduleCronjob {
     /**
-     * Constructs a new <code>JobResponseAllOfScheduleCronjob</code>.
-     * @alias module:model/JobResponseAllOfScheduleCronjob
+     * Constructs a new <code>CronJobResponseAllOfScheduleCronjob</code>.
+     * @alias module:model/CronJobResponseAllOfScheduleCronjob
      * @param scheduledAt {String} Can only be set if the event is CRON.   Represent the cron format for the job schedule without seconds.   For example: `* * * * *` represent the cron to launch the job every minute.   See https://crontab.guru/ to WISIWIG interface.   Timezone is UT 
      */
     constructor(scheduledAt) { 
         
-        JobResponseAllOfScheduleCronjob.initialize(this, scheduledAt);
+        CronJobResponseAllOfScheduleCronjob.initialize(this, scheduledAt);
     }
 
     /**
@@ -39,15 +39,15 @@ class JobResponseAllOfScheduleCronjob {
     }
 
     /**
-     * Constructs a <code>JobResponseAllOfScheduleCronjob</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CronJobResponseAllOfScheduleCronjob</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/JobResponseAllOfScheduleCronjob} obj Optional instance to populate.
-     * @return {module:model/JobResponseAllOfScheduleCronjob} The populated <code>JobResponseAllOfScheduleCronjob</code> instance.
+     * @param {module:model/CronJobResponseAllOfScheduleCronjob} obj Optional instance to populate.
+     * @return {module:model/CronJobResponseAllOfScheduleCronjob} The populated <code>CronJobResponseAllOfScheduleCronjob</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new JobResponseAllOfScheduleCronjob();
+            obj = obj || new CronJobResponseAllOfScheduleCronjob();
 
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -68,24 +68,24 @@ class JobResponseAllOfScheduleCronjob {
 /**
  * @member {Array.<String>} arguments
  */
-JobResponseAllOfScheduleCronjob.prototype['arguments'] = undefined;
+CronJobResponseAllOfScheduleCronjob.prototype['arguments'] = undefined;
 
 /**
  * optional entrypoint when launching container
  * @member {String} entrypoint
  */
-JobResponseAllOfScheduleCronjob.prototype['entrypoint'] = undefined;
+CronJobResponseAllOfScheduleCronjob.prototype['entrypoint'] = undefined;
 
 /**
  * Can only be set if the event is CRON.   Represent the cron format for the job schedule without seconds.   For example: `* * * * *` represent the cron to launch the job every minute.   See https://crontab.guru/ to WISIWIG interface.   Timezone is UT 
  * @member {String} scheduled_at
  */
-JobResponseAllOfScheduleCronjob.prototype['scheduled_at'] = undefined;
+CronJobResponseAllOfScheduleCronjob.prototype['scheduled_at'] = undefined;
 
 
 
 
 
 
-export default JobResponseAllOfScheduleCronjob;
+export default CronJobResponseAllOfScheduleCronjob;
 

@@ -1,4 +1,4 @@
-# QoveryApi.JobResponseAllOf
+# QoveryApi.BaseJobResponseAllOf
 
 ## Properties
 
@@ -17,7 +17,6 @@ Name | Type | Description | Notes
 **port** | **Number** | Port where to run readiness and liveliness probes checks. The port will not be exposed externally | [optional] 
 **source** | [**OneOfobjectobject**](OneOfobjectobject.md) |  | 
 **healthchecks** | [**Healthcheck**](Healthcheck.md) |  | 
-**schedule** | [**JobResponseAllOfSchedule**](JobResponseAllOfSchedule.md) |  | [optional] 
 **autoDeploy** | **Boolean** | Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \&quot;Auto Deploy job\&quot; endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments  | [optional] 
 
 

@@ -1,4 +1,4 @@
-# QoveryApi.JobResponse
+# QoveryApi.BaseJobResponse
 
 ## Properties
 
@@ -21,16 +21,5 @@ Name | Type | Description | Notes
 **source** | [**OneOfobjectobject**](OneOfobjectobject.md) |  | 
 **healthchecks** | [**Healthcheck**](Healthcheck.md) |  | 
 **autoDeploy** | **Boolean** | Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \&quot;Auto Deploy job\&quot; endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments  | [optional] 
-**jobType** | **String** |  | 
-**schedule** | [**CronJobResponseAllOfSchedule**](CronJobResponseAllOfSchedule.md) |  | 
-
-
-
-## Enum: JobTypeEnum
-
-
-* `CRON` (value: `"CRON"`)
-
-
 
 

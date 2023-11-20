@@ -13,24 +13,24 @@
 
 import ApiClient from '../ApiClient';
 import ApplicationGitRepository from './ApplicationGitRepository';
+import BaseJobResponse from './BaseJobResponse';
 import ContainerSource from './ContainerSource';
-import CronJobResponse from './CronJobResponse';
-import CronJobResponseAllOfSchedule from './CronJobResponseAllOfSchedule';
 import Healthcheck from './Healthcheck';
-import LifecycleJobResponse from './LifecycleJobResponse';
+import LifecycleJobResponseAllOf from './LifecycleJobResponseAllOf';
+import LifecycleJobResponseAllOfSchedule from './LifecycleJobResponseAllOfSchedule';
 import ReferenceObject from './ReferenceObject';
 
 /**
- * The JobResponse model module.
- * @module model/JobResponse
+ * The LifecycleJobResponse model module.
+ * @module model/LifecycleJobResponse
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class JobResponse {
+class LifecycleJobResponse {
     /**
-     * Constructs a new <code>JobResponse</code>.
-     * @alias module:model/JobResponse
-     * @implements module:model/LifecycleJobResponse
-     * @implements module:model/CronJobResponse
+     * Constructs a new <code>LifecycleJobResponse</code>.
+     * @alias module:model/LifecycleJobResponse
+     * @implements module:model/BaseJobResponse
+     * @implements module:model/LifecycleJobResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
@@ -42,12 +42,12 @@ class JobResponse {
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      * @param source {module:model/OneOfobjectobject} 
      * @param healthchecks {module:model/Healthcheck} 
-     * @param jobType {module:model/JobResponse.JobTypeEnum} 
-     * @param schedule {module:model/CronJobResponseAllOfSchedule} 
+     * @param jobType {module:model/LifecycleJobResponse.JobTypeEnum} 
+     * @param schedule {module:model/LifecycleJobResponseAllOfSchedule} 
      */
     constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule) { 
-        LifecycleJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);CronJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);
-        JobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);
+        BaseJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);LifecycleJobResponseAllOf.initialize(this, jobType, schedule);
+        LifecycleJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);
     }
 
     /**
@@ -72,17 +72,17 @@ class JobResponse {
     }
 
     /**
-     * Constructs a <code>JobResponse</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>LifecycleJobResponse</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/JobResponse} obj Optional instance to populate.
-     * @return {module:model/JobResponse} The populated <code>JobResponse</code> instance.
+     * @param {module:model/LifecycleJobResponse} obj Optional instance to populate.
+     * @return {module:model/LifecycleJobResponse} The populated <code>LifecycleJobResponse</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new JobResponse();
-            LifecycleJobResponse.constructFromObject(data, obj);
-            CronJobResponse.constructFromObject(data, obj);
+            obj = obj || new LifecycleJobResponse();
+            BaseJobResponse.constructFromObject(data, obj);
+            LifecycleJobResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -139,7 +139,7 @@ class JobResponse {
                 obj['job_type'] = ApiClient.convertToType(data['job_type'], 'String');
             }
             if (data.hasOwnProperty('schedule')) {
-                obj['schedule'] = CronJobResponseAllOfSchedule.constructFromObject(data['schedule']);
+                obj['schedule'] = LifecycleJobResponseAllOfSchedule.constructFromObject(data['schedule']);
             }
         }
         return obj;
@@ -151,283 +151,197 @@ class JobResponse {
 /**
  * @member {String} id
  */
-JobResponse.prototype['id'] = undefined;
-
-/**
- * @member {Date} created_at
- */
-JobResponse.prototype['created_at'] = undefined;
-
-/**
- * @member {Date} updated_at
- */
-JobResponse.prototype['updated_at'] = undefined;
-
-/**
- * @member {module:model/ReferenceObject} environment
- */
-JobResponse.prototype['environment'] = undefined;
-
-/**
- * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
- * @member {Number} maximum_cpu
- */
-JobResponse.prototype['maximum_cpu'] = undefined;
-
-/**
- * Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
- * @member {Number} maximum_memory
- */
-JobResponse.prototype['maximum_memory'] = undefined;
-
-/**
- * name is case insensitive
- * @member {String} name
- */
-JobResponse.prototype['name'] = undefined;
-
-/**
- * @member {String} description
- */
-JobResponse.prototype['description'] = undefined;
-
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- */
-JobResponse.prototype['cpu'] = undefined;
-
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- */
-JobResponse.prototype['memory'] = undefined;
-
-/**
- * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
- * @member {Number} max_nb_restart
- */
-JobResponse.prototype['max_nb_restart'] = undefined;
-
-/**
- * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
- * @member {Number} max_duration_seconds
- */
-JobResponse.prototype['max_duration_seconds'] = undefined;
-
-/**
- * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
- * @member {Boolean} auto_preview
- */
-JobResponse.prototype['auto_preview'] = undefined;
-
-/**
- * Port where to run readiness and liveliness probes checks. The port will not be exposed externally
- * @member {Number} port
- */
-JobResponse.prototype['port'] = undefined;
-
-/**
- * @member {module:model/OneOfobjectobject} source
- */
-JobResponse.prototype['source'] = undefined;
-
-/**
- * @member {module:model/Healthcheck} healthchecks
- */
-JobResponse.prototype['healthchecks'] = undefined;
-
-/**
- * Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \"Auto Deploy job\" endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments 
- * @member {Boolean} auto_deploy
- */
-JobResponse.prototype['auto_deploy'] = undefined;
-
-/**
- * @member {module:model/JobResponse.JobTypeEnum} job_type
- */
-JobResponse.prototype['job_type'] = undefined;
-
-/**
- * @member {module:model/CronJobResponseAllOfSchedule} schedule
- */
-JobResponse.prototype['schedule'] = undefined;
-
-
-// Implement LifecycleJobResponse interface:
-/**
- * @member {String} id
- */
 LifecycleJobResponse.prototype['id'] = undefined;
+
 /**
  * @member {Date} created_at
  */
 LifecycleJobResponse.prototype['created_at'] = undefined;
+
 /**
  * @member {Date} updated_at
  */
 LifecycleJobResponse.prototype['updated_at'] = undefined;
+
 /**
  * @member {module:model/ReferenceObject} environment
  */
 LifecycleJobResponse.prototype['environment'] = undefined;
+
 /**
  * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
  */
 LifecycleJobResponse.prototype['maximum_cpu'] = undefined;
+
 /**
  * Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
  */
 LifecycleJobResponse.prototype['maximum_memory'] = undefined;
+
 /**
  * name is case insensitive
  * @member {String} name
  */
 LifecycleJobResponse.prototype['name'] = undefined;
+
 /**
  * @member {String} description
  */
 LifecycleJobResponse.prototype['description'] = undefined;
+
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
  */
 LifecycleJobResponse.prototype['cpu'] = undefined;
+
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
  */
 LifecycleJobResponse.prototype['memory'] = undefined;
+
 /**
  * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
  * @member {Number} max_nb_restart
  */
 LifecycleJobResponse.prototype['max_nb_restart'] = undefined;
+
 /**
  * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
  * @member {Number} max_duration_seconds
  */
 LifecycleJobResponse.prototype['max_duration_seconds'] = undefined;
+
 /**
  * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview
  */
 LifecycleJobResponse.prototype['auto_preview'] = undefined;
+
 /**
  * Port where to run readiness and liveliness probes checks. The port will not be exposed externally
  * @member {Number} port
  */
 LifecycleJobResponse.prototype['port'] = undefined;
+
 /**
  * @member {module:model/OneOfobjectobject} source
  */
 LifecycleJobResponse.prototype['source'] = undefined;
+
 /**
  * @member {module:model/Healthcheck} healthchecks
  */
 LifecycleJobResponse.prototype['healthchecks'] = undefined;
+
 /**
  * Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \"Auto Deploy job\" endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments 
  * @member {Boolean} auto_deploy
  */
 LifecycleJobResponse.prototype['auto_deploy'] = undefined;
+
 /**
  * @member {module:model/LifecycleJobResponse.JobTypeEnum} job_type
  */
 LifecycleJobResponse.prototype['job_type'] = undefined;
+
 /**
  * @member {module:model/LifecycleJobResponseAllOfSchedule} schedule
  */
 LifecycleJobResponse.prototype['schedule'] = undefined;
-// Implement CronJobResponse interface:
+
+
+// Implement BaseJobResponse interface:
 /**
  * @member {String} id
  */
-CronJobResponse.prototype['id'] = undefined;
+BaseJobResponse.prototype['id'] = undefined;
 /**
  * @member {Date} created_at
  */
-CronJobResponse.prototype['created_at'] = undefined;
+BaseJobResponse.prototype['created_at'] = undefined;
 /**
  * @member {Date} updated_at
  */
-CronJobResponse.prototype['updated_at'] = undefined;
+BaseJobResponse.prototype['updated_at'] = undefined;
 /**
  * @member {module:model/ReferenceObject} environment
  */
-CronJobResponse.prototype['environment'] = undefined;
+BaseJobResponse.prototype['environment'] = undefined;
 /**
  * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
  * @member {Number} maximum_cpu
  */
-CronJobResponse.prototype['maximum_cpu'] = undefined;
+BaseJobResponse.prototype['maximum_cpu'] = undefined;
 /**
  * Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
  * @member {Number} maximum_memory
  */
-CronJobResponse.prototype['maximum_memory'] = undefined;
+BaseJobResponse.prototype['maximum_memory'] = undefined;
 /**
  * name is case insensitive
  * @member {String} name
  */
-CronJobResponse.prototype['name'] = undefined;
+BaseJobResponse.prototype['name'] = undefined;
 /**
  * @member {String} description
  */
-CronJobResponse.prototype['description'] = undefined;
+BaseJobResponse.prototype['description'] = undefined;
 /**
  * unit is millicores (m). 1000m = 1 cpu
  * @member {Number} cpu
  */
-CronJobResponse.prototype['cpu'] = undefined;
+BaseJobResponse.prototype['cpu'] = undefined;
 /**
  * unit is MB. 1024 MB = 1GB
  * @member {Number} memory
  */
-CronJobResponse.prototype['memory'] = undefined;
+BaseJobResponse.prototype['memory'] = undefined;
 /**
  * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
  * @member {Number} max_nb_restart
  */
-CronJobResponse.prototype['max_nb_restart'] = undefined;
+BaseJobResponse.prototype['max_nb_restart'] = undefined;
 /**
  * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
  * @member {Number} max_duration_seconds
  */
-CronJobResponse.prototype['max_duration_seconds'] = undefined;
+BaseJobResponse.prototype['max_duration_seconds'] = undefined;
 /**
  * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview
  */
-CronJobResponse.prototype['auto_preview'] = undefined;
+BaseJobResponse.prototype['auto_preview'] = undefined;
 /**
  * Port where to run readiness and liveliness probes checks. The port will not be exposed externally
  * @member {Number} port
  */
-CronJobResponse.prototype['port'] = undefined;
+BaseJobResponse.prototype['port'] = undefined;
 /**
  * @member {module:model/OneOfobjectobject} source
  */
-CronJobResponse.prototype['source'] = undefined;
+BaseJobResponse.prototype['source'] = undefined;
 /**
  * @member {module:model/Healthcheck} healthchecks
  */
-CronJobResponse.prototype['healthchecks'] = undefined;
+BaseJobResponse.prototype['healthchecks'] = undefined;
 /**
  * Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \"Auto Deploy job\" endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments 
  * @member {Boolean} auto_deploy
  */
-CronJobResponse.prototype['auto_deploy'] = undefined;
+BaseJobResponse.prototype['auto_deploy'] = undefined;
+// Implement LifecycleJobResponseAllOf interface:
 /**
- * @member {module:model/CronJobResponse.JobTypeEnum} job_type
+ * @member {module:model/LifecycleJobResponseAllOf.JobTypeEnum} job_type
  */
-CronJobResponse.prototype['job_type'] = undefined;
+LifecycleJobResponseAllOf.prototype['job_type'] = undefined;
 /**
- * @member {module:model/CronJobResponseAllOfSchedule} schedule
+ * @member {module:model/LifecycleJobResponseAllOfSchedule} schedule
  */
-CronJobResponse.prototype['schedule'] = undefined;
+LifecycleJobResponseAllOf.prototype['schedule'] = undefined;
 
 
 
@@ -436,16 +350,16 @@ CronJobResponse.prototype['schedule'] = undefined;
  * @enum {String}
  * @readonly
  */
-JobResponse['JobTypeEnum'] = {
+LifecycleJobResponse['JobTypeEnum'] = {
 
     /**
-     * value: "CRON"
+     * value: "LIFECYCLE"
      * @const
      */
-    "CRON": "CRON"
+    "LIFECYCLE": "LIFECYCLE"
 };
 
 
 
-export default JobResponse;
+export default LifecycleJobResponse;
 

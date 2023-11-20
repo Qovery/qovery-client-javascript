@@ -13,22 +13,20 @@
 
 import ApiClient from '../ApiClient';
 import JobRequestAllOfScheduleOnStart from './JobRequestAllOfScheduleOnStart';
-import JobResponseAllOfScheduleCronjob from './JobResponseAllOfScheduleCronjob';
 
 /**
- * The JobResponseAllOfSchedule model module.
- * @module model/JobResponseAllOfSchedule
+ * The LifecycleJobResponseAllOfSchedule model module.
+ * @module model/LifecycleJobResponseAllOfSchedule
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class JobResponseAllOfSchedule {
+class LifecycleJobResponseAllOfSchedule {
     /**
-     * Constructs a new <code>JobResponseAllOfSchedule</code>.
-     * If you want to define a Cron job, only the &#x60;cronjob&#x60; property must be filled   A Lifecycle job should contain at least one property &#x60;on_XXX&#x60; among the 3 properties: &#x60;on_start&#x60;, &#x60;on_stop&#x60;, &#x60;on_delete&#x60; 
-     * @alias module:model/JobResponseAllOfSchedule
+     * Constructs a new <code>LifecycleJobResponseAllOfSchedule</code>.
+     * @alias module:model/LifecycleJobResponseAllOfSchedule
      */
     constructor() { 
         
-        JobResponseAllOfSchedule.initialize(this);
+        LifecycleJobResponseAllOfSchedule.initialize(this);
     }
 
     /**
@@ -40,15 +38,15 @@ class JobResponseAllOfSchedule {
     }
 
     /**
-     * Constructs a <code>JobResponseAllOfSchedule</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>LifecycleJobResponseAllOfSchedule</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/JobResponseAllOfSchedule} obj Optional instance to populate.
-     * @return {module:model/JobResponseAllOfSchedule} The populated <code>JobResponseAllOfSchedule</code> instance.
+     * @param {module:model/LifecycleJobResponseAllOfSchedule} obj Optional instance to populate.
+     * @return {module:model/LifecycleJobResponseAllOfSchedule} The populated <code>LifecycleJobResponseAllOfSchedule</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new JobResponseAllOfSchedule();
+            obj = obj || new LifecycleJobResponseAllOfSchedule();
 
             if (data.hasOwnProperty('on_start')) {
                 obj['on_start'] = JobRequestAllOfScheduleOnStart.constructFromObject(data['on_start']);
@@ -58,9 +56,6 @@ class JobResponseAllOfSchedule {
             }
             if (data.hasOwnProperty('on_delete')) {
                 obj['on_delete'] = JobRequestAllOfScheduleOnStart.constructFromObject(data['on_delete']);
-            }
-            if (data.hasOwnProperty('cronjob')) {
-                obj['cronjob'] = JobResponseAllOfScheduleCronjob.constructFromObject(data['cronjob']);
             }
         }
         return obj;
@@ -72,27 +67,22 @@ class JobResponseAllOfSchedule {
 /**
  * @member {module:model/JobRequestAllOfScheduleOnStart} on_start
  */
-JobResponseAllOfSchedule.prototype['on_start'] = undefined;
+LifecycleJobResponseAllOfSchedule.prototype['on_start'] = undefined;
 
 /**
  * @member {module:model/JobRequestAllOfScheduleOnStart} on_stop
  */
-JobResponseAllOfSchedule.prototype['on_stop'] = undefined;
+LifecycleJobResponseAllOfSchedule.prototype['on_stop'] = undefined;
 
 /**
  * @member {module:model/JobRequestAllOfScheduleOnStart} on_delete
  */
-JobResponseAllOfSchedule.prototype['on_delete'] = undefined;
-
-/**
- * @member {module:model/JobResponseAllOfScheduleCronjob} cronjob
- */
-JobResponseAllOfSchedule.prototype['cronjob'] = undefined;
+LifecycleJobResponseAllOfSchedule.prototype['on_delete'] = undefined;
 
 
 
 
 
 
-export default JobResponseAllOfSchedule;
+export default LifecycleJobResponseAllOfSchedule;
 

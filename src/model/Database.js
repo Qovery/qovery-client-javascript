@@ -38,10 +38,11 @@ class Database {
      * @param type {module:model/DatabaseTypeEnum} 
      * @param version {String} 
      * @param mode {module:model/DatabaseModeEnum} 
+     * @param environment {module:model/ReferenceObject} 
      */
-    constructor(id, createdAt, name, type, version, mode) { 
-        Base.initialize(this, id, createdAt);DatabaseRequest.initialize(this, name, type, version, mode);DatabaseAllOf.initialize(this);
-        Database.initialize(this, id, createdAt, name, type, version, mode);
+    constructor(id, createdAt, name, type, version, mode, environment) { 
+        Base.initialize(this, id, createdAt);DatabaseRequest.initialize(this, name, type, version, mode);DatabaseAllOf.initialize(this, environment);
+        Database.initialize(this, id, createdAt, name, type, version, mode, environment);
     }
 
     /**
@@ -49,13 +50,14 @@ class Database {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, name, type, version, mode) { 
+    static initialize(obj, id, createdAt, name, type, version, mode, environment) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['name'] = name;
         obj['type'] = type;
         obj['version'] = version;
         obj['mode'] = mode;
+        obj['environment'] = environment;
     }
 
     /**

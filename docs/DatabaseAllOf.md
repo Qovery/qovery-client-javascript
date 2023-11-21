@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**environment** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
+**environment** | [**ReferenceObject**](ReferenceObject.md) |  | 
 **host** | **String** |  | [optional] 
 **port** | **Number** |  | [optional] 
 **maximumCpu** | **Number** | Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m &#x3D; 1 cpu | [optional] 

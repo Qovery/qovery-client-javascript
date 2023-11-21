@@ -240,6 +240,7 @@ import EnvironmentServiceIdsAllRequest from './model/EnvironmentServiceIdsAllReq
 import EnvironmentStats from './model/EnvironmentStats';
 import EnvironmentStatsResponseList from './model/EnvironmentStatsResponseList';
 import EnvironmentStatus from './model/EnvironmentStatus';
+import EnvironmentStatusEventOriginEnum from './model/EnvironmentStatusEventOriginEnum';
 import EnvironmentStatusList from './model/EnvironmentStatusList';
 import EnvironmentStatuses from './model/EnvironmentStatuses';
 import EnvironmentStatusesWithStages from './model/EnvironmentStatusesWithStages';
@@ -1997,6 +1998,12 @@ export {
      * @property {module:model/EnvironmentStatus}
      */
     EnvironmentStatus,
+
+    /**
+     * The EnvironmentStatusEventOriginEnum model constructor.
+     * @property {module:model/EnvironmentStatusEventOriginEnum}
+     */
+    EnvironmentStatusEventOriginEnum,
 
     /**
      * The EnvironmentStatusList model constructor.

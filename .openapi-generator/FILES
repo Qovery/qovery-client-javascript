@@ -273,6 +273,7 @@ docs/EnvironmentServiceIdsAllRequest.md
 docs/EnvironmentStats.md
 docs/EnvironmentStatsResponseList.md
 docs/EnvironmentStatus.md
+docs/EnvironmentStatusEventOriginEnum.md
 docs/EnvironmentStatusList.md
 docs/EnvironmentStatuses.md
 docs/EnvironmentStatusesWithStages.md
@@ -897,6 +898,7 @@ src/model/EnvironmentServiceIdsAllRequest.js
 src/model/EnvironmentStats.js
 src/model/EnvironmentStatsResponseList.js
 src/model/EnvironmentStatus.js
+src/model/EnvironmentStatusEventOriginEnum.js
 src/model/EnvironmentStatusList.js
 src/model/EnvironmentStatuses.js
 src/model/EnvironmentStatusesWithStages.js
@@ -1480,6 +1482,7 @@ test/model/EnvironmentServiceIdsAllRequest.spec.js
 test/model/EnvironmentStats.spec.js
 test/model/EnvironmentStatsResponseList.spec.js
 test/model/EnvironmentStatus.spec.js
+test/model/EnvironmentStatusEventOriginEnum.spec.js
 test/model/EnvironmentStatusList.spec.js
 test/model/EnvironmentStatuses.spec.js
 test/model/EnvironmentStatusesWithStages.spec.js

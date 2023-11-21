@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import OrganizationEventOrigin from './OrganizationEventOrigin';
+import EnvironmentStatusEventOriginEnum from './EnvironmentStatusEventOriginEnum';
 import StateEnum from './StateEnum';
 
 /**
@@ -74,7 +74,7 @@ class EnvironmentStatus {
                 obj['total_deployment_duration_in_seconds'] = ApiClient.convertToType(data['total_deployment_duration_in_seconds'], 'Number');
             }
             if (data.hasOwnProperty('origin')) {
-                obj['origin'] = OrganizationEventOrigin.constructFromObject(data['origin']);
+                obj['origin'] = EnvironmentStatusEventOriginEnum.constructFromObject(data['origin']);
             }
             if (data.hasOwnProperty('triggered_by')) {
                 obj['triggered_by'] = ApiClient.convertToType(data['triggered_by'], 'String');
@@ -117,7 +117,7 @@ EnvironmentStatus.prototype['last_deployment_id'] = undefined;
 EnvironmentStatus.prototype['total_deployment_duration_in_seconds'] = undefined;
 
 /**
- * @member {module:model/OrganizationEventOrigin} origin
+ * @member {module:model/EnvironmentStatusEventOriginEnum} origin
  */
 EnvironmentStatus.prototype['origin'] = undefined;
 

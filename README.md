@@ -766,6 +766,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentStats](docs/EnvironmentStats.md)
  - [QoveryApi.EnvironmentStatsResponseList](docs/EnvironmentStatsResponseList.md)
  - [QoveryApi.EnvironmentStatus](docs/EnvironmentStatus.md)
+ - [QoveryApi.EnvironmentStatusEventOriginEnum](docs/EnvironmentStatusEventOriginEnum.md)
  - [QoveryApi.EnvironmentStatusList](docs/EnvironmentStatusList.md)
  - [QoveryApi.EnvironmentStatuses](docs/EnvironmentStatuses.md)
  - [QoveryApi.EnvironmentStatusesWithStages](docs/EnvironmentStatusesWithStages.md)

@@ -1,4 +1,4 @@
-# QoveryApi.HelmRequestAllOfSourceRepository
+# QoveryApi.HelmRequestAllOfSourceHelmRepository
 
 ## Properties
 

@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelmRequestAllOfSourceGit from './HelmRequestAllOfSourceGit';
-import HelmRequestAllOfSourceRepository from './HelmRequestAllOfSourceRepository';
+import HelmGitRepositoryRequest from './HelmGitRepositoryRequest';
+import HelmRequestAllOfSourceHelmRepository from './HelmRequestAllOfSourceHelmRepository';
 
 /**
  * The HelmRequestAllOfSource model module.
@@ -49,11 +49,11 @@ class HelmRequestAllOfSource {
         if (data) {
             obj = obj || new HelmRequestAllOfSource();
 
-            if (data.hasOwnProperty('git')) {
-                obj['git'] = HelmRequestAllOfSourceGit.constructFromObject(data['git']);
+            if (data.hasOwnProperty('git_repository')) {
+                obj['git_repository'] = HelmGitRepositoryRequest.constructFromObject(data['git_repository']);
             }
-            if (data.hasOwnProperty('repository')) {
-                obj['repository'] = HelmRequestAllOfSourceRepository.constructFromObject(data['repository']);
+            if (data.hasOwnProperty('helm_repository')) {
+                obj['helm_repository'] = HelmRequestAllOfSourceHelmRepository.constructFromObject(data['helm_repository']);
             }
         }
         return obj;
@@ -63,14 +63,14 @@ class HelmRequestAllOfSource {
 }
 
 /**
- * @member {module:model/HelmRequestAllOfSourceGit} git
+ * @member {module:model/HelmGitRepositoryRequest} git_repository
  */
-HelmRequestAllOfSource.prototype['git'] = undefined;
+HelmRequestAllOfSource.prototype['git_repository'] = undefined;
 
 /**
- * @member {module:model/HelmRequestAllOfSourceRepository} repository
+ * @member {module:model/HelmRequestAllOfSourceHelmRepository} helm_repository
  */
-HelmRequestAllOfSource.prototype['repository'] = undefined;
+HelmRequestAllOfSource.prototype['helm_repository'] = undefined;
 
 
 

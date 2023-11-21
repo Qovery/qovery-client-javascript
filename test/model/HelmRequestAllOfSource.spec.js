@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfSource);
     });
 
-    it('should have the property git (base name: "git")', function() {
-      // uncomment below and update the code to test the property git
+    it('should have the property gitRepository (base name: "git_repository")', function() {
+      // uncomment below and update the code to test the property gitRepository
       //var instance = new QoveryApi.HelmRequestAllOfSource();
       //expect(instance).to.be();
     });
 
-    it('should have the property repository (base name: "repository")', function() {
-      // uncomment below and update the code to test the property repository
+    it('should have the property helmRepository (base name: "helm_repository")', function() {
+      // uncomment below and update the code to test the property helmRepository
       //var instance = new QoveryApi.HelmRequestAllOfSource();
       //expect(instance).to.be();
     });

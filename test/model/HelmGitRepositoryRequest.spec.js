@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.HelmRequestAllOfSourceGit();
+    instance = new QoveryApi.HelmGitRepositoryRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,34 @@
       object[property] = value;
   }
 
-  describe('HelmRequestAllOfSourceGit', function() {
-    it('should create an instance of HelmRequestAllOfSourceGit', function() {
-      // uncomment below and update the code to test HelmRequestAllOfSourceGit
-      //var instance = new QoveryApi.HelmRequestAllOfSourceGit();
-      //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfSourceGit);
+  describe('HelmGitRepositoryRequest', function() {
+    it('should create an instance of HelmGitRepositoryRequest', function() {
+      // uncomment below and update the code to test HelmGitRepositoryRequest
+      //var instance = new QoveryApi.HelmGitRepositoryRequest();
+      //expect(instance).to.be.a(QoveryApi.HelmGitRepositoryRequest);
     });
 
-    it('should have the property gitRepository (base name: "git_repository")', function() {
-      // uncomment below and update the code to test the property gitRepository
-      //var instance = new QoveryApi.HelmRequestAllOfSourceGit();
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instance = new QoveryApi.HelmGitRepositoryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property branch (base name: "branch")', function() {
+      // uncomment below and update the code to test the property branch
+      //var instance = new QoveryApi.HelmGitRepositoryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property rootPath (base name: "root_path")', function() {
+      // uncomment below and update the code to test the property rootPath
+      //var instance = new QoveryApi.HelmGitRepositoryRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property gitTokenId (base name: "git_token_id")', function() {
+      // uncomment below and update the code to test the property gitTokenId
+      //var instance = new QoveryApi.HelmGitRepositoryRequest();
       //expect(instance).to.be();
     });
 

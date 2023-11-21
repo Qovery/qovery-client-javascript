@@ -318,6 +318,7 @@ docs/HelmDeploymentRestrictionRequest.md
 docs/HelmDeploymentRestrictionResponse.md
 docs/HelmDeploymentRestrictionResponseList.md
 docs/HelmForceEvent.md
+docs/HelmGitRepositoryRequest.md
 docs/HelmMainCallsApi.md
 docs/HelmPortProtocolEnum.md
 docs/HelmPortRequest.md
@@ -332,8 +333,7 @@ docs/HelmRepositoryResponseList.md
 docs/HelmRequest.md
 docs/HelmRequestAllOf.md
 docs/HelmRequestAllOfSource.md
-docs/HelmRequestAllOfSourceGit.md
-docs/HelmRequestAllOfSourceRepository.md
+docs/HelmRequestAllOfSourceHelmRepository.md
 docs/HelmRequestAllOfValuesOverride.md
 docs/HelmRequestAllOfValuesOverrideFile.md
 docs/HelmRequestAllOfValuesOverrideFileGit.md
@@ -933,6 +933,7 @@ src/model/HelmDeploymentRestrictionRequest.js
 src/model/HelmDeploymentRestrictionResponse.js
 src/model/HelmDeploymentRestrictionResponseList.js
 src/model/HelmForceEvent.js
+src/model/HelmGitRepositoryRequest.js
 src/model/HelmPortProtocolEnum.js
 src/model/HelmPortRequest.js
 src/model/HelmPortRequestPortsInner.js
@@ -945,8 +946,7 @@ src/model/HelmRepositoryResponseList.js
 src/model/HelmRequest.js
 src/model/HelmRequestAllOf.js
 src/model/HelmRequestAllOfSource.js
-src/model/HelmRequestAllOfSourceGit.js
-src/model/HelmRequestAllOfSourceRepository.js
+src/model/HelmRequestAllOfSourceHelmRepository.js
 src/model/HelmRequestAllOfValuesOverride.js
 src/model/HelmRequestAllOfValuesOverrideFile.js
 src/model/HelmRequestAllOfValuesOverrideFileGit.js
@@ -1516,6 +1516,7 @@ test/model/HelmDeploymentRestrictionRequest.spec.js
 test/model/HelmDeploymentRestrictionResponse.spec.js
 test/model/HelmDeploymentRestrictionResponseList.spec.js
 test/model/HelmForceEvent.spec.js
+test/model/HelmGitRepositoryRequest.spec.js
 test/model/HelmPortProtocolEnum.spec.js
 test/model/HelmPortRequest.spec.js
 test/model/HelmPortRequestPortsInner.spec.js
@@ -1528,8 +1529,7 @@ test/model/HelmRepositoryResponseList.spec.js
 test/model/HelmRequest.spec.js
 test/model/HelmRequestAllOf.spec.js
 test/model/HelmRequestAllOfSource.spec.js
-test/model/HelmRequestAllOfSourceGit.spec.js
-test/model/HelmRequestAllOfSourceRepository.spec.js
+test/model/HelmRequestAllOfSourceHelmRepository.spec.js
 test/model/HelmRequestAllOfValuesOverride.spec.js
 test/model/HelmRequestAllOfValuesOverrideFile.spec.js
 test/model/HelmRequestAllOfValuesOverrideFileGit.spec.js

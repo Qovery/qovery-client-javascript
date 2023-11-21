@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The HelmRequestAllOfSourceRepository model module.
- * @module model/HelmRequestAllOfSourceRepository
+ * The HelmRequestAllOfSourceHelmRepository model module.
+ * @module model/HelmRequestAllOfSourceHelmRepository
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class HelmRequestAllOfSourceRepository {
+class HelmRequestAllOfSourceHelmRepository {
     /**
-     * Constructs a new <code>HelmRequestAllOfSourceRepository</code>.
-     * @alias module:model/HelmRequestAllOfSourceRepository
+     * Constructs a new <code>HelmRequestAllOfSourceHelmRepository</code>.
+     * @alias module:model/HelmRequestAllOfSourceHelmRepository
      */
     constructor() { 
         
-        HelmRequestAllOfSourceRepository.initialize(this);
+        HelmRequestAllOfSourceHelmRepository.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class HelmRequestAllOfSourceRepository {
     }
 
     /**
-     * Constructs a <code>HelmRequestAllOfSourceRepository</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>HelmRequestAllOfSourceHelmRepository</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/HelmRequestAllOfSourceRepository} obj Optional instance to populate.
-     * @return {module:model/HelmRequestAllOfSourceRepository} The populated <code>HelmRequestAllOfSourceRepository</code> instance.
+     * @param {module:model/HelmRequestAllOfSourceHelmRepository} obj Optional instance to populate.
+     * @return {module:model/HelmRequestAllOfSourceHelmRepository} The populated <code>HelmRequestAllOfSourceHelmRepository</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new HelmRequestAllOfSourceRepository();
+            obj = obj || new HelmRequestAllOfSourceHelmRepository();
 
             if (data.hasOwnProperty('repository')) {
                 obj['repository'] = ApiClient.convertToType(data['repository'], 'String');
@@ -67,24 +67,24 @@ class HelmRequestAllOfSourceRepository {
  * The id of the helm repository
  * @member {String} repository
  */
-HelmRequestAllOfSourceRepository.prototype['repository'] = undefined;
+HelmRequestAllOfSourceHelmRepository.prototype['repository'] = undefined;
 
 /**
  * The name of the chart in the repository
  * @member {String} chart_name
  */
-HelmRequestAllOfSourceRepository.prototype['chart_name'] = undefined;
+HelmRequestAllOfSourceHelmRepository.prototype['chart_name'] = undefined;
 
 /**
  * The version of the chart to use
  * @member {String} chart_version
  */
-HelmRequestAllOfSourceRepository.prototype['chart_version'] = undefined;
+HelmRequestAllOfSourceHelmRepository.prototype['chart_version'] = undefined;
 
 
 
 
 
 
-export default HelmRequestAllOfSourceRepository;
+export default HelmRequestAllOfSourceHelmRepository;
 

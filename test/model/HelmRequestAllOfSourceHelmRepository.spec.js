@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.HelmRequestAllOfSourceRepository();
+    instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('HelmRequestAllOfSourceRepository', function() {
-    it('should create an instance of HelmRequestAllOfSourceRepository', function() {
-      // uncomment below and update the code to test HelmRequestAllOfSourceRepository
-      //var instance = new QoveryApi.HelmRequestAllOfSourceRepository();
-      //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfSourceRepository);
+  describe('HelmRequestAllOfSourceHelmRepository', function() {
+    it('should create an instance of HelmRequestAllOfSourceHelmRepository', function() {
+      // uncomment below and update the code to test HelmRequestAllOfSourceHelmRepository
+      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
+      //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfSourceHelmRepository);
     });
 
     it('should have the property repository (base name: "repository")', function() {
       // uncomment below and update the code to test the property repository
-      //var instance = new QoveryApi.HelmRequestAllOfSourceRepository();
+      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
       //expect(instance).to.be();
     });
 
     it('should have the property chartName (base name: "chart_name")', function() {
       // uncomment below and update the code to test the property chartName
-      //var instance = new QoveryApi.HelmRequestAllOfSourceRepository();
+      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
       //expect(instance).to.be();
     });
 
     it('should have the property chartVersion (base name: "chart_version")', function() {
       // uncomment below and update the code to test the property chartVersion
-      //var instance = new QoveryApi.HelmRequestAllOfSourceRepository();
+      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
       //expect(instance).to.be();
     });
 

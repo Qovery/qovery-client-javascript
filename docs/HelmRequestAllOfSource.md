@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**git** | [**HelmRequestAllOfSourceGit**](HelmRequestAllOfSourceGit.md) |  | [optional] 
-**repository** | [**HelmRequestAllOfSourceRepository**](HelmRequestAllOfSourceRepository.md) |  | [optional] 
+**gitRepository** | [**HelmGitRepositoryRequest**](HelmGitRepositoryRequest.md) |  | [optional] 
+**helmRepository** | [**HelmRequestAllOfSourceHelmRepository**](HelmRequestAllOfSourceHelmRepository.md) |  | [optional] 
 
 

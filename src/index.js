@@ -276,6 +276,7 @@ import HelmDeploymentRestrictionRequest from './model/HelmDeploymentRestrictionR
 import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestrictionResponse';
 import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
 import HelmForceEvent from './model/HelmForceEvent';
+import HelmGitRepositoryRequest from './model/HelmGitRepositoryRequest';
 import HelmPortProtocolEnum from './model/HelmPortProtocolEnum';
 import HelmPortRequest from './model/HelmPortRequest';
 import HelmPortRequestPortsInner from './model/HelmPortRequestPortsInner';
@@ -288,8 +289,7 @@ import HelmRepositoryResponseList from './model/HelmRepositoryResponseList';
 import HelmRequest from './model/HelmRequest';
 import HelmRequestAllOf from './model/HelmRequestAllOf';
 import HelmRequestAllOfSource from './model/HelmRequestAllOfSource';
-import HelmRequestAllOfSourceGit from './model/HelmRequestAllOfSourceGit';
-import HelmRequestAllOfSourceRepository from './model/HelmRequestAllOfSourceRepository';
+import HelmRequestAllOfSourceHelmRepository from './model/HelmRequestAllOfSourceHelmRepository';
 import HelmRequestAllOfValuesOverride from './model/HelmRequestAllOfValuesOverride';
 import HelmRequestAllOfValuesOverrideFile from './model/HelmRequestAllOfValuesOverrideFile';
 import HelmRequestAllOfValuesOverrideFileGit from './model/HelmRequestAllOfValuesOverrideFileGit';
@@ -2215,6 +2215,12 @@ export {
     HelmForceEvent,
 
     /**
+     * The HelmGitRepositoryRequest model constructor.
+     * @property {module:model/HelmGitRepositoryRequest}
+     */
+    HelmGitRepositoryRequest,
+
+    /**
      * The HelmPortProtocolEnum model constructor.
      * @property {module:model/HelmPortProtocolEnum}
      */
@@ -2287,16 +2293,10 @@ export {
     HelmRequestAllOfSource,
 
     /**
-     * The HelmRequestAllOfSourceGit model constructor.
-     * @property {module:model/HelmRequestAllOfSourceGit}
+     * The HelmRequestAllOfSourceHelmRepository model constructor.
+     * @property {module:model/HelmRequestAllOfSourceHelmRepository}
      */
-    HelmRequestAllOfSourceGit,
-
-    /**
-     * The HelmRequestAllOfSourceRepository model constructor.
-     * @property {module:model/HelmRequestAllOfSourceRepository}
-     */
-    HelmRequestAllOfSourceRepository,
+    HelmRequestAllOfSourceHelmRepository,
 
     /**
      * The HelmRequestAllOfValuesOverride model constructor.

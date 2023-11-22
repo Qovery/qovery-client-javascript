@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
+    instance = new QoveryApi.HelmResponseAllOfValuesOverride();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,34 @@
       object[property] = value;
   }
 
-  describe('HelmRequestAllOfValuesOverrideFileGit', function() {
-    it('should create an instance of HelmRequestAllOfValuesOverrideFileGit', function() {
-      // uncomment below and update the code to test HelmRequestAllOfValuesOverrideFileGit
-      //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
-      //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfValuesOverrideFileGit);
+  describe('HelmResponseAllOfValuesOverride', function() {
+    it('should create an instance of HelmResponseAllOfValuesOverride', function() {
+      // uncomment below and update the code to test HelmResponseAllOfValuesOverride
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverride();
+      //expect(instance).to.be.a(QoveryApi.HelmResponseAllOfValuesOverride);
     });
 
-    it('should have the property gitRepository (base name: "git_repository")', function() {
-      // uncomment below and update the code to test the property gitRepository
-      //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
+    it('should have the property set (base name: "set")', function() {
+      // uncomment below and update the code to test the property set
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverride();
       //expect(instance).to.be();
     });
 
-    it('should have the property paths (base name: "paths")', function() {
-      // uncomment below and update the code to test the property paths
-      //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
+    it('should have the property setString (base name: "set_string")', function() {
+      // uncomment below and update the code to test the property setString
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverride();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property setJson (base name: "set_json")', function() {
+      // uncomment below and update the code to test the property setJson
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverride();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property file (base name: "file")', function() {
+      // uncomment below and update the code to test the property file
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverride();
       //expect(instance).to.be();
     });
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.HelmRequestAllOfSource();
+    instance = new QoveryApi.HelmResponseAllOfValuesOverrideFile();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('HelmRequestAllOfSource', function() {
-    it('should create an instance of HelmRequestAllOfSource', function() {
-      // uncomment below and update the code to test HelmRequestAllOfSource
-      //var instance = new QoveryApi.HelmRequestAllOfSource();
-      //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfSource);
+  describe('HelmResponseAllOfValuesOverrideFile', function() {
+    it('should create an instance of HelmResponseAllOfValuesOverrideFile', function() {
+      // uncomment below and update the code to test HelmResponseAllOfValuesOverrideFile
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverrideFile();
+      //expect(instance).to.be.a(QoveryApi.HelmResponseAllOfValuesOverrideFile);
     });
 
-    it('should have the property gitRepository (base name: "git_repository")', function() {
-      // uncomment below and update the code to test the property gitRepository
-      //var instance = new QoveryApi.HelmRequestAllOfSource();
+    it('should have the property raw (base name: "raw")', function() {
+      // uncomment below and update the code to test the property raw
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverrideFile();
       //expect(instance).to.be();
     });
 
-    it('should have the property helmRepository (base name: "helm_repository")', function() {
-      // uncomment below and update the code to test the property helmRepository
-      //var instance = new QoveryApi.HelmRequestAllOfSource();
+    it('should have the property git (base name: "git")', function() {
+      // uncomment below and update the code to test the property git
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverrideFile();
       //expect(instance).to.be();
     });
 

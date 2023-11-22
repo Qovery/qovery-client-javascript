@@ -13,21 +13,21 @@
 
 import ApiClient from '../ApiClient';
 import HelmRequestAllOfValuesOverrideFileRaw from './HelmRequestAllOfValuesOverrideFileRaw';
-import HelmValuesGitRepositoryRequest from './HelmValuesGitRepositoryRequest';
+import HelmResponseAllOfValuesOverrideFileGit from './HelmResponseAllOfValuesOverrideFileGit';
 
 /**
- * The HelmRequestAllOfValuesOverrideFile model module.
- * @module model/HelmRequestAllOfValuesOverrideFile
+ * The HelmResponseAllOfValuesOverrideFile model module.
+ * @module model/HelmResponseAllOfValuesOverrideFile
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class HelmRequestAllOfValuesOverrideFile {
+class HelmResponseAllOfValuesOverrideFile {
     /**
-     * Constructs a new <code>HelmRequestAllOfValuesOverrideFile</code>.
-     * @alias module:model/HelmRequestAllOfValuesOverrideFile
+     * Constructs a new <code>HelmResponseAllOfValuesOverrideFile</code>.
+     * @alias module:model/HelmResponseAllOfValuesOverrideFile
      */
     constructor() { 
         
-        HelmRequestAllOfValuesOverrideFile.initialize(this);
+        HelmResponseAllOfValuesOverrideFile.initialize(this);
     }
 
     /**
@@ -39,21 +39,21 @@ class HelmRequestAllOfValuesOverrideFile {
     }
 
     /**
-     * Constructs a <code>HelmRequestAllOfValuesOverrideFile</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>HelmResponseAllOfValuesOverrideFile</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/HelmRequestAllOfValuesOverrideFile} obj Optional instance to populate.
-     * @return {module:model/HelmRequestAllOfValuesOverrideFile} The populated <code>HelmRequestAllOfValuesOverrideFile</code> instance.
+     * @param {module:model/HelmResponseAllOfValuesOverrideFile} obj Optional instance to populate.
+     * @return {module:model/HelmResponseAllOfValuesOverrideFile} The populated <code>HelmResponseAllOfValuesOverrideFile</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new HelmRequestAllOfValuesOverrideFile();
+            obj = obj || new HelmResponseAllOfValuesOverrideFile();
 
             if (data.hasOwnProperty('raw')) {
                 obj['raw'] = HelmRequestAllOfValuesOverrideFileRaw.constructFromObject(data['raw']);
             }
-            if (data.hasOwnProperty('git_repository')) {
-                obj['git_repository'] = HelmValuesGitRepositoryRequest.constructFromObject(data['git_repository']);
+            if (data.hasOwnProperty('git')) {
+                obj['git'] = HelmResponseAllOfValuesOverrideFileGit.constructFromObject(data['git']);
             }
         }
         return obj;
@@ -65,17 +65,17 @@ class HelmRequestAllOfValuesOverrideFile {
 /**
  * @member {module:model/HelmRequestAllOfValuesOverrideFileRaw} raw
  */
-HelmRequestAllOfValuesOverrideFile.prototype['raw'] = undefined;
+HelmResponseAllOfValuesOverrideFile.prototype['raw'] = undefined;
 
 /**
- * @member {module:model/HelmValuesGitRepositoryRequest} git_repository
+ * @member {module:model/HelmResponseAllOfValuesOverrideFileGit} git
  */
-HelmRequestAllOfValuesOverrideFile.prototype['git_repository'] = undefined;
+HelmResponseAllOfValuesOverrideFile.prototype['git'] = undefined;
 
 
 
 
 
 
-export default HelmRequestAllOfValuesOverrideFile;
+export default HelmResponseAllOfValuesOverrideFile;
 

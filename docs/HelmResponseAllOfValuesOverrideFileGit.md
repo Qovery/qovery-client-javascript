@@ -1,4 +1,4 @@
-# QoveryApi.HelmRequestAllOfValuesOverrideFileGit
+# QoveryApi.HelmResponseAllOfValuesOverrideFileGit
 
 ## Properties
 

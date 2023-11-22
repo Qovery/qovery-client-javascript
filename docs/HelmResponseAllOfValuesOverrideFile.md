@@ -1,10 +1,10 @@
-# QoveryApi.HelmRequestAllOfValuesOverrideFile
+# QoveryApi.HelmResponseAllOfValuesOverrideFile
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **raw** | [**HelmRequestAllOfValuesOverrideFileRaw**](HelmRequestAllOfValuesOverrideFileRaw.md) |  | [optional] 
-**gitRepository** | [**HelmValuesGitRepositoryRequest**](HelmValuesGitRepositoryRequest.md) |  | [optional] 
+**git** | [**HelmResponseAllOfValuesOverrideFileGit**](HelmResponseAllOfValuesOverrideFileGit.md) |  | [optional] 
 
 

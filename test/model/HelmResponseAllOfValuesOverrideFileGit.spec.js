@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
+    instance = new QoveryApi.HelmResponseAllOfValuesOverrideFileGit();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,22 @@
       object[property] = value;
   }
 
-  describe('HelmRequestAllOfSourceHelmRepository', function() {
-    it('should create an instance of HelmRequestAllOfSourceHelmRepository', function() {
-      // uncomment below and update the code to test HelmRequestAllOfSourceHelmRepository
-      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
-      //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfSourceHelmRepository);
+  describe('HelmResponseAllOfValuesOverrideFileGit', function() {
+    it('should create an instance of HelmResponseAllOfValuesOverrideFileGit', function() {
+      // uncomment below and update the code to test HelmResponseAllOfValuesOverrideFileGit
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverrideFileGit();
+      //expect(instance).to.be.a(QoveryApi.HelmResponseAllOfValuesOverrideFileGit);
     });
 
-    it('should have the property repository (base name: "repository")', function() {
-      // uncomment below and update the code to test the property repository
-      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
+    it('should have the property gitRepository (base name: "git_repository")', function() {
+      // uncomment below and update the code to test the property gitRepository
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverrideFileGit();
       //expect(instance).to.be();
     });
 
-    it('should have the property chartName (base name: "chart_name")', function() {
-      // uncomment below and update the code to test the property chartName
-      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property chartVersion (base name: "chart_version")', function() {
-      // uncomment below and update the code to test the property chartVersion
-      //var instance = new QoveryApi.HelmRequestAllOfSourceHelmRepository();
+    it('should have the property paths (base name: "paths")', function() {
+      // uncomment below and update the code to test the property paths
+      //var instance = new QoveryApi.HelmResponseAllOfValuesOverrideFileGit();
       //expect(instance).to.be();
     });
 

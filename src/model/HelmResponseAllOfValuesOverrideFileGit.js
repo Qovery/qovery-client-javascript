@@ -15,18 +15,18 @@ import ApiClient from '../ApiClient';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 
 /**
- * The HelmRequestAllOfValuesOverrideFileGit model module.
- * @module model/HelmRequestAllOfValuesOverrideFileGit
+ * The HelmResponseAllOfValuesOverrideFileGit model module.
+ * @module model/HelmResponseAllOfValuesOverrideFileGit
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class HelmRequestAllOfValuesOverrideFileGit {
+class HelmResponseAllOfValuesOverrideFileGit {
     /**
-     * Constructs a new <code>HelmRequestAllOfValuesOverrideFileGit</code>.
-     * @alias module:model/HelmRequestAllOfValuesOverrideFileGit
+     * Constructs a new <code>HelmResponseAllOfValuesOverrideFileGit</code>.
+     * @alias module:model/HelmResponseAllOfValuesOverrideFileGit
      */
     constructor() { 
         
-        HelmRequestAllOfValuesOverrideFileGit.initialize(this);
+        HelmResponseAllOfValuesOverrideFileGit.initialize(this);
     }
 
     /**
@@ -38,15 +38,15 @@ class HelmRequestAllOfValuesOverrideFileGit {
     }
 
     /**
-     * Constructs a <code>HelmRequestAllOfValuesOverrideFileGit</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>HelmResponseAllOfValuesOverrideFileGit</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/HelmRequestAllOfValuesOverrideFileGit} obj Optional instance to populate.
-     * @return {module:model/HelmRequestAllOfValuesOverrideFileGit} The populated <code>HelmRequestAllOfValuesOverrideFileGit</code> instance.
+     * @param {module:model/HelmResponseAllOfValuesOverrideFileGit} obj Optional instance to populate.
+     * @return {module:model/HelmResponseAllOfValuesOverrideFileGit} The populated <code>HelmResponseAllOfValuesOverrideFileGit</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new HelmRequestAllOfValuesOverrideFileGit();
+            obj = obj || new HelmResponseAllOfValuesOverrideFileGit();
 
             if (data.hasOwnProperty('git_repository')) {
                 obj['git_repository'] = ApplicationGitRepositoryRequest.constructFromObject(data['git_repository']);
@@ -64,18 +64,18 @@ class HelmRequestAllOfValuesOverrideFileGit {
 /**
  * @member {module:model/ApplicationGitRepositoryRequest} git_repository
  */
-HelmRequestAllOfValuesOverrideFileGit.prototype['git_repository'] = undefined;
+HelmResponseAllOfValuesOverrideFileGit.prototype['git_repository'] = undefined;
 
 /**
  * List of path inside your git repository to locate values file. Must start by a /
  * @member {Array.<String>} paths
  */
-HelmRequestAllOfValuesOverrideFileGit.prototype['paths'] = undefined;
+HelmResponseAllOfValuesOverrideFileGit.prototype['paths'] = undefined;
 
 
 
 
 
 
-export default HelmRequestAllOfValuesOverrideFileGit;
+export default HelmResponseAllOfValuesOverrideFileGit;
 

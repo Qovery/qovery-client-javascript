@@ -12,10 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
+import HelmGitRepositoryRequest from './HelmGitRepositoryRequest';
 import HelmPortRequest from './HelmPortRequest';
 import HelmPortRequestPortsInner from './HelmPortRequestPortsInner';
 import HelmRequestAllOf from './HelmRequestAllOf';
-import HelmRequestAllOfSource from './HelmRequestAllOfSource';
 import HelmRequestAllOfValuesOverride from './HelmRequestAllOfValuesOverride';
 
 /**
@@ -31,7 +31,7 @@ class HelmRequest {
      * @implements module:model/HelmRequestAllOf
      * @param name {String} name is case insensitive
      * @param autoDeploy {Boolean} Specify if the helm will be automatically updated after receiving a new image tag or a new commit according to the source type.  
-     * @param source {module:model/HelmRequestAllOfSource} 
+     * @param source {module:model/OneOfobjectobject} 
      * @param _arguments {Array.<String>} The extra arguments to pass to helm
      * @param valuesOverride {module:model/HelmRequestAllOfValuesOverride} 
      */
@@ -85,7 +85,7 @@ class HelmRequest {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = HelmRequestAllOfSource.constructFromObject(data['source']);
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -139,7 +139,7 @@ HelmRequest.prototype['auto_preview'] = undefined;
 HelmRequest.prototype['auto_deploy'] = undefined;
 
 /**
- * @member {module:model/HelmRequestAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 HelmRequest.prototype['source'] = undefined;
 
@@ -194,7 +194,7 @@ HelmRequestAllOf.prototype['auto_preview'] = undefined;
  */
 HelmRequestAllOf.prototype['auto_deploy'] = undefined;
 /**
- * @member {module:model/HelmRequestAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 HelmRequestAllOf.prototype['source'] = undefined;
 /**

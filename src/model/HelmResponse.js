@@ -14,9 +14,9 @@
 import ApiClient from '../ApiClient';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import Base from './Base';
-import HelmRequestAllOfValuesOverride from './HelmRequestAllOfValuesOverride';
 import HelmResponseAllOf from './HelmResponseAllOf';
 import HelmResponseAllOfPorts from './HelmResponseAllOfPorts';
+import HelmResponseAllOfValuesOverride from './HelmResponseAllOfValuesOverride';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -39,7 +39,7 @@ class HelmResponse {
      * @param source {module:model/OneOfobjectobject} 
      * @param _arguments {Array.<String>} The extra arguments to pass to helm
      * @param allowClusterWideResources {Boolean} If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights 
-     * @param valuesOverride {module:model/HelmRequestAllOfValuesOverride} 
+     * @param valuesOverride {module:model/HelmResponseAllOfValuesOverride} 
      */
     constructor(id, createdAt, environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride) { 
         Base.initialize(this, id, createdAt);HelmResponseAllOf.initialize(this, environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride);
@@ -114,7 +114,7 @@ class HelmResponse {
                 obj['allow_cluster_wide_resources'] = ApiClient.convertToType(data['allow_cluster_wide_resources'], 'Boolean');
             }
             if (data.hasOwnProperty('values_override')) {
-                obj['values_override'] = HelmRequestAllOfValuesOverride.constructFromObject(data['values_override']);
+                obj['values_override'] = HelmResponseAllOfValuesOverride.constructFromObject(data['values_override']);
             }
         }
         return obj;
@@ -190,7 +190,7 @@ HelmResponse.prototype['arguments'] = undefined;
 HelmResponse.prototype['allow_cluster_wide_resources'] = false;
 
 /**
- * @member {module:model/HelmRequestAllOfValuesOverride} values_override
+ * @member {module:model/HelmResponseAllOfValuesOverride} values_override
  */
 HelmResponse.prototype['values_override'] = undefined;
 
@@ -252,7 +252,7 @@ HelmResponseAllOf.prototype['arguments'] = undefined;
  */
 HelmResponseAllOf.prototype['allow_cluster_wide_resources'] = false;
 /**
- * @member {module:model/HelmRequestAllOfValuesOverride} values_override
+ * @member {module:model/HelmResponseAllOfValuesOverride} values_override
  */
 HelmResponseAllOf.prototype['values_override'] = undefined;
 

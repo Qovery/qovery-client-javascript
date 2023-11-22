@@ -16,6 +16,6 @@ Name | Type | Description | Notes
 **source** | [**OneOfobjectobject**](OneOfobjectobject.md) |  | 
 **_arguments** | **[String]** | The extra arguments to pass to helm | 
 **allowClusterWideResources** | **Boolean** | If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights  | [default to false]
-**valuesOverride** | [**HelmRequestAllOfValuesOverride**](HelmRequestAllOfValuesOverride.md) |  | 
+**valuesOverride** | [**HelmResponseAllOfValuesOverride**](HelmResponseAllOfValuesOverride.md) |  | 
 
 

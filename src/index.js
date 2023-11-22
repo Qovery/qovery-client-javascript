@@ -289,17 +289,18 @@ import HelmRepositoryResponseAllOf from './model/HelmRepositoryResponseAllOf';
 import HelmRepositoryResponseList from './model/HelmRepositoryResponseList';
 import HelmRequest from './model/HelmRequest';
 import HelmRequestAllOf from './model/HelmRequestAllOf';
-import HelmRequestAllOfSource from './model/HelmRequestAllOfSource';
-import HelmRequestAllOfSourceHelmRepository from './model/HelmRequestAllOfSourceHelmRepository';
 import HelmRequestAllOfValuesOverride from './model/HelmRequestAllOfValuesOverride';
 import HelmRequestAllOfValuesOverrideFile from './model/HelmRequestAllOfValuesOverrideFile';
-import HelmRequestAllOfValuesOverrideFileGit from './model/HelmRequestAllOfValuesOverrideFileGit';
 import HelmRequestAllOfValuesOverrideFileRaw from './model/HelmRequestAllOfValuesOverrideFileRaw';
 import HelmRequestAllOfValuesOverrideFileRawValues from './model/HelmRequestAllOfValuesOverrideFileRawValues';
 import HelmResponse from './model/HelmResponse';
 import HelmResponseAllOf from './model/HelmResponseAllOf';
 import HelmResponseAllOfPorts from './model/HelmResponseAllOfPorts';
+import HelmResponseAllOfValuesOverride from './model/HelmResponseAllOfValuesOverride';
+import HelmResponseAllOfValuesOverrideFile from './model/HelmResponseAllOfValuesOverrideFile';
+import HelmResponseAllOfValuesOverrideFileGit from './model/HelmResponseAllOfValuesOverrideFileGit';
 import HelmResponseList from './model/HelmResponseList';
+import HelmValuesGitRepositoryRequest from './model/HelmValuesGitRepositoryRequest';
 import Instance from './model/Instance';
 import InstanceMemory from './model/InstanceMemory';
 import InstanceResponseList from './model/InstanceResponseList';
@@ -2294,18 +2295,6 @@ export {
     HelmRequestAllOf,
 
     /**
-     * The HelmRequestAllOfSource model constructor.
-     * @property {module:model/HelmRequestAllOfSource}
-     */
-    HelmRequestAllOfSource,
-
-    /**
-     * The HelmRequestAllOfSourceHelmRepository model constructor.
-     * @property {module:model/HelmRequestAllOfSourceHelmRepository}
-     */
-    HelmRequestAllOfSourceHelmRepository,
-
-    /**
      * The HelmRequestAllOfValuesOverride model constructor.
      * @property {module:model/HelmRequestAllOfValuesOverride}
      */
@@ -2316,12 +2305,6 @@ export {
      * @property {module:model/HelmRequestAllOfValuesOverrideFile}
      */
     HelmRequestAllOfValuesOverrideFile,
-
-    /**
-     * The HelmRequestAllOfValuesOverrideFileGit model constructor.
-     * @property {module:model/HelmRequestAllOfValuesOverrideFileGit}
-     */
-    HelmRequestAllOfValuesOverrideFileGit,
 
     /**
      * The HelmRequestAllOfValuesOverrideFileRaw model constructor.
@@ -2354,10 +2337,34 @@ export {
     HelmResponseAllOfPorts,
 
     /**
+     * The HelmResponseAllOfValuesOverride model constructor.
+     * @property {module:model/HelmResponseAllOfValuesOverride}
+     */
+    HelmResponseAllOfValuesOverride,
+
+    /**
+     * The HelmResponseAllOfValuesOverrideFile model constructor.
+     * @property {module:model/HelmResponseAllOfValuesOverrideFile}
+     */
+    HelmResponseAllOfValuesOverrideFile,
+
+    /**
+     * The HelmResponseAllOfValuesOverrideFileGit model constructor.
+     * @property {module:model/HelmResponseAllOfValuesOverrideFileGit}
+     */
+    HelmResponseAllOfValuesOverrideFileGit,
+
+    /**
      * The HelmResponseList model constructor.
      * @property {module:model/HelmResponseList}
      */
     HelmResponseList,
+
+    /**
+     * The HelmValuesGitRepositoryRequest model constructor.
+     * @property {module:model/HelmValuesGitRepositoryRequest}
+     */
+    HelmValuesGitRepositoryRequest,
 
     /**
      * The Instance model constructor.

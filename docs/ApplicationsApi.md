@@ -40,7 +40,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ApplicationsApi();
 let applicationId = "applicationId_example"; // String | Application ID
 let opts = {
-  'cloneApplicationRequest': new QoveryApi.CloneApplicationRequest() // CloneApplicationRequest | 
+  'cloneServiceRequest': new QoveryApi.CloneServiceRequest() // CloneServiceRequest | 
 };
 apiInstance.cloneApplication(applicationId, opts, (error, data, response) => {
   if (error) {
@@ -57,7 +57,7 @@ apiInstance.cloneApplication(applicationId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **applicationId** | **String**| Application ID | 
- **cloneApplicationRequest** | [**CloneApplicationRequest**](CloneApplicationRequest.md)|  | [optional] 
+ **cloneServiceRequest** | [**CloneServiceRequest**](CloneServiceRequest.md)|  | [optional] 
 
 ### Return type
 

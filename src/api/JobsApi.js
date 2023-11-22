@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import CloneJobRequest from '../model/CloneJobRequest';
+import CloneServiceRequest from '../model/CloneServiceRequest';
 import JobAdvancedSettings from '../model/JobAdvancedSettings';
 import JobRequest from '../model/JobRequest';
 import JobResponse from '../model/JobResponse';
@@ -100,13 +100,13 @@ export default class JobsApi {
      * This will create a new job with the same configuration on the targeted environment Id.
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneJobRequest} opts.cloneJobRequest 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/JobsApi~cloneJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobResponse}
      */
     cloneJob(jobId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['cloneJobRequest'];
+      let postBody = opts['cloneServiceRequest'];
       // verify the required parameter 'jobId' is set
       if (jobId === undefined || jobId === null) {
         throw new Error("Missing the required parameter 'jobId' when calling cloneJob");

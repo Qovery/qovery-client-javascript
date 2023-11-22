@@ -1,4 +1,4 @@
-# QoveryApi.CloneRequest
+# QoveryApi.CloneEnvironmentRequest
 
 ## Properties
 

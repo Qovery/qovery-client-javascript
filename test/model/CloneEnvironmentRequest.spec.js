@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.CloneContainerRequest();
+    instance = new QoveryApi.CloneEnvironmentRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,34 @@
       object[property] = value;
   }
 
-  describe('CloneContainerRequest', function() {
-    it('should create an instance of CloneContainerRequest', function() {
-      // uncomment below and update the code to test CloneContainerRequest
-      //var instance = new QoveryApi.CloneContainerRequest();
-      //expect(instance).to.be.a(QoveryApi.CloneContainerRequest);
+  describe('CloneEnvironmentRequest', function() {
+    it('should create an instance of CloneEnvironmentRequest', function() {
+      // uncomment below and update the code to test CloneEnvironmentRequest
+      //var instance = new QoveryApi.CloneEnvironmentRequest();
+      //expect(instance).to.be.a(QoveryApi.CloneEnvironmentRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.CloneContainerRequest();
+      //var instance = new QoveryApi.CloneEnvironmentRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property environmentId (base name: "environment_id")', function() {
-      // uncomment below and update the code to test the property environmentId
-      //var instance = new QoveryApi.CloneContainerRequest();
+    it('should have the property clusterId (base name: "cluster_id")', function() {
+      // uncomment below and update the code to test the property clusterId
+      //var instance = new QoveryApi.CloneEnvironmentRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property mode (base name: "mode")', function() {
+      // uncomment below and update the code to test the property mode
+      //var instance = new QoveryApi.CloneEnvironmentRequest();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property applyDeploymentRule (base name: "apply_deployment_rule")', function() {
+      // uncomment below and update the code to test the property applyDeploymentRule
+      //var instance = new QoveryApi.CloneEnvironmentRequest();
       //expect(instance).to.be();
     });
 

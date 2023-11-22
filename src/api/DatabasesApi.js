@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import CloneDatabaseRequest from '../model/CloneDatabaseRequest';
+import CloneServiceRequest from '../model/CloneServiceRequest';
 import Database from '../model/Database';
 import DatabaseConfigurationResponseList from '../model/DatabaseConfigurationResponseList';
 import DatabaseRequest from '../model/DatabaseRequest';
@@ -53,13 +53,13 @@ export default class DatabasesApi {
      * This will create a new database with the same configuration on the targeted environment Id.
      * @param {String} databaseId Database ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneDatabaseRequest} opts.cloneDatabaseRequest 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/DatabasesApi~cloneDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Database}
      */
     cloneDatabase(databaseId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['cloneDatabaseRequest'];
+      let postBody = opts['cloneServiceRequest'];
       // verify the required parameter 'databaseId' is set
       if (databaseId === undefined || databaseId === null) {
         throw new Error("Missing the required parameter 'databaseId' when calling cloneDatabase");

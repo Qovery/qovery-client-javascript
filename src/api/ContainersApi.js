@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import CloneContainerRequest from '../model/CloneContainerRequest';
+import CloneServiceRequest from '../model/CloneServiceRequest';
 import ContainerAdvancedSettings from '../model/ContainerAdvancedSettings';
 import ContainerRequest from '../model/ContainerRequest';
 import ContainerResponse from '../model/ContainerResponse';
@@ -103,13 +103,13 @@ export default class ContainersApi {
      * This will create a new container with the same configuration on the targeted environment Id.
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneContainerRequest} opts.cloneContainerRequest 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/ContainersApi~cloneContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponse}
      */
     cloneContainer(containerId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['cloneContainerRequest'];
+      let postBody = opts['cloneServiceRequest'];
       // verify the required parameter 'containerId' is set
       if (containerId === undefined || containerId === null) {
         throw new Error("Missing the required parameter 'containerId' when calling cloneContainer");

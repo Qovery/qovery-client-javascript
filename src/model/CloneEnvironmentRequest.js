@@ -15,19 +15,19 @@ import ApiClient from '../ApiClient';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
 
 /**
- * The CloneRequest model module.
- * @module model/CloneRequest
+ * The CloneEnvironmentRequest model module.
+ * @module model/CloneEnvironmentRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class CloneRequest {
+class CloneEnvironmentRequest {
     /**
-     * Constructs a new <code>CloneRequest</code>.
-     * @alias module:model/CloneRequest
+     * Constructs a new <code>CloneEnvironmentRequest</code>.
+     * @alias module:model/CloneEnvironmentRequest
      * @param name {String} name is case insensitive
      */
     constructor(name) { 
         
-        CloneRequest.initialize(this, name);
+        CloneEnvironmentRequest.initialize(this, name);
     }
 
     /**
@@ -40,15 +40,15 @@ class CloneRequest {
     }
 
     /**
-     * Constructs a <code>CloneRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CloneEnvironmentRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/CloneRequest} obj Optional instance to populate.
-     * @return {module:model/CloneRequest} The populated <code>CloneRequest</code> instance.
+     * @param {module:model/CloneEnvironmentRequest} obj Optional instance to populate.
+     * @return {module:model/CloneEnvironmentRequest} The populated <code>CloneEnvironmentRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CloneRequest();
+            obj = obj || new CloneEnvironmentRequest();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -73,28 +73,28 @@ class CloneRequest {
  * name is case insensitive
  * @member {String} name
  */
-CloneRequest.prototype['name'] = undefined;
+CloneEnvironmentRequest.prototype['name'] = undefined;
 
 /**
  * @member {String} cluster_id
  */
-CloneRequest.prototype['cluster_id'] = undefined;
+CloneEnvironmentRequest.prototype['cluster_id'] = undefined;
 
 /**
  * @member {module:model/EnvironmentModeEnum} mode
  */
-CloneRequest.prototype['mode'] = undefined;
+CloneEnvironmentRequest.prototype['mode'] = undefined;
 
 /**
  * @member {Boolean} apply_deployment_rule
  * @default false
  */
-CloneRequest.prototype['apply_deployment_rule'] = false;
+CloneEnvironmentRequest.prototype['apply_deployment_rule'] = false;
 
 
 
 
 
 
-export default CloneRequest;
+export default CloneEnvironmentRequest;
 

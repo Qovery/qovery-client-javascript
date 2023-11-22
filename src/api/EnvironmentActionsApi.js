@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import CloneRequest from '../model/CloneRequest';
+import CloneEnvironmentRequest from '../model/CloneEnvironmentRequest';
 import DeployAllRequest from '../model/DeployAllRequest';
 import Environment from '../model/Environment';
 import EnvironmentServiceIdsAllRequest from '../model/EnvironmentServiceIdsAllRequest';
@@ -96,13 +96,13 @@ export default class EnvironmentActionsApi {
      * You must provide a name. This will create a new environment, with the same configuration, and same applications and databases. Database data is not cloned.
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneRequest} opts.cloneRequest 
+     * @param {module:model/CloneEnvironmentRequest} opts.cloneEnvironmentRequest 
      * @param {module:api/EnvironmentActionsApi~cloneEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Environment}
      */
     cloneEnvironment(environmentId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['cloneRequest'];
+      let postBody = opts['cloneEnvironmentRequest'];
       // verify the required parameter 'environmentId' is set
       if (environmentId === undefined || environmentId === null) {
         throw new Error("Missing the required parameter 'environmentId' when calling cloneEnvironment");

@@ -56,11 +56,8 @@ import Budget from './model/Budget';
 import BudgetThreshold from './model/BudgetThreshold';
 import BuildModeEnum from './model/BuildModeEnum';
 import BuildPackLanguageEnum from './model/BuildPackLanguageEnum';
-import CloneApplicationRequest from './model/CloneApplicationRequest';
-import CloneContainerRequest from './model/CloneContainerRequest';
-import CloneDatabaseRequest from './model/CloneDatabaseRequest';
-import CloneJobRequest from './model/CloneJobRequest';
-import CloneRequest from './model/CloneRequest';
+import CloneEnvironmentRequest from './model/CloneEnvironmentRequest';
+import CloneServiceRequest from './model/CloneServiceRequest';
 import CloudProvider from './model/CloudProvider';
 import CloudProviderEnum from './model/CloudProviderEnum';
 import CloudProviderResponseList from './model/CloudProviderResponseList';
@@ -897,34 +894,16 @@ export {
     BuildPackLanguageEnum,
 
     /**
-     * The CloneApplicationRequest model constructor.
-     * @property {module:model/CloneApplicationRequest}
+     * The CloneEnvironmentRequest model constructor.
+     * @property {module:model/CloneEnvironmentRequest}
      */
-    CloneApplicationRequest,
+    CloneEnvironmentRequest,
 
     /**
-     * The CloneContainerRequest model constructor.
-     * @property {module:model/CloneContainerRequest}
+     * The CloneServiceRequest model constructor.
+     * @property {module:model/CloneServiceRequest}
      */
-    CloneContainerRequest,
-
-    /**
-     * The CloneDatabaseRequest model constructor.
-     * @property {module:model/CloneDatabaseRequest}
-     */
-    CloneDatabaseRequest,
-
-    /**
-     * The CloneJobRequest model constructor.
-     * @property {module:model/CloneJobRequest}
-     */
-    CloneJobRequest,
-
-    /**
-     * The CloneRequest model constructor.
-     * @property {module:model/CloneRequest}
-     */
-    CloneRequest,
+    CloneServiceRequest,
 
     /**
      * The CloudProvider model constructor.

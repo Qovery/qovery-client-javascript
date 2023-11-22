@@ -96,7 +96,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.EnvironmentActionsApi();
 let environmentId = "environmentId_example"; // String | Environment ID
 let opts = {
-  'cloneRequest': new QoveryApi.CloneRequest() // CloneRequest | 
+  'cloneEnvironmentRequest': new QoveryApi.CloneEnvironmentRequest() // CloneEnvironmentRequest | 
 };
 apiInstance.cloneEnvironment(environmentId, opts, (error, data, response) => {
   if (error) {
@@ -113,7 +113,7 @@ apiInstance.cloneEnvironment(environmentId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **environmentId** | **String**| Environment ID | 
- **cloneRequest** | [**CloneRequest**](CloneRequest.md)|  | [optional] 
+ **cloneEnvironmentRequest** | [**CloneEnvironmentRequest**](CloneEnvironmentRequest.md)|  | [optional] 
 
 ### Return type
 

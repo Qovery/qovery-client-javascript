@@ -38,7 +38,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.DatabasesApi();
 let databaseId = "databaseId_example"; // String | Database ID
 let opts = {
-  'cloneDatabaseRequest': new QoveryApi.CloneDatabaseRequest() // CloneDatabaseRequest | 
+  'cloneServiceRequest': new QoveryApi.CloneServiceRequest() // CloneServiceRequest | 
 };
 apiInstance.cloneDatabase(databaseId, opts, (error, data, response) => {
   if (error) {
@@ -55,7 +55,7 @@ apiInstance.cloneDatabase(databaseId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **databaseId** | **String**| Database ID | 
- **cloneDatabaseRequest** | [**CloneDatabaseRequest**](CloneDatabaseRequest.md)|  | [optional] 
+ **cloneServiceRequest** | [**CloneServiceRequest**](CloneServiceRequest.md)|  | [optional] 
 
 ### Return type
 

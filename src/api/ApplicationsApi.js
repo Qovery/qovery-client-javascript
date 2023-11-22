@@ -17,7 +17,7 @@ import Application from '../model/Application';
 import ApplicationAdvancedSettings from '../model/ApplicationAdvancedSettings';
 import ApplicationRequest from '../model/ApplicationRequest';
 import ApplicationResponseList from '../model/ApplicationResponseList';
-import CloneApplicationRequest from '../model/CloneApplicationRequest';
+import CloneServiceRequest from '../model/CloneServiceRequest';
 import EnvironmentApplicationsCurrentScaleResponseList from '../model/EnvironmentApplicationsCurrentScaleResponseList';
 import EnvironmentApplicationsStorageResponseList from '../model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguageList from '../model/EnvironmentApplicationsSupportedLanguageList';
@@ -55,13 +55,13 @@ export default class ApplicationsApi {
      * This will create a new application with the same configuration on the targeted environment Id.
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneApplicationRequest} opts.cloneApplicationRequest 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/ApplicationsApi~cloneApplicationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Application}
      */
     cloneApplication(applicationId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['cloneApplicationRequest'];
+      let postBody = opts['cloneServiceRequest'];
       // verify the required parameter 'applicationId' is set
       if (applicationId === undefined || applicationId === null) {
         throw new Error("Missing the required parameter 'applicationId' when calling cloneApplication");

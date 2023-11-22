@@ -100,7 +100,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.ContainersApi();
 let containerId = "containerId_example"; // String | Container ID
 let opts = {
-  'cloneContainerRequest': new QoveryApi.CloneContainerRequest() // CloneContainerRequest | 
+  'cloneServiceRequest': new QoveryApi.CloneServiceRequest() // CloneServiceRequest | 
 };
 apiInstance.cloneContainer(containerId, opts, (error, data, response) => {
   if (error) {
@@ -117,7 +117,7 @@ apiInstance.cloneContainer(containerId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **containerId** | **String**| Container ID | 
- **cloneContainerRequest** | [**CloneContainerRequest**](CloneContainerRequest.md)|  | [optional] 
+ **cloneServiceRequest** | [**CloneServiceRequest**](CloneServiceRequest.md)|  | [optional] 
 
 ### Return type
 

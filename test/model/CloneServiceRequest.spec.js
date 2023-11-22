@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.CloneRequest();
+    instance = new QoveryApi.CloneServiceRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,22 @@
       object[property] = value;
   }
 
-  describe('CloneRequest', function() {
-    it('should create an instance of CloneRequest', function() {
-      // uncomment below and update the code to test CloneRequest
-      //var instance = new QoveryApi.CloneRequest();
-      //expect(instance).to.be.a(QoveryApi.CloneRequest);
+  describe('CloneServiceRequest', function() {
+    it('should create an instance of CloneServiceRequest', function() {
+      // uncomment below and update the code to test CloneServiceRequest
+      //var instance = new QoveryApi.CloneServiceRequest();
+      //expect(instance).to.be.a(QoveryApi.CloneServiceRequest);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.CloneRequest();
+      //var instance = new QoveryApi.CloneServiceRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property clusterId (base name: "cluster_id")', function() {
-      // uncomment below and update the code to test the property clusterId
-      //var instance = new QoveryApi.CloneRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property mode (base name: "mode")', function() {
-      // uncomment below and update the code to test the property mode
-      //var instance = new QoveryApi.CloneRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property applyDeploymentRule (base name: "apply_deployment_rule")', function() {
-      // uncomment below and update the code to test the property applyDeploymentRule
-      //var instance = new QoveryApi.CloneRequest();
+    it('should have the property environmentId (base name: "environment_id")', function() {
+      // uncomment below and update the code to test the property environmentId
+      //var instance = new QoveryApi.CloneServiceRequest();
       //expect(instance).to.be();
     });
 

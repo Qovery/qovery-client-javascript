@@ -96,7 +96,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.JobsApi();
 let jobId = "jobId_example"; // String | Job ID
 let opts = {
-  'cloneJobRequest': new QoveryApi.CloneJobRequest() // CloneJobRequest | 
+  'cloneServiceRequest': new QoveryApi.CloneServiceRequest() // CloneServiceRequest | 
 };
 apiInstance.cloneJob(jobId, opts, (error, data, response) => {
   if (error) {
@@ -113,7 +113,7 @@ apiInstance.cloneJob(jobId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **jobId** | **String**| Job ID | 
- **cloneJobRequest** | [**CloneJobRequest**](CloneJobRequest.md)|  | [optional] 
+ **cloneServiceRequest** | [**CloneServiceRequest**](CloneServiceRequest.md)|  | [optional] 
 
 ### Return type
 

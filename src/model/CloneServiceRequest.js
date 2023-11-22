@@ -14,20 +14,20 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The CloneApplicationRequest model module.
- * @module model/CloneApplicationRequest
+ * The CloneServiceRequest model module.
+ * @module model/CloneServiceRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class CloneApplicationRequest {
+class CloneServiceRequest {
     /**
-     * Constructs a new <code>CloneApplicationRequest</code>.
-     * @alias module:model/CloneApplicationRequest
+     * Constructs a new <code>CloneServiceRequest</code>.
+     * @alias module:model/CloneServiceRequest
      * @param name {String} 
      * @param environmentId {String} 
      */
     constructor(name, environmentId) { 
         
-        CloneApplicationRequest.initialize(this, name, environmentId);
+        CloneServiceRequest.initialize(this, name, environmentId);
     }
 
     /**
@@ -41,15 +41,15 @@ class CloneApplicationRequest {
     }
 
     /**
-     * Constructs a <code>CloneApplicationRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>CloneServiceRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/CloneApplicationRequest} obj Optional instance to populate.
-     * @return {module:model/CloneApplicationRequest} The populated <code>CloneApplicationRequest</code> instance.
+     * @param {module:model/CloneServiceRequest} obj Optional instance to populate.
+     * @return {module:model/CloneServiceRequest} The populated <code>CloneServiceRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new CloneApplicationRequest();
+            obj = obj || new CloneServiceRequest();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -67,17 +67,17 @@ class CloneApplicationRequest {
 /**
  * @member {String} name
  */
-CloneApplicationRequest.prototype['name'] = undefined;
+CloneServiceRequest.prototype['name'] = undefined;
 
 /**
  * @member {String} environment_id
  */
-CloneApplicationRequest.prototype['environment_id'] = undefined;
+CloneServiceRequest.prototype['environment_id'] = undefined;
 
 
 
 
 
 
-export default CloneApplicationRequest;
+export default CloneServiceRequest;
 

@@ -299,6 +299,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets
 *QoveryApi.ContainersApi* | [**autoDeployContainerEnvironments**](docs/ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 *QoveryApi.ContainersApi* | [**cloneContainer**](docs/ContainersApi.md#cloneContainer) | **POST** /container/{containerId}/clone | Clone container
+*QoveryApi.ContainersApi* | [**cloneHelm**](docs/ContainersApi.md#cloneHelm) | **POST** /helm/{helmId}/clone | Clone helm
 *QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 *QoveryApi.ContainersApi* | [**getContainerRegistryContainerStatus**](docs/ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 *QoveryApi.ContainersApi* | [**getDefaultContainerAdvancedSettings**](docs/ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings

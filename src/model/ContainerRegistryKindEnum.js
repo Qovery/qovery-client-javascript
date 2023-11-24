@@ -75,6 +75,13 @@ export default class ContainerRegistryKindEnum {
         "GENERIC_CR" = "GENERIC_CR";
 
     
+        /**
+         * value: "GCP_ARTIFACT_REGISTRY"
+         * @const
+         */
+        "GCP_ARTIFACT_REGISTRY" = "GCP_ARTIFACT_REGISTRY";
+
+    
 
     /**
     * Returns a <code>ContainerRegistryKindEnum</code> enum value from a Javascript object name.

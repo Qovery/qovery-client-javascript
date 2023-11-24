@@ -19,4 +19,6 @@
 
 * `GENERIC_CR` (value: `"GENERIC_CR"`)
 
+* `GCP_ARTIFACT_REGISTRY` (value: `"GCP_ARTIFACT_REGISTRY"`)
+
 

@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ## deleteHelmRepository
 
-> deleteHelmRepository(organizationId)
+> deleteHelmRepository(organizationId, helmRepositoryId)
 
 Delete a helm repository
 
@@ -91,7 +91,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.HelmRepositoriesApi();
 let organizationId = "organizationId_example"; // String | Organization ID
-apiInstance.deleteHelmRepository(organizationId, (error, data, response) => {
+let helmRepositoryId = "helmRepositoryId_example"; // String | Helm chart repository ID
+apiInstance.deleteHelmRepository(organizationId, helmRepositoryId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -106,6 +107,7 @@ apiInstance.deleteHelmRepository(organizationId, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **helmRepositoryId** | **String**| Helm chart repository ID | 
 
 ### Return type
 
@@ -123,7 +125,7 @@ null (empty response body)
 
 ## editHelmRepository
 
-> HelmRepositoryResponse editHelmRepository(organizationId, opts)
+> HelmRepositoryResponse editHelmRepository(organizationId, helmRepositoryId, opts)
 
 Edit a helm repository
 
@@ -143,10 +145,11 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.HelmRepositoriesApi();
 let organizationId = "organizationId_example"; // String | Organization ID
+let helmRepositoryId = "helmRepositoryId_example"; // String | Helm chart repository ID
 let opts = {
   'helmRepositoryRequest': new QoveryApi.HelmRepositoryRequest() // HelmRepositoryRequest | 
 };
-apiInstance.editHelmRepository(organizationId, opts, (error, data, response) => {
+apiInstance.editHelmRepository(organizationId, helmRepositoryId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -161,6 +164,7 @@ apiInstance.editHelmRepository(organizationId, opts, (error, data, response) => 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| Organization ID | 
+ **helmRepositoryId** | **String**| Helm chart repository ID | 
  **helmRepositoryRequest** | [**HelmRepositoryRequest**](HelmRepositoryRequest.md)|  | [optional] 
 
 ### Return type

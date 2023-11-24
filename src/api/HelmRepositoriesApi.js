@@ -93,17 +93,23 @@ export default class HelmRepositoriesApi {
     /**
      * Delete a helm repository
      * @param {String} organizationId Organization ID
+     * @param {String} helmRepositoryId Helm chart repository ID
      * @param {module:api/HelmRepositoriesApi~deleteHelmRepositoryCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    deleteHelmRepository(organizationId, callback) {
+    deleteHelmRepository(organizationId, helmRepositoryId, callback) {
       let postBody = null;
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling deleteHelmRepository");
       }
+      // verify the required parameter 'helmRepositoryId' is set
+      if (helmRepositoryId === undefined || helmRepositoryId === null) {
+        throw new Error("Missing the required parameter 'helmRepositoryId' when calling deleteHelmRepository");
+      }
 
       let pathParams = {
-        'organizationId': organizationId
+        'organizationId': organizationId,
+        'helmRepositoryId': helmRepositoryId
       };
       let queryParams = {
       };
@@ -134,21 +140,27 @@ export default class HelmRepositoriesApi {
     /**
      * Edit a helm repository
      * @param {String} organizationId Organization ID
+     * @param {String} helmRepositoryId Helm chart repository ID
      * @param {Object} opts Optional parameters
      * @param {module:model/HelmRepositoryRequest} opts.helmRepositoryRequest 
      * @param {module:api/HelmRepositoriesApi~editHelmRepositoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmRepositoryResponse}
      */
-    editHelmRepository(organizationId, opts, callback) {
+    editHelmRepository(organizationId, helmRepositoryId, opts, callback) {
       opts = opts || {};
       let postBody = opts['helmRepositoryRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
         throw new Error("Missing the required parameter 'organizationId' when calling editHelmRepository");
       }
+      // verify the required parameter 'helmRepositoryId' is set
+      if (helmRepositoryId === undefined || helmRepositoryId === null) {
+        throw new Error("Missing the required parameter 'helmRepositoryId' when calling editHelmRepository");
+      }
 
       let pathParams = {
-        'organizationId': organizationId
+        'organizationId': organizationId,
+        'helmRepositoryId': helmRepositoryId
       };
       let queryParams = {
       };

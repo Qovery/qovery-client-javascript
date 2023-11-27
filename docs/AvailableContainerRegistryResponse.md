@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kind** | [**ContainerRegistryKindEnum**](ContainerRegistryKindEnum.md) |  | [optional] 
-**requiredConfig** | **{String: Object}** |  | [optional] 
-**isMandatory** | **Boolean** |  | [optional] 
+**kind** | [**ContainerRegistryKindEnum**](ContainerRegistryKindEnum.md) |  | 
+**requiredConfig** | **{String: Object}** |  | 
+**isMandatory** | **Boolean** |  | 
 
 

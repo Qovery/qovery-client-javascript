@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kind** | [**HelmRepositoryKindEnum**](HelmRepositoryKindEnum.md) |  | [optional] 
-**requiredConfig** | **{String: Object}** |  | [optional] 
-**isMandatory** | **Boolean** |  | [optional] 
+**kind** | [**HelmRepositoryKindEnum**](HelmRepositoryKindEnum.md) |  | 
+**requiredConfig** | **{String: Object}** |  | 
+**isMandatory** | **Boolean** |  | 
 
 

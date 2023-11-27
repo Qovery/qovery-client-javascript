@@ -23,10 +23,13 @@ class AvailableHelmRepositoryResponse {
     /**
      * Constructs a new <code>AvailableHelmRepositoryResponse</code>.
      * @alias module:model/AvailableHelmRepositoryResponse
+     * @param kind {module:model/HelmRepositoryKindEnum} 
+     * @param requiredConfig {Object.<String, Object>} 
+     * @param isMandatory {Boolean} 
      */
-    constructor() { 
+    constructor(kind, requiredConfig, isMandatory) { 
         
-        AvailableHelmRepositoryResponse.initialize(this);
+        AvailableHelmRepositoryResponse.initialize(this, kind, requiredConfig, isMandatory);
     }
 
     /**
@@ -34,7 +37,10 @@ class AvailableHelmRepositoryResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, kind, requiredConfig, isMandatory) { 
+        obj['kind'] = kind;
+        obj['required_config'] = requiredConfig;
+        obj['is_mandatory'] = isMandatory;
     }
 
     /**

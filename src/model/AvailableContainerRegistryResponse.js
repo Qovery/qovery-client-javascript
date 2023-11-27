@@ -23,10 +23,13 @@ class AvailableContainerRegistryResponse {
     /**
      * Constructs a new <code>AvailableContainerRegistryResponse</code>.
      * @alias module:model/AvailableContainerRegistryResponse
+     * @param kind {module:model/ContainerRegistryKindEnum} 
+     * @param requiredConfig {Object.<String, Object>} 
+     * @param isMandatory {Boolean} 
      */
-    constructor() { 
+    constructor(kind, requiredConfig, isMandatory) { 
         
-        AvailableContainerRegistryResponse.initialize(this);
+        AvailableContainerRegistryResponse.initialize(this, kind, requiredConfig, isMandatory);
     }
 
     /**
@@ -34,7 +37,10 @@ class AvailableContainerRegistryResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, kind, requiredConfig, isMandatory) { 
+        obj['kind'] = kind;
+        obj['required_config'] = requiredConfig;
+        obj['is_mandatory'] = isMandatory;
     }
 
     /**

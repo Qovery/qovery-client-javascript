@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import HelmDefaultValuesRequest from '../model/HelmDefaultValuesRequest';
 import HelmRequest from '../model/HelmRequest';
 import HelmResponse from '../model/HelmResponse';
 import HelmResponseList from '../model/HelmResponseList';
@@ -77,6 +78,51 @@ export default class HelmsApi {
       let returnType = HelmResponse;
       return this.apiClient.callApi(
         '/environment/{environmentId}/helm', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the createHelmDefaultValues operation.
+     * @callback module:api/HelmsApi~createHelmDefaultValuesCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get helm default values
+     * @param {String} environmentId Environment ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/HelmDefaultValuesRequest} opts.helmDefaultValuesRequest 
+     * @param {module:api/HelmsApi~createHelmDefaultValuesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    createHelmDefaultValues(environmentId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['helmDefaultValuesRequest'];
+      // verify the required parameter 'environmentId' is set
+      if (environmentId === undefined || environmentId === null) {
+        throw new Error("Missing the required parameter 'environmentId' when calling createHelmDefaultValues");
+      }
+
+      let pathParams = {
+        'environmentId': environmentId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['text/plain'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/environment/{environmentId}/helmDefaultValues', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

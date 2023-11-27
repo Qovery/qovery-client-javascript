@@ -310,6 +310,8 @@ docs/Healthcheck.md
 docs/HelmActionsApi.md
 docs/HelmApi.md
 docs/HelmConfigurationApi.md
+docs/HelmDefaultValuesRequest.md
+docs/HelmDefaultValuesRequestAllOf.md
 docs/HelmDeploymentHistoryApi.md
 docs/HelmDeploymentRestrictionApi.md
 docs/HelmDeploymentRestrictionRequest.md
@@ -926,6 +928,8 @@ src/model/GitTokenResponse.js
 src/model/GitTokenResponseAllOf.js
 src/model/GitTokenResponseList.js
 src/model/Healthcheck.js
+src/model/HelmDefaultValuesRequest.js
+src/model/HelmDefaultValuesRequestAllOf.js
 src/model/HelmDeploymentRestrictionRequest.js
 src/model/HelmDeploymentRestrictionResponse.js
 src/model/HelmDeploymentRestrictionResponseList.js
@@ -1508,6 +1512,8 @@ test/model/GitTokenResponse.spec.js
 test/model/GitTokenResponseAllOf.spec.js
 test/model/GitTokenResponseList.spec.js
 test/model/Healthcheck.spec.js
+test/model/HelmDefaultValuesRequest.spec.js
+test/model/HelmDefaultValuesRequestAllOf.spec.js
 test/model/HelmDeploymentRestrictionRequest.spec.js
 test/model/HelmDeploymentRestrictionResponse.spec.js
 test/model/HelmDeploymentRestrictionResponseList.spec.js

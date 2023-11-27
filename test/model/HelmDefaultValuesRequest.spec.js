@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.HelmMainCallsApi();
+    instance = new QoveryApi.HelmDefaultValuesRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,47 +47,19 @@
       object[property] = value;
   }
 
-  describe('HelmMainCallsApi', function() {
-    describe('deleteHelm', function() {
-      it('should call deleteHelm successfully', function(done) {
-        //uncomment below and update the code to test deleteHelm
-        //instance.deleteHelm(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('HelmDefaultValuesRequest', function() {
+    it('should create an instance of HelmDefaultValuesRequest', function() {
+      // uncomment below and update the code to test HelmDefaultValuesRequest
+      //var instance = new QoveryApi.HelmDefaultValuesRequest();
+      //expect(instance).to.be.a(QoveryApi.HelmDefaultValuesRequest);
     });
-    describe('editHelm', function() {
-      it('should call editHelm successfully', function(done) {
-        //uncomment below and update the code to test editHelm
-        //instance.editHelm(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property source (base name: "source")', function() {
+      // uncomment below and update the code to test the property source
+      //var instance = new QoveryApi.HelmDefaultValuesRequest();
+      //expect(instance).to.be();
     });
-    describe('getHelm', function() {
-      it('should call getHelm successfully', function(done) {
-        //uncomment below and update the code to test getHelm
-        //instance.getHelm(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getHelmStatus', function() {
-      it('should call getHelmStatus successfully', function(done) {
-        //uncomment below and update the code to test getHelmStatus
-        //instance.getHelmStatus(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

@@ -410,7 +410,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmDeploymentRestrictionApi* | [**getHelmDeploymentRestrictions**](docs/HelmDeploymentRestrictionApi.md#getHelmDeploymentRestrictions) | **GET** /helm/{helmId}/deploymentRestriction | Get helm deployment restrictions
 *QoveryApi.HelmMainCallsApi* | [**deleteHelm**](docs/HelmMainCallsApi.md#deleteHelm) | **DELETE** /helm/{helmId} | Delete helm
 *QoveryApi.HelmMainCallsApi* | [**editHelm**](docs/HelmMainCallsApi.md#editHelm) | **PUT** /helm/{helmId} | Edit helm
-*QoveryApi.HelmMainCallsApi* | [**getDefaultValues**](docs/HelmMainCallsApi.md#getDefaultValues) | **GET** /helm/{helmId}/defaultValues | Display the contents of the values.yaml file
 *QoveryApi.HelmMainCallsApi* | [**getHelm**](docs/HelmMainCallsApi.md#getHelm) | **GET** /helm/{helmId} | Get helm by ID
 *QoveryApi.HelmMainCallsApi* | [**getHelmStatus**](docs/HelmMainCallsApi.md#getHelmStatus) | **GET** /helm/{helmId}/status | Get helm status
 *QoveryApi.HelmRepositoriesApi* | [**createHelmRepository**](docs/HelmRepositoriesApi.md#createHelmRepository) | **POST** /organization/{organizationId}/helmRepository | Create a helm repository
@@ -420,6 +419,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmRepositoriesApi* | [**listAvailableHelmRepository**](docs/HelmRepositoriesApi.md#listAvailableHelmRepository) | **GET** /availableHelmRepository | List supported helm repository
 *QoveryApi.HelmRepositoriesApi* | [**listHelmRepository**](docs/HelmRepositoriesApi.md#listHelmRepository) | **GET** /organization/{organizationId}/helmRepository | List organization helm repositories
 *QoveryApi.HelmsApi* | [**createHelm**](docs/HelmsApi.md#createHelm) | **POST** /environment/{environmentId}/helm | Create a helm
+*QoveryApi.HelmsApi* | [**createHelmDefaultValues**](docs/HelmsApi.md#createHelmDefaultValues) | **POST** /environment/{environmentId}/helmDefaultValues | Get helm default values
 *QoveryApi.HelmsApi* | [**getEnvironmentHelmStatus**](docs/HelmsApi.md#getEnvironmentHelmStatus) | **GET** /environment/{environmentId}/helm/status | List all environment helm statuses
 *QoveryApi.HelmsApi* | [**listHelms**](docs/HelmsApi.md#listHelms) | **GET** /environment/{environmentId}/helm | List helms
 *QoveryApi.JobActionsApi* | [**deployJob**](docs/JobActionsApi.md#deployJob) | **POST** /job/{jobId}/deploy | Deploy job
@@ -797,6 +797,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitTokenResponseAllOf](docs/GitTokenResponseAllOf.md)
  - [QoveryApi.GitTokenResponseList](docs/GitTokenResponseList.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
+ - [QoveryApi.HelmDefaultValuesRequest](docs/HelmDefaultValuesRequest.md)
+ - [QoveryApi.HelmDefaultValuesRequestAllOf](docs/HelmDefaultValuesRequestAllOf.md)
  - [QoveryApi.HelmDeploymentRestrictionRequest](docs/HelmDeploymentRestrictionRequest.md)
  - [QoveryApi.HelmDeploymentRestrictionResponse](docs/HelmDeploymentRestrictionResponse.md)
  - [QoveryApi.HelmDeploymentRestrictionResponseList](docs/HelmDeploymentRestrictionResponseList.md)

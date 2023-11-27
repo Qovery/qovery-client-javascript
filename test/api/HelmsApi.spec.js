@@ -58,6 +58,16 @@
         done();
       });
     });
+    describe('createHelmDefaultValues', function() {
+      it('should call createHelmDefaultValues successfully', function(done) {
+        //uncomment below and update the code to test createHelmDefaultValues
+        //instance.createHelmDefaultValues(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEnvironmentHelmStatus', function() {
       it('should call getEnvironmentHelmStatus successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentHelmStatus

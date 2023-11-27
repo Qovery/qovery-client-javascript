@@ -270,6 +270,8 @@ import GitTokenResponse from './model/GitTokenResponse';
 import GitTokenResponseAllOf from './model/GitTokenResponseAllOf';
 import GitTokenResponseList from './model/GitTokenResponseList';
 import Healthcheck from './model/Healthcheck';
+import HelmDefaultValuesRequest from './model/HelmDefaultValuesRequest';
+import HelmDefaultValuesRequestAllOf from './model/HelmDefaultValuesRequestAllOf';
 import HelmDeploymentRestrictionRequest from './model/HelmDeploymentRestrictionRequest';
 import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestrictionResponse';
 import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
@@ -2176,6 +2178,18 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
+
+    /**
+     * The HelmDefaultValuesRequest model constructor.
+     * @property {module:model/HelmDefaultValuesRequest}
+     */
+    HelmDefaultValuesRequest,
+
+    /**
+     * The HelmDefaultValuesRequestAllOf model constructor.
+     * @property {module:model/HelmDefaultValuesRequestAllOf}
+     */
+    HelmDefaultValuesRequestAllOf,
 
     /**
      * The HelmDeploymentRestrictionRequest model constructor.

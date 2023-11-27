@@ -135,9 +135,9 @@ ClusterRequest.prototype['max_running_nodes'] = 1;
 /**
  * Unit is in GB. The disk size to be used for the node configuration
  * @member {Number} disk_size
- * @default 20
+ * @default 40
  */
-ClusterRequest.prototype['disk_size'] = 20;
+ClusterRequest.prototype['disk_size'] = 40;
 
 /**
  * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType

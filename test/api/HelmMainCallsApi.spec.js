@@ -88,6 +88,16 @@
         done();
       });
     });
+    describe('listHelmCommit', function() {
+      it('should call listHelmCommit successfully', function(done) {
+        //uncomment below and update the code to test listHelmCommit
+        //instance.listHelmCommit(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

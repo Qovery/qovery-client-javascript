@@ -412,6 +412,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmMainCallsApi* | [**editHelm**](docs/HelmMainCallsApi.md#editHelm) | **PUT** /helm/{helmId} | Edit helm
 *QoveryApi.HelmMainCallsApi* | [**getHelm**](docs/HelmMainCallsApi.md#getHelm) | **GET** /helm/{helmId} | Get helm by ID
 *QoveryApi.HelmMainCallsApi* | [**getHelmStatus**](docs/HelmMainCallsApi.md#getHelmStatus) | **GET** /helm/{helmId}/status | Get helm status
+*QoveryApi.HelmMainCallsApi* | [**listHelmCommit**](docs/HelmMainCallsApi.md#listHelmCommit) | **GET** /helm/{helmId}/commit | List last helm commits
 *QoveryApi.HelmRepositoriesApi* | [**createHelmRepository**](docs/HelmRepositoriesApi.md#createHelmRepository) | **POST** /organization/{organizationId}/helmRepository | Create a helm repository
 *QoveryApi.HelmRepositoriesApi* | [**deleteHelmRepository**](docs/HelmRepositoriesApi.md#deleteHelmRepository) | **DELETE** /organization/{organizationId}/helmRepository/{helmRepositoryId} | Delete a helm repository
 *QoveryApi.HelmRepositoriesApi* | [**editHelmRepository**](docs/HelmRepositoriesApi.md#editHelmRepository) | **PUT** /organization/{organizationId}/helmRepository/{helmRepositoryId} | Edit a helm repository

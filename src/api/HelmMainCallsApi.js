@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CommitResponseList from '../model/CommitResponseList';
 import HelmRequest from '../model/HelmRequest';
 import HelmResponse from '../model/HelmResponse';
 import Status from '../model/Status';
@@ -203,6 +204,53 @@ export default class HelmMainCallsApi {
       let returnType = Status;
       return this.apiClient.callApi(
         '/helm/{helmId}/status', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listHelmCommit operation.
+     * @callback module:api/HelmMainCallsApi~listHelmCommitCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CommitResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List last helm commits
+     * Returns list of the last 100 commits made on the repository linked to helm
+     * @param {String} helmId Helm ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.of Source of git commit. Can be 'chart' or 'values' (default to 'chart')
+     * @param {module:api/HelmMainCallsApi~listHelmCommitCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CommitResponseList}
+     */
+    listHelmCommit(helmId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'helmId' is set
+      if (helmId === undefined || helmId === null) {
+        throw new Error("Missing the required parameter 'helmId' when calling listHelmCommit");
+      }
+
+      let pathParams = {
+        'helmId': helmId
+      };
+      let queryParams = {
+        'of': opts['of']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CommitResponseList;
+      return this.apiClient.callApi(
+        '/helm/{helmId}/commit', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

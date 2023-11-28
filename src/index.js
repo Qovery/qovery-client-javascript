@@ -249,11 +249,6 @@ import EnvironmentVariableEditRequest from './model/EnvironmentVariableEditReque
 import EnvironmentVariableOverride from './model/EnvironmentVariableOverride';
 import EnvironmentVariableRequest from './model/EnvironmentVariableRequest';
 import EnvironmentVariableResponseList from './model/EnvironmentVariableResponseList';
-import Event from './model/Event';
-import EventAllOf from './model/EventAllOf';
-import EventPaginatedResponseList from './model/EventPaginatedResponseList';
-import EventPaginatedResponseListAllOf from './model/EventPaginatedResponseListAllOf';
-import EventResponseList from './model/EventResponseList';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
@@ -2052,36 +2047,6 @@ export {
      * @property {module:model/EnvironmentVariableResponseList}
      */
     EnvironmentVariableResponseList,
-
-    /**
-     * The Event model constructor.
-     * @property {module:model/Event}
-     */
-    Event,
-
-    /**
-     * The EventAllOf model constructor.
-     * @property {module:model/EventAllOf}
-     */
-    EventAllOf,
-
-    /**
-     * The EventPaginatedResponseList model constructor.
-     * @property {module:model/EventPaginatedResponseList}
-     */
-    EventPaginatedResponseList,
-
-    /**
-     * The EventPaginatedResponseListAllOf model constructor.
-     * @property {module:model/EventPaginatedResponseListAllOf}
-     */
-    EventPaginatedResponseListAllOf,
-
-    /**
-     * The EventResponseList model constructor.
-     * @property {module:model/EventResponseList}
-     */
-    EventResponseList,
 
     /**
      * The GenericObjectCurrentCost model constructor.

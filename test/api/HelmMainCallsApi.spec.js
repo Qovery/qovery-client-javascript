@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('listHelmLinks', function() {
+      it('should call listHelmLinks successfully', function(done) {
+        //uncomment below and update the code to test listHelmLinks
+        //instance.listHelmLinks(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

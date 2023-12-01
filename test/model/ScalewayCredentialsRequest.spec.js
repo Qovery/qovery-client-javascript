@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property scalewayOrganizationId (base name: "scaleway_organization_id")', function() {
+      // uncomment below and update the code to test the property scalewayOrganizationId
+      //var instance = new QoveryApi.ScalewayCredentialsRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

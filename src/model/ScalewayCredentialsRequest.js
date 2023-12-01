@@ -23,10 +23,14 @@ class ScalewayCredentialsRequest {
      * Constructs a new <code>ScalewayCredentialsRequest</code>.
      * @alias module:model/ScalewayCredentialsRequest
      * @param name {String} 
+     * @param scalewayAccessKey {String} 
+     * @param scalewaySecretKey {String} 
+     * @param scalewayProjectId {String} 
+     * @param scalewayOrganizationId {String} 
      */
-    constructor(name) { 
+    constructor(name, scalewayAccessKey, scalewaySecretKey, scalewayProjectId, scalewayOrganizationId) { 
         
-        ScalewayCredentialsRequest.initialize(this, name);
+        ScalewayCredentialsRequest.initialize(this, name, scalewayAccessKey, scalewaySecretKey, scalewayProjectId, scalewayOrganizationId);
     }
 
     /**
@@ -34,8 +38,12 @@ class ScalewayCredentialsRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
+    static initialize(obj, name, scalewayAccessKey, scalewaySecretKey, scalewayProjectId, scalewayOrganizationId) { 
         obj['name'] = name;
+        obj['scaleway_access_key'] = scalewayAccessKey;
+        obj['scaleway_secret_key'] = scalewaySecretKey;
+        obj['scaleway_project_id'] = scalewayProjectId;
+        obj['scaleway_organization_id'] = scalewayOrganizationId;
     }
 
     /**
@@ -60,6 +68,9 @@ class ScalewayCredentialsRequest {
             }
             if (data.hasOwnProperty('scaleway_project_id')) {
                 obj['scaleway_project_id'] = ApiClient.convertToType(data['scaleway_project_id'], 'String');
+            }
+            if (data.hasOwnProperty('scaleway_organization_id')) {
+                obj['scaleway_organization_id'] = ApiClient.convertToType(data['scaleway_organization_id'], 'String');
             }
         }
         return obj;
@@ -87,6 +98,11 @@ ScalewayCredentialsRequest.prototype['scaleway_secret_key'] = undefined;
  * @member {String} scaleway_project_id
  */
 ScalewayCredentialsRequest.prototype['scaleway_project_id'] = undefined;
+
+/**
+ * @member {String} scaleway_organization_id
+ */
+ScalewayCredentialsRequest.prototype['scaleway_organization_id'] = undefined;
 
 
 

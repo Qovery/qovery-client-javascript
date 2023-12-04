@@ -53,6 +53,9 @@ class DeployHelmRequest {
             if (data.hasOwnProperty('git_commit_id')) {
                 obj['git_commit_id'] = ApiClient.convertToType(data['git_commit_id'], 'String');
             }
+            if (data.hasOwnProperty('values_override_git_commit_id')) {
+                obj['values_override_git_commit_id'] = ApiClient.convertToType(data['values_override_git_commit_id'], 'String');
+            }
         }
         return obj;
     }
@@ -67,10 +70,16 @@ class DeployHelmRequest {
 DeployHelmRequest.prototype['version'] = undefined;
 
 /**
- * Commit to deploy Cannot be set if `version` is defined 
+ * Commit to deploy for chart source. Cannot be set if `version` is defined 
  * @member {String} git_commit_id
  */
 DeployHelmRequest.prototype['git_commit_id'] = undefined;
+
+/**
+ * Commit to deploy for values override 
+ * @member {String} values_override_git_commit_id
+ */
+DeployHelmRequest.prototype['values_override_git_commit_id'] = undefined;
 
 
 

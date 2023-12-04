@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property valuesOverrideGitCommitId (base name: "values_override_git_commit_id")', function() {
+      // uncomment below and update the code to test the property valuesOverrideGitCommitId
+      //var instance = new QoveryApi.DeployHelmRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

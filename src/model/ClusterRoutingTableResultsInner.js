@@ -22,10 +22,13 @@ class ClusterRoutingTableResultsInner {
     /**
      * Constructs a new <code>ClusterRoutingTableResultsInner</code>.
      * @alias module:model/ClusterRoutingTableResultsInner
+     * @param destination {String} 
+     * @param target {String} 
+     * @param description {String} 
      */
-    constructor() { 
+    constructor(destination, target, description) { 
         
-        ClusterRoutingTableResultsInner.initialize(this);
+        ClusterRoutingTableResultsInner.initialize(this, destination, target, description);
     }
 
     /**
@@ -33,7 +36,10 @@ class ClusterRoutingTableResultsInner {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, destination, target, description) { 
+        obj['destination'] = destination;
+        obj['target'] = target;
+        obj['description'] = description;
     }
 
     /**

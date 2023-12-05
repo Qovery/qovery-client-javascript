@@ -93,7 +93,6 @@ import ClusterRequestFeaturesInner from './model/ClusterRequestFeaturesInner';
 import ClusterResponseList from './model/ClusterResponseList';
 import ClusterRoutingTable from './model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
-import ClusterRoutingTableRequestRoutesInner from './model/ClusterRoutingTableRequestRoutesInner';
 import ClusterRoutingTableResultsInner from './model/ClusterRoutingTableResultsInner';
 import ClusterStateEnum from './model/ClusterStateEnum';
 import ClusterStatus from './model/ClusterStatus';
@@ -1111,12 +1110,6 @@ export {
      * @property {module:model/ClusterRoutingTableRequest}
      */
     ClusterRoutingTableRequest,
-
-    /**
-     * The ClusterRoutingTableRequestRoutesInner model constructor.
-     * @property {module:model/ClusterRoutingTableRequestRoutesInner}
-     */
-    ClusterRoutingTableRequestRoutesInner,
 
     /**
      * The ClusterRoutingTableResultsInner model constructor.

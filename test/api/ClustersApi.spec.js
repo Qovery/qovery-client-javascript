@@ -118,6 +118,16 @@
         done();
       });
     });
+    describe('getClusterKubeconfig', function() {
+      it('should call getClusterKubeconfig successfully', function(done) {
+        //uncomment below and update the code to test getClusterKubeconfig
+        //instance.getClusterKubeconfig(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getClusterReadinessStatus', function() {
       it('should call getClusterReadinessStatus successfully', function(done) {
         //uncomment below and update the code to test getClusterReadinessStatus

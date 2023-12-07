@@ -397,6 +397,54 @@ export default class ClustersApi {
     }
 
     /**
+     * Callback function to receive the result of the getClusterKubeconfig operation.
+     * @callback module:api/ClustersApi~getClusterKubeconfigCallback
+     * @param {String} error Error message, if any.
+     * @param {String} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get cluster kubeconfig
+     * @param {String} organizationId Organization ID
+     * @param {String} clusterId Cluster ID
+     * @param {module:api/ClustersApi~getClusterKubeconfigCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link String}
+     */
+    getClusterKubeconfig(organizationId, clusterId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getClusterKubeconfig");
+      }
+      // verify the required parameter 'clusterId' is set
+      if (clusterId === undefined || clusterId === null) {
+        throw new Error("Missing the required parameter 'clusterId' when calling getClusterKubeconfig");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'clusterId': clusterId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['text/plain'];
+      let returnType = 'String';
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/cluster/{clusterId}/kubeconfig', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getClusterReadinessStatus operation.
      * @callback module:api/ClustersApi~getClusterReadinessStatusCallback
      * @param {String} error Error message, if any.

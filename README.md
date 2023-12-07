@@ -244,6 +244,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**editClusterAdvancedSettings**](docs/ClustersApi.md#editClusterAdvancedSettings) | **PUT** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Edit advanced settings
 *QoveryApi.ClustersApi* | [**editRoutingTable**](docs/ClustersApi.md#editRoutingTable) | **PUT** /organization/{organizationId}/cluster/{clusterId}/routingTable | Edit routing table
 *QoveryApi.ClustersApi* | [**getClusterAdvancedSettings**](docs/ClustersApi.md#getClusterAdvancedSettings) | **GET** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Get advanced settings
+*QoveryApi.ClustersApi* | [**getClusterKubeconfig**](docs/ClustersApi.md#getClusterKubeconfig) | **GET** /organization/{organizationId}/cluster/{clusterId}/kubeconfig | Get cluster kubeconfig
 *QoveryApi.ClustersApi* | [**getClusterReadinessStatus**](docs/ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
 *QoveryApi.ClustersApi* | [**getClusterStatus**](docs/ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
 *QoveryApi.ClustersApi* | [**getDefaultClusterAdvancedSettings**](docs/ClustersApi.md#getDefaultClusterAdvancedSettings) | **GET** /defaultClusterAdvancedSettings | List default cluster advanced settings

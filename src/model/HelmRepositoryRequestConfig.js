@@ -50,11 +50,26 @@ class HelmRepositoryRequestConfig {
             if (data.hasOwnProperty('skip_tls_verification')) {
                 obj['skip_tls_verification'] = ApiClient.convertToType(data['skip_tls_verification'], 'Boolean');
             }
-            if (data.hasOwnProperty('login')) {
-                obj['login'] = ApiClient.convertToType(data['login'], 'String');
+            if (data.hasOwnProperty('username')) {
+                obj['username'] = ApiClient.convertToType(data['username'], 'String');
             }
             if (data.hasOwnProperty('password')) {
                 obj['password'] = ApiClient.convertToType(data['password'], 'String');
+            }
+            if (data.hasOwnProperty('access_key_id')) {
+                obj['access_key_id'] = ApiClient.convertToType(data['access_key_id'], 'String');
+            }
+            if (data.hasOwnProperty('secret_access_key')) {
+                obj['secret_access_key'] = ApiClient.convertToType(data['secret_access_key'], 'String');
+            }
+            if (data.hasOwnProperty('region')) {
+                obj['region'] = ApiClient.convertToType(data['region'], 'String');
+            }
+            if (data.hasOwnProperty('scaleway_access_key')) {
+                obj['scaleway_access_key'] = ApiClient.convertToType(data['scaleway_access_key'], 'String');
+            }
+            if (data.hasOwnProperty('scaleway_secret_key')) {
+                obj['scaleway_secret_key'] = ApiClient.convertToType(data['scaleway_secret_key'], 'String');
             }
         }
         return obj;
@@ -72,15 +87,45 @@ HelmRepositoryRequestConfig.prototype['skip_tls_verification'] = false;
 
 /**
  * Required if the repository is private
- * @member {String} login
+ * @member {String} username
  */
-HelmRepositoryRequestConfig.prototype['login'] = undefined;
+HelmRepositoryRequestConfig.prototype['username'] = undefined;
 
 /**
  * Required if the repository is private
  * @member {String} password
  */
 HelmRepositoryRequestConfig.prototype['password'] = undefined;
+
+/**
+ * Required if kind is `ECR` or `PUBLIC_ECR`
+ * @member {String} access_key_id
+ */
+HelmRepositoryRequestConfig.prototype['access_key_id'] = undefined;
+
+/**
+ * Required if kind is `ECR` or `PUBLIC_ECR`
+ * @member {String} secret_access_key
+ */
+HelmRepositoryRequestConfig.prototype['secret_access_key'] = undefined;
+
+/**
+ * Required if kind is `ECR` or `SCALEWAY_CR`
+ * @member {String} region
+ */
+HelmRepositoryRequestConfig.prototype['region'] = undefined;
+
+/**
+ * Required if kind is `SCALEWAY_CR`
+ * @member {String} scaleway_access_key
+ */
+HelmRepositoryRequestConfig.prototype['scaleway_access_key'] = undefined;
+
+/**
+ * Required if kind is `SCALEWAY_CR`
+ * @member {String} scaleway_secret_key
+ */
+HelmRepositoryRequestConfig.prototype['scaleway_secret_key'] = undefined;
 
 
 

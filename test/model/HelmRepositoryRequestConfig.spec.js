@@ -60,14 +60,44 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property login (base name: "login")', function() {
-      // uncomment below and update the code to test the property login
+    it('should have the property username (base name: "username")', function() {
+      // uncomment below and update the code to test the property username
       //var instance = new QoveryApi.HelmRepositoryRequestConfig();
       //expect(instance).to.be();
     });
 
     it('should have the property password (base name: "password")', function() {
       // uncomment below and update the code to test the property password
+      //var instance = new QoveryApi.HelmRepositoryRequestConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property accessKeyId (base name: "access_key_id")', function() {
+      // uncomment below and update the code to test the property accessKeyId
+      //var instance = new QoveryApi.HelmRepositoryRequestConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property secretAccessKey (base name: "secret_access_key")', function() {
+      // uncomment below and update the code to test the property secretAccessKey
+      //var instance = new QoveryApi.HelmRepositoryRequestConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property region (base name: "region")', function() {
+      // uncomment below and update the code to test the property region
+      //var instance = new QoveryApi.HelmRepositoryRequestConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scalewayAccessKey (base name: "scaleway_access_key")', function() {
+      // uncomment below and update the code to test the property scalewayAccessKey
+      //var instance = new QoveryApi.HelmRepositoryRequestConfig();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property scalewaySecretKey (base name: "scaleway_secret_key")', function() {
+      // uncomment below and update the code to test the property scalewaySecretKey
       //var instance = new QoveryApi.HelmRepositoryRequestConfig();
       //expect(instance).to.be();
     });

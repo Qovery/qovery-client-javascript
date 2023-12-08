@@ -27,10 +27,59 @@ export default class HelmRepositoryKindEnum {
 
     
         /**
-         * value: "OCI"
+         * value: "OCI_PUBLIC"
          * @const
          */
-        "OCI" = "OCI";
+        "OCI_PUBLIC" = "OCI_PUBLIC";
+
+    
+        /**
+         * value: "OCI_ECR"
+         * @const
+         */
+        "OCI_ECR" = "OCI_ECR";
+
+    
+        /**
+         * value: "OCI_SCALEWAY_CR"
+         * @const
+         */
+        "OCI_SCALEWAY_CR" = "OCI_SCALEWAY_CR";
+
+    
+        /**
+         * value: "OCI_DOCKER_HUB"
+         * @const
+         */
+        "OCI_DOCKER_HUB" = "OCI_DOCKER_HUB";
+
+    
+        /**
+         * value: "OCI_PUBLIC_ECR"
+         * @const
+         */
+        "OCI_PUBLIC_ECR" = "OCI_PUBLIC_ECR";
+
+    
+        /**
+         * value: "OCI_GENERIC_CR"
+         * @const
+         */
+        "OCI_GENERIC_CR" = "OCI_GENERIC_CR";
+
+    
+        /**
+         * value: "OCI_GITHUB_CR"
+         * @const
+         */
+        "OCI_GITHUB_CR" = "OCI_GITHUB_CR";
+
+    
+        /**
+         * value: "OCI_GITLAB_CR"
+         * @const
+         */
+        "OCI_GITLAB_CR" = "OCI_GITLAB_CR";
 
     
 

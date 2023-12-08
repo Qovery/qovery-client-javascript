@@ -27,13 +27,6 @@ export default class HelmRepositoryKindEnum {
 
     
         /**
-         * value: "OCI_PUBLIC"
-         * @const
-         */
-        "OCI_PUBLIC" = "OCI_PUBLIC";
-
-    
-        /**
          * value: "OCI_ECR"
          * @const
          */

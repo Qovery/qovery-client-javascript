@@ -26,11 +26,12 @@ class HelmRepositoryRequest {
      * @alias module:model/HelmRepositoryRequest
      * @param name {String} 
      * @param kind {module:model/HelmRepositoryKindEnum} 
+     * @param skipTlsVerification {Boolean} Bypass tls certificate verification when connecting to repository
      * @param config {module:model/HelmRepositoryRequestConfig} 
      */
-    constructor(name, kind, config) { 
+    constructor(name, kind, skipTlsVerification, config) { 
         
-        HelmRepositoryRequest.initialize(this, name, kind, config);
+        HelmRepositoryRequest.initialize(this, name, kind, skipTlsVerification, config);
     }
 
     /**
@@ -38,9 +39,10 @@ class HelmRepositoryRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, kind, config) { 
+    static initialize(obj, name, kind, skipTlsVerification, config) { 
         obj['name'] = name;
         obj['kind'] = kind;
+        obj['skip_tls_verification'] = skipTlsVerification;
         obj['config'] = config;
     }
 
@@ -66,6 +68,9 @@ class HelmRepositoryRequest {
             }
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
+            }
+            if (data.hasOwnProperty('skip_tls_verification')) {
+                obj['skip_tls_verification'] = ApiClient.convertToType(data['skip_tls_verification'], 'Boolean');
             }
             if (data.hasOwnProperty('config')) {
                 obj['config'] = HelmRepositoryRequestConfig.constructFromObject(data['config']);
@@ -97,6 +102,12 @@ HelmRepositoryRequest.prototype['description'] = undefined;
  * @member {String} url
  */
 HelmRepositoryRequest.prototype['url'] = undefined;
+
+/**
+ * Bypass tls certificate verification when connecting to repository
+ * @member {Boolean} skip_tls_verification
+ */
+HelmRepositoryRequest.prototype['skip_tls_verification'] = undefined;
 
 /**
  * @member {module:model/HelmRepositoryRequestConfig} config

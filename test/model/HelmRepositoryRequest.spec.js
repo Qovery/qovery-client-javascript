@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property skipTlsVerification (base name: "skip_tls_verification")', function() {
+      // uncomment below and update the code to test the property skipTlsVerification
+      //var instance = new QoveryApi.HelmRepositoryRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property config (base name: "config")', function() {
       // uncomment below and update the code to test the property config
       //var instance = new QoveryApi.HelmRepositoryRequest();

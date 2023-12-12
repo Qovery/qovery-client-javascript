@@ -47,9 +47,6 @@ class HelmRepositoryRequestConfig {
         if (data) {
             obj = obj || new HelmRepositoryRequestConfig();
 
-            if (data.hasOwnProperty('skip_tls_verification')) {
-                obj['skip_tls_verification'] = ApiClient.convertToType(data['skip_tls_verification'], 'Boolean');
-            }
             if (data.hasOwnProperty('username')) {
                 obj['username'] = ApiClient.convertToType(data['username'], 'String');
             }
@@ -77,13 +74,6 @@ class HelmRepositoryRequestConfig {
 
 
 }
-
-/**
- * Bypass tls certificate verification when connecting to repository
- * @member {Boolean} skip_tls_verification
- * @default false
- */
-HelmRepositoryRequestConfig.prototype['skip_tls_verification'] = false;
 
 /**
  * Required if the repository is private

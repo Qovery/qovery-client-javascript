@@ -52,6 +52,9 @@ class ServicePortRequestPortsInner {
         if (data) {
             obj = obj || new ServicePortRequestPortsInner();
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -76,6 +79,11 @@ class ServicePortRequestPortsInner {
 
 
 }
+
+/**
+ * @member {String} id
+ */
+ServicePortRequestPortsInner.prototype['id'] = undefined;
 
 /**
  * @member {String} name

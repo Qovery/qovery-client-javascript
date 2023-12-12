@@ -79,6 +79,9 @@ class HelmRepositoryResponse {
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
+            if (data.hasOwnProperty('skip_tls_verification')) {
+                obj['skip_tls_verification'] = ApiClient.convertToType(data['skip_tls_verification'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -122,6 +125,12 @@ HelmRepositoryResponse.prototype['description'] = undefined;
  */
 HelmRepositoryResponse.prototype['url'] = undefined;
 
+/**
+ * Bypass tls certificate verification when connecting to repository
+ * @member {Boolean} skip_tls_verification
+ */
+HelmRepositoryResponse.prototype['skip_tls_verification'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -154,6 +163,11 @@ HelmRepositoryResponseAllOf.prototype['description'] = undefined;
  * @member {String} url
  */
 HelmRepositoryResponseAllOf.prototype['url'] = undefined;
+/**
+ * Bypass tls certificate verification when connecting to repository
+ * @member {Boolean} skip_tls_verification
+ */
+HelmRepositoryResponseAllOf.prototype['skip_tls_verification'] = undefined;
 
 
 

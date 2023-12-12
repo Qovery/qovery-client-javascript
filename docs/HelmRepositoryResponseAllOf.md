@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **kind** | [**HelmRepositoryKindEnum**](HelmRepositoryKindEnum.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **url** | **String** | URL of the helm repository | [optional] 
+**skipTlsVerification** | **Boolean** | Bypass tls certificate verification when connecting to repository | [optional] 
 
 

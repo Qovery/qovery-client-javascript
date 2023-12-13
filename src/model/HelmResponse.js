@@ -95,6 +95,9 @@ class HelmResponse {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('timeout_sec')) {
+                obj['timeout_sec'] = ApiClient.convertToType(data['timeout_sec'], 'Number');
+            }
             if (data.hasOwnProperty('auto_preview')) {
                 obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
             }
@@ -153,6 +156,13 @@ HelmResponse.prototype['name'] = undefined;
  * @member {String} description
  */
 HelmResponse.prototype['description'] = undefined;
+
+/**
+ * Maximum number of seconds allowed for helm to run before killing it and mark it as failed 
+ * @member {Number} timeout_sec
+ * @default 600
+ */
+HelmResponse.prototype['timeout_sec'] = 600;
 
 /**
  * Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
@@ -222,6 +232,12 @@ HelmResponseAllOf.prototype['name'] = undefined;
  * @member {String} description
  */
 HelmResponseAllOf.prototype['description'] = undefined;
+/**
+ * Maximum number of seconds allowed for helm to run before killing it and mark it as failed 
+ * @member {Number} timeout_sec
+ * @default 600
+ */
+HelmResponseAllOf.prototype['timeout_sec'] = 600;
 /**
  * Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
  * @member {Boolean} auto_preview

@@ -33,6 +33,13 @@ export default class KubernetesEnum {
         "MANAGED" = "MANAGED";
 
     
+        /**
+         * value: "SELF_MANAGED"
+         * @const
+         */
+        "SELF_MANAGED" = "SELF_MANAGED";
+
+    
 
     /**
     * Returns a <code>KubernetesEnum</code> enum value from a Javascript object name.

@@ -7,4 +7,6 @@
 
 * `MANAGED` (value: `"MANAGED"`)
 
+* `SELF_MANAGED` (value: `"SELF_MANAGED"`)
+
 

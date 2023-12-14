@@ -17,6 +17,9 @@ Method | HTTP request | Description
 [**listDOManagedDatabaseInstanceType**](CloudProviderApi.md#listDOManagedDatabaseInstanceType) | **GET** /digitalOcean/managedDatabase/instanceType/{region}/{databaseType} | List Digital Ocean available managed database instance types
 [**listDOManagedDatabaseType**](CloudProviderApi.md#listDOManagedDatabaseType) | **GET** /digitalOcean/managedDatabase/type | List Digital Ocean available managed database types
 [**listDORegions**](CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
+[**listGcpFeatures**](CloudProviderApi.md#listGcpFeatures) | **GET** /gcp/clusterFeature | List GCP features available
+[**listGcpGkeInstanceType**](CloudProviderApi.md#listGcpGkeInstanceType) | **GET** /gcp/instanceType/{region} | List GCP GKE available instance types
+[**listGcpRegions**](CloudProviderApi.md#listGcpRegions) | **GET** /gcp/region | List GCP regions
 [**listSCWManagedDatabaseInstanceType**](CloudProviderApi.md#listSCWManagedDatabaseInstanceType) | **GET** /scaleway/managedDatabase/instanceType/{zone}/{databaseType} | List Scaleway available managed database instance types
 [**listSCWManagedDatabaseType**](CloudProviderApi.md#listSCWManagedDatabaseType) | **GET** /scaleway/managedDatabase/type | List Scaleway available managed database types
 [**listScalewayFeatures**](CloudProviderApi.md#listScalewayFeatures) | **GET** /scaleway/clusterFeature | List Scaleway features available
@@ -644,6 +647,154 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new QoveryApi.CloudProviderApi();
 apiInstance.listDORegions((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ClusterRegionResponseList**](ClusterRegionResponseList.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listGcpFeatures
+
+> ClusterFeatureResponseList listGcpFeatures()
+
+List GCP features available
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+apiInstance.listGcpFeatures((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ClusterFeatureResponseList**](ClusterFeatureResponseList.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listGcpGkeInstanceType
+
+> ClusterInstanceTypeResponseList listGcpGkeInstanceType(region)
+
+List GCP GKE available instance types
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+let region = us-east-2; // String | region name
+apiInstance.listGcpGkeInstanceType(region, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **region** | **String**| region name | 
+
+### Return type
+
+[**ClusterInstanceTypeResponseList**](ClusterInstanceTypeResponseList.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listGcpRegions
+
+> ClusterRegionResponseList listGcpRegions()
+
+List GCP regions
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.CloudProviderApi();
+apiInstance.listGcpRegions((error, data, response) => {
   if (error) {
     console.error(error);
   } else {

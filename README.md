@@ -216,6 +216,9 @@ Class | Method | HTTP request | Description
 *QoveryApi.CloudProviderApi* | [**listDOManagedDatabaseInstanceType**](docs/CloudProviderApi.md#listDOManagedDatabaseInstanceType) | **GET** /digitalOcean/managedDatabase/instanceType/{region}/{databaseType} | List Digital Ocean available managed database instance types
 *QoveryApi.CloudProviderApi* | [**listDOManagedDatabaseType**](docs/CloudProviderApi.md#listDOManagedDatabaseType) | **GET** /digitalOcean/managedDatabase/type | List Digital Ocean available managed database types
 *QoveryApi.CloudProviderApi* | [**listDORegions**](docs/CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
+*QoveryApi.CloudProviderApi* | [**listGcpFeatures**](docs/CloudProviderApi.md#listGcpFeatures) | **GET** /gcp/clusterFeature | List GCP features available
+*QoveryApi.CloudProviderApi* | [**listGcpGkeInstanceType**](docs/CloudProviderApi.md#listGcpGkeInstanceType) | **GET** /gcp/instanceType/{region} | List GCP GKE available instance types
+*QoveryApi.CloudProviderApi* | [**listGcpRegions**](docs/CloudProviderApi.md#listGcpRegions) | **GET** /gcp/region | List GCP regions
 *QoveryApi.CloudProviderApi* | [**listSCWManagedDatabaseInstanceType**](docs/CloudProviderApi.md#listSCWManagedDatabaseInstanceType) | **GET** /scaleway/managedDatabase/instanceType/{zone}/{databaseType} | List Scaleway available managed database instance types
 *QoveryApi.CloudProviderApi* | [**listSCWManagedDatabaseType**](docs/CloudProviderApi.md#listSCWManagedDatabaseType) | **GET** /scaleway/managedDatabase/type | List Scaleway available managed database types
 *QoveryApi.CloudProviderApi* | [**listScalewayFeatures**](docs/CloudProviderApi.md#listScalewayFeatures) | **GET** /scaleway/clusterFeature | List Scaleway features available
@@ -224,18 +227,23 @@ Class | Method | HTTP request | Description
 *QoveryApi.CloudProviderApi* | [**listScalewayRegions**](docs/CloudProviderApi.md#listScalewayRegions) | **GET** /scaleway/region | List Scaleway regions
 *QoveryApi.CloudProviderCredentialsApi* | [**createAWSCredentials**](docs/CloudProviderCredentialsApi.md#createAWSCredentials) | **POST** /organization/{organizationId}/aws/credentials | Create AWS credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**createDOCredentials**](docs/CloudProviderCredentialsApi.md#createDOCredentials) | **POST** /organization/{organizationId}/digitalOcean/credentials | Create Digital Ocean credentials set
+*QoveryApi.CloudProviderCredentialsApi* | [**createGCPCredentials**](docs/CloudProviderCredentialsApi.md#createGCPCredentials) | **POST** /organization/{organizationId}/gcp/credentials | Create GCP credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**createScalewayCredentials**](docs/CloudProviderCredentialsApi.md#createScalewayCredentials) | **POST** /organization/{organizationId}/scaleway/credentials | Create Scaleway credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**deleteAWSCredentials**](docs/CloudProviderCredentialsApi.md#deleteAWSCredentials) | **DELETE** /organization/{organizationId}/aws/credentials/{credentialsId} | Delete a set of AWS credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**deleteDOCredentials**](docs/CloudProviderCredentialsApi.md#deleteDOCredentials) | **DELETE** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Delete a set of Digital Ocean credentials
+*QoveryApi.CloudProviderCredentialsApi* | [**deleteGcpCredentials**](docs/CloudProviderCredentialsApi.md#deleteGcpCredentials) | **DELETE** /organization/{organizationId}/gcp/credentials/{credentialsId} | Delete a set of GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**deleteScalewayCredentials**](docs/CloudProviderCredentialsApi.md#deleteScalewayCredentials) | **DELETE** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Delete a set of Scaleway credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**editAWSCredentials**](docs/CloudProviderCredentialsApi.md#editAWSCredentials) | **PUT** /organization/{organizationId}/aws/credentials/{credentialsId} | Edit a set of AWS credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**editDOCredentials**](docs/CloudProviderCredentialsApi.md#editDOCredentials) | **PUT** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Edit a set of Digital Ocean credentials
+*QoveryApi.CloudProviderCredentialsApi* | [**editGcpCredentials**](docs/CloudProviderCredentialsApi.md#editGcpCredentials) | **PUT** /organization/{organizationId}/gcp/credentials/{credentialsId} | Edit a set of GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**editScalewayCredentials**](docs/CloudProviderCredentialsApi.md#editScalewayCredentials) | **PUT** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Edit a set of Scaleway credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**getAWSCredentials**](docs/CloudProviderCredentialsApi.md#getAWSCredentials) | **GET** /organization/{organizationId}/aws/credentials/{credentialsId} | Get a set of AWS credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**getDOCredentials**](docs/CloudProviderCredentialsApi.md#getDOCredentials) | **GET** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Get a set of Digital Ocean credentials
+*QoveryApi.CloudProviderCredentialsApi* | [**getGcpCredentials**](docs/CloudProviderCredentialsApi.md#getGcpCredentials) | **GET** /organization/{organizationId}/gcp/credentials/{credentialsId} | Get a set of GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**getScalewayCredentials**](docs/CloudProviderCredentialsApi.md#getScalewayCredentials) | **GET** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Get a set of Scaleway credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**listAWSCredentials**](docs/CloudProviderCredentialsApi.md#listAWSCredentials) | **GET** /organization/{organizationId}/aws/credentials | List AWS credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**listDOCredentials**](docs/CloudProviderCredentialsApi.md#listDOCredentials) | **GET** /organization/{organizationId}/digitalOcean/credentials | List DO credentials
+*QoveryApi.CloudProviderCredentialsApi* | [**listGcpCredentials**](docs/CloudProviderCredentialsApi.md#listGcpCredentials) | **GET** /organization/{organizationId}/gcp/credentials | List GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**listScalewayCredentials**](docs/CloudProviderCredentialsApi.md#listScalewayCredentials) | **GET** /organization/{organizationId}/scaleway/credentials | List Scaleway credentials
 *QoveryApi.ClustersApi* | [**createCluster**](docs/ClustersApi.md#createCluster) | **POST** /organization/{organizationId}/cluster | Create a cluster
 *QoveryApi.ClustersApi* | [**deleteCluster**](docs/ClustersApi.md#deleteCluster) | **DELETE** /organization/{organizationId}/cluster/{clusterId} | Delete a cluster
@@ -778,6 +786,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.EnvironmentVariableOverride](docs/EnvironmentVariableOverride.md)
  - [QoveryApi.EnvironmentVariableRequest](docs/EnvironmentVariableRequest.md)
  - [QoveryApi.EnvironmentVariableResponseList](docs/EnvironmentVariableResponseList.md)
+ - [QoveryApi.GcpCredentialsRequest](docs/GcpCredentialsRequest.md)
  - [QoveryApi.GenericObjectCurrentCost](docs/GenericObjectCurrentCost.md)
  - [QoveryApi.GitAuthProvider](docs/GitAuthProvider.md)
  - [QoveryApi.GitAuthProviderResponseList](docs/GitAuthProviderResponseList.md)

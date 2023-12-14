@@ -40,6 +40,13 @@ export default class CloudProviderEnum {
         "SCW" = "SCW";
 
     
+        /**
+         * value: "GCP"
+         * @const
+         */
+        "GCP" = "GCP";
+
+    
 
     /**
     * Returns a <code>CloudProviderEnum</code> enum value from a Javascript object name.

@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('createGCPCredentials', function() {
+      it('should call createGCPCredentials successfully', function(done) {
+        //uncomment below and update the code to test createGCPCredentials
+        //instance.createGCPCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createScalewayCredentials', function() {
       it('should call createScalewayCredentials successfully', function(done) {
         //uncomment below and update the code to test createScalewayCredentials
@@ -92,6 +102,16 @@
       it('should call deleteDOCredentials successfully', function(done) {
         //uncomment below and update the code to test deleteDOCredentials
         //instance.deleteDOCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('deleteGcpCredentials', function() {
+      it('should call deleteGcpCredentials successfully', function(done) {
+        //uncomment below and update the code to test deleteGcpCredentials
+        //instance.deleteGcpCredentials(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -128,6 +148,16 @@
         done();
       });
     });
+    describe('editGcpCredentials', function() {
+      it('should call editGcpCredentials successfully', function(done) {
+        //uncomment below and update the code to test editGcpCredentials
+        //instance.editGcpCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editScalewayCredentials', function() {
       it('should call editScalewayCredentials successfully', function(done) {
         //uncomment below and update the code to test editScalewayCredentials
@@ -158,6 +188,16 @@
         done();
       });
     });
+    describe('getGcpCredentials', function() {
+      it('should call getGcpCredentials successfully', function(done) {
+        //uncomment below and update the code to test getGcpCredentials
+        //instance.getGcpCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getScalewayCredentials', function() {
       it('should call getScalewayCredentials successfully', function(done) {
         //uncomment below and update the code to test getScalewayCredentials
@@ -182,6 +222,16 @@
       it('should call listDOCredentials successfully', function(done) {
         //uncomment below and update the code to test listDOCredentials
         //instance.listDOCredentials(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listGcpCredentials', function() {
+      it('should call listGcpCredentials successfully', function(done) {
+        //uncomment below and update the code to test listGcpCredentials
+        //instance.listGcpCredentials(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

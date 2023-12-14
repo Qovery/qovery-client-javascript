@@ -9,4 +9,6 @@
 
 * `SCW` (value: `"SCW"`)
 
+* `GCP` (value: `"GCP"`)
+
 

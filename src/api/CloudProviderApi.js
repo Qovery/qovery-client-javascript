@@ -544,6 +544,120 @@ export default class CloudProviderApi {
     }
 
     /**
+     * Callback function to receive the result of the listGcpFeatures operation.
+     * @callback module:api/CloudProviderApi~listGcpFeaturesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterFeatureResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List GCP features available
+     * @param {module:api/CloudProviderApi~listGcpFeaturesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterFeatureResponseList}
+     */
+    listGcpFeatures(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterFeatureResponseList;
+      return this.apiClient.callApi(
+        '/gcp/clusterFeature', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listGcpGkeInstanceType operation.
+     * @callback module:api/CloudProviderApi~listGcpGkeInstanceTypeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterInstanceTypeResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List GCP GKE available instance types
+     * @param {String} region region name
+     * @param {module:api/CloudProviderApi~listGcpGkeInstanceTypeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterInstanceTypeResponseList}
+     */
+    listGcpGkeInstanceType(region, callback) {
+      let postBody = null;
+      // verify the required parameter 'region' is set
+      if (region === undefined || region === null) {
+        throw new Error("Missing the required parameter 'region' when calling listGcpGkeInstanceType");
+      }
+
+      let pathParams = {
+        'region': region
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterInstanceTypeResponseList;
+      return this.apiClient.callApi(
+        '/gcp/instanceType/{region}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listGcpRegions operation.
+     * @callback module:api/CloudProviderApi~listGcpRegionsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterRegionResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List GCP regions
+     * @param {module:api/CloudProviderApi~listGcpRegionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterRegionResponseList}
+     */
+    listGcpRegions(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterRegionResponseList;
+      return this.apiClient.callApi(
+        '/gcp/region', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listSCWManagedDatabaseInstanceType operation.
      * @callback module:api/CloudProviderApi~listSCWManagedDatabaseInstanceTypeCallback
      * @param {String} error Error message, if any.

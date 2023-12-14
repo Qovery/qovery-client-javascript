@@ -17,6 +17,7 @@ import AwsCredentialsRequest from '../model/AwsCredentialsRequest';
 import ClusterCredentials from '../model/ClusterCredentials';
 import ClusterCredentialsResponseList from '../model/ClusterCredentialsResponseList';
 import DoCredentialsRequest from '../model/DoCredentialsRequest';
+import GcpCredentialsRequest from '../model/GcpCredentialsRequest';
 import ScalewayCredentialsRequest from '../model/ScalewayCredentialsRequest';
 
 /**
@@ -123,6 +124,51 @@ export default class CloudProviderCredentialsApi {
       let returnType = ClusterCredentials;
       return this.apiClient.callApi(
         '/organization/{organizationId}/digitalOcean/credentials', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the createGCPCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~createGCPCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Create GCP credentials set
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GcpCredentialsRequest} opts.gcpCredentialsRequest 
+     * @param {module:api/CloudProviderCredentialsApi~createGCPCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterCredentials}
+     */
+    createGCPCredentials(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['gcpCredentialsRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling createGCPCredentials");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ClusterCredentials;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gcp/credentials', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -262,6 +308,53 @@ export default class CloudProviderCredentialsApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/organization/{organizationId}/digitalOcean/credentials/{credentialsId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the deleteGcpCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~deleteGcpCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Delete a set of GCP credentials
+     * @param {String} credentialsId Credentials ID
+     * @param {String} organizationId Organization ID
+     * @param {module:api/CloudProviderCredentialsApi~deleteGcpCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    deleteGcpCredentials(credentialsId, organizationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'credentialsId' is set
+      if (credentialsId === undefined || credentialsId === null) {
+        throw new Error("Missing the required parameter 'credentialsId' when calling deleteGcpCredentials");
+      }
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling deleteGcpCredentials");
+      }
+
+      let pathParams = {
+        'credentialsId': credentialsId,
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gcp/credentials/{credentialsId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -417,6 +510,57 @@ export default class CloudProviderCredentialsApi {
     }
 
     /**
+     * Callback function to receive the result of the editGcpCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~editGcpCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit a set of GCP credentials
+     * @param {String} organizationId Organization ID
+     * @param {String} credentialsId Credentials ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/GcpCredentialsRequest} opts.gcpCredentialsRequest 
+     * @param {module:api/CloudProviderCredentialsApi~editGcpCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterCredentials}
+     */
+    editGcpCredentials(organizationId, credentialsId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['gcpCredentialsRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling editGcpCredentials");
+      }
+      // verify the required parameter 'credentialsId' is set
+      if (credentialsId === undefined || credentialsId === null) {
+        throw new Error("Missing the required parameter 'credentialsId' when calling editGcpCredentials");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'credentialsId': credentialsId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = ClusterCredentials;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gcp/credentials/{credentialsId}', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editScalewayCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~editScalewayCredentialsCallback
      * @param {String} error Error message, if any.
@@ -564,6 +708,54 @@ export default class CloudProviderCredentialsApi {
     }
 
     /**
+     * Callback function to receive the result of the getGcpCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~getGcpCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterCredentials} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a set of GCP credentials
+     * @param {String} organizationId Organization ID
+     * @param {String} credentialsId Credentials ID
+     * @param {module:api/CloudProviderCredentialsApi~getGcpCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterCredentials}
+     */
+    getGcpCredentials(organizationId, credentialsId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getGcpCredentials");
+      }
+      // verify the required parameter 'credentialsId' is set
+      if (credentialsId === undefined || credentialsId === null) {
+        throw new Error("Missing the required parameter 'credentialsId' when calling getGcpCredentials");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'credentialsId': credentialsId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterCredentials;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gcp/credentials/{credentialsId}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getScalewayCredentials operation.
      * @callback module:api/CloudProviderCredentialsApi~getScalewayCredentialsCallback
      * @param {String} error Error message, if any.
@@ -690,6 +882,48 @@ export default class CloudProviderCredentialsApi {
       let returnType = ClusterCredentialsResponseList;
       return this.apiClient.callApi(
         '/organization/{organizationId}/digitalOcean/credentials', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the listGcpCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~listGcpCredentialsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ClusterCredentialsResponseList} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List GCP credentials
+     * @param {String} organizationId Organization ID
+     * @param {module:api/CloudProviderCredentialsApi~listGcpCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ClusterCredentialsResponseList}
+     */
+    listGcpCredentials(organizationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling listGcpCredentials");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ClusterCredentialsResponseList;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/gcp/credentials', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

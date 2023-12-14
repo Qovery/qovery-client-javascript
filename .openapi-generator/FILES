@@ -283,6 +283,7 @@ docs/EnvironmentVariableOverride.md
 docs/EnvironmentVariableRequest.md
 docs/EnvironmentVariableResponseList.md
 docs/EnvironmentsApi.md
+docs/GcpCredentialsRequest.md
 docs/GenericObjectCurrentCost.md
 docs/GitAuthProvider.md
 docs/GitAuthProviderResponseList.md
@@ -900,6 +901,7 @@ src/model/EnvironmentVariableEditRequest.js
 src/model/EnvironmentVariableOverride.js
 src/model/EnvironmentVariableRequest.js
 src/model/EnvironmentVariableResponseList.js
+src/model/GcpCredentialsRequest.js
 src/model/GenericObjectCurrentCost.js
 src/model/GitAuthProvider.js
 src/model/GitAuthProviderResponseList.js
@@ -1478,6 +1480,7 @@ test/model/EnvironmentVariableEditRequest.spec.js
 test/model/EnvironmentVariableOverride.spec.js
 test/model/EnvironmentVariableRequest.spec.js
 test/model/EnvironmentVariableResponseList.spec.js
+test/model/GcpCredentialsRequest.spec.js
 test/model/GenericObjectCurrentCost.spec.js
 test/model/GitAuthProvider.spec.js
 test/model/GitAuthProviderResponseList.spec.js

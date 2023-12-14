@@ -248,6 +248,7 @@ import EnvironmentVariableEditRequest from './model/EnvironmentVariableEditReque
 import EnvironmentVariableOverride from './model/EnvironmentVariableOverride';
 import EnvironmentVariableRequest from './model/EnvironmentVariableRequest';
 import EnvironmentVariableResponseList from './model/EnvironmentVariableResponseList';
+import GcpCredentialsRequest from './model/GcpCredentialsRequest';
 import GenericObjectCurrentCost from './model/GenericObjectCurrentCost';
 import GitAuthProvider from './model/GitAuthProvider';
 import GitAuthProviderResponseList from './model/GitAuthProviderResponseList';
@@ -2040,6 +2041,12 @@ export {
      * @property {module:model/EnvironmentVariableResponseList}
      */
     EnvironmentVariableResponseList,
+
+    /**
+     * The GcpCredentialsRequest model constructor.
+     * @property {module:model/GcpCredentialsRequest}
+     */
+    GcpCredentialsRequest,
 
     /**
      * The GenericObjectCurrentCost model constructor.

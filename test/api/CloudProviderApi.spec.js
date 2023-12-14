@@ -178,6 +178,36 @@
         done();
       });
     });
+    describe('listGcpFeatures', function() {
+      it('should call listGcpFeatures successfully', function(done) {
+        //uncomment below and update the code to test listGcpFeatures
+        //instance.listGcpFeatures(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listGcpGkeInstanceType', function() {
+      it('should call listGcpGkeInstanceType successfully', function(done) {
+        //uncomment below and update the code to test listGcpGkeInstanceType
+        //instance.listGcpGkeInstanceType(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('listGcpRegions', function() {
+      it('should call listGcpRegions successfully', function(done) {
+        //uncomment below and update the code to test listGcpRegions
+        //instance.listGcpRegions(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listSCWManagedDatabaseInstanceType', function() {
       it('should call listSCWManagedDatabaseInstanceType successfully', function(done) {
         //uncomment below and update the code to test listSCWManagedDatabaseInstanceType

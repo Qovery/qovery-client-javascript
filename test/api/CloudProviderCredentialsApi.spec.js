@@ -68,10 +68,10 @@
         done();
       });
     });
-    describe('createGCPCredentials', function() {
-      it('should call createGCPCredentials successfully', function(done) {
-        //uncomment below and update the code to test createGCPCredentials
-        //instance.createGCPCredentials(function(error) {
+    describe('createGcpCredentials', function() {
+      it('should call createGcpCredentials successfully', function(done) {
+        //uncomment below and update the code to test createGcpCredentials
+        //instance.createGcpCredentials(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

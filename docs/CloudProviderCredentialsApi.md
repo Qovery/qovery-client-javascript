@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createAWSCredentials**](CloudProviderCredentialsApi.md#createAWSCredentials) | **POST** /organization/{organizationId}/aws/credentials | Create AWS credentials set
 [**createDOCredentials**](CloudProviderCredentialsApi.md#createDOCredentials) | **POST** /organization/{organizationId}/digitalOcean/credentials | Create Digital Ocean credentials set
-[**createGCPCredentials**](CloudProviderCredentialsApi.md#createGCPCredentials) | **POST** /organization/{organizationId}/gcp/credentials | Create GCP credentials set
+[**createGcpCredentials**](CloudProviderCredentialsApi.md#createGcpCredentials) | **POST** /organization/{organizationId}/gcp/credentials | Create GCP credentials set
 [**createScalewayCredentials**](CloudProviderCredentialsApi.md#createScalewayCredentials) | **POST** /organization/{organizationId}/scaleway/credentials | Create Scaleway credentials set
 [**deleteAWSCredentials**](CloudProviderCredentialsApi.md#deleteAWSCredentials) | **DELETE** /organization/{organizationId}/aws/credentials/{credentialsId} | Delete a set of AWS credentials
 [**deleteDOCredentials**](CloudProviderCredentialsApi.md#deleteDOCredentials) | **DELETE** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Delete a set of Digital Ocean credentials
@@ -139,9 +139,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## createGCPCredentials
+## createGcpCredentials
 
-> ClusterCredentials createGCPCredentials(organizationId, opts)
+> ClusterCredentials createGcpCredentials(organizationId, opts)
 
 Create GCP credentials set
 
@@ -164,7 +164,7 @@ let organizationId = "organizationId_example"; // String | Organization ID
 let opts = {
   'gcpCredentialsRequest': new QoveryApi.GcpCredentialsRequest() // GcpCredentialsRequest | 
 };
-apiInstance.createGCPCredentials(organizationId, opts, (error, data, response) => {
+apiInstance.createGcpCredentials(organizationId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

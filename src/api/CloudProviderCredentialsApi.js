@@ -130,8 +130,8 @@ export default class CloudProviderCredentialsApi {
     }
 
     /**
-     * Callback function to receive the result of the createGCPCredentials operation.
-     * @callback module:api/CloudProviderCredentialsApi~createGCPCredentialsCallback
+     * Callback function to receive the result of the createGcpCredentials operation.
+     * @callback module:api/CloudProviderCredentialsApi~createGcpCredentialsCallback
      * @param {String} error Error message, if any.
      * @param {module:model/ClusterCredentials} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -142,15 +142,15 @@ export default class CloudProviderCredentialsApi {
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
      * @param {module:model/GcpCredentialsRequest} opts.gcpCredentialsRequest 
-     * @param {module:api/CloudProviderCredentialsApi~createGCPCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CloudProviderCredentialsApi~createGcpCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCredentials}
      */
-    createGCPCredentials(organizationId, opts, callback) {
+    createGcpCredentials(organizationId, opts, callback) {
       opts = opts || {};
       let postBody = opts['gcpCredentialsRequest'];
       // verify the required parameter 'organizationId' is set
       if (organizationId === undefined || organizationId === null) {
-        throw new Error("Missing the required parameter 'organizationId' when calling createGCPCredentials");
+        throw new Error("Missing the required parameter 'organizationId' when calling createGcpCredentials");
       }
 
       let pathParams = {

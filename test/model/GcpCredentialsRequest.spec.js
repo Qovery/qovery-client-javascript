@@ -60,8 +60,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property jsonCredentials (base name: "json_credentials")', function() {
-      // uncomment below and update the code to test the property jsonCredentials
+    it('should have the property gcpCredentials (base name: "gcp_credentials")', function() {
+      // uncomment below and update the code to test the property gcpCredentials
       //var instance = new QoveryApi.GcpCredentialsRequest();
       //expect(instance).to.be();
     });

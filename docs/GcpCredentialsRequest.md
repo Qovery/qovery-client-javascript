@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | 
-**jsonCredentials** | **String** |  | 
+**gcpCredentials** | **String** |  | 
 
 

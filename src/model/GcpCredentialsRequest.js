@@ -23,11 +23,11 @@ class GcpCredentialsRequest {
      * Constructs a new <code>GcpCredentialsRequest</code>.
      * @alias module:model/GcpCredentialsRequest
      * @param name {String} 
-     * @param jsonCredentials {String} 
+     * @param gcpCredentials {String} 
      */
-    constructor(name, jsonCredentials) { 
+    constructor(name, gcpCredentials) { 
         
-        GcpCredentialsRequest.initialize(this, name, jsonCredentials);
+        GcpCredentialsRequest.initialize(this, name, gcpCredentials);
     }
 
     /**
@@ -35,9 +35,9 @@ class GcpCredentialsRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, jsonCredentials) { 
+    static initialize(obj, name, gcpCredentials) { 
         obj['name'] = name;
-        obj['json_credentials'] = jsonCredentials;
+        obj['gcp_credentials'] = gcpCredentials;
     }
 
     /**
@@ -54,8 +54,8 @@ class GcpCredentialsRequest {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('json_credentials')) {
-                obj['json_credentials'] = ApiClient.convertToType(data['json_credentials'], 'String');
+            if (data.hasOwnProperty('gcp_credentials')) {
+                obj['gcp_credentials'] = ApiClient.convertToType(data['gcp_credentials'], 'String');
             }
         }
         return obj;
@@ -70,9 +70,9 @@ class GcpCredentialsRequest {
 GcpCredentialsRequest.prototype['name'] = undefined;
 
 /**
- * @member {String} json_credentials
+ * @member {String} gcp_credentials
  */
-GcpCredentialsRequest.prototype['json_credentials'] = undefined;
+GcpCredentialsRequest.prototype['gcp_credentials'] = undefined;
 
 
 

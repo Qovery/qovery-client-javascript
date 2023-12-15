@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
+**name** | **String** |  | 
 **kind** | [**HelmRepositoryKindEnum**](HelmRepositoryKindEnum.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **url** | **String** | URL of the helm repository | [optional] 

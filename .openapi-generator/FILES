@@ -185,7 +185,6 @@ docs/DeployAllRequest.md
 docs/DeployAllRequestApplicationsInner.md
 docs/DeployAllRequestContainersInner.md
 docs/DeployAllRequestJobsInner.md
-docs/DeployHelmRequest.md
 docs/DeployRequest.md
 docs/DeploymentHistory.md
 docs/DeploymentHistoryAllOf.md
@@ -307,6 +306,7 @@ docs/HelmApi.md
 docs/HelmConfigurationApi.md
 docs/HelmDefaultValuesRequest.md
 docs/HelmDefaultValuesRequestAllOf.md
+docs/HelmDeployRequest.md
 docs/HelmDeploymentHistoryApi.md
 docs/HelmDeploymentRestrictionApi.md
 docs/HelmDeploymentRestrictionRequest.md
@@ -816,7 +816,6 @@ src/model/DeployAllRequest.js
 src/model/DeployAllRequestApplicationsInner.js
 src/model/DeployAllRequestContainersInner.js
 src/model/DeployAllRequestJobsInner.js
-src/model/DeployHelmRequest.js
 src/model/DeployRequest.js
 src/model/DeploymentHistory.js
 src/model/DeploymentHistoryAllOf.js
@@ -922,6 +921,7 @@ src/model/GitTokenResponseList.js
 src/model/Healthcheck.js
 src/model/HelmDefaultValuesRequest.js
 src/model/HelmDefaultValuesRequestAllOf.js
+src/model/HelmDeployRequest.js
 src/model/HelmDeploymentRestrictionRequest.js
 src/model/HelmDeploymentRestrictionResponse.js
 src/model/HelmDeploymentRestrictionResponseList.js
@@ -1397,7 +1397,6 @@ test/model/DeployAllRequest.spec.js
 test/model/DeployAllRequestApplicationsInner.spec.js
 test/model/DeployAllRequestContainersInner.spec.js
 test/model/DeployAllRequestJobsInner.spec.js
-test/model/DeployHelmRequest.spec.js
 test/model/DeployRequest.spec.js
 test/model/DeploymentHistory.spec.js
 test/model/DeploymentHistoryAllOf.spec.js
@@ -1503,6 +1502,7 @@ test/model/GitTokenResponseList.spec.js
 test/model/Healthcheck.spec.js
 test/model/HelmDefaultValuesRequest.spec.js
 test/model/HelmDefaultValuesRequestAllOf.spec.js
+test/model/HelmDeployRequest.spec.js
 test/model/HelmDeploymentRestrictionRequest.spec.js
 test/model/HelmDeploymentRestrictionResponse.spec.js
 test/model/HelmDeploymentRestrictionResponseList.spec.js

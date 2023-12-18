@@ -161,7 +161,6 @@ import DeployAllRequest from './model/DeployAllRequest';
 import DeployAllRequestApplicationsInner from './model/DeployAllRequestApplicationsInner';
 import DeployAllRequestContainersInner from './model/DeployAllRequestContainersInner';
 import DeployAllRequestJobsInner from './model/DeployAllRequestJobsInner';
-import DeployHelmRequest from './model/DeployHelmRequest';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistory from './model/DeploymentHistory';
 import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
@@ -267,6 +266,7 @@ import GitTokenResponseList from './model/GitTokenResponseList';
 import Healthcheck from './model/Healthcheck';
 import HelmDefaultValuesRequest from './model/HelmDefaultValuesRequest';
 import HelmDefaultValuesRequestAllOf from './model/HelmDefaultValuesRequestAllOf';
+import HelmDeployRequest from './model/HelmDeployRequest';
 import HelmDeploymentRestrictionRequest from './model/HelmDeploymentRestrictionRequest';
 import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestrictionResponse';
 import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
@@ -1523,12 +1523,6 @@ export {
     DeployAllRequestJobsInner,
 
     /**
-     * The DeployHelmRequest model constructor.
-     * @property {module:model/DeployHelmRequest}
-     */
-    DeployHelmRequest,
-
-    /**
      * The DeployRequest model constructor.
      * @property {module:model/DeployRequest}
      */
@@ -2157,6 +2151,12 @@ export {
      * @property {module:model/HelmDefaultValuesRequestAllOf}
      */
     HelmDefaultValuesRequestAllOf,
+
+    /**
+     * The HelmDeployRequest model constructor.
+     * @property {module:model/HelmDeployRequest}
+     */
+    HelmDeployRequest,
 
     /**
      * The HelmDeploymentRestrictionRequest model constructor.

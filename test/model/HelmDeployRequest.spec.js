@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.DeployHelmRequest();
+    instance = new QoveryApi.HelmDeployRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,28 +47,28 @@
       object[property] = value;
   }
 
-  describe('DeployHelmRequest', function() {
-    it('should create an instance of DeployHelmRequest', function() {
-      // uncomment below and update the code to test DeployHelmRequest
-      //var instance = new QoveryApi.DeployHelmRequest();
-      //expect(instance).to.be.a(QoveryApi.DeployHelmRequest);
+  describe('HelmDeployRequest', function() {
+    it('should create an instance of HelmDeployRequest', function() {
+      // uncomment below and update the code to test HelmDeployRequest
+      //var instance = new QoveryApi.HelmDeployRequest();
+      //expect(instance).to.be.a(QoveryApi.HelmDeployRequest);
     });
 
-    it('should have the property version (base name: "version")', function() {
-      // uncomment below and update the code to test the property version
-      //var instance = new QoveryApi.DeployHelmRequest();
+    it('should have the property chartVersion (base name: "chart_version")', function() {
+      // uncomment below and update the code to test the property chartVersion
+      //var instance = new QoveryApi.HelmDeployRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property gitCommitId (base name: "git_commit_id")', function() {
       // uncomment below and update the code to test the property gitCommitId
-      //var instance = new QoveryApi.DeployHelmRequest();
+      //var instance = new QoveryApi.HelmDeployRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property valuesOverrideGitCommitId (base name: "values_override_git_commit_id")', function() {
       // uncomment below and update the code to test the property valuesOverrideGitCommitId
-      //var instance = new QoveryApi.DeployHelmRequest();
+      //var instance = new QoveryApi.HelmDeployRequest();
       //expect(instance).to.be();
     });
 

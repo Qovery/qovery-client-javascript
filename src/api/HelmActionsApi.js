@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import DeployHelmRequest from '../model/DeployHelmRequest';
+import HelmDeployRequest from '../model/HelmDeployRequest';
 import HelmForceEvent from '../model/HelmForceEvent';
 import Status from '../model/Status';
 
@@ -50,13 +50,13 @@ export default class HelmActionsApi {
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
      * @param {module:model/HelmForceEvent} opts.forceEvent When filled, it indicates the target event to be deployed.   If the concerned helm hasn't the target event provided, the helm won't be deployed. 
-     * @param {module:model/DeployHelmRequest} opts.deployHelmRequest 
+     * @param {module:model/HelmDeployRequest} opts.helmDeployRequest 
      * @param {module:api/HelmActionsApi~deployHelmCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
     deployHelm(helmId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['deployHelmRequest'];
+      let postBody = opts['helmDeployRequest'];
       // verify the required parameter 'helmId' is set
       if (helmId === undefined || helmId === null) {
         throw new Error("Missing the required parameter 'helmId' when calling deployHelm");

@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The DeployHelmRequest model module.
- * @module model/DeployHelmRequest
+ * The HelmDeployRequest model module.
+ * @module model/HelmDeployRequest
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class DeployHelmRequest {
+class HelmDeployRequest {
     /**
-     * Constructs a new <code>DeployHelmRequest</code>.
-     * @alias module:model/DeployHelmRequest
+     * Constructs a new <code>HelmDeployRequest</code>.
+     * @alias module:model/HelmDeployRequest
      */
     constructor() { 
         
-        DeployHelmRequest.initialize(this);
+        HelmDeployRequest.initialize(this);
     }
 
     /**
@@ -37,18 +37,18 @@ class DeployHelmRequest {
     }
 
     /**
-     * Constructs a <code>DeployHelmRequest</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>HelmDeployRequest</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/DeployHelmRequest} obj Optional instance to populate.
-     * @return {module:model/DeployHelmRequest} The populated <code>DeployHelmRequest</code> instance.
+     * @param {module:model/HelmDeployRequest} obj Optional instance to populate.
+     * @return {module:model/HelmDeployRequest} The populated <code>HelmDeployRequest</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new DeployHelmRequest();
+            obj = obj || new HelmDeployRequest();
 
-            if (data.hasOwnProperty('version')) {
-                obj['version'] = ApiClient.convertToType(data['version'], 'String');
+            if (data.hasOwnProperty('chart_version')) {
+                obj['chart_version'] = ApiClient.convertToType(data['chart_version'], 'String');
             }
             if (data.hasOwnProperty('git_commit_id')) {
                 obj['git_commit_id'] = ApiClient.convertToType(data['git_commit_id'], 'String');
@@ -65,26 +65,26 @@ class DeployHelmRequest {
 
 /**
  * version of the chart to deploy. Cannot be set if `git_commit_id` is defined 
- * @member {String} version
+ * @member {String} chart_version
  */
-DeployHelmRequest.prototype['version'] = undefined;
+HelmDeployRequest.prototype['chart_version'] = undefined;
 
 /**
  * Commit to deploy for chart source. Cannot be set if `version` is defined 
  * @member {String} git_commit_id
  */
-DeployHelmRequest.prototype['git_commit_id'] = undefined;
+HelmDeployRequest.prototype['git_commit_id'] = undefined;
 
 /**
  * Commit to deploy for values override 
  * @member {String} values_override_git_commit_id
  */
-DeployHelmRequest.prototype['values_override_git_commit_id'] = undefined;
+HelmDeployRequest.prototype['values_override_git_commit_id'] = undefined;
 
 
 
 
 
 
-export default DeployHelmRequest;
+export default HelmDeployRequest;
 

@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **containerIds** | **[String]** |  | [optional] 
 **databaseIds** | **[String]** |  | [optional] 
 **jobIds** | **[String]** |  | [optional] 
+**helmIds** | **[String]** |  | [optional] 
 
 

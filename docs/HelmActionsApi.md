@@ -37,7 +37,7 @@ let apiInstance = new QoveryApi.HelmActionsApi();
 let helmId = "helmId_example"; // String | Helm ID
 let opts = {
   'forceEvent': new QoveryApi.HelmForceEvent(), // HelmForceEvent | When filled, it indicates the target event to be deployed.   If the concerned helm hasn't the target event provided, the helm won't be deployed. 
-  'deployHelmRequest': new QoveryApi.DeployHelmRequest() // DeployHelmRequest | 
+  'helmDeployRequest': new QoveryApi.HelmDeployRequest() // HelmDeployRequest | 
 };
 apiInstance.deployHelm(helmId, opts, (error, data, response) => {
   if (error) {
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **helmId** | **String**| Helm ID | 
  **forceEvent** | [**HelmForceEvent**](.md)| When filled, it indicates the target event to be deployed.   If the concerned helm hasn&#39;t the target event provided, the helm won&#39;t be deployed.  | [optional] 
- **deployHelmRequest** | [**DeployHelmRequest**](DeployHelmRequest.md)|  | [optional] 
+ **helmDeployRequest** | [**HelmDeployRequest**](HelmDeployRequest.md)|  | [optional] 
 
 ### Return type
 

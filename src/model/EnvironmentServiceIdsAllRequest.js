@@ -59,6 +59,9 @@ class EnvironmentServiceIdsAllRequest {
             if (data.hasOwnProperty('job_ids')) {
                 obj['job_ids'] = ApiClient.convertToType(data['job_ids'], ['String']);
             }
+            if (data.hasOwnProperty('helm_ids')) {
+                obj['helm_ids'] = ApiClient.convertToType(data['helm_ids'], ['String']);
+            }
         }
         return obj;
     }
@@ -85,6 +88,11 @@ EnvironmentServiceIdsAllRequest.prototype['database_ids'] = undefined;
  * @member {Array.<String>} job_ids
  */
 EnvironmentServiceIdsAllRequest.prototype['job_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} helm_ids
+ */
+EnvironmentServiceIdsAllRequest.prototype['helm_ids'] = undefined;
 
 
 

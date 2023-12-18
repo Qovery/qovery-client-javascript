@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property helmIds (base name: "helm_ids")', function() {
+      // uncomment below and update the code to test the property helmIds
+      //var instance = new QoveryApi.EnvironmentServiceIdsAllRequest();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

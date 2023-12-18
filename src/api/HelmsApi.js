@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CloneServiceRequest from '../model/CloneServiceRequest';
 import HelmDefaultValuesRequest from '../model/HelmDefaultValuesRequest';
 import HelmRequest from '../model/HelmRequest';
 import HelmResponse from '../model/HelmResponse';
@@ -37,6 +38,52 @@ export default class HelmsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the cloneHelm operation.
+     * @callback module:api/HelmsApi~cloneHelmCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HelmResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Clone helm
+     * This will create a new helm with the same configuration on the targeted environment Id.
+     * @param {String} helmId Helm ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
+     * @param {module:api/HelmsApi~cloneHelmCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HelmResponse}
+     */
+    cloneHelm(helmId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['cloneServiceRequest'];
+      // verify the required parameter 'helmId' is set
+      if (helmId === undefined || helmId === null) {
+        throw new Error("Missing the required parameter 'helmId' when calling cloneHelm");
+      }
+
+      let pathParams = {
+        'helmId': helmId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = HelmResponse;
+      return this.apiClient.callApi(
+        '/helm/{helmId}/clone', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the createHelm operation.

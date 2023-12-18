@@ -64,6 +64,9 @@ class EnvironmentStatuses {
             if (data.hasOwnProperty('databases')) {
                 obj['databases'] = ApiClient.convertToType(data['databases'], [Status]);
             }
+            if (data.hasOwnProperty('helms')) {
+                obj['helms'] = ApiClient.convertToType(data['helms'], [Status]);
+            }
         }
         return obj;
     }
@@ -95,6 +98,11 @@ EnvironmentStatuses.prototype['jobs'] = undefined;
  * @member {Array.<module:model/Status>} databases
  */
 EnvironmentStatuses.prototype['databases'] = undefined;
+
+/**
+ * @member {Array.<module:model/Status>} helms
+ */
+EnvironmentStatuses.prototype['helms'] = undefined;
 
 
 

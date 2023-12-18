@@ -48,6 +48,16 @@
   }
 
   describe('HelmsApi', function() {
+    describe('cloneHelm', function() {
+      it('should call cloneHelm successfully', function(done) {
+        //uncomment below and update the code to test cloneHelm
+        //instance.cloneHelm(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('createHelm', function() {
       it('should call createHelm successfully', function(done) {
         //uncomment below and update the code to test createHelm

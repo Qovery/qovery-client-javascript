@@ -308,7 +308,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerSecretApi* | [**listContainerSecrets**](docs/ContainerSecretApi.md#listContainerSecrets) | **GET** /container/{containerId}/secret | List container secrets
 *QoveryApi.ContainersApi* | [**autoDeployContainerEnvironments**](docs/ContainersApi.md#autoDeployContainerEnvironments) | **POST** /organization/{organizationId}/container/deploy | Auto deploy containers
 *QoveryApi.ContainersApi* | [**cloneContainer**](docs/ContainersApi.md#cloneContainer) | **POST** /container/{containerId}/clone | Clone container
-*QoveryApi.ContainersApi* | [**cloneHelm**](docs/ContainersApi.md#cloneHelm) | **POST** /helm/{helmId}/clone | Clone helm
 *QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 *QoveryApi.ContainersApi* | [**getContainerRegistryContainerStatus**](docs/ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 *QoveryApi.ContainersApi* | [**getDefaultContainerAdvancedSettings**](docs/ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings
@@ -429,6 +428,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmRepositoriesApi* | [**getHelmRepository**](docs/HelmRepositoriesApi.md#getHelmRepository) | **GET** /organization/{organizationId}/helmRepository/{helmRepositoryId} | Get a helm repository
 *QoveryApi.HelmRepositoriesApi* | [**listAvailableHelmRepository**](docs/HelmRepositoriesApi.md#listAvailableHelmRepository) | **GET** /availableHelmRepository | List supported helm repository
 *QoveryApi.HelmRepositoriesApi* | [**listHelmRepository**](docs/HelmRepositoriesApi.md#listHelmRepository) | **GET** /organization/{organizationId}/helmRepository | List organization helm repositories
+*QoveryApi.HelmsApi* | [**cloneHelm**](docs/HelmsApi.md#cloneHelm) | **POST** /helm/{helmId}/clone | Clone helm
 *QoveryApi.HelmsApi* | [**createHelm**](docs/HelmsApi.md#createHelm) | **POST** /environment/{environmentId}/helm | Create a helm
 *QoveryApi.HelmsApi* | [**createHelmDefaultValues**](docs/HelmsApi.md#createHelmDefaultValues) | **POST** /environment/{environmentId}/helmDefaultValues | Get helm default values
 *QoveryApi.HelmsApi* | [**getEnvironmentHelmStatus**](docs/HelmsApi.md#getEnvironmentHelmStatus) | **GET** /environment/{environmentId}/helm/status | List all environment helm statuses

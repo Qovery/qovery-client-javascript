@@ -68,16 +68,6 @@
         done();
       });
     });
-    describe('cloneHelm', function() {
-      it('should call cloneHelm successfully', function(done) {
-        //uncomment below and update the code to test cloneHelm
-        //instance.cloneHelm(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('createContainer', function() {
       it('should call createContainer successfully', function(done) {
         //uncomment below and update the code to test createContainer

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**raw** | [**HelmRequestAllOfValuesOverrideFileRaw**](HelmRequestAllOfValuesOverrideFileRaw.md) |  | [optional] 
+**raw** | [**HelmResponseAllOfValuesOverrideFileRaw**](HelmResponseAllOfValuesOverrideFileRaw.md) |  | [optional] 
 **git** | [**HelmResponseAllOfValuesOverrideFileGit**](HelmResponseAllOfValuesOverrideFileGit.md) |  | [optional] 
 
 

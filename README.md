@@ -831,6 +831,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.HelmResponseAllOfValuesOverride](docs/HelmResponseAllOfValuesOverride.md)
  - [QoveryApi.HelmResponseAllOfValuesOverrideFile](docs/HelmResponseAllOfValuesOverrideFile.md)
  - [QoveryApi.HelmResponseAllOfValuesOverrideFileGit](docs/HelmResponseAllOfValuesOverrideFileGit.md)
+ - [QoveryApi.HelmResponseAllOfValuesOverrideFileRaw](docs/HelmResponseAllOfValuesOverrideFileRaw.md)
+ - [QoveryApi.HelmResponseAllOfValuesOverrideFileRawValues](docs/HelmResponseAllOfValuesOverrideFileRawValues.md)
  - [QoveryApi.HelmResponseList](docs/HelmResponseList.md)
  - [QoveryApi.HelmValuesGitRepositoryRequest](docs/HelmValuesGitRepositoryRequest.md)
  - [QoveryApi.Instance](docs/Instance.md)

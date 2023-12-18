@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelmRequestAllOfValuesOverrideFileRaw from './HelmRequestAllOfValuesOverrideFileRaw';
 import HelmResponseAllOfValuesOverrideFileGit from './HelmResponseAllOfValuesOverrideFileGit';
+import HelmResponseAllOfValuesOverrideFileRaw from './HelmResponseAllOfValuesOverrideFileRaw';
 
 /**
  * The HelmResponseAllOfValuesOverrideFile model module.
@@ -50,7 +50,7 @@ class HelmResponseAllOfValuesOverrideFile {
             obj = obj || new HelmResponseAllOfValuesOverrideFile();
 
             if (data.hasOwnProperty('raw')) {
-                obj['raw'] = HelmRequestAllOfValuesOverrideFileRaw.constructFromObject(data['raw']);
+                obj['raw'] = HelmResponseAllOfValuesOverrideFileRaw.constructFromObject(data['raw']);
             }
             if (data.hasOwnProperty('git')) {
                 obj['git'] = HelmResponseAllOfValuesOverrideFileGit.constructFromObject(data['git']);
@@ -63,7 +63,7 @@ class HelmResponseAllOfValuesOverrideFile {
 }
 
 /**
- * @member {module:model/HelmRequestAllOfValuesOverrideFileRaw} raw
+ * @member {module:model/HelmResponseAllOfValuesOverrideFileRaw} raw
  */
 HelmResponseAllOfValuesOverrideFile.prototype['raw'] = undefined;
 

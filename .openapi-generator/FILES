@@ -337,6 +337,8 @@ docs/HelmResponseAllOfPorts.md
 docs/HelmResponseAllOfValuesOverride.md
 docs/HelmResponseAllOfValuesOverrideFile.md
 docs/HelmResponseAllOfValuesOverrideFileGit.md
+docs/HelmResponseAllOfValuesOverrideFileRaw.md
+docs/HelmResponseAllOfValuesOverrideFileRawValues.md
 docs/HelmResponseList.md
 docs/HelmValuesGitRepositoryRequest.md
 docs/HelmsApi.md
@@ -946,6 +948,8 @@ src/model/HelmResponseAllOfPorts.js
 src/model/HelmResponseAllOfValuesOverride.js
 src/model/HelmResponseAllOfValuesOverrideFile.js
 src/model/HelmResponseAllOfValuesOverrideFileGit.js
+src/model/HelmResponseAllOfValuesOverrideFileRaw.js
+src/model/HelmResponseAllOfValuesOverrideFileRawValues.js
 src/model/HelmResponseList.js
 src/model/HelmValuesGitRepositoryRequest.js
 src/model/Instance.js
@@ -1525,6 +1529,8 @@ test/model/HelmResponseAllOfPorts.spec.js
 test/model/HelmResponseAllOfValuesOverride.spec.js
 test/model/HelmResponseAllOfValuesOverrideFile.spec.js
 test/model/HelmResponseAllOfValuesOverrideFileGit.spec.js
+test/model/HelmResponseAllOfValuesOverrideFileRaw.spec.js
+test/model/HelmResponseAllOfValuesOverrideFileRawValues.spec.js
 test/model/HelmResponseList.spec.js
 test/model/HelmValuesGitRepositoryRequest.spec.js
 test/model/Instance.spec.js

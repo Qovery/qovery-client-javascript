@@ -293,6 +293,8 @@ import HelmResponseAllOfPorts from './model/HelmResponseAllOfPorts';
 import HelmResponseAllOfValuesOverride from './model/HelmResponseAllOfValuesOverride';
 import HelmResponseAllOfValuesOverrideFile from './model/HelmResponseAllOfValuesOverrideFile';
 import HelmResponseAllOfValuesOverrideFileGit from './model/HelmResponseAllOfValuesOverrideFileGit';
+import HelmResponseAllOfValuesOverrideFileRaw from './model/HelmResponseAllOfValuesOverrideFileRaw';
+import HelmResponseAllOfValuesOverrideFileRawValues from './model/HelmResponseAllOfValuesOverrideFileRawValues';
 import HelmResponseList from './model/HelmResponseList';
 import HelmValuesGitRepositoryRequest from './model/HelmValuesGitRepositoryRequest';
 import Instance from './model/Instance';
@@ -2311,6 +2313,18 @@ export {
      * @property {module:model/HelmResponseAllOfValuesOverrideFileGit}
      */
     HelmResponseAllOfValuesOverrideFileGit,
+
+    /**
+     * The HelmResponseAllOfValuesOverrideFileRaw model constructor.
+     * @property {module:model/HelmResponseAllOfValuesOverrideFileRaw}
+     */
+    HelmResponseAllOfValuesOverrideFileRaw,
+
+    /**
+     * The HelmResponseAllOfValuesOverrideFileRawValues model constructor.
+     * @property {module:model/HelmResponseAllOfValuesOverrideFileRawValues}
+     */
+    HelmResponseAllOfValuesOverrideFileRawValues,
 
     /**
      * The HelmResponseList model constructor.

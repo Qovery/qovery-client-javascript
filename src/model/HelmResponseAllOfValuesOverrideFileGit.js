@@ -23,10 +23,12 @@ class HelmResponseAllOfValuesOverrideFileGit {
     /**
      * Constructs a new <code>HelmResponseAllOfValuesOverrideFileGit</code>.
      * @alias module:model/HelmResponseAllOfValuesOverrideFileGit
+     * @param gitRepository {module:model/ApplicationGitRepositoryRequest} 
+     * @param paths {Array.<String>} List of path inside your git repository to locate values file. Must start by a /
      */
-    constructor() { 
+    constructor(gitRepository, paths) { 
         
-        HelmResponseAllOfValuesOverrideFileGit.initialize(this);
+        HelmResponseAllOfValuesOverrideFileGit.initialize(this, gitRepository, paths);
     }
 
     /**
@@ -34,7 +36,9 @@ class HelmResponseAllOfValuesOverrideFileGit {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, gitRepository, paths) { 
+        obj['git_repository'] = gitRepository;
+        obj['paths'] = paths;
     }
 
     /**

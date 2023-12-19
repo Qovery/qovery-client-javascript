@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **databases** | **[String]** |  | [optional] 
 **containers** | [**[DeployAllRequestContainersInner]**](DeployAllRequestContainersInner.md) |  | [optional] 
 **jobs** | [**[DeployAllRequestJobsInner]**](DeployAllRequestJobsInner.md) |  | [optional] 
+**helms** | [**[DeployAllRequestHelmsInner]**](DeployAllRequestHelmsInner.md) |  | [optional] 
 
 

@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import DeployAllRequestApplicationsInner from './DeployAllRequestApplicationsInner';
 import DeployAllRequestContainersInner from './DeployAllRequestContainersInner';
+import DeployAllRequestHelmsInner from './DeployAllRequestHelmsInner';
 import DeployAllRequestJobsInner from './DeployAllRequestJobsInner';
 
 /**
@@ -62,6 +63,9 @@ class DeployAllRequest {
             if (data.hasOwnProperty('jobs')) {
                 obj['jobs'] = ApiClient.convertToType(data['jobs'], [DeployAllRequestJobsInner]);
             }
+            if (data.hasOwnProperty('helms')) {
+                obj['helms'] = ApiClient.convertToType(data['helms'], [DeployAllRequestHelmsInner]);
+            }
         }
         return obj;
     }
@@ -88,6 +92,11 @@ DeployAllRequest.prototype['containers'] = undefined;
  * @member {Array.<module:model/DeployAllRequestJobsInner>} jobs
  */
 DeployAllRequest.prototype['jobs'] = undefined;
+
+/**
+ * @member {Array.<module:model/DeployAllRequestHelmsInner>} helms
+ */
+DeployAllRequest.prototype['helms'] = undefined;
 
 
 

@@ -698,6 +698,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DeployAllRequest](docs/DeployAllRequest.md)
  - [QoveryApi.DeployAllRequestApplicationsInner](docs/DeployAllRequestApplicationsInner.md)
  - [QoveryApi.DeployAllRequestContainersInner](docs/DeployAllRequestContainersInner.md)
+ - [QoveryApi.DeployAllRequestHelmsInner](docs/DeployAllRequestHelmsInner.md)
  - [QoveryApi.DeployAllRequestJobsInner](docs/DeployAllRequestJobsInner.md)
  - [QoveryApi.DeployRequest](docs/DeployRequest.md)
  - [QoveryApi.DeploymentHistory](docs/DeploymentHistory.md)

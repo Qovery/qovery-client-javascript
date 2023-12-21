@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository();
+    instance = new QoveryApi.DeploymentHistoryHelmResponseAllOfRepository();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,22 @@
       object[property] = value;
   }
 
-  describe('ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository', function() {
-    it('should create an instance of ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository', function() {
-      // uncomment below and update the code to test ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository();
-      //expect(instance).to.be.a(QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository);
+  describe('DeploymentHistoryHelmResponseAllOfRepository', function() {
+    it('should create an instance of DeploymentHistoryHelmResponseAllOfRepository', function() {
+      // uncomment below and update the code to test DeploymentHistoryHelmResponseAllOfRepository
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOfRepository();
+      //expect(instance).to.be.a(QoveryApi.DeploymentHistoryHelmResponseAllOfRepository);
     });
 
     it('should have the property chartName (base name: "chart_name")', function() {
       // uncomment below and update the code to test the property chartName
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOfRepository();
       //expect(instance).to.be();
     });
 
-    it('should have the property version (base name: "version")', function() {
-      // uncomment below and update the code to test the property version
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository();
+    it('should have the property chartVersion (base name: "chart_version")', function() {
+      // uncomment below and update the code to test the property chartVersion
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOfRepository();
       //expect(instance).to.be();
     });
 

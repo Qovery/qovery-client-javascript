@@ -1,10 +1,10 @@
-# QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository
+# QoveryApi.DeploymentHistoryHelmResponseAllOfRepository
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **chartName** | **String** |  | [optional] 
-**version** | **String** |  | [optional] 
+**chartVersion** | **String** |  | [optional] 
 
 

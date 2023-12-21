@@ -17,6 +17,7 @@ import DeploymentHistoryApplication from './DeploymentHistoryApplication';
 import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
 import DeploymentHistoryEnvironmentAllOf from './DeploymentHistoryEnvironmentAllOf';
+import DeploymentHistoryHelmResponse from './DeploymentHistoryHelmResponse';
 import DeploymentHistoryJobResponse from './DeploymentHistoryJobResponse';
 import OrganizationEventOrigin from './OrganizationEventOrigin';
 import StateEnum from './StateEnum';
@@ -93,6 +94,9 @@ class DeploymentHistoryEnvironment {
             if (data.hasOwnProperty('jobs')) {
                 obj['jobs'] = ApiClient.convertToType(data['jobs'], [DeploymentHistoryJobResponse]);
             }
+            if (data.hasOwnProperty('helms')) {
+                obj['helms'] = ApiClient.convertToType(data['helms'], [DeploymentHistoryHelmResponse]);
+            }
         }
         return obj;
     }
@@ -150,6 +154,11 @@ DeploymentHistoryEnvironment.prototype['databases'] = undefined;
  */
 DeploymentHistoryEnvironment.prototype['jobs'] = undefined;
 
+/**
+ * @member {Array.<module:model/DeploymentHistoryHelmResponse>} helms
+ */
+DeploymentHistoryEnvironment.prototype['helms'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -193,6 +202,10 @@ DeploymentHistoryEnvironmentAllOf.prototype['databases'] = undefined;
  * @member {Array.<module:model/DeploymentHistoryJobResponse>} jobs
  */
 DeploymentHistoryEnvironmentAllOf.prototype['jobs'] = undefined;
+/**
+ * @member {Array.<module:model/DeploymentHistoryHelmResponse>} helms
+ */
+DeploymentHistoryEnvironmentAllOf.prototype['helms'] = undefined;
 
 
 

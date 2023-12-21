@@ -199,6 +199,9 @@ docs/DeploymentHistoryEnvironment.md
 docs/DeploymentHistoryEnvironmentAllOf.md
 docs/DeploymentHistoryEnvironmentPaginatedResponseList.md
 docs/DeploymentHistoryEnvironmentPaginatedResponseListAllOf.md
+docs/DeploymentHistoryHelmResponse.md
+docs/DeploymentHistoryHelmResponseAllOf.md
+docs/DeploymentHistoryHelmResponseAllOfRepository.md
 docs/DeploymentHistoryJobResponse.md
 docs/DeploymentHistoryJobResponseAllOf.md
 docs/DeploymentHistoryJobResponseAllOfSchedule.md
@@ -396,9 +399,6 @@ docs/ListDatabaseDeploymentHistory200Response.md
 docs/ListDatabaseDeploymentHistory200ResponseAllOf.md
 docs/ListHelmDeploymentHistory200Response.md
 docs/ListHelmDeploymentHistory200ResponseAllOf.md
-docs/ListHelmDeploymentHistory200ResponseAllOfResultsInner.md
-docs/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.md
-docs/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.md
 docs/ListJobDeploymentHistory200Response.md
 docs/ListJobDeploymentHistory200ResponseAllOf.md
 docs/Log.md
@@ -831,6 +831,9 @@ src/model/DeploymentHistoryEnvironment.js
 src/model/DeploymentHistoryEnvironmentAllOf.js
 src/model/DeploymentHistoryEnvironmentPaginatedResponseList.js
 src/model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf.js
+src/model/DeploymentHistoryHelmResponse.js
+src/model/DeploymentHistoryHelmResponseAllOf.js
+src/model/DeploymentHistoryHelmResponseAllOfRepository.js
 src/model/DeploymentHistoryJobResponse.js
 src/model/DeploymentHistoryJobResponseAllOf.js
 src/model/DeploymentHistoryJobResponseAllOfSchedule.js
@@ -998,9 +1001,6 @@ src/model/ListDatabaseDeploymentHistory200Response.js
 src/model/ListDatabaseDeploymentHistory200ResponseAllOf.js
 src/model/ListHelmDeploymentHistory200Response.js
 src/model/ListHelmDeploymentHistory200ResponseAllOf.js
-src/model/ListHelmDeploymentHistory200ResponseAllOfResultsInner.js
-src/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.js
-src/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.js
 src/model/ListJobDeploymentHistory200Response.js
 src/model/ListJobDeploymentHistory200ResponseAllOf.js
 src/model/Log.js
@@ -1413,6 +1413,9 @@ test/model/DeploymentHistoryEnvironment.spec.js
 test/model/DeploymentHistoryEnvironmentAllOf.spec.js
 test/model/DeploymentHistoryEnvironmentPaginatedResponseList.spec.js
 test/model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf.spec.js
+test/model/DeploymentHistoryHelmResponse.spec.js
+test/model/DeploymentHistoryHelmResponseAllOf.spec.js
+test/model/DeploymentHistoryHelmResponseAllOfRepository.spec.js
 test/model/DeploymentHistoryJobResponse.spec.js
 test/model/DeploymentHistoryJobResponseAllOf.spec.js
 test/model/DeploymentHistoryJobResponseAllOfSchedule.spec.js
@@ -1580,9 +1583,6 @@ test/model/ListDatabaseDeploymentHistory200Response.spec.js
 test/model/ListDatabaseDeploymentHistory200ResponseAllOf.spec.js
 test/model/ListHelmDeploymentHistory200Response.spec.js
 test/model/ListHelmDeploymentHistory200ResponseAllOf.spec.js
-test/model/ListHelmDeploymentHistory200ResponseAllOfResultsInner.spec.js
-test/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.spec.js
-test/model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.spec.js
 test/model/ListJobDeploymentHistory200Response.spec.js
 test/model/ListJobDeploymentHistory200ResponseAllOf.spec.js
 test/model/Log.spec.js

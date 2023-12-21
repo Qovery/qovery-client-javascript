@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import DeploymentHistoryHelmResponse from './DeploymentHistoryHelmResponse';
 import ListHelmDeploymentHistory200ResponseAllOf from './ListHelmDeploymentHistory200ResponseAllOf';
-import ListHelmDeploymentHistory200ResponseAllOfResultsInner from './ListHelmDeploymentHistory200ResponseAllOfResultsInner';
 import PaginationData from './PaginationData';
 
 /**
@@ -65,7 +65,7 @@ class ListHelmDeploymentHistory200Response {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [ListHelmDeploymentHistory200ResponseAllOfResultsInner]);
+                obj['results'] = ApiClient.convertToType(data['results'], [DeploymentHistoryHelmResponse]);
             }
         }
         return obj;
@@ -85,7 +85,7 @@ ListHelmDeploymentHistory200Response.prototype['page'] = undefined;
 ListHelmDeploymentHistory200Response.prototype['page_size'] = undefined;
 
 /**
- * @member {Array.<module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInner>} results
+ * @member {Array.<module:model/DeploymentHistoryHelmResponse>} results
  */
 ListHelmDeploymentHistory200Response.prototype['results'] = undefined;
 
@@ -101,7 +101,7 @@ PaginationData.prototype['page'] = undefined;
 PaginationData.prototype['page_size'] = undefined;
 // Implement ListHelmDeploymentHistory200ResponseAllOf interface:
 /**
- * @member {Array.<module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInner>} results
+ * @member {Array.<module:model/DeploymentHistoryHelmResponse>} results
  */
 ListHelmDeploymentHistory200ResponseAllOf.prototype['results'] = undefined;
 

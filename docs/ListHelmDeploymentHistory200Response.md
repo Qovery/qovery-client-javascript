@@ -6,6 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page** | **Number** |  | 
 **pageSize** | **Number** |  | 
-**results** | [**[ListHelmDeploymentHistory200ResponseAllOfResultsInner]**](ListHelmDeploymentHistory200ResponseAllOfResultsInner.md) |  | [optional] 
+**results** | [**[DeploymentHistoryHelmResponse]**](DeploymentHistoryHelmResponse.md) |  | [optional] 
 
 

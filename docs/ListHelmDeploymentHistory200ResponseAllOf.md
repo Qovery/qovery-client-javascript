@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[ListHelmDeploymentHistory200ResponseAllOfResultsInner]**](ListHelmDeploymentHistory200ResponseAllOfResultsInner.md) |  | [optional] 
+**results** | [**[DeploymentHistoryHelmResponse]**](DeploymentHistoryHelmResponse.md) |  | [optional] 
 
 

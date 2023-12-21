@@ -13,22 +13,22 @@
 
 import ApiClient from '../ApiClient';
 import Commit from './Commit';
-import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository from './ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository';
+import DeploymentHistoryHelmResponseAllOfRepository from './DeploymentHistoryHelmResponseAllOfRepository';
 import StateEnum from './StateEnum';
 
 /**
- * The ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf model module.
- * @module model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf
+ * The DeploymentHistoryHelmResponseAllOf model module.
+ * @module model/DeploymentHistoryHelmResponseAllOf
  * @version $(grep &#39;version&#39; _build/openapi.yaml | head -1 | tr &#39;:&#39; &#39;\n&#39; | tail -1 | tr -d &#39; &#39;)
  */
-class ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf {
+class DeploymentHistoryHelmResponseAllOf {
     /**
-     * Constructs a new <code>ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf</code>.
-     * @alias module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf
+     * Constructs a new <code>DeploymentHistoryHelmResponseAllOf</code>.
+     * @alias module:model/DeploymentHistoryHelmResponseAllOf
      */
     constructor() { 
         
-        ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.initialize(this);
+        DeploymentHistoryHelmResponseAllOf.initialize(this);
     }
 
     /**
@@ -40,15 +40,15 @@ class ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf {
     }
 
     /**
-     * Constructs a <code>ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>DeploymentHistoryHelmResponseAllOf</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf} obj Optional instance to populate.
-     * @return {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf} The populated <code>ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf</code> instance.
+     * @param {module:model/DeploymentHistoryHelmResponseAllOf} obj Optional instance to populate.
+     * @return {module:model/DeploymentHistoryHelmResponseAllOf} The populated <code>DeploymentHistoryHelmResponseAllOf</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+            obj = obj || new DeploymentHistoryHelmResponseAllOf();
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -60,7 +60,7 @@ class ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf {
                 obj['commit'] = Commit.constructFromObject(data['commit']);
             }
             if (data.hasOwnProperty('repository')) {
-                obj['repository'] = ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository.constructFromObject(data['repository']);
+                obj['repository'] = DeploymentHistoryHelmResponseAllOfRepository.constructFromObject(data['repository']);
             }
         }
         return obj;
@@ -73,27 +73,27 @@ class ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf {
  * name of the helm
  * @member {String} name
  */
-ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['name'] = undefined;
+DeploymentHistoryHelmResponseAllOf.prototype['name'] = undefined;
 
 /**
  * @member {module:model/StateEnum} status
  */
-ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['status'] = undefined;
+DeploymentHistoryHelmResponseAllOf.prototype['status'] = undefined;
 
 /**
  * @member {module:model/Commit} commit
  */
-ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['commit'] = undefined;
+DeploymentHistoryHelmResponseAllOf.prototype['commit'] = undefined;
 
 /**
- * @member {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository} repository
+ * @member {module:model/DeploymentHistoryHelmResponseAllOfRepository} repository
  */
-ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf.prototype['repository'] = undefined;
+DeploymentHistoryHelmResponseAllOf.prototype['repository'] = undefined;
 
 
 
 
 
 
-export default ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf;
+export default DeploymentHistoryHelmResponseAllOf;
 

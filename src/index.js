@@ -175,6 +175,9 @@ import DeploymentHistoryEnvironment from './model/DeploymentHistoryEnvironment';
 import DeploymentHistoryEnvironmentAllOf from './model/DeploymentHistoryEnvironmentAllOf';
 import DeploymentHistoryEnvironmentPaginatedResponseList from './model/DeploymentHistoryEnvironmentPaginatedResponseList';
 import DeploymentHistoryEnvironmentPaginatedResponseListAllOf from './model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf';
+import DeploymentHistoryHelmResponse from './model/DeploymentHistoryHelmResponse';
+import DeploymentHistoryHelmResponseAllOf from './model/DeploymentHistoryHelmResponseAllOf';
+import DeploymentHistoryHelmResponseAllOfRepository from './model/DeploymentHistoryHelmResponseAllOfRepository';
 import DeploymentHistoryJobResponse from './model/DeploymentHistoryJobResponse';
 import DeploymentHistoryJobResponseAllOf from './model/DeploymentHistoryJobResponseAllOf';
 import DeploymentHistoryJobResponseAllOfSchedule from './model/DeploymentHistoryJobResponseAllOfSchedule';
@@ -342,9 +345,6 @@ import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploy
 import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
 import ListHelmDeploymentHistory200Response from './model/ListHelmDeploymentHistory200Response';
 import ListHelmDeploymentHistory200ResponseAllOf from './model/ListHelmDeploymentHistory200ResponseAllOf';
-import ListHelmDeploymentHistory200ResponseAllOfResultsInner from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInner';
-import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf';
-import ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository from './model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository';
 import ListJobDeploymentHistory200Response from './model/ListJobDeploymentHistory200Response';
 import ListJobDeploymentHistory200ResponseAllOf from './model/ListJobDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
@@ -1608,6 +1608,24 @@ export {
     DeploymentHistoryEnvironmentPaginatedResponseListAllOf,
 
     /**
+     * The DeploymentHistoryHelmResponse model constructor.
+     * @property {module:model/DeploymentHistoryHelmResponse}
+     */
+    DeploymentHistoryHelmResponse,
+
+    /**
+     * The DeploymentHistoryHelmResponseAllOf model constructor.
+     * @property {module:model/DeploymentHistoryHelmResponseAllOf}
+     */
+    DeploymentHistoryHelmResponseAllOf,
+
+    /**
+     * The DeploymentHistoryHelmResponseAllOfRepository model constructor.
+     * @property {module:model/DeploymentHistoryHelmResponseAllOfRepository}
+     */
+    DeploymentHistoryHelmResponseAllOfRepository,
+
+    /**
      * The DeploymentHistoryJobResponse model constructor.
      * @property {module:model/DeploymentHistoryJobResponse}
      */
@@ -2608,24 +2626,6 @@ export {
      * @property {module:model/ListHelmDeploymentHistory200ResponseAllOf}
      */
     ListHelmDeploymentHistory200ResponseAllOf,
-
-    /**
-     * The ListHelmDeploymentHistory200ResponseAllOfResultsInner model constructor.
-     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInner}
-     */
-    ListHelmDeploymentHistory200ResponseAllOfResultsInner,
-
-    /**
-     * The ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf model constructor.
-     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf}
-     */
-    ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf,
-
-    /**
-     * The ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository model constructor.
-     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository}
-     */
-    ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOfRepository,
 
     /**
      * The ListJobDeploymentHistory200Response model constructor.

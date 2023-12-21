@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+    instance = new QoveryApi.DeploymentHistoryHelmResponseAllOf();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,34 @@
       object[property] = value;
   }
 
-  describe('ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf', function() {
-    it('should create an instance of ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf', function() {
-      // uncomment below and update the code to test ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
-      //expect(instance).to.be.a(QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf);
+  describe('DeploymentHistoryHelmResponseAllOf', function() {
+    it('should create an instance of DeploymentHistoryHelmResponseAllOf', function() {
+      // uncomment below and update the code to test DeploymentHistoryHelmResponseAllOf
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOf();
+      //expect(instance).to.be.a(QoveryApi.DeploymentHistoryHelmResponseAllOf);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property commit (base name: "commit")', function() {
       // uncomment below and update the code to test the property commit
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOf();
       //expect(instance).to.be();
     });
 
     it('should have the property repository (base name: "repository")', function() {
       // uncomment below and update the code to test the property repository
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInnerAllOf();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponseAllOf();
       //expect(instance).to.be();
     });
 

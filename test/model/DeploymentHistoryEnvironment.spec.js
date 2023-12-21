@@ -114,6 +114,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property helms (base name: "helms")', function() {
+      // uncomment below and update the code to test the property helms
+      //var instance = new QoveryApi.DeploymentHistoryEnvironment();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

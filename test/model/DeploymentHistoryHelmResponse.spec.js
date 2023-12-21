@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+    instance = new QoveryApi.DeploymentHistoryHelmResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,52 +47,52 @@
       object[property] = value;
   }
 
-  describe('ListHelmDeploymentHistory200ResponseAllOfResultsInner', function() {
-    it('should create an instance of ListHelmDeploymentHistory200ResponseAllOfResultsInner', function() {
-      // uncomment below and update the code to test ListHelmDeploymentHistory200ResponseAllOfResultsInner
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
-      //expect(instance).to.be.a(QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner);
+  describe('DeploymentHistoryHelmResponse', function() {
+    it('should create an instance of DeploymentHistoryHelmResponse', function() {
+      // uncomment below and update the code to test DeploymentHistoryHelmResponse
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
+      //expect(instance).to.be.a(QoveryApi.DeploymentHistoryHelmResponse);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property updatedAt (base name: "updated_at")', function() {
       // uncomment below and update the code to test the property updatedAt
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property commit (base name: "commit")', function() {
       // uncomment below and update the code to test the property commit
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property repository (base name: "repository")', function() {
       // uncomment below and update the code to test the property repository
-      //var instance = new QoveryApi.ListHelmDeploymentHistory200ResponseAllOfResultsInner();
+      //var instance = new QoveryApi.DeploymentHistoryHelmResponse();
       //expect(instance).to.be();
     });
 

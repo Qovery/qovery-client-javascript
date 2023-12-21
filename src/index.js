@@ -563,7 +563,6 @@ import EnvironmentVariableApi from './api/EnvironmentVariableApi';
 import EnvironmentsApi from './api/EnvironmentsApi';
 import GitRepositoriesApi from './api/GitRepositoriesApi';
 import GithubAppApi from './api/GithubAppApi';
-import HelmApi from './api/HelmApi';
 import HelmActionsApi from './api/HelmActionsApi';
 import HelmConfigurationApi from './api/HelmConfigurationApi';
 import HelmDeploymentHistoryApi from './api/HelmDeploymentHistoryApi';
@@ -3934,12 +3933,6 @@ export {
     * @property {module:api/GithubAppApi}
     */
     GithubAppApi,
-
-    /**
-    * The HelmApi service constructor.
-    * @property {module:api/HelmApi}
-    */
-    HelmApi,
 
     /**
     * The HelmActionsApi service constructor.

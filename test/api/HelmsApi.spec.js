@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('getDefaultHelmAdvancedSettings', function() {
+      it('should call getDefaultHelmAdvancedSettings successfully', function(done) {
+        //uncomment below and update the code to test getDefaultHelmAdvancedSettings
+        //instance.getDefaultHelmAdvancedSettings(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getEnvironmentHelmStatus', function() {
       it('should call getEnvironmentHelmStatus successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentHelmStatus

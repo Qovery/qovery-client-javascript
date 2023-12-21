@@ -306,7 +306,6 @@ docs/GitTokenResponseList.md
 docs/GithubAppApi.md
 docs/Healthcheck.md
 docs/HelmActionsApi.md
-docs/HelmApi.md
 docs/HelmConfigurationApi.md
 docs/HelmDefaultValuesRequest.md
 docs/HelmDefaultValuesRequestAllOf.md
@@ -637,7 +636,6 @@ src/api/EnvironmentsApi.js
 src/api/GitRepositoriesApi.js
 src/api/GithubAppApi.js
 src/api/HelmActionsApi.js
-src/api/HelmApi.js
 src/api/HelmConfigurationApi.js
 src/api/HelmDeploymentHistoryApi.js
 src/api/HelmDeploymentRestrictionApi.js
@@ -1220,7 +1218,6 @@ test/api/EnvironmentsApi.spec.js
 test/api/GitRepositoriesApi.spec.js
 test/api/GithubAppApi.spec.js
 test/api/HelmActionsApi.spec.js
-test/api/HelmApi.spec.js
 test/api/HelmConfigurationApi.spec.js
 test/api/HelmDeploymentHistoryApi.spec.js
 test/api/HelmDeploymentRestrictionApi.spec.js

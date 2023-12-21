@@ -404,7 +404,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.GitRepositoriesApi* | [**getGitlabRepositoryBranches**](docs/GitRepositoriesApi.md#getGitlabRepositoryBranches) | **GET** /account/gitlab/repository/branch | Get gitlab branches of the specified repository
 *QoveryApi.GithubAppApi* | [**organizationGithubAppConnect**](docs/GithubAppApi.md#organizationGithubAppConnect) | **POST** /organization/{organizationId}/github/connect | Connect a github account to an organization
 *QoveryApi.GithubAppApi* | [**organizationGithubAppDisconnect**](docs/GithubAppApi.md#organizationGithubAppDisconnect) | **DELETE** /organization/{organizationId}/github/disconnect | Disconnect a github account from an organization
-*QoveryApi.HelmApi* | [**getDefaultHelmAdvancedSettings**](docs/HelmApi.md#getDefaultHelmAdvancedSettings) | **GET** /defaultHelmAdvancedSettings | List default helm advanced settings
 *QoveryApi.HelmActionsApi* | [**deployHelm**](docs/HelmActionsApi.md#deployHelm) | **POST** /helm/{helmId}/deploy | Deploy helm
 *QoveryApi.HelmActionsApi* | [**redeployHelm**](docs/HelmActionsApi.md#redeployHelm) | **POST** /helm/{helmId}/redeploy | Redeploy helm
 *QoveryApi.HelmActionsApi* | [**restartHelm**](docs/HelmActionsApi.md#restartHelm) | **POST** /helm/{helmId}/restart | Deprecated - Restart helm
@@ -431,6 +430,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmsApi* | [**cloneHelm**](docs/HelmsApi.md#cloneHelm) | **POST** /helm/{helmId}/clone | Clone helm
 *QoveryApi.HelmsApi* | [**createHelm**](docs/HelmsApi.md#createHelm) | **POST** /environment/{environmentId}/helm | Create a helm
 *QoveryApi.HelmsApi* | [**createHelmDefaultValues**](docs/HelmsApi.md#createHelmDefaultValues) | **POST** /environment/{environmentId}/helmDefaultValues | Get helm default values
+*QoveryApi.HelmsApi* | [**getDefaultHelmAdvancedSettings**](docs/HelmsApi.md#getDefaultHelmAdvancedSettings) | **GET** /defaultHelmAdvancedSettings | List default helm advanced settings
 *QoveryApi.HelmsApi* | [**getEnvironmentHelmStatus**](docs/HelmsApi.md#getEnvironmentHelmStatus) | **GET** /environment/{environmentId}/helm/status | List all environment helm statuses
 *QoveryApi.HelmsApi* | [**listHelms**](docs/HelmsApi.md#listHelms) | **GET** /environment/{environmentId}/helm | List helms
 *QoveryApi.JobActionsApi* | [**deployJob**](docs/JobActionsApi.md#deployJob) | **POST** /job/{jobId}/deploy | Deploy job

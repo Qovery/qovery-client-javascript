@@ -176,6 +176,42 @@ export default class HelmsApi {
     }
 
     /**
+     * Callback function to receive the result of the getDefaultHelmAdvancedSettings operation.
+     * @callback module:api/HelmsApi~getDefaultHelmAdvancedSettingsCallback
+     * @param {String} error Error message, if any.
+     * @param {Object} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List default helm advanced settings
+     * @param {module:api/HelmsApi~getDefaultHelmAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Object}
+     */
+    getDefaultHelmAdvancedSettings(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = Object;
+      return this.apiClient.callApi(
+        '/defaultHelmAdvancedSettings', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the getEnvironmentHelmStatus operation.
      * @callback module:api/HelmsApi~getEnvironmentHelmStatusCallback
      * @param {String} error Error message, if any.

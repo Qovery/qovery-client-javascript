@@ -277,6 +277,7 @@ import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestriction
 import HelmDeploymentRestrictionResponseList from './model/HelmDeploymentRestrictionResponseList';
 import HelmForceEvent from './model/HelmForceEvent';
 import HelmGitRepositoryRequest from './model/HelmGitRepositoryRequest';
+import HelmKeyValue from './model/HelmKeyValue';
 import HelmPortProtocolEnum from './model/HelmPortProtocolEnum';
 import HelmPortRequest from './model/HelmPortRequest';
 import HelmPortRequestPortsInner from './model/HelmPortRequestPortsInner';
@@ -2218,6 +2219,12 @@ export {
      * @property {module:model/HelmGitRepositoryRequest}
      */
     HelmGitRepositoryRequest,
+
+    /**
+     * The HelmKeyValue model constructor.
+     * @property {module:model/HelmKeyValue}
+     */
+    HelmKeyValue,
 
     /**
      * The HelmPortProtocolEnum model constructor.

@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import HelmKeyValue from './HelmKeyValue';
 import HelmResponseAllOfValuesOverrideFile from './HelmResponseAllOfValuesOverrideFile';
 
 /**
@@ -50,13 +51,13 @@ class HelmResponseAllOfValuesOverride {
             obj = obj || new HelmResponseAllOfValuesOverride();
 
             if (data.hasOwnProperty('set')) {
-                obj['set'] = ApiClient.convertToType(data['set'], [['String']]);
+                obj['set'] = ApiClient.convertToType(data['set'], [HelmKeyValue]);
             }
             if (data.hasOwnProperty('set_string')) {
-                obj['set_string'] = ApiClient.convertToType(data['set_string'], [['String']]);
+                obj['set_string'] = ApiClient.convertToType(data['set_string'], [HelmKeyValue]);
             }
             if (data.hasOwnProperty('set_json')) {
-                obj['set_json'] = ApiClient.convertToType(data['set_json'], [['String']]);
+                obj['set_json'] = ApiClient.convertToType(data['set_json'], [HelmKeyValue]);
             }
             if (data.hasOwnProperty('file')) {
                 obj['file'] = HelmResponseAllOfValuesOverrideFile.constructFromObject(data['file']);
@@ -69,17 +70,17 @@ class HelmResponseAllOfValuesOverride {
 }
 
 /**
- * @member {Array.<Array.<String>>} set
+ * @member {Array.<module:model/HelmKeyValue>} set
  */
 HelmResponseAllOfValuesOverride.prototype['set'] = undefined;
 
 /**
- * @member {Array.<Array.<String>>} set_string
+ * @member {Array.<module:model/HelmKeyValue>} set_string
  */
 HelmResponseAllOfValuesOverride.prototype['set_string'] = undefined;
 
 /**
- * @member {Array.<Array.<String>>} set_json
+ * @member {Array.<module:model/HelmKeyValue>} set_json
  */
 HelmResponseAllOfValuesOverride.prototype['set_json'] = undefined;
 

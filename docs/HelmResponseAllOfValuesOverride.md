@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**set** | **[[String]]** |  | [optional] 
-**setString** | **[[String]]** |  | [optional] 
-**setJson** | **[[String]]** |  | [optional] 
+**set** | [**[HelmKeyValue]**](HelmKeyValue.md) |  | [optional] 
+**setString** | [**[HelmKeyValue]**](HelmKeyValue.md) |  | [optional] 
+**setJson** | [**[HelmKeyValue]**](HelmKeyValue.md) |  | [optional] 
 **file** | [**HelmResponseAllOfValuesOverrideFile**](HelmResponseAllOfValuesOverrideFile.md) |  | [optional] 
 
 

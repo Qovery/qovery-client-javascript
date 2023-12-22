@@ -815,6 +815,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.HelmDeploymentRestrictionResponseList](docs/HelmDeploymentRestrictionResponseList.md)
  - [QoveryApi.HelmForceEvent](docs/HelmForceEvent.md)
  - [QoveryApi.HelmGitRepositoryRequest](docs/HelmGitRepositoryRequest.md)
+ - [QoveryApi.HelmKeyValue](docs/HelmKeyValue.md)
  - [QoveryApi.HelmPortProtocolEnum](docs/HelmPortProtocolEnum.md)
  - [QoveryApi.HelmPortRequest](docs/HelmPortRequest.md)
  - [QoveryApi.HelmPortRequestPortsInner](docs/HelmPortRequestPortsInner.md)

@@ -36,10 +36,11 @@ class VariableResponse {
      * @param key {String} 
      * @param value {String} 
      * @param scope {module:model/APIVariableScopeEnum} 
+     * @param isSecret {Boolean} 
      */
-    constructor(id, createdAt, key, value, scope) { 
-        Base.initialize(this, id, createdAt);VariableResponseAllOf.initialize(this, key, value, scope);
-        VariableResponse.initialize(this, id, createdAt, key, value, scope);
+    constructor(id, createdAt, key, value, scope, isSecret) { 
+        Base.initialize(this, id, createdAt);VariableResponseAllOf.initialize(this, key, value, scope, isSecret);
+        VariableResponse.initialize(this, id, createdAt, key, value, scope, isSecret);
     }
 
     /**
@@ -47,12 +48,13 @@ class VariableResponse {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, key, value, scope) { 
+    static initialize(obj, id, createdAt, key, value, scope, isSecret) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['key'] = key;
         obj['value'] = value;
         obj['scope'] = scope;
+        obj['is_secret'] = isSecret;
     }
 
     /**
@@ -109,6 +111,9 @@ class VariableResponse {
             }
             if (data.hasOwnProperty('owned_by')) {
                 obj['owned_by'] = ApiClient.convertToType(data['owned_by'], 'String');
+            }
+            if (data.hasOwnProperty('is_secret')) {
+                obj['is_secret'] = ApiClient.convertToType(data['is_secret'], 'Boolean');
             }
         }
         return obj;
@@ -190,6 +195,11 @@ VariableResponse.prototype['service_type'] = undefined;
  */
 VariableResponse.prototype['owned_by'] = undefined;
 
+/**
+ * @member {Boolean} is_secret
+ */
+VariableResponse.prototype['is_secret'] = undefined;
+
 
 // Implement Base interface:
 /**
@@ -252,6 +262,10 @@ VariableResponseAllOf.prototype['service_type'] = undefined;
  * @member {String} owned_by
  */
 VariableResponseAllOf.prototype['owned_by'] = undefined;
+/**
+ * @member {Boolean} is_secret
+ */
+VariableResponseAllOf.prototype['is_secret'] = undefined;
 
 
 

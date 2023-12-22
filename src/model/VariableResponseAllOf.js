@@ -30,10 +30,11 @@ class VariableResponseAllOf {
      * @param key {String} 
      * @param value {String} 
      * @param scope {module:model/APIVariableScopeEnum} 
+     * @param isSecret {Boolean} 
      */
-    constructor(key, value, scope) { 
+    constructor(key, value, scope, isSecret) { 
         
-        VariableResponseAllOf.initialize(this, key, value, scope);
+        VariableResponseAllOf.initialize(this, key, value, scope, isSecret);
     }
 
     /**
@@ -41,10 +42,11 @@ class VariableResponseAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, key, value, scope) { 
+    static initialize(obj, key, value, scope, isSecret) { 
         obj['key'] = key;
         obj['value'] = value;
         obj['scope'] = scope;
+        obj['is_secret'] = isSecret;
     }
 
     /**
@@ -90,6 +92,9 @@ class VariableResponseAllOf {
             }
             if (data.hasOwnProperty('owned_by')) {
                 obj['owned_by'] = ApiClient.convertToType(data['owned_by'], 'String');
+            }
+            if (data.hasOwnProperty('is_secret')) {
+                obj['is_secret'] = ApiClient.convertToType(data['is_secret'], 'Boolean');
             }
         }
         return obj;
@@ -155,6 +160,11 @@ VariableResponseAllOf.prototype['service_type'] = undefined;
  * @member {String} owned_by
  */
 VariableResponseAllOf.prototype['owned_by'] = undefined;
+
+/**
+ * @member {Boolean} is_secret
+ */
+VariableResponseAllOf.prototype['is_secret'] = undefined;
 
 
 

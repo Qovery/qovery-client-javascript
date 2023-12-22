@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **serviceName** | **String** | The name of the service referenced by this variable. | [optional] 
 **serviceType** | [**LinkedServiceTypeEnum**](LinkedServiceTypeEnum.md) |  | [optional] 
 **ownedBy** | **String** | Entity that created/own the variable (i.e: Qovery, Doppler) | [optional] 
+**isSecret** | **Boolean** |  | 
 
 

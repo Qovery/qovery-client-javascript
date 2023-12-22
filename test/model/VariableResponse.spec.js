@@ -138,6 +138,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isSecret (base name: "is_secret")', function() {
+      // uncomment below and update the code to test the property isSecret
+      //var instance = new QoveryApi.VariableResponse();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

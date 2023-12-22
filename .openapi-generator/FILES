@@ -318,7 +318,6 @@ docs/HelmDeploymentRestrictionResponse.md
 docs/HelmDeploymentRestrictionResponseList.md
 docs/HelmForceEvent.md
 docs/HelmGitRepositoryRequest.md
-docs/HelmKeyValue.md
 docs/HelmMainCallsApi.md
 docs/HelmPortProtocolEnum.md
 docs/HelmPortRequest.md
@@ -933,7 +932,6 @@ src/model/HelmDeploymentRestrictionResponse.js
 src/model/HelmDeploymentRestrictionResponseList.js
 src/model/HelmForceEvent.js
 src/model/HelmGitRepositoryRequest.js
-src/model/HelmKeyValue.js
 src/model/HelmPortProtocolEnum.js
 src/model/HelmPortRequest.js
 src/model/HelmPortRequestPortsInner.js
@@ -1516,7 +1514,6 @@ test/model/HelmDeploymentRestrictionResponse.spec.js
 test/model/HelmDeploymentRestrictionResponseList.spec.js
 test/model/HelmForceEvent.spec.js
 test/model/HelmGitRepositoryRequest.spec.js
-test/model/HelmKeyValue.spec.js
 test/model/HelmPortProtocolEnum.spec.js
 test/model/HelmPortRequest.spec.js
 test/model/HelmPortRequestPortsInner.spec.js

@@ -268,6 +268,7 @@ import GitTokenResponse from './model/GitTokenResponse';
 import GitTokenResponseAllOf from './model/GitTokenResponseAllOf';
 import GitTokenResponseList from './model/GitTokenResponseList';
 import Healthcheck from './model/Healthcheck';
+import HelmAdvancedSettings from './model/HelmAdvancedSettings';
 import HelmDefaultValuesRequest from './model/HelmDefaultValuesRequest';
 import HelmDefaultValuesRequestAllOf from './model/HelmDefaultValuesRequestAllOf';
 import HelmDeployRequest from './model/HelmDeployRequest';
@@ -2163,6 +2164,12 @@ export {
      * @property {module:model/Healthcheck}
      */
     Healthcheck,
+
+    /**
+     * The HelmAdvancedSettings model constructor.
+     * @property {module:model/HelmAdvancedSettings}
+     */
+    HelmAdvancedSettings,
 
     /**
      * The HelmDefaultValuesRequest model constructor.

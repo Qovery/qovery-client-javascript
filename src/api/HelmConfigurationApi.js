@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import HelmAdvancedSettings from '../model/HelmAdvancedSettings';
 
 /**
 * HelmConfiguration service.
@@ -37,7 +38,7 @@ export default class HelmConfigurationApi {
      * Callback function to receive the result of the editHelmAdvancedSettings operation.
      * @callback module:api/HelmConfigurationApi~editHelmAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/HelmAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -46,13 +47,13 @@ export default class HelmConfigurationApi {
      * Edit advanced settings by returning table of advanced settings.
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {Object.<String, Object>} opts.body 
+     * @param {module:model/HelmAdvancedSettings} opts.helmAdvancedSettings 
      * @param {module:api/HelmConfigurationApi~editHelmAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/HelmAdvancedSettings}
      */
     editHelmAdvancedSettings(helmId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['body'];
+      let postBody = opts['helmAdvancedSettings'];
       // verify the required parameter 'helmId' is set
       if (helmId === undefined || helmId === null) {
         throw new Error("Missing the required parameter 'helmId' when calling editHelmAdvancedSettings");
@@ -71,7 +72,7 @@ export default class HelmConfigurationApi {
       let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = HelmAdvancedSettings;
       return this.apiClient.callApi(
         '/helm/{helmId}/advancedSettings', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -83,7 +84,7 @@ export default class HelmConfigurationApi {
      * Callback function to receive the result of the getHelmAdvancedSettings operation.
      * @callback module:api/HelmConfigurationApi~getHelmAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/HelmAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -92,7 +93,7 @@ export default class HelmConfigurationApi {
      * Get list and values of the advanced settings of the helm.
      * @param {String} helmId Helm ID
      * @param {module:api/HelmConfigurationApi~getHelmAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/HelmAdvancedSettings}
      */
     getHelmAdvancedSettings(helmId, callback) {
       let postBody = null;
@@ -114,7 +115,7 @@ export default class HelmConfigurationApi {
       let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = HelmAdvancedSettings;
       return this.apiClient.callApi(
         '/helm/{helmId}/advancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

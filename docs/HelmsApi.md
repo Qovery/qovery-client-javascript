@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ## getDefaultHelmAdvancedSettings
 
-> Object getDefaultHelmAdvancedSettings()
+> HelmAdvancedSettings getDefaultHelmAdvancedSettings()
 
 List default helm advanced settings
 
@@ -219,7 +219,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**Object**
+[**HelmAdvancedSettings**](HelmAdvancedSettings.md)
 
 ### Authorization
 

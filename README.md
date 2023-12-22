@@ -806,6 +806,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.GitTokenResponseAllOf](docs/GitTokenResponseAllOf.md)
  - [QoveryApi.GitTokenResponseList](docs/GitTokenResponseList.md)
  - [QoveryApi.Healthcheck](docs/Healthcheck.md)
+ - [QoveryApi.HelmAdvancedSettings](docs/HelmAdvancedSettings.md)
  - [QoveryApi.HelmDefaultValuesRequest](docs/HelmDefaultValuesRequest.md)
  - [QoveryApi.HelmDefaultValuesRequestAllOf](docs/HelmDefaultValuesRequestAllOf.md)
  - [QoveryApi.HelmDeployRequest](docs/HelmDeployRequest.md)

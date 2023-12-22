@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import CloneServiceRequest from '../model/CloneServiceRequest';
+import HelmAdvancedSettings from '../model/HelmAdvancedSettings';
 import HelmDefaultValuesRequest from '../model/HelmDefaultValuesRequest';
 import HelmRequest from '../model/HelmRequest';
 import HelmResponse from '../model/HelmResponse';
@@ -179,14 +180,14 @@ export default class HelmsApi {
      * Callback function to receive the result of the getDefaultHelmAdvancedSettings operation.
      * @callback module:api/HelmsApi~getDefaultHelmAdvancedSettingsCallback
      * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
+     * @param {module:model/HelmAdvancedSettings} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * List default helm advanced settings
      * @param {module:api/HelmsApi~getDefaultHelmAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * data is of type: {@link module:model/HelmAdvancedSettings}
      */
     getDefaultHelmAdvancedSettings(callback) {
       let postBody = null;
@@ -203,7 +204,7 @@ export default class HelmsApi {
       let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = HelmAdvancedSettings;
       return this.apiClient.callApi(
         '/defaultHelmAdvancedSettings', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## editHelmAdvancedSettings
 
-> Object editHelmAdvancedSettings(helmId, opts)
+> HelmAdvancedSettings editHelmAdvancedSettings(helmId, opts)
 
 Edit advanced settings
 
@@ -34,7 +34,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new QoveryApi.HelmConfigurationApi();
 let helmId = "helmId_example"; // String | Helm ID
 let opts = {
-  'body': {key: null} // Object | 
+  'helmAdvancedSettings': new QoveryApi.HelmAdvancedSettings() // HelmAdvancedSettings | 
 };
 apiInstance.editHelmAdvancedSettings(helmId, opts, (error, data, response) => {
   if (error) {
@@ -51,11 +51,11 @@ apiInstance.editHelmAdvancedSettings(helmId, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **helmId** | **String**| Helm ID | 
- **body** | **Object**|  | [optional] 
+ **helmAdvancedSettings** | [**HelmAdvancedSettings**](HelmAdvancedSettings.md)|  | [optional] 
 
 ### Return type
 
-**Object**
+[**HelmAdvancedSettings**](HelmAdvancedSettings.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ## getHelmAdvancedSettings
 
-> Object getHelmAdvancedSettings(helmId)
+> HelmAdvancedSettings getHelmAdvancedSettings(helmId)
 
 Get advanced settings
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**HelmAdvancedSettings**](HelmAdvancedSettings.md)
 
 ### Authorization
 

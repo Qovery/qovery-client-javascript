@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
+import ApplicationGitRepository from './ApplicationGitRepository';
 
 /**
  * The HelmResponseAllOfValuesOverrideFileGit model module.
@@ -23,7 +23,7 @@ class HelmResponseAllOfValuesOverrideFileGit {
     /**
      * Constructs a new <code>HelmResponseAllOfValuesOverrideFileGit</code>.
      * @alias module:model/HelmResponseAllOfValuesOverrideFileGit
-     * @param gitRepository {module:model/ApplicationGitRepositoryRequest} 
+     * @param gitRepository {module:model/ApplicationGitRepository} 
      * @param paths {Array.<String>} List of path inside your git repository to locate values file. Must start by a /
      */
     constructor(gitRepository, paths) { 
@@ -53,7 +53,7 @@ class HelmResponseAllOfValuesOverrideFileGit {
             obj = obj || new HelmResponseAllOfValuesOverrideFileGit();
 
             if (data.hasOwnProperty('git_repository')) {
-                obj['git_repository'] = ApplicationGitRepositoryRequest.constructFromObject(data['git_repository']);
+                obj['git_repository'] = ApplicationGitRepository.constructFromObject(data['git_repository']);
             }
             if (data.hasOwnProperty('paths')) {
                 obj['paths'] = ApiClient.convertToType(data['paths'], ['String']);
@@ -66,7 +66,7 @@ class HelmResponseAllOfValuesOverrideFileGit {
 }
 
 /**
- * @member {module:model/ApplicationGitRepositoryRequest} git_repository
+ * @member {module:model/ApplicationGitRepository} git_repository
  */
 HelmResponseAllOfValuesOverrideFileGit.prototype['git_repository'] = undefined;
 

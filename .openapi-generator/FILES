@@ -308,6 +308,7 @@ docs/Healthcheck.md
 docs/HelmActionsApi.md
 docs/HelmAdvancedSettings.md
 docs/HelmConfigurationApi.md
+docs/HelmCustomDomainApi.md
 docs/HelmDefaultValuesRequest.md
 docs/HelmDefaultValuesRequestAllOf.md
 docs/HelmDeployRequest.md
@@ -638,6 +639,7 @@ src/api/GitRepositoriesApi.js
 src/api/GithubAppApi.js
 src/api/HelmActionsApi.js
 src/api/HelmConfigurationApi.js
+src/api/HelmCustomDomainApi.js
 src/api/HelmDeploymentHistoryApi.js
 src/api/HelmDeploymentRestrictionApi.js
 src/api/HelmMainCallsApi.js
@@ -1221,6 +1223,7 @@ test/api/GitRepositoriesApi.spec.js
 test/api/GithubAppApi.spec.js
 test/api/HelmActionsApi.spec.js
 test/api/HelmConfigurationApi.spec.js
+test/api/HelmCustomDomainApi.spec.js
 test/api/HelmDeploymentHistoryApi.spec.js
 test/api/HelmDeploymentRestrictionApi.spec.js
 test/api/HelmMainCallsApi.spec.js

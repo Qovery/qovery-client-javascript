@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property isDefault (base name: "is_default")', function() {
+      // uncomment below and update the code to test the property isDefault
+      //var instance = new QoveryApi.HelmPortRequestPortsInner();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

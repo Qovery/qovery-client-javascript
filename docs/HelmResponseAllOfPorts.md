@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **serviceName** | **String** |  | 
 **namespace** | **String** |  | [optional] 
 **protocol** | [**HelmPortProtocolEnum**](HelmPortProtocolEnum.md) |  | 
+**isDefault** | **Boolean** | is the default port to use for domain | [optional] 
 
 

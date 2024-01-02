@@ -70,6 +70,9 @@ class HelmPortRequestPortsInner {
             if (data.hasOwnProperty('protocol')) {
                 obj['protocol'] = HelmPortProtocolEnum.constructFromObject(data['protocol']);
             }
+            if (data.hasOwnProperty('is_default')) {
+                obj['is_default'] = ApiClient.convertToType(data['is_default'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -108,6 +111,12 @@ HelmPortRequestPortsInner.prototype['namespace'] = undefined;
  * @member {module:model/HelmPortProtocolEnum} protocol
  */
 HelmPortRequestPortsInner.prototype['protocol'] = undefined;
+
+/**
+ * is the default port to use for domain
+ * @member {Boolean} is_default
+ */
+HelmPortRequestPortsInner.prototype['is_default'] = undefined;
 
 
 

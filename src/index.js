@@ -566,6 +566,7 @@ import GitRepositoriesApi from './api/GitRepositoriesApi';
 import GithubAppApi from './api/GithubAppApi';
 import HelmActionsApi from './api/HelmActionsApi';
 import HelmConfigurationApi from './api/HelmConfigurationApi';
+import HelmCustomDomainApi from './api/HelmCustomDomainApi';
 import HelmDeploymentHistoryApi from './api/HelmDeploymentHistoryApi';
 import HelmDeploymentRestrictionApi from './api/HelmDeploymentRestrictionApi';
 import HelmMainCallsApi from './api/HelmMainCallsApi';
@@ -3952,6 +3953,12 @@ export {
     * @property {module:api/HelmConfigurationApi}
     */
     HelmConfigurationApi,
+
+    /**
+    * The HelmCustomDomainApi service constructor.
+    * @property {module:api/HelmCustomDomainApi}
+    */
+    HelmCustomDomainApi,
 
     /**
     * The HelmDeploymentHistoryApi service constructor.

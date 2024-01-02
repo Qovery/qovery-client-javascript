@@ -317,10 +317,12 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainersApi* | [**listContainer**](docs/ContainersApi.md#listContainer) | **GET** /environment/{environmentId}/container | List containers
 *QoveryApi.ContainersApi* | [**previewContainerEnvironments**](docs/ContainersApi.md#previewContainerEnvironments) | **POST** /organization/{organizationId}/container/preview | Preview container environments
 *QoveryApi.CustomDomainApi* | [**createApplicationCustomDomain**](docs/CustomDomainApi.md#createApplicationCustomDomain) | **POST** /application/{applicationId}/customDomain | Add custom domain to the application.
+*QoveryApi.CustomDomainApi* | [**createHelmCustomDomain**](docs/CustomDomainApi.md#createHelmCustomDomain) | **POST** /helm/{helmId}/customDomain | Add custom domain to the helm.
 *QoveryApi.CustomDomainApi* | [**deleteCustomDomain**](docs/CustomDomainApi.md#deleteCustomDomain) | **DELETE** /application/{applicationId}/customDomain/{customDomainId} | Delete a Custom Domain
 *QoveryApi.CustomDomainApi* | [**editCustomDomain**](docs/CustomDomainApi.md#editCustomDomain) | **PUT** /application/{applicationId}/customDomain/{customDomainId} | Edit a Custom Domain
 *QoveryApi.CustomDomainApi* | [**getCustomDomainStatus**](docs/CustomDomainApi.md#getCustomDomainStatus) | **GET** /application/{applicationId}/customDomain/{customDomainId}/status | Get Custom Domain status
 *QoveryApi.CustomDomainApi* | [**listApplicationCustomDomain**](docs/CustomDomainApi.md#listApplicationCustomDomain) | **GET** /application/{applicationId}/customDomain | List application custom domains
+*QoveryApi.CustomDomainApi* | [**listHelmCustomDomain**](docs/CustomDomainApi.md#listHelmCustomDomain) | **GET** /helm/{helmId}/customDomain | List helm custom domains
 *QoveryApi.DatabaseActionsApi* | [**deployDatabase**](docs/DatabaseActionsApi.md#deployDatabase) | **POST** /database/{databaseId}/deploy | Deploy database 
 *QoveryApi.DatabaseActionsApi* | [**rebootDatabase**](docs/DatabaseActionsApi.md#rebootDatabase) | **POST** /database/{databaseId}/restart-service | Retart database
 *QoveryApi.DatabaseActionsApi* | [**redeployDatabase**](docs/DatabaseActionsApi.md#redeployDatabase) | **POST** /database/{databaseId}/redeploy | Redeploy database
@@ -410,6 +412,9 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmActionsApi* | [**stopHelm**](docs/HelmActionsApi.md#stopHelm) | **POST** /helm/{helmId}/stop | Stop helm
 *QoveryApi.HelmConfigurationApi* | [**editHelmAdvancedSettings**](docs/HelmConfigurationApi.md#editHelmAdvancedSettings) | **PUT** /helm/{helmId}/advancedSettings | Edit advanced settings
 *QoveryApi.HelmConfigurationApi* | [**getHelmAdvancedSettings**](docs/HelmConfigurationApi.md#getHelmAdvancedSettings) | **GET** /helm/{helmId}/advancedSettings | Get advanced settings
+*QoveryApi.HelmCustomDomainApi* | [**deleteHelmCustomDomain**](docs/HelmCustomDomainApi.md#deleteHelmCustomDomain) | **DELETE** /helm/{helmId}/customDomain/{customDomainId} | Delete a Custom Domain
+*QoveryApi.HelmCustomDomainApi* | [**editHelmCustomDomain**](docs/HelmCustomDomainApi.md#editHelmCustomDomain) | **PUT** /helm/{helmId}/customDomain/{customDomainId} | Edit a Custom Domain
+*QoveryApi.HelmCustomDomainApi* | [**getHelmCustomDomain**](docs/HelmCustomDomainApi.md#getHelmCustomDomain) | **GET** /helm/{helmId}/customDomain/{customDomainId} | Get a Custom Domain
 *QoveryApi.HelmDeploymentHistoryApi* | [**listHelmDeploymentHistory**](docs/HelmDeploymentHistoryApi.md#listHelmDeploymentHistory) | **GET** /helm/{helmId}/deploymentHistory | List helm deployments
 *QoveryApi.HelmDeploymentRestrictionApi* | [**createHelmDeploymentRestriction**](docs/HelmDeploymentRestrictionApi.md#createHelmDeploymentRestriction) | **POST** /helm/{helmId}/deploymentRestriction | Create a helm deployment restriction
 *QoveryApi.HelmDeploymentRestrictionApi* | [**deleteHelmDeploymentRestriction**](docs/HelmDeploymentRestrictionApi.md#deleteHelmDeploymentRestriction) | **DELETE** /helm/{helmId}/deploymentRestriction/{deploymentRestrictionId} | Delete a helm deployment restriction

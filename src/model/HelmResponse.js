@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
+import ApplicationGitRepository from './ApplicationGitRepository';
 import Base from './Base';
 import HelmResponseAllOf from './HelmResponseAllOf';
 import HelmResponseAllOfPorts from './HelmResponseAllOfPorts';

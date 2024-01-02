@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **kubernetes** | [**KubernetesEnum**](KubernetesEnum.md) |  | [optional] 
 **production** | **Boolean** | specific flag to indicate that this cluster is a production one | [optional] 
 **sshKeys** | **[String]** | Indicate your public ssh_key to remotely connect to your EC2 instance. | [optional] 
+**kubeconfig** | **String** | If the cluster is a self managed one. The kubeconfig to use to connect to it | [optional] 
 **features** | [**[ClusterRequestFeaturesInner]**](ClusterRequestFeaturesInner.md) |  | [optional] 
 
 

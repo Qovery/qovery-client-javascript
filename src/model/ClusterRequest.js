@@ -89,6 +89,9 @@ class ClusterRequest {
             if (data.hasOwnProperty('ssh_keys')) {
                 obj['ssh_keys'] = ApiClient.convertToType(data['ssh_keys'], ['String']);
             }
+            if (data.hasOwnProperty('kubeconfig')) {
+                obj['kubeconfig'] = ApiClient.convertToType(data['kubeconfig'], 'String');
+            }
             if (data.hasOwnProperty('features')) {
                 obj['features'] = ApiClient.convertToType(data['features'], [ClusterRequestFeaturesInner]);
             }
@@ -161,6 +164,12 @@ ClusterRequest.prototype['production'] = undefined;
  * @member {Array.<String>} ssh_keys
  */
 ClusterRequest.prototype['ssh_keys'] = undefined;
+
+/**
+ * If the cluster is a self managed one. The kubeconfig to use to connect to it
+ * @member {String} kubeconfig
+ */
+ClusterRequest.prototype['kubeconfig'] = undefined;
 
 /**
  * @member {Array.<module:model/ClusterRequestFeaturesInner>} features

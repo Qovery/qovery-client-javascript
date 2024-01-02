@@ -120,6 +120,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property kubeconfig (base name: "kubeconfig")', function() {
+      // uncomment below and update the code to test the property kubeconfig
+      //var instance = new QoveryApi.ClusterRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property features (base name: "features")', function() {
       // uncomment below and update the code to test the property features
       //var instance = new QoveryApi.ClusterRequest();

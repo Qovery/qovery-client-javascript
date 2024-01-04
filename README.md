@@ -237,6 +237,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**getClusterReadinessStatus**](docs/ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
 *QoveryApi.ClustersApi* | [**getClusterStatus**](docs/ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
 *QoveryApi.ClustersApi* | [**getDefaultClusterAdvancedSettings**](docs/ClustersApi.md#getDefaultClusterAdvancedSettings) | **GET** /defaultClusterAdvancedSettings | List default cluster advanced settings
+*QoveryApi.ClustersApi* | [**getInstallationHelmValues**](docs/ClustersApi.md#getInstallationHelmValues) | **GET** /organization/{organizationId}/cluster/{clusterId}/installationHelmValues | Get cluster helm values for self managed installation
 *QoveryApi.ClustersApi* | [**getOrganizationCloudProviderInfo**](docs/ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
 *QoveryApi.ClustersApi* | [**getOrganizationClusterStatus**](docs/ClustersApi.md#getOrganizationClusterStatus) | **GET** /organization/{organizationId}/cluster/status | List all clusters statuses
 *QoveryApi.ClustersApi* | [**getRoutingTable**](docs/ClustersApi.md#getRoutingTable) | **GET** /organization/{organizationId}/cluster/{clusterId}/routingTable | Get routing table

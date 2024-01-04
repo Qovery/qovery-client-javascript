@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**getClusterReadinessStatus**](ClustersApi.md#getClusterReadinessStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/isReady | Know if a cluster is ready to be deployed or not
 [**getClusterStatus**](ClustersApi.md#getClusterStatus) | **GET** /organization/{organizationId}/cluster/{clusterId}/status | Get cluster status
 [**getDefaultClusterAdvancedSettings**](ClustersApi.md#getDefaultClusterAdvancedSettings) | **GET** /defaultClusterAdvancedSettings | List default cluster advanced settings
+[**getInstallationHelmValues**](ClustersApi.md#getInstallationHelmValues) | **GET** /organization/{organizationId}/cluster/{clusterId}/installationHelmValues | Get cluster helm values for self managed installation
 [**getOrganizationCloudProviderInfo**](ClustersApi.md#getOrganizationCloudProviderInfo) | **GET** /organization/{organizationId}/cluster/{clusterId}/cloudProviderInfo | Get cluster cloud provider info and credentials
 [**getOrganizationClusterStatus**](ClustersApi.md#getOrganizationClusterStatus) | **GET** /organization/{organizationId}/cluster/status | List all clusters statuses
 [**getRoutingTable**](ClustersApi.md#getRoutingTable) | **GET** /organization/{organizationId}/cluster/{clusterId}/routingTable | Get routing table
@@ -639,6 +640,60 @@ This endpoint does not need any parameter.
 
 - **Content-Type**: Not defined
 - **Accept**: application/json
+
+
+## getInstallationHelmValues
+
+> String getInstallationHelmValues(organizationId, clusterId)
+
+Get cluster helm values for self managed installation
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.ClustersApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let clusterId = "clusterId_example"; // String | Cluster ID
+apiInstance.getInstallationHelmValues(organizationId, clusterId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **clusterId** | **String**| Cluster ID | 
+
+### Return type
+
+**String**
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/x-yaml
 
 
 ## getOrganizationCloudProviderInfo

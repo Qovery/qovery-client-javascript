@@ -158,6 +158,16 @@
         done();
       });
     });
+    describe('getInstallationHelmValues', function() {
+      it('should call getInstallationHelmValues successfully', function(done) {
+        //uncomment below and update the code to test getInstallationHelmValues
+        //instance.getInstallationHelmValues(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrganizationCloudProviderInfo', function() {
       it('should call getOrganizationCloudProviderInfo successfully', function(done) {
         //uncomment below and update the code to test getOrganizationCloudProviderInfo

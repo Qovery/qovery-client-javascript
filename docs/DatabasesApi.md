@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**getEnvironmentDatabaseStatus**](DatabasesApi.md#getEnvironmentDatabaseStatus) | **GET** /environment/{environmentId}/database/status | List all environment databases statuses
 [**listDatabase**](DatabasesApi.md#listDatabase) | **GET** /environment/{environmentId}/database | List environment databases
 [**listEnvironmentDatabaseConfig**](DatabasesApi.md#listEnvironmentDatabaseConfig) | **GET** /environment/{environmentId}/databaseConfiguration | List eligible database types, versions and modes for the environment
-[**listEnvironmentDatabaseCurrentMetric**](DatabasesApi.md#listEnvironmentDatabaseCurrentMetric) | **GET** /environment/{environmentId}/database/currentMetric | List current metric consumption for each database
 
 
 
@@ -274,58 +273,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DatabaseConfigurationResponseList**](DatabaseConfigurationResponseList.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## listEnvironmentDatabaseCurrentMetric
-
-> EnvironmentDatabasesCurrentMetricResponseList listEnvironmentDatabaseCurrentMetric(environmentId)
-
-List current metric consumption for each database
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.DatabasesApi();
-let environmentId = "environmentId_example"; // String | Environment ID
-apiInstance.listEnvironmentDatabaseCurrentMetric(environmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **environmentId** | **String**| Environment ID | 
-
-### Return type
-
-[**EnvironmentDatabasesCurrentMetricResponseList**](EnvironmentDatabasesCurrentMetricResponseList.md)
 
 ### Authorization
 

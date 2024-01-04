@@ -18,8 +18,6 @@ import ApplicationAdvancedSettings from '../model/ApplicationAdvancedSettings';
 import ApplicationRequest from '../model/ApplicationRequest';
 import ApplicationResponseList from '../model/ApplicationResponseList';
 import CloneServiceRequest from '../model/CloneServiceRequest';
-import EnvironmentApplicationsCurrentScaleResponseList from '../model/EnvironmentApplicationsCurrentScaleResponseList';
-import EnvironmentApplicationsStorageResponseList from '../model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguageList from '../model/EnvironmentApplicationsSupportedLanguageList';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
 
@@ -165,91 +163,6 @@ export default class ApplicationsApi {
       let returnType = ApplicationAdvancedSettings;
       return this.apiClient.callApi(
         '/defaultApplicationAdvancedSettings', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEnvironmentApplicationCurrentScale operation.
-     * @callback module:api/ApplicationsApi~getEnvironmentApplicationCurrentScaleCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentApplicationsCurrentScaleResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List current scaling information for each application
-     * Returns min, max, and running number of instances for each application
-     * @param {String} environmentId Environment ID
-     * @param {module:api/ApplicationsApi~getEnvironmentApplicationCurrentScaleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentApplicationsCurrentScaleResponseList}
-     */
-    getEnvironmentApplicationCurrentScale(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentApplicationCurrentScale");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentApplicationsCurrentScaleResponseList;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/application/currentScale', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEnvironmentApplicationCurrentStorage operation.
-     * @callback module:api/ApplicationsApi~getEnvironmentApplicationCurrentStorageCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentApplicationsStorageResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List current storage disk usage for each application
-     * @param {String} environmentId Environment ID
-     * @param {module:api/ApplicationsApi~getEnvironmentApplicationCurrentStorageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentApplicationsStorageResponseList}
-     */
-    getEnvironmentApplicationCurrentStorage(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentApplicationCurrentStorage");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentApplicationsStorageResponseList;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/application/currentStorage', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -98,16 +98,6 @@
         done();
       });
     });
-    describe('listEnvironmentDatabaseCurrentMetric', function() {
-      it('should call listEnvironmentDatabaseCurrentMetric successfully', function(done) {
-        //uncomment below and update the code to test listEnvironmentDatabaseCurrentMetric
-        //instance.listEnvironmentDatabaseCurrentMetric(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
   });
 
 }));

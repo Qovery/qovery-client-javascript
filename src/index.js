@@ -20,7 +20,6 @@ import AccountInfoEditRequest from './model/AccountInfoEditRequest';
 import Application from './model/Application';
 import ApplicationAdvancedSettings from './model/ApplicationAdvancedSettings';
 import ApplicationAllOf from './model/ApplicationAllOf';
-import ApplicationCurrentScale from './model/ApplicationCurrentScale';
 import ApplicationDeploymentRestriction from './model/ApplicationDeploymentRestriction';
 import ApplicationDeploymentRestrictionRequest from './model/ApplicationDeploymentRestrictionRequest';
 import ApplicationDeploymentRestrictionResponseList from './model/ApplicationDeploymentRestrictionResponseList';
@@ -105,7 +104,6 @@ import CommitResponseList from './model/CommitResponseList';
 import CommunityUsage from './model/CommunityUsage';
 import CompanySizeEnum from './model/CompanySizeEnum';
 import ContainerAdvancedSettings from './model/ContainerAdvancedSettings';
-import ContainerCurrentScale from './model/ContainerCurrentScale';
 import ContainerDeployRequest from './model/ContainerDeployRequest';
 import ContainerNetwork from './model/ContainerNetwork';
 import ContainerNetworkRequest from './model/ContainerNetworkRequest';
@@ -146,10 +144,6 @@ import DatabaseAccessibilityEnum from './model/DatabaseAccessibilityEnum';
 import DatabaseAllOf from './model/DatabaseAllOf';
 import DatabaseConfiguration from './model/DatabaseConfiguration';
 import DatabaseConfigurationResponseList from './model/DatabaseConfigurationResponseList';
-import DatabaseCurrentMetric from './model/DatabaseCurrentMetric';
-import DatabaseCurrentMetricCpu from './model/DatabaseCurrentMetricCpu';
-import DatabaseCurrentMetricMemory from './model/DatabaseCurrentMetricMemory';
-import DatabaseCurrentMetricStorage from './model/DatabaseCurrentMetricStorage';
 import DatabaseEditRequest from './model/DatabaseEditRequest';
 import DatabaseModeEnum from './model/DatabaseModeEnum';
 import DatabaseRequest from './model/DatabaseRequest';
@@ -199,23 +193,8 @@ import DoCredentialsRequest from './model/DoCredentialsRequest';
 import Environment from './model/Environment';
 import EnvironmentAllOf from './model/EnvironmentAllOf';
 import EnvironmentAllOfCloudProvider from './model/EnvironmentAllOfCloudProvider';
-import EnvironmentApplicationsCurrentScale from './model/EnvironmentApplicationsCurrentScale';
-import EnvironmentApplicationsCurrentScaleResponseList from './model/EnvironmentApplicationsCurrentScaleResponseList';
-import EnvironmentApplicationsInstanceResponseList from './model/EnvironmentApplicationsInstanceResponseList';
-import EnvironmentApplicationsInstanceResponseListResultsInner from './model/EnvironmentApplicationsInstanceResponseListResultsInner';
-import EnvironmentApplicationsStorage from './model/EnvironmentApplicationsStorage';
-import EnvironmentApplicationsStorageResponseList from './model/EnvironmentApplicationsStorageResponseList';
 import EnvironmentApplicationsSupportedLanguage from './model/EnvironmentApplicationsSupportedLanguage';
 import EnvironmentApplicationsSupportedLanguageList from './model/EnvironmentApplicationsSupportedLanguageList';
-import EnvironmentContainersCurrentScale from './model/EnvironmentContainersCurrentScale';
-import EnvironmentContainersCurrentScaleResponseList from './model/EnvironmentContainersCurrentScaleResponseList';
-import EnvironmentContainersStorage from './model/EnvironmentContainersStorage';
-import EnvironmentContainersStorageResponseList from './model/EnvironmentContainersStorageResponseList';
-import EnvironmentDatabasesCurrentMetric from './model/EnvironmentDatabasesCurrentMetric';
-import EnvironmentDatabasesCurrentMetricCpu from './model/EnvironmentDatabasesCurrentMetricCpu';
-import EnvironmentDatabasesCurrentMetricMemory from './model/EnvironmentDatabasesCurrentMetricMemory';
-import EnvironmentDatabasesCurrentMetricResponseList from './model/EnvironmentDatabasesCurrentMetricResponseList';
-import EnvironmentDatabasesCurrentMetricStorage from './model/EnvironmentDatabasesCurrentMetricStorage';
 import EnvironmentDeploymentRule from './model/EnvironmentDeploymentRule';
 import EnvironmentDeploymentRuleAllOf from './model/EnvironmentDeploymentRuleAllOf';
 import EnvironmentDeploymentRuleEditRequest from './model/EnvironmentDeploymentRuleEditRequest';
@@ -302,9 +281,6 @@ import HelmResponseAllOfValuesOverrideFileRaw from './model/HelmResponseAllOfVal
 import HelmResponseAllOfValuesOverrideFileRawValues from './model/HelmResponseAllOfValuesOverrideFileRawValues';
 import HelmResponseList from './model/HelmResponseList';
 import HelmValuesGitRepositoryRequest from './model/HelmValuesGitRepositoryRequest';
-import Instance from './model/Instance';
-import InstanceMemory from './model/InstanceMemory';
-import InstanceResponseList from './model/InstanceResponseList';
 import InviteMember from './model/InviteMember';
 import InviteMemberAllOf from './model/InviteMemberAllOf';
 import InviteMemberRequest from './model/InviteMemberRequest';
@@ -360,21 +336,6 @@ import Member from './model/Member';
 import MemberAllOf from './model/MemberAllOf';
 import MemberResponseList from './model/MemberResponseList';
 import MemberRoleUpdateRequest from './model/MemberRoleUpdateRequest';
-import MetricCPU from './model/MetricCPU';
-import MetricCPUDatapoint from './model/MetricCPUDatapoint';
-import MetricCPUDatapointResponseList from './model/MetricCPUDatapointResponseList';
-import MetricCPUResponseList from './model/MetricCPUResponseList';
-import MetricGeneric from './model/MetricGeneric';
-import MetricGenericDatapoint from './model/MetricGenericDatapoint';
-import MetricGenericResponseList from './model/MetricGenericResponseList';
-import MetricMemory from './model/MetricMemory';
-import MetricMemoryDatapoint from './model/MetricMemoryDatapoint';
-import MetricMemoryDatapointResponseList from './model/MetricMemoryDatapointResponseList';
-import MetricMemoryResponseList from './model/MetricMemoryResponseList';
-import MetricStorage from './model/MetricStorage';
-import MetricStorageDatapoint from './model/MetricStorageDatapoint';
-import MetricStorageDatapointResponseList from './model/MetricStorageDatapointResponseList';
-import MetricStorageResponseList from './model/MetricStorageResponseList';
 import Name from './model/Name';
 import Organization from './model/Organization';
 import OrganizationAllOf from './model/OrganizationAllOf';
@@ -491,10 +452,7 @@ import StateEnum from './model/StateEnum';
 import Status from './model/Status';
 import StatusKindEnum from './model/StatusKindEnum';
 import StepMetricStatusEnum from './model/StepMetricStatusEnum';
-import StorageDisk from './model/StorageDisk';
-import StorageDiskResponseList from './model/StorageDiskResponseList';
 import StorageTypeEnum from './model/StorageTypeEnum';
-import ThresholdMetricStatusEnum from './model/ThresholdMetricStatusEnum';
 import TransferOwnershipRequest from './model/TransferOwnershipRequest';
 import TypeOfUseEnum from './model/TypeOfUseEnum';
 import UnexpectedError from './model/UnexpectedError';
@@ -525,7 +483,6 @@ import ApplicationDeploymentRestrictionApi from './api/ApplicationDeploymentRest
 import ApplicationEnvironmentVariableApi from './api/ApplicationEnvironmentVariableApi';
 import ApplicationLogsApi from './api/ApplicationLogsApi';
 import ApplicationMainCallsApi from './api/ApplicationMainCallsApi';
-import ApplicationMetricsApi from './api/ApplicationMetricsApi';
 import ApplicationSecretApi from './api/ApplicationSecretApi';
 import ApplicationsApi from './api/ApplicationsApi';
 import BackupsApi from './api/BackupsApi';
@@ -540,7 +497,6 @@ import ContainerDeploymentHistoryApi from './api/ContainerDeploymentHistoryApi';
 import ContainerEnvironmentVariableApi from './api/ContainerEnvironmentVariableApi';
 import ContainerLogsApi from './api/ContainerLogsApi';
 import ContainerMainCallsApi from './api/ContainerMainCallsApi';
-import ContainerMetricsApi from './api/ContainerMetricsApi';
 import ContainerRegistriesApi from './api/ContainerRegistriesApi';
 import ContainerSecretApi from './api/ContainerSecretApi';
 import ContainersApi from './api/ContainersApi';
@@ -549,7 +505,6 @@ import DatabaseActionsApi from './api/DatabaseActionsApi';
 import DatabaseApplicationApi from './api/DatabaseApplicationApi';
 import DatabaseDeploymentHistoryApi from './api/DatabaseDeploymentHistoryApi';
 import DatabaseMainCallsApi from './api/DatabaseMainCallsApi';
-import DatabaseMetricsApi from './api/DatabaseMetricsApi';
 import DatabasesApi from './api/DatabasesApi';
 import DeploymentStageMainCallsApi from './api/DeploymentStageMainCallsApi';
 import EnvironmentApi from './api/EnvironmentApi';
@@ -578,7 +533,6 @@ import JobDeploymentHistoryApi from './api/JobDeploymentHistoryApi';
 import JobDeploymentRestrictionApi from './api/JobDeploymentRestrictionApi';
 import JobEnvironmentVariableApi from './api/JobEnvironmentVariableApi';
 import JobMainCallsApi from './api/JobMainCallsApi';
-import JobMetricsApi from './api/JobMetricsApi';
 import JobSecretApi from './api/JobSecretApi';
 import JobsApi from './api/JobsApi';
 import MembersApi from './api/MembersApi';
@@ -677,12 +631,6 @@ export {
      * @property {module:model/ApplicationAllOf}
      */
     ApplicationAllOf,
-
-    /**
-     * The ApplicationCurrentScale model constructor.
-     * @property {module:model/ApplicationCurrentScale}
-     */
-    ApplicationCurrentScale,
 
     /**
      * The ApplicationDeploymentRestriction model constructor.
@@ -1189,12 +1137,6 @@ export {
     ContainerAdvancedSettings,
 
     /**
-     * The ContainerCurrentScale model constructor.
-     * @property {module:model/ContainerCurrentScale}
-     */
-    ContainerCurrentScale,
-
-    /**
      * The ContainerDeployRequest model constructor.
      * @property {module:model/ContainerDeployRequest}
      */
@@ -1433,30 +1375,6 @@ export {
      * @property {module:model/DatabaseConfigurationResponseList}
      */
     DatabaseConfigurationResponseList,
-
-    /**
-     * The DatabaseCurrentMetric model constructor.
-     * @property {module:model/DatabaseCurrentMetric}
-     */
-    DatabaseCurrentMetric,
-
-    /**
-     * The DatabaseCurrentMetricCpu model constructor.
-     * @property {module:model/DatabaseCurrentMetricCpu}
-     */
-    DatabaseCurrentMetricCpu,
-
-    /**
-     * The DatabaseCurrentMetricMemory model constructor.
-     * @property {module:model/DatabaseCurrentMetricMemory}
-     */
-    DatabaseCurrentMetricMemory,
-
-    /**
-     * The DatabaseCurrentMetricStorage model constructor.
-     * @property {module:model/DatabaseCurrentMetricStorage}
-     */
-    DatabaseCurrentMetricStorage,
 
     /**
      * The DatabaseEditRequest model constructor.
@@ -1753,42 +1671,6 @@ export {
     EnvironmentAllOfCloudProvider,
 
     /**
-     * The EnvironmentApplicationsCurrentScale model constructor.
-     * @property {module:model/EnvironmentApplicationsCurrentScale}
-     */
-    EnvironmentApplicationsCurrentScale,
-
-    /**
-     * The EnvironmentApplicationsCurrentScaleResponseList model constructor.
-     * @property {module:model/EnvironmentApplicationsCurrentScaleResponseList}
-     */
-    EnvironmentApplicationsCurrentScaleResponseList,
-
-    /**
-     * The EnvironmentApplicationsInstanceResponseList model constructor.
-     * @property {module:model/EnvironmentApplicationsInstanceResponseList}
-     */
-    EnvironmentApplicationsInstanceResponseList,
-
-    /**
-     * The EnvironmentApplicationsInstanceResponseListResultsInner model constructor.
-     * @property {module:model/EnvironmentApplicationsInstanceResponseListResultsInner}
-     */
-    EnvironmentApplicationsInstanceResponseListResultsInner,
-
-    /**
-     * The EnvironmentApplicationsStorage model constructor.
-     * @property {module:model/EnvironmentApplicationsStorage}
-     */
-    EnvironmentApplicationsStorage,
-
-    /**
-     * The EnvironmentApplicationsStorageResponseList model constructor.
-     * @property {module:model/EnvironmentApplicationsStorageResponseList}
-     */
-    EnvironmentApplicationsStorageResponseList,
-
-    /**
      * The EnvironmentApplicationsSupportedLanguage model constructor.
      * @property {module:model/EnvironmentApplicationsSupportedLanguage}
      */
@@ -1799,60 +1681,6 @@ export {
      * @property {module:model/EnvironmentApplicationsSupportedLanguageList}
      */
     EnvironmentApplicationsSupportedLanguageList,
-
-    /**
-     * The EnvironmentContainersCurrentScale model constructor.
-     * @property {module:model/EnvironmentContainersCurrentScale}
-     */
-    EnvironmentContainersCurrentScale,
-
-    /**
-     * The EnvironmentContainersCurrentScaleResponseList model constructor.
-     * @property {module:model/EnvironmentContainersCurrentScaleResponseList}
-     */
-    EnvironmentContainersCurrentScaleResponseList,
-
-    /**
-     * The EnvironmentContainersStorage model constructor.
-     * @property {module:model/EnvironmentContainersStorage}
-     */
-    EnvironmentContainersStorage,
-
-    /**
-     * The EnvironmentContainersStorageResponseList model constructor.
-     * @property {module:model/EnvironmentContainersStorageResponseList}
-     */
-    EnvironmentContainersStorageResponseList,
-
-    /**
-     * The EnvironmentDatabasesCurrentMetric model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetric}
-     */
-    EnvironmentDatabasesCurrentMetric,
-
-    /**
-     * The EnvironmentDatabasesCurrentMetricCpu model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetricCpu}
-     */
-    EnvironmentDatabasesCurrentMetricCpu,
-
-    /**
-     * The EnvironmentDatabasesCurrentMetricMemory model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetricMemory}
-     */
-    EnvironmentDatabasesCurrentMetricMemory,
-
-    /**
-     * The EnvironmentDatabasesCurrentMetricResponseList model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetricResponseList}
-     */
-    EnvironmentDatabasesCurrentMetricResponseList,
-
-    /**
-     * The EnvironmentDatabasesCurrentMetricStorage model constructor.
-     * @property {module:model/EnvironmentDatabasesCurrentMetricStorage}
-     */
-    EnvironmentDatabasesCurrentMetricStorage,
 
     /**
      * The EnvironmentDeploymentRule model constructor.
@@ -2371,24 +2199,6 @@ export {
     HelmValuesGitRepositoryRequest,
 
     /**
-     * The Instance model constructor.
-     * @property {module:model/Instance}
-     */
-    Instance,
-
-    /**
-     * The InstanceMemory model constructor.
-     * @property {module:model/InstanceMemory}
-     */
-    InstanceMemory,
-
-    /**
-     * The InstanceResponseList model constructor.
-     * @property {module:model/InstanceResponseList}
-     */
-    InstanceResponseList,
-
-    /**
      * The InviteMember model constructor.
      * @property {module:model/InviteMember}
      */
@@ -2717,96 +2527,6 @@ export {
      * @property {module:model/MemberRoleUpdateRequest}
      */
     MemberRoleUpdateRequest,
-
-    /**
-     * The MetricCPU model constructor.
-     * @property {module:model/MetricCPU}
-     */
-    MetricCPU,
-
-    /**
-     * The MetricCPUDatapoint model constructor.
-     * @property {module:model/MetricCPUDatapoint}
-     */
-    MetricCPUDatapoint,
-
-    /**
-     * The MetricCPUDatapointResponseList model constructor.
-     * @property {module:model/MetricCPUDatapointResponseList}
-     */
-    MetricCPUDatapointResponseList,
-
-    /**
-     * The MetricCPUResponseList model constructor.
-     * @property {module:model/MetricCPUResponseList}
-     */
-    MetricCPUResponseList,
-
-    /**
-     * The MetricGeneric model constructor.
-     * @property {module:model/MetricGeneric}
-     */
-    MetricGeneric,
-
-    /**
-     * The MetricGenericDatapoint model constructor.
-     * @property {module:model/MetricGenericDatapoint}
-     */
-    MetricGenericDatapoint,
-
-    /**
-     * The MetricGenericResponseList model constructor.
-     * @property {module:model/MetricGenericResponseList}
-     */
-    MetricGenericResponseList,
-
-    /**
-     * The MetricMemory model constructor.
-     * @property {module:model/MetricMemory}
-     */
-    MetricMemory,
-
-    /**
-     * The MetricMemoryDatapoint model constructor.
-     * @property {module:model/MetricMemoryDatapoint}
-     */
-    MetricMemoryDatapoint,
-
-    /**
-     * The MetricMemoryDatapointResponseList model constructor.
-     * @property {module:model/MetricMemoryDatapointResponseList}
-     */
-    MetricMemoryDatapointResponseList,
-
-    /**
-     * The MetricMemoryResponseList model constructor.
-     * @property {module:model/MetricMemoryResponseList}
-     */
-    MetricMemoryResponseList,
-
-    /**
-     * The MetricStorage model constructor.
-     * @property {module:model/MetricStorage}
-     */
-    MetricStorage,
-
-    /**
-     * The MetricStorageDatapoint model constructor.
-     * @property {module:model/MetricStorageDatapoint}
-     */
-    MetricStorageDatapoint,
-
-    /**
-     * The MetricStorageDatapointResponseList model constructor.
-     * @property {module:model/MetricStorageDatapointResponseList}
-     */
-    MetricStorageDatapointResponseList,
-
-    /**
-     * The MetricStorageResponseList model constructor.
-     * @property {module:model/MetricStorageResponseList}
-     */
-    MetricStorageResponseList,
 
     /**
      * The Name model constructor.
@@ -3505,28 +3225,10 @@ export {
     StepMetricStatusEnum,
 
     /**
-     * The StorageDisk model constructor.
-     * @property {module:model/StorageDisk}
-     */
-    StorageDisk,
-
-    /**
-     * The StorageDiskResponseList model constructor.
-     * @property {module:model/StorageDiskResponseList}
-     */
-    StorageDiskResponseList,
-
-    /**
      * The StorageTypeEnum model constructor.
      * @property {module:model/StorageTypeEnum}
      */
     StorageTypeEnum,
-
-    /**
-     * The ThresholdMetricStatusEnum model constructor.
-     * @property {module:model/ThresholdMetricStatusEnum}
-     */
-    ThresholdMetricStatusEnum,
 
     /**
      * The TransferOwnershipRequest model constructor.
@@ -3709,12 +3411,6 @@ export {
     ApplicationMainCallsApi,
 
     /**
-    * The ApplicationMetricsApi service constructor.
-    * @property {module:api/ApplicationMetricsApi}
-    */
-    ApplicationMetricsApi,
-
-    /**
     * The ApplicationSecretApi service constructor.
     * @property {module:api/ApplicationSecretApi}
     */
@@ -3799,12 +3495,6 @@ export {
     ContainerMainCallsApi,
 
     /**
-    * The ContainerMetricsApi service constructor.
-    * @property {module:api/ContainerMetricsApi}
-    */
-    ContainerMetricsApi,
-
-    /**
     * The ContainerRegistriesApi service constructor.
     * @property {module:api/ContainerRegistriesApi}
     */
@@ -3851,12 +3541,6 @@ export {
     * @property {module:api/DatabaseMainCallsApi}
     */
     DatabaseMainCallsApi,
-
-    /**
-    * The DatabaseMetricsApi service constructor.
-    * @property {module:api/DatabaseMetricsApi}
-    */
-    DatabaseMetricsApi,
 
     /**
     * The DatabasesApi service constructor.
@@ -4025,12 +3709,6 @@ export {
     * @property {module:api/JobMainCallsApi}
     */
     JobMainCallsApi,
-
-    /**
-    * The JobMetricsApi service constructor.
-    * @property {module:api/JobMetricsApi}
-    */
-    JobMetricsApi,
 
     /**
     * The JobSecretApi service constructor.

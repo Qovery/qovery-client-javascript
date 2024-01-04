@@ -165,13 +165,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationMainCallsApi* | [**listApplicationCommit**](docs/ApplicationMainCallsApi.md#listApplicationCommit) | **GET** /application/{applicationId}/commit | List last commits
 *QoveryApi.ApplicationMainCallsApi* | [**listApplicationContributor**](docs/ApplicationMainCallsApi.md#listApplicationContributor) | **GET** /application/{applicationId}/contributor | List contributors
 *QoveryApi.ApplicationMainCallsApi* | [**listApplicationLinks**](docs/ApplicationMainCallsApi.md#listApplicationLinks) | **GET** /application/{applicationId}/link | List all URLs of the application
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationCurrentInstance**](docs/ApplicationMetricsApi.md#getApplicationCurrentInstance) | **GET** /application/{applicationId}/instance | List currently running instances of the application with their CPU and RAM metrics
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationCurrentScale**](docs/ApplicationMetricsApi.md#getApplicationCurrentScale) | **GET** /application/{applicationId}/currentScale | Get current scaling of the application
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationCurrentStorageDisk**](docs/ApplicationMetricsApi.md#getApplicationCurrentStorageDisk) | **GET** /application/{applicationId}/currentStorage | List current storage disk usage
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricCpu**](docs/ApplicationMetricsApi.md#getApplicationMetricCpu) | **GET** /application/{applicationId}/metric/cpu | Get CPU consumption metric over time for the application
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricHealthCheck**](docs/ApplicationMetricsApi.md#getApplicationMetricHealthCheck) | **GET** /application/{applicationId}/metric/healthCheck | Get Health Check latency  metric over time for the application
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricMemory**](docs/ApplicationMetricsApi.md#getApplicationMetricMemory) | **GET** /application/{applicationId}/metric/memory | Get Memory consumption metric over time for the application
-*QoveryApi.ApplicationMetricsApi* | [**getApplicationMetricStorage**](docs/ApplicationMetricsApi.md#getApplicationMetricStorage) | **GET** /application/{applicationId}/metric/storage | Get Storage consumption metric over time for the application
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecret**](docs/ApplicationSecretApi.md#createApplicationSecret) | **POST** /application/{applicationId}/secret | Add a secret to the application
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecretAlias**](docs/ApplicationSecretApi.md#createApplicationSecretAlias) | **POST** /application/{applicationId}/secret/{secretId}/alias | Create a secret alias at the application level
 *QoveryApi.ApplicationSecretApi* | [**createApplicationSecretOverride**](docs/ApplicationSecretApi.md#createApplicationSecretOverride) | **POST** /application/{applicationId}/secret/{secretId}/override | Create a secret override at the application level
@@ -181,8 +174,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ApplicationsApi* | [**cloneApplication**](docs/ApplicationsApi.md#cloneApplication) | **POST** /application/{applicationId}/clone | Clone application
 *QoveryApi.ApplicationsApi* | [**createApplication**](docs/ApplicationsApi.md#createApplication) | **POST** /environment/{environmentId}/application | Create an application
 *QoveryApi.ApplicationsApi* | [**getDefaultApplicationAdvancedSettings**](docs/ApplicationsApi.md#getDefaultApplicationAdvancedSettings) | **GET** /defaultApplicationAdvancedSettings | List default application advanced settings
-*QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentScale**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentScale) | **GET** /environment/{environmentId}/application/currentScale | List current scaling information for each application
-*QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationCurrentStorage**](docs/ApplicationsApi.md#getEnvironmentApplicationCurrentStorage) | **GET** /environment/{environmentId}/application/currentStorage | List current storage disk usage for each application
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationStatus**](docs/ApplicationsApi.md#getEnvironmentApplicationStatus) | **GET** /environment/{environmentId}/application/status | List all environment applications statuses
 *QoveryApi.ApplicationsApi* | [**getEnvironmentApplicationSupportedLanguages**](docs/ApplicationsApi.md#getEnvironmentApplicationSupportedLanguages) | **GET** /environment/{environmentId}/application/supportedLanguage | List supported languages
 *QoveryApi.ApplicationsApi* | [**listApplication**](docs/ApplicationsApi.md#listApplication) | **GET** /environment/{environmentId}/application | List applications
@@ -211,11 +202,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.CloudProviderApi* | [**listAWSManagedDatabaseType**](docs/CloudProviderApi.md#listAWSManagedDatabaseType) | **GET** /aws/managedDatabase/type | List AWS available managed database types
 *QoveryApi.CloudProviderApi* | [**listAWSRegions**](docs/CloudProviderApi.md#listAWSRegions) | **GET** /aws/region | List AWS regions
 *QoveryApi.CloudProviderApi* | [**listCloudProvider**](docs/CloudProviderApi.md#listCloudProvider) | **GET** /cloudProvider | List Cloud providers available
-*QoveryApi.CloudProviderApi* | [**listDOFeatures**](docs/CloudProviderApi.md#listDOFeatures) | **GET** /digitalOcean/clusterFeature | List DO features available
-*QoveryApi.CloudProviderApi* | [**listDOInstanceType**](docs/CloudProviderApi.md#listDOInstanceType) | **GET** /digitalOcean/instanceType | List DO available instance types
-*QoveryApi.CloudProviderApi* | [**listDOManagedDatabaseInstanceType**](docs/CloudProviderApi.md#listDOManagedDatabaseInstanceType) | **GET** /digitalOcean/managedDatabase/instanceType/{region}/{databaseType} | List Digital Ocean available managed database instance types
-*QoveryApi.CloudProviderApi* | [**listDOManagedDatabaseType**](docs/CloudProviderApi.md#listDOManagedDatabaseType) | **GET** /digitalOcean/managedDatabase/type | List Digital Ocean available managed database types
-*QoveryApi.CloudProviderApi* | [**listDORegions**](docs/CloudProviderApi.md#listDORegions) | **GET** /digitalOcean/region | List DO regions
 *QoveryApi.CloudProviderApi* | [**listGcpFeatures**](docs/CloudProviderApi.md#listGcpFeatures) | **GET** /gcp/clusterFeature | List GCP features available
 *QoveryApi.CloudProviderApi* | [**listGcpGkeInstanceType**](docs/CloudProviderApi.md#listGcpGkeInstanceType) | **GET** /gcp/instanceType/{region} | List GCP GKE available instance types
 *QoveryApi.CloudProviderApi* | [**listGcpRegions**](docs/CloudProviderApi.md#listGcpRegions) | **GET** /gcp/region | List GCP regions
@@ -226,23 +212,18 @@ Class | Method | HTTP request | Description
 *QoveryApi.CloudProviderApi* | [**listScalewayKapsuleInstanceType**](docs/CloudProviderApi.md#listScalewayKapsuleInstanceType) | **GET** /scaleway/instanceType/{zone} | List Scaleway Kapsule available instance types
 *QoveryApi.CloudProviderApi* | [**listScalewayRegions**](docs/CloudProviderApi.md#listScalewayRegions) | **GET** /scaleway/region | List Scaleway regions
 *QoveryApi.CloudProviderCredentialsApi* | [**createAWSCredentials**](docs/CloudProviderCredentialsApi.md#createAWSCredentials) | **POST** /organization/{organizationId}/aws/credentials | Create AWS credentials set
-*QoveryApi.CloudProviderCredentialsApi* | [**createDOCredentials**](docs/CloudProviderCredentialsApi.md#createDOCredentials) | **POST** /organization/{organizationId}/digitalOcean/credentials | Create Digital Ocean credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**createGcpCredentials**](docs/CloudProviderCredentialsApi.md#createGcpCredentials) | **POST** /organization/{organizationId}/gcp/credentials | Create GCP credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**createScalewayCredentials**](docs/CloudProviderCredentialsApi.md#createScalewayCredentials) | **POST** /organization/{organizationId}/scaleway/credentials | Create Scaleway credentials set
 *QoveryApi.CloudProviderCredentialsApi* | [**deleteAWSCredentials**](docs/CloudProviderCredentialsApi.md#deleteAWSCredentials) | **DELETE** /organization/{organizationId}/aws/credentials/{credentialsId} | Delete a set of AWS credentials
-*QoveryApi.CloudProviderCredentialsApi* | [**deleteDOCredentials**](docs/CloudProviderCredentialsApi.md#deleteDOCredentials) | **DELETE** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Delete a set of Digital Ocean credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**deleteGcpCredentials**](docs/CloudProviderCredentialsApi.md#deleteGcpCredentials) | **DELETE** /organization/{organizationId}/gcp/credentials/{credentialsId} | Delete a set of GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**deleteScalewayCredentials**](docs/CloudProviderCredentialsApi.md#deleteScalewayCredentials) | **DELETE** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Delete a set of Scaleway credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**editAWSCredentials**](docs/CloudProviderCredentialsApi.md#editAWSCredentials) | **PUT** /organization/{organizationId}/aws/credentials/{credentialsId} | Edit a set of AWS credentials
-*QoveryApi.CloudProviderCredentialsApi* | [**editDOCredentials**](docs/CloudProviderCredentialsApi.md#editDOCredentials) | **PUT** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Edit a set of Digital Ocean credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**editGcpCredentials**](docs/CloudProviderCredentialsApi.md#editGcpCredentials) | **PUT** /organization/{organizationId}/gcp/credentials/{credentialsId} | Edit a set of GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**editScalewayCredentials**](docs/CloudProviderCredentialsApi.md#editScalewayCredentials) | **PUT** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Edit a set of Scaleway credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**getAWSCredentials**](docs/CloudProviderCredentialsApi.md#getAWSCredentials) | **GET** /organization/{organizationId}/aws/credentials/{credentialsId} | Get a set of AWS credentials
-*QoveryApi.CloudProviderCredentialsApi* | [**getDOCredentials**](docs/CloudProviderCredentialsApi.md#getDOCredentials) | **GET** /organization/{organizationId}/digitalOcean/credentials/{credentialsId} | Get a set of Digital Ocean credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**getGcpCredentials**](docs/CloudProviderCredentialsApi.md#getGcpCredentials) | **GET** /organization/{organizationId}/gcp/credentials/{credentialsId} | Get a set of GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**getScalewayCredentials**](docs/CloudProviderCredentialsApi.md#getScalewayCredentials) | **GET** /organization/{organizationId}/scaleway/credentials/{credentialsId} | Get a set of Scaleway credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**listAWSCredentials**](docs/CloudProviderCredentialsApi.md#listAWSCredentials) | **GET** /organization/{organizationId}/aws/credentials | List AWS credentials
-*QoveryApi.CloudProviderCredentialsApi* | [**listDOCredentials**](docs/CloudProviderCredentialsApi.md#listDOCredentials) | **GET** /organization/{organizationId}/digitalOcean/credentials | List DO credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**listGcpCredentials**](docs/CloudProviderCredentialsApi.md#listGcpCredentials) | **GET** /organization/{organizationId}/gcp/credentials | List GCP credentials
 *QoveryApi.CloudProviderCredentialsApi* | [**listScalewayCredentials**](docs/CloudProviderCredentialsApi.md#listScalewayCredentials) | **GET** /organization/{organizationId}/scaleway/credentials | List Scaleway credentials
 *QoveryApi.ClustersApi* | [**createCluster**](docs/ClustersApi.md#createCluster) | **POST** /organization/{organizationId}/cluster | Create a cluster
@@ -291,9 +272,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainerMainCallsApi* | [**getContainer**](docs/ContainerMainCallsApi.md#getContainer) | **GET** /container/{containerId} | Get container by ID
 *QoveryApi.ContainerMainCallsApi* | [**getContainerStatus**](docs/ContainerMainCallsApi.md#getContainerStatus) | **GET** /container/{containerId}/status | Get container status
 *QoveryApi.ContainerMainCallsApi* | [**listContainerLinks**](docs/ContainerMainCallsApi.md#listContainerLinks) | **GET** /container/{containerId}/link | List all URLs of the container
-*QoveryApi.ContainerMetricsApi* | [**getContainerCurrentInstance**](docs/ContainerMetricsApi.md#getContainerCurrentInstance) | **GET** /container/{containerId}/instance | List currently running instances of the container with their CPU and RAM metrics
-*QoveryApi.ContainerMetricsApi* | [**getContainerCurrentScale**](docs/ContainerMetricsApi.md#getContainerCurrentScale) | **GET** /container/{containerId}/currentScale | Get current scaling of the container
-*QoveryApi.ContainerMetricsApi* | [**getContainerCurrentStorageDisk**](docs/ContainerMetricsApi.md#getContainerCurrentStorageDisk) | **GET** /container/{containerId}/currentStorage | List current storage disk usage
 *QoveryApi.ContainerRegistriesApi* | [**createContainerRegistry**](docs/ContainerRegistriesApi.md#createContainerRegistry) | **POST** /organization/{organizationId}/containerRegistry | Create a container registry
 *QoveryApi.ContainerRegistriesApi* | [**deleteContainerRegistry**](docs/ContainerRegistriesApi.md#deleteContainerRegistry) | **DELETE** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Delete a container registry
 *QoveryApi.ContainerRegistriesApi* | [**editContainerRegistry**](docs/ContainerRegistriesApi.md#editContainerRegistry) | **PUT** /organization/{organizationId}/containerRegistry/{containerRegistryId} | Edit a container registry
@@ -311,8 +289,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ContainersApi* | [**createContainer**](docs/ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 *QoveryApi.ContainersApi* | [**getContainerRegistryContainerStatus**](docs/ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 *QoveryApi.ContainersApi* | [**getDefaultContainerAdvancedSettings**](docs/ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings
-*QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentScale**](docs/ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
-*QoveryApi.ContainersApi* | [**getEnvironmentContainerCurrentStorage**](docs/ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 *QoveryApi.ContainersApi* | [**getEnvironmentContainerStatus**](docs/ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
 *QoveryApi.ContainersApi* | [**listContainer**](docs/ContainersApi.md#listContainer) | **GET** /environment/{environmentId}/container | List containers
 *QoveryApi.ContainersApi* | [**previewContainerEnvironments**](docs/ContainersApi.md#previewContainerEnvironments) | **POST** /organization/{organizationId}/container/preview | Preview container environments
@@ -338,17 +314,11 @@ Class | Method | HTTP request | Description
 *QoveryApi.DatabaseMainCallsApi* | [**getDatabaseMasterCredentials**](docs/DatabaseMainCallsApi.md#getDatabaseMasterCredentials) | **GET** /database/{databaseId}/masterCredentials | Get master credentials of the database
 *QoveryApi.DatabaseMainCallsApi* | [**getDatabaseStatus**](docs/DatabaseMainCallsApi.md#getDatabaseStatus) | **GET** /database/{databaseId}/status | Get database status
 *QoveryApi.DatabaseMainCallsApi* | [**listDatabaseVersion**](docs/DatabaseMainCallsApi.md#listDatabaseVersion) | **GET** /database/{databaseId}/version | List eligible versions for the database
-*QoveryApi.DatabaseMetricsApi* | [**getDatabaseCurrentMetric**](docs/DatabaseMetricsApi.md#getDatabaseCurrentMetric) | **GET** /database/{databaseId}/currentMetric | Get current metric consumption of the database 
-*QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricCpu**](docs/DatabaseMetricsApi.md#getDatabaseMetricCpu) | **GET** /database/{databaseId}/metric/cpu | Get CPU consumption metric over time for the database
-*QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricHealthCheck**](docs/DatabaseMetricsApi.md#getDatabaseMetricHealthCheck) | **GET** /database/{databaseId}/metric/healthCheck | Get Health Check latency  metric over time for the database
-*QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricMemory**](docs/DatabaseMetricsApi.md#getDatabaseMetricMemory) | **GET** /database/{databaseId}/metric/memory | Get Memory consumption metric over time for the database
-*QoveryApi.DatabaseMetricsApi* | [**getDatabaseMetricStorage**](docs/DatabaseMetricsApi.md#getDatabaseMetricStorage) | **GET** /database/{databaseId}/metric/storage | Get Storage consumption metric over time for the database
 *QoveryApi.DatabasesApi* | [**cloneDatabase**](docs/DatabasesApi.md#cloneDatabase) | **POST** /database/{databaseId}/clone | Clone database
 *QoveryApi.DatabasesApi* | [**createDatabase**](docs/DatabasesApi.md#createDatabase) | **POST** /environment/{environmentId}/database | Create a database
 *QoveryApi.DatabasesApi* | [**getEnvironmentDatabaseStatus**](docs/DatabasesApi.md#getEnvironmentDatabaseStatus) | **GET** /environment/{environmentId}/database/status | List all environment databases statuses
 *QoveryApi.DatabasesApi* | [**listDatabase**](docs/DatabasesApi.md#listDatabase) | **GET** /environment/{environmentId}/database | List environment databases
 *QoveryApi.DatabasesApi* | [**listEnvironmentDatabaseConfig**](docs/DatabasesApi.md#listEnvironmentDatabaseConfig) | **GET** /environment/{environmentId}/databaseConfiguration | List eligible database types, versions and modes for the environment
-*QoveryApi.DatabasesApi* | [**listEnvironmentDatabaseCurrentMetric**](docs/DatabasesApi.md#listEnvironmentDatabaseCurrentMetric) | **GET** /environment/{environmentId}/database/currentMetric | List current metric consumption for each database
 *QoveryApi.DeploymentStageMainCallsApi* | [**attachServiceToDeploymentStage**](docs/DeploymentStageMainCallsApi.md#attachServiceToDeploymentStage) | **PUT** /deploymentStage/{deploymentStageId}/service/{serviceId} | Attach service to deployment stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**createEnvironmentDeploymentStage**](docs/DeploymentStageMainCallsApi.md#createEnvironmentDeploymentStage) | **POST** /environment/{environmentId}/deploymentStage | Create environment deployment stage
 *QoveryApi.DeploymentStageMainCallsApi* | [**deleteDeploymentStage**](docs/DeploymentStageMainCallsApi.md#deleteDeploymentStage) | **DELETE** /deploymentStage/{deploymentStageId} | Delete deployment stage
@@ -461,7 +431,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.JobMainCallsApi* | [**getJob**](docs/JobMainCallsApi.md#getJob) | **GET** /job/{jobId} | Get job by ID
 *QoveryApi.JobMainCallsApi* | [**getJobStatus**](docs/JobMainCallsApi.md#getJobStatus) | **GET** /job/{jobId}/status | Get job status
 *QoveryApi.JobMainCallsApi* | [**listJobCommit**](docs/JobMainCallsApi.md#listJobCommit) | **GET** /job/{jobId}/commit | List last job commits
-*QoveryApi.JobMetricsApi* | [**getJobCurrentInstance**](docs/JobMetricsApi.md#getJobCurrentInstance) | **GET** /job/{jobId}/instance | List currently running instances of the job with their CPU and RAM metrics
 *QoveryApi.JobSecretApi* | [**createJobSecret**](docs/JobSecretApi.md#createJobSecret) | **POST** /job/{jobId}/secret | Add a secret to the job
 *QoveryApi.JobSecretApi* | [**createJobSecretAlias**](docs/JobSecretApi.md#createJobSecretAlias) | **POST** /job/{jobId}/secret/{secretId}/alias | Create a secret alias at the job level
 *QoveryApi.JobSecretApi* | [**createJobSecretOverride**](docs/JobSecretApi.md#createJobSecretOverride) | **POST** /job/{jobId}/secret/{secretId}/override | Create a secret override at the job level
@@ -563,7 +532,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Application](docs/Application.md)
  - [QoveryApi.ApplicationAdvancedSettings](docs/ApplicationAdvancedSettings.md)
  - [QoveryApi.ApplicationAllOf](docs/ApplicationAllOf.md)
- - [QoveryApi.ApplicationCurrentScale](docs/ApplicationCurrentScale.md)
  - [QoveryApi.ApplicationDeploymentRestriction](docs/ApplicationDeploymentRestriction.md)
  - [QoveryApi.ApplicationDeploymentRestrictionRequest](docs/ApplicationDeploymentRestrictionRequest.md)
  - [QoveryApi.ApplicationDeploymentRestrictionResponseList](docs/ApplicationDeploymentRestrictionResponseList.md)
@@ -648,7 +616,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.CommunityUsage](docs/CommunityUsage.md)
  - [QoveryApi.CompanySizeEnum](docs/CompanySizeEnum.md)
  - [QoveryApi.ContainerAdvancedSettings](docs/ContainerAdvancedSettings.md)
- - [QoveryApi.ContainerCurrentScale](docs/ContainerCurrentScale.md)
  - [QoveryApi.ContainerDeployRequest](docs/ContainerDeployRequest.md)
  - [QoveryApi.ContainerNetwork](docs/ContainerNetwork.md)
  - [QoveryApi.ContainerNetworkRequest](docs/ContainerNetworkRequest.md)
@@ -689,10 +656,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.DatabaseAllOf](docs/DatabaseAllOf.md)
  - [QoveryApi.DatabaseConfiguration](docs/DatabaseConfiguration.md)
  - [QoveryApi.DatabaseConfigurationResponseList](docs/DatabaseConfigurationResponseList.md)
- - [QoveryApi.DatabaseCurrentMetric](docs/DatabaseCurrentMetric.md)
- - [QoveryApi.DatabaseCurrentMetricCpu](docs/DatabaseCurrentMetricCpu.md)
- - [QoveryApi.DatabaseCurrentMetricMemory](docs/DatabaseCurrentMetricMemory.md)
- - [QoveryApi.DatabaseCurrentMetricStorage](docs/DatabaseCurrentMetricStorage.md)
  - [QoveryApi.DatabaseEditRequest](docs/DatabaseEditRequest.md)
  - [QoveryApi.DatabaseModeEnum](docs/DatabaseModeEnum.md)
  - [QoveryApi.DatabaseRequest](docs/DatabaseRequest.md)
@@ -742,23 +705,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Environment](docs/Environment.md)
  - [QoveryApi.EnvironmentAllOf](docs/EnvironmentAllOf.md)
  - [QoveryApi.EnvironmentAllOfCloudProvider](docs/EnvironmentAllOfCloudProvider.md)
- - [QoveryApi.EnvironmentApplicationsCurrentScale](docs/EnvironmentApplicationsCurrentScale.md)
- - [QoveryApi.EnvironmentApplicationsCurrentScaleResponseList](docs/EnvironmentApplicationsCurrentScaleResponseList.md)
- - [QoveryApi.EnvironmentApplicationsInstanceResponseList](docs/EnvironmentApplicationsInstanceResponseList.md)
- - [QoveryApi.EnvironmentApplicationsInstanceResponseListResultsInner](docs/EnvironmentApplicationsInstanceResponseListResultsInner.md)
- - [QoveryApi.EnvironmentApplicationsStorage](docs/EnvironmentApplicationsStorage.md)
- - [QoveryApi.EnvironmentApplicationsStorageResponseList](docs/EnvironmentApplicationsStorageResponseList.md)
  - [QoveryApi.EnvironmentApplicationsSupportedLanguage](docs/EnvironmentApplicationsSupportedLanguage.md)
  - [QoveryApi.EnvironmentApplicationsSupportedLanguageList](docs/EnvironmentApplicationsSupportedLanguageList.md)
- - [QoveryApi.EnvironmentContainersCurrentScale](docs/EnvironmentContainersCurrentScale.md)
- - [QoveryApi.EnvironmentContainersCurrentScaleResponseList](docs/EnvironmentContainersCurrentScaleResponseList.md)
- - [QoveryApi.EnvironmentContainersStorage](docs/EnvironmentContainersStorage.md)
- - [QoveryApi.EnvironmentContainersStorageResponseList](docs/EnvironmentContainersStorageResponseList.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetric](docs/EnvironmentDatabasesCurrentMetric.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetricCpu](docs/EnvironmentDatabasesCurrentMetricCpu.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetricMemory](docs/EnvironmentDatabasesCurrentMetricMemory.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetricResponseList](docs/EnvironmentDatabasesCurrentMetricResponseList.md)
- - [QoveryApi.EnvironmentDatabasesCurrentMetricStorage](docs/EnvironmentDatabasesCurrentMetricStorage.md)
  - [QoveryApi.EnvironmentDeploymentRule](docs/EnvironmentDeploymentRule.md)
  - [QoveryApi.EnvironmentDeploymentRuleAllOf](docs/EnvironmentDeploymentRuleAllOf.md)
  - [QoveryApi.EnvironmentDeploymentRuleEditRequest](docs/EnvironmentDeploymentRuleEditRequest.md)
@@ -845,9 +793,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.HelmResponseAllOfValuesOverrideFileRawValues](docs/HelmResponseAllOfValuesOverrideFileRawValues.md)
  - [QoveryApi.HelmResponseList](docs/HelmResponseList.md)
  - [QoveryApi.HelmValuesGitRepositoryRequest](docs/HelmValuesGitRepositoryRequest.md)
- - [QoveryApi.Instance](docs/Instance.md)
- - [QoveryApi.InstanceMemory](docs/InstanceMemory.md)
- - [QoveryApi.InstanceResponseList](docs/InstanceResponseList.md)
  - [QoveryApi.InviteMember](docs/InviteMember.md)
  - [QoveryApi.InviteMemberAllOf](docs/InviteMemberAllOf.md)
  - [QoveryApi.InviteMemberRequest](docs/InviteMemberRequest.md)
@@ -903,21 +848,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.MemberAllOf](docs/MemberAllOf.md)
  - [QoveryApi.MemberResponseList](docs/MemberResponseList.md)
  - [QoveryApi.MemberRoleUpdateRequest](docs/MemberRoleUpdateRequest.md)
- - [QoveryApi.MetricCPU](docs/MetricCPU.md)
- - [QoveryApi.MetricCPUDatapoint](docs/MetricCPUDatapoint.md)
- - [QoveryApi.MetricCPUDatapointResponseList](docs/MetricCPUDatapointResponseList.md)
- - [QoveryApi.MetricCPUResponseList](docs/MetricCPUResponseList.md)
- - [QoveryApi.MetricGeneric](docs/MetricGeneric.md)
- - [QoveryApi.MetricGenericDatapoint](docs/MetricGenericDatapoint.md)
- - [QoveryApi.MetricGenericResponseList](docs/MetricGenericResponseList.md)
- - [QoveryApi.MetricMemory](docs/MetricMemory.md)
- - [QoveryApi.MetricMemoryDatapoint](docs/MetricMemoryDatapoint.md)
- - [QoveryApi.MetricMemoryDatapointResponseList](docs/MetricMemoryDatapointResponseList.md)
- - [QoveryApi.MetricMemoryResponseList](docs/MetricMemoryResponseList.md)
- - [QoveryApi.MetricStorage](docs/MetricStorage.md)
- - [QoveryApi.MetricStorageDatapoint](docs/MetricStorageDatapoint.md)
- - [QoveryApi.MetricStorageDatapointResponseList](docs/MetricStorageDatapointResponseList.md)
- - [QoveryApi.MetricStorageResponseList](docs/MetricStorageResponseList.md)
  - [QoveryApi.Name](docs/Name.md)
  - [QoveryApi.Organization](docs/Organization.md)
  - [QoveryApi.OrganizationAllOf](docs/OrganizationAllOf.md)
@@ -1034,10 +964,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.Status](docs/Status.md)
  - [QoveryApi.StatusKindEnum](docs/StatusKindEnum.md)
  - [QoveryApi.StepMetricStatusEnum](docs/StepMetricStatusEnum.md)
- - [QoveryApi.StorageDisk](docs/StorageDisk.md)
- - [QoveryApi.StorageDiskResponseList](docs/StorageDiskResponseList.md)
  - [QoveryApi.StorageTypeEnum](docs/StorageTypeEnum.md)
- - [QoveryApi.ThresholdMetricStatusEnum](docs/ThresholdMetricStatusEnum.md)
  - [QoveryApi.TransferOwnershipRequest](docs/TransferOwnershipRequest.md)
  - [QoveryApi.TypeOfUseEnum](docs/TypeOfUseEnum.md)
  - [QoveryApi.UnexpectedError](docs/UnexpectedError.md)

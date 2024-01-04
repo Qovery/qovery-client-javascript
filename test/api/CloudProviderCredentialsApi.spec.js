@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('createDOCredentials', function() {
-      it('should call createDOCredentials successfully', function(done) {
-        //uncomment below and update the code to test createDOCredentials
-        //instance.createDOCredentials(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('createGcpCredentials', function() {
       it('should call createGcpCredentials successfully', function(done) {
         //uncomment below and update the code to test createGcpCredentials
@@ -92,16 +82,6 @@
       it('should call deleteAWSCredentials successfully', function(done) {
         //uncomment below and update the code to test deleteAWSCredentials
         //instance.deleteAWSCredentials(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('deleteDOCredentials', function() {
-      it('should call deleteDOCredentials successfully', function(done) {
-        //uncomment below and update the code to test deleteDOCredentials
-        //instance.deleteDOCredentials(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -138,16 +118,6 @@
         done();
       });
     });
-    describe('editDOCredentials', function() {
-      it('should call editDOCredentials successfully', function(done) {
-        //uncomment below and update the code to test editDOCredentials
-        //instance.editDOCredentials(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('editGcpCredentials', function() {
       it('should call editGcpCredentials successfully', function(done) {
         //uncomment below and update the code to test editGcpCredentials
@@ -178,16 +148,6 @@
         done();
       });
     });
-    describe('getDOCredentials', function() {
-      it('should call getDOCredentials successfully', function(done) {
-        //uncomment below and update the code to test getDOCredentials
-        //instance.getDOCredentials(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getGcpCredentials', function() {
       it('should call getGcpCredentials successfully', function(done) {
         //uncomment below and update the code to test getGcpCredentials
@@ -212,16 +172,6 @@
       it('should call listAWSCredentials successfully', function(done) {
         //uncomment below and update the code to test listAWSCredentials
         //instance.listAWSCredentials(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listDOCredentials', function() {
-      it('should call listDOCredentials successfully', function(done) {
-        //uncomment below and update the code to test listDOCredentials
-        //instance.listDOCredentials(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

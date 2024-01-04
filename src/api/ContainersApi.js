@@ -18,8 +18,6 @@ import ContainerAdvancedSettings from '../model/ContainerAdvancedSettings';
 import ContainerRequest from '../model/ContainerRequest';
 import ContainerResponse from '../model/ContainerResponse';
 import ContainerResponseList from '../model/ContainerResponseList';
-import EnvironmentContainersCurrentScaleResponseList from '../model/EnvironmentContainersCurrentScaleResponseList';
-import EnvironmentContainersStorageResponseList from '../model/EnvironmentContainersStorageResponseList';
 import OrganizationContainerAutoDeployRequest from '../model/OrganizationContainerAutoDeployRequest';
 import OrganizationContainerPreviewRequest from '../model/OrganizationContainerPreviewRequest';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
@@ -262,91 +260,6 @@ export default class ContainersApi {
       let returnType = ContainerAdvancedSettings;
       return this.apiClient.callApi(
         '/defaultContainerAdvancedSettings', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEnvironmentContainerCurrentScale operation.
-     * @callback module:api/ContainersApi~getEnvironmentContainerCurrentScaleCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentContainersCurrentScaleResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List current scaling information for each container
-     * Returns min, max, and running number of instances for each container
-     * @param {String} environmentId Environment ID
-     * @param {module:api/ContainersApi~getEnvironmentContainerCurrentScaleCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentContainersCurrentScaleResponseList}
-     */
-    getEnvironmentContainerCurrentScale(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentContainerCurrentScale");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentContainersCurrentScaleResponseList;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/container/currentScale', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the getEnvironmentContainerCurrentStorage operation.
-     * @callback module:api/ContainersApi~getEnvironmentContainerCurrentStorageCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentContainersStorageResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List current storage disk usage for each containers
-     * @param {String} environmentId Environment ID
-     * @param {module:api/ContainersApi~getEnvironmentContainerCurrentStorageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentContainersStorageResponseList}
-     */
-    getEnvironmentContainerCurrentStorage(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling getEnvironmentContainerCurrentStorage");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentContainersStorageResponseList;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/container/currentStorage', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -18,7 +18,6 @@ import Database from '../model/Database';
 import DatabaseConfigurationResponseList from '../model/DatabaseConfigurationResponseList';
 import DatabaseRequest from '../model/DatabaseRequest';
 import DatabaseResponseList from '../model/DatabaseResponseList';
-import EnvironmentDatabasesCurrentMetricResponseList from '../model/EnvironmentDatabasesCurrentMetricResponseList';
 import ReferenceObjectStatusResponseList from '../model/ReferenceObjectStatusResponseList';
 
 /**
@@ -253,48 +252,6 @@ export default class DatabasesApi {
       let returnType = DatabaseConfigurationResponseList;
       return this.apiClient.callApi(
         '/environment/{environmentId}/databaseConfiguration', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the listEnvironmentDatabaseCurrentMetric operation.
-     * @callback module:api/DatabasesApi~listEnvironmentDatabaseCurrentMetricCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentDatabasesCurrentMetricResponseList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * List current metric consumption for each database
-     * @param {String} environmentId Environment ID
-     * @param {module:api/DatabasesApi~listEnvironmentDatabaseCurrentMetricCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentDatabasesCurrentMetricResponseList}
-     */
-    listEnvironmentDatabaseCurrentMetric(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling listEnvironmentDatabaseCurrentMetric");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentDatabasesCurrentMetricResponseList;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/database/currentMetric', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

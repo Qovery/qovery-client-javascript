@@ -78,26 +78,6 @@
         done();
       });
     });
-    describe('getEnvironmentApplicationCurrentScale', function() {
-      it('should call getEnvironmentApplicationCurrentScale successfully', function(done) {
-        //uncomment below and update the code to test getEnvironmentApplicationCurrentScale
-        //instance.getEnvironmentApplicationCurrentScale(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getEnvironmentApplicationCurrentStorage', function() {
-      it('should call getEnvironmentApplicationCurrentStorage successfully', function(done) {
-        //uncomment below and update the code to test getEnvironmentApplicationCurrentStorage
-        //instance.getEnvironmentApplicationCurrentStorage(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getEnvironmentApplicationStatus', function() {
       it('should call getEnvironmentApplicationStatus successfully', function(done) {
         //uncomment below and update the code to test getEnvironmentApplicationStatus

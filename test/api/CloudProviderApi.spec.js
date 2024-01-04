@@ -128,56 +128,6 @@
         done();
       });
     });
-    describe('listDOFeatures', function() {
-      it('should call listDOFeatures successfully', function(done) {
-        //uncomment below and update the code to test listDOFeatures
-        //instance.listDOFeatures(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listDOInstanceType', function() {
-      it('should call listDOInstanceType successfully', function(done) {
-        //uncomment below and update the code to test listDOInstanceType
-        //instance.listDOInstanceType(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listDOManagedDatabaseInstanceType', function() {
-      it('should call listDOManagedDatabaseInstanceType successfully', function(done) {
-        //uncomment below and update the code to test listDOManagedDatabaseInstanceType
-        //instance.listDOManagedDatabaseInstanceType(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listDOManagedDatabaseType', function() {
-      it('should call listDOManagedDatabaseType successfully', function(done) {
-        //uncomment below and update the code to test listDOManagedDatabaseType
-        //instance.listDOManagedDatabaseType(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listDORegions', function() {
-      it('should call listDORegions successfully', function(done) {
-        //uncomment below and update the code to test listDORegions
-        //instance.listDORegions(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('listGcpFeatures', function() {
       it('should call listGcpFeatures successfully', function(done) {
         //uncomment below and update the code to test listGcpFeatures

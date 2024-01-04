@@ -9,8 +9,6 @@ Method | HTTP request | Description
 [**createContainer**](ContainersApi.md#createContainer) | **POST** /environment/{environmentId}/container | Create a container
 [**getContainerRegistryContainerStatus**](ContainersApi.md#getContainerRegistryContainerStatus) | **GET** /organization/{organizationId}/containerRegistry/{containerRegistryId}/container/status | List all container registry container statuses
 [**getDefaultContainerAdvancedSettings**](ContainersApi.md#getDefaultContainerAdvancedSettings) | **GET** /defaultContainerAdvancedSettings | List default container advanced settings
-[**getEnvironmentContainerCurrentScale**](ContainersApi.md#getEnvironmentContainerCurrentScale) | **GET** /environment/{environmentId}/container/currentScale | List current scaling information for each container
-[**getEnvironmentContainerCurrentStorage**](ContainersApi.md#getEnvironmentContainerCurrentStorage) | **GET** /environment/{environmentId}/container/currentStorage | List current storage disk usage for each containers
 [**getEnvironmentContainerStatus**](ContainersApi.md#getEnvironmentContainerStatus) | **GET** /environment/{environmentId}/container/status | List all environment container statuses
 [**listContainer**](ContainersApi.md#listContainer) | **GET** /environment/{environmentId}/container | List containers
 [**previewContainerEnvironments**](ContainersApi.md#previewContainerEnvironments) | **POST** /organization/{organizationId}/container/preview | Preview container environments
@@ -284,112 +282,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ContainerAdvancedSettings**](ContainerAdvancedSettings.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## getEnvironmentContainerCurrentScale
-
-> EnvironmentContainersCurrentScaleResponseList getEnvironmentContainerCurrentScale(environmentId)
-
-List current scaling information for each container
-
-Returns min, max, and running number of instances for each container
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.ContainersApi();
-let environmentId = "environmentId_example"; // String | Environment ID
-apiInstance.getEnvironmentContainerCurrentScale(environmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **environmentId** | **String**| Environment ID | 
-
-### Return type
-
-[**EnvironmentContainersCurrentScaleResponseList**](EnvironmentContainersCurrentScaleResponseList.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## getEnvironmentContainerCurrentStorage
-
-> EnvironmentContainersStorageResponseList getEnvironmentContainerCurrentStorage(environmentId)
-
-List current storage disk usage for each containers
-
-### Example
-
-```javascript
-import QoveryApi from 'qovery_api';
-let defaultClient = QoveryApi.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new QoveryApi.ContainersApi();
-let environmentId = "environmentId_example"; // String | Environment ID
-apiInstance.getEnvironmentContainerCurrentStorage(environmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **environmentId** | **String**| Environment ID | 
-
-### Return type
-
-[**EnvironmentContainersStorageResponseList**](EnvironmentContainersStorageResponseList.md)
 
 ### Authorization
 

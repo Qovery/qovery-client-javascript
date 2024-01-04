@@ -66,6 +66,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property timezone (base name: "timezone")', function() {
+      // uncomment below and update the code to test the property timezone
+      //var instance = new QoveryApi.JobRequestAllOfScheduleCronjob();
+      //expect(instance).to.be();
+    });
+
     it('should have the property scheduledAt (base name: "scheduled_at")', function() {
       // uncomment below and update the code to test the property scheduledAt
       //var instance = new QoveryApi.JobRequestAllOfScheduleCronjob();

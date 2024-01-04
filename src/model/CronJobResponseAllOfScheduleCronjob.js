@@ -22,11 +22,12 @@ class CronJobResponseAllOfScheduleCronjob {
     /**
      * Constructs a new <code>CronJobResponseAllOfScheduleCronjob</code>.
      * @alias module:model/CronJobResponseAllOfScheduleCronjob
+     * @param timezone {String} tz identifier at which the schedule at will be executed
      * @param scheduledAt {String} Can only be set if the event is CRON.   Represent the cron format for the job schedule without seconds.   For example: `* * * * *` represent the cron to launch the job every minute.   See https://crontab.guru/ to WISIWIG interface.   Timezone is UT 
      */
-    constructor(scheduledAt) { 
+    constructor(timezone, scheduledAt) { 
         
-        CronJobResponseAllOfScheduleCronjob.initialize(this, scheduledAt);
+        CronJobResponseAllOfScheduleCronjob.initialize(this, timezone, scheduledAt);
     }
 
     /**
@@ -34,7 +35,8 @@ class CronJobResponseAllOfScheduleCronjob {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, scheduledAt) { 
+    static initialize(obj, timezone, scheduledAt) { 
+        obj['timezone'] = timezone;
         obj['scheduled_at'] = scheduledAt;
     }
 
@@ -54,6 +56,9 @@ class CronJobResponseAllOfScheduleCronjob {
             }
             if (data.hasOwnProperty('entrypoint')) {
                 obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
+            }
+            if (data.hasOwnProperty('timezone')) {
+                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
             }
             if (data.hasOwnProperty('scheduled_at')) {
                 obj['scheduled_at'] = ApiClient.convertToType(data['scheduled_at'], 'String');
@@ -75,6 +80,12 @@ CronJobResponseAllOfScheduleCronjob.prototype['arguments'] = undefined;
  * @member {String} entrypoint
  */
 CronJobResponseAllOfScheduleCronjob.prototype['entrypoint'] = undefined;
+
+/**
+ * tz identifier at which the schedule at will be executed
+ * @member {String} timezone
+ */
+CronJobResponseAllOfScheduleCronjob.prototype['timezone'] = undefined;
 
 /**
  * Can only be set if the event is CRON.   Represent the cron format for the job schedule without seconds.   For example: `* * * * *` represent the cron to launch the job every minute.   See https://crontab.guru/ to WISIWIG interface.   Timezone is UT 

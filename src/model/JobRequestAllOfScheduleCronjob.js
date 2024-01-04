@@ -55,6 +55,9 @@ class JobRequestAllOfScheduleCronjob {
             if (data.hasOwnProperty('entrypoint')) {
                 obj['entrypoint'] = ApiClient.convertToType(data['entrypoint'], 'String');
             }
+            if (data.hasOwnProperty('timezone')) {
+                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
+            }
             if (data.hasOwnProperty('scheduled_at')) {
                 obj['scheduled_at'] = ApiClient.convertToType(data['scheduled_at'], 'String');
             }
@@ -75,6 +78,12 @@ JobRequestAllOfScheduleCronjob.prototype['arguments'] = undefined;
  * @member {String} entrypoint
  */
 JobRequestAllOfScheduleCronjob.prototype['entrypoint'] = undefined;
+
+/**
+ * Specify a timezone identifier to run the schedule at. By default Etc/UTC
+ * @member {String} timezone
+ */
+JobRequestAllOfScheduleCronjob.prototype['timezone'] = undefined;
 
 /**
  * Can only be set if the event is CRON.   Represent the cron format for the job schedule without seconds.   For example: `* * * * *` represent the cron to launch the job every minute.   See https://crontab.guru/ to WISIWIG interface.   Timezone is UTC 

@@ -27,13 +27,6 @@ export default class CloudProviderEnum {
 
     
         /**
-         * value: "DO"
-         * @const
-         */
-        "DO" = "DO";
-
-    
-        /**
          * value: "SCW"
          * @const
          */

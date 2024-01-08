@@ -62,13 +62,6 @@ export default class ContainerRegistryKindEnum {
 
     
         /**
-         * value: "DOCR"
-         * @const
-         */
-        "DOCR" = "DOCR";
-
-    
-        /**
          * value: "GENERIC_CR"
          * @const
          */

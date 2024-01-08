@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('redeployHelm', function() {
-      it('should call redeployHelm successfully', function(done) {
-        //uncomment below and update the code to test redeployHelm
-        //instance.redeployHelm(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('restartHelm', function() {
       it('should call restartHelm successfully', function(done) {
         //uncomment below and update the code to test restartHelm

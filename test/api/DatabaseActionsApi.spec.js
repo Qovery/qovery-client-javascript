@@ -68,16 +68,6 @@
         done();
       });
     });
-    describe('redeployDatabase', function() {
-      it('should call redeployDatabase successfully', function(done) {
-        //uncomment below and update the code to test redeployDatabase
-        //instance.redeployDatabase(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('restartDatabase', function() {
       it('should call restartDatabase successfully', function(done) {
         //uncomment below and update the code to test restartDatabase

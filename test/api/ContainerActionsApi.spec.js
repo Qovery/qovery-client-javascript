@@ -68,16 +68,6 @@
         done();
       });
     });
-    describe('redeployContainer', function() {
-      it('should call redeployContainer successfully', function(done) {
-        //uncomment below and update the code to test redeployContainer
-        //instance.redeployContainer(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('restartContainer', function() {
       it('should call restartContainer successfully', function(done) {
         //uncomment below and update the code to test restartContainer

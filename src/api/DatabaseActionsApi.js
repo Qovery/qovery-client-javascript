@@ -119,48 +119,6 @@ export default class DatabaseActionsApi {
     }
 
     /**
-     * Callback function to receive the result of the redeployDatabase operation.
-     * @callback module:api/DatabaseActionsApi~redeployDatabaseCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Redeploy database
-     * @param {String} databaseId Database ID
-     * @param {module:api/DatabaseActionsApi~redeployDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
-     */
-    redeployDatabase(databaseId, callback) {
-      let postBody = null;
-      // verify the required parameter 'databaseId' is set
-      if (databaseId === undefined || databaseId === null) {
-        throw new Error("Missing the required parameter 'databaseId' when calling redeployDatabase");
-      }
-
-      let pathParams = {
-        'databaseId': databaseId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Status;
-      return this.apiClient.callApi(
-        '/database/{databaseId}/redeploy', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the restartDatabase operation.
      * @callback module:api/DatabaseActionsApi~restartDatabaseCallback
      * @param {String} error Error message, if any.

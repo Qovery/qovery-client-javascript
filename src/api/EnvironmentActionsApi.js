@@ -310,48 +310,6 @@ export default class EnvironmentActionsApi {
     }
 
     /**
-     * Callback function to receive the result of the redeployEnvironment operation.
-     * @callback module:api/EnvironmentActionsApi~redeployEnvironmentCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EnvironmentStatus} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Redeploy environment
-     * @param {String} environmentId Environment ID
-     * @param {module:api/EnvironmentActionsApi~redeployEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EnvironmentStatus}
-     */
-    redeployEnvironment(environmentId, callback) {
-      let postBody = null;
-      // verify the required parameter 'environmentId' is set
-      if (environmentId === undefined || environmentId === null) {
-        throw new Error("Missing the required parameter 'environmentId' when calling redeployEnvironment");
-      }
-
-      let pathParams = {
-        'environmentId': environmentId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = EnvironmentStatus;
-      return this.apiClient.callApi(
-        '/environment/{environmentId}/redeploy', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the restartEnvironment operation.
      * @callback module:api/EnvironmentActionsApi~restartEnvironmentCallback
      * @param {String} error Error message, if any.

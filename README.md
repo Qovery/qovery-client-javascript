@@ -138,7 +138,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.AccountInfoApi* | [**getAccountInformation**](docs/AccountInfoApi.md#getAccountInformation) | **GET** /account | Get Account information
 *QoveryApi.ApplicationActionsApi* | [**deployApplication**](docs/ApplicationActionsApi.md#deployApplication) | **POST** /application/{applicationId}/deploy | Deploy application
 *QoveryApi.ApplicationActionsApi* | [**rebootApplication**](docs/ApplicationActionsApi.md#rebootApplication) | **POST** /application/{applicationId}/restart-service | Reboot application
-*QoveryApi.ApplicationActionsApi* | [**redeployApplication**](docs/ApplicationActionsApi.md#redeployApplication) | **POST** /application/{applicationId}/redeploy | Redeploy application
 *QoveryApi.ApplicationActionsApi* | [**restartApplication**](docs/ApplicationActionsApi.md#restartApplication) | **POST** /application/{applicationId}/restart | Deprecated - Restart application
 *QoveryApi.ApplicationActionsApi* | [**stopApplication**](docs/ApplicationActionsApi.md#stopApplication) | **POST** /application/{applicationId}/stop | Stop application
 *QoveryApi.ApplicationConfigurationApi* | [**editAdvancedSettings**](docs/ApplicationConfigurationApi.md#editAdvancedSettings) | **PUT** /application/{applicationId}/advancedSettings | Edit advanced settings
@@ -247,7 +246,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**stopCluster**](docs/ClustersApi.md#stopCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/stop | Stop cluster
 *QoveryApi.ContainerActionsApi* | [**deployContainer**](docs/ContainerActionsApi.md#deployContainer) | **POST** /container/{containerId}/deploy | Deploy container
 *QoveryApi.ContainerActionsApi* | [**rebootContainer**](docs/ContainerActionsApi.md#rebootContainer) | **POST** /container/{containerId}/restart-service | Reboot container
-*QoveryApi.ContainerActionsApi* | [**redeployContainer**](docs/ContainerActionsApi.md#redeployContainer) | **POST** /container/{containerId}/redeploy | Redeploy container
 *QoveryApi.ContainerActionsApi* | [**restartContainer**](docs/ContainerActionsApi.md#restartContainer) | **POST** /container/{containerId}/restart | Deprecated - Restart container
 *QoveryApi.ContainerActionsApi* | [**stopContainer**](docs/ContainerActionsApi.md#stopContainer) | **POST** /container/{containerId}/stop | Stop container
 *QoveryApi.ContainerConfigurationApi* | [**editContainerAdvancedSettings**](docs/ContainerConfigurationApi.md#editContainerAdvancedSettings) | **PUT** /container/{containerId}/advancedSettings | Edit advanced settings
@@ -302,7 +300,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.CustomDomainApi* | [**listHelmCustomDomain**](docs/CustomDomainApi.md#listHelmCustomDomain) | **GET** /helm/{helmId}/customDomain | List helm custom domains
 *QoveryApi.DatabaseActionsApi* | [**deployDatabase**](docs/DatabaseActionsApi.md#deployDatabase) | **POST** /database/{databaseId}/deploy | Deploy database 
 *QoveryApi.DatabaseActionsApi* | [**rebootDatabase**](docs/DatabaseActionsApi.md#rebootDatabase) | **POST** /database/{databaseId}/restart-service | Retart database
-*QoveryApi.DatabaseActionsApi* | [**redeployDatabase**](docs/DatabaseActionsApi.md#redeployDatabase) | **POST** /database/{databaseId}/redeploy | Redeploy database
 *QoveryApi.DatabaseActionsApi* | [**restartDatabase**](docs/DatabaseActionsApi.md#restartDatabase) | **POST** /database/{databaseId}/restart | Deprecated - Restart database
 *QoveryApi.DatabaseActionsApi* | [**stopDatabase**](docs/DatabaseActionsApi.md#stopDatabase) | **POST** /database/{databaseId}/stop | Stop database
 *QoveryApi.DatabaseApplicationApi* | [**listDatabaseApplication**](docs/DatabaseApplicationApi.md#listDatabaseApplication) | **GET** /database/{databaseId}/application | List applications using the database
@@ -336,7 +333,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.EnvironmentActionsApi* | [**deployAllServices**](docs/EnvironmentActionsApi.md#deployAllServices) | **POST** /environment/{environmentId}/service/deploy | Deploy services
 *QoveryApi.EnvironmentActionsApi* | [**deployEnvironment**](docs/EnvironmentActionsApi.md#deployEnvironment) | **POST** /environment/{environmentId}/deploy | Deploy environment
 *QoveryApi.EnvironmentActionsApi* | [**rebootServices**](docs/EnvironmentActionsApi.md#rebootServices) | **POST** /environment/{environmentId}/service/restart-service | Reboot services
-*QoveryApi.EnvironmentActionsApi* | [**redeployEnvironment**](docs/EnvironmentActionsApi.md#redeployEnvironment) | **POST** /environment/{environmentId}/redeploy | Redeploy environment
 *QoveryApi.EnvironmentActionsApi* | [**restartEnvironment**](docs/EnvironmentActionsApi.md#restartEnvironment) | **POST** /environment/{environmentId}/restart | Deprecated - Restart environment
 *QoveryApi.EnvironmentActionsApi* | [**stopEnvironment**](docs/EnvironmentActionsApi.md#stopEnvironment) | **POST** /environment/{environmentId}/stop | Stop environment
 *QoveryApi.EnvironmentActionsApi* | [**stopSelectedServices**](docs/EnvironmentActionsApi.md#stopSelectedServices) | **POST** /environment/{environmentId}/service/stop | Stop services
@@ -378,7 +374,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.GithubAppApi* | [**organizationGithubAppConnect**](docs/GithubAppApi.md#organizationGithubAppConnect) | **POST** /organization/{organizationId}/github/connect | Connect a github account to an organization
 *QoveryApi.GithubAppApi* | [**organizationGithubAppDisconnect**](docs/GithubAppApi.md#organizationGithubAppDisconnect) | **DELETE** /organization/{organizationId}/github/disconnect | Disconnect a github account from an organization
 *QoveryApi.HelmActionsApi* | [**deployHelm**](docs/HelmActionsApi.md#deployHelm) | **POST** /helm/{helmId}/deploy | Deploy helm
-*QoveryApi.HelmActionsApi* | [**redeployHelm**](docs/HelmActionsApi.md#redeployHelm) | **POST** /helm/{helmId}/redeploy | Redeploy helm
 *QoveryApi.HelmActionsApi* | [**restartHelm**](docs/HelmActionsApi.md#restartHelm) | **POST** /helm/{helmId}/restart | Deprecated - Restart helm
 *QoveryApi.HelmActionsApi* | [**stopHelm**](docs/HelmActionsApi.md#stopHelm) | **POST** /helm/{helmId}/stop | Stop helm
 *QoveryApi.HelmConfigurationApi* | [**editHelmAdvancedSettings**](docs/HelmConfigurationApi.md#editHelmAdvancedSettings) | **PUT** /helm/{helmId}/advancedSettings | Edit advanced settings
@@ -410,7 +405,6 @@ Class | Method | HTTP request | Description
 *QoveryApi.HelmsApi* | [**getEnvironmentHelmStatus**](docs/HelmsApi.md#getEnvironmentHelmStatus) | **GET** /environment/{environmentId}/helm/status | List all environment helm statuses
 *QoveryApi.HelmsApi* | [**listHelms**](docs/HelmsApi.md#listHelms) | **GET** /environment/{environmentId}/helm | List helms
 *QoveryApi.JobActionsApi* | [**deployJob**](docs/JobActionsApi.md#deployJob) | **POST** /job/{jobId}/deploy | Deploy job
-*QoveryApi.JobActionsApi* | [**redeployJob**](docs/JobActionsApi.md#redeployJob) | **POST** /job/{jobId}/redeploy | Redeploy job
 *QoveryApi.JobActionsApi* | [**restartJob**](docs/JobActionsApi.md#restartJob) | **POST** /job/{jobId}/restart | Deprecated - Restart job
 *QoveryApi.JobActionsApi* | [**stopJob**](docs/JobActionsApi.md#stopJob) | **POST** /job/{jobId}/stop | Stop job
 *QoveryApi.JobConfigurationApi* | [**editJobAdvancedSettings**](docs/JobConfigurationApi.md#editJobAdvancedSettings) | **PUT** /job/{jobId}/advancedSettings | Edit advanced settings

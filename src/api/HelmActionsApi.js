@@ -85,52 +85,6 @@ export default class HelmActionsApi {
     }
 
     /**
-     * Callback function to receive the result of the redeployHelm operation.
-     * @callback module:api/HelmActionsApi~redeployHelmCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Redeploy helm
-     * @param {String} helmId Helm ID
-     * @param {Object} opts Optional parameters
-     * @param {module:model/HelmForceEvent} opts.forceEvent When filled, it indicates the target event to be deployed.   If the concerned helm hasn't the target event provided, the helm won't be deployed. 
-     * @param {module:api/HelmActionsApi~redeployHelmCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
-     */
-    redeployHelm(helmId, opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'helmId' is set
-      if (helmId === undefined || helmId === null) {
-        throw new Error("Missing the required parameter 'helmId' when calling redeployHelm");
-      }
-
-      let pathParams = {
-        'helmId': helmId
-      };
-      let queryParams = {
-        'forceEvent': opts['forceEvent']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Status;
-      return this.apiClient.callApi(
-        '/helm/{helmId}/redeploy', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the restartHelm operation.
      * @callback module:api/HelmActionsApi~restartHelmCallback
      * @param {String} error Error message, if any.

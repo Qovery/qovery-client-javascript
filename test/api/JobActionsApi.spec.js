@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('redeployJob', function() {
-      it('should call redeployJob successfully', function(done) {
-        //uncomment below and update the code to test redeployJob
-        //instance.redeployJob(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('restartJob', function() {
       it('should call restartJob successfully', function(done) {
         //uncomment below and update the code to test restartJob

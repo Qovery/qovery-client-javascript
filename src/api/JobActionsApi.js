@@ -85,52 +85,6 @@ export default class JobActionsApi {
     }
 
     /**
-     * Callback function to receive the result of the redeployJob operation.
-     * @callback module:api/JobActionsApi~redeployJobCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Status} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Redeploy job
-     * @param {String} jobId Job ID
-     * @param {Object} opts Optional parameters
-     * @param {module:model/JobForceEvent} opts.forceEvent When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
-     * @param {module:api/JobActionsApi~redeployJobCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Status}
-     */
-    redeployJob(jobId, opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'jobId' is set
-      if (jobId === undefined || jobId === null) {
-        throw new Error("Missing the required parameter 'jobId' when calling redeployJob");
-      }
-
-      let pathParams = {
-        'jobId': jobId
-      };
-      let queryParams = {
-        'forceEvent': opts['forceEvent']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['ApiKeyAuth', 'bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Status;
-      return this.apiClient.callApi(
-        '/job/{jobId}/redeploy', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the restartJob operation.
      * @callback module:api/JobActionsApi~restartJobCallback
      * @param {String} error Error message, if any.

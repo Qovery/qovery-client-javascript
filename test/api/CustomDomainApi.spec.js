@@ -58,16 +58,6 @@
         done();
       });
     });
-    describe('createHelmCustomDomain', function() {
-      it('should call createHelmCustomDomain successfully', function(done) {
-        //uncomment below and update the code to test createHelmCustomDomain
-        //instance.createHelmCustomDomain(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('deleteCustomDomain', function() {
       it('should call deleteCustomDomain successfully', function(done) {
         //uncomment below and update the code to test deleteCustomDomain
@@ -102,16 +92,6 @@
       it('should call listApplicationCustomDomain successfully', function(done) {
         //uncomment below and update the code to test listApplicationCustomDomain
         //instance.listApplicationCustomDomain(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('listHelmCustomDomain', function() {
-      it('should call listHelmCustomDomain successfully', function(done) {
-        //uncomment below and update the code to test listHelmCustomDomain
-        //instance.listHelmCustomDomain(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

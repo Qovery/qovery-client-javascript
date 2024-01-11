@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import CloudProviderEnum from './CloudProviderEnum';
+import ClusterCloudProviderInfoRequest from './ClusterCloudProviderInfoRequest';
 import ClusterRequestFeaturesInner from './ClusterRequestFeaturesInner';
 import KubernetesEnum from './KubernetesEnum';
 
@@ -68,6 +69,9 @@ class ClusterRequest {
             if (data.hasOwnProperty('cloud_provider')) {
                 obj['cloud_provider'] = CloudProviderEnum.constructFromObject(data['cloud_provider']);
             }
+            if (data.hasOwnProperty('cloud_provider_credentials')) {
+                obj['cloud_provider_credentials'] = ClusterCloudProviderInfoRequest.constructFromObject(data['cloud_provider_credentials']);
+            }
             if (data.hasOwnProperty('min_running_nodes')) {
                 obj['min_running_nodes'] = ApiClient.convertToType(data['min_running_nodes'], 'Number');
             }
@@ -122,6 +126,11 @@ ClusterRequest.prototype['region'] = undefined;
  * @member {module:model/CloudProviderEnum} cloud_provider
  */
 ClusterRequest.prototype['cloud_provider'] = undefined;
+
+/**
+ * @member {module:model/ClusterCloudProviderInfoRequest} cloud_provider_credentials
+ */
+ClusterRequest.prototype['cloud_provider_credentials'] = undefined;
 
 /**
  * @member {Number} min_running_nodes

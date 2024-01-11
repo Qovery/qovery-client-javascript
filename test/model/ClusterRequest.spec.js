@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property cloudProviderCredentials (base name: "cloud_provider_credentials")', function() {
+      // uncomment below and update the code to test the property cloudProviderCredentials
+      //var instance = new QoveryApi.ClusterRequest();
+      //expect(instance).to.be();
+    });
+
     it('should have the property minRunningNodes (base name: "min_running_nodes")', function() {
       // uncomment below and update the code to test the property minRunningNodes
       //var instance = new QoveryApi.ClusterRequest();

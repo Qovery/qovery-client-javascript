@@ -47,6 +47,9 @@ class HelmAdvancedSettings {
         if (data) {
             obj = obj || new HelmAdvancedSettings();
 
+            if (data.hasOwnProperty('deployment.custom_domain_check_enabled')) {
+                obj['deployment.custom_domain_check_enabled'] = ApiClient.convertToType(data['deployment.custom_domain_check_enabled'], 'Boolean');
+            }
             if (data.hasOwnProperty('network.ingress.proxy_body_size_mb')) {
                 obj['network.ingress.proxy_body_size_mb'] = ApiClient.convertToType(data['network.ingress.proxy_body_size_mb'], 'Number');
             }
@@ -116,6 +119,12 @@ class HelmAdvancedSettings {
 
 
 }
+
+/**
+ * disable custom domain check when deploying a helm
+ * @member {Boolean} deployment.custom_domain_check_enabled
+ */
+HelmAdvancedSettings.prototype['deployment.custom_domain_check_enabled'] = undefined;
 
 /**
  * @member {Number} network.ingress.proxy_body_size_mb

@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(QoveryApi.HelmAdvancedSettings);
     });
 
+    it('should have the property deploymentCustomDomainCheckEnabled (base name: "deployment.custom_domain_check_enabled")', function() {
+      // uncomment below and update the code to test the property deploymentCustomDomainCheckEnabled
+      //var instance = new QoveryApi.HelmAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property networkIngressProxyBodySizeMb (base name: "network.ingress.proxy_body_size_mb")', function() {
       // uncomment below and update the code to test the property networkIngressProxyBodySizeMb
       //var instance = new QoveryApi.HelmAdvancedSettings();

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.HelmValuesGitRepositoryRequest();
+    instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,34 +47,22 @@
       object[property] = value;
   }
 
-  describe('HelmValuesGitRepositoryRequest', function() {
-    it('should create an instance of HelmValuesGitRepositoryRequest', function() {
-      // uncomment below and update the code to test HelmValuesGitRepositoryRequest
-      //var instance = new QoveryApi.HelmValuesGitRepositoryRequest();
-      //expect(instance).to.be.a(QoveryApi.HelmValuesGitRepositoryRequest);
+  describe('HelmRequestAllOfValuesOverrideFileGit', function() {
+    it('should create an instance of HelmRequestAllOfValuesOverrideFileGit', function() {
+      // uncomment below and update the code to test HelmRequestAllOfValuesOverrideFileGit
+      //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
+      //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfValuesOverrideFileGit);
     });
 
-    it('should have the property url (base name: "url")', function() {
-      // uncomment below and update the code to test the property url
-      //var instance = new QoveryApi.HelmValuesGitRepositoryRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property branch (base name: "branch")', function() {
-      // uncomment below and update the code to test the property branch
-      //var instance = new QoveryApi.HelmValuesGitRepositoryRequest();
+    it('should have the property gitRepository (base name: "git_repository")', function() {
+      // uncomment below and update the code to test the property gitRepository
+      //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
       //expect(instance).to.be();
     });
 
     it('should have the property paths (base name: "paths")', function() {
       // uncomment below and update the code to test the property paths
-      //var instance = new QoveryApi.HelmValuesGitRepositoryRequest();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property gitTokenId (base name: "git_token_id")', function() {
-      // uncomment below and update the code to test the property gitTokenId
-      //var instance = new QoveryApi.HelmValuesGitRepositoryRequest();
+      //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFileGit();
       //expect(instance).to.be();
     });
 

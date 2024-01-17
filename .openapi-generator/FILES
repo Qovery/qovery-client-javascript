@@ -310,6 +310,7 @@ docs/HelmRequest.md
 docs/HelmRequestAllOf.md
 docs/HelmRequestAllOfValuesOverride.md
 docs/HelmRequestAllOfValuesOverrideFile.md
+docs/HelmRequestAllOfValuesOverrideFileGit.md
 docs/HelmRequestAllOfValuesOverrideFileRaw.md
 docs/HelmRequestAllOfValuesOverrideFileRawValues.md
 docs/HelmResponse.md
@@ -321,7 +322,6 @@ docs/HelmResponseAllOfValuesOverrideFileGit.md
 docs/HelmResponseAllOfValuesOverrideFileRaw.md
 docs/HelmResponseAllOfValuesOverrideFileRawValues.md
 docs/HelmResponseList.md
-docs/HelmValuesGitRepositoryRequest.md
 docs/HelmsApi.md
 docs/InviteMember.md
 docs/InviteMemberAllOf.md
@@ -876,6 +876,7 @@ src/model/HelmRequest.js
 src/model/HelmRequestAllOf.js
 src/model/HelmRequestAllOfValuesOverride.js
 src/model/HelmRequestAllOfValuesOverrideFile.js
+src/model/HelmRequestAllOfValuesOverrideFileGit.js
 src/model/HelmRequestAllOfValuesOverrideFileRaw.js
 src/model/HelmRequestAllOfValuesOverrideFileRawValues.js
 src/model/HelmResponse.js
@@ -887,7 +888,6 @@ src/model/HelmResponseAllOfValuesOverrideFileGit.js
 src/model/HelmResponseAllOfValuesOverrideFileRaw.js
 src/model/HelmResponseAllOfValuesOverrideFileRawValues.js
 src/model/HelmResponseList.js
-src/model/HelmValuesGitRepositoryRequest.js
 src/model/InviteMember.js
 src/model/InviteMemberAllOf.js
 src/model/InviteMemberRequest.js
@@ -1413,6 +1413,7 @@ test/model/HelmRequest.spec.js
 test/model/HelmRequestAllOf.spec.js
 test/model/HelmRequestAllOfValuesOverride.spec.js
 test/model/HelmRequestAllOfValuesOverrideFile.spec.js
+test/model/HelmRequestAllOfValuesOverrideFileGit.spec.js
 test/model/HelmRequestAllOfValuesOverrideFileRaw.spec.js
 test/model/HelmRequestAllOfValuesOverrideFileRawValues.spec.js
 test/model/HelmResponse.spec.js
@@ -1424,7 +1425,6 @@ test/model/HelmResponseAllOfValuesOverrideFileGit.spec.js
 test/model/HelmResponseAllOfValuesOverrideFileRaw.spec.js
 test/model/HelmResponseAllOfValuesOverrideFileRawValues.spec.js
 test/model/HelmResponseList.spec.js
-test/model/HelmValuesGitRepositoryRequest.spec.js
 test/model/InviteMember.spec.js
 test/model/InviteMemberAllOf.spec.js
 test/model/InviteMemberRequest.spec.js

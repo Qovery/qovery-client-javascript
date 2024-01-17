@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(QoveryApi.HelmRequestAllOfValuesOverrideFile);
     });
 
-    it('should have the property raw (base name: "raw")', function() {
-      // uncomment below and update the code to test the property raw
+    it('should have the property git (base name: "git")', function() {
+      // uncomment below and update the code to test the property git
       //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFile();
       //expect(instance).to.be();
     });
 
-    it('should have the property gitRepository (base name: "git_repository")', function() {
-      // uncomment below and update the code to test the property gitRepository
+    it('should have the property raw (base name: "raw")', function() {
+      // uncomment below and update the code to test the property raw
       //var instance = new QoveryApi.HelmRequestAllOfValuesOverrideFile();
       //expect(instance).to.be();
     });

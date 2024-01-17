@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import HelmRequestAllOfValuesOverrideFileGit from './HelmRequestAllOfValuesOverrideFileGit';
 import HelmRequestAllOfValuesOverrideFileRaw from './HelmRequestAllOfValuesOverrideFileRaw';
-import HelmValuesGitRepositoryRequest from './HelmValuesGitRepositoryRequest';
 
 /**
  * The HelmRequestAllOfValuesOverrideFile model module.
@@ -49,11 +49,11 @@ class HelmRequestAllOfValuesOverrideFile {
         if (data) {
             obj = obj || new HelmRequestAllOfValuesOverrideFile();
 
+            if (data.hasOwnProperty('git')) {
+                obj['git'] = HelmRequestAllOfValuesOverrideFileGit.constructFromObject(data['git']);
+            }
             if (data.hasOwnProperty('raw')) {
                 obj['raw'] = HelmRequestAllOfValuesOverrideFileRaw.constructFromObject(data['raw']);
-            }
-            if (data.hasOwnProperty('git_repository')) {
-                obj['git_repository'] = HelmValuesGitRepositoryRequest.constructFromObject(data['git_repository']);
             }
         }
         return obj;
@@ -63,14 +63,14 @@ class HelmRequestAllOfValuesOverrideFile {
 }
 
 /**
+ * @member {module:model/HelmRequestAllOfValuesOverrideFileGit} git
+ */
+HelmRequestAllOfValuesOverrideFile.prototype['git'] = undefined;
+
+/**
  * @member {module:model/HelmRequestAllOfValuesOverrideFileRaw} raw
  */
 HelmRequestAllOfValuesOverrideFile.prototype['raw'] = undefined;
-
-/**
- * @member {module:model/HelmValuesGitRepositoryRequest} git_repository
- */
-HelmRequestAllOfValuesOverrideFile.prototype['git_repository'] = undefined;
 
 
 

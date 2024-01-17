@@ -269,6 +269,7 @@ import HelmRequest from './model/HelmRequest';
 import HelmRequestAllOf from './model/HelmRequestAllOf';
 import HelmRequestAllOfValuesOverride from './model/HelmRequestAllOfValuesOverride';
 import HelmRequestAllOfValuesOverrideFile from './model/HelmRequestAllOfValuesOverrideFile';
+import HelmRequestAllOfValuesOverrideFileGit from './model/HelmRequestAllOfValuesOverrideFileGit';
 import HelmRequestAllOfValuesOverrideFileRaw from './model/HelmRequestAllOfValuesOverrideFileRaw';
 import HelmRequestAllOfValuesOverrideFileRawValues from './model/HelmRequestAllOfValuesOverrideFileRawValues';
 import HelmResponse from './model/HelmResponse';
@@ -280,7 +281,6 @@ import HelmResponseAllOfValuesOverrideFileGit from './model/HelmResponseAllOfVal
 import HelmResponseAllOfValuesOverrideFileRaw from './model/HelmResponseAllOfValuesOverrideFileRaw';
 import HelmResponseAllOfValuesOverrideFileRawValues from './model/HelmResponseAllOfValuesOverrideFileRawValues';
 import HelmResponseList from './model/HelmResponseList';
-import HelmValuesGitRepositoryRequest from './model/HelmValuesGitRepositoryRequest';
 import InviteMember from './model/InviteMember';
 import InviteMemberAllOf from './model/InviteMemberAllOf';
 import InviteMemberRequest from './model/InviteMemberRequest';
@@ -2127,6 +2127,12 @@ export {
     HelmRequestAllOfValuesOverrideFile,
 
     /**
+     * The HelmRequestAllOfValuesOverrideFileGit model constructor.
+     * @property {module:model/HelmRequestAllOfValuesOverrideFileGit}
+     */
+    HelmRequestAllOfValuesOverrideFileGit,
+
+    /**
      * The HelmRequestAllOfValuesOverrideFileRaw model constructor.
      * @property {module:model/HelmRequestAllOfValuesOverrideFileRaw}
      */
@@ -2191,12 +2197,6 @@ export {
      * @property {module:model/HelmResponseList}
      */
     HelmResponseList,
-
-    /**
-     * The HelmValuesGitRepositoryRequest model constructor.
-     * @property {module:model/HelmValuesGitRepositoryRequest}
-     */
-    HelmValuesGitRepositoryRequest,
 
     /**
      * The InviteMember model constructor.

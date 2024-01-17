@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**git** | [**HelmRequestAllOfValuesOverrideFileGit**](HelmRequestAllOfValuesOverrideFileGit.md) |  | [optional] 
 **raw** | [**HelmRequestAllOfValuesOverrideFileRaw**](HelmRequestAllOfValuesOverrideFileRaw.md) |  | [optional] 
-**gitRepository** | [**HelmValuesGitRepositoryRequest**](HelmValuesGitRepositoryRequest.md) |  | [optional] 
 
 

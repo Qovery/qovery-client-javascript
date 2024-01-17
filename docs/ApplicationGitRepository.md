@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **hasAccess** | **Boolean** |  | [optional] 
-**provider** | [**GitProviderEnum**](GitProviderEnum.md) |  | [optional] 
-**owner** | **String** |  | [optional] 
-**url** | **String** |  | [optional] 
-**name** | **String** | repository name | [optional] 
+**provider** | [**GitProviderEnum**](GitProviderEnum.md) |  | 
+**owner** | **String** |  | 
+**url** | **String** |  | 
+**name** | **String** | repository name | 
 **branch** | **String** |  | [optional] 
 **rootPath** | **String** |  | [optional] 
 **deployedCommitId** | **String** | Git commit ID corresponding to the deployed version of the app | [optional] 

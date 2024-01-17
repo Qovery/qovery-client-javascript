@@ -23,10 +23,14 @@ class ApplicationGitRepository {
     /**
      * Constructs a new <code>ApplicationGitRepository</code>.
      * @alias module:model/ApplicationGitRepository
+     * @param provider {module:model/GitProviderEnum} 
+     * @param owner {String} 
+     * @param url {String} 
+     * @param name {String} repository name
      */
-    constructor() { 
+    constructor(provider, owner, url, name) { 
         
-        ApplicationGitRepository.initialize(this);
+        ApplicationGitRepository.initialize(this, provider, owner, url, name);
     }
 
     /**
@@ -34,7 +38,11 @@ class ApplicationGitRepository {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, provider, owner, url, name) { 
+        obj['provider'] = provider;
+        obj['owner'] = owner;
+        obj['url'] = url;
+        obj['name'] = name;
     }
 
     /**

@@ -19,6 +19,7 @@ import ClusterDeploymentStatusEnum from './ClusterDeploymentStatusEnum';
 import ClusterFeature from './ClusterFeature';
 import ClusterStateEnum from './ClusterStateEnum';
 import KubernetesEnum from './KubernetesEnum';
+import ReferenceObject from './ReferenceObject';
 
 /**
  * The Cluster model module.
@@ -76,6 +77,9 @@ class Cluster {
             }
             if (data.hasOwnProperty('updated_at')) {
                 obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
+            if (data.hasOwnProperty('organization')) {
+                obj['organization'] = ReferenceObject.constructFromObject(data['organization']);
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -158,6 +162,11 @@ Cluster.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Cluster.prototype['updated_at'] = undefined;
+
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+Cluster.prototype['organization'] = undefined;
 
 /**
  * name is case-insensitive
@@ -285,6 +294,10 @@ Base.prototype['created_at'] = undefined;
  */
 Base.prototype['updated_at'] = undefined;
 // Implement ClusterAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+ClusterAllOf.prototype['organization'] = undefined;
 /**
  * name is case-insensitive
  * @member {String} name

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**organization** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
 **name** | **String** | name is case-insensitive | 
 **description** | **String** |  | [optional] 
 **region** | **String** |  | 

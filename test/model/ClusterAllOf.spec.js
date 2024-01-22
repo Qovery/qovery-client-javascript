@@ -54,6 +54,12 @@
       //expect(instance).to.be.a(QoveryApi.ClusterAllOf);
     });
 
+    it('should have the property organization (base name: "organization")', function() {
+      // uncomment below and update the code to test the property organization
+      //var instance = new QoveryApi.ClusterAllOf();
+      //expect(instance).to.be();
+    });
+
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new QoveryApi.ClusterAllOf();

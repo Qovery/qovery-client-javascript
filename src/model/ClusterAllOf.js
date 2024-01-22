@@ -17,6 +17,7 @@ import ClusterDeploymentStatusEnum from './ClusterDeploymentStatusEnum';
 import ClusterFeature from './ClusterFeature';
 import ClusterStateEnum from './ClusterStateEnum';
 import KubernetesEnum from './KubernetesEnum';
+import ReferenceObject from './ReferenceObject';
 
 /**
  * The ClusterAllOf model module.
@@ -58,6 +59,9 @@ class ClusterAllOf {
         if (data) {
             obj = obj || new ClusterAllOf();
 
+            if (data.hasOwnProperty('organization')) {
+                obj['organization'] = ReferenceObject.constructFromObject(data['organization']);
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -124,6 +128,11 @@ class ClusterAllOf {
 
 
 }
+
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+ClusterAllOf.prototype['organization'] = undefined;
 
 /**
  * name is case-insensitive

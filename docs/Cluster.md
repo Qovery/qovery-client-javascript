@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [readonly] 
 **createdAt** | **Date** |  | [readonly] 
 **updatedAt** | **Date** |  | [optional] [readonly] 
+**organization** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
 **name** | **String** | name is case-insensitive | 
 **description** | **String** |  | [optional] 
 **region** | **String** |  | 

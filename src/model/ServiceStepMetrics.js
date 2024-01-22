@@ -51,6 +51,9 @@ class ServiceStepMetrics {
             if (data.hasOwnProperty('total_duration_sec')) {
                 obj['total_duration_sec'] = ApiClient.convertToType(data['total_duration_sec'], 'Number');
             }
+            if (data.hasOwnProperty('total_computing_duration_sec')) {
+                obj['total_computing_duration_sec'] = ApiClient.convertToType(data['total_computing_duration_sec'], 'Number');
+            }
             if (data.hasOwnProperty('details')) {
                 obj['details'] = ApiClient.convertToType(data['details'], [ServiceStepMetric]);
             }
@@ -66,6 +69,12 @@ class ServiceStepMetrics {
  * @member {Number} total_duration_sec
  */
 ServiceStepMetrics.prototype['total_duration_sec'] = undefined;
+
+/**
+ * The total duration in seconds of the service deployment without queuing steps.
+ * @member {Number} total_computing_duration_sec
+ */
+ServiceStepMetrics.prototype['total_computing_duration_sec'] = undefined;
 
 /**
  * A list of metrics for deployment steps of the service.

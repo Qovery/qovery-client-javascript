@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property totalComputingDurationSec (base name: "total_computing_duration_sec")', function() {
+      // uncomment below and update the code to test the property totalComputingDurationSec
+      //var instance = new QoveryApi.ServiceStepMetrics();
+      //expect(instance).to.be();
+    });
+
     it('should have the property details (base name: "details")', function() {
       // uncomment below and update the code to test the property details
       //var instance = new QoveryApi.ServiceStepMetrics();

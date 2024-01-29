@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | name is case insensitive | 
+**organization** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
 **project** | [**ReferenceObject**](ReferenceObject.md) |  | 
 **lastUpdatedBy** | **String** | uuid of the user that made the last update | [optional] 
 **cloudProvider** | [**EnvironmentAllOfCloudProvider**](EnvironmentAllOfCloudProvider.md) |  | 

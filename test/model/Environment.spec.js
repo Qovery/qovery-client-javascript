@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property organization (base name: "organization")', function() {
+      // uncomment below and update the code to test the property organization
+      //var instance = new QoveryApi.Environment();
+      //expect(instance).to.be();
+    });
+
     it('should have the property project (base name: "project")', function() {
       // uncomment below and update the code to test the property project
       //var instance = new QoveryApi.Environment();

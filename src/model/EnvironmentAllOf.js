@@ -63,6 +63,9 @@ class EnvironmentAllOf {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('organization')) {
+                obj['organization'] = ReferenceObject.constructFromObject(data['organization']);
+            }
             if (data.hasOwnProperty('project')) {
                 obj['project'] = ReferenceObject.constructFromObject(data['project']);
             }
@@ -93,6 +96,11 @@ class EnvironmentAllOf {
  * @member {String} name
  */
 EnvironmentAllOf.prototype['name'] = undefined;
+
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+EnvironmentAllOf.prototype['organization'] = undefined;
 
 /**
  * @member {module:model/ReferenceObject} project

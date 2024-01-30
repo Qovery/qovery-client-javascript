@@ -24,10 +24,11 @@ class ProjectAllOf {
      * Constructs a new <code>ProjectAllOf</code>.
      * @alias module:model/ProjectAllOf
      * @param name {String} 
+     * @param organization {module:model/ReferenceObject} 
      */
-    constructor(name) { 
+    constructor(name, organization) { 
         
-        ProjectAllOf.initialize(this, name);
+        ProjectAllOf.initialize(this, name, organization);
     }
 
     /**
@@ -35,8 +36,9 @@ class ProjectAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
+    static initialize(obj, name, organization) { 
         obj['name'] = name;
+        obj['organization'] = organization;
     }
 
     /**

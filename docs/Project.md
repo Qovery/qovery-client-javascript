@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **updatedAt** | **Date** |  | [optional] [readonly] 
 **name** | **String** |  | 
 **description** | **String** |  | [optional] 
-**organization** | [**ReferenceObject**](ReferenceObject.md) |  | [optional] 
+**organization** | [**ReferenceObject**](ReferenceObject.md) |  | 
 
 

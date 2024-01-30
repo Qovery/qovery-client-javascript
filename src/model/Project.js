@@ -30,10 +30,11 @@ class Project {
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} 
+     * @param organization {module:model/ReferenceObject} 
      */
-    constructor(id, createdAt, name) { 
-        Base.initialize(this, id, createdAt);ProjectAllOf.initialize(this, name);
-        Project.initialize(this, id, createdAt, name);
+    constructor(id, createdAt, name, organization) { 
+        Base.initialize(this, id, createdAt);ProjectAllOf.initialize(this, name, organization);
+        Project.initialize(this, id, createdAt, name, organization);
     }
 
     /**
@@ -41,10 +42,11 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, createdAt, name) { 
+    static initialize(obj, id, createdAt, name, organization) { 
         obj['id'] = id;
         obj['created_at'] = createdAt;
         obj['name'] = name;
+        obj['organization'] = organization;
     }
 
     /**

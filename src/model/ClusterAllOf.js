@@ -28,13 +28,14 @@ class ClusterAllOf {
     /**
      * Constructs a new <code>ClusterAllOf</code>.
      * @alias module:model/ClusterAllOf
+     * @param organization {module:model/ReferenceObject} 
      * @param name {String} name is case-insensitive
      * @param region {String} 
      * @param cloudProvider {module:model/CloudProviderEnum} 
      */
-    constructor(name, region, cloudProvider) { 
+    constructor(organization, name, region, cloudProvider) { 
         
-        ClusterAllOf.initialize(this, name, region, cloudProvider);
+        ClusterAllOf.initialize(this, organization, name, region, cloudProvider);
     }
 
     /**
@@ -42,7 +43,8 @@ class ClusterAllOf {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, region, cloudProvider) { 
+    static initialize(obj, organization, name, region, cloudProvider) { 
+        obj['organization'] = organization;
         obj['name'] = name;
         obj['region'] = region;
         obj['cloud_provider'] = cloudProvider;

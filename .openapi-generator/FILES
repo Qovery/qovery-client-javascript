@@ -48,6 +48,7 @@ docs/BaseJobResponse.md
 docs/BaseJobResponseAllOf.md
 docs/BillingApi.md
 docs/BillingEnd.md
+docs/BillingExternalId.md
 docs/BillingInfo.md
 docs/BillingInfoRequest.md
 docs/BillingPeriod.md
@@ -653,6 +654,7 @@ src/model/Base.js
 src/model/BaseJobResponse.js
 src/model/BaseJobResponseAllOf.js
 src/model/BillingEnd.js
+src/model/BillingExternalId.js
 src/model/BillingInfo.js
 src/model/BillingInfoRequest.js
 src/model/BillingPeriod.js
@@ -1190,6 +1192,7 @@ test/model/Base.spec.js
 test/model/BaseJobResponse.spec.js
 test/model/BaseJobResponseAllOf.spec.js
 test/model/BillingEnd.spec.js
+test/model/BillingExternalId.spec.js
 test/model/BillingInfo.spec.js
 test/model/BillingInfoRequest.spec.js
 test/model/BillingPeriod.spec.js

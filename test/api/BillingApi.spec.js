@@ -108,6 +108,16 @@
         done();
       });
     });
+    describe('getOrganizationBillingExternalId', function() {
+      it('should call getOrganizationBillingExternalId successfully', function(done) {
+        //uncomment below and update the code to test getOrganizationBillingExternalId
+        //instance.getOrganizationBillingExternalId(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getOrganizationBillingInfo', function() {
       it('should call getOrganizationBillingInfo successfully', function(done) {
         //uncomment below and update the code to test getOrganizationBillingInfo

@@ -185,6 +185,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.BillingApi* | [**deleteCreditCard**](docs/BillingApi.md#deleteCreditCard) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 *QoveryApi.BillingApi* | [**editOrganizationBillingInfo**](docs/BillingApi.md#editOrganizationBillingInfo) | **PUT** /organization/{organizationId}/billingInfo | Edit Organization Billing Info
 *QoveryApi.BillingApi* | [**getClusterCurrentCost**](docs/BillingApi.md#getClusterCurrentCost) | **GET** /organization/{organizationId}/cluster/{clusterId}/currentCost | Get cluster current cost
+*QoveryApi.BillingApi* | [**getOrganizationBillingExternalId**](docs/BillingApi.md#getOrganizationBillingExternalId) | **GET** /organization/{organizationId}/billingExternalId | Get organization billing external ID
 *QoveryApi.BillingApi* | [**getOrganizationBillingInfo**](docs/BillingApi.md#getOrganizationBillingInfo) | **GET** /organization/{organizationId}/billingInfo | Get organization billing info
 *QoveryApi.BillingApi* | [**getOrganizationBillingStatus**](docs/BillingApi.md#getOrganizationBillingStatus) | **GET** /organization/{organizationId}/billingStatus | Get organization billing status
 *QoveryApi.BillingApi* | [**getOrganizationCurrentCost**](docs/BillingApi.md#getOrganizationCurrentCost) | **GET** /organization/{organizationId}/currentCost | Get organization current cost
@@ -553,6 +554,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.BaseJobResponse](docs/BaseJobResponse.md)
  - [QoveryApi.BaseJobResponseAllOf](docs/BaseJobResponseAllOf.md)
  - [QoveryApi.BillingEnd](docs/BillingEnd.md)
+ - [QoveryApi.BillingExternalId](docs/BillingExternalId.md)
  - [QoveryApi.BillingInfo](docs/BillingInfo.md)
  - [QoveryApi.BillingInfoRequest](docs/BillingInfoRequest.md)
  - [QoveryApi.BillingPeriod](docs/BillingPeriod.md)

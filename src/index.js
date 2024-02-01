@@ -46,6 +46,7 @@ import Base from './model/Base';
 import BaseJobResponse from './model/BaseJobResponse';
 import BaseJobResponseAllOf from './model/BaseJobResponseAllOf';
 import BillingEnd from './model/BillingEnd';
+import BillingExternalId from './model/BillingExternalId';
 import BillingInfo from './model/BillingInfo';
 import BillingInfoRequest from './model/BillingInfoRequest';
 import BillingPeriod from './model/BillingPeriod';
@@ -787,6 +788,12 @@ export {
      * @property {module:model/BillingEnd}
      */
     BillingEnd,
+
+    /**
+     * The BillingExternalId model constructor.
+     * @property {module:model/BillingExternalId}
+     */
+    BillingExternalId,
 
     /**
      * The BillingInfo model constructor.

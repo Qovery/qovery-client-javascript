@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import BillingExternalId from '../model/BillingExternalId';
 import BillingInfo from '../model/BillingInfo';
 import BillingInfoRequest from '../model/BillingInfoRequest';
 import BillingStatus from '../model/BillingStatus';
@@ -317,6 +318,49 @@ export default class BillingApi {
       let returnType = CostRange;
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/currentCost', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getOrganizationBillingExternalId operation.
+     * @callback module:api/BillingApi~getOrganizationBillingExternalIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/BillingExternalId} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get organization billing external ID
+     * This endpoint returns the external ID of the organization's billing account. 
+     * @param {String} organizationId Organization ID
+     * @param {module:api/BillingApi~getOrganizationBillingExternalIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/BillingExternalId}
+     */
+    getOrganizationBillingExternalId(organizationId, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling getOrganizationBillingExternalId");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = BillingExternalId;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/billingExternalId', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

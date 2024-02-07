@@ -80,8 +80,46 @@ class EnvironmentLog {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>EnvironmentLog</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentLog</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of EnvironmentLog.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // validate the optional field `scope`
+        if (data['scope']) { // data not null
+          EnvironmentLogScope.validateJSON(data['scope']);
+        }
+        // ensure the json data is a string
+        if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
+            throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
+        }
+        // ensure the json data is a string
+        if (data['execution_id'] && !(typeof data['execution_id'] === 'string' || data['execution_id'] instanceof String)) {
+            throw new Error("Expected the field `execution_id` to be a primitive type in the JSON string but got " + data['execution_id']);
+        }
+        // ensure the json data is a string
+        if (data['hint'] && !(typeof data['hint'] === 'string' || data['hint'] instanceof String)) {
+            throw new Error("Expected the field `hint` to be a primitive type in the JSON string but got " + data['hint']);
+        }
+
+        return true;
+    }
+
 
 }
+
+EnvironmentLog.RequiredProperties = ["id", "created_at", "message"];
 
 /**
  * @member {String} id

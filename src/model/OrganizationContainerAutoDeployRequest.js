@@ -57,8 +57,28 @@ class OrganizationContainerAutoDeployRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>OrganizationContainerAutoDeployRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationContainerAutoDeployRequest</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['image_name'] && !(typeof data['image_name'] === 'string' || data['image_name'] instanceof String)) {
+            throw new Error("Expected the field `image_name` to be a primitive type in the JSON string but got " + data['image_name']);
+        }
+        // ensure the json data is a string
+        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
+            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * the container image name to deploy

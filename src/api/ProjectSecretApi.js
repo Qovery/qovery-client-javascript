@@ -52,7 +52,7 @@ export default class ProjectSecretApi {
      * - Add a secret to the project.   - If the secret key already exists, then it will be replaced by the new one.   - If the secret value points toward an existing secret key, it will be considered as an alias. 
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/SecretRequest} opts.secretRequest 
+     * @param {module:model/SecretRequest} [secretRequest] 
      * @param {module:api/ProjectSecretApi~createProjectSecretCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -99,7 +99,7 @@ export default class ProjectSecretApi {
      * @param {String} projectId Project ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} opts.key 
+     * @param {module:model/Key} [key] 
      * @param {module:api/ProjectSecretApi~createProjectSecretAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -151,7 +151,7 @@ export default class ProjectSecretApi {
      * @param {String} projectId Project ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} opts.value 
+     * @param {module:model/Value} [value] 
      * @param {module:api/ProjectSecretApi~createProjectSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */

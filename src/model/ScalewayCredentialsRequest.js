@@ -76,8 +76,46 @@ class ScalewayCredentialsRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ScalewayCredentialsRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ScalewayCredentialsRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ScalewayCredentialsRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['scaleway_access_key'] && !(typeof data['scaleway_access_key'] === 'string' || data['scaleway_access_key'] instanceof String)) {
+            throw new Error("Expected the field `scaleway_access_key` to be a primitive type in the JSON string but got " + data['scaleway_access_key']);
+        }
+        // ensure the json data is a string
+        if (data['scaleway_secret_key'] && !(typeof data['scaleway_secret_key'] === 'string' || data['scaleway_secret_key'] instanceof String)) {
+            throw new Error("Expected the field `scaleway_secret_key` to be a primitive type in the JSON string but got " + data['scaleway_secret_key']);
+        }
+        // ensure the json data is a string
+        if (data['scaleway_project_id'] && !(typeof data['scaleway_project_id'] === 'string' || data['scaleway_project_id'] instanceof String)) {
+            throw new Error("Expected the field `scaleway_project_id` to be a primitive type in the JSON string but got " + data['scaleway_project_id']);
+        }
+        // ensure the json data is a string
+        if (data['scaleway_organization_id'] && !(typeof data['scaleway_organization_id'] === 'string' || data['scaleway_organization_id'] instanceof String)) {
+            throw new Error("Expected the field `scaleway_organization_id` to be a primitive type in the JSON string but got " + data['scaleway_organization_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+ScalewayCredentialsRequest.RequiredProperties = ["name", "scaleway_access_key", "scaleway_secret_key", "scaleway_project_id", "scaleway_organization_id"];
 
 /**
  * @member {String} name

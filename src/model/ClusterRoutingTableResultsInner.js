@@ -66,8 +66,38 @@ class ClusterRoutingTableResultsInner {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ClusterRoutingTableResultsInner</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterRoutingTableResultsInner</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ClusterRoutingTableResultsInner.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['destination'] && !(typeof data['destination'] === 'string' || data['destination'] instanceof String)) {
+            throw new Error("Expected the field `destination` to be a primitive type in the JSON string but got " + data['destination']);
+        }
+        // ensure the json data is a string
+        if (data['target'] && !(typeof data['target'] === 'string' || data['target'] instanceof String)) {
+            throw new Error("Expected the field `target` to be a primitive type in the JSON string but got " + data['target']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+
+        return true;
+    }
+
 
 }
+
+ClusterRoutingTableResultsInner.RequiredProperties = ["destination", "target", "description"];
 
 /**
  * @member {String} destination

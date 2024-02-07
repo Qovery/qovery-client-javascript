@@ -58,8 +58,24 @@ class DeploymentHistoryJobResponseAllOfSchedule {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DeploymentHistoryJobResponseAllOfSchedule</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistoryJobResponseAllOfSchedule</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['schedule_at'] && !(typeof data['schedule_at'] === 'string' || data['schedule_at'] instanceof String)) {
+            throw new Error("Expected the field `schedule_at` to be a primitive type in the JSON string but got " + data['schedule_at']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {module:model/JobScheduleEvent} event

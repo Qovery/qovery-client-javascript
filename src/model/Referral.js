@@ -57,8 +57,24 @@ class Referral {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Referral</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Referral</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['invitation_link'] && !(typeof data['invitation_link'] === 'string' || data['invitation_link'] instanceof String)) {
+            throw new Error("Expected the field `invitation_link` to be a primitive type in the JSON string but got " + data['invitation_link']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Number} total_invited

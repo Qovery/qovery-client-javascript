@@ -67,8 +67,34 @@ class VariableOverrideRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>VariableOverrideRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>VariableOverrideRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of VariableOverrideRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
+            throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
+        }
+        // ensure the json data is a string
+        if (data['override_parent_id'] && !(typeof data['override_parent_id'] === 'string' || data['override_parent_id'] instanceof String)) {
+            throw new Error("Expected the field `override_parent_id` to be a primitive type in the JSON string but got " + data['override_parent_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+VariableOverrideRequest.RequiredProperties = ["value", "override_scope", "override_parent_id"];
 
 /**
  * the value to be used as Override of the targeted environment variable.

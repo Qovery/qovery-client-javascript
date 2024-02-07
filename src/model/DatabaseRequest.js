@@ -92,8 +92,42 @@ class DatabaseRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DatabaseRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DatabaseRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of DatabaseRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['version'] && !(typeof data['version'] === 'string' || data['version'] instanceof String)) {
+            throw new Error("Expected the field `version` to be a primitive type in the JSON string but got " + data['version']);
+        }
+        // ensure the json data is a string
+        if (data['instance_type'] && !(typeof data['instance_type'] === 'string' || data['instance_type'] instanceof String)) {
+            throw new Error("Expected the field `instance_type` to be a primitive type in the JSON string but got " + data['instance_type']);
+        }
+
+        return true;
+    }
+
 
 }
+
+DatabaseRequest.RequiredProperties = ["name", "type", "version", "mode"];
 
 /**
  * name is case insensitive

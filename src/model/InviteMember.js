@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import InviteMemberAllOf from './InviteMemberAllOf';
 import InviteMemberRoleEnum from './InviteMemberRoleEnum';
 import InviteStatusEnum from './InviteStatusEnum';
 
@@ -27,7 +26,6 @@ class InviteMember {
      * Constructs a new <code>InviteMember</code>.
      * @alias module:model/InviteMember
      * @implements module:model/Base
-     * @implements module:model/InviteMemberAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param email {String} 
@@ -37,7 +35,7 @@ class InviteMember {
      * @param inviter {String} 
      */
     constructor(id, createdAt, email, role, invitationLink, invitationStatus, inviter) { 
-        Base.initialize(this, id, createdAt);InviteMemberAllOf.initialize(this, email, role, invitationLink, invitationStatus, inviter);
+        Base.initialize(this, id, createdAt);
         InviteMember.initialize(this, id, createdAt, email, role, invitationLink, invitationStatus, inviter);
     }
 
@@ -67,7 +65,6 @@ class InviteMember {
         if (data) {
             obj = obj || new InviteMember();
             Base.constructFromObject(data, obj);
-            InviteMemberAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -109,8 +106,58 @@ class InviteMember {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>InviteMember</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>InviteMember</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of InviteMember.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['email'] && !(typeof data['email'] === 'string' || data['email'] instanceof String)) {
+            throw new Error("Expected the field `email` to be a primitive type in the JSON string but got " + data['email']);
+        }
+        // ensure the json data is a string
+        if (data['invitation_link'] && !(typeof data['invitation_link'] === 'string' || data['invitation_link'] instanceof String)) {
+            throw new Error("Expected the field `invitation_link` to be a primitive type in the JSON string but got " + data['invitation_link']);
+        }
+        // ensure the json data is a string
+        if (data['organization_name'] && !(typeof data['organization_name'] === 'string' || data['organization_name'] instanceof String)) {
+            throw new Error("Expected the field `organization_name` to be a primitive type in the JSON string but got " + data['organization_name']);
+        }
+        // ensure the json data is a string
+        if (data['inviter'] && !(typeof data['inviter'] === 'string' || data['inviter'] instanceof String)) {
+            throw new Error("Expected the field `inviter` to be a primitive type in the JSON string but got " + data['inviter']);
+        }
+        // ensure the json data is a string
+        if (data['logo_url'] && !(typeof data['logo_url'] === 'string' || data['logo_url'] instanceof String)) {
+            throw new Error("Expected the field `logo_url` to be a primitive type in the JSON string but got " + data['logo_url']);
+        }
+        // ensure the json data is a string
+        if (data['role_id'] && !(typeof data['role_id'] === 'string' || data['role_id'] instanceof String)) {
+            throw new Error("Expected the field `role_id` to be a primitive type in the JSON string but got " + data['role_id']);
+        }
+        // ensure the json data is a string
+        if (data['role_name'] && !(typeof data['role_name'] === 'string' || data['role_name'] instanceof String)) {
+            throw new Error("Expected the field `role_name` to be a primitive type in the JSON string but got " + data['role_name']);
+        }
+
+        return true;
+    }
+
 
 }
+
+InviteMember.RequiredProperties = ["id", "created_at", "email", "role", "invitation_link", "invitation_status", "inviter"];
 
 /**
  * @member {String} id
@@ -186,43 +233,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement InviteMemberAllOf interface:
-/**
- * @member {String} email
- */
-InviteMemberAllOf.prototype['email'] = undefined;
-/**
- * @member {module:model/InviteMemberRoleEnum} role
- */
-InviteMemberAllOf.prototype['role'] = undefined;
-/**
- * @member {String} invitation_link
- */
-InviteMemberAllOf.prototype['invitation_link'] = undefined;
-/**
- * @member {module:model/InviteStatusEnum} invitation_status
- */
-InviteMemberAllOf.prototype['invitation_status'] = undefined;
-/**
- * @member {String} organization_name
- */
-InviteMemberAllOf.prototype['organization_name'] = undefined;
-/**
- * @member {String} inviter
- */
-InviteMemberAllOf.prototype['inviter'] = undefined;
-/**
- * @member {String} logo_url
- */
-InviteMemberAllOf.prototype['logo_url'] = undefined;
-/**
- * @member {String} role_id
- */
-InviteMemberAllOf.prototype['role_id'] = undefined;
-/**
- * @member {String} role_name
- */
-InviteMemberAllOf.prototype['role_name'] = undefined;
 
 
 

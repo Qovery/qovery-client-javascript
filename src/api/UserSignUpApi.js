@@ -47,7 +47,7 @@ export default class UserSignUpApi {
      * Send Sign Up request
      * Send a Sign Up request containing the user information
      * @param {Object} opts Optional parameters
-     * @param {module:model/SignUpRequest} opts.signUpRequest 
+     * @param {module:model/SignUpRequest} [signUpRequest] 
      * @param {module:api/UserSignUpApi~createUserSignUpCallback} callback The callback function, accepting three arguments: error, data, response
      */
     createUserSignUp(opts, callback) {

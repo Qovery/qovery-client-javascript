@@ -60,8 +60,32 @@ class RebootServicesRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>RebootServicesRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>RebootServicesRequest</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is an array
+        if (!Array.isArray(data['applicationIds'])) {
+            throw new Error("Expected the field `applicationIds` to be an array in the JSON data but got " + data['applicationIds']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['databaseIds'])) {
+            throw new Error("Expected the field `databaseIds` to be an array in the JSON data but got " + data['databaseIds']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['containerIds'])) {
+            throw new Error("Expected the field `containerIds` to be an array in the JSON data but got " + data['containerIds']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Array.<String>} applicationIds

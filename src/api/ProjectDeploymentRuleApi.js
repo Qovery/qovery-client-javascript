@@ -50,7 +50,7 @@ export default class ProjectDeploymentRuleApi {
      * Create a deployment rule
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProjectDeploymentRuleRequest} opts.projectDeploymentRuleRequest 
+     * @param {module:model/ProjectDeploymentRuleRequest} [projectDeploymentRuleRequest] 
      * @param {module:api/ProjectDeploymentRuleApi~createDeploymentRuleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ProjectDeploymentRule}
      */
@@ -145,7 +145,7 @@ export default class ProjectDeploymentRuleApi {
      * @param {String} projectId Project ID
      * @param {String} deploymentRuleId Deployment Rule ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProjectDeploymentRuleRequest} opts.projectDeploymentRuleRequest 
+     * @param {module:model/ProjectDeploymentRuleRequest} [projectDeploymentRuleRequest] 
      * @param {module:api/ProjectDeploymentRuleApi~editProjectDeployemtnRuleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ProjectDeploymentRule}
      */
@@ -288,7 +288,7 @@ export default class ProjectDeploymentRuleApi {
      * Update deployment rules priority order
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProjectDeploymentRulesPriorityOrderRequest} opts.projectDeploymentRulesPriorityOrderRequest 
+     * @param {module:model/ProjectDeploymentRulesPriorityOrderRequest} [projectDeploymentRulesPriorityOrderRequest] 
      * @param {module:api/ProjectDeploymentRuleApi~updateDeploymentRulesPriorityOrderCallback} callback The callback function, accepting three arguments: error, data, response
      */
     updateDeploymentRulesPriorityOrder(projectId, opts, callback) {

@@ -65,8 +65,42 @@ class DoCredentialsRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DoCredentialsRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DoCredentialsRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of DoCredentialsRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
+            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
+        }
+        // ensure the json data is a string
+        if (data['spaces_access_id'] && !(typeof data['spaces_access_id'] === 'string' || data['spaces_access_id'] instanceof String)) {
+            throw new Error("Expected the field `spaces_access_id` to be a primitive type in the JSON string but got " + data['spaces_access_id']);
+        }
+        // ensure the json data is a string
+        if (data['spaces_secret_key'] && !(typeof data['spaces_secret_key'] === 'string' || data['spaces_secret_key'] instanceof String)) {
+            throw new Error("Expected the field `spaces_secret_key` to be a primitive type in the JSON string but got " + data['spaces_secret_key']);
+        }
+
+        return true;
+    }
+
 
 }
+
+DoCredentialsRequest.RequiredProperties = ["name"];
 
 /**
  * @member {String} name

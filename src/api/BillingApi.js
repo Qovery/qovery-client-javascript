@@ -60,7 +60,7 @@ export default class BillingApi {
      * Add credit card
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CreditCardRequest} opts.creditCardRequest 
+     * @param {module:model/CreditCardRequest} [creditCardRequest] 
      * @param {module:api/BillingApi~addCreditCardCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CreditCard}
      */
@@ -105,7 +105,7 @@ export default class BillingApi {
      * Add credit code
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationCreditCodeRequest} opts.organizationCreditCodeRequest 
+     * @param {module:model/OrganizationCreditCodeRequest} [organizationCreditCodeRequest] 
      * @param {module:api/BillingApi~addCreditCodeCallback} callback The callback function, accepting three arguments: error, data, response
      */
     addCreditCode(organizationId, opts, callback) {
@@ -149,7 +149,7 @@ export default class BillingApi {
      * Change organization plan
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationChangePlanRequest} opts.organizationChangePlanRequest 
+     * @param {module:model/OrganizationChangePlanRequest} [organizationChangePlanRequest] 
      * @param {module:api/BillingApi~changePlanCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Organization}
      */
@@ -241,7 +241,7 @@ export default class BillingApi {
      * Edit Organization Billing Info
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/BillingInfoRequest} opts.billingInfoRequest 
+     * @param {module:model/BillingInfoRequest} [billingInfoRequest] 
      * @param {module:api/BillingApi~editOrganizationBillingInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/BillingInfo}
      */

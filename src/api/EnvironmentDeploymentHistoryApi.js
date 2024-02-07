@@ -47,7 +47,7 @@ export default class EnvironmentDeploymentHistoryApi {
      * List previous and current environment deployments with the status deployment and the related services. By default it returns the 20 last results. The response is paginated. In order to request the next page, you can use the startId query parameter
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.startId Starting point after which to return results
+     * @param {String} [startId] Starting point after which to return results
      * @param {module:api/EnvironmentDeploymentHistoryApi~listEnvironmentDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentHistoryEnvironmentPaginatedResponseList}
      */

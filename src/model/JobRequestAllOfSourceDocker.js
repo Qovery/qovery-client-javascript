@@ -58,8 +58,28 @@ class JobRequestAllOfSourceDocker {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>JobRequestAllOfSourceDocker</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>JobRequestAllOfSourceDocker</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['dockerfile_path'] && !(typeof data['dockerfile_path'] === 'string' || data['dockerfile_path'] instanceof String)) {
+            throw new Error("Expected the field `dockerfile_path` to be a primitive type in the JSON string but got " + data['dockerfile_path']);
+        }
+        // validate the optional field `git_repository`
+        if (data['git_repository']) { // data not null
+          ApplicationGitRepositoryRequest.validateJSON(data['git_repository']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * The path of the associated Dockerfile. Only if you are using build_mode = DOCKER

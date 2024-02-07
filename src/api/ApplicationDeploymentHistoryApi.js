@@ -47,7 +47,7 @@ export default class ApplicationDeploymentHistoryApi {
      * By default it returns the 20 last results. The response is paginated. In order to request the next page, you can use the startId query parameter. You can also filter by status (FAILED or SUCCESS), and git_commit_id
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.startId Starting point after which to return results
+     * @param {String} [startId] Starting point after which to return results
      * @param {module:api/ApplicationDeploymentHistoryApi~listApplicationDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentHistoryPaginatedResponseList}
      */

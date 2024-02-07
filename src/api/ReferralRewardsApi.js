@@ -83,7 +83,7 @@ export default class ReferralRewardsApi {
      * Claim a reward
      * A same code can be claimed only 3 times at max
      * @param {Object} opts Optional parameters
-     * @param {module:model/RewardClaim} opts.rewardClaim 
+     * @param {module:model/RewardClaim} [rewardClaim] 
      * @param {module:api/ReferralRewardsApi~postAccountRewardClaimCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postAccountRewardClaim(opts, callback) {

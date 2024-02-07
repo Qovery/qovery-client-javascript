@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import HelmRepositoryKindEnum from './HelmRepositoryKindEnum';
-import HelmRepositoryResponseAllOf from './HelmRepositoryResponseAllOf';
 
 /**
  * The HelmRepositoryResponse model module.
@@ -26,13 +25,12 @@ class HelmRepositoryResponse {
      * Constructs a new <code>HelmRepositoryResponse</code>.
      * @alias module:model/HelmRepositoryResponse
      * @implements module:model/Base
-     * @implements module:model/HelmRepositoryResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} 
      */
     constructor(id, createdAt, name) { 
-        Base.initialize(this, id, createdAt);HelmRepositoryResponseAllOf.initialize(this, name);
+        Base.initialize(this, id, createdAt);
         HelmRepositoryResponse.initialize(this, id, createdAt, name);
     }
 
@@ -58,7 +56,6 @@ class HelmRepositoryResponse {
         if (data) {
             obj = obj || new HelmRepositoryResponse();
             Base.constructFromObject(data, obj);
-            HelmRepositoryResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -88,8 +85,42 @@ class HelmRepositoryResponse {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>HelmRepositoryResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmRepositoryResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of HelmRepositoryResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['url'] && !(typeof data['url'] === 'string' || data['url'] instanceof String)) {
+            throw new Error("Expected the field `url` to be a primitive type in the JSON string but got " + data['url']);
+        }
+
+        return true;
+    }
+
 
 }
+
+HelmRepositoryResponse.RequiredProperties = ["id", "created_at", "name"];
 
 /**
  * @member {String} id
@@ -147,29 +178,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement HelmRepositoryResponseAllOf interface:
-/**
- * @member {String} name
- */
-HelmRepositoryResponseAllOf.prototype['name'] = undefined;
-/**
- * @member {module:model/HelmRepositoryKindEnum} kind
- */
-HelmRepositoryResponseAllOf.prototype['kind'] = undefined;
-/**
- * @member {String} description
- */
-HelmRepositoryResponseAllOf.prototype['description'] = undefined;
-/**
- * URL of the helm repository
- * @member {String} url
- */
-HelmRepositoryResponseAllOf.prototype['url'] = undefined;
-/**
- * Bypass tls certificate verification when connecting to repository
- * @member {Boolean} skip_tls_verification
- */
-HelmRepositoryResponseAllOf.prototype['skip_tls_verification'] = undefined;
 
 
 

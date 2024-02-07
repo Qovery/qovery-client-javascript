@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
-import OrganizationWebhookCreateResponseAllOf from './OrganizationWebhookCreateResponseAllOf';
 import OrganizationWebhookEventEnum from './OrganizationWebhookEventEnum';
 import OrganizationWebhookKindEnum from './OrganizationWebhookKindEnum';
 
@@ -28,12 +27,11 @@ class OrganizationWebhookResponse {
      * Constructs a new <code>OrganizationWebhookResponse</code>.
      * @alias module:model/OrganizationWebhookResponse
      * @implements module:model/Base
-     * @implements module:model/OrganizationWebhookCreateResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);OrganizationWebhookCreateResponseAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);
         OrganizationWebhookResponse.initialize(this, id, createdAt);
     }
 
@@ -58,7 +56,6 @@ class OrganizationWebhookResponse {
         if (data) {
             obj = obj || new OrganizationWebhookResponse();
             Base.constructFromObject(data, obj);
-            OrganizationWebhookCreateResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -97,8 +94,50 @@ class OrganizationWebhookResponse {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>OrganizationWebhookResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationWebhookResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of OrganizationWebhookResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['target_url'] && !(typeof data['target_url'] === 'string' || data['target_url'] instanceof String)) {
+            throw new Error("Expected the field `target_url` to be a primitive type in the JSON string but got " + data['target_url']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['events'])) {
+            throw new Error("Expected the field `events` to be an array in the JSON data but got " + data['events']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['project_names_filter'])) {
+            throw new Error("Expected the field `project_names_filter` to be an array in the JSON data but got " + data['project_names_filter']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['environment_types_filter'])) {
+            throw new Error("Expected the field `environment_types_filter` to be an array in the JSON data but got " + data['environment_types_filter']);
+        }
+
+        return true;
+    }
+
 
 }
+
+OrganizationWebhookResponse.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -173,43 +212,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement OrganizationWebhookCreateResponseAllOf interface:
-/**
- * @member {module:model/OrganizationWebhookKindEnum} kind
- */
-OrganizationWebhookCreateResponseAllOf.prototype['kind'] = undefined;
-/**
- * Set the public HTTP or HTTPS endpoint that will receive the specified events. The target URL must starts with `http://` or `https://` 
- * @member {String} target_url
- */
-OrganizationWebhookCreateResponseAllOf.prototype['target_url'] = undefined;
-/**
- * @member {Boolean} target_secret_set
- */
-OrganizationWebhookCreateResponseAllOf.prototype['target_secret_set'] = undefined;
-/**
- * @member {String} description
- */
-OrganizationWebhookCreateResponseAllOf.prototype['description'] = undefined;
-/**
- * Turn on or off your endpoint.
- * @member {Boolean} enabled
- */
-OrganizationWebhookCreateResponseAllOf.prototype['enabled'] = undefined;
-/**
- * @member {Array.<module:model/OrganizationWebhookEventEnum>} events
- */
-OrganizationWebhookCreateResponseAllOf.prototype['events'] = undefined;
-/**
- * Specify the project names you want to filter to.  This webhook will be triggered only if the event is coming from the specified Project IDs. Notes: 1. Wildcard is accepted E.g. `product*`. 2. Name is case insensitive. 
- * @member {Array.<String>} project_names_filter
- */
-OrganizationWebhookCreateResponseAllOf.prototype['project_names_filter'] = undefined;
-/**
- * Specify the environment modes you want to filter to. This webhook will be triggered only if the event is coming from an environment with the specified mode. 
- * @member {Array.<module:model/EnvironmentModeEnum>} environment_types_filter
- */
-OrganizationWebhookCreateResponseAllOf.prototype['environment_types_filter'] = undefined;
 
 
 

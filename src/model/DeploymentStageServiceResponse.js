@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import DeploymentStageServiceResponseAllOf from './DeploymentStageServiceResponseAllOf';
 
 /**
  * The DeploymentStageServiceResponse model module.
@@ -25,12 +24,11 @@ class DeploymentStageServiceResponse {
      * Constructs a new <code>DeploymentStageServiceResponse</code>.
      * @alias module:model/DeploymentStageServiceResponse
      * @implements module:model/Base
-     * @implements module:model/DeploymentStageServiceResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);DeploymentStageServiceResponseAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);
         DeploymentStageServiceResponse.initialize(this, id, createdAt);
     }
 
@@ -55,7 +53,6 @@ class DeploymentStageServiceResponse {
         if (data) {
             obj = obj || new DeploymentStageServiceResponse();
             Base.constructFromObject(data, obj);
-            DeploymentStageServiceResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -76,8 +73,38 @@ class DeploymentStageServiceResponse {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DeploymentStageServiceResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentStageServiceResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of DeploymentStageServiceResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['service_id'] && !(typeof data['service_id'] === 'string' || data['service_id'] instanceof String)) {
+            throw new Error("Expected the field `service_id` to be a primitive type in the JSON string but got " + data['service_id']);
+        }
+        // ensure the json data is a string
+        if (data['service_type'] && !(typeof data['service_type'] === 'string' || data['service_type'] instanceof String)) {
+            throw new Error("Expected the field `service_type` to be a primitive type in the JSON string but got " + data['service_type']);
+        }
+
+        return true;
+    }
+
 
 }
+
+DeploymentStageServiceResponse.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -120,17 +147,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement DeploymentStageServiceResponseAllOf interface:
-/**
- * id of the service attached to the stage
- * @member {String} service_id
- */
-DeploymentStageServiceResponseAllOf.prototype['service_id'] = undefined;
-/**
- * type of the service (i.e APPLICATION, JOB, DATABASE, ...)
- * @member {String} service_type
- */
-DeploymentStageServiceResponseAllOf.prototype['service_type'] = undefined;
 
 
 

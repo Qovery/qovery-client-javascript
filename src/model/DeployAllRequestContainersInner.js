@@ -59,8 +59,34 @@ class DeployAllRequestContainersInner {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DeployAllRequestContainersInner</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeployAllRequestContainersInner</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of DeployAllRequestContainersInner.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['image_tag'] && !(typeof data['image_tag'] === 'string' || data['image_tag'] instanceof String)) {
+            throw new Error("Expected the field `image_tag` to be a primitive type in the JSON string but got " + data['image_tag']);
+        }
+
+        return true;
+    }
+
 
 }
+
+DeployAllRequestContainersInner.RequiredProperties = ["id"];
 
 /**
  * id of the container to be updated.

@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import EnvironmentAllOf from './EnvironmentAllOf';
 import EnvironmentAllOfCloudProvider from './EnvironmentAllOfCloudProvider';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
 import ReferenceObject from './ReferenceObject';
@@ -28,7 +27,6 @@ class Environment {
      * Constructs a new <code>Environment</code>.
      * @alias module:model/Environment
      * @implements module:model/Base
-     * @implements module:model/EnvironmentAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
@@ -39,7 +37,7 @@ class Environment {
      * @param clusterId {String} 
      */
     constructor(id, createdAt, name, organization, project, cloudProvider, mode, clusterId) { 
-        Base.initialize(this, id, createdAt);EnvironmentAllOf.initialize(this, name, organization, project, cloudProvider, mode, clusterId);
+        Base.initialize(this, id, createdAt);
         Environment.initialize(this, id, createdAt, name, organization, project, cloudProvider, mode, clusterId);
     }
 
@@ -70,7 +68,6 @@ class Environment {
         if (data) {
             obj = obj || new Environment();
             Base.constructFromObject(data, obj);
-            EnvironmentAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -109,8 +106,58 @@ class Environment {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Environment</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Environment</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Environment.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // validate the optional field `organization`
+        if (data['organization']) { // data not null
+          ReferenceObject.validateJSON(data['organization']);
+        }
+        // validate the optional field `project`
+        if (data['project']) { // data not null
+          ReferenceObject.validateJSON(data['project']);
+        }
+        // ensure the json data is a string
+        if (data['last_updated_by'] && !(typeof data['last_updated_by'] === 'string' || data['last_updated_by'] instanceof String)) {
+            throw new Error("Expected the field `last_updated_by` to be a primitive type in the JSON string but got " + data['last_updated_by']);
+        }
+        // validate the optional field `cloud_provider`
+        if (data['cloud_provider']) { // data not null
+          EnvironmentAllOfCloudProvider.validateJSON(data['cloud_provider']);
+        }
+        // ensure the json data is a string
+        if (data['cluster_id'] && !(typeof data['cluster_id'] === 'string' || data['cluster_id'] instanceof String)) {
+            throw new Error("Expected the field `cluster_id` to be a primitive type in the JSON string but got " + data['cluster_id']);
+        }
+        // ensure the json data is a string
+        if (data['cluster_name'] && !(typeof data['cluster_name'] === 'string' || data['cluster_name'] instanceof String)) {
+            throw new Error("Expected the field `cluster_name` to be a primitive type in the JSON string but got " + data['cluster_name']);
+        }
+
+        return true;
+    }
+
 
 }
+
+Environment.RequiredProperties = ["id", "created_at", "name", "organization", "project", "cloud_provider", "mode", "cluster_id"];
 
 /**
  * @member {String} id
@@ -183,41 +230,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement EnvironmentAllOf interface:
-/**
- * name is case insensitive
- * @member {String} name
- */
-EnvironmentAllOf.prototype['name'] = undefined;
-/**
- * @member {module:model/ReferenceObject} organization
- */
-EnvironmentAllOf.prototype['organization'] = undefined;
-/**
- * @member {module:model/ReferenceObject} project
- */
-EnvironmentAllOf.prototype['project'] = undefined;
-/**
- * uuid of the user that made the last update
- * @member {String} last_updated_by
- */
-EnvironmentAllOf.prototype['last_updated_by'] = undefined;
-/**
- * @member {module:model/EnvironmentAllOfCloudProvider} cloud_provider
- */
-EnvironmentAllOf.prototype['cloud_provider'] = undefined;
-/**
- * @member {module:model/EnvironmentModeEnum} mode
- */
-EnvironmentAllOf.prototype['mode'] = undefined;
-/**
- * @member {String} cluster_id
- */
-EnvironmentAllOf.prototype['cluster_id'] = undefined;
-/**
- * @member {String} cluster_name
- */
-EnvironmentAllOf.prototype['cluster_name'] = undefined;
 
 
 

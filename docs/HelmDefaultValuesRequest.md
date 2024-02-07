@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | [**OneOfobjectobject**](OneOfobjectobject.md) |  | 
+**source** | [**HelmDefaultValuesRequestAllOfSource**](HelmDefaultValuesRequestAllOfSource.md) |  | 
 
 

@@ -71,8 +71,38 @@ class Credentials {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Credentials</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Credentials</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Credentials.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['host'] && !(typeof data['host'] === 'string' || data['host'] instanceof String)) {
+            throw new Error("Expected the field `host` to be a primitive type in the JSON string but got " + data['host']);
+        }
+        // ensure the json data is a string
+        if (data['login'] && !(typeof data['login'] === 'string' || data['login'] instanceof String)) {
+            throw new Error("Expected the field `login` to be a primitive type in the JSON string but got " + data['login']);
+        }
+        // ensure the json data is a string
+        if (data['password'] && !(typeof data['password'] === 'string' || data['password'] instanceof String)) {
+            throw new Error("Expected the field `password` to be a primitive type in the JSON string but got " + data['password']);
+        }
+
+        return true;
+    }
+
 
 }
+
+Credentials.RequiredProperties = ["host", "port", "login", "password"];
 
 /**
  * @member {String} host

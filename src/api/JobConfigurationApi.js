@@ -47,7 +47,7 @@ export default class JobConfigurationApi {
      * Edit advanced settings by returning table of advanced settings.
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/JobAdvancedSettings} opts.jobAdvancedSettings 
+     * @param {module:model/JobAdvancedSettings} [jobAdvancedSettings] 
      * @param {module:api/JobConfigurationApi~editJobAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobAdvancedSettings}
      */

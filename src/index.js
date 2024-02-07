@@ -19,18 +19,15 @@ import AccountInfo from './model/AccountInfo';
 import AccountInfoEditRequest from './model/AccountInfoEditRequest';
 import Application from './model/Application';
 import ApplicationAdvancedSettings from './model/ApplicationAdvancedSettings';
-import ApplicationAllOf from './model/ApplicationAllOf';
 import ApplicationDeploymentRestriction from './model/ApplicationDeploymentRestriction';
 import ApplicationDeploymentRestrictionRequest from './model/ApplicationDeploymentRestrictionRequest';
 import ApplicationDeploymentRestrictionResponseList from './model/ApplicationDeploymentRestrictionResponseList';
 import ApplicationEditRequest from './model/ApplicationEditRequest';
-import ApplicationEditRequestAllOf from './model/ApplicationEditRequestAllOf';
 import ApplicationGitRepository from './model/ApplicationGitRepository';
 import ApplicationGitRepositoryRequest from './model/ApplicationGitRepositoryRequest';
 import ApplicationNetwork from './model/ApplicationNetwork';
 import ApplicationNetworkRequest from './model/ApplicationNetworkRequest';
 import ApplicationRequest from './model/ApplicationRequest';
-import ApplicationRequestAllOf from './model/ApplicationRequestAllOf';
 import ApplicationResponseList from './model/ApplicationResponseList';
 import AvailableContainerRegistryResponse from './model/AvailableContainerRegistryResponse';
 import AvailableContainerRegistryResponseList from './model/AvailableContainerRegistryResponseList';
@@ -38,13 +35,15 @@ import AvailableHelmRepositoryResponse from './model/AvailableHelmRepositoryResp
 import AvailableHelmRepositoryResponseList from './model/AvailableHelmRepositoryResponseList';
 import AwsCredentialsRequest from './model/AwsCredentialsRequest';
 import Backup from './model/Backup';
-import BackupAllOf from './model/BackupAllOf';
 import BackupPaginatedResponseList from './model/BackupPaginatedResponseList';
 import BackupRequest from './model/BackupRequest';
 import BackupResponseList from './model/BackupResponseList';
 import Base from './model/Base';
 import BaseJobResponse from './model/BaseJobResponse';
-import BaseJobResponseAllOf from './model/BaseJobResponseAllOf';
+import BaseJobResponseAllOfSource from './model/BaseJobResponseAllOfSource';
+import BaseJobResponseAllOfSourceOneOf from './model/BaseJobResponseAllOfSourceOneOf';
+import BaseJobResponseAllOfSourceOneOf1 from './model/BaseJobResponseAllOfSourceOneOf1';
+import BaseJobResponseAllOfSourceOneOf1Docker from './model/BaseJobResponseAllOfSourceOneOf1Docker';
 import BillingEnd from './model/BillingEnd';
 import BillingExternalId from './model/BillingExternalId';
 import BillingInfo from './model/BillingInfo';
@@ -63,7 +62,6 @@ import CloudProviderEnum from './model/CloudProviderEnum';
 import CloudProviderResponseList from './model/CloudProviderResponseList';
 import Cluster from './model/Cluster';
 import ClusterAdvancedSettings from './model/ClusterAdvancedSettings';
-import ClusterAllOf from './model/ClusterAllOf';
 import ClusterCloudProviderInfo from './model/ClusterCloudProviderInfo';
 import ClusterCloudProviderInfoCredentials from './model/ClusterCloudProviderInfoCredentials';
 import ClusterCloudProviderInfoRequest from './model/ClusterCloudProviderInfoRequest';
@@ -102,7 +100,6 @@ import ClusterStatusGet from './model/ClusterStatusGet';
 import ClusterStatusResponseList from './model/ClusterStatusResponseList';
 import Commit from './model/Commit';
 import CommitPaginatedResponseList from './model/CommitPaginatedResponseList';
-import CommitPaginatedResponseListAllOf from './model/CommitPaginatedResponseListAllOf';
 import CommitResponseList from './model/CommitResponseList';
 import CommunityUsage from './model/CommunityUsage';
 import CompanySizeEnum from './model/CompanySizeEnum';
@@ -115,12 +112,10 @@ import ContainerRegistryProviderDetailsResponse from './model/ContainerRegistryP
 import ContainerRegistryRequest from './model/ContainerRegistryRequest';
 import ContainerRegistryRequestConfig from './model/ContainerRegistryRequestConfig';
 import ContainerRegistryResponse from './model/ContainerRegistryResponse';
-import ContainerRegistryResponseAllOf from './model/ContainerRegistryResponseAllOf';
+import ContainerRegistryResponseAllOfCluster from './model/ContainerRegistryResponseAllOfCluster';
 import ContainerRegistryResponseList from './model/ContainerRegistryResponseList';
 import ContainerRequest from './model/ContainerRequest';
-import ContainerRequestAllOf from './model/ContainerRequestAllOf';
 import ContainerResponse from './model/ContainerResponse';
-import ContainerResponseAllOf from './model/ContainerResponseAllOf';
 import ContainerResponseList from './model/ContainerResponseList';
 import ContainerSource from './model/ContainerSource';
 import Cost from './model/Cost';
@@ -133,18 +128,15 @@ import CreditCard from './model/CreditCard';
 import CreditCardRequest from './model/CreditCardRequest';
 import CreditCardResponseList from './model/CreditCardResponseList';
 import CronJobResponse from './model/CronJobResponse';
-import CronJobResponseAllOf from './model/CronJobResponseAllOf';
 import CronJobResponseAllOfSchedule from './model/CronJobResponseAllOfSchedule';
 import CronJobResponseAllOfScheduleCronjob from './model/CronJobResponseAllOfScheduleCronjob';
 import CurrentCost from './model/CurrentCost';
 import CustomDomain from './model/CustomDomain';
-import CustomDomainAllOf from './model/CustomDomainAllOf';
 import CustomDomainRequest from './model/CustomDomainRequest';
 import CustomDomainResponseList from './model/CustomDomainResponseList';
 import CustomDomainStatusEnum from './model/CustomDomainStatusEnum';
 import Database from './model/Database';
 import DatabaseAccessibilityEnum from './model/DatabaseAccessibilityEnum';
-import DatabaseAllOf from './model/DatabaseAllOf';
 import DatabaseConfiguration from './model/DatabaseConfiguration';
 import DatabaseConfigurationResponseList from './model/DatabaseConfigurationResponseList';
 import DatabaseEditRequest from './model/DatabaseEditRequest';
@@ -161,25 +153,16 @@ import DeployAllRequestHelmsInner from './model/DeployAllRequestHelmsInner';
 import DeployAllRequestJobsInner from './model/DeployAllRequestJobsInner';
 import DeployRequest from './model/DeployRequest';
 import DeploymentHistory from './model/DeploymentHistory';
-import DeploymentHistoryAllOf from './model/DeploymentHistoryAllOf';
 import DeploymentHistoryApplication from './model/DeploymentHistoryApplication';
-import DeploymentHistoryApplicationAllOf from './model/DeploymentHistoryApplicationAllOf';
 import DeploymentHistoryContainer from './model/DeploymentHistoryContainer';
-import DeploymentHistoryContainerAllOf from './model/DeploymentHistoryContainerAllOf';
 import DeploymentHistoryDatabase from './model/DeploymentHistoryDatabase';
-import DeploymentHistoryDatabaseAllOf from './model/DeploymentHistoryDatabaseAllOf';
 import DeploymentHistoryEnvironment from './model/DeploymentHistoryEnvironment';
-import DeploymentHistoryEnvironmentAllOf from './model/DeploymentHistoryEnvironmentAllOf';
 import DeploymentHistoryEnvironmentPaginatedResponseList from './model/DeploymentHistoryEnvironmentPaginatedResponseList';
-import DeploymentHistoryEnvironmentPaginatedResponseListAllOf from './model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf';
 import DeploymentHistoryHelmResponse from './model/DeploymentHistoryHelmResponse';
-import DeploymentHistoryHelmResponseAllOf from './model/DeploymentHistoryHelmResponseAllOf';
 import DeploymentHistoryHelmResponseAllOfRepository from './model/DeploymentHistoryHelmResponseAllOfRepository';
 import DeploymentHistoryJobResponse from './model/DeploymentHistoryJobResponse';
-import DeploymentHistoryJobResponseAllOf from './model/DeploymentHistoryJobResponseAllOf';
 import DeploymentHistoryJobResponseAllOfSchedule from './model/DeploymentHistoryJobResponseAllOfSchedule';
 import DeploymentHistoryPaginatedResponseList from './model/DeploymentHistoryPaginatedResponseList';
-import DeploymentHistoryPaginatedResponseListAllOf from './model/DeploymentHistoryPaginatedResponseListAllOf';
 import DeploymentHistoryResponseList from './model/DeploymentHistoryResponseList';
 import DeploymentHistoryStatusEnum from './model/DeploymentHistoryStatusEnum';
 import DeploymentRestrictionModeEnum from './model/DeploymentRestrictionModeEnum';
@@ -187,24 +170,19 @@ import DeploymentRestrictionTypeEnum from './model/DeploymentRestrictionTypeEnum
 import DeploymentRuleRequest from './model/DeploymentRuleRequest';
 import DeploymentStageRequest from './model/DeploymentStageRequest';
 import DeploymentStageResponse from './model/DeploymentStageResponse';
-import DeploymentStageResponseAllOf from './model/DeploymentStageResponseAllOf';
 import DeploymentStageResponseList from './model/DeploymentStageResponseList';
 import DeploymentStageServiceResponse from './model/DeploymentStageServiceResponse';
-import DeploymentStageServiceResponseAllOf from './model/DeploymentStageServiceResponseAllOf';
 import DeploymentStageWithServicesStatuses from './model/DeploymentStageWithServicesStatuses';
 import DoCredentialsRequest from './model/DoCredentialsRequest';
 import Environment from './model/Environment';
-import EnvironmentAllOf from './model/EnvironmentAllOf';
 import EnvironmentAllOfCloudProvider from './model/EnvironmentAllOfCloudProvider';
 import EnvironmentApplicationsSupportedLanguage from './model/EnvironmentApplicationsSupportedLanguage';
 import EnvironmentApplicationsSupportedLanguageList from './model/EnvironmentApplicationsSupportedLanguageList';
 import EnvironmentDeploymentRule from './model/EnvironmentDeploymentRule';
-import EnvironmentDeploymentRuleAllOf from './model/EnvironmentDeploymentRuleAllOf';
 import EnvironmentDeploymentRuleEditRequest from './model/EnvironmentDeploymentRuleEditRequest';
 import EnvironmentEditRequest from './model/EnvironmentEditRequest';
 import EnvironmentLog from './model/EnvironmentLog';
 import EnvironmentLogPaginatedResponseList from './model/EnvironmentLogPaginatedResponseList';
-import EnvironmentLogPaginatedResponseListAllOf from './model/EnvironmentLogPaginatedResponseListAllOf';
 import EnvironmentLogResponseList from './model/EnvironmentLogResponseList';
 import EnvironmentLogScope from './model/EnvironmentLogScope';
 import EnvironmentLogTypeEnum from './model/EnvironmentLogTypeEnum';
@@ -228,7 +206,6 @@ import EnvironmentStatusesWithStages from './model/EnvironmentStatusesWithStages
 import EnvironmentTotalNumber from './model/EnvironmentTotalNumber';
 import EnvironmentVariable from './model/EnvironmentVariable';
 import EnvironmentVariableAlias from './model/EnvironmentVariableAlias';
-import EnvironmentVariableAllOf from './model/EnvironmentVariableAllOf';
 import EnvironmentVariableEditRequest from './model/EnvironmentVariableEditRequest';
 import EnvironmentVariableOverride from './model/EnvironmentVariableOverride';
 import EnvironmentVariableRequest from './model/EnvironmentVariableRequest';
@@ -247,12 +224,11 @@ import GitTokenAssociatedServiceType from './model/GitTokenAssociatedServiceType
 import GitTokenAssociatedServicesResponseList from './model/GitTokenAssociatedServicesResponseList';
 import GitTokenRequest from './model/GitTokenRequest';
 import GitTokenResponse from './model/GitTokenResponse';
-import GitTokenResponseAllOf from './model/GitTokenResponseAllOf';
 import GitTokenResponseList from './model/GitTokenResponseList';
 import Healthcheck from './model/Healthcheck';
 import HelmAdvancedSettings from './model/HelmAdvancedSettings';
 import HelmDefaultValuesRequest from './model/HelmDefaultValuesRequest';
-import HelmDefaultValuesRequestAllOf from './model/HelmDefaultValuesRequestAllOf';
+import HelmDefaultValuesRequestAllOfSource from './model/HelmDefaultValuesRequestAllOfSource';
 import HelmDeployRequest from './model/HelmDeployRequest';
 import HelmDeploymentRestrictionRequest from './model/HelmDeploymentRestrictionRequest';
 import HelmDeploymentRestrictionResponse from './model/HelmDeploymentRestrictionResponse';
@@ -266,18 +242,25 @@ import HelmRepositoryKindEnum from './model/HelmRepositoryKindEnum';
 import HelmRepositoryRequest from './model/HelmRepositoryRequest';
 import HelmRepositoryRequestConfig from './model/HelmRepositoryRequestConfig';
 import HelmRepositoryResponse from './model/HelmRepositoryResponse';
-import HelmRepositoryResponseAllOf from './model/HelmRepositoryResponseAllOf';
 import HelmRepositoryResponseList from './model/HelmRepositoryResponseList';
 import HelmRequest from './model/HelmRequest';
-import HelmRequestAllOf from './model/HelmRequestAllOf';
+import HelmRequestAllOfSource from './model/HelmRequestAllOfSource';
+import HelmRequestAllOfSourceOneOf from './model/HelmRequestAllOfSourceOneOf';
+import HelmRequestAllOfSourceOneOf1 from './model/HelmRequestAllOfSourceOneOf1';
+import HelmRequestAllOfSourceOneOf1HelmRepository from './model/HelmRequestAllOfSourceOneOf1HelmRepository';
 import HelmRequestAllOfValuesOverride from './model/HelmRequestAllOfValuesOverride';
 import HelmRequestAllOfValuesOverrideFile from './model/HelmRequestAllOfValuesOverrideFile';
 import HelmRequestAllOfValuesOverrideFileGit from './model/HelmRequestAllOfValuesOverrideFileGit';
 import HelmRequestAllOfValuesOverrideFileRaw from './model/HelmRequestAllOfValuesOverrideFileRaw';
 import HelmRequestAllOfValuesOverrideFileRawValues from './model/HelmRequestAllOfValuesOverrideFileRawValues';
 import HelmResponse from './model/HelmResponse';
-import HelmResponseAllOf from './model/HelmResponseAllOf';
 import HelmResponseAllOfPorts from './model/HelmResponseAllOfPorts';
+import HelmResponseAllOfSource from './model/HelmResponseAllOfSource';
+import HelmResponseAllOfSourceOneOf from './model/HelmResponseAllOfSourceOneOf';
+import HelmResponseAllOfSourceOneOf1 from './model/HelmResponseAllOfSourceOneOf1';
+import HelmResponseAllOfSourceOneOf1Repository from './model/HelmResponseAllOfSourceOneOf1Repository';
+import HelmResponseAllOfSourceOneOf1RepositoryRepository from './model/HelmResponseAllOfSourceOneOf1RepositoryRepository';
+import HelmResponseAllOfSourceOneOfGit from './model/HelmResponseAllOfSourceOneOfGit';
 import HelmResponseAllOfValuesOverride from './model/HelmResponseAllOfValuesOverride';
 import HelmResponseAllOfValuesOverrideFile from './model/HelmResponseAllOfValuesOverrideFile';
 import HelmResponseAllOfValuesOverrideFileGit from './model/HelmResponseAllOfValuesOverrideFileGit';
@@ -285,13 +268,11 @@ import HelmResponseAllOfValuesOverrideFileRaw from './model/HelmResponseAllOfVal
 import HelmResponseAllOfValuesOverrideFileRawValues from './model/HelmResponseAllOfValuesOverrideFileRawValues';
 import HelmResponseList from './model/HelmResponseList';
 import InviteMember from './model/InviteMember';
-import InviteMemberAllOf from './model/InviteMemberAllOf';
 import InviteMemberRequest from './model/InviteMemberRequest';
 import InviteMemberResponseList from './model/InviteMemberResponseList';
 import InviteMemberRoleEnum from './model/InviteMemberRoleEnum';
 import InviteStatusEnum from './model/InviteStatusEnum';
 import Invoice from './model/Invoice';
-import InvoiceAllOf from './model/InvoiceAllOf';
 import InvoiceResponseList from './model/InvoiceResponseList';
 import InvoiceStatusEnum from './model/InvoiceStatusEnum';
 import JobAdvancedSettings from './model/JobAdvancedSettings';
@@ -301,7 +282,6 @@ import JobDeploymentRestrictionResponse from './model/JobDeploymentRestrictionRe
 import JobDeploymentRestrictionResponseList from './model/JobDeploymentRestrictionResponseList';
 import JobForceEvent from './model/JobForceEvent';
 import JobRequest from './model/JobRequest';
-import JobRequestAllOf from './model/JobRequestAllOf';
 import JobRequestAllOfSchedule from './model/JobRequestAllOfSchedule';
 import JobRequestAllOfScheduleCronjob from './model/JobRequestAllOfScheduleCronjob';
 import JobRequestAllOfScheduleOnStart from './model/JobRequestAllOfScheduleOnStart';
@@ -314,38 +294,28 @@ import JobScheduleEvent from './model/JobScheduleEvent';
 import Key from './model/Key';
 import KubernetesEnum from './model/KubernetesEnum';
 import LifecycleJobResponse from './model/LifecycleJobResponse';
-import LifecycleJobResponseAllOf from './model/LifecycleJobResponseAllOf';
 import LifecycleJobResponseAllOfSchedule from './model/LifecycleJobResponseAllOfSchedule';
 import Link from './model/Link';
 import LinkResponseList from './model/LinkResponseList';
 import LinkedServiceTypeEnum from './model/LinkedServiceTypeEnum';
 import ListContainerDeploymentHistory200Response from './model/ListContainerDeploymentHistory200Response';
-import ListContainerDeploymentHistory200ResponseAllOf from './model/ListContainerDeploymentHistory200ResponseAllOf';
 import ListDatabaseDeploymentHistory200Response from './model/ListDatabaseDeploymentHistory200Response';
-import ListDatabaseDeploymentHistory200ResponseAllOf from './model/ListDatabaseDeploymentHistory200ResponseAllOf';
 import ListHelmDeploymentHistory200Response from './model/ListHelmDeploymentHistory200Response';
-import ListHelmDeploymentHistory200ResponseAllOf from './model/ListHelmDeploymentHistory200ResponseAllOf';
 import ListJobDeploymentHistory200Response from './model/ListJobDeploymentHistory200Response';
-import ListJobDeploymentHistory200ResponseAllOf from './model/ListJobDeploymentHistory200ResponseAllOf';
 import Log from './model/Log';
 import LogPaginatedResponseList from './model/LogPaginatedResponseList';
-import LogPaginatedResponseListAllOf from './model/LogPaginatedResponseListAllOf';
 import LogResponseList from './model/LogResponseList';
 import ManagedDatabaseInstanceTypeResponse from './model/ManagedDatabaseInstanceTypeResponse';
 import ManagedDatabaseInstanceTypeResponseList from './model/ManagedDatabaseInstanceTypeResponseList';
 import ManagedDatabaseTypeResponse from './model/ManagedDatabaseTypeResponse';
 import ManagedDatabaseTypeResponseList from './model/ManagedDatabaseTypeResponseList';
 import Member from './model/Member';
-import MemberAllOf from './model/MemberAllOf';
 import MemberResponseList from './model/MemberResponseList';
 import MemberRoleUpdateRequest from './model/MemberRoleUpdateRequest';
 import Name from './model/Name';
 import Organization from './model/Organization';
-import OrganizationAllOf from './model/OrganizationAllOf';
 import OrganizationApiToken from './model/OrganizationApiToken';
-import OrganizationApiTokenAllOf from './model/OrganizationApiTokenAllOf';
 import OrganizationApiTokenCreate from './model/OrganizationApiTokenCreate';
-import OrganizationApiTokenCreateAllOf from './model/OrganizationApiTokenCreateAllOf';
 import OrganizationApiTokenCreateRequest from './model/OrganizationApiTokenCreateRequest';
 import OrganizationApiTokenResponseList from './model/OrganizationApiTokenResponseList';
 import OrganizationApiTokenScope from './model/OrganizationApiTokenScope';
@@ -356,7 +326,6 @@ import OrganizationContainerAutoDeployRequest from './model/OrganizationContaine
 import OrganizationContainerPreviewRequest from './model/OrganizationContainerPreviewRequest';
 import OrganizationCreditCodeRequest from './model/OrganizationCreditCodeRequest';
 import OrganizationCurrentCost from './model/OrganizationCurrentCost';
-import OrganizationCurrentCostAllOf from './model/OrganizationCurrentCostAllOf';
 import OrganizationCustomRole from './model/OrganizationCustomRole';
 import OrganizationCustomRoleClusterPermission from './model/OrganizationCustomRoleClusterPermission';
 import OrganizationCustomRoleClusterPermissionsInner from './model/OrganizationCustomRoleClusterPermissionsInner';
@@ -383,7 +352,6 @@ import OrganizationRequest from './model/OrganizationRequest';
 import OrganizationResponseList from './model/OrganizationResponseList';
 import OrganizationWebhookCreateRequest from './model/OrganizationWebhookCreateRequest';
 import OrganizationWebhookCreateResponse from './model/OrganizationWebhookCreateResponse';
-import OrganizationWebhookCreateResponseAllOf from './model/OrganizationWebhookCreateResponseAllOf';
 import OrganizationWebhookEventEnum from './model/OrganizationWebhookEventEnum';
 import OrganizationWebhookKindEnum from './model/OrganizationWebhookKindEnum';
 import OrganizationWebhookResponse from './model/OrganizationWebhookResponse';
@@ -399,12 +367,9 @@ import ProbeTypeGrpc from './model/ProbeTypeGrpc';
 import ProbeTypeHttp from './model/ProbeTypeHttp';
 import ProbeTypeTcp from './model/ProbeTypeTcp';
 import Project from './model/Project';
-import ProjectAllOf from './model/ProjectAllOf';
 import ProjectCurrentCost from './model/ProjectCurrentCost';
-import ProjectCurrentCostAllOf from './model/ProjectCurrentCostAllOf';
 import ProjectCurrentCostResponseList from './model/ProjectCurrentCostResponseList';
 import ProjectDeploymentRule from './model/ProjectDeploymentRule';
-import ProjectDeploymentRuleAllOf from './model/ProjectDeploymentRuleAllOf';
 import ProjectDeploymentRuleRequest from './model/ProjectDeploymentRuleRequest';
 import ProjectDeploymentRuleResponseList from './model/ProjectDeploymentRuleResponseList';
 import ProjectDeploymentRulesPriorityOrderRequest from './model/ProjectDeploymentRulesPriorityOrderRequest';
@@ -423,13 +388,11 @@ import RewardClaim from './model/RewardClaim';
 import ScalewayCredentialsRequest from './model/ScalewayCredentialsRequest';
 import Secret from './model/Secret';
 import SecretAlias from './model/SecretAlias';
-import SecretAllOf from './model/SecretAllOf';
 import SecretEditRequest from './model/SecretEditRequest';
 import SecretOverride from './model/SecretOverride';
 import SecretRequest from './model/SecretRequest';
 import SecretResponseList from './model/SecretResponseList';
 import Service from './model/Service';
-import ServiceAllOf from './model/ServiceAllOf';
 import ServiceDeploymentStatusEnum from './model/ServiceDeploymentStatusEnum';
 import ServicePort from './model/ServicePort';
 import ServicePortRequest from './model/ServicePortRequest';
@@ -473,7 +436,6 @@ import VariableOverride from './model/VariableOverride';
 import VariableOverrideRequest from './model/VariableOverrideRequest';
 import VariableRequest from './model/VariableRequest';
 import VariableResponse from './model/VariableResponse';
-import VariableResponseAllOf from './model/VariableResponseAllOf';
 import VariableResponseList from './model/VariableResponseList';
 import Version from './model/Version';
 import VersionResponseList from './model/VersionResponseList';
@@ -556,7 +518,7 @@ import VariableMainCallsApi from './api/VariableMainCallsApi';
 
 
 /**
-* __Qovery_is_the_fastest_way_to_deploy_your_full_stack_apps_on_any_Cloud_provider____The_API_is_stable_and_still_in_development_.<br>
+* - Qovery is the fastest way to deploy your full-stack apps on any Cloud provider. - ℹ️ The API is stable and still in development. .<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -630,12 +592,6 @@ export {
     ApplicationAdvancedSettings,
 
     /**
-     * The ApplicationAllOf model constructor.
-     * @property {module:model/ApplicationAllOf}
-     */
-    ApplicationAllOf,
-
-    /**
      * The ApplicationDeploymentRestriction model constructor.
      * @property {module:model/ApplicationDeploymentRestriction}
      */
@@ -658,12 +614,6 @@ export {
      * @property {module:model/ApplicationEditRequest}
      */
     ApplicationEditRequest,
-
-    /**
-     * The ApplicationEditRequestAllOf model constructor.
-     * @property {module:model/ApplicationEditRequestAllOf}
-     */
-    ApplicationEditRequestAllOf,
 
     /**
      * The ApplicationGitRepository model constructor.
@@ -694,12 +644,6 @@ export {
      * @property {module:model/ApplicationRequest}
      */
     ApplicationRequest,
-
-    /**
-     * The ApplicationRequestAllOf model constructor.
-     * @property {module:model/ApplicationRequestAllOf}
-     */
-    ApplicationRequestAllOf,
 
     /**
      * The ApplicationResponseList model constructor.
@@ -744,12 +688,6 @@ export {
     Backup,
 
     /**
-     * The BackupAllOf model constructor.
-     * @property {module:model/BackupAllOf}
-     */
-    BackupAllOf,
-
-    /**
      * The BackupPaginatedResponseList model constructor.
      * @property {module:model/BackupPaginatedResponseList}
      */
@@ -780,10 +718,28 @@ export {
     BaseJobResponse,
 
     /**
-     * The BaseJobResponseAllOf model constructor.
-     * @property {module:model/BaseJobResponseAllOf}
+     * The BaseJobResponseAllOfSource model constructor.
+     * @property {module:model/BaseJobResponseAllOfSource}
      */
-    BaseJobResponseAllOf,
+    BaseJobResponseAllOfSource,
+
+    /**
+     * The BaseJobResponseAllOfSourceOneOf model constructor.
+     * @property {module:model/BaseJobResponseAllOfSourceOneOf}
+     */
+    BaseJobResponseAllOfSourceOneOf,
+
+    /**
+     * The BaseJobResponseAllOfSourceOneOf1 model constructor.
+     * @property {module:model/BaseJobResponseAllOfSourceOneOf1}
+     */
+    BaseJobResponseAllOfSourceOneOf1,
+
+    /**
+     * The BaseJobResponseAllOfSourceOneOf1Docker model constructor.
+     * @property {module:model/BaseJobResponseAllOfSourceOneOf1Docker}
+     */
+    BaseJobResponseAllOfSourceOneOf1Docker,
 
     /**
      * The BillingEnd model constructor.
@@ -892,12 +848,6 @@ export {
      * @property {module:model/ClusterAdvancedSettings}
      */
     ClusterAdvancedSettings,
-
-    /**
-     * The ClusterAllOf model constructor.
-     * @property {module:model/ClusterAllOf}
-     */
-    ClusterAllOf,
 
     /**
      * The ClusterCloudProviderInfo model constructor.
@@ -1128,12 +1078,6 @@ export {
     CommitPaginatedResponseList,
 
     /**
-     * The CommitPaginatedResponseListAllOf model constructor.
-     * @property {module:model/CommitPaginatedResponseListAllOf}
-     */
-    CommitPaginatedResponseListAllOf,
-
-    /**
      * The CommitResponseList model constructor.
      * @property {module:model/CommitResponseList}
      */
@@ -1206,10 +1150,10 @@ export {
     ContainerRegistryResponse,
 
     /**
-     * The ContainerRegistryResponseAllOf model constructor.
-     * @property {module:model/ContainerRegistryResponseAllOf}
+     * The ContainerRegistryResponseAllOfCluster model constructor.
+     * @property {module:model/ContainerRegistryResponseAllOfCluster}
      */
-    ContainerRegistryResponseAllOf,
+    ContainerRegistryResponseAllOfCluster,
 
     /**
      * The ContainerRegistryResponseList model constructor.
@@ -1224,22 +1168,10 @@ export {
     ContainerRequest,
 
     /**
-     * The ContainerRequestAllOf model constructor.
-     * @property {module:model/ContainerRequestAllOf}
-     */
-    ContainerRequestAllOf,
-
-    /**
      * The ContainerResponse model constructor.
      * @property {module:model/ContainerResponse}
      */
     ContainerResponse,
-
-    /**
-     * The ContainerResponseAllOf model constructor.
-     * @property {module:model/ContainerResponseAllOf}
-     */
-    ContainerResponseAllOf,
 
     /**
      * The ContainerResponseList model constructor.
@@ -1314,12 +1246,6 @@ export {
     CronJobResponse,
 
     /**
-     * The CronJobResponseAllOf model constructor.
-     * @property {module:model/CronJobResponseAllOf}
-     */
-    CronJobResponseAllOf,
-
-    /**
      * The CronJobResponseAllOfSchedule model constructor.
      * @property {module:model/CronJobResponseAllOfSchedule}
      */
@@ -1342,12 +1268,6 @@ export {
      * @property {module:model/CustomDomain}
      */
     CustomDomain,
-
-    /**
-     * The CustomDomainAllOf model constructor.
-     * @property {module:model/CustomDomainAllOf}
-     */
-    CustomDomainAllOf,
 
     /**
      * The CustomDomainRequest model constructor.
@@ -1378,12 +1298,6 @@ export {
      * @property {module:model/DatabaseAccessibilityEnum}
      */
     DatabaseAccessibilityEnum,
-
-    /**
-     * The DatabaseAllOf model constructor.
-     * @property {module:model/DatabaseAllOf}
-     */
-    DatabaseAllOf,
 
     /**
      * The DatabaseConfiguration model constructor.
@@ -1482,22 +1396,10 @@ export {
     DeploymentHistory,
 
     /**
-     * The DeploymentHistoryAllOf model constructor.
-     * @property {module:model/DeploymentHistoryAllOf}
-     */
-    DeploymentHistoryAllOf,
-
-    /**
      * The DeploymentHistoryApplication model constructor.
      * @property {module:model/DeploymentHistoryApplication}
      */
     DeploymentHistoryApplication,
-
-    /**
-     * The DeploymentHistoryApplicationAllOf model constructor.
-     * @property {module:model/DeploymentHistoryApplicationAllOf}
-     */
-    DeploymentHistoryApplicationAllOf,
 
     /**
      * The DeploymentHistoryContainer model constructor.
@@ -1506,22 +1408,10 @@ export {
     DeploymentHistoryContainer,
 
     /**
-     * The DeploymentHistoryContainerAllOf model constructor.
-     * @property {module:model/DeploymentHistoryContainerAllOf}
-     */
-    DeploymentHistoryContainerAllOf,
-
-    /**
      * The DeploymentHistoryDatabase model constructor.
      * @property {module:model/DeploymentHistoryDatabase}
      */
     DeploymentHistoryDatabase,
-
-    /**
-     * The DeploymentHistoryDatabaseAllOf model constructor.
-     * @property {module:model/DeploymentHistoryDatabaseAllOf}
-     */
-    DeploymentHistoryDatabaseAllOf,
 
     /**
      * The DeploymentHistoryEnvironment model constructor.
@@ -1530,34 +1420,16 @@ export {
     DeploymentHistoryEnvironment,
 
     /**
-     * The DeploymentHistoryEnvironmentAllOf model constructor.
-     * @property {module:model/DeploymentHistoryEnvironmentAllOf}
-     */
-    DeploymentHistoryEnvironmentAllOf,
-
-    /**
      * The DeploymentHistoryEnvironmentPaginatedResponseList model constructor.
      * @property {module:model/DeploymentHistoryEnvironmentPaginatedResponseList}
      */
     DeploymentHistoryEnvironmentPaginatedResponseList,
 
     /**
-     * The DeploymentHistoryEnvironmentPaginatedResponseListAllOf model constructor.
-     * @property {module:model/DeploymentHistoryEnvironmentPaginatedResponseListAllOf}
-     */
-    DeploymentHistoryEnvironmentPaginatedResponseListAllOf,
-
-    /**
      * The DeploymentHistoryHelmResponse model constructor.
      * @property {module:model/DeploymentHistoryHelmResponse}
      */
     DeploymentHistoryHelmResponse,
-
-    /**
-     * The DeploymentHistoryHelmResponseAllOf model constructor.
-     * @property {module:model/DeploymentHistoryHelmResponseAllOf}
-     */
-    DeploymentHistoryHelmResponseAllOf,
 
     /**
      * The DeploymentHistoryHelmResponseAllOfRepository model constructor.
@@ -1572,12 +1444,6 @@ export {
     DeploymentHistoryJobResponse,
 
     /**
-     * The DeploymentHistoryJobResponseAllOf model constructor.
-     * @property {module:model/DeploymentHistoryJobResponseAllOf}
-     */
-    DeploymentHistoryJobResponseAllOf,
-
-    /**
      * The DeploymentHistoryJobResponseAllOfSchedule model constructor.
      * @property {module:model/DeploymentHistoryJobResponseAllOfSchedule}
      */
@@ -1588,12 +1454,6 @@ export {
      * @property {module:model/DeploymentHistoryPaginatedResponseList}
      */
     DeploymentHistoryPaginatedResponseList,
-
-    /**
-     * The DeploymentHistoryPaginatedResponseListAllOf model constructor.
-     * @property {module:model/DeploymentHistoryPaginatedResponseListAllOf}
-     */
-    DeploymentHistoryPaginatedResponseListAllOf,
 
     /**
      * The DeploymentHistoryResponseList model constructor.
@@ -1638,12 +1498,6 @@ export {
     DeploymentStageResponse,
 
     /**
-     * The DeploymentStageResponseAllOf model constructor.
-     * @property {module:model/DeploymentStageResponseAllOf}
-     */
-    DeploymentStageResponseAllOf,
-
-    /**
      * The DeploymentStageResponseList model constructor.
      * @property {module:model/DeploymentStageResponseList}
      */
@@ -1654,12 +1508,6 @@ export {
      * @property {module:model/DeploymentStageServiceResponse}
      */
     DeploymentStageServiceResponse,
-
-    /**
-     * The DeploymentStageServiceResponseAllOf model constructor.
-     * @property {module:model/DeploymentStageServiceResponseAllOf}
-     */
-    DeploymentStageServiceResponseAllOf,
 
     /**
      * The DeploymentStageWithServicesStatuses model constructor.
@@ -1678,12 +1526,6 @@ export {
      * @property {module:model/Environment}
      */
     Environment,
-
-    /**
-     * The EnvironmentAllOf model constructor.
-     * @property {module:model/EnvironmentAllOf}
-     */
-    EnvironmentAllOf,
 
     /**
      * The EnvironmentAllOfCloudProvider model constructor.
@@ -1710,12 +1552,6 @@ export {
     EnvironmentDeploymentRule,
 
     /**
-     * The EnvironmentDeploymentRuleAllOf model constructor.
-     * @property {module:model/EnvironmentDeploymentRuleAllOf}
-     */
-    EnvironmentDeploymentRuleAllOf,
-
-    /**
      * The EnvironmentDeploymentRuleEditRequest model constructor.
      * @property {module:model/EnvironmentDeploymentRuleEditRequest}
      */
@@ -1738,12 +1574,6 @@ export {
      * @property {module:model/EnvironmentLogPaginatedResponseList}
      */
     EnvironmentLogPaginatedResponseList,
-
-    /**
-     * The EnvironmentLogPaginatedResponseListAllOf model constructor.
-     * @property {module:model/EnvironmentLogPaginatedResponseListAllOf}
-     */
-    EnvironmentLogPaginatedResponseListAllOf,
 
     /**
      * The EnvironmentLogResponseList model constructor.
@@ -1884,12 +1714,6 @@ export {
     EnvironmentVariableAlias,
 
     /**
-     * The EnvironmentVariableAllOf model constructor.
-     * @property {module:model/EnvironmentVariableAllOf}
-     */
-    EnvironmentVariableAllOf,
-
-    /**
      * The EnvironmentVariableEditRequest model constructor.
      * @property {module:model/EnvironmentVariableEditRequest}
      */
@@ -1998,12 +1822,6 @@ export {
     GitTokenResponse,
 
     /**
-     * The GitTokenResponseAllOf model constructor.
-     * @property {module:model/GitTokenResponseAllOf}
-     */
-    GitTokenResponseAllOf,
-
-    /**
      * The GitTokenResponseList model constructor.
      * @property {module:model/GitTokenResponseList}
      */
@@ -2028,10 +1846,10 @@ export {
     HelmDefaultValuesRequest,
 
     /**
-     * The HelmDefaultValuesRequestAllOf model constructor.
-     * @property {module:model/HelmDefaultValuesRequestAllOf}
+     * The HelmDefaultValuesRequestAllOfSource model constructor.
+     * @property {module:model/HelmDefaultValuesRequestAllOfSource}
      */
-    HelmDefaultValuesRequestAllOf,
+    HelmDefaultValuesRequestAllOfSource,
 
     /**
      * The HelmDeployRequest model constructor.
@@ -2112,12 +1930,6 @@ export {
     HelmRepositoryResponse,
 
     /**
-     * The HelmRepositoryResponseAllOf model constructor.
-     * @property {module:model/HelmRepositoryResponseAllOf}
-     */
-    HelmRepositoryResponseAllOf,
-
-    /**
      * The HelmRepositoryResponseList model constructor.
      * @property {module:model/HelmRepositoryResponseList}
      */
@@ -2130,10 +1942,28 @@ export {
     HelmRequest,
 
     /**
-     * The HelmRequestAllOf model constructor.
-     * @property {module:model/HelmRequestAllOf}
+     * The HelmRequestAllOfSource model constructor.
+     * @property {module:model/HelmRequestAllOfSource}
      */
-    HelmRequestAllOf,
+    HelmRequestAllOfSource,
+
+    /**
+     * The HelmRequestAllOfSourceOneOf model constructor.
+     * @property {module:model/HelmRequestAllOfSourceOneOf}
+     */
+    HelmRequestAllOfSourceOneOf,
+
+    /**
+     * The HelmRequestAllOfSourceOneOf1 model constructor.
+     * @property {module:model/HelmRequestAllOfSourceOneOf1}
+     */
+    HelmRequestAllOfSourceOneOf1,
+
+    /**
+     * The HelmRequestAllOfSourceOneOf1HelmRepository model constructor.
+     * @property {module:model/HelmRequestAllOfSourceOneOf1HelmRepository}
+     */
+    HelmRequestAllOfSourceOneOf1HelmRepository,
 
     /**
      * The HelmRequestAllOfValuesOverride model constructor.
@@ -2172,16 +2002,46 @@ export {
     HelmResponse,
 
     /**
-     * The HelmResponseAllOf model constructor.
-     * @property {module:model/HelmResponseAllOf}
-     */
-    HelmResponseAllOf,
-
-    /**
      * The HelmResponseAllOfPorts model constructor.
      * @property {module:model/HelmResponseAllOfPorts}
      */
     HelmResponseAllOfPorts,
+
+    /**
+     * The HelmResponseAllOfSource model constructor.
+     * @property {module:model/HelmResponseAllOfSource}
+     */
+    HelmResponseAllOfSource,
+
+    /**
+     * The HelmResponseAllOfSourceOneOf model constructor.
+     * @property {module:model/HelmResponseAllOfSourceOneOf}
+     */
+    HelmResponseAllOfSourceOneOf,
+
+    /**
+     * The HelmResponseAllOfSourceOneOf1 model constructor.
+     * @property {module:model/HelmResponseAllOfSourceOneOf1}
+     */
+    HelmResponseAllOfSourceOneOf1,
+
+    /**
+     * The HelmResponseAllOfSourceOneOf1Repository model constructor.
+     * @property {module:model/HelmResponseAllOfSourceOneOf1Repository}
+     */
+    HelmResponseAllOfSourceOneOf1Repository,
+
+    /**
+     * The HelmResponseAllOfSourceOneOf1RepositoryRepository model constructor.
+     * @property {module:model/HelmResponseAllOfSourceOneOf1RepositoryRepository}
+     */
+    HelmResponseAllOfSourceOneOf1RepositoryRepository,
+
+    /**
+     * The HelmResponseAllOfSourceOneOfGit model constructor.
+     * @property {module:model/HelmResponseAllOfSourceOneOfGit}
+     */
+    HelmResponseAllOfSourceOneOfGit,
 
     /**
      * The HelmResponseAllOfValuesOverride model constructor.
@@ -2226,12 +2086,6 @@ export {
     InviteMember,
 
     /**
-     * The InviteMemberAllOf model constructor.
-     * @property {module:model/InviteMemberAllOf}
-     */
-    InviteMemberAllOf,
-
-    /**
      * The InviteMemberRequest model constructor.
      * @property {module:model/InviteMemberRequest}
      */
@@ -2260,12 +2114,6 @@ export {
      * @property {module:model/Invoice}
      */
     Invoice,
-
-    /**
-     * The InvoiceAllOf model constructor.
-     * @property {module:model/InvoiceAllOf}
-     */
-    InvoiceAllOf,
 
     /**
      * The InvoiceResponseList model constructor.
@@ -2320,12 +2168,6 @@ export {
      * @property {module:model/JobRequest}
      */
     JobRequest,
-
-    /**
-     * The JobRequestAllOf model constructor.
-     * @property {module:model/JobRequestAllOf}
-     */
-    JobRequestAllOf,
 
     /**
      * The JobRequestAllOfSchedule model constructor.
@@ -2400,12 +2242,6 @@ export {
     LifecycleJobResponse,
 
     /**
-     * The LifecycleJobResponseAllOf model constructor.
-     * @property {module:model/LifecycleJobResponseAllOf}
-     */
-    LifecycleJobResponseAllOf,
-
-    /**
      * The LifecycleJobResponseAllOfSchedule model constructor.
      * @property {module:model/LifecycleJobResponseAllOfSchedule}
      */
@@ -2436,22 +2272,10 @@ export {
     ListContainerDeploymentHistory200Response,
 
     /**
-     * The ListContainerDeploymentHistory200ResponseAllOf model constructor.
-     * @property {module:model/ListContainerDeploymentHistory200ResponseAllOf}
-     */
-    ListContainerDeploymentHistory200ResponseAllOf,
-
-    /**
      * The ListDatabaseDeploymentHistory200Response model constructor.
      * @property {module:model/ListDatabaseDeploymentHistory200Response}
      */
     ListDatabaseDeploymentHistory200Response,
-
-    /**
-     * The ListDatabaseDeploymentHistory200ResponseAllOf model constructor.
-     * @property {module:model/ListDatabaseDeploymentHistory200ResponseAllOf}
-     */
-    ListDatabaseDeploymentHistory200ResponseAllOf,
 
     /**
      * The ListHelmDeploymentHistory200Response model constructor.
@@ -2460,22 +2284,10 @@ export {
     ListHelmDeploymentHistory200Response,
 
     /**
-     * The ListHelmDeploymentHistory200ResponseAllOf model constructor.
-     * @property {module:model/ListHelmDeploymentHistory200ResponseAllOf}
-     */
-    ListHelmDeploymentHistory200ResponseAllOf,
-
-    /**
      * The ListJobDeploymentHistory200Response model constructor.
      * @property {module:model/ListJobDeploymentHistory200Response}
      */
     ListJobDeploymentHistory200Response,
-
-    /**
-     * The ListJobDeploymentHistory200ResponseAllOf model constructor.
-     * @property {module:model/ListJobDeploymentHistory200ResponseAllOf}
-     */
-    ListJobDeploymentHistory200ResponseAllOf,
 
     /**
      * The Log model constructor.
@@ -2488,12 +2300,6 @@ export {
      * @property {module:model/LogPaginatedResponseList}
      */
     LogPaginatedResponseList,
-
-    /**
-     * The LogPaginatedResponseListAllOf model constructor.
-     * @property {module:model/LogPaginatedResponseListAllOf}
-     */
-    LogPaginatedResponseListAllOf,
 
     /**
      * The LogResponseList model constructor.
@@ -2532,12 +2338,6 @@ export {
     Member,
 
     /**
-     * The MemberAllOf model constructor.
-     * @property {module:model/MemberAllOf}
-     */
-    MemberAllOf,
-
-    /**
      * The MemberResponseList model constructor.
      * @property {module:model/MemberResponseList}
      */
@@ -2562,34 +2362,16 @@ export {
     Organization,
 
     /**
-     * The OrganizationAllOf model constructor.
-     * @property {module:model/OrganizationAllOf}
-     */
-    OrganizationAllOf,
-
-    /**
      * The OrganizationApiToken model constructor.
      * @property {module:model/OrganizationApiToken}
      */
     OrganizationApiToken,
 
     /**
-     * The OrganizationApiTokenAllOf model constructor.
-     * @property {module:model/OrganizationApiTokenAllOf}
-     */
-    OrganizationApiTokenAllOf,
-
-    /**
      * The OrganizationApiTokenCreate model constructor.
      * @property {module:model/OrganizationApiTokenCreate}
      */
     OrganizationApiTokenCreate,
-
-    /**
-     * The OrganizationApiTokenCreateAllOf model constructor.
-     * @property {module:model/OrganizationApiTokenCreateAllOf}
-     */
-    OrganizationApiTokenCreateAllOf,
 
     /**
      * The OrganizationApiTokenCreateRequest model constructor.
@@ -2650,12 +2432,6 @@ export {
      * @property {module:model/OrganizationCurrentCost}
      */
     OrganizationCurrentCost,
-
-    /**
-     * The OrganizationCurrentCostAllOf model constructor.
-     * @property {module:model/OrganizationCurrentCostAllOf}
-     */
-    OrganizationCurrentCostAllOf,
 
     /**
      * The OrganizationCustomRole model constructor.
@@ -2814,12 +2590,6 @@ export {
     OrganizationWebhookCreateResponse,
 
     /**
-     * The OrganizationWebhookCreateResponseAllOf model constructor.
-     * @property {module:model/OrganizationWebhookCreateResponseAllOf}
-     */
-    OrganizationWebhookCreateResponseAllOf,
-
-    /**
      * The OrganizationWebhookEventEnum model constructor.
      * @property {module:model/OrganizationWebhookEventEnum}
      */
@@ -2910,22 +2680,10 @@ export {
     Project,
 
     /**
-     * The ProjectAllOf model constructor.
-     * @property {module:model/ProjectAllOf}
-     */
-    ProjectAllOf,
-
-    /**
      * The ProjectCurrentCost model constructor.
      * @property {module:model/ProjectCurrentCost}
      */
     ProjectCurrentCost,
-
-    /**
-     * The ProjectCurrentCostAllOf model constructor.
-     * @property {module:model/ProjectCurrentCostAllOf}
-     */
-    ProjectCurrentCostAllOf,
 
     /**
      * The ProjectCurrentCostResponseList model constructor.
@@ -2938,12 +2696,6 @@ export {
      * @property {module:model/ProjectDeploymentRule}
      */
     ProjectDeploymentRule,
-
-    /**
-     * The ProjectDeploymentRuleAllOf model constructor.
-     * @property {module:model/ProjectDeploymentRuleAllOf}
-     */
-    ProjectDeploymentRuleAllOf,
 
     /**
      * The ProjectDeploymentRuleRequest model constructor.
@@ -3054,12 +2806,6 @@ export {
     SecretAlias,
 
     /**
-     * The SecretAllOf model constructor.
-     * @property {module:model/SecretAllOf}
-     */
-    SecretAllOf,
-
-    /**
      * The SecretEditRequest model constructor.
      * @property {module:model/SecretEditRequest}
      */
@@ -3088,12 +2834,6 @@ export {
      * @property {module:model/Service}
      */
     Service,
-
-    /**
-     * The ServiceAllOf model constructor.
-     * @property {module:model/ServiceAllOf}
-     */
-    ServiceAllOf,
 
     /**
      * The ServiceDeploymentStatusEnum model constructor.
@@ -3352,12 +3092,6 @@ export {
      * @property {module:model/VariableResponse}
      */
     VariableResponse,
-
-    /**
-     * The VariableResponseAllOf model constructor.
-     * @property {module:model/VariableResponseAllOf}
-     */
-    VariableResponseAllOf,
 
     /**
      * The VariableResponseList model constructor.

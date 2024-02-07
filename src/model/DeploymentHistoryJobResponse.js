@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import Commit from './Commit';
-import DeploymentHistoryJobResponseAllOf from './DeploymentHistoryJobResponseAllOf';
 import DeploymentHistoryJobResponseAllOfSchedule from './DeploymentHistoryJobResponseAllOfSchedule';
 import StateEnum from './StateEnum';
 
@@ -28,12 +27,11 @@ class DeploymentHistoryJobResponse {
      * Constructs a new <code>DeploymentHistoryJobResponse</code>.
      * @alias module:model/DeploymentHistoryJobResponse
      * @implements module:model/Base
-     * @implements module:model/DeploymentHistoryJobResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);DeploymentHistoryJobResponseAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);
         DeploymentHistoryJobResponse.initialize(this, id, createdAt);
     }
 
@@ -58,7 +56,6 @@ class DeploymentHistoryJobResponse {
         if (data) {
             obj = obj || new DeploymentHistoryJobResponse();
             Base.constructFromObject(data, obj);
-            DeploymentHistoryJobResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -97,8 +94,58 @@ class DeploymentHistoryJobResponse {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DeploymentHistoryJobResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistoryJobResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of DeploymentHistoryJobResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['image_name'] && !(typeof data['image_name'] === 'string' || data['image_name'] instanceof String)) {
+            throw new Error("Expected the field `image_name` to be a primitive type in the JSON string but got " + data['image_name']);
+        }
+        // ensure the json data is a string
+        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
+            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
+        }
+        // validate the optional field `commit`
+        if (data['commit']) { // data not null
+          Commit.validateJSON(data['commit']);
+        }
+        // validate the optional field `schedule`
+        if (data['schedule']) { // data not null
+          DeploymentHistoryJobResponseAllOfSchedule.validateJSON(data['schedule']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['arguments'])) {
+            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
+        }
+        // ensure the json data is a string
+        if (data['entrypoint'] && !(typeof data['entrypoint'] === 'string' || data['entrypoint'] instanceof String)) {
+            throw new Error("Expected the field `entrypoint` to be a primitive type in the JSON string but got " + data['entrypoint']);
+        }
+
+        return true;
+    }
+
 
 }
+
+DeploymentHistoryJobResponse.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -170,40 +217,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement DeploymentHistoryJobResponseAllOf interface:
-/**
- * name of the job
- * @member {String} name
- */
-DeploymentHistoryJobResponseAllOf.prototype['name'] = undefined;
-/**
- * @member {module:model/StateEnum} status
- */
-DeploymentHistoryJobResponseAllOf.prototype['status'] = undefined;
-/**
- * @member {String} image_name
- */
-DeploymentHistoryJobResponseAllOf.prototype['image_name'] = undefined;
-/**
- * @member {String} tag
- */
-DeploymentHistoryJobResponseAllOf.prototype['tag'] = undefined;
-/**
- * @member {module:model/Commit} commit
- */
-DeploymentHistoryJobResponseAllOf.prototype['commit'] = undefined;
-/**
- * @member {module:model/DeploymentHistoryJobResponseAllOfSchedule} schedule
- */
-DeploymentHistoryJobResponseAllOf.prototype['schedule'] = undefined;
-/**
- * @member {Array.<String>} arguments
- */
-DeploymentHistoryJobResponseAllOf.prototype['arguments'] = undefined;
-/**
- * @member {String} entrypoint
- */
-DeploymentHistoryJobResponseAllOf.prototype['entrypoint'] = undefined;
 
 
 

@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Cost from './Cost';
-import InvoiceAllOf from './InvoiceAllOf';
 import InvoiceStatusEnum from './InvoiceStatusEnum';
 
 /**
@@ -26,7 +25,6 @@ class Invoice {
      * Constructs a new <code>Invoice</code>.
      * @alias module:model/Invoice
      * @implements module:model/Cost
-     * @implements module:model/InvoiceAllOf
      * @param totalInCents {Number} 
      * @param total {Number} 
      * @param currencyCode {String} 
@@ -35,7 +33,7 @@ class Invoice {
      * @param status {module:model/InvoiceStatusEnum} 
      */
     constructor(totalInCents, total, currencyCode, id, createdAt, status) { 
-        Cost.initialize(this, totalInCents, total, currencyCode);InvoiceAllOf.initialize(this, id, createdAt, status);
+        Cost.initialize(this, totalInCents, total, currencyCode);
         Invoice.initialize(this, totalInCents, total, currencyCode, id, createdAt, status);
     }
 
@@ -64,7 +62,6 @@ class Invoice {
         if (data) {
             obj = obj || new Invoice();
             Cost.constructFromObject(data, obj);
-            InvoiceAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('total_in_cents')) {
                 obj['total_in_cents'] = ApiClient.convertToType(data['total_in_cents'], 'Number');
@@ -88,8 +85,34 @@ class Invoice {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Invoice</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Invoice</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Invoice.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['currency_code'] && !(typeof data['currency_code'] === 'string' || data['currency_code'] instanceof String)) {
+            throw new Error("Expected the field `currency_code` to be a primitive type in the JSON string but got " + data['currency_code']);
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+Invoice.RequiredProperties = ["total_in_cents", "total", "currency_code", "id", "created_at", "status"];
 
 /**
  * @member {Number} total_in_cents
@@ -135,19 +158,6 @@ Cost.prototype['total'] = undefined;
  * @member {String} currency_code
  */
 Cost.prototype['currency_code'] = undefined;
-// Implement InvoiceAllOf interface:
-/**
- * @member {String} id
- */
-InvoiceAllOf.prototype['id'] = undefined;
-/**
- * @member {Date} created_at
- */
-InvoiceAllOf.prototype['created_at'] = undefined;
-/**
- * @member {module:model/InvoiceStatusEnum} status
- */
-InvoiceAllOf.prototype['status'] = undefined;
 
 
 

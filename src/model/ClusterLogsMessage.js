@@ -54,8 +54,24 @@ class ClusterLogsMessage {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ClusterLogsMessage</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterLogsMessage</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['safe_message'] && !(typeof data['safe_message'] === 'string' || data['safe_message'] instanceof String)) {
+            throw new Error("Expected the field `safe_message` to be a primitive type in the JSON string but got " + data['safe_message']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * log global message

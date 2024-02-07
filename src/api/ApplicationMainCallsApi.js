@@ -94,7 +94,7 @@ export default class ApplicationMainCallsApi {
      * - To edit the application you must have the admin permission. - For port edition, if you provide a port id, we will update the corresponding port. If you don't we will create a new one. If you remove a port from the payload, we will delete it. - For storage edition, if you provide a storage id, we will update the corresponding storage. If you don't we will create a new one. If you remove a storage from the payload, we will delete it. 
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ApplicationEditRequest} opts.applicationEditRequest 
+     * @param {module:model/ApplicationEditRequest} [applicationEditRequest] 
      * @param {module:api/ApplicationMainCallsApi~editApplicationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Application}
      */
@@ -224,8 +224,8 @@ export default class ApplicationMainCallsApi {
      * Returns list of the last 100 commits made on the repository linked to the application
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.startId Starting point after which to return results
-     * @param {String} opts.gitCommitId Git Commit ID
+     * @param {String} [startId] Starting point after which to return results
+     * @param {String} [gitCommitId] Git Commit ID
      * @param {module:api/ApplicationMainCallsApi~listApplicationCommitCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CommitResponseList}
      */

@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import GitProviderEnum from './GitProviderEnum';
-import GitTokenResponseAllOf from './GitTokenResponseAllOf';
 
 /**
  * The GitTokenResponse model module.
@@ -26,7 +25,6 @@ class GitTokenResponse {
      * Constructs a new <code>GitTokenResponse</code>.
      * @alias module:model/GitTokenResponse
      * @implements module:model/Base
-     * @implements module:model/GitTokenResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} 
@@ -34,7 +32,7 @@ class GitTokenResponse {
      * @param associatedServicesCount {Number} The number of services using this git token
      */
     constructor(id, createdAt, name, type, associatedServicesCount) { 
-        Base.initialize(this, id, createdAt);GitTokenResponseAllOf.initialize(this, name, type, associatedServicesCount);
+        Base.initialize(this, id, createdAt);
         GitTokenResponse.initialize(this, id, createdAt, name, type, associatedServicesCount);
     }
 
@@ -62,7 +60,6 @@ class GitTokenResponse {
         if (data) {
             obj = obj || new GitTokenResponse();
             Base.constructFromObject(data, obj);
-            GitTokenResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -95,8 +92,42 @@ class GitTokenResponse {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>GitTokenResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GitTokenResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of GitTokenResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['workspace'] && !(typeof data['workspace'] === 'string' || data['workspace'] instanceof String)) {
+            throw new Error("Expected the field `workspace` to be a primitive type in the JSON string but got " + data['workspace']);
+        }
+
+        return true;
+    }
+
 
 }
+
+GitTokenResponse.RequiredProperties = ["id", "created_at", "name", "type", "associated_services_count"];
 
 /**
  * @member {String} id
@@ -159,33 +190,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement GitTokenResponseAllOf interface:
-/**
- * @member {String} name
- */
-GitTokenResponseAllOf.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-GitTokenResponseAllOf.prototype['description'] = undefined;
-/**
- * @member {module:model/GitProviderEnum} type
- */
-GitTokenResponseAllOf.prototype['type'] = undefined;
-/**
- * @member {Date} expired_at
- */
-GitTokenResponseAllOf.prototype['expired_at'] = undefined;
-/**
- * Mandatory only for BITBUCKET git provider
- * @member {String} workspace
- */
-GitTokenResponseAllOf.prototype['workspace'] = undefined;
-/**
- * The number of services using this git token
- * @member {Number} associated_services_count
- */
-GitTokenResponseAllOf.prototype['associated_services_count'] = undefined;
 
 
 

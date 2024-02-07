@@ -47,7 +47,7 @@ export default class HelmConfigurationApi {
      * Edit advanced settings by returning table of advanced settings.
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmAdvancedSettings} opts.helmAdvancedSettings 
+     * @param {module:model/HelmAdvancedSettings} [helmAdvancedSettings] 
      * @param {module:api/HelmConfigurationApi~editHelmAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmAdvancedSettings}
      */

@@ -54,7 +54,7 @@ export default class ContainerEnvironmentVariableApi {
      * - Add an environment variable to the container. 
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentVariableRequest} opts.environmentVariableRequest 
+     * @param {module:model/EnvironmentVariableRequest} [environmentVariableRequest] 
      * @param {module:api/ContainerEnvironmentVariableApi~createContainerEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -101,7 +101,7 @@ export default class ContainerEnvironmentVariableApi {
      * @param {String} containerId Container ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} opts.key 
+     * @param {module:model/Key} [key] 
      * @param {module:api/ContainerEnvironmentVariableApi~createContainerEnvironmentVariableAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -153,7 +153,7 @@ export default class ContainerEnvironmentVariableApi {
      * @param {String} containerId Container ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} opts.value 
+     * @param {module:model/Value} [value] 
      * @param {module:api/ContainerEnvironmentVariableApi~createContainerEnvironmentVariableOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -306,7 +306,7 @@ export default class ContainerEnvironmentVariableApi {
      * Import environment variables in a defined scope, with a defined visibility.
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/VariableImportRequest} opts.variableImportRequest 
+     * @param {module:model/VariableImportRequest} [variableImportRequest] 
      * @param {module:api/ContainerEnvironmentVariableApi~importContainerEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableImport}
      */

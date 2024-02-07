@@ -54,8 +54,24 @@ class ProjectDeploymentRulesPriorityOrderRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ProjectDeploymentRulesPriorityOrderRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectDeploymentRulesPriorityOrderRequest</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is an array
+        if (!Array.isArray(data['project_deployment_rule_ids_in_order'])) {
+            throw new Error("Expected the field `project_deployment_rule_ids_in_order` to be an array in the JSON data but got " + data['project_deployment_rule_ids_in_order']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Array.<String>} project_deployment_rule_ids_in_order

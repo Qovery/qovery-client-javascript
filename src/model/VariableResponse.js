@@ -18,7 +18,6 @@ import Base from './Base';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
 import VariableAlias from './VariableAlias';
 import VariableOverride from './VariableOverride';
-import VariableResponseAllOf from './VariableResponseAllOf';
 
 /**
  * The VariableResponse model module.
@@ -30,7 +29,6 @@ class VariableResponse {
      * Constructs a new <code>VariableResponse</code>.
      * @alias module:model/VariableResponse
      * @implements module:model/Base
-     * @implements module:model/VariableResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param key {String} 
@@ -39,7 +37,7 @@ class VariableResponse {
      * @param isSecret {Boolean} 
      */
     constructor(id, createdAt, key, value, scope, isSecret) { 
-        Base.initialize(this, id, createdAt);VariableResponseAllOf.initialize(this, key, value, scope, isSecret);
+        Base.initialize(this, id, createdAt);
         VariableResponse.initialize(this, id, createdAt, key, value, scope, isSecret);
     }
 
@@ -68,7 +66,6 @@ class VariableResponse {
         if (data) {
             obj = obj || new VariableResponse();
             Base.constructFromObject(data, obj);
-            VariableResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -119,8 +116,62 @@ class VariableResponse {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>VariableResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>VariableResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of VariableResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['key'] && !(typeof data['key'] === 'string' || data['key'] instanceof String)) {
+            throw new Error("Expected the field `key` to be a primitive type in the JSON string but got " + data['key']);
+        }
+        // ensure the json data is a string
+        if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
+            throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
+        }
+        // ensure the json data is a string
+        if (data['mount_path'] && !(typeof data['mount_path'] === 'string' || data['mount_path'] instanceof String)) {
+            throw new Error("Expected the field `mount_path` to be a primitive type in the JSON string but got " + data['mount_path']);
+        }
+        // validate the optional field `overridden_variable`
+        if (data['overridden_variable']) { // data not null
+          VariableOverride.validateJSON(data['overridden_variable']);
+        }
+        // validate the optional field `aliased_variable`
+        if (data['aliased_variable']) { // data not null
+          VariableAlias.validateJSON(data['aliased_variable']);
+        }
+        // ensure the json data is a string
+        if (data['service_id'] && !(typeof data['service_id'] === 'string' || data['service_id'] instanceof String)) {
+            throw new Error("Expected the field `service_id` to be a primitive type in the JSON string but got " + data['service_id']);
+        }
+        // ensure the json data is a string
+        if (data['service_name'] && !(typeof data['service_name'] === 'string' || data['service_name'] instanceof String)) {
+            throw new Error("Expected the field `service_name` to be a primitive type in the JSON string but got " + data['service_name']);
+        }
+        // ensure the json data is a string
+        if (data['owned_by'] && !(typeof data['owned_by'] === 'string' || data['owned_by'] instanceof String)) {
+            throw new Error("Expected the field `owned_by` to be a primitive type in the JSON string but got " + data['owned_by']);
+        }
+
+        return true;
+    }
+
 
 }
+
+VariableResponse.RequiredProperties = ["id", "created_at", "key", "value", "scope", "is_secret"];
 
 /**
  * @member {String} id
@@ -214,58 +265,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement VariableResponseAllOf interface:
-/**
- * @member {String} key
- */
-VariableResponseAllOf.prototype['key'] = undefined;
-/**
- * @member {String} value
- */
-VariableResponseAllOf.prototype['value'] = undefined;
-/**
- * @member {String} mount_path
- */
-VariableResponseAllOf.prototype['mount_path'] = undefined;
-/**
- * @member {module:model/VariableOverride} overridden_variable
- */
-VariableResponseAllOf.prototype['overridden_variable'] = undefined;
-/**
- * @member {module:model/VariableAlias} aliased_variable
- */
-VariableResponseAllOf.prototype['aliased_variable'] = undefined;
-/**
- * @member {module:model/APIVariableScopeEnum} scope
- */
-VariableResponseAllOf.prototype['scope'] = undefined;
-/**
- * @member {module:model/APIVariableTypeEnum} variable_type
- */
-VariableResponseAllOf.prototype['variable_type'] = undefined;
-/**
- * The id of the service referenced by this variable.
- * @member {String} service_id
- */
-VariableResponseAllOf.prototype['service_id'] = undefined;
-/**
- * The name of the service referenced by this variable.
- * @member {String} service_name
- */
-VariableResponseAllOf.prototype['service_name'] = undefined;
-/**
- * @member {module:model/LinkedServiceTypeEnum} service_type
- */
-VariableResponseAllOf.prototype['service_type'] = undefined;
-/**
- * Entity that created/own the variable (i.e: Qovery, Doppler)
- * @member {String} owned_by
- */
-VariableResponseAllOf.prototype['owned_by'] = undefined;
-/**
- * @member {Boolean} is_secret
- */
-VariableResponseAllOf.prototype['is_secret'] = undefined;
 
 
 

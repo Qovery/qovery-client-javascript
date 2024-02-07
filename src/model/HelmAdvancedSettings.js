@@ -117,8 +117,56 @@ class HelmAdvancedSettings {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>HelmAdvancedSettings</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmAdvancedSettings</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['network.ingress.cors_allow_origin'] && !(typeof data['network.ingress.cors_allow_origin'] === 'string' || data['network.ingress.cors_allow_origin'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.cors_allow_origin` to be a primitive type in the JSON string but got " + data['network.ingress.cors_allow_origin']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.cors_allow_methods'] && !(typeof data['network.ingress.cors_allow_methods'] === 'string' || data['network.ingress.cors_allow_methods'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.cors_allow_methods` to be a primitive type in the JSON string but got " + data['network.ingress.cors_allow_methods']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.cors_allow_headers'] && !(typeof data['network.ingress.cors_allow_headers'] === 'string' || data['network.ingress.cors_allow_headers'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.cors_allow_headers` to be a primitive type in the JSON string but got " + data['network.ingress.cors_allow_headers']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.proxy_buffering'] && !(typeof data['network.ingress.proxy_buffering'] === 'string' || data['network.ingress.proxy_buffering'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.proxy_buffering` to be a primitive type in the JSON string but got " + data['network.ingress.proxy_buffering']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.proxy_request_buffering'] && !(typeof data['network.ingress.proxy_request_buffering'] === 'string' || data['network.ingress.proxy_request_buffering'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.proxy_request_buffering` to be a primitive type in the JSON string but got " + data['network.ingress.proxy_request_buffering']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.whitelist_source_range'] && !(typeof data['network.ingress.whitelist_source_range'] === 'string' || data['network.ingress.whitelist_source_range'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.whitelist_source_range` to be a primitive type in the JSON string but got " + data['network.ingress.whitelist_source_range']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.denylist_source_range'] && !(typeof data['network.ingress.denylist_source_range'] === 'string' || data['network.ingress.denylist_source_range'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.denylist_source_range` to be a primitive type in the JSON string but got " + data['network.ingress.denylist_source_range']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.extra_headers'] && !(typeof data['network.ingress.extra_headers'] === 'string' || data['network.ingress.extra_headers'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.extra_headers` to be a primitive type in the JSON string but got " + data['network.ingress.extra_headers']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.basic_auth_env_var'] && !(typeof data['network.ingress.basic_auth_env_var'] === 'string' || data['network.ingress.basic_auth_env_var'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.basic_auth_env_var` to be a primitive type in the JSON string but got " + data['network.ingress.basic_auth_env_var']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * disable custom domain check when deploying a helm

@@ -48,7 +48,7 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get bitbucket repositories of the connected user
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {String} [gitTokenId] The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationBitbucketRepositoriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryResponseList}
      */
@@ -94,8 +94,8 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get bitbucket branches of the specified repository
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.name The name of the repository where to retrieve the branches
-     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {String} [name] The name of the repository where to retrieve the branches
+     * @param {String} [gitTokenId] The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationBitbucketRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
      */
@@ -184,7 +184,7 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get github repositories of the connected user
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {String} [gitTokenId] The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGithubRepositoriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryResponseList}
      */
@@ -230,8 +230,8 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get github branches of the specified repository
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.name The name of the repository where to retrieve the branches
-     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {String} [name] The name of the repository where to retrieve the branches
+     * @param {String} [gitTokenId] The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGithubRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
      */
@@ -278,7 +278,7 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get gitlab repositories of the connected user
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {String} [gitTokenId] The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitlabRepositoriesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryResponseList}
      */
@@ -324,8 +324,8 @@ export default class OrganizationAccountGitRepositoriesApi {
      * Get gitlab branches of the specified repository
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.name The name of the repository to retrieve the branches
-     * @param {String} opts.gitTokenId The git token id that must be used for the application
+     * @param {String} [name] The name of the repository to retrieve the branches
+     * @param {String} [gitTokenId] The git token id that must be used for the application
      * @param {module:api/OrganizationAccountGitRepositoriesApi~getOrganizationGitlabRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
      */

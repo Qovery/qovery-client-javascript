@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import Cost from './Cost';
 import GenericObjectCurrentCost from './GenericObjectCurrentCost';
-import ProjectCurrentCostAllOf from './ProjectCurrentCostAllOf';
 
 /**
  * The ProjectCurrentCost model module.
@@ -26,14 +25,13 @@ class ProjectCurrentCost {
      * Constructs a new <code>ProjectCurrentCost</code>.
      * @alias module:model/ProjectCurrentCost
      * @implements module:model/GenericObjectCurrentCost
-     * @implements module:model/ProjectCurrentCostAllOf
      * @param id {String} 
      * @param name {String} 
      * @param consumedTimeInSeconds {Number} 
      * @param cost {module:model/Cost} 
      */
     constructor(id, name, consumedTimeInSeconds, cost) { 
-        GenericObjectCurrentCost.initialize(this, id, name, consumedTimeInSeconds, cost);ProjectCurrentCostAllOf.initialize(this);
+        GenericObjectCurrentCost.initialize(this, id, name, consumedTimeInSeconds, cost);
         ProjectCurrentCost.initialize(this, id, name, consumedTimeInSeconds, cost);
     }
 
@@ -60,7 +58,6 @@ class ProjectCurrentCost {
         if (data) {
             obj = obj || new ProjectCurrentCost();
             GenericObjectCurrentCost.constructFromObject(data, obj);
-            ProjectCurrentCostAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -81,8 +78,48 @@ class ProjectCurrentCost {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ProjectCurrentCost</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectCurrentCost</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ProjectCurrentCost.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // validate the optional field `cost`
+        if (data['cost']) { // data not null
+          Cost.validateJSON(data['cost']);
+        }
+        if (data['environments']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['environments'])) {
+                throw new Error("Expected the field `environments` to be an array in the JSON data but got " + data['environments']);
+            }
+            // validate the optional field `environments` (array)
+            for (const item of data['environments']) {
+                GenericObjectCurrentCost.validateJSON(item);
+            };
+        }
+
+        return true;
+    }
+
 
 }
+
+ProjectCurrentCost.RequiredProperties = ["id", "name", "consumed_time_in_seconds", "cost"];
 
 /**
  * @member {String} id
@@ -127,11 +164,6 @@ GenericObjectCurrentCost.prototype['consumed_time_in_seconds'] = undefined;
  * @member {module:model/Cost} cost
  */
 GenericObjectCurrentCost.prototype['cost'] = undefined;
-// Implement ProjectCurrentCostAllOf interface:
-/**
- * @member {Array.<module:model/GenericObjectCurrentCost>} environments
- */
-ProjectCurrentCostAllOf.prototype['environments'] = undefined;
 
 
 

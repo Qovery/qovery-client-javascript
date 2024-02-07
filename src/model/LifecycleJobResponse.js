@@ -12,11 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationGitRepository from './ApplicationGitRepository';
 import BaseJobResponse from './BaseJobResponse';
-import ContainerSource from './ContainerSource';
+import BaseJobResponseAllOfSource from './BaseJobResponseAllOfSource';
 import Healthcheck from './Healthcheck';
-import LifecycleJobResponseAllOf from './LifecycleJobResponseAllOf';
 import LifecycleJobResponseAllOfSchedule from './LifecycleJobResponseAllOfSchedule';
 import ReferenceObject from './ReferenceObject';
 
@@ -30,7 +28,6 @@ class LifecycleJobResponse {
      * Constructs a new <code>LifecycleJobResponse</code>.
      * @alias module:model/LifecycleJobResponse
      * @implements module:model/BaseJobResponse
-     * @implements module:model/LifecycleJobResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
@@ -40,13 +37,13 @@ class LifecycleJobResponse {
      * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
-     * @param source {module:model/OneOfobjectobject} 
+     * @param source {module:model/BaseJobResponseAllOfSource} 
      * @param healthchecks {module:model/Healthcheck} 
      * @param jobType {module:model/LifecycleJobResponse.JobTypeEnum} 
      * @param schedule {module:model/LifecycleJobResponseAllOfSchedule} 
      */
     constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule) { 
-        BaseJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);LifecycleJobResponseAllOf.initialize(this, jobType, schedule);
+        BaseJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);
         LifecycleJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);
     }
 
@@ -82,7 +79,6 @@ class LifecycleJobResponse {
         if (data) {
             obj = obj || new LifecycleJobResponse();
             BaseJobResponse.constructFromObject(data, obj);
-            LifecycleJobResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -127,7 +123,7 @@ class LifecycleJobResponse {
                 obj['port'] = ApiClient.convertToType(data['port'], 'Number');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
+                obj['source'] = BaseJobResponseAllOfSource.constructFromObject(data['source']);
             }
             if (data.hasOwnProperty('healthchecks')) {
                 obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
@@ -145,8 +141,58 @@ class LifecycleJobResponse {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>LifecycleJobResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LifecycleJobResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of LifecycleJobResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // validate the optional field `environment`
+        if (data['environment']) { // data not null
+          ReferenceObject.validateJSON(data['environment']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // validate the optional field `source`
+        if (data['source']) { // data not null
+          BaseJobResponseAllOfSource.validateJSON(data['source']);
+        }
+        // validate the optional field `healthchecks`
+        if (data['healthchecks']) { // data not null
+          Healthcheck.validateJSON(data['healthchecks']);
+        }
+        // ensure the json data is a string
+        if (data['job_type'] && !(typeof data['job_type'] === 'string' || data['job_type'] instanceof String)) {
+            throw new Error("Expected the field `job_type` to be a primitive type in the JSON string but got " + data['job_type']);
+        }
+        // validate the optional field `schedule`
+        if (data['schedule']) { // data not null
+          LifecycleJobResponseAllOfSchedule.validateJSON(data['schedule']);
+        }
+
+        return true;
+    }
+
 
 }
+
+LifecycleJobResponse.RequiredProperties = ["id", "created_at", "environment", "maximum_cpu", "maximum_memory", "name", "cpu", "memory", "auto_preview", "source", "healthchecks", "job_type", "schedule"];
 
 /**
  * @member {String} id
@@ -228,7 +274,7 @@ LifecycleJobResponse.prototype['auto_preview'] = undefined;
 LifecycleJobResponse.prototype['port'] = undefined;
 
 /**
- * @member {module:model/OneOfobjectobject} source
+ * @member {module:model/BaseJobResponseAllOfSource} source
  */
 LifecycleJobResponse.prototype['source'] = undefined;
 
@@ -321,7 +367,7 @@ BaseJobResponse.prototype['auto_preview'] = undefined;
  */
 BaseJobResponse.prototype['port'] = undefined;
 /**
- * @member {module:model/OneOfobjectobject} source
+ * @member {module:model/BaseJobResponseAllOfSource} source
  */
 BaseJobResponse.prototype['source'] = undefined;
 /**
@@ -333,15 +379,6 @@ BaseJobResponse.prototype['healthchecks'] = undefined;
  * @member {Boolean} auto_deploy
  */
 BaseJobResponse.prototype['auto_deploy'] = undefined;
-// Implement LifecycleJobResponseAllOf interface:
-/**
- * @member {module:model/LifecycleJobResponseAllOf.JobTypeEnum} job_type
- */
-LifecycleJobResponseAllOf.prototype['job_type'] = undefined;
-/**
- * @member {module:model/LifecycleJobResponseAllOfSchedule} schedule
- */
-LifecycleJobResponseAllOf.prototype['schedule'] = undefined;
 
 
 

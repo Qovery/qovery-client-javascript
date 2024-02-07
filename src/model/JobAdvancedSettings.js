@@ -84,8 +84,28 @@ class JobAdvancedSettings {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>JobAdvancedSettings</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>JobAdvancedSettings</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['cronjob.concurrency_policy'] && !(typeof data['cronjob.concurrency_policy'] === 'string' || data['cronjob.concurrency_policy'] instanceof String)) {
+            throw new Error("Expected the field `cronjob.concurrency_policy` to be a primitive type in the JSON string but got " + data['cronjob.concurrency_policy']);
+        }
+        // ensure the json data is a string
+        if (data['security.service_account_name'] && !(typeof data['security.service_account_name'] === 'string' || data['security.service_account_name'] instanceof String)) {
+            throw new Error("Expected the field `security.service_account_name` to be a primitive type in the JSON string but got " + data['security.service_account_name']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * define the max timeout for the build

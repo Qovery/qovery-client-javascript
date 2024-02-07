@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import ContainerRequestAllOf from './ContainerRequestAllOf';
 import Healthcheck from './Healthcheck';
 import ServicePortRequest from './ServicePortRequest';
 import ServicePortRequestPortsInner from './ServicePortRequestPortsInner';
@@ -30,7 +29,6 @@ class ContainerRequest {
      * @alias module:model/ContainerRequest
      * @implements module:model/ServiceStorageRequest
      * @implements module:model/ServicePortRequest
-     * @implements module:model/ContainerRequestAllOf
      * @param name {String} name is case insensitive
      * @param registryId {String} id of the linked registry
      * @param imageName {String} The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
@@ -38,7 +36,7 @@ class ContainerRequest {
      * @param healthchecks {module:model/Healthcheck} 
      */
     constructor(name, registryId, imageName, tag, healthchecks) { 
-        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);ContainerRequestAllOf.initialize(this, name, registryId, imageName, tag, healthchecks);
+        ServiceStorageRequest.initialize(this);ServicePortRequest.initialize(this);
         ContainerRequest.initialize(this, name, registryId, imageName, tag, healthchecks);
     }
 
@@ -67,7 +65,6 @@ class ContainerRequest {
             obj = obj || new ContainerRequest();
             ServiceStorageRequest.constructFromObject(data, obj);
             ServicePortRequest.constructFromObject(data, obj);
-            ContainerRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageRequestStorageInner]);
@@ -121,8 +118,78 @@ class ContainerRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ContainerRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ContainerRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ContainerRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        if (data['storage']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['storage'])) {
+                throw new Error("Expected the field `storage` to be an array in the JSON data but got " + data['storage']);
+            }
+            // validate the optional field `storage` (array)
+            for (const item of data['storage']) {
+                ServiceStorageRequestStorageInner.validateJSON(item);
+            };
+        }
+        if (data['ports']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['ports'])) {
+                throw new Error("Expected the field `ports` to be an array in the JSON data but got " + data['ports']);
+            }
+            // validate the optional field `ports` (array)
+            for (const item of data['ports']) {
+                ServicePortRequestPortsInner.validateJSON(item);
+            };
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['registry_id'] && !(typeof data['registry_id'] === 'string' || data['registry_id'] instanceof String)) {
+            throw new Error("Expected the field `registry_id` to be a primitive type in the JSON string but got " + data['registry_id']);
+        }
+        // ensure the json data is a string
+        if (data['image_name'] && !(typeof data['image_name'] === 'string' || data['image_name'] instanceof String)) {
+            throw new Error("Expected the field `image_name` to be a primitive type in the JSON string but got " + data['image_name']);
+        }
+        // ensure the json data is a string
+        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
+            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['arguments'])) {
+            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
+        }
+        // ensure the json data is a string
+        if (data['entrypoint'] && !(typeof data['entrypoint'] === 'string' || data['entrypoint'] instanceof String)) {
+            throw new Error("Expected the field `entrypoint` to be a primitive type in the JSON string but got " + data['entrypoint']);
+        }
+        // validate the optional field `healthchecks`
+        if (data['healthchecks']) { // data not null
+          Healthcheck.validateJSON(data['healthchecks']);
+        }
+
+        return true;
+    }
+
 
 }
+
+ContainerRequest.RequiredProperties = ["name", "registry_id", "image_name", "tag", "healthchecks"];
 
 /**
  * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
@@ -231,79 +298,6 @@ ServiceStorageRequest.prototype['storage'] = undefined;
  * @member {Array.<module:model/ServicePortRequestPortsInner>} ports
  */
 ServicePortRequest.prototype['ports'] = undefined;
-// Implement ContainerRequestAllOf interface:
-/**
- * name is case insensitive
- * @member {String} name
- */
-ContainerRequestAllOf.prototype['name'] = undefined;
-/**
- * give a description to this container
- * @member {String} description
- */
-ContainerRequestAllOf.prototype['description'] = undefined;
-/**
- * id of the linked registry
- * @member {String} registry_id
- */
-ContainerRequestAllOf.prototype['registry_id'] = undefined;
-/**
- * The image name pattern differs according to chosen container registry provider:   * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
- * @member {String} image_name
- */
-ContainerRequestAllOf.prototype['image_name'] = undefined;
-/**
- * tag of the image container
- * @member {String} tag
- */
-ContainerRequestAllOf.prototype['tag'] = undefined;
-/**
- * @member {Array.<String>} arguments
- */
-ContainerRequestAllOf.prototype['arguments'] = undefined;
-/**
- * optional entrypoint when launching container
- * @member {String} entrypoint
- */
-ContainerRequestAllOf.prototype['entrypoint'] = undefined;
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 500
- */
-ContainerRequestAllOf.prototype['cpu'] = 500;
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 512
- */
-ContainerRequestAllOf.prototype['memory'] = 512;
-/**
- * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
- * @member {Number} min_running_instances
- * @default 1
- */
-ContainerRequestAllOf.prototype['min_running_instances'] = 1;
-/**
- * Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
- * @member {Number} max_running_instances
- * @default 1
- */
-ContainerRequestAllOf.prototype['max_running_instances'] = 1;
-/**
- * @member {module:model/Healthcheck} healthchecks
- */
-ContainerRequestAllOf.prototype['healthchecks'] = undefined;
-/**
- * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
- * @member {Boolean} auto_preview
- */
-ContainerRequestAllOf.prototype['auto_preview'] = undefined;
-/**
- * Specify if the container will be automatically updated after receiving a new image tag.  The new image tag shall be communicated via the \"Auto Deploy container\" endpoint https://api-doc.qovery.com/#tag/Containers/operation/autoDeployContainerEnvironments 
- * @member {Boolean} auto_deploy
- */
-ContainerRequestAllOf.prototype['auto_deploy'] = undefined;
 
 
 

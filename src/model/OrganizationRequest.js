@@ -80,8 +80,54 @@ class OrganizationRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>OrganizationRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of OrganizationRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['website_url'] && !(typeof data['website_url'] === 'string' || data['website_url'] instanceof String)) {
+            throw new Error("Expected the field `website_url` to be a primitive type in the JSON string but got " + data['website_url']);
+        }
+        // ensure the json data is a string
+        if (data['repository'] && !(typeof data['repository'] === 'string' || data['repository'] instanceof String)) {
+            throw new Error("Expected the field `repository` to be a primitive type in the JSON string but got " + data['repository']);
+        }
+        // ensure the json data is a string
+        if (data['logo_url'] && !(typeof data['logo_url'] === 'string' || data['logo_url'] instanceof String)) {
+            throw new Error("Expected the field `logo_url` to be a primitive type in the JSON string but got " + data['logo_url']);
+        }
+        // ensure the json data is a string
+        if (data['icon_url'] && !(typeof data['icon_url'] === 'string' || data['icon_url'] instanceof String)) {
+            throw new Error("Expected the field `icon_url` to be a primitive type in the JSON string but got " + data['icon_url']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['admin_emails'])) {
+            throw new Error("Expected the field `admin_emails` to be an array in the JSON data but got " + data['admin_emails']);
+        }
+
+        return true;
+    }
+
 
 }
+
+OrganizationRequest.RequiredProperties = ["name", "plan"];
 
 /**
  * name is case insensitive

@@ -62,8 +62,28 @@ class ClusterCloudProviderInfoRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ClusterCloudProviderInfoRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterCloudProviderInfoRequest</code>.
+     */
+    static validateJSON(data) {
+        // validate the optional field `credentials`
+        if (data['credentials']) { // data not null
+          ClusterCloudProviderInfoCredentials.validateJSON(data['credentials']);
+        }
+        // ensure the json data is a string
+        if (data['region'] && !(typeof data['region'] === 'string' || data['region'] instanceof String)) {
+            throw new Error("Expected the field `region` to be a primitive type in the JSON string but got " + data['region']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {module:model/CloudProviderEnum} cloud_provider

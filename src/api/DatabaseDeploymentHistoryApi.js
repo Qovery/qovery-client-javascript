@@ -47,7 +47,7 @@ export default class DatabaseDeploymentHistoryApi {
      * By default it returns the 20 last results. The response is paginated.
      * @param {String} databaseId Database ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.startId Starting point after which to return results
+     * @param {String} [startId] Starting point after which to return results
      * @param {module:api/DatabaseDeploymentHistoryApi~listDatabaseDeploymentHistoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListDatabaseDeploymentHistory200Response}
      */

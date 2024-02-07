@@ -61,8 +61,34 @@ class OrganizationGithubAppConnectRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>OrganizationGithubAppConnectRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationGithubAppConnectRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of OrganizationGithubAppConnectRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['installation_id'] && !(typeof data['installation_id'] === 'string' || data['installation_id'] instanceof String)) {
+            throw new Error("Expected the field `installation_id` to be a primitive type in the JSON string but got " + data['installation_id']);
+        }
+        // ensure the json data is a string
+        if (data['code'] && !(typeof data['code'] === 'string' || data['code'] instanceof String)) {
+            throw new Error("Expected the field `code` to be a primitive type in the JSON string but got " + data['code']);
+        }
+
+        return true;
+    }
+
 
 }
+
+OrganizationGithubAppConnectRequest.RequiredProperties = ["installation_id", "code"];
 
 /**
  * @member {String} installation_id

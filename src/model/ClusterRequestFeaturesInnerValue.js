@@ -23,27 +23,64 @@ class ClusterRequestFeaturesInnerValue {
     /**
      * Constructs a new <code>ClusterRequestFeaturesInnerValue</code>.
      * @alias module:model/ClusterRequestFeaturesInnerValue
-     * @implements module:model/ClusterRequestFeaturesInnerValueOneOf
-     * @param awsVpcEksId {String} 
-     * @param eksSubnetsZoneAIds {Array.<String>} 
-     * @param eksSubnetsZoneBIds {Array.<String>} 
-     * @param eksSubnetsZoneCIds {Array.<String>} 
+     * @param {(module:model/Boolean|module:model/ClusterRequestFeaturesInnerValueOneOf|module:model/String)} instance The actual instance to initialize ClusterRequestFeaturesInnerValue.
      */
-    constructor(awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds) { 
-        ClusterRequestFeaturesInnerValueOneOf.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
-        ClusterRequestFeaturesInnerValue.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
-    }
+    constructor(instance = null) {
+        if (instance === null) {
+            this.actualInstance = null;
+            return;
+        }
+        var match = 0;
+        var errorMessages = [];
+        try {
+            // validate string
+            if (!(typeof instance === 'string')) {
+                throw new Error("Invalid value. Must be string. Input: " + JSON.stringify(instance));
+            }
+            this.actualInstance = instance;
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into String
+            errorMessages.push("Failed to construct String: " + err)
+        }
 
-    /**
-     * Initializes the fields of this object.
-     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
-     * Only for internal use.
-     */
-    static initialize(obj, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds) { 
-        obj['aws_vpc_eks_id'] = awsVpcEksId;
-        obj['eks_subnets_zone_a_ids'] = eksSubnetsZoneAIds;
-        obj['eks_subnets_zone_b_ids'] = eksSubnetsZoneBIds;
-        obj['eks_subnets_zone_c_ids'] = eksSubnetsZoneCIds;
+        try {
+            // validate boolean
+            if (!(typeof instance === 'boolean')) {
+                throw new Error("Invalid value. Must be boolean. Input: " + JSON.stringify(instance));
+            }
+            this.actualInstance = instance;
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into Boolean
+            errorMessages.push("Failed to construct Boolean: " + err)
+        }
+
+        try {
+            if (typeof instance === "ClusterRequestFeaturesInnerValueOneOf") {
+                this.actualInstance = instance;
+            } else {
+                // plain JS object
+                // validate the object
+                ClusterRequestFeaturesInnerValueOneOf.validateJSON(instance); // throw an exception if no match
+                // create ClusterRequestFeaturesInnerValueOneOf from JS object
+                this.actualInstance = ClusterRequestFeaturesInnerValueOneOf.constructFromObject(instance);
+            }
+            match++;
+        } catch(err) {
+            // json data failed to deserialize into ClusterRequestFeaturesInnerValueOneOf
+            errorMessages.push("Failed to construct ClusterRequestFeaturesInnerValueOneOf: " + err)
+        }
+
+        if (match > 1) {
+            throw new Error("Multiple matches found constructing `ClusterRequestFeaturesInnerValue` with oneOf schemas Boolean, ClusterRequestFeaturesInnerValueOneOf, String. Input: " + JSON.stringify(instance));
+        } else if (match === 0) {
+            this.actualInstance = null; // clear the actual instance in case there are multiple matches
+            throw new Error("No match found constructing `ClusterRequestFeaturesInnerValue` with oneOf schemas Boolean, ClusterRequestFeaturesInnerValueOneOf, String. Details: " +
+                            errorMessages.join(", "));
+        } else { // only 1 match
+            // the input is valid
+        }
     }
 
     /**
@@ -54,54 +91,41 @@ class ClusterRequestFeaturesInnerValue {
      * @return {module:model/ClusterRequestFeaturesInnerValue} The populated <code>ClusterRequestFeaturesInnerValue</code> instance.
      */
     static constructFromObject(data, obj) {
-        if (data) {
-            obj = obj || new ClusterRequestFeaturesInnerValue();
-            ClusterRequestFeaturesInnerValueOneOf.constructFromObject(data, obj);
-
-            if (data.hasOwnProperty('aws_vpc_eks_id')) {
-                obj['aws_vpc_eks_id'] = ApiClient.convertToType(data['aws_vpc_eks_id'], 'String');
-            }
-            if (data.hasOwnProperty('eks_subnets_zone_a_ids')) {
-                obj['eks_subnets_zone_a_ids'] = ApiClient.convertToType(data['eks_subnets_zone_a_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('eks_subnets_zone_b_ids')) {
-                obj['eks_subnets_zone_b_ids'] = ApiClient.convertToType(data['eks_subnets_zone_b_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('eks_subnets_zone_c_ids')) {
-                obj['eks_subnets_zone_c_ids'] = ApiClient.convertToType(data['eks_subnets_zone_c_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('documentdb_subnets_zone_a_ids')) {
-                obj['documentdb_subnets_zone_a_ids'] = ApiClient.convertToType(data['documentdb_subnets_zone_a_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('documentdb_subnets_zone_b_ids')) {
-                obj['documentdb_subnets_zone_b_ids'] = ApiClient.convertToType(data['documentdb_subnets_zone_b_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('documentdb_subnets_zone_c_ids')) {
-                obj['documentdb_subnets_zone_c_ids'] = ApiClient.convertToType(data['documentdb_subnets_zone_c_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('elasticache_subnets_zone_a_ids')) {
-                obj['elasticache_subnets_zone_a_ids'] = ApiClient.convertToType(data['elasticache_subnets_zone_a_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('elasticache_subnets_zone_b_ids')) {
-                obj['elasticache_subnets_zone_b_ids'] = ApiClient.convertToType(data['elasticache_subnets_zone_b_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('elasticache_subnets_zone_c_ids')) {
-                obj['elasticache_subnets_zone_c_ids'] = ApiClient.convertToType(data['elasticache_subnets_zone_c_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('rds_subnets_zone_a_ids')) {
-                obj['rds_subnets_zone_a_ids'] = ApiClient.convertToType(data['rds_subnets_zone_a_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('rds_subnets_zone_b_ids')) {
-                obj['rds_subnets_zone_b_ids'] = ApiClient.convertToType(data['rds_subnets_zone_b_ids'], ['String']);
-            }
-            if (data.hasOwnProperty('rds_subnets_zone_c_ids')) {
-                obj['rds_subnets_zone_c_ids'] = ApiClient.convertToType(data['rds_subnets_zone_c_ids'], ['String']);
-            }
-        }
-        return obj;
+        return new ClusterRequestFeaturesInnerValue(data);
     }
 
+    /**
+     * Gets the actual instance, which can be <code>Boolean</code>, <code>ClusterRequestFeaturesInnerValueOneOf</code>, <code>String</code>.
+     * @return {(module:model/Boolean|module:model/ClusterRequestFeaturesInnerValueOneOf|module:model/String)} The actual instance.
+     */
+    getActualInstance() {
+        return this.actualInstance;
+    }
 
+    /**
+     * Sets the actual instance, which can be <code>Boolean</code>, <code>ClusterRequestFeaturesInnerValueOneOf</code>, <code>String</code>.
+     * @param {(module:model/Boolean|module:model/ClusterRequestFeaturesInnerValueOneOf|module:model/String)} obj The actual instance.
+     */
+    setActualInstance(obj) {
+       this.actualInstance = ClusterRequestFeaturesInnerValue.constructFromObject(obj).getActualInstance();
+    }
+
+    /**
+     * Returns the JSON representation of the actual instance.
+     * @return {string}
+     */
+    toJSON = function(){
+        return this.getActualInstance();
+    }
+
+    /**
+     * Create an instance of ClusterRequestFeaturesInnerValue from a JSON string.
+     * @param {string} json_string JSON string.
+     * @return {module:model/ClusterRequestFeaturesInnerValue} An instance of ClusterRequestFeaturesInnerValue.
+     */
+    static fromJSON = function(json_string){
+        return ClusterRequestFeaturesInnerValue.constructFromObject(JSON.parse(json_string));
+    }
 }
 
 /**
@@ -170,62 +194,7 @@ ClusterRequestFeaturesInnerValue.prototype['rds_subnets_zone_b_ids'] = undefined
 ClusterRequestFeaturesInnerValue.prototype['rds_subnets_zone_c_ids'] = undefined;
 
 
-// Implement ClusterRequestFeaturesInnerValueOneOf interface:
-/**
- * @member {String} aws_vpc_eks_id
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['aws_vpc_eks_id'] = undefined;
-/**
- * @member {Array.<String>} eks_subnets_zone_a_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['eks_subnets_zone_a_ids'] = undefined;
-/**
- * @member {Array.<String>} eks_subnets_zone_b_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['eks_subnets_zone_b_ids'] = undefined;
-/**
- * @member {Array.<String>} eks_subnets_zone_c_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['eks_subnets_zone_c_ids'] = undefined;
-/**
- * @member {Array.<String>} documentdb_subnets_zone_a_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['documentdb_subnets_zone_a_ids'] = undefined;
-/**
- * @member {Array.<String>} documentdb_subnets_zone_b_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['documentdb_subnets_zone_b_ids'] = undefined;
-/**
- * @member {Array.<String>} documentdb_subnets_zone_c_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['documentdb_subnets_zone_c_ids'] = undefined;
-/**
- * @member {Array.<String>} elasticache_subnets_zone_a_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['elasticache_subnets_zone_a_ids'] = undefined;
-/**
- * @member {Array.<String>} elasticache_subnets_zone_b_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['elasticache_subnets_zone_b_ids'] = undefined;
-/**
- * @member {Array.<String>} elasticache_subnets_zone_c_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['elasticache_subnets_zone_c_ids'] = undefined;
-/**
- * @member {Array.<String>} rds_subnets_zone_a_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['rds_subnets_zone_a_ids'] = undefined;
-/**
- * @member {Array.<String>} rds_subnets_zone_b_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['rds_subnets_zone_b_ids'] = undefined;
-/**
- * @member {Array.<String>} rds_subnets_zone_c_ids
- */
-ClusterRequestFeaturesInnerValueOneOf.prototype['rds_subnets_zone_c_ids'] = undefined;
-
-
-
+ClusterRequestFeaturesInnerValue.OneOf = ["Boolean", "ClusterRequestFeaturesInnerValueOneOf", "String"];
 
 export default ClusterRequestFeaturesInnerValue;
 

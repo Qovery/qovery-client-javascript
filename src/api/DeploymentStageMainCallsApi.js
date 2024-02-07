@@ -96,7 +96,7 @@ export default class DeploymentStageMainCallsApi {
      * Create environment deployment stage
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DeploymentStageRequest} opts.deploymentStageRequest 
+     * @param {module:model/DeploymentStageRequest} [deploymentStageRequest] 
      * @param {module:api/DeploymentStageMainCallsApi~createEnvironmentDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentStageResponse}
      */
@@ -182,7 +182,7 @@ export default class DeploymentStageMainCallsApi {
      * Edit deployment stage
      * @param {String} deploymentStageId Deployment Stage ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DeploymentStageRequest} opts.deploymentStageRequest 
+     * @param {module:model/DeploymentStageRequest} [deploymentStageRequest] 
      * @param {module:api/DeploymentStageMainCallsApi~editDeploymentStageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeploymentStageResponse}
      */

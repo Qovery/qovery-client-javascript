@@ -61,8 +61,24 @@ class ClusterStatus {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ClusterStatus</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterStatus</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['cluster_id'] && !(typeof data['cluster_id'] === 'string' || data['cluster_id'] instanceof String)) {
+            throw new Error("Expected the field `cluster_id` to be a primitive type in the JSON string but got " + data['cluster_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {String} cluster_id

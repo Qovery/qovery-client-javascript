@@ -93,7 +93,7 @@ export default class HelmMainCallsApi {
      * - To edit the helm you must have the admin permission. 
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmRequest} opts.helmRequest 
+     * @param {module:model/HelmRequest} [helmRequest] 
      * @param {module:api/HelmMainCallsApi~editHelmCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmResponse}
      */
@@ -223,7 +223,7 @@ export default class HelmMainCallsApi {
      * Returns list of the last 100 commits made on the repository linked to helm
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.of Source of git commit. Can be 'chart' or 'values' (default to 'chart')
+     * @param {String} [of = 'chart')] Source of git commit. Can be 'chart' or 'values'
      * @param {module:api/HelmMainCallsApi~listHelmCommitCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CommitResponseList}
      */

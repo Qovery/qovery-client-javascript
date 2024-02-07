@@ -16,7 +16,6 @@ import Base from './Base';
 import DeploymentHistoryApplication from './DeploymentHistoryApplication';
 import DeploymentHistoryContainer from './DeploymentHistoryContainer';
 import DeploymentHistoryDatabase from './DeploymentHistoryDatabase';
-import DeploymentHistoryEnvironmentAllOf from './DeploymentHistoryEnvironmentAllOf';
 import DeploymentHistoryHelmResponse from './DeploymentHistoryHelmResponse';
 import DeploymentHistoryJobResponse from './DeploymentHistoryJobResponse';
 import OrganizationEventOrigin from './OrganizationEventOrigin';
@@ -32,12 +31,11 @@ class DeploymentHistoryEnvironment {
      * Constructs a new <code>DeploymentHistoryEnvironment</code>.
      * @alias module:model/DeploymentHistoryEnvironment
      * @implements module:model/Base
-     * @implements module:model/DeploymentHistoryEnvironmentAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);DeploymentHistoryEnvironmentAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);
         DeploymentHistoryEnvironment.initialize(this, id, createdAt);
     }
 
@@ -62,7 +60,6 @@ class DeploymentHistoryEnvironment {
         if (data) {
             obj = obj || new DeploymentHistoryEnvironment();
             Base.constructFromObject(data, obj);
-            DeploymentHistoryEnvironmentAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -101,8 +98,84 @@ class DeploymentHistoryEnvironment {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DeploymentHistoryEnvironment</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistoryEnvironment</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of DeploymentHistoryEnvironment.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['triggered_by'] && !(typeof data['triggered_by'] === 'string' || data['triggered_by'] instanceof String)) {
+            throw new Error("Expected the field `triggered_by` to be a primitive type in the JSON string but got " + data['triggered_by']);
+        }
+        if (data['applications']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['applications'])) {
+                throw new Error("Expected the field `applications` to be an array in the JSON data but got " + data['applications']);
+            }
+            // validate the optional field `applications` (array)
+            for (const item of data['applications']) {
+                DeploymentHistoryApplication.validateJSON(item);
+            };
+        }
+        if (data['containers']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['containers'])) {
+                throw new Error("Expected the field `containers` to be an array in the JSON data but got " + data['containers']);
+            }
+            // validate the optional field `containers` (array)
+            for (const item of data['containers']) {
+                DeploymentHistoryContainer.validateJSON(item);
+            };
+        }
+        if (data['databases']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['databases'])) {
+                throw new Error("Expected the field `databases` to be an array in the JSON data but got " + data['databases']);
+            }
+            // validate the optional field `databases` (array)
+            for (const item of data['databases']) {
+                DeploymentHistoryDatabase.validateJSON(item);
+            };
+        }
+        if (data['jobs']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['jobs'])) {
+                throw new Error("Expected the field `jobs` to be an array in the JSON data but got " + data['jobs']);
+            }
+            // validate the optional field `jobs` (array)
+            for (const item of data['jobs']) {
+                DeploymentHistoryJobResponse.validateJSON(item);
+            };
+        }
+        if (data['helms']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['helms'])) {
+                throw new Error("Expected the field `helms` to be an array in the JSON data but got " + data['helms']);
+            }
+            // validate the optional field `helms` (array)
+            for (const item of data['helms']) {
+                DeploymentHistoryHelmResponse.validateJSON(item);
+            };
+        }
+
+        return true;
+    }
+
 
 }
+
+DeploymentHistoryEnvironment.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -173,39 +246,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement DeploymentHistoryEnvironmentAllOf interface:
-/**
- * @member {module:model/StateEnum} status
- */
-DeploymentHistoryEnvironmentAllOf.prototype['status'] = undefined;
-/**
- * @member {module:model/OrganizationEventOrigin} origin
- */
-DeploymentHistoryEnvironmentAllOf.prototype['origin'] = undefined;
-/**
- * @member {String} triggered_by
- */
-DeploymentHistoryEnvironmentAllOf.prototype['triggered_by'] = undefined;
-/**
- * @member {Array.<module:model/DeploymentHistoryApplication>} applications
- */
-DeploymentHistoryEnvironmentAllOf.prototype['applications'] = undefined;
-/**
- * @member {Array.<module:model/DeploymentHistoryContainer>} containers
- */
-DeploymentHistoryEnvironmentAllOf.prototype['containers'] = undefined;
-/**
- * @member {Array.<module:model/DeploymentHistoryDatabase>} databases
- */
-DeploymentHistoryEnvironmentAllOf.prototype['databases'] = undefined;
-/**
- * @member {Array.<module:model/DeploymentHistoryJobResponse>} jobs
- */
-DeploymentHistoryEnvironmentAllOf.prototype['jobs'] = undefined;
-/**
- * @member {Array.<module:model/DeploymentHistoryHelmResponse>} helms
- */
-DeploymentHistoryEnvironmentAllOf.prototype['helms'] = undefined;
 
 
 

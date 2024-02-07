@@ -49,7 +49,7 @@ export default class JobDeploymentRestrictionApi {
      * Create a job deployment restriction
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/JobDeploymentRestrictionRequest} opts.jobDeploymentRestrictionRequest 
+     * @param {module:model/JobDeploymentRestrictionRequest} [jobDeploymentRestrictionRequest] 
      * @param {module:api/JobDeploymentRestrictionApi~createJobDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobDeploymentRestrictionResponse}
      */
@@ -144,7 +144,7 @@ export default class JobDeploymentRestrictionApi {
      * @param {String} jobId Job ID
      * @param {String} deploymentRestrictionId Deployment Restriction ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/JobDeploymentRestrictionRequest} opts.jobDeploymentRestrictionRequest 
+     * @param {module:model/JobDeploymentRestrictionRequest} [jobDeploymentRestrictionRequest] 
      * @param {module:api/JobDeploymentRestrictionApi~editJobDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobDeploymentRestrictionResponse}
      */

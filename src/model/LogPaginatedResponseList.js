@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Log from './Log';
-import LogPaginatedResponseListAllOf from './LogPaginatedResponseListAllOf';
 import PaginationData from './PaginationData';
 
 /**
@@ -26,12 +25,11 @@ class LogPaginatedResponseList {
      * Constructs a new <code>LogPaginatedResponseList</code>.
      * @alias module:model/LogPaginatedResponseList
      * @implements module:model/PaginationData
-     * @implements module:model/LogPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationData.initialize(this, page, pageSize);LogPaginatedResponseListAllOf.initialize(this);
+        PaginationData.initialize(this, page, pageSize);
         LogPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -56,7 +54,6 @@ class LogPaginatedResponseList {
         if (data) {
             obj = obj || new LogPaginatedResponseList();
             PaginationData.constructFromObject(data, obj);
-            LogPaginatedResponseListAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -71,8 +68,36 @@ class LogPaginatedResponseList {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>LogPaginatedResponseList</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>LogPaginatedResponseList</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of LogPaginatedResponseList.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        if (data['results']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['results'])) {
+                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
+            }
+            // validate the optional field `results` (array)
+            for (const item of data['results']) {
+                Log.validateJSON(item);
+            };
+        }
+
+        return true;
+    }
+
 
 }
+
+LogPaginatedResponseList.RequiredProperties = ["page", "page_size"];
 
 /**
  * @member {Number} page
@@ -99,11 +124,6 @@ PaginationData.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationData.prototype['page_size'] = undefined;
-// Implement LogPaginatedResponseListAllOf interface:
-/**
- * @member {Array.<module:model/Log>} results
- */
-LogPaginatedResponseListAllOf.prototype['results'] = undefined;
 
 
 

@@ -65,8 +65,42 @@ class ApplicationGitRepositoryRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ApplicationGitRepositoryRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ApplicationGitRepositoryRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ApplicationGitRepositoryRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['url'] && !(typeof data['url'] === 'string' || data['url'] instanceof String)) {
+            throw new Error("Expected the field `url` to be a primitive type in the JSON string but got " + data['url']);
+        }
+        // ensure the json data is a string
+        if (data['branch'] && !(typeof data['branch'] === 'string' || data['branch'] instanceof String)) {
+            throw new Error("Expected the field `branch` to be a primitive type in the JSON string but got " + data['branch']);
+        }
+        // ensure the json data is a string
+        if (data['root_path'] && !(typeof data['root_path'] === 'string' || data['root_path'] instanceof String)) {
+            throw new Error("Expected the field `root_path` to be a primitive type in the JSON string but got " + data['root_path']);
+        }
+        // ensure the json data is a string
+        if (data['git_token_id'] && !(typeof data['git_token_id'] === 'string' || data['git_token_id'] instanceof String)) {
+            throw new Error("Expected the field `git_token_id` to be a primitive type in the JSON string but got " + data['git_token_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+ApplicationGitRepositoryRequest.RequiredProperties = ["url"];
 
 /**
  * application git repository URL

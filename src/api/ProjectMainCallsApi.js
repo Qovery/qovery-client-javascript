@@ -90,7 +90,7 @@ export default class ProjectMainCallsApi {
      * To edit a project you must have the admin permission
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProjectRequest} opts.projectRequest 
+     * @param {module:model/ProjectRequest} [projectRequest] 
      * @param {module:api/ProjectMainCallsApi~editProjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Project}
      */

@@ -84,8 +84,50 @@ class OrganizationWebhookCreateRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>OrganizationWebhookCreateRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationWebhookCreateRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of OrganizationWebhookCreateRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['target_url'] && !(typeof data['target_url'] === 'string' || data['target_url'] instanceof String)) {
+            throw new Error("Expected the field `target_url` to be a primitive type in the JSON string but got " + data['target_url']);
+        }
+        // ensure the json data is a string
+        if (data['target_secret'] && !(typeof data['target_secret'] === 'string' || data['target_secret'] instanceof String)) {
+            throw new Error("Expected the field `target_secret` to be a primitive type in the JSON string but got " + data['target_secret']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['events'])) {
+            throw new Error("Expected the field `events` to be an array in the JSON data but got " + data['events']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['project_names_filter'])) {
+            throw new Error("Expected the field `project_names_filter` to be an array in the JSON data but got " + data['project_names_filter']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['environment_types_filter'])) {
+            throw new Error("Expected the field `environment_types_filter` to be an array in the JSON data but got " + data['environment_types_filter']);
+        }
+
+        return true;
+    }
+
 
 }
+
+OrganizationWebhookCreateRequest.RequiredProperties = ["kind", "target_url", "events"];
 
 /**
  * @member {module:model/OrganizationWebhookKindEnum} kind

@@ -63,8 +63,20 @@ class BillingPeriod {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>BillingPeriod</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BillingPeriod</code>.
+     */
+    static validateJSON(data) {
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Date} billing_started_on

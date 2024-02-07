@@ -48,7 +48,7 @@ export default class EnvironmentDeploymentRuleApi {
      * @param {String} environmentId Environment ID
      * @param {String} deploymentRuleId Deployment Rule ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentDeploymentRuleEditRequest} opts.environmentDeploymentRuleEditRequest 
+     * @param {module:model/EnvironmentDeploymentRuleEditRequest} [environmentDeploymentRuleEditRequest] 
      * @param {module:api/EnvironmentDeploymentRuleApi~editEnvironmentDeploymentRuleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentDeploymentRule}
      */

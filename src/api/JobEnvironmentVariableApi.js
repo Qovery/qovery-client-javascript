@@ -54,7 +54,7 @@ export default class JobEnvironmentVariableApi {
      * - Add an environment variable to the job. 
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentVariableRequest} opts.environmentVariableRequest 
+     * @param {module:model/EnvironmentVariableRequest} [environmentVariableRequest] 
      * @param {module:api/JobEnvironmentVariableApi~createJobEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -101,7 +101,7 @@ export default class JobEnvironmentVariableApi {
      * @param {String} jobId Job ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} opts.key 
+     * @param {module:model/Key} [key] 
      * @param {module:api/JobEnvironmentVariableApi~createJobEnvironmentVariableAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -153,7 +153,7 @@ export default class JobEnvironmentVariableApi {
      * @param {String} jobId Job ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} opts.value 
+     * @param {module:model/Value} [value] 
      * @param {module:api/JobEnvironmentVariableApi~createJobEnvironmentVariableOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -306,7 +306,7 @@ export default class JobEnvironmentVariableApi {
      * Import environment variables in a defined scope, with a defined visibility.
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/VariableImportRequest} opts.variableImportRequest 
+     * @param {module:model/VariableImportRequest} [variableImportRequest] 
      * @param {module:api/JobEnvironmentVariableApi~importJobEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableImport}
      */

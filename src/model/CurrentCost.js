@@ -66,8 +66,28 @@ class CurrentCost {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>CurrentCost</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CurrentCost</code>.
+     */
+    static validateJSON(data) {
+        // validate the optional field `remaining_credits`
+        if (data['remaining_credits']) { // data not null
+          RemainingCredits.validateJSON(data['remaining_credits']);
+        }
+        // validate the optional field `cost`
+        if (data['cost']) { // data not null
+          Cost.validateJSON(data['cost']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {module:model/PlanEnum} plan

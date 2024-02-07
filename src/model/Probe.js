@@ -70,8 +70,24 @@ class Probe {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Probe</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Probe</code>.
+     */
+    static validateJSON(data) {
+        // validate the optional field `type`
+        if (data['type']) { // data not null
+          ProbeType.validateJSON(data['type']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {module:model/ProbeType} type

@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import ServiceAllOf from './ServiceAllOf';
 import ServiceTypeEnum from './ServiceTypeEnum';
 
 /**
@@ -26,12 +25,11 @@ class Service {
      * Constructs a new <code>Service</code>.
      * @alias module:model/Service
      * @implements module:model/Base
-     * @implements module:model/ServiceAllOf
      * @param id {String} uuid of the associated service (application, database, job, gateway...)
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ServiceAllOf.initialize(this, id);
+        Base.initialize(this, id, createdAt);
         Service.initialize(this, id, createdAt);
     }
 
@@ -56,7 +54,6 @@ class Service {
         if (data) {
             obj = obj || new Service();
             Base.constructFromObject(data, obj);
-            ServiceAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -95,8 +92,50 @@ class Service {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Service</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Service</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Service.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['deployed_commit_id'] && !(typeof data['deployed_commit_id'] === 'string' || data['deployed_commit_id'] instanceof String)) {
+            throw new Error("Expected the field `deployed_commit_id` to be a primitive type in the JSON string but got " + data['deployed_commit_id']);
+        }
+        // ensure the json data is a string
+        if (data['last_updated_by'] && !(typeof data['last_updated_by'] === 'string' || data['last_updated_by'] instanceof String)) {
+            throw new Error("Expected the field `last_updated_by` to be a primitive type in the JSON string but got " + data['last_updated_by']);
+        }
+        // ensure the json data is a string
+        if (data['service_typology'] && !(typeof data['service_typology'] === 'string' || data['service_typology'] instanceof String)) {
+            throw new Error("Expected the field `service_typology` to be a primitive type in the JSON string but got " + data['service_typology']);
+        }
+        // ensure the json data is a string
+        if (data['service_version'] && !(typeof data['service_version'] === 'string' || data['service_version'] instanceof String)) {
+            throw new Error("Expected the field `service_version` to be a primitive type in the JSON string but got " + data['service_version']);
+        }
+
+        return true;
+    }
+
 
 }
+
+Service.RequiredProperties = ["id", "created_at"];
 
 /**
  * uuid of the associated service (application, database, job, gateway...)
@@ -174,50 +213,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement ServiceAllOf interface:
-/**
- * @member {module:model/ServiceTypeEnum} type
- */
-ServiceAllOf.prototype['type'] = undefined;
-/**
- * name of the service
- * @member {String} name
- */
-ServiceAllOf.prototype['name'] = undefined;
-/**
- * uuid of the associated service (application, database, job, gateway...)
- * @member {String} id
- */
-ServiceAllOf.prototype['id'] = undefined;
-/**
- * Git commit ID corresponding to the deployed version of the application
- * @member {String} deployed_commit_id
- */
-ServiceAllOf.prototype['deployed_commit_id'] = undefined;
-/**
- * uuid of the user that made the last update
- * @member {String} last_updated_by
- */
-ServiceAllOf.prototype['last_updated_by'] = undefined;
-/**
- * global overview of resources consumption of the service
- * @member {Number} consumed_resources_in_percent
- */
-ServiceAllOf.prototype['consumed_resources_in_percent'] = undefined;
-/**
- * describes the typology of service (container, postgresl, redis...)
- * @member {String} service_typology
- */
-ServiceAllOf.prototype['service_typology'] = undefined;
-/**
- * for databases this field exposes the database version
- * @member {String} service_version
- */
-ServiceAllOf.prototype['service_version'] = undefined;
-/**
- * @member {Boolean} to_update
- */
-ServiceAllOf.prototype['to_update'] = undefined;
 
 
 

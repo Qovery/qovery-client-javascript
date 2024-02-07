@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import OrganizationApiTokenAllOf from './OrganizationApiTokenAllOf';
 
 /**
  * The OrganizationApiToken model module.
@@ -25,12 +24,11 @@ class OrganizationApiToken {
      * Constructs a new <code>OrganizationApiToken</code>.
      * @alias module:model/OrganizationApiToken
      * @implements module:model/Base
-     * @implements module:model/OrganizationApiTokenAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);OrganizationApiTokenAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);
         OrganizationApiToken.initialize(this, id, createdAt);
     }
 
@@ -55,7 +53,6 @@ class OrganizationApiToken {
         if (data) {
             obj = obj || new OrganizationApiToken();
             Base.constructFromObject(data, obj);
-            OrganizationApiTokenAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -82,8 +79,46 @@ class OrganizationApiToken {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>OrganizationApiToken</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationApiToken</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of OrganizationApiToken.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['role_name'] && !(typeof data['role_name'] === 'string' || data['role_name'] instanceof String)) {
+            throw new Error("Expected the field `role_name` to be a primitive type in the JSON string but got " + data['role_name']);
+        }
+        // ensure the json data is a string
+        if (data['role_id'] && !(typeof data['role_id'] === 'string' || data['role_id'] instanceof String)) {
+            throw new Error("Expected the field `role_id` to be a primitive type in the JSON string but got " + data['role_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+OrganizationApiToken.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -134,23 +169,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement OrganizationApiTokenAllOf interface:
-/**
- * @member {String} name
- */
-OrganizationApiTokenAllOf.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-OrganizationApiTokenAllOf.prototype['description'] = undefined;
-/**
- * @member {String} role_name
- */
-OrganizationApiTokenAllOf.prototype['role_name'] = undefined;
-/**
- * @member {String} role_id
- */
-OrganizationApiTokenAllOf.prototype['role_id'] = undefined;
 
 
 

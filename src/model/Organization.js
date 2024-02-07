@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import OrganizationAllOf from './OrganizationAllOf';
 import OrganizationRequest from './OrganizationRequest';
 import PlanEnum from './PlanEnum';
 
@@ -28,14 +27,13 @@ class Organization {
      * @alias module:model/Organization
      * @implements module:model/Base
      * @implements module:model/OrganizationRequest
-     * @implements module:model/OrganizationAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
      * @param plan {module:model/PlanEnum} 
      */
     constructor(id, createdAt, name, plan) { 
-        Base.initialize(this, id, createdAt);OrganizationRequest.initialize(this, name, plan);OrganizationAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);OrganizationRequest.initialize(this, name, plan);
         Organization.initialize(this, id, createdAt, name, plan);
     }
 
@@ -63,7 +61,6 @@ class Organization {
             obj = obj || new Organization();
             Base.constructFromObject(data, obj);
             OrganizationRequest.constructFromObject(data, obj);
-            OrganizationAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -105,8 +102,62 @@ class Organization {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Organization</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Organization</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Organization.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['website_url'] && !(typeof data['website_url'] === 'string' || data['website_url'] instanceof String)) {
+            throw new Error("Expected the field `website_url` to be a primitive type in the JSON string but got " + data['website_url']);
+        }
+        // ensure the json data is a string
+        if (data['repository'] && !(typeof data['repository'] === 'string' || data['repository'] instanceof String)) {
+            throw new Error("Expected the field `repository` to be a primitive type in the JSON string but got " + data['repository']);
+        }
+        // ensure the json data is a string
+        if (data['logo_url'] && !(typeof data['logo_url'] === 'string' || data['logo_url'] instanceof String)) {
+            throw new Error("Expected the field `logo_url` to be a primitive type in the JSON string but got " + data['logo_url']);
+        }
+        // ensure the json data is a string
+        if (data['icon_url'] && !(typeof data['icon_url'] === 'string' || data['icon_url'] instanceof String)) {
+            throw new Error("Expected the field `icon_url` to be a primitive type in the JSON string but got " + data['icon_url']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['admin_emails'])) {
+            throw new Error("Expected the field `admin_emails` to be an array in the JSON data but got " + data['admin_emails']);
+        }
+        // ensure the json data is a string
+        if (data['owner'] && !(typeof data['owner'] === 'string' || data['owner'] instanceof String)) {
+            throw new Error("Expected the field `owner` to be a primitive type in the JSON string but got " + data['owner']);
+        }
+
+        return true;
+    }
+
 
 }
+
+Organization.RequiredProperties = ["id", "created_at", "name", "plan"];
 
 /**
  * @member {String} id
@@ -218,12 +269,6 @@ OrganizationRequest.prototype['icon_url'] = undefined;
  * @member {Array.<String>} admin_emails
  */
 OrganizationRequest.prototype['admin_emails'] = undefined;
-// Implement OrganizationAllOf interface:
-/**
- * uuid of the user owning the organization
- * @member {String} owner
- */
-OrganizationAllOf.prototype['owner'] = undefined;
 
 
 

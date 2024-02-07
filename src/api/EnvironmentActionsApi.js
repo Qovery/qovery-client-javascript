@@ -96,7 +96,7 @@ export default class EnvironmentActionsApi {
      * You must provide a name. This will create a new environment, with the same configuration, and same applications and databases. Database data is not cloned.
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneEnvironmentRequest} opts.cloneEnvironmentRequest 
+     * @param {module:model/CloneEnvironmentRequest} [cloneEnvironmentRequest] 
      * @param {module:api/EnvironmentActionsApi~cloneEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Environment}
      */
@@ -142,7 +142,7 @@ export default class EnvironmentActionsApi {
      * Delete selected services
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentServiceIdsAllRequest} opts.environmentServiceIdsAllRequest 
+     * @param {module:model/EnvironmentServiceIdsAllRequest} [environmentServiceIdsAllRequest] 
      * @param {module:api/EnvironmentActionsApi~deleteSelectedServicesCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deleteSelectedServices(environmentId, opts, callback) {
@@ -187,7 +187,7 @@ export default class EnvironmentActionsApi {
      * Update and deploy the selected services
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DeployAllRequest} opts.deployAllRequest 
+     * @param {module:model/DeployAllRequest} [deployAllRequest] 
      * @param {module:api/EnvironmentActionsApi~deployAllServicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
@@ -276,7 +276,7 @@ export default class EnvironmentActionsApi {
      * Update and reboot the selected services
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/RebootServicesRequest} opts.rebootServicesRequest 
+     * @param {module:model/RebootServicesRequest} [rebootServicesRequest] 
      * @param {module:api/EnvironmentActionsApi~rebootServicesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
@@ -407,7 +407,7 @@ export default class EnvironmentActionsApi {
      * Stop selected services
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentServiceIdsAllRequest} opts.environmentServiceIdsAllRequest 
+     * @param {module:model/EnvironmentServiceIdsAllRequest} [environmentServiceIdsAllRequest] 
      * @param {module:api/EnvironmentActionsApi~stopSelectedServicesCallback} callback The callback function, accepting three arguments: error, data, response
      */
     stopSelectedServices(environmentId, opts, callback) {

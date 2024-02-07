@@ -54,7 +54,7 @@ export default class ApplicationEnvironmentVariableApi {
      * - Add an environment variable to the application. 
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentVariableRequest} opts.environmentVariableRequest 
+     * @param {module:model/EnvironmentVariableRequest} [environmentVariableRequest] 
      * @param {module:api/ApplicationEnvironmentVariableApi~createApplicationEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -101,7 +101,7 @@ export default class ApplicationEnvironmentVariableApi {
      * @param {String} applicationId Application ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} opts.key 
+     * @param {module:model/Key} [key] 
      * @param {module:api/ApplicationEnvironmentVariableApi~createApplicationEnvironmentVariableAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -153,7 +153,7 @@ export default class ApplicationEnvironmentVariableApi {
      * @param {String} applicationId Application ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} opts.value 
+     * @param {module:model/Value} [value] 
      * @param {module:api/ApplicationEnvironmentVariableApi~createApplicationEnvironmentVariableOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -306,7 +306,7 @@ export default class ApplicationEnvironmentVariableApi {
      * Import environment variables in a defined scope, with a defined visibility.
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/VariableImportRequest} opts.variableImportRequest 
+     * @param {module:model/VariableImportRequest} [variableImportRequest] 
      * @param {module:api/ApplicationEnvironmentVariableApi~importEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableImport}
      */

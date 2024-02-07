@@ -49,7 +49,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * Create an application deployment restriction
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ApplicationDeploymentRestrictionRequest} opts.applicationDeploymentRestrictionRequest 
+     * @param {module:model/ApplicationDeploymentRestrictionRequest} [applicationDeploymentRestrictionRequest] 
      * @param {module:api/ApplicationDeploymentRestrictionApi~createApplicationDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApplicationDeploymentRestriction}
      */
@@ -144,7 +144,7 @@ export default class ApplicationDeploymentRestrictionApi {
      * @param {String} applicationId Application ID
      * @param {String} deploymentRestrictionId Deployment Restriction ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ApplicationDeploymentRestrictionRequest} opts.applicationDeploymentRestrictionRequest 
+     * @param {module:model/ApplicationDeploymentRestrictionRequest} [applicationDeploymentRestrictionRequest] 
      * @param {module:api/ApplicationDeploymentRestrictionApi~editApplicationDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApplicationDeploymentRestriction}
      */

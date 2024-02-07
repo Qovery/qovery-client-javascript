@@ -48,7 +48,7 @@ export default class ApplicationActionsApi {
      * You must provide a git commit id
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DeployRequest} opts.deployRequest 
+     * @param {module:model/DeployRequest} [deployRequest] 
      * @param {module:api/ApplicationActionsApi~deployApplicationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */

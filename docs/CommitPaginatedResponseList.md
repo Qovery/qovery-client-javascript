@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[Commit]**](Commit.md) |  | [optional] 
 **page** | **Number** |  | 
 **pageSize** | **Number** |  | 
+**results** | [**[Commit]**](Commit.md) |  | [optional] 
 
 

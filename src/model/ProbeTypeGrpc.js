@@ -57,8 +57,24 @@ class ProbeTypeGrpc {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ProbeTypeGrpc</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProbeTypeGrpc</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['service'] && !(typeof data['service'] === 'string' || data['service'] instanceof String)) {
+            throw new Error("Expected the field `service` to be a primitive type in the JSON string but got " + data['service']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {String} service

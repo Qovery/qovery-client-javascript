@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import EnvironmentModeEnum from './EnvironmentModeEnum';
-import ProjectDeploymentRuleAllOf from './ProjectDeploymentRuleAllOf';
 import ProjectDeploymentRuleRequest from './ProjectDeploymentRuleRequest';
 import WeekdayEnum from './WeekdayEnum';
 
@@ -29,7 +28,6 @@ class ProjectDeploymentRule {
      * @alias module:model/ProjectDeploymentRule
      * @implements module:model/Base
      * @implements module:model/ProjectDeploymentRuleRequest
-     * @implements module:model/ProjectDeploymentRuleAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
@@ -42,7 +40,7 @@ class ProjectDeploymentRule {
      * @param wildcard {String} wildcard pattern composed of '?' and/or '*' used to target new created environments
      */
     constructor(id, createdAt, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard) { 
-        Base.initialize(this, id, createdAt);ProjectDeploymentRuleRequest.initialize(this, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard);ProjectDeploymentRuleAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);ProjectDeploymentRuleRequest.initialize(this, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard);
         ProjectDeploymentRule.initialize(this, id, createdAt, name, mode, clusterId, timezone, startTime, stopTime, weekdays, wildcard);
     }
 
@@ -76,7 +74,6 @@ class ProjectDeploymentRule {
             obj = obj || new ProjectDeploymentRule();
             Base.constructFromObject(data, obj);
             ProjectDeploymentRuleRequest.constructFromObject(data, obj);
-            ProjectDeploymentRuleAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -124,8 +121,54 @@ class ProjectDeploymentRule {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ProjectDeploymentRule</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectDeploymentRule</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ProjectDeploymentRule.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['cluster_id'] && !(typeof data['cluster_id'] === 'string' || data['cluster_id'] instanceof String)) {
+            throw new Error("Expected the field `cluster_id` to be a primitive type in the JSON string but got " + data['cluster_id']);
+        }
+        // ensure the json data is a string
+        if (data['timezone'] && !(typeof data['timezone'] === 'string' || data['timezone'] instanceof String)) {
+            throw new Error("Expected the field `timezone` to be a primitive type in the JSON string but got " + data['timezone']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['weekdays'])) {
+            throw new Error("Expected the field `weekdays` to be an array in the JSON data but got " + data['weekdays']);
+        }
+        // ensure the json data is a string
+        if (data['wildcard'] && !(typeof data['wildcard'] === 'string' || data['wildcard'] instanceof String)) {
+            throw new Error("Expected the field `wildcard` to be a primitive type in the JSON string but got " + data['wildcard']);
+        }
+
+        return true;
+    }
+
 
 }
+
+ProjectDeploymentRule.RequiredProperties = ["id", "created_at", "name", "mode", "cluster_id", "timezone", "start_time", "stop_time", "weekdays", "wildcard"];
 
 /**
  * @member {String} id
@@ -261,12 +304,6 @@ ProjectDeploymentRuleRequest.prototype['weekdays'] = undefined;
  * @default ''
  */
 ProjectDeploymentRuleRequest.prototype['wildcard'] = '';
-// Implement ProjectDeploymentRuleAllOf interface:
-/**
- * used to select the first deployment rule to match new created environments
- * @member {Number} priority_index
- */
-ProjectDeploymentRuleAllOf.prototype['priority_index'] = undefined;
 
 
 

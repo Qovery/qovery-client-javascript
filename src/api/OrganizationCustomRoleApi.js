@@ -50,7 +50,7 @@ export default class OrganizationCustomRoleApi {
      * Create an organization custom role
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationCustomRoleCreateRequest} opts.organizationCustomRoleCreateRequest 
+     * @param {module:model/OrganizationCustomRoleCreateRequest} [organizationCustomRoleCreateRequest] 
      * @param {module:api/OrganizationCustomRoleApi~createOrganizationCustomRoleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationCustomRole}
      */
@@ -145,7 +145,7 @@ export default class OrganizationCustomRoleApi {
      * @param {String} organizationId Organization ID
      * @param {String} customRoleId Custom Role ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationCustomRoleUpdateRequest} opts.organizationCustomRoleUpdateRequest 
+     * @param {module:model/OrganizationCustomRoleUpdateRequest} [organizationCustomRoleUpdateRequest] 
      * @param {module:api/OrganizationCustomRoleApi~editOrganizationCustomRoleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationCustomRole}
      */

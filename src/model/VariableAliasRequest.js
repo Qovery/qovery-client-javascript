@@ -67,8 +67,34 @@ class VariableAliasRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>VariableAliasRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>VariableAliasRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of VariableAliasRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['key'] && !(typeof data['key'] === 'string' || data['key'] instanceof String)) {
+            throw new Error("Expected the field `key` to be a primitive type in the JSON string but got " + data['key']);
+        }
+        // ensure the json data is a string
+        if (data['alias_parent_id'] && !(typeof data['alias_parent_id'] === 'string' || data['alias_parent_id'] instanceof String)) {
+            throw new Error("Expected the field `alias_parent_id` to be a primitive type in the JSON string but got " + data['alias_parent_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+VariableAliasRequest.RequiredProperties = ["key", "alias_scope", "alias_parent_id"];
 
 /**
  * the value to be used as Alias of the targeted environment variable.

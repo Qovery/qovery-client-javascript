@@ -71,8 +71,74 @@ class EnvironmentStatuses {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>EnvironmentStatuses</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentStatuses</code>.
+     */
+    static validateJSON(data) {
+        // validate the optional field `environment`
+        if (data['environment']) { // data not null
+          EnvironmentStatus.validateJSON(data['environment']);
+        }
+        if (data['applications']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['applications'])) {
+                throw new Error("Expected the field `applications` to be an array in the JSON data but got " + data['applications']);
+            }
+            // validate the optional field `applications` (array)
+            for (const item of data['applications']) {
+                Status.validateJSON(item);
+            };
+        }
+        if (data['containers']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['containers'])) {
+                throw new Error("Expected the field `containers` to be an array in the JSON data but got " + data['containers']);
+            }
+            // validate the optional field `containers` (array)
+            for (const item of data['containers']) {
+                Status.validateJSON(item);
+            };
+        }
+        if (data['jobs']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['jobs'])) {
+                throw new Error("Expected the field `jobs` to be an array in the JSON data but got " + data['jobs']);
+            }
+            // validate the optional field `jobs` (array)
+            for (const item of data['jobs']) {
+                Status.validateJSON(item);
+            };
+        }
+        if (data['databases']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['databases'])) {
+                throw new Error("Expected the field `databases` to be an array in the JSON data but got " + data['databases']);
+            }
+            // validate the optional field `databases` (array)
+            for (const item of data['databases']) {
+                Status.validateJSON(item);
+            };
+        }
+        if (data['helms']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['helms'])) {
+                throw new Error("Expected the field `helms` to be an array in the JSON data but got " + data['helms']);
+            }
+            // validate the optional field `helms` (array)
+            for (const item of data['helms']) {
+                Status.validateJSON(item);
+            };
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {module:model/EnvironmentStatus} environment

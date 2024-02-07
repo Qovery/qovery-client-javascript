@@ -64,8 +64,42 @@ class CloudProvider {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>CloudProvider</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CloudProvider</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['short_name'] && !(typeof data['short_name'] === 'string' || data['short_name'] instanceof String)) {
+            throw new Error("Expected the field `short_name` to be a primitive type in the JSON string but got " + data['short_name']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['logo_url'] && !(typeof data['logo_url'] === 'string' || data['logo_url'] instanceof String)) {
+            throw new Error("Expected the field `logo_url` to be a primitive type in the JSON string but got " + data['logo_url']);
+        }
+        if (data['regions']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['regions'])) {
+                throw new Error("Expected the field `regions` to be an array in the JSON data but got " + data['regions']);
+            }
+            // validate the optional field `regions` (array)
+            for (const item of data['regions']) {
+                ClusterRegion.validateJSON(item);
+            };
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {String} short_name

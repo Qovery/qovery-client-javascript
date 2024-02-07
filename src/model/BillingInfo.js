@@ -81,8 +81,60 @@ class BillingInfo {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>BillingInfo</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BillingInfo</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['first_name'] && !(typeof data['first_name'] === 'string' || data['first_name'] instanceof String)) {
+            throw new Error("Expected the field `first_name` to be a primitive type in the JSON string but got " + data['first_name']);
+        }
+        // ensure the json data is a string
+        if (data['last_name'] && !(typeof data['last_name'] === 'string' || data['last_name'] instanceof String)) {
+            throw new Error("Expected the field `last_name` to be a primitive type in the JSON string but got " + data['last_name']);
+        }
+        // ensure the json data is a string
+        if (data['email'] && !(typeof data['email'] === 'string' || data['email'] instanceof String)) {
+            throw new Error("Expected the field `email` to be a primitive type in the JSON string but got " + data['email']);
+        }
+        // ensure the json data is a string
+        if (data['address'] && !(typeof data['address'] === 'string' || data['address'] instanceof String)) {
+            throw new Error("Expected the field `address` to be a primitive type in the JSON string but got " + data['address']);
+        }
+        // ensure the json data is a string
+        if (data['city'] && !(typeof data['city'] === 'string' || data['city'] instanceof String)) {
+            throw new Error("Expected the field `city` to be a primitive type in the JSON string but got " + data['city']);
+        }
+        // ensure the json data is a string
+        if (data['zip'] && !(typeof data['zip'] === 'string' || data['zip'] instanceof String)) {
+            throw new Error("Expected the field `zip` to be a primitive type in the JSON string but got " + data['zip']);
+        }
+        // ensure the json data is a string
+        if (data['state'] && !(typeof data['state'] === 'string' || data['state'] instanceof String)) {
+            throw new Error("Expected the field `state` to be a primitive type in the JSON string but got " + data['state']);
+        }
+        // ensure the json data is a string
+        if (data['country_code'] && !(typeof data['country_code'] === 'string' || data['country_code'] instanceof String)) {
+            throw new Error("Expected the field `country_code` to be a primitive type in the JSON string but got " + data['country_code']);
+        }
+        // ensure the json data is a string
+        if (data['company'] && !(typeof data['company'] === 'string' || data['company'] instanceof String)) {
+            throw new Error("Expected the field `company` to be a primitive type in the JSON string but got " + data['company']);
+        }
+        // ensure the json data is a string
+        if (data['vat_number'] && !(typeof data['vat_number'] === 'string' || data['vat_number'] instanceof String)) {
+            throw new Error("Expected the field `vat_number` to be a primitive type in the JSON string but got " + data['vat_number']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {String} first_name

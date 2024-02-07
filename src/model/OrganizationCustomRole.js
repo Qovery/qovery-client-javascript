@@ -68,8 +68,52 @@ class OrganizationCustomRole {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>OrganizationCustomRole</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationCustomRole</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        if (data['cluster_permissions']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['cluster_permissions'])) {
+                throw new Error("Expected the field `cluster_permissions` to be an array in the JSON data but got " + data['cluster_permissions']);
+            }
+            // validate the optional field `cluster_permissions` (array)
+            for (const item of data['cluster_permissions']) {
+                OrganizationCustomRoleClusterPermissionsInner.validateJSON(item);
+            };
+        }
+        if (data['project_permissions']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['project_permissions'])) {
+                throw new Error("Expected the field `project_permissions` to be an array in the JSON data but got " + data['project_permissions']);
+            }
+            // validate the optional field `project_permissions` (array)
+            for (const item of data['project_permissions']) {
+                OrganizationCustomRoleProjectPermissionsInner.validateJSON(item);
+            };
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {String} id

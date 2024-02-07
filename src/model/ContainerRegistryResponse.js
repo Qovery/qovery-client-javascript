@@ -14,7 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import ContainerRegistryKindEnum from './ContainerRegistryKindEnum';
-import ContainerRegistryResponseAllOf from './ContainerRegistryResponseAllOf';
+import ContainerRegistryResponseAllOfCluster from './ContainerRegistryResponseAllOfCluster';
 
 /**
  * The ContainerRegistryResponse model module.
@@ -26,12 +26,11 @@ class ContainerRegistryResponse {
      * Constructs a new <code>ContainerRegistryResponse</code>.
      * @alias module:model/ContainerRegistryResponse
      * @implements module:model/Base
-     * @implements module:model/ContainerRegistryResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);ContainerRegistryResponseAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);
         ContainerRegistryResponse.initialize(this, id, createdAt);
     }
 
@@ -56,7 +55,6 @@ class ContainerRegistryResponse {
         if (data) {
             obj = obj || new ContainerRegistryResponse();
             Base.constructFromObject(data, obj);
-            ContainerRegistryResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -80,14 +78,52 @@ class ContainerRegistryResponse {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
             }
             if (data.hasOwnProperty('cluster')) {
-                obj['cluster'] = ApiClient.convertToType(data['cluster'], Base);
+                obj['cluster'] = ContainerRegistryResponseAllOfCluster.constructFromObject(data['cluster']);
             }
         }
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ContainerRegistryResponse</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ContainerRegistryResponse</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ContainerRegistryResponse.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // ensure the json data is a string
+        if (data['url'] && !(typeof data['url'] === 'string' || data['url'] instanceof String)) {
+            throw new Error("Expected the field `url` to be a primitive type in the JSON string but got " + data['url']);
+        }
+        // validate the optional field `cluster`
+        if (data['cluster']) { // data not null
+          ContainerRegistryResponseAllOfCluster.validateJSON(data['cluster']);
+        }
+
+        return true;
+    }
+
 
 }
+
+ContainerRegistryResponse.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -126,7 +162,7 @@ ContainerRegistryResponse.prototype['description'] = undefined;
 ContainerRegistryResponse.prototype['url'] = undefined;
 
 /**
- * @member {module:model/Base} cluster
+ * @member {module:model/ContainerRegistryResponseAllOfCluster} cluster
  */
 ContainerRegistryResponse.prototype['cluster'] = undefined;
 
@@ -144,28 +180,6 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
-// Implement ContainerRegistryResponseAllOf interface:
-/**
- * @member {String} name
- */
-ContainerRegistryResponseAllOf.prototype['name'] = undefined;
-/**
- * @member {module:model/ContainerRegistryKindEnum} kind
- */
-ContainerRegistryResponseAllOf.prototype['kind'] = undefined;
-/**
- * @member {String} description
- */
-ContainerRegistryResponseAllOf.prototype['description'] = undefined;
-/**
- * URL of the container registry
- * @member {String} url
- */
-ContainerRegistryResponseAllOf.prototype['url'] = undefined;
-/**
- * @member {module:model/Base} cluster
- */
-ContainerRegistryResponseAllOf.prototype['cluster'] = undefined;
 
 
 

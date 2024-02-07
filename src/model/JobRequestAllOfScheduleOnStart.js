@@ -57,8 +57,28 @@ class JobRequestAllOfScheduleOnStart {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>JobRequestAllOfScheduleOnStart</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>JobRequestAllOfScheduleOnStart</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is an array
+        if (!Array.isArray(data['arguments'])) {
+            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
+        }
+        // ensure the json data is a string
+        if (data['entrypoint'] && !(typeof data['entrypoint'] === 'string' || data['entrypoint'] instanceof String)) {
+            throw new Error("Expected the field `entrypoint` to be a primitive type in the JSON string but got " + data['entrypoint']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Array.<String>} arguments

@@ -60,8 +60,32 @@ class HelmDeployRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>HelmDeployRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmDeployRequest</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['chart_version'] && !(typeof data['chart_version'] === 'string' || data['chart_version'] instanceof String)) {
+            throw new Error("Expected the field `chart_version` to be a primitive type in the JSON string but got " + data['chart_version']);
+        }
+        // ensure the json data is a string
+        if (data['git_commit_id'] && !(typeof data['git_commit_id'] === 'string' || data['git_commit_id'] instanceof String)) {
+            throw new Error("Expected the field `git_commit_id` to be a primitive type in the JSON string but got " + data['git_commit_id']);
+        }
+        // ensure the json data is a string
+        if (data['values_override_git_commit_id'] && !(typeof data['values_override_git_commit_id'] === 'string' || data['values_override_git_commit_id'] instanceof String)) {
+            throw new Error("Expected the field `values_override_git_commit_id` to be a primitive type in the JSON string but got " + data['values_override_git_commit_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * version of the chart to deploy. Cannot be set if `git_commit_id` is defined 

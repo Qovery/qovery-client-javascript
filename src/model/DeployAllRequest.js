@@ -70,8 +70,64 @@ class DeployAllRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>DeployAllRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeployAllRequest</code>.
+     */
+    static validateJSON(data) {
+        if (data['applications']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['applications'])) {
+                throw new Error("Expected the field `applications` to be an array in the JSON data but got " + data['applications']);
+            }
+            // validate the optional field `applications` (array)
+            for (const item of data['applications']) {
+                DeployAllRequestApplicationsInner.validateJSON(item);
+            };
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['databases'])) {
+            throw new Error("Expected the field `databases` to be an array in the JSON data but got " + data['databases']);
+        }
+        if (data['containers']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['containers'])) {
+                throw new Error("Expected the field `containers` to be an array in the JSON data but got " + data['containers']);
+            }
+            // validate the optional field `containers` (array)
+            for (const item of data['containers']) {
+                DeployAllRequestContainersInner.validateJSON(item);
+            };
+        }
+        if (data['jobs']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['jobs'])) {
+                throw new Error("Expected the field `jobs` to be an array in the JSON data but got " + data['jobs']);
+            }
+            // validate the optional field `jobs` (array)
+            for (const item of data['jobs']) {
+                DeployAllRequestJobsInner.validateJSON(item);
+            };
+        }
+        if (data['helms']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['helms'])) {
+                throw new Error("Expected the field `helms` to be an array in the JSON data but got " + data['helms']);
+            }
+            // validate the optional field `helms` (array)
+            for (const item of data['helms']) {
+                DeployAllRequestHelmsInner.validateJSON(item);
+            };
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * @member {Array.<module:model/DeployAllRequestApplicationsInner>} applications

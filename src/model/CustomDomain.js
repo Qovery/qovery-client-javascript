@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
-import CustomDomainAllOf from './CustomDomainAllOf';
 import CustomDomainRequest from './CustomDomainRequest';
 import CustomDomainStatusEnum from './CustomDomainStatusEnum';
 
@@ -28,14 +27,13 @@ class CustomDomain {
      * @alias module:model/CustomDomain
      * @implements module:model/Base
      * @implements module:model/CustomDomainRequest
-     * @implements module:model/CustomDomainAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param domain {String} your custom domain
      * @param generateCertificate {Boolean} to control if a certificate has to be generated for this custom domain by Qovery. The default value is `true`. This flag should be set to `false` if a CDN or other entities are managing the certificate for the specified domain and the traffic is proxied by the CDN to Qovery.
      */
     constructor(id, createdAt, domain, generateCertificate) { 
-        Base.initialize(this, id, createdAt);CustomDomainRequest.initialize(this, domain, generateCertificate);CustomDomainAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);CustomDomainRequest.initialize(this, domain, generateCertificate);
         CustomDomain.initialize(this, id, createdAt, domain, generateCertificate);
     }
 
@@ -63,7 +61,6 @@ class CustomDomain {
             obj = obj || new CustomDomain();
             Base.constructFromObject(data, obj);
             CustomDomainRequest.constructFromObject(data, obj);
-            CustomDomainAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -90,8 +87,38 @@ class CustomDomain {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>CustomDomain</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CustomDomain</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of CustomDomain.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['domain'] && !(typeof data['domain'] === 'string' || data['domain'] instanceof String)) {
+            throw new Error("Expected the field `domain` to be a primitive type in the JSON string but got " + data['domain']);
+        }
+        // ensure the json data is a string
+        if (data['validation_domain'] && !(typeof data['validation_domain'] === 'string' || data['validation_domain'] instanceof String)) {
+            throw new Error("Expected the field `validation_domain` to be a primitive type in the JSON string but got " + data['validation_domain']);
+        }
+
+        return true;
+    }
+
 
 }
+
+CustomDomain.RequiredProperties = ["id", "created_at", "domain", "generate_certificate"];
 
 /**
  * @member {String} id
@@ -156,21 +183,6 @@ CustomDomainRequest.prototype['domain'] = undefined;
  * @member {Boolean} generate_certificate
  */
 CustomDomainRequest.prototype['generate_certificate'] = undefined;
-// Implement CustomDomainAllOf interface:
-/**
- * URL provided by Qovery. You must create a CNAME on your DNS provider using that URL
- * @member {String} validation_domain
- */
-CustomDomainAllOf.prototype['validation_domain'] = undefined;
-/**
- * @member {module:model/CustomDomainStatusEnum} status
- */
-CustomDomainAllOf.prototype['status'] = undefined;
-/**
- * to control if a certificate has to be generated for this custom domain by Qovery. The default value is `true`. This flag should be set to `false` if a CDN or other entities are managing the certificate for the specified domain and the traffic is proxied by the CDN to Qovery.
- * @member {Boolean} generate_certificate
- */
-CustomDomainAllOf.prototype['generate_certificate'] = undefined;
 
 
 

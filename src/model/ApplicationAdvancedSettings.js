@@ -150,8 +150,64 @@ class ApplicationAdvancedSettings {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ApplicationAdvancedSettings</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ApplicationAdvancedSettings</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['deployment.antiaffinity.pod'] && !(typeof data['deployment.antiaffinity.pod'] === 'string' || data['deployment.antiaffinity.pod'] instanceof String)) {
+            throw new Error("Expected the field `deployment.antiaffinity.pod` to be a primitive type in the JSON string but got " + data['deployment.antiaffinity.pod']);
+        }
+        // ensure the json data is a string
+        if (data['deployment.update_strategy.type'] && !(typeof data['deployment.update_strategy.type'] === 'string' || data['deployment.update_strategy.type'] instanceof String)) {
+            throw new Error("Expected the field `deployment.update_strategy.type` to be a primitive type in the JSON string but got " + data['deployment.update_strategy.type']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.cors_allow_origin'] && !(typeof data['network.ingress.cors_allow_origin'] === 'string' || data['network.ingress.cors_allow_origin'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.cors_allow_origin` to be a primitive type in the JSON string but got " + data['network.ingress.cors_allow_origin']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.cors_allow_methods'] && !(typeof data['network.ingress.cors_allow_methods'] === 'string' || data['network.ingress.cors_allow_methods'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.cors_allow_methods` to be a primitive type in the JSON string but got " + data['network.ingress.cors_allow_methods']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.cors_allow_headers'] && !(typeof data['network.ingress.cors_allow_headers'] === 'string' || data['network.ingress.cors_allow_headers'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.cors_allow_headers` to be a primitive type in the JSON string but got " + data['network.ingress.cors_allow_headers']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.proxy_buffering'] && !(typeof data['network.ingress.proxy_buffering'] === 'string' || data['network.ingress.proxy_buffering'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.proxy_buffering` to be a primitive type in the JSON string but got " + data['network.ingress.proxy_buffering']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.whitelist_source_range'] && !(typeof data['network.ingress.whitelist_source_range'] === 'string' || data['network.ingress.whitelist_source_range'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.whitelist_source_range` to be a primitive type in the JSON string but got " + data['network.ingress.whitelist_source_range']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.denylist_source_range'] && !(typeof data['network.ingress.denylist_source_range'] === 'string' || data['network.ingress.denylist_source_range'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.denylist_source_range` to be a primitive type in the JSON string but got " + data['network.ingress.denylist_source_range']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.basic_auth_env_var'] && !(typeof data['network.ingress.basic_auth_env_var'] === 'string' || data['network.ingress.basic_auth_env_var'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.basic_auth_env_var` to be a primitive type in the JSON string but got " + data['network.ingress.basic_auth_env_var']);
+        }
+        // ensure the json data is a string
+        if (data['network.ingress.extra_headers'] && !(typeof data['network.ingress.extra_headers'] === 'string' || data['network.ingress.extra_headers'] instanceof String)) {
+            throw new Error("Expected the field `network.ingress.extra_headers` to be a primitive type in the JSON string but got " + data['network.ingress.extra_headers']);
+        }
+        // ensure the json data is a string
+        if (data['security.service_account_name'] && !(typeof data['security.service_account_name'] === 'string' || data['security.service_account_name'] instanceof String)) {
+            throw new Error("Expected the field `security.service_account_name` to be a primitive type in the JSON string but got " + data['security.service_account_name']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * disable custom domain check when deploying an application

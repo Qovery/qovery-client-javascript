@@ -48,7 +48,7 @@ export default class ContainerActionsApi {
      * You must provide a git commit id
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ContainerDeployRequest} opts.containerDeployRequest 
+     * @param {module:model/ContainerDeployRequest} [containerDeployRequest] 
      * @param {module:api/ContainerActionsApi~deployContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */

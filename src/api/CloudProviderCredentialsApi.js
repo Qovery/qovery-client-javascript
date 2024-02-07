@@ -50,7 +50,7 @@ export default class CloudProviderCredentialsApi {
      * Create AWS credentials set
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/AwsCredentialsRequest} opts.awsCredentialsRequest 
+     * @param {module:model/AwsCredentialsRequest} [awsCredentialsRequest] 
      * @param {module:api/CloudProviderCredentialsApi~createAWSCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCredentials}
      */
@@ -95,7 +95,7 @@ export default class CloudProviderCredentialsApi {
      * Create GCP credentials set
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/GcpCredentialsRequest} opts.gcpCredentialsRequest 
+     * @param {module:model/GcpCredentialsRequest} [gcpCredentialsRequest] 
      * @param {module:api/CloudProviderCredentialsApi~createGcpCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCredentials}
      */
@@ -140,7 +140,7 @@ export default class CloudProviderCredentialsApi {
      * Create Scaleway credentials set
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ScalewayCredentialsRequest} opts.scalewayCredentialsRequest 
+     * @param {module:model/ScalewayCredentialsRequest} [scalewayCredentialsRequest] 
      * @param {module:api/CloudProviderCredentialsApi~createScalewayCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCredentials}
      */
@@ -327,7 +327,7 @@ export default class CloudProviderCredentialsApi {
      * @param {String} organizationId Organization ID
      * @param {String} credentialsId Credentials ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/AwsCredentialsRequest} opts.awsCredentialsRequest 
+     * @param {module:model/AwsCredentialsRequest} [awsCredentialsRequest] 
      * @param {module:api/CloudProviderCredentialsApi~editAWSCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCredentials}
      */
@@ -378,7 +378,7 @@ export default class CloudProviderCredentialsApi {
      * @param {String} organizationId Organization ID
      * @param {String} credentialsId Credentials ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/GcpCredentialsRequest} opts.gcpCredentialsRequest 
+     * @param {module:model/GcpCredentialsRequest} [gcpCredentialsRequest] 
      * @param {module:api/CloudProviderCredentialsApi~editGcpCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCredentials}
      */
@@ -429,7 +429,7 @@ export default class CloudProviderCredentialsApi {
      * @param {String} organizationId Organization ID
      * @param {String} credentialsId Credentials ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ScalewayCredentialsRequest} opts.scalewayCredentialsRequest 
+     * @param {module:model/ScalewayCredentialsRequest} [scalewayCredentialsRequest] 
      * @param {module:api/CloudProviderCredentialsApi~editScalewayCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCredentials}
      */

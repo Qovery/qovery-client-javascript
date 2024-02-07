@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import ApplicationEditRequestAllOf from './ApplicationEditRequestAllOf';
 import ApplicationGitRepositoryRequest from './ApplicationGitRepositoryRequest';
 import BuildModeEnum from './BuildModeEnum';
 import BuildPackLanguageEnum from './BuildPackLanguageEnum';
@@ -31,11 +30,10 @@ class ApplicationEditRequest {
      * Constructs a new <code>ApplicationEditRequest</code>.
      * @alias module:model/ApplicationEditRequest
      * @implements module:model/ServiceStorageRequest
-     * @implements module:model/ApplicationEditRequestAllOf
      * @param healthchecks {module:model/Healthcheck} 
      */
     constructor(healthchecks) { 
-        ServiceStorageRequest.initialize(this);ApplicationEditRequestAllOf.initialize(this, healthchecks);
+        ServiceStorageRequest.initialize(this);
         ApplicationEditRequest.initialize(this, healthchecks);
     }
 
@@ -59,7 +57,6 @@ class ApplicationEditRequest {
         if (data) {
             obj = obj || new ApplicationEditRequest();
             ServiceStorageRequest.constructFromObject(data, obj);
-            ApplicationEditRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('storage')) {
                 obj['storage'] = ApiClient.convertToType(data['storage'], [ServiceStorageRequestStorageInner]);
@@ -116,8 +113,74 @@ class ApplicationEditRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ApplicationEditRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ApplicationEditRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of ApplicationEditRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        if (data['storage']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['storage'])) {
+                throw new Error("Expected the field `storage` to be an array in the JSON data but got " + data['storage']);
+            }
+            // validate the optional field `storage` (array)
+            for (const item of data['storage']) {
+                ServiceStorageRequestStorageInner.validateJSON(item);
+            };
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // validate the optional field `git_repository`
+        if (data['git_repository']) { // data not null
+          ApplicationGitRepositoryRequest.validateJSON(data['git_repository']);
+        }
+        // ensure the json data is a string
+        if (data['dockerfile_path'] && !(typeof data['dockerfile_path'] === 'string' || data['dockerfile_path'] instanceof String)) {
+            throw new Error("Expected the field `dockerfile_path` to be a primitive type in the JSON string but got " + data['dockerfile_path']);
+        }
+        // validate the optional field `healthchecks`
+        if (data['healthchecks']) { // data not null
+          Healthcheck.validateJSON(data['healthchecks']);
+        }
+        if (data['ports']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['ports'])) {
+                throw new Error("Expected the field `ports` to be an array in the JSON data but got " + data['ports']);
+            }
+            // validate the optional field `ports` (array)
+            for (const item of data['ports']) {
+                ServicePort.validateJSON(item);
+            };
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['arguments'])) {
+            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
+        }
+        // ensure the json data is a string
+        if (data['entrypoint'] && !(typeof data['entrypoint'] === 'string' || data['entrypoint'] instanceof String)) {
+            throw new Error("Expected the field `entrypoint` to be a primitive type in the JSON string but got " + data['entrypoint']);
+        }
+
+        return true;
+    }
+
 
 }
+
+ApplicationEditRequest.RequiredProperties = ["healthchecks"];
 
 /**
  * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
@@ -225,86 +288,6 @@ ApplicationEditRequest.prototype['auto_deploy'] = undefined;
  * @member {Array.<module:model/ServiceStorageRequestStorageInner>} storage
  */
 ServiceStorageRequest.prototype['storage'] = undefined;
-// Implement ApplicationEditRequestAllOf interface:
-/**
- * name is case insensitive
- * @member {String} name
- */
-ApplicationEditRequestAllOf.prototype['name'] = undefined;
-/**
- * give a description to this application
- * @member {String} description
- */
-ApplicationEditRequestAllOf.prototype['description'] = undefined;
-/**
- * @member {module:model/ApplicationGitRepositoryRequest} git_repository
- */
-ApplicationEditRequestAllOf.prototype['git_repository'] = undefined;
-/**
- * @member {module:model/BuildModeEnum} build_mode
- */
-ApplicationEditRequestAllOf.prototype['build_mode'] = undefined;
-/**
- * The path of the associated Dockerfile
- * @member {String} dockerfile_path
- */
-ApplicationEditRequestAllOf.prototype['dockerfile_path'] = undefined;
-/**
- * @member {module:model/BuildPackLanguageEnum} buildpack_language
- */
-ApplicationEditRequestAllOf.prototype['buildpack_language'] = undefined;
-/**
- * unit is millicores (m). 1000m = 1 cpu
- * @member {Number} cpu
- * @default 500
- */
-ApplicationEditRequestAllOf.prototype['cpu'] = 500;
-/**
- * unit is MB. 1024 MB = 1GB
- * @member {Number} memory
- * @default 512
- */
-ApplicationEditRequestAllOf.prototype['memory'] = 512;
-/**
- * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no application running. 
- * @member {Number} min_running_instances
- * @default 1
- */
-ApplicationEditRequestAllOf.prototype['min_running_instances'] = 1;
-/**
- * Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
- * @member {Number} max_running_instances
- * @default 1
- */
-ApplicationEditRequestAllOf.prototype['max_running_instances'] = 1;
-/**
- * @member {module:model/Healthcheck} healthchecks
- */
-ApplicationEditRequestAllOf.prototype['healthchecks'] = undefined;
-/**
- * Specify if the environment preview option is activated or not for this application.   If activated, a preview environment will be automatically cloned at each pull request.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
- * @member {Boolean} auto_preview
- * @default true
- */
-ApplicationEditRequestAllOf.prototype['auto_preview'] = true;
-/**
- * @member {Array.<module:model/ServicePort>} ports
- */
-ApplicationEditRequestAllOf.prototype['ports'] = undefined;
-/**
- * @member {Array.<String>} arguments
- */
-ApplicationEditRequestAllOf.prototype['arguments'] = undefined;
-/**
- * optional entrypoint when launching container
- * @member {String} entrypoint
- */
-ApplicationEditRequestAllOf.prototype['entrypoint'] = undefined;
-/**
- * Specify if the application will be automatically updated after receiving a new commit.
- * @member {Boolean} auto_deploy
- */
-ApplicationEditRequestAllOf.prototype['auto_deploy'] = undefined;
 
 
 

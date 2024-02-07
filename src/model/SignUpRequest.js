@@ -99,8 +99,62 @@ class SignUpRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>SignUpRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>SignUpRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of SignUpRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['first_name'] && !(typeof data['first_name'] === 'string' || data['first_name'] instanceof String)) {
+            throw new Error("Expected the field `first_name` to be a primitive type in the JSON string but got " + data['first_name']);
+        }
+        // ensure the json data is a string
+        if (data['last_name'] && !(typeof data['last_name'] === 'string' || data['last_name'] instanceof String)) {
+            throw new Error("Expected the field `last_name` to be a primitive type in the JSON string but got " + data['last_name']);
+        }
+        // ensure the json data is a string
+        if (data['user_email'] && !(typeof data['user_email'] === 'string' || data['user_email'] instanceof String)) {
+            throw new Error("Expected the field `user_email` to be a primitive type in the JSON string but got " + data['user_email']);
+        }
+        // ensure the json data is a string
+        if (data['qovery_usage'] && !(typeof data['qovery_usage'] === 'string' || data['qovery_usage'] instanceof String)) {
+            throw new Error("Expected the field `qovery_usage` to be a primitive type in the JSON string but got " + data['qovery_usage']);
+        }
+        // ensure the json data is a string
+        if (data['company_name'] && !(typeof data['company_name'] === 'string' || data['company_name'] instanceof String)) {
+            throw new Error("Expected the field `company_name` to be a primitive type in the JSON string but got " + data['company_name']);
+        }
+        // ensure the json data is a string
+        if (data['user_role'] && !(typeof data['user_role'] === 'string' || data['user_role'] instanceof String)) {
+            throw new Error("Expected the field `user_role` to be a primitive type in the JSON string but got " + data['user_role']);
+        }
+        // ensure the json data is a string
+        if (data['qovery_usage_other'] && !(typeof data['qovery_usage_other'] === 'string' || data['qovery_usage_other'] instanceof String)) {
+            throw new Error("Expected the field `qovery_usage_other` to be a primitive type in the JSON string but got " + data['qovery_usage_other']);
+        }
+        // ensure the json data is a string
+        if (data['user_questions'] && !(typeof data['user_questions'] === 'string' || data['user_questions'] instanceof String)) {
+            throw new Error("Expected the field `user_questions` to be a primitive type in the JSON string but got " + data['user_questions']);
+        }
+        // ensure the json data is a string
+        if (data['current_step'] && !(typeof data['current_step'] === 'string' || data['current_step'] instanceof String)) {
+            throw new Error("Expected the field `current_step` to be a primitive type in the JSON string but got " + data['current_step']);
+        }
+
+        return true;
+    }
+
 
 }
+
+SignUpRequest.RequiredProperties = ["first_name", "last_name", "user_email", "type_of_use", "qovery_usage"];
 
 /**
  * @member {String} first_name

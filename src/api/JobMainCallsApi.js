@@ -92,7 +92,7 @@ export default class JobMainCallsApi {
      * - To edit the job you must have the admin permission. 
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/JobRequest} opts.jobRequest 
+     * @param {module:model/JobRequest} [jobRequest] 
      * @param {module:api/JobMainCallsApi~editJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobResponse}
      */
@@ -222,8 +222,8 @@ export default class JobMainCallsApi {
      * Returns list of the last 100 commits made on the repository linked to the job
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {String} opts.startId Starting point after which to return results
-     * @param {String} opts.gitCommitId Git Commit ID
+     * @param {String} [startId] Starting point after which to return results
+     * @param {String} [gitCommitId] Git Commit ID
      * @param {module:api/JobMainCallsApi~listJobCommitCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CommitResponseList}
      */

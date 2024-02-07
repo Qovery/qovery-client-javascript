@@ -49,7 +49,7 @@ export default class ProjectsApi {
      * Create a project
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ProjectRequest} opts.projectRequest 
+     * @param {module:model/ProjectRequest} [projectRequest] 
      * @param {module:api/ProjectsApi~createProjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Project}
      */

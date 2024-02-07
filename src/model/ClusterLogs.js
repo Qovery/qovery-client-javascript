@@ -72,8 +72,40 @@ class ClusterLogs {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>ClusterLogs</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterLogs</code>.
+     */
+    static validateJSON(data) {
+        // ensure the json data is a string
+        if (data['type'] && !(typeof data['type'] === 'string' || data['type'] instanceof String)) {
+            throw new Error("Expected the field `type` to be a primitive type in the JSON string but got " + data['type']);
+        }
+        // ensure the json data is a string
+        if (data['step'] && !(typeof data['step'] === 'string' || data['step'] instanceof String)) {
+            throw new Error("Expected the field `step` to be a primitive type in the JSON string but got " + data['step']);
+        }
+        // validate the optional field `message`
+        if (data['message']) { // data not null
+          ClusterLogsMessage.validateJSON(data['message']);
+        }
+        // validate the optional field `error`
+        if (data['error']) { // data not null
+          ClusterLogsError.validateJSON(data['error']);
+        }
+        // validate the optional field `details`
+        if (data['details']) { // data not null
+          ClusterLogsDetails.validateJSON(data['details']);
+        }
+
+        return true;
+    }
+
 
 }
+
+
 
 /**
  * log level

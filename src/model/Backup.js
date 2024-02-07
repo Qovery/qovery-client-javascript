@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BackupAllOf from './BackupAllOf';
 import BackupRequest from './BackupRequest';
 import Base from './Base';
 import Status from './Status';
@@ -28,14 +27,13 @@ class Backup {
      * @alias module:model/Backup
      * @implements module:model/Base
      * @implements module:model/BackupRequest
-     * @implements module:model/BackupAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} 
      * @param message {String} 
      */
     constructor(id, createdAt, name, message) { 
-        Base.initialize(this, id, createdAt);BackupRequest.initialize(this, name, message);BackupAllOf.initialize(this);
+        Base.initialize(this, id, createdAt);BackupRequest.initialize(this, name, message);
         Backup.initialize(this, id, createdAt, name, message);
     }
 
@@ -63,7 +61,6 @@ class Backup {
             obj = obj || new Backup();
             Base.constructFromObject(data, obj);
             BackupRequest.constructFromObject(data, obj);
-            BackupAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -87,8 +84,42 @@ class Backup {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>Backup</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Backup</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of Backup.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
+            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
+            throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
+        }
+        // validate the optional field `status`
+        if (data['status']) { // data not null
+          Status.validateJSON(data['status']);
+        }
+
+        return true;
+    }
+
 
 }
+
+Backup.RequiredProperties = ["id", "created_at", "name", "message"];
 
 /**
  * @member {String} id
@@ -143,11 +174,6 @@ BackupRequest.prototype['name'] = undefined;
  * @member {String} message
  */
 BackupRequest.prototype['message'] = undefined;
-// Implement BackupAllOf interface:
-/**
- * @member {module:model/Status} status
- */
-BackupAllOf.prototype['status'] = undefined;
 
 
 

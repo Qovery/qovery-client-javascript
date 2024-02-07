@@ -12,10 +12,9 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelmGitRepositoryRequest from './HelmGitRepositoryRequest';
 import HelmPortRequest from './HelmPortRequest';
 import HelmPortRequestPortsInner from './HelmPortRequestPortsInner';
-import HelmRequestAllOf from './HelmRequestAllOf';
+import HelmRequestAllOfSource from './HelmRequestAllOfSource';
 import HelmRequestAllOfValuesOverride from './HelmRequestAllOfValuesOverride';
 
 /**
@@ -28,15 +27,14 @@ class HelmRequest {
      * Constructs a new <code>HelmRequest</code>.
      * @alias module:model/HelmRequest
      * @implements module:model/HelmPortRequest
-     * @implements module:model/HelmRequestAllOf
      * @param name {String} name is case insensitive
      * @param autoDeploy {Boolean} Specify if the helm will be automatically updated after receiving a new image tag or a new commit according to the source type.  
-     * @param source {module:model/OneOfobjectobject} 
+     * @param source {module:model/HelmRequestAllOfSource} 
      * @param _arguments {Array.<String>} The extra arguments to pass to helm
      * @param valuesOverride {module:model/HelmRequestAllOfValuesOverride} 
      */
     constructor(name, autoDeploy, source, _arguments, valuesOverride) { 
-        HelmPortRequest.initialize(this);HelmRequestAllOf.initialize(this, name, autoDeploy, source, _arguments, valuesOverride);
+        HelmPortRequest.initialize(this);
         HelmRequest.initialize(this, name, autoDeploy, source, _arguments, valuesOverride);
     }
 
@@ -64,7 +62,6 @@ class HelmRequest {
         if (data) {
             obj = obj || new HelmRequest();
             HelmPortRequest.constructFromObject(data, obj);
-            HelmRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('ports')) {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [HelmPortRequestPortsInner]);
@@ -85,7 +82,7 @@ class HelmRequest {
                 obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
+                obj['source'] = HelmRequestAllOfSource.constructFromObject(data['source']);
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -100,8 +97,56 @@ class HelmRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>HelmRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of HelmRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        if (data['ports']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['ports'])) {
+                throw new Error("Expected the field `ports` to be an array in the JSON data but got " + data['ports']);
+            }
+            // validate the optional field `ports` (array)
+            for (const item of data['ports']) {
+                HelmPortRequestPortsInner.validateJSON(item);
+            };
+        }
+        // ensure the json data is a string
+        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
+            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
+        }
+        // ensure the json data is a string
+        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
+            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
+        }
+        // validate the optional field `source`
+        if (data['source']) { // data not null
+          HelmRequestAllOfSource.validateJSON(data['source']);
+        }
+        // ensure the json data is an array
+        if (!Array.isArray(data['arguments'])) {
+            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
+        }
+        // validate the optional field `values_override`
+        if (data['values_override']) { // data not null
+          HelmRequestAllOfValuesOverride.validateJSON(data['values_override']);
+        }
+
+        return true;
+    }
+
 
 }
+
+HelmRequest.RequiredProperties = ["name", "auto_deploy", "source", "arguments", "values_override"];
 
 /**
  * @member {Array.<module:model/HelmPortRequestPortsInner>} ports
@@ -139,7 +184,7 @@ HelmRequest.prototype['auto_preview'] = undefined;
 HelmRequest.prototype['auto_deploy'] = undefined;
 
 /**
- * @member {module:model/OneOfobjectobject} source
+ * @member {module:model/HelmRequestAllOfSource} source
  */
 HelmRequest.prototype['source'] = undefined;
 
@@ -167,51 +212,6 @@ HelmRequest.prototype['values_override'] = undefined;
  * @member {Array.<module:model/HelmPortRequestPortsInner>} ports
  */
 HelmPortRequest.prototype['ports'] = undefined;
-// Implement HelmRequestAllOf interface:
-/**
- * name is case insensitive
- * @member {String} name
- */
-HelmRequestAllOf.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-HelmRequestAllOf.prototype['description'] = undefined;
-/**
- * Maximum number of seconds allowed for helm to run before killing it and mark it as failed 
- * @member {Number} timeout_sec
- * @default 600
- */
-HelmRequestAllOf.prototype['timeout_sec'] = 600;
-/**
- * Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called or when a new commit is updated. If not specified, it takes the value of the `auto_preview` property from the associated environment. 
- * @member {Boolean} auto_preview
- */
-HelmRequestAllOf.prototype['auto_preview'] = undefined;
-/**
- * Specify if the helm will be automatically updated after receiving a new image tag or a new commit according to the source type.  
- * @member {Boolean} auto_deploy
- */
-HelmRequestAllOf.prototype['auto_deploy'] = undefined;
-/**
- * @member {module:model/OneOfobjectobject} source
- */
-HelmRequestAllOf.prototype['source'] = undefined;
-/**
- * The extra arguments to pass to helm
- * @member {Array.<String>} arguments
- */
-HelmRequestAllOf.prototype['arguments'] = undefined;
-/**
- * If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights 
- * @member {Boolean} allow_cluster_wide_resources
- * @default false
- */
-HelmRequestAllOf.prototype['allow_cluster_wide_resources'] = false;
-/**
- * @member {module:model/HelmRequestAllOfValuesOverride} values_override
- */
-HelmRequestAllOf.prototype['values_override'] = undefined;
 
 
 

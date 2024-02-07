@@ -61,8 +61,34 @@ class MemberRoleUpdateRequest {
         return obj;
     }
 
+    /**
+     * Validates the JSON data with respect to <code>MemberRoleUpdateRequest</code>.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>MemberRoleUpdateRequest</code>.
+     */
+    static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of MemberRoleUpdateRequest.RequiredProperties) {
+            if (!data[property]) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
+        // ensure the json data is a string
+        if (data['user_id'] && !(typeof data['user_id'] === 'string' || data['user_id'] instanceof String)) {
+            throw new Error("Expected the field `user_id` to be a primitive type in the JSON string but got " + data['user_id']);
+        }
+        // ensure the json data is a string
+        if (data['role_id'] && !(typeof data['role_id'] === 'string' || data['role_id'] instanceof String)) {
+            throw new Error("Expected the field `role_id` to be a primitive type in the JSON string but got " + data['role_id']);
+        }
+
+        return true;
+    }
+
 
 }
+
+MemberRoleUpdateRequest.RequiredProperties = ["user_id", "role_id"];
 
 /**
  * specify the git provider user id

@@ -49,7 +49,7 @@ export default class HelmDeploymentRestrictionApi {
      * Create a helm deployment restriction
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmDeploymentRestrictionRequest} opts.helmDeploymentRestrictionRequest 
+     * @param {module:model/HelmDeploymentRestrictionRequest} [helmDeploymentRestrictionRequest] 
      * @param {module:api/HelmDeploymentRestrictionApi~createHelmDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmDeploymentRestrictionResponse}
      */
@@ -144,7 +144,7 @@ export default class HelmDeploymentRestrictionApi {
      * @param {String} helmId Helm ID
      * @param {String} deploymentRestrictionId Deployment Restriction ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmDeploymentRestrictionRequest} opts.helmDeploymentRestrictionRequest 
+     * @param {module:model/HelmDeploymentRestrictionRequest} [helmDeploymentRestrictionRequest] 
      * @param {module:api/HelmDeploymentRestrictionApi~editHelmDeploymentRestrictionCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmDeploymentRestrictionResponse}
      */

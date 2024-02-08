@@ -54,20 +54,8 @@ class ApplicationNetwork {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ApplicationNetwork</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ApplicationNetwork</code>.
-     */
-    static validateJSON(data) {
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * Specify if the sticky session option (also called persistant session) is activated or not for this application. If activated, user will be redirected by the load balancer to the same instance each time he access to the application.  

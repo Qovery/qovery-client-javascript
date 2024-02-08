@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import ContainerRegistryProviderDetailsResponse from './ContainerRegistryProviderDetailsResponse';
+import ContainerResponseAllOf from './ContainerResponseAllOf';
 import ContainerSource from './ContainerSource';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
@@ -33,6 +34,7 @@ class ContainerResponse {
      * @implements module:model/Base
      * @implements module:model/ServiceStorage
      * @implements module:model/ContainerSource
+     * @implements module:model/ContainerResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param imageName {String} The image name pattern differs according to chosen container registry provider: * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 
@@ -50,7 +52,7 @@ class ContainerResponse {
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      */
     constructor(id, createdAt, imageName, tag, registry, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview) { 
-        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ContainerSource.initialize(this, imageName, tag, registry);
+        Base.initialize(this, id, createdAt);ServiceStorage.initialize(this);ContainerSource.initialize(this, imageName, tag, registry);ContainerResponseAllOf.initialize(this, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
         ContainerResponse.initialize(this, id, createdAt, imageName, tag, registry, environment, maximumCpu, maximumMemory, name, cpu, memory, minRunningInstances, maxRunningInstances, healthchecks, autoPreview);
     }
 
@@ -90,6 +92,7 @@ class ContainerResponse {
             Base.constructFromObject(data, obj);
             ServiceStorage.constructFromObject(data, obj);
             ContainerSource.constructFromObject(data, obj);
+            ContainerResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -164,90 +167,8 @@ class ContainerResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ContainerResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ContainerResponse</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ContainerResponse.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        if (data['storage']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['storage'])) {
-                throw new Error("Expected the field `storage` to be an array in the JSON data but got " + data['storage']);
-            }
-            // validate the optional field `storage` (array)
-            for (const item of data['storage']) {
-                ServiceStorageStorageInner.validateJSON(item);
-            };
-        }
-        // ensure the json data is a string
-        if (data['image_name'] && !(typeof data['image_name'] === 'string' || data['image_name'] instanceof String)) {
-            throw new Error("Expected the field `image_name` to be a primitive type in the JSON string but got " + data['image_name']);
-        }
-        // ensure the json data is a string
-        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
-            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
-        }
-        // ensure the json data is a string
-        if (data['registry_id'] && !(typeof data['registry_id'] === 'string' || data['registry_id'] instanceof String)) {
-            throw new Error("Expected the field `registry_id` to be a primitive type in the JSON string but got " + data['registry_id']);
-        }
-        // validate the optional field `registry`
-        if (data['registry']) { // data not null
-          ContainerRegistryProviderDetailsResponse.validateJSON(data['registry']);
-        }
-        // validate the optional field `environment`
-        if (data['environment']) { // data not null
-          ReferenceObject.validateJSON(data['environment']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['arguments'])) {
-            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
-        }
-        // ensure the json data is a string
-        if (data['entrypoint'] && !(typeof data['entrypoint'] === 'string' || data['entrypoint'] instanceof String)) {
-            throw new Error("Expected the field `entrypoint` to be a primitive type in the JSON string but got " + data['entrypoint']);
-        }
-        // validate the optional field `healthchecks`
-        if (data['healthchecks']) { // data not null
-          Healthcheck.validateJSON(data['healthchecks']);
-        }
-        if (data['ports']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['ports'])) {
-                throw new Error("Expected the field `ports` to be an array in the JSON data but got " + data['ports']);
-            }
-            // validate the optional field `ports` (array)
-            for (const item of data['ports']) {
-                ServicePort.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-ContainerResponse.RequiredProperties = ["id", "created_at", "image_name", "tag", "registry", "environment", "maximum_cpu", "maximum_memory", "name", "cpu", "memory", "min_running_instances", "max_running_instances", "healthchecks", "auto_preview"];
 
 /**
  * @member {String} id
@@ -419,6 +340,80 @@ ContainerSource.prototype['registry_id'] = undefined;
  * @member {module:model/ContainerRegistryProviderDetailsResponse} registry
  */
 ContainerSource.prototype['registry'] = undefined;
+// Implement ContainerResponseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+ContainerResponseAllOf.prototype['environment'] = undefined;
+/**
+ * Maximum cpu that can be allocated to the container based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ */
+ContainerResponseAllOf.prototype['maximum_cpu'] = undefined;
+/**
+ * Maximum memory that can be allocated to the container based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ */
+ContainerResponseAllOf.prototype['maximum_memory'] = undefined;
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+ContainerResponseAllOf.prototype['name'] = undefined;
+/**
+ * give a description to this container
+ * @member {String} description
+ */
+ContainerResponseAllOf.prototype['description'] = undefined;
+/**
+ * @member {Array.<String>} arguments
+ */
+ContainerResponseAllOf.prototype['arguments'] = undefined;
+/**
+ * optional entrypoint when launching container
+ * @member {String} entrypoint
+ */
+ContainerResponseAllOf.prototype['entrypoint'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ */
+ContainerResponseAllOf.prototype['cpu'] = undefined;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ */
+ContainerResponseAllOf.prototype['memory'] = undefined;
+/**
+ * Minimum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: 0 means that there is no container running. 
+ * @member {Number} min_running_instances
+ * @default 1
+ */
+ContainerResponseAllOf.prototype['min_running_instances'] = 1;
+/**
+ * Maximum number of instances running. This resource auto-scale based on the CPU and Memory consumption. Note: -1 means that there is no limit. 
+ * @member {Number} max_running_instances
+ * @default 1
+ */
+ContainerResponseAllOf.prototype['max_running_instances'] = 1;
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+ContainerResponseAllOf.prototype['healthchecks'] = undefined;
+/**
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+ContainerResponseAllOf.prototype['auto_preview'] = undefined;
+/**
+ * @member {Array.<module:model/ServicePort>} ports
+ */
+ContainerResponseAllOf.prototype['ports'] = undefined;
+/**
+ * Specify if the container will be automatically updated after receiving a new image tag.  The new image tag shall be communicated via the \"Auto Deploy container\" endpoint https://api-doc.qovery.com/#tag/Containers/operation/autoDeployContainerEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+ContainerResponseAllOf.prototype['auto_deploy'] = undefined;
 
 
 

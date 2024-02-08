@@ -130,48 +130,8 @@ class ClusterAdvancedSettings {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterAdvancedSettings</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterAdvancedSettings</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['load_balancer.size'] && !(typeof data['load_balancer.size'] === 'string' || data['load_balancer.size'] instanceof String)) {
-            throw new Error("Expected the field `load_balancer.size` to be a primitive type in the JSON string but got " + data['load_balancer.size']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['database.postgresql.allowed_cidrs'])) {
-            throw new Error("Expected the field `database.postgresql.allowed_cidrs` to be an array in the JSON data but got " + data['database.postgresql.allowed_cidrs']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['database.mysql.allowed_cidrs'])) {
-            throw new Error("Expected the field `database.mysql.allowed_cidrs` to be an array in the JSON data but got " + data['database.mysql.allowed_cidrs']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['database.mongodb.allowed_cidrs'])) {
-            throw new Error("Expected the field `database.mongodb.allowed_cidrs` to be an array in the JSON data but got " + data['database.mongodb.allowed_cidrs']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['database.redis.allowed_cidrs'])) {
-            throw new Error("Expected the field `database.redis.allowed_cidrs` to be an array in the JSON data but got " + data['database.redis.allowed_cidrs']);
-        }
-        // ensure the json data is a string
-        if (data['aws.iam.admin_group'] && !(typeof data['aws.iam.admin_group'] === 'string' || data['aws.iam.admin_group'] instanceof String)) {
-            throw new Error("Expected the field `aws.iam.admin_group` to be a primitive type in the JSON string but got " + data['aws.iam.admin_group']);
-        }
-        // ensure the json data is a string
-        if (data['aws.eks.ec2.metadata_imds'] && !(typeof data['aws.eks.ec2.metadata_imds'] === 'string' || data['aws.eks.ec2.metadata_imds'] instanceof String)) {
-            throw new Error("Expected the field `aws.eks.ec2.metadata_imds` to be a primitive type in the JSON string but got " + data['aws.eks.ec2.metadata_imds']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * Set the number of retention days for EKS Cloudwatch logs

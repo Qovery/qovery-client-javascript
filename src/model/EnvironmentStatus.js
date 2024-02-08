@@ -83,38 +83,8 @@ class EnvironmentStatus {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentStatus</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentStatus</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of EnvironmentStatus.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['last_deployment_id'] && !(typeof data['last_deployment_id'] === 'string' || data['last_deployment_id'] instanceof String)) {
-            throw new Error("Expected the field `last_deployment_id` to be a primitive type in the JSON string but got " + data['last_deployment_id']);
-        }
-        // ensure the json data is a string
-        if (data['triggered_by'] && !(typeof data['triggered_by'] === 'string' || data['triggered_by'] instanceof String)) {
-            throw new Error("Expected the field `triggered_by` to be a primitive type in the JSON string but got " + data['triggered_by']);
-        }
-
-        return true;
-    }
-
 
 }
-
-EnvironmentStatus.RequiredProperties = ["id", "state", "last_deployment_state"];
 
 /**
  * @member {String} id

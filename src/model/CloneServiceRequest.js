@@ -61,34 +61,8 @@ class CloneServiceRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>CloneServiceRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CloneServiceRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of CloneServiceRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['environment_id'] && !(typeof data['environment_id'] === 'string' || data['environment_id'] instanceof String)) {
-            throw new Error("Expected the field `environment_id` to be a primitive type in the JSON string but got " + data['environment_id']);
-        }
-
-        return true;
-    }
-
 
 }
-
-CloneServiceRequest.RequiredProperties = ["name", "environment_id"];
 
 /**
  * @member {String} name

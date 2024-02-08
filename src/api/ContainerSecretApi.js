@@ -52,7 +52,7 @@ export default class ContainerSecretApi {
      * - Add a secret to the container. 
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/SecretRequest} [secretRequest] 
+     * @param {module:model/SecretRequest} opts.secretRequest 
      * @param {module:api/ContainerSecretApi~createContainerSecretCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -99,7 +99,7 @@ export default class ContainerSecretApi {
      * @param {String} containerId Container ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} [key] 
+     * @param {module:model/Key} opts.key 
      * @param {module:api/ContainerSecretApi~createContainerSecretAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -151,7 +151,7 @@ export default class ContainerSecretApi {
      * @param {String} containerId Container ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} [value] 
+     * @param {module:model/Value} opts.value 
      * @param {module:api/ContainerSecretApi~createContainerSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */

@@ -46,7 +46,7 @@ export default class AccountInfoApi {
     /**
      * Edit account information
      * @param {Object} opts Optional parameters
-     * @param {module:model/AccountInfoEditRequest} [accountInfoEditRequest] 
+     * @param {module:model/AccountInfoEditRequest} opts.accountInfoEditRequest 
      * @param {module:api/AccountInfoApi~editAccountInformationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AccountInfo}
      */

@@ -72,44 +72,8 @@ class AccountInfo {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>AccountInfo</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>AccountInfo</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['nickname'] && !(typeof data['nickname'] === 'string' || data['nickname'] instanceof String)) {
-            throw new Error("Expected the field `nickname` to be a primitive type in the JSON string but got " + data['nickname']);
-        }
-        // ensure the json data is a string
-        if (data['first_name'] && !(typeof data['first_name'] === 'string' || data['first_name'] instanceof String)) {
-            throw new Error("Expected the field `first_name` to be a primitive type in the JSON string but got " + data['first_name']);
-        }
-        // ensure the json data is a string
-        if (data['last_name'] && !(typeof data['last_name'] === 'string' || data['last_name'] instanceof String)) {
-            throw new Error("Expected the field `last_name` to be a primitive type in the JSON string but got " + data['last_name']);
-        }
-        // ensure the json data is a string
-        if (data['profile_picture_url'] && !(typeof data['profile_picture_url'] === 'string' || data['profile_picture_url'] instanceof String)) {
-            throw new Error("Expected the field `profile_picture_url` to be a primitive type in the JSON string but got " + data['profile_picture_url']);
-        }
-        // ensure the json data is a string
-        if (data['communication_email'] && !(typeof data['communication_email'] === 'string' || data['communication_email'] instanceof String)) {
-            throw new Error("Expected the field `communication_email` to be a primitive type in the JSON string but got " + data['communication_email']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {String} id

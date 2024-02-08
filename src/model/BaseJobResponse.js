@@ -12,8 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApplicationGitRepository from './ApplicationGitRepository';
 import Base from './Base';
-import BaseJobResponseAllOfSource from './BaseJobResponseAllOfSource';
+import BaseJobResponseAllOf from './BaseJobResponseAllOf';
+import ContainerSource from './ContainerSource';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
 
@@ -27,6 +29,7 @@ class BaseJobResponse {
      * Constructs a new <code>BaseJobResponse</code>.
      * @alias module:model/BaseJobResponse
      * @implements module:model/Base
+     * @implements module:model/BaseJobResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
@@ -36,11 +39,11 @@ class BaseJobResponse {
      * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
-     * @param source {module:model/BaseJobResponseAllOfSource} 
+     * @param source {module:model/OneOfobjectobject} 
      * @param healthchecks {module:model/Healthcheck} 
      */
     constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);BaseJobResponseAllOf.initialize(this, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);
         BaseJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);
     }
 
@@ -74,6 +77,7 @@ class BaseJobResponse {
         if (data) {
             obj = obj || new BaseJobResponse();
             Base.constructFromObject(data, obj);
+            BaseJobResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -118,7 +122,7 @@ class BaseJobResponse {
                 obj['port'] = ApiClient.convertToType(data['port'], 'Number');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = BaseJobResponseAllOfSource.constructFromObject(data['source']);
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
             if (data.hasOwnProperty('healthchecks')) {
                 obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
@@ -130,50 +134,8 @@ class BaseJobResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>BaseJobResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>BaseJobResponse</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of BaseJobResponse.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // validate the optional field `environment`
-        if (data['environment']) { // data not null
-          ReferenceObject.validateJSON(data['environment']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // validate the optional field `source`
-        if (data['source']) { // data not null
-          BaseJobResponseAllOfSource.validateJSON(data['source']);
-        }
-        // validate the optional field `healthchecks`
-        if (data['healthchecks']) { // data not null
-          Healthcheck.validateJSON(data['healthchecks']);
-        }
-
-        return true;
-    }
-
 
 }
-
-BaseJobResponse.RequiredProperties = ["id", "created_at", "environment", "maximum_cpu", "maximum_memory", "name", "cpu", "memory", "auto_preview", "source", "healthchecks"];
 
 /**
  * @member {String} id
@@ -255,7 +217,7 @@ BaseJobResponse.prototype['auto_preview'] = undefined;
 BaseJobResponse.prototype['port'] = undefined;
 
 /**
- * @member {module:model/BaseJobResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 BaseJobResponse.prototype['source'] = undefined;
 
@@ -284,6 +246,73 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement BaseJobResponseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+BaseJobResponseAllOf.prototype['environment'] = undefined;
+/**
+ * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ */
+BaseJobResponseAllOf.prototype['maximum_cpu'] = undefined;
+/**
+ * Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ */
+BaseJobResponseAllOf.prototype['maximum_memory'] = undefined;
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+BaseJobResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+BaseJobResponseAllOf.prototype['description'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ */
+BaseJobResponseAllOf.prototype['cpu'] = undefined;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ */
+BaseJobResponseAllOf.prototype['memory'] = undefined;
+/**
+ * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
+ * @member {Number} max_nb_restart
+ */
+BaseJobResponseAllOf.prototype['max_nb_restart'] = undefined;
+/**
+ * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
+ * @member {Number} max_duration_seconds
+ */
+BaseJobResponseAllOf.prototype['max_duration_seconds'] = undefined;
+/**
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+BaseJobResponseAllOf.prototype['auto_preview'] = undefined;
+/**
+ * Port where to run readiness and liveliness probes checks. The port will not be exposed externally
+ * @member {Number} port
+ */
+BaseJobResponseAllOf.prototype['port'] = undefined;
+/**
+ * @member {module:model/OneOfobjectobject} source
+ */
+BaseJobResponseAllOf.prototype['source'] = undefined;
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+BaseJobResponseAllOf.prototype['healthchecks'] = undefined;
+/**
+ * Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \"Auto Deploy job\" endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+BaseJobResponseAllOf.prototype['auto_deploy'] = undefined;
 
 
 

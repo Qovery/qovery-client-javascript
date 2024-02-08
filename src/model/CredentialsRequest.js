@@ -61,34 +61,8 @@ class CredentialsRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>CredentialsRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CredentialsRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of CredentialsRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['login'] && !(typeof data['login'] === 'string' || data['login'] instanceof String)) {
-            throw new Error("Expected the field `login` to be a primitive type in the JSON string but got " + data['login']);
-        }
-        // ensure the json data is a string
-        if (data['password'] && !(typeof data['password'] === 'string' || data['password'] instanceof String)) {
-            throw new Error("Expected the field `password` to be a primitive type in the JSON string but got " + data['password']);
-        }
-
-        return true;
-    }
-
 
 }
-
-CredentialsRequest.RequiredProperties = ["login", "password"];
 
 /**
  * @member {String} login

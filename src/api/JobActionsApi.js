@@ -49,8 +49,8 @@ export default class JobActionsApi {
      * You must provide a git commit id or an image tag depending on the source location of your code (git vs image repository).
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/JobForceEvent} [forceEvent] When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
-     * @param {module:model/JobDeployRequest} [jobDeployRequest] 
+     * @param {module:model/JobForceEvent} opts.forceEvent When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
+     * @param {module:model/JobDeployRequest} opts.jobDeployRequest 
      * @param {module:api/JobActionsApi~deployJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
@@ -97,7 +97,7 @@ export default class JobActionsApi {
      * **Deprecated** - Please use the \"Redeploy job\" endpoint now
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/JobForceEvent} [forceEvent] When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
+     * @param {module:model/JobForceEvent} opts.forceEvent When filled, it indicates the target event to be deployed.   If the concerned job hasn't the target event provided, the job won't be deployed. 
      * @param {module:api/JobActionsApi~restartJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */

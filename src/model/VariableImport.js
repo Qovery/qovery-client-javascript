@@ -62,36 +62,8 @@ class VariableImport {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>VariableImport</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>VariableImport</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of VariableImport.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['successful_imported_variables']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['successful_imported_variables'])) {
-                throw new Error("Expected the field `successful_imported_variables` to be an array in the JSON data but got " + data['successful_imported_variables']);
-            }
-            // validate the optional field `successful_imported_variables` (array)
-            for (const item of data['successful_imported_variables']) {
-                VariableImportSuccessfulImportedVariablesInner.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-VariableImport.RequiredProperties = ["total_variables_to_import", "successful_imported_variables"];
 
 /**
  * @member {Number} total_variables_to_import

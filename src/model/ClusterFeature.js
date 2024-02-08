@@ -83,54 +83,8 @@ class ClusterFeature {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterFeature</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterFeature</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['title'] && !(typeof data['title'] === 'string' || data['title'] instanceof String)) {
-            throw new Error("Expected the field `title` to be a primitive type in the JSON string but got " + data['title']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // ensure the json data is a string
-        if (data['currency_code'] && !(typeof data['currency_code'] === 'string' || data['currency_code'] instanceof String)) {
-            throw new Error("Expected the field `currency_code` to be a primitive type in the JSON string but got " + data['currency_code']);
-        }
-        // ensure the json data is a string
-        if (data['value_type'] && !(typeof data['value_type'] === 'string' || data['value_type'] instanceof String)) {
-            throw new Error("Expected the field `value_type` to be a primitive type in the JSON string but got " + data['value_type']);
-        }
-        // validate the optional field `value`
-        if (data['value']) { // data not null
-          ClusterFeatureValue.validateJSON(data['value']);
-        }
-        if (data['accepted_values']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['accepted_values'])) {
-                throw new Error("Expected the field `accepted_values` to be an array in the JSON data but got " + data['accepted_values']);
-            }
-            // validate the optional field `accepted_values` (array)
-            for (const item of data['accepted_values']) {
-                ClusterFeatureAcceptedValuesInner.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {String} id

@@ -87,50 +87,8 @@ class GitTokenAssociatedServiceResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>GitTokenAssociatedServiceResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>GitTokenAssociatedServiceResponse</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of GitTokenAssociatedServiceResponse.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['project_id'] && !(typeof data['project_id'] === 'string' || data['project_id'] instanceof String)) {
-            throw new Error("Expected the field `project_id` to be a primitive type in the JSON string but got " + data['project_id']);
-        }
-        // ensure the json data is a string
-        if (data['project_name'] && !(typeof data['project_name'] === 'string' || data['project_name'] instanceof String)) {
-            throw new Error("Expected the field `project_name` to be a primitive type in the JSON string but got " + data['project_name']);
-        }
-        // ensure the json data is a string
-        if (data['environment_id'] && !(typeof data['environment_id'] === 'string' || data['environment_id'] instanceof String)) {
-            throw new Error("Expected the field `environment_id` to be a primitive type in the JSON string but got " + data['environment_id']);
-        }
-        // ensure the json data is a string
-        if (data['environment_name'] && !(typeof data['environment_name'] === 'string' || data['environment_name'] instanceof String)) {
-            throw new Error("Expected the field `environment_name` to be a primitive type in the JSON string but got " + data['environment_name']);
-        }
-        // ensure the json data is a string
-        if (data['service_id'] && !(typeof data['service_id'] === 'string' || data['service_id'] instanceof String)) {
-            throw new Error("Expected the field `service_id` to be a primitive type in the JSON string but got " + data['service_id']);
-        }
-        // ensure the json data is a string
-        if (data['service_name'] && !(typeof data['service_name'] === 'string' || data['service_name'] instanceof String)) {
-            throw new Error("Expected the field `service_name` to be a primitive type in the JSON string but got " + data['service_name']);
-        }
-
-        return true;
-    }
-
 
 }
-
-GitTokenAssociatedServiceResponse.RequiredProperties = ["project_id", "project_name", "environment_id", "environment_name", "service_id", "service_name", "service_type"];
 
 /**
  * @member {String} project_id

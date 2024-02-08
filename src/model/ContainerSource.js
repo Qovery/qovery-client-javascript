@@ -70,42 +70,8 @@ class ContainerSource {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ContainerSource</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ContainerSource</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ContainerSource.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['image_name'] && !(typeof data['image_name'] === 'string' || data['image_name'] instanceof String)) {
-            throw new Error("Expected the field `image_name` to be a primitive type in the JSON string but got " + data['image_name']);
-        }
-        // ensure the json data is a string
-        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
-            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
-        }
-        // ensure the json data is a string
-        if (data['registry_id'] && !(typeof data['registry_id'] === 'string' || data['registry_id'] instanceof String)) {
-            throw new Error("Expected the field `registry_id` to be a primitive type in the JSON string but got " + data['registry_id']);
-        }
-        // validate the optional field `registry`
-        if (data['registry']) { // data not null
-          ContainerRegistryProviderDetailsResponse.validateJSON(data['registry']);
-        }
-
-        return true;
-    }
-
 
 }
-
-ContainerSource.RequiredProperties = ["image_name", "tag", "registry"];
 
 /**
  * The image name pattern differs according to chosen container registry provider: * `ECR`: `repository` * `SCALEWAY_CR`: `namespace/image` * `DOCKER_HUB`: `image` or `repository/image` * `PUBLIC_ECR`: `registry_alias/repository` 

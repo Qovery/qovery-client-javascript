@@ -58,28 +58,8 @@ class Healthcheck {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>Healthcheck</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Healthcheck</code>.
-     */
-    static validateJSON(data) {
-        // validate the optional field `readiness_probe`
-        if (data['readiness_probe']) { // data not null
-          Probe.validateJSON(data['readiness_probe']);
-        }
-        // validate the optional field `liveness_probe`
-        if (data['liveness_probe']) { // data not null
-          Probe.validateJSON(data['liveness_probe']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {module:model/Probe} readiness_probe

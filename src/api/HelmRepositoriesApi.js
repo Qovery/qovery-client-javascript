@@ -49,7 +49,7 @@ export default class HelmRepositoriesApi {
      * Create a helm repository
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmRepositoryRequest} [helmRepositoryRequest] 
+     * @param {module:model/HelmRepositoryRequest} opts.helmRepositoryRequest 
      * @param {module:api/HelmRepositoriesApi~createHelmRepositoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmRepositoryResponse}
      */
@@ -142,7 +142,7 @@ export default class HelmRepositoriesApi {
      * @param {String} organizationId Organization ID
      * @param {String} helmRepositoryId Helm chart repository ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmRepositoryRequest} [helmRepositoryRequest] 
+     * @param {module:model/HelmRepositoryRequest} opts.helmRepositoryRequest 
      * @param {module:api/HelmRepositoriesApi~editHelmRepositoryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmRepositoryResponse}
      */

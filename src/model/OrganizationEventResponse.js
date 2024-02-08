@@ -97,56 +97,8 @@ class OrganizationEventResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>OrganizationEventResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationEventResponse</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['target_id'] && !(typeof data['target_id'] === 'string' || data['target_id'] instanceof String)) {
-            throw new Error("Expected the field `target_id` to be a primitive type in the JSON string but got " + data['target_id']);
-        }
-        // ensure the json data is a string
-        if (data['target_name'] && !(typeof data['target_name'] === 'string' || data['target_name'] instanceof String)) {
-            throw new Error("Expected the field `target_name` to be a primitive type in the JSON string but got " + data['target_name']);
-        }
-        // ensure the json data is a string
-        if (data['change'] && !(typeof data['change'] === 'string' || data['change'] instanceof String)) {
-            throw new Error("Expected the field `change` to be a primitive type in the JSON string but got " + data['change']);
-        }
-        // ensure the json data is a string
-        if (data['triggered_by'] && !(typeof data['triggered_by'] === 'string' || data['triggered_by'] instanceof String)) {
-            throw new Error("Expected the field `triggered_by` to be a primitive type in the JSON string but got " + data['triggered_by']);
-        }
-        // ensure the json data is a string
-        if (data['project_id'] && !(typeof data['project_id'] === 'string' || data['project_id'] instanceof String)) {
-            throw new Error("Expected the field `project_id` to be a primitive type in the JSON string but got " + data['project_id']);
-        }
-        // ensure the json data is a string
-        if (data['project_name'] && !(typeof data['project_name'] === 'string' || data['project_name'] instanceof String)) {
-            throw new Error("Expected the field `project_name` to be a primitive type in the JSON string but got " + data['project_name']);
-        }
-        // ensure the json data is a string
-        if (data['environment_id'] && !(typeof data['environment_id'] === 'string' || data['environment_id'] instanceof String)) {
-            throw new Error("Expected the field `environment_id` to be a primitive type in the JSON string but got " + data['environment_id']);
-        }
-        // ensure the json data is a string
-        if (data['environment_name'] && !(typeof data['environment_name'] === 'string' || data['environment_name'] instanceof String)) {
-            throw new Error("Expected the field `environment_name` to be a primitive type in the JSON string but got " + data['environment_name']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {String} id

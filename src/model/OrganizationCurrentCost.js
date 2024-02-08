@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Cost from './Cost';
 import CurrentCost from './CurrentCost';
+import OrganizationCurrentCostAllOf from './OrganizationCurrentCostAllOf';
 import PaidUsage from './PaidUsage';
 import PlanEnum from './PlanEnum';
 import RemainingCredits from './RemainingCredits';
@@ -28,9 +29,10 @@ class OrganizationCurrentCost {
      * Constructs a new <code>OrganizationCurrentCost</code>.
      * @alias module:model/OrganizationCurrentCost
      * @implements module:model/CurrentCost
+     * @implements module:model/OrganizationCurrentCostAllOf
      */
     constructor() { 
-        CurrentCost.initialize(this);
+        CurrentCost.initialize(this);OrganizationCurrentCostAllOf.initialize(this);
         OrganizationCurrentCost.initialize(this);
     }
 
@@ -53,6 +55,7 @@ class OrganizationCurrentCost {
         if (data) {
             obj = obj || new OrganizationCurrentCost();
             CurrentCost.constructFromObject(data, obj);
+            OrganizationCurrentCostAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('plan')) {
                 obj['plan'] = PlanEnum.constructFromObject(data['plan']);
@@ -73,32 +76,8 @@ class OrganizationCurrentCost {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>OrganizationCurrentCost</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationCurrentCost</code>.
-     */
-    static validateJSON(data) {
-        // validate the optional field `remaining_credits`
-        if (data['remaining_credits']) { // data not null
-          RemainingCredits.validateJSON(data['remaining_credits']);
-        }
-        // validate the optional field `cost`
-        if (data['cost']) { // data not null
-          Cost.validateJSON(data['cost']);
-        }
-        // validate the optional field `paid_usage`
-        if (data['paid_usage']) { // data not null
-          PaidUsage.validateJSON(data['paid_usage']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {module:model/PlanEnum} plan
@@ -145,6 +124,11 @@ CurrentCost.prototype['remaining_credits'] = undefined;
  * @member {module:model/Cost} cost
  */
 CurrentCost.prototype['cost'] = undefined;
+// Implement OrganizationCurrentCostAllOf interface:
+/**
+ * @member {module:model/PaidUsage} paid_usage
+ */
+OrganizationCurrentCostAllOf.prototype['paid_usage'] = undefined;
 
 
 

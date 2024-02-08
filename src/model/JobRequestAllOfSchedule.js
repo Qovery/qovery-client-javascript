@@ -66,36 +66,8 @@ class JobRequestAllOfSchedule {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>JobRequestAllOfSchedule</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>JobRequestAllOfSchedule</code>.
-     */
-    static validateJSON(data) {
-        // validate the optional field `on_start`
-        if (data['on_start']) { // data not null
-          JobRequestAllOfScheduleOnStart.validateJSON(data['on_start']);
-        }
-        // validate the optional field `on_stop`
-        if (data['on_stop']) { // data not null
-          JobRequestAllOfScheduleOnStart.validateJSON(data['on_stop']);
-        }
-        // validate the optional field `on_delete`
-        if (data['on_delete']) { // data not null
-          JobRequestAllOfScheduleOnStart.validateJSON(data['on_delete']);
-        }
-        // validate the optional field `cronjob`
-        if (data['cronjob']) { // data not null
-          JobRequestAllOfScheduleCronjob.validateJSON(data['cronjob']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {module:model/JobRequestAllOfScheduleOnStart} on_start

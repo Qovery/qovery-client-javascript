@@ -83,7 +83,7 @@ export default class GitRepositoriesApi {
     /**
      * Get bitbucket branches of the specified repository
      * @param {Object} opts Optional parameters
-     * @param {String} [name] The name of the repository where to retrieve the branches
+     * @param {String} opts.name The name of the repository where to retrieve the branches
      * @param {module:api/GitRepositoriesApi~getBitbucketRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
      */
@@ -195,7 +195,7 @@ export default class GitRepositoriesApi {
     /**
      * Get github branches of the specified repository
      * @param {Object} opts Optional parameters
-     * @param {String} [name] The name of the repository where to retrieve the branches
+     * @param {String} opts.name The name of the repository where to retrieve the branches
      * @param {module:api/GitRepositoriesApi~getGithubRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
      */
@@ -271,7 +271,7 @@ export default class GitRepositoriesApi {
     /**
      * Get gitlab branches of the specified repository
      * @param {Object} opts Optional parameters
-     * @param {String} [name] The name of the repository to retrieve the branches
+     * @param {String} opts.name The name of the repository to retrieve the branches
      * @param {module:api/GitRepositoriesApi~getGitlabRepositoryBranchesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitRepositoryBranchResponseList}
      */

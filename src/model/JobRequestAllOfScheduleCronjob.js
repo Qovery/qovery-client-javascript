@@ -65,42 +65,8 @@ class JobRequestAllOfScheduleCronjob {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>JobRequestAllOfScheduleCronjob</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>JobRequestAllOfScheduleCronjob</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of JobRequestAllOfScheduleCronjob.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['arguments'])) {
-            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
-        }
-        // ensure the json data is a string
-        if (data['entrypoint'] && !(typeof data['entrypoint'] === 'string' || data['entrypoint'] instanceof String)) {
-            throw new Error("Expected the field `entrypoint` to be a primitive type in the JSON string but got " + data['entrypoint']);
-        }
-        // ensure the json data is a string
-        if (data['timezone'] && !(typeof data['timezone'] === 'string' || data['timezone'] instanceof String)) {
-            throw new Error("Expected the field `timezone` to be a primitive type in the JSON string but got " + data['timezone']);
-        }
-        // ensure the json data is a string
-        if (data['scheduled_at'] && !(typeof data['scheduled_at'] === 'string' || data['scheduled_at'] instanceof String)) {
-            throw new Error("Expected the field `scheduled_at` to be a primitive type in the JSON string but got " + data['scheduled_at']);
-        }
-
-        return true;
-    }
-
 
 }
-
-JobRequestAllOfScheduleCronjob.RequiredProperties = ["scheduled_at"];
 
 /**
  * @member {Array.<String>} arguments

@@ -82,50 +82,8 @@ class Commit {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>Commit</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Commit</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of Commit.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['git_commit_id'] && !(typeof data['git_commit_id'] === 'string' || data['git_commit_id'] instanceof String)) {
-            throw new Error("Expected the field `git_commit_id` to be a primitive type in the JSON string but got " + data['git_commit_id']);
-        }
-        // ensure the json data is a string
-        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
-            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
-        }
-        // ensure the json data is a string
-        if (data['message'] && !(typeof data['message'] === 'string' || data['message'] instanceof String)) {
-            throw new Error("Expected the field `message` to be a primitive type in the JSON string but got " + data['message']);
-        }
-        // ensure the json data is a string
-        if (data['author_name'] && !(typeof data['author_name'] === 'string' || data['author_name'] instanceof String)) {
-            throw new Error("Expected the field `author_name` to be a primitive type in the JSON string but got " + data['author_name']);
-        }
-        // ensure the json data is a string
-        if (data['author_avatar_url'] && !(typeof data['author_avatar_url'] === 'string' || data['author_avatar_url'] instanceof String)) {
-            throw new Error("Expected the field `author_avatar_url` to be a primitive type in the JSON string but got " + data['author_avatar_url']);
-        }
-        // ensure the json data is a string
-        if (data['commit_page_url'] && !(typeof data['commit_page_url'] === 'string' || data['commit_page_url'] instanceof String)) {
-            throw new Error("Expected the field `commit_page_url` to be a primitive type in the JSON string but got " + data['commit_page_url']);
-        }
-
-        return true;
-    }
-
 
 }
-
-Commit.RequiredProperties = ["created_at", "git_commit_id", "tag", "message", "author_name"];
 
 /**
  * @member {Date} created_at

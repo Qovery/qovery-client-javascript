@@ -55,7 +55,7 @@ export default class VariableMainCallsApi {
      * Create a variable
      * - Create a variable with the scope defined in the request body. 
      * @param {Object} opts Optional parameters
-     * @param {module:model/VariableRequest} [variableRequest] 
+     * @param {module:model/VariableRequest} opts.variableRequest 
      * @param {module:api/VariableMainCallsApi~createVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableResponse}
      */
@@ -96,7 +96,7 @@ export default class VariableMainCallsApi {
      * - Allows you to create an alias of one of the existing variables. - You have to specify an alias (key) in the request body, the scope and the parent id of the alias (project id, environment id or service id) - The system will create a new variable at the requested level with the same value as the one corresponding to the variable id passed as path parameter. - The response body will contain the newly created variable - Information regarding the aliased_variable will be exposed in the \"aliased_variable\" or in the \"aliased_secret\" field of the newly created variable - You can't create an alias on an alias 
      * @param {String} variableId Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/VariableAliasRequest} [variableAliasRequest] 
+     * @param {module:model/VariableAliasRequest} opts.variableAliasRequest 
      * @param {module:api/VariableMainCallsApi~createVariableAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableResponse}
      */
@@ -142,7 +142,7 @@ export default class VariableMainCallsApi {
      * - Allows you to override a variable that has a higher scope. - You have to specify a value (override) in the request body and the scope and the parent id of the variable to override (project id, environment id or service id) - The system will create a new environment variable at the requested level with the same key as the one corresponding to the variable id passed as path parameter. - The response body will contain the newly created variable - Information regarding the overridden_variable will be exposed in the \"overridden_variable\" or in the \"overridden_secret\" field of the newly created variable 
      * @param {String} variableId Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/VariableOverrideRequest} [variableOverrideRequest] 
+     * @param {module:model/VariableOverrideRequest} opts.variableOverrideRequest 
      * @param {module:api/VariableMainCallsApi~createVariableOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableResponse}
      */
@@ -279,7 +279,7 @@ export default class VariableMainCallsApi {
      * @param {String} serviceId service id
      * @param {module:model/ServiceTypeForVariableEnum} serviceType service type
      * @param {Object} opts Optional parameters
-     * @param {module:model/VariableImportRequest} [variableImportRequest] 
+     * @param {module:model/VariableImportRequest} opts.variableImportRequest 
      * @param {module:api/VariableMainCallsApi~importEnvironmentVariablesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableImport}
      */
@@ -331,7 +331,7 @@ export default class VariableMainCallsApi {
      * @param {String} parentId it filters the list by returning only the variables accessible by the selected parent_id. This field shall contain the id of a project, environment or service depending on the selected scope. Example, if scope = APPLICATION and parent_id=<application_id>, the result will contain any variable accessible by the application. The result will contain also any variable declared at an higher scope.
      * @param {module:model/APIVariableScopeEnum} scope the type of the parent_id (application, project, environment etc..).
      * @param {Object} opts Optional parameters
-     * @param {Boolean} [isSecret] 
+     * @param {Boolean} opts.isSecret 
      * @param {module:api/VariableMainCallsApi~listVariablesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/VariableResponseList}
      */

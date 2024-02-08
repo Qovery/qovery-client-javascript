@@ -71,42 +71,8 @@ class ClusterRegion {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterRegion</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterRegion</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ClusterRegion.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['country_code'] && !(typeof data['country_code'] === 'string' || data['country_code'] instanceof String)) {
-            throw new Error("Expected the field `country_code` to be a primitive type in the JSON string but got " + data['country_code']);
-        }
-        // ensure the json data is a string
-        if (data['country'] && !(typeof data['country'] === 'string' || data['country'] instanceof String)) {
-            throw new Error("Expected the field `country` to be a primitive type in the JSON string but got " + data['country']);
-        }
-        // ensure the json data is a string
-        if (data['city'] && !(typeof data['city'] === 'string' || data['city'] instanceof String)) {
-            throw new Error("Expected the field `city` to be a primitive type in the JSON string but got " + data['city']);
-        }
-
-        return true;
-    }
-
 
 }
-
-ClusterRegion.RequiredProperties = ["name", "country_code", "country", "city"];
 
 /**
  * @member {String} name

@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Commit from './Commit';
+import CommitPaginatedResponseListAllOf from './CommitPaginatedResponseListAllOf';
 import PaginationData from './PaginationData';
 
 /**
@@ -24,12 +25,13 @@ class CommitPaginatedResponseList {
     /**
      * Constructs a new <code>CommitPaginatedResponseList</code>.
      * @alias module:model/CommitPaginatedResponseList
+     * @implements module:model/CommitPaginatedResponseListAllOf
      * @implements module:model/PaginationData
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationData.initialize(this, page, pageSize);
+        CommitPaginatedResponseListAllOf.initialize(this);PaginationData.initialize(this, page, pageSize);
         CommitPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -53,51 +55,29 @@ class CommitPaginatedResponseList {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new CommitPaginatedResponseList();
+            CommitPaginatedResponseListAllOf.constructFromObject(data, obj);
             PaginationData.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('results')) {
+                obj['results'] = ApiClient.convertToType(data['results'], [Commit]);
+            }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
             }
             if (data.hasOwnProperty('page_size')) {
                 obj['page_size'] = ApiClient.convertToType(data['page_size'], 'Number');
             }
-            if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Commit]);
-            }
         }
         return obj;
-    }
-
-    /**
-     * Validates the JSON data with respect to <code>CommitPaginatedResponseList</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CommitPaginatedResponseList</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of CommitPaginatedResponseList.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['results']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['results'])) {
-                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
-            }
-            // validate the optional field `results` (array)
-            for (const item of data['results']) {
-                Commit.validateJSON(item);
-            };
-        }
-
-        return true;
     }
 
 
 }
 
-CommitPaginatedResponseList.RequiredProperties = ["page", "page_size"];
+/**
+ * @member {Array.<module:model/Commit>} results
+ */
+CommitPaginatedResponseList.prototype['results'] = undefined;
 
 /**
  * @member {Number} page
@@ -109,12 +89,12 @@ CommitPaginatedResponseList.prototype['page'] = undefined;
  */
 CommitPaginatedResponseList.prototype['page_size'] = undefined;
 
+
+// Implement CommitPaginatedResponseListAllOf interface:
 /**
  * @member {Array.<module:model/Commit>} results
  */
-CommitPaginatedResponseList.prototype['results'] = undefined;
-
-
+CommitPaginatedResponseListAllOf.prototype['results'] = undefined;
 // Implement PaginationData interface:
 /**
  * @member {Number} page

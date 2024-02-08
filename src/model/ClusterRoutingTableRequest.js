@@ -57,36 +57,8 @@ class ClusterRoutingTableRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterRoutingTableRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterRoutingTableRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ClusterRoutingTableRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['routes']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['routes'])) {
-                throw new Error("Expected the field `routes` to be an array in the JSON data but got " + data['routes']);
-            }
-            // validate the optional field `routes` (array)
-            for (const item of data['routes']) {
-                ClusterRoutingTableResultsInner.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-ClusterRoutingTableRequest.RequiredProperties = ["routes"];
 
 /**
  * @member {Array.<module:model/ClusterRoutingTableResultsInner>} routes

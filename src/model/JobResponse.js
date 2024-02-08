@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import BaseJobResponseAllOfSource from './BaseJobResponseAllOfSource';
+import ApplicationGitRepository from './ApplicationGitRepository';
+import ContainerSource from './ContainerSource';
 import CronJobResponse from './CronJobResponse';
 import CronJobResponseAllOfSchedule from './CronJobResponseAllOfSchedule';
 import Healthcheck from './Healthcheck';
@@ -28,56 +29,46 @@ class JobResponse {
     /**
      * Constructs a new <code>JobResponse</code>.
      * @alias module:model/JobResponse
-     * @param {(module:model/CronJobResponse|module:model/LifecycleJobResponse)} instance The actual instance to initialize JobResponse.
+     * @implements module:model/LifecycleJobResponse
+     * @implements module:model/CronJobResponse
+     * @param id {String} 
+     * @param createdAt {Date} 
+     * @param environment {module:model/ReferenceObject} 
+     * @param maximumCpu {Number} Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+     * @param maximumMemory {Number} Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+     * @param name {String} name is case insensitive
+     * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
+     * @param memory {Number} unit is MB. 1024 MB = 1GB
+     * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+     * @param source {module:model/OneOfobjectobject} 
+     * @param healthchecks {module:model/Healthcheck} 
+     * @param jobType {module:model/JobResponse.JobTypeEnum} 
+     * @param schedule {module:model/CronJobResponseAllOfSchedule} 
      */
-    constructor(instance = null) {
-        if (instance === null) {
-            this.actualInstance = null;
-            return;
-        }
-        var match = 0;
-        var errorMessages = [];
-        try {
-            if (typeof instance === "LifecycleJobResponse") {
-                this.actualInstance = instance;
-            } else {
-                // plain JS object
-                // validate the object
-                LifecycleJobResponse.validateJSON(instance); // throw an exception if no match
-                // create LifecycleJobResponse from JS object
-                this.actualInstance = LifecycleJobResponse.constructFromObject(instance);
-            }
-            match++;
-        } catch(err) {
-            // json data failed to deserialize into LifecycleJobResponse
-            errorMessages.push("Failed to construct LifecycleJobResponse: " + err)
-        }
+    constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule) { 
+        LifecycleJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);CronJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);
+        JobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);
+    }
 
-        try {
-            if (typeof instance === "CronJobResponse") {
-                this.actualInstance = instance;
-            } else {
-                // plain JS object
-                // validate the object
-                CronJobResponse.validateJSON(instance); // throw an exception if no match
-                // create CronJobResponse from JS object
-                this.actualInstance = CronJobResponse.constructFromObject(instance);
-            }
-            match++;
-        } catch(err) {
-            // json data failed to deserialize into CronJobResponse
-            errorMessages.push("Failed to construct CronJobResponse: " + err)
-        }
-
-        if (match > 1) {
-            throw new Error("Multiple matches found constructing `JobResponse` with oneOf schemas CronJobResponse, LifecycleJobResponse. Input: " + JSON.stringify(instance));
-        } else if (match === 0) {
-            this.actualInstance = null; // clear the actual instance in case there are multiple matches
-            throw new Error("No match found constructing `JobResponse` with oneOf schemas CronJobResponse, LifecycleJobResponse. Details: " +
-                            errorMessages.join(", "));
-        } else { // only 1 match
-            // the input is valid
-        }
+    /**
+     * Initializes the fields of this object.
+     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+     * Only for internal use.
+     */
+    static initialize(obj, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule) { 
+        obj['id'] = id;
+        obj['created_at'] = createdAt;
+        obj['environment'] = environment;
+        obj['maximum_cpu'] = maximumCpu;
+        obj['maximum_memory'] = maximumMemory;
+        obj['name'] = name;
+        obj['cpu'] = cpu;
+        obj['memory'] = memory;
+        obj['auto_preview'] = autoPreview;
+        obj['source'] = source;
+        obj['healthchecks'] = healthchecks;
+        obj['job_type'] = jobType;
+        obj['schedule'] = schedule;
     }
 
     /**
@@ -88,41 +79,73 @@ class JobResponse {
      * @return {module:model/JobResponse} The populated <code>JobResponse</code> instance.
      */
     static constructFromObject(data, obj) {
-        return new JobResponse(data);
+        if (data) {
+            obj = obj || new JobResponse();
+            LifecycleJobResponse.constructFromObject(data, obj);
+            CronJobResponse.constructFromObject(data, obj);
+
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
+            if (data.hasOwnProperty('created_at')) {
+                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            }
+            if (data.hasOwnProperty('updated_at')) {
+                obj['updated_at'] = ApiClient.convertToType(data['updated_at'], 'Date');
+            }
+            if (data.hasOwnProperty('environment')) {
+                obj['environment'] = ReferenceObject.constructFromObject(data['environment']);
+            }
+            if (data.hasOwnProperty('maximum_cpu')) {
+                obj['maximum_cpu'] = ApiClient.convertToType(data['maximum_cpu'], 'Number');
+            }
+            if (data.hasOwnProperty('maximum_memory')) {
+                obj['maximum_memory'] = ApiClient.convertToType(data['maximum_memory'], 'Number');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('cpu')) {
+                obj['cpu'] = ApiClient.convertToType(data['cpu'], 'Number');
+            }
+            if (data.hasOwnProperty('memory')) {
+                obj['memory'] = ApiClient.convertToType(data['memory'], 'Number');
+            }
+            if (data.hasOwnProperty('max_nb_restart')) {
+                obj['max_nb_restart'] = ApiClient.convertToType(data['max_nb_restart'], 'Number');
+            }
+            if (data.hasOwnProperty('max_duration_seconds')) {
+                obj['max_duration_seconds'] = ApiClient.convertToType(data['max_duration_seconds'], 'Number');
+            }
+            if (data.hasOwnProperty('auto_preview')) {
+                obj['auto_preview'] = ApiClient.convertToType(data['auto_preview'], 'Boolean');
+            }
+            if (data.hasOwnProperty('port')) {
+                obj['port'] = ApiClient.convertToType(data['port'], 'Number');
+            }
+            if (data.hasOwnProperty('source')) {
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
+            }
+            if (data.hasOwnProperty('healthchecks')) {
+                obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
+            }
+            if (data.hasOwnProperty('auto_deploy')) {
+                obj['auto_deploy'] = ApiClient.convertToType(data['auto_deploy'], 'Boolean');
+            }
+            if (data.hasOwnProperty('job_type')) {
+                obj['job_type'] = ApiClient.convertToType(data['job_type'], 'String');
+            }
+            if (data.hasOwnProperty('schedule')) {
+                obj['schedule'] = CronJobResponseAllOfSchedule.constructFromObject(data['schedule']);
+            }
+        }
+        return obj;
     }
 
-    /**
-     * Gets the actual instance, which can be <code>CronJobResponse</code>, <code>LifecycleJobResponse</code>.
-     * @return {(module:model/CronJobResponse|module:model/LifecycleJobResponse)} The actual instance.
-     */
-    getActualInstance() {
-        return this.actualInstance;
-    }
 
-    /**
-     * Sets the actual instance, which can be <code>CronJobResponse</code>, <code>LifecycleJobResponse</code>.
-     * @param {(module:model/CronJobResponse|module:model/LifecycleJobResponse)} obj The actual instance.
-     */
-    setActualInstance(obj) {
-       this.actualInstance = JobResponse.constructFromObject(obj).getActualInstance();
-    }
-
-    /**
-     * Returns the JSON representation of the actual instance.
-     * @return {string}
-     */
-    toJSON = function(){
-        return this.getActualInstance();
-    }
-
-    /**
-     * Create an instance of JobResponse from a JSON string.
-     * @param {string} json_string JSON string.
-     * @return {module:model/JobResponse} An instance of JobResponse.
-     */
-    static fromJSON = function(json_string){
-        return JobResponse.constructFromObject(JSON.parse(json_string));
-    }
 }
 
 /**
@@ -205,7 +228,7 @@ JobResponse.prototype['auto_preview'] = undefined;
 JobResponse.prototype['port'] = undefined;
 
 /**
- * @member {module:model/BaseJobResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 JobResponse.prototype['source'] = undefined;
 
@@ -231,7 +254,198 @@ JobResponse.prototype['job_type'] = undefined;
 JobResponse.prototype['schedule'] = undefined;
 
 
-JobResponse.OneOf = ["CronJobResponse", "LifecycleJobResponse"];
+// Implement LifecycleJobResponse interface:
+/**
+ * @member {String} id
+ */
+LifecycleJobResponse.prototype['id'] = undefined;
+/**
+ * @member {Date} created_at
+ */
+LifecycleJobResponse.prototype['created_at'] = undefined;
+/**
+ * @member {Date} updated_at
+ */
+LifecycleJobResponse.prototype['updated_at'] = undefined;
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+LifecycleJobResponse.prototype['environment'] = undefined;
+/**
+ * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ */
+LifecycleJobResponse.prototype['maximum_cpu'] = undefined;
+/**
+ * Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ */
+LifecycleJobResponse.prototype['maximum_memory'] = undefined;
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+LifecycleJobResponse.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+LifecycleJobResponse.prototype['description'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ */
+LifecycleJobResponse.prototype['cpu'] = undefined;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ */
+LifecycleJobResponse.prototype['memory'] = undefined;
+/**
+ * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
+ * @member {Number} max_nb_restart
+ */
+LifecycleJobResponse.prototype['max_nb_restart'] = undefined;
+/**
+ * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
+ * @member {Number} max_duration_seconds
+ */
+LifecycleJobResponse.prototype['max_duration_seconds'] = undefined;
+/**
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+LifecycleJobResponse.prototype['auto_preview'] = undefined;
+/**
+ * Port where to run readiness and liveliness probes checks. The port will not be exposed externally
+ * @member {Number} port
+ */
+LifecycleJobResponse.prototype['port'] = undefined;
+/**
+ * @member {module:model/OneOfobjectobject} source
+ */
+LifecycleJobResponse.prototype['source'] = undefined;
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+LifecycleJobResponse.prototype['healthchecks'] = undefined;
+/**
+ * Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \"Auto Deploy job\" endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+LifecycleJobResponse.prototype['auto_deploy'] = undefined;
+/**
+ * @member {module:model/LifecycleJobResponse.JobTypeEnum} job_type
+ */
+LifecycleJobResponse.prototype['job_type'] = undefined;
+/**
+ * @member {module:model/LifecycleJobResponseAllOfSchedule} schedule
+ */
+LifecycleJobResponse.prototype['schedule'] = undefined;
+// Implement CronJobResponse interface:
+/**
+ * @member {String} id
+ */
+CronJobResponse.prototype['id'] = undefined;
+/**
+ * @member {Date} created_at
+ */
+CronJobResponse.prototype['created_at'] = undefined;
+/**
+ * @member {Date} updated_at
+ */
+CronJobResponse.prototype['updated_at'] = undefined;
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+CronJobResponse.prototype['environment'] = undefined;
+/**
+ * Maximum cpu that can be allocated to the job based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ */
+CronJobResponse.prototype['maximum_cpu'] = undefined;
+/**
+ * Maximum memory that can be allocated to the job based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ */
+CronJobResponse.prototype['maximum_memory'] = undefined;
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+CronJobResponse.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+CronJobResponse.prototype['description'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ */
+CronJobResponse.prototype['cpu'] = undefined;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ */
+CronJobResponse.prototype['memory'] = undefined;
+/**
+ * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
+ * @member {Number} max_nb_restart
+ */
+CronJobResponse.prototype['max_nb_restart'] = undefined;
+/**
+ * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
+ * @member {Number} max_duration_seconds
+ */
+CronJobResponse.prototype['max_duration_seconds'] = undefined;
+/**
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+CronJobResponse.prototype['auto_preview'] = undefined;
+/**
+ * Port where to run readiness and liveliness probes checks. The port will not be exposed externally
+ * @member {Number} port
+ */
+CronJobResponse.prototype['port'] = undefined;
+/**
+ * @member {module:model/OneOfobjectobject} source
+ */
+CronJobResponse.prototype['source'] = undefined;
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+CronJobResponse.prototype['healthchecks'] = undefined;
+/**
+ * Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \"Auto Deploy job\" endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+CronJobResponse.prototype['auto_deploy'] = undefined;
+/**
+ * @member {module:model/CronJobResponse.JobTypeEnum} job_type
+ */
+CronJobResponse.prototype['job_type'] = undefined;
+/**
+ * @member {module:model/CronJobResponseAllOfSchedule} schedule
+ */
+CronJobResponse.prototype['schedule'] = undefined;
+
+
+
+/**
+ * Allowed values for the <code>job_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+JobResponse['JobTypeEnum'] = {
+
+    /**
+     * value: "CRON"
+     * @const
+     */
+    "CRON": "CRON"
+};
+
+
 
 export default JobResponse;
 

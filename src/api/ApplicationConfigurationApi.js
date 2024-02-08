@@ -49,7 +49,7 @@ export default class ApplicationConfigurationApi {
      * Edit advanced settings by returning table of advanced settings.
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ApplicationAdvancedSettings} [applicationAdvancedSettings] 
+     * @param {module:model/ApplicationAdvancedSettings} opts.applicationAdvancedSettings 
      * @param {module:api/ApplicationConfigurationApi~editAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApplicationAdvancedSettings}
      */
@@ -95,7 +95,7 @@ export default class ApplicationConfigurationApi {
      * Edit the Network settings of the application.
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ApplicationNetworkRequest} [applicationNetworkRequest] 
+     * @param {module:model/ApplicationNetworkRequest} opts.applicationNetworkRequest 
      * @param {module:api/ApplicationConfigurationApi~editApplicationNetworkCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ApplicationNetwork}
      */

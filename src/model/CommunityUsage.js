@@ -58,30 +58,8 @@ class CommunityUsage {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>CommunityUsage</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CommunityUsage</code>.
-     */
-    static validateJSON(data) {
-        if (data['projects']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['projects'])) {
-                throw new Error("Expected the field `projects` to be an array in the JSON data but got " + data['projects']);
-            }
-            // validate the optional field `projects` (array)
-            for (const item of data['projects']) {
-                ProjectCurrentCost.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {Array.<module:model/ProjectCurrentCost>} projects

@@ -72,34 +72,8 @@ class ServiceStorageStorageInner {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ServiceStorageStorageInner</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ServiceStorageStorageInner</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ServiceStorageStorageInner.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['mount_point'] && !(typeof data['mount_point'] === 'string' || data['mount_point'] instanceof String)) {
-            throw new Error("Expected the field `mount_point` to be a primitive type in the JSON string but got " + data['mount_point']);
-        }
-
-        return true;
-    }
-
 
 }
-
-ServiceStorageStorageInner.RequiredProperties = ["id", "type", "size", "mount_point"];
 
 /**
  * @member {String} id

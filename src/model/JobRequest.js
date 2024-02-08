@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Healthcheck from './Healthcheck';
+import JobRequestAllOf from './JobRequestAllOf';
 import JobRequestAllOfSchedule from './JobRequestAllOfSchedule';
 import JobRequestAllOfSource from './JobRequestAllOfSource';
 
@@ -25,11 +26,12 @@ class JobRequest {
     /**
      * Constructs a new <code>JobRequest</code>.
      * @alias module:model/JobRequest
+     * @implements module:model/JobRequestAllOf
      * @param name {String} name is case insensitive
      * @param healthchecks {module:model/Healthcheck} 
      */
     constructor(name, healthchecks) { 
-        
+        JobRequestAllOf.initialize(this, name, healthchecks);
         JobRequest.initialize(this, name, healthchecks);
     }
 
@@ -53,6 +55,7 @@ class JobRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new JobRequest();
+            JobRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
@@ -94,46 +97,8 @@ class JobRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>JobRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>JobRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of JobRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // validate the optional field `source`
-        if (data['source']) { // data not null
-          JobRequestAllOfSource.validateJSON(data['source']);
-        }
-        // validate the optional field `healthchecks`
-        if (data['healthchecks']) { // data not null
-          Healthcheck.validateJSON(data['healthchecks']);
-        }
-        // validate the optional field `schedule`
-        if (data['schedule']) { // data not null
-          JobRequestAllOfSchedule.validateJSON(data['schedule']);
-        }
-
-        return true;
-    }
-
 
 }
-
-JobRequest.RequiredProperties = ["name", "healthchecks"];
 
 /**
  * name is case insensitive
@@ -207,6 +172,66 @@ JobRequest.prototype['schedule'] = undefined;
 JobRequest.prototype['auto_deploy'] = undefined;
 
 
+// Implement JobRequestAllOf interface:
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+JobRequestAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+JobRequestAllOf.prototype['description'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ * @default 500
+ */
+JobRequestAllOf.prototype['cpu'] = 500;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ * @default 512
+ */
+JobRequestAllOf.prototype['memory'] = 512;
+/**
+ * Maximum number of restart allowed before the job is considered as failed 0 means that no restart/crash of the job is allowed 
+ * @member {Number} max_nb_restart
+ * @default 0
+ */
+JobRequestAllOf.prototype['max_nb_restart'] = 0;
+/**
+ * Maximum number of seconds allowed for the job to run before killing it and mark it as failed 
+ * @member {Number} max_duration_seconds
+ */
+JobRequestAllOf.prototype['max_duration_seconds'] = undefined;
+/**
+ * Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+JobRequestAllOf.prototype['auto_preview'] = undefined;
+/**
+ * Port where to run readiness and liveliness probes checks. The port will not be exposed externally
+ * @member {Number} port
+ */
+JobRequestAllOf.prototype['port'] = undefined;
+/**
+ * @member {module:model/JobRequestAllOfSource} source
+ */
+JobRequestAllOf.prototype['source'] = undefined;
+/**
+ * @member {module:model/Healthcheck} healthchecks
+ */
+JobRequestAllOf.prototype['healthchecks'] = undefined;
+/**
+ * @member {module:model/JobRequestAllOfSchedule} schedule
+ */
+JobRequestAllOf.prototype['schedule'] = undefined;
+/**
+ * Specify if the job will be automatically updated after receiving a new image tag or a new commit according to the source type.  The new image tag shall be communicated via the \"Auto Deploy job\" endpoint https://api-doc.qovery.com/#tag/Jobs/operation/autoDeployJobEnvironments 
+ * @member {Boolean} auto_deploy
+ */
+JobRequestAllOf.prototype['auto_deploy'] = undefined;
 
 
 

@@ -62,36 +62,8 @@ class VariableImportRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>VariableImportRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>VariableImportRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of VariableImportRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['vars']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['vars'])) {
-                throw new Error("Expected the field `vars` to be an array in the JSON data but got " + data['vars']);
-            }
-            // validate the optional field `vars` (array)
-            for (const item of data['vars']) {
-                VariableImportRequestVarsInner.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-VariableImportRequest.RequiredProperties = ["overwrite", "vars"];
 
 /**
  * @member {Boolean} overwrite

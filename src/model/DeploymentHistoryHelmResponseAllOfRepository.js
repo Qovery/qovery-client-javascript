@@ -58,28 +58,8 @@ class DeploymentHistoryHelmResponseAllOfRepository {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>DeploymentHistoryHelmResponseAllOfRepository</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistoryHelmResponseAllOfRepository</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['chart_name'] && !(typeof data['chart_name'] === 'string' || data['chart_name'] instanceof String)) {
-            throw new Error("Expected the field `chart_name` to be a primitive type in the JSON string but got " + data['chart_name']);
-        }
-        // ensure the json data is a string
-        if (data['chart_version'] && !(typeof data['chart_version'] === 'string' || data['chart_version'] instanceof String)) {
-            throw new Error("Expected the field `chart_version` to be a primitive type in the JSON string but got " + data['chart_version']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {String} chart_name

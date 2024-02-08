@@ -62,38 +62,8 @@ class EnvironmentVariableRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentVariableRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentVariableRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of EnvironmentVariableRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['key'] && !(typeof data['key'] === 'string' || data['key'] instanceof String)) {
-            throw new Error("Expected the field `key` to be a primitive type in the JSON string but got " + data['key']);
-        }
-        // ensure the json data is a string
-        if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
-            throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
-        }
-        // ensure the json data is a string
-        if (data['mount_path'] && !(typeof data['mount_path'] === 'string' || data['mount_path'] instanceof String)) {
-            throw new Error("Expected the field `mount_path` to be a primitive type in the JSON string but got " + data['mount_path']);
-        }
-
-        return true;
-    }
-
 
 }
-
-EnvironmentVariableRequest.RequiredProperties = ["key"];
 
 /**
  * key is case sensitive.

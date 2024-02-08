@@ -91,7 +91,7 @@ export default class EnvironmentLogsApi {
      * This returns the last 1000 environment deployment logs v2
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {String} [version] 
+     * @param {String} opts.version 
      * @param {module:api/EnvironmentLogsApi~listEnvironmentLogsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/EnvironmentLogs>}
      */

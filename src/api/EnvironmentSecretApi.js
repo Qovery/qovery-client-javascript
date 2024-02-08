@@ -52,7 +52,7 @@ export default class EnvironmentSecretApi {
      * - Add a secret to the environment.   - If the secret key already exists, then it will be replaced by the new one.   - If the secret value points toward an existing secret key, it will be considered as an alias. 
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/SecretRequest} [secretRequest] 
+     * @param {module:model/SecretRequest} opts.secretRequest 
      * @param {module:api/EnvironmentSecretApi~createEnvironmentSecretCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -99,7 +99,7 @@ export default class EnvironmentSecretApi {
      * @param {String} environmentId Environment ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} [key] 
+     * @param {module:model/Key} opts.key 
      * @param {module:api/EnvironmentSecretApi~createEnvironmentSecretAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -151,7 +151,7 @@ export default class EnvironmentSecretApi {
      * @param {String} environmentId Environment ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} [value] 
+     * @param {module:model/Value} opts.value 
      * @param {module:api/EnvironmentSecretApi~createEnvironmentSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */

@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import Commit from './Commit';
+import DeploymentHistoryHelmResponseAllOf from './DeploymentHistoryHelmResponseAllOf';
 import DeploymentHistoryHelmResponseAllOfRepository from './DeploymentHistoryHelmResponseAllOfRepository';
 import StateEnum from './StateEnum';
 
@@ -27,11 +28,12 @@ class DeploymentHistoryHelmResponse {
      * Constructs a new <code>DeploymentHistoryHelmResponse</code>.
      * @alias module:model/DeploymentHistoryHelmResponse
      * @implements module:model/Base
+     * @implements module:model/DeploymentHistoryHelmResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);DeploymentHistoryHelmResponseAllOf.initialize(this);
         DeploymentHistoryHelmResponse.initialize(this, id, createdAt);
     }
 
@@ -56,6 +58,7 @@ class DeploymentHistoryHelmResponse {
         if (data) {
             obj = obj || new DeploymentHistoryHelmResponse();
             Base.constructFromObject(data, obj);
+            DeploymentHistoryHelmResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -82,42 +85,8 @@ class DeploymentHistoryHelmResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>DeploymentHistoryHelmResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistoryHelmResponse</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of DeploymentHistoryHelmResponse.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // validate the optional field `commit`
-        if (data['commit']) { // data not null
-          Commit.validateJSON(data['commit']);
-        }
-        // validate the optional field `repository`
-        if (data['repository']) { // data not null
-          DeploymentHistoryHelmResponseAllOfRepository.validateJSON(data['repository']);
-        }
-
-        return true;
-    }
-
 
 }
-
-DeploymentHistoryHelmResponse.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -169,6 +138,24 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement DeploymentHistoryHelmResponseAllOf interface:
+/**
+ * name of the helm
+ * @member {String} name
+ */
+DeploymentHistoryHelmResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {module:model/StateEnum} status
+ */
+DeploymentHistoryHelmResponseAllOf.prototype['status'] = undefined;
+/**
+ * @member {module:model/Commit} commit
+ */
+DeploymentHistoryHelmResponseAllOf.prototype['commit'] = undefined;
+/**
+ * @member {module:model/DeploymentHistoryHelmResponseAllOfRepository} repository
+ */
+DeploymentHistoryHelmResponseAllOf.prototype['repository'] = undefined;
 
 
 

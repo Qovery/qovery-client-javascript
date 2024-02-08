@@ -53,7 +53,7 @@ export default class ApplicationsApi {
      * This will create a new application with the same configuration on the targeted environment Id.
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneServiceRequest} [cloneServiceRequest] 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/ApplicationsApi~cloneApplicationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Application}
      */
@@ -98,7 +98,7 @@ export default class ApplicationsApi {
      * Create an application
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ApplicationRequest} [applicationRequest] 
+     * @param {module:model/ApplicationRequest} opts.applicationRequest 
      * @param {module:api/ApplicationsApi~createApplicationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Application}
      */

@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import CloudProviderEnum from './CloudProviderEnum';
+import ClusterAllOf from './ClusterAllOf';
 import ClusterDeploymentStatusEnum from './ClusterDeploymentStatusEnum';
 import ClusterFeature from './ClusterFeature';
 import ClusterStateEnum from './ClusterStateEnum';
@@ -30,6 +31,7 @@ class Cluster {
      * Constructs a new <code>Cluster</code>.
      * @alias module:model/Cluster
      * @implements module:model/Base
+     * @implements module:model/ClusterAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param organization {module:model/ReferenceObject} 
@@ -38,7 +40,7 @@ class Cluster {
      * @param cloudProvider {module:model/CloudProviderEnum} 
      */
     constructor(id, createdAt, organization, name, region, cloudProvider) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);ClusterAllOf.initialize(this, organization, name, region, cloudProvider);
         Cluster.initialize(this, id, createdAt, organization, name, region, cloudProvider);
     }
 
@@ -67,6 +69,7 @@ class Cluster {
         if (data) {
             obj = obj || new Cluster();
             Base.constructFromObject(data, obj);
+            ClusterAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -144,68 +147,8 @@ class Cluster {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>Cluster</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Cluster</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of Cluster.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // validate the optional field `organization`
-        if (data['organization']) { // data not null
-          ReferenceObject.validateJSON(data['organization']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // ensure the json data is a string
-        if (data['region'] && !(typeof data['region'] === 'string' || data['region'] instanceof String)) {
-            throw new Error("Expected the field `region` to be a primitive type in the JSON string but got " + data['region']);
-        }
-        // ensure the json data is a string
-        if (data['instance_type'] && !(typeof data['instance_type'] === 'string' || data['instance_type'] instanceof String)) {
-            throw new Error("Expected the field `instance_type` to be a primitive type in the JSON string but got " + data['instance_type']);
-        }
-        // ensure the json data is a string
-        if (data['version'] && !(typeof data['version'] === 'string' || data['version'] instanceof String)) {
-            throw new Error("Expected the field `version` to be a primitive type in the JSON string but got " + data['version']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['ssh_keys'])) {
-            throw new Error("Expected the field `ssh_keys` to be an array in the JSON data but got " + data['ssh_keys']);
-        }
-        if (data['features']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['features'])) {
-                throw new Error("Expected the field `features` to be an array in the JSON data but got " + data['features']);
-            }
-            // validate the optional field `features` (array)
-            for (const item of data['features']) {
-                ClusterFeature.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-Cluster.RequiredProperties = ["id", "created_at", "organization", "name", "region", "cloud_provider"];
 
 /**
  * @member {String} id
@@ -352,6 +295,102 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement ClusterAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+ClusterAllOf.prototype['organization'] = undefined;
+/**
+ * name is case-insensitive
+ * @member {String} name
+ */
+ClusterAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+ClusterAllOf.prototype['description'] = undefined;
+/**
+ * @member {String} region
+ */
+ClusterAllOf.prototype['region'] = undefined;
+/**
+ * @member {module:model/CloudProviderEnum} cloud_provider
+ */
+ClusterAllOf.prototype['cloud_provider'] = undefined;
+/**
+ * @member {Number} min_running_nodes
+ * @default 1
+ */
+ClusterAllOf.prototype['min_running_nodes'] = 1;
+/**
+ * @member {Number} max_running_nodes
+ * @default 1
+ */
+ClusterAllOf.prototype['max_running_nodes'] = 1;
+/**
+ * Unit is in GB. The disk size to be used for the node configuration
+ * @member {Number} disk_size
+ * @default 20
+ */
+ClusterAllOf.prototype['disk_size'] = 20;
+/**
+ * the instance type to be used for this cluster. The list of values can be retrieved via the endpoint /{CloudProvider}/instanceType
+ * @member {String} instance_type
+ */
+ClusterAllOf.prototype['instance_type'] = undefined;
+/**
+ * @member {module:model/KubernetesEnum} kubernetes
+ */
+ClusterAllOf.prototype['kubernetes'] = undefined;
+/**
+ * unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} cpu
+ */
+ClusterAllOf.prototype['cpu'] = undefined;
+/**
+ * unit is MB. 1024 MB = 1GB
+ * @member {Number} memory
+ */
+ClusterAllOf.prototype['memory'] = undefined;
+/**
+ * This is an estimation of the cost this cluster will represent on your cloud proider bill, based on your current configuration
+ * @member {Number} estimated_cloud_provider_cost
+ */
+ClusterAllOf.prototype['estimated_cloud_provider_cost'] = undefined;
+/**
+ * @member {module:model/ClusterStateEnum} status
+ */
+ClusterAllOf.prototype['status'] = undefined;
+/**
+ * @member {Boolean} has_access
+ */
+ClusterAllOf.prototype['has_access'] = undefined;
+/**
+ * @member {String} version
+ */
+ClusterAllOf.prototype['version'] = undefined;
+/**
+ * @member {Boolean} is_default
+ */
+ClusterAllOf.prototype['is_default'] = undefined;
+/**
+ * specific flag to indicate that this cluster is a production one
+ * @member {Boolean} production
+ */
+ClusterAllOf.prototype['production'] = undefined;
+/**
+ * Indicate your public ssh_key to remotely connect to your EC2 instance.
+ * @member {Array.<String>} ssh_keys
+ */
+ClusterAllOf.prototype['ssh_keys'] = undefined;
+/**
+ * @member {Array.<module:model/ClusterFeature>} features
+ */
+ClusterAllOf.prototype['features'] = undefined;
+/**
+ * @member {module:model/ClusterDeploymentStatusEnum} deployment_status
+ */
+ClusterAllOf.prototype['deployment_status'] = undefined;
 
 
 

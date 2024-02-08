@@ -16,6 +16,7 @@ import APIVariableScopeEnum from './APIVariableScopeEnum';
 import APIVariableTypeEnum from './APIVariableTypeEnum';
 import Base from './Base';
 import EnvironmentVariableAlias from './EnvironmentVariableAlias';
+import EnvironmentVariableAllOf from './EnvironmentVariableAllOf';
 import EnvironmentVariableOverride from './EnvironmentVariableOverride';
 import EnvironmentVariableRequest from './EnvironmentVariableRequest';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
@@ -31,13 +32,14 @@ class EnvironmentVariable {
      * @alias module:model/EnvironmentVariable
      * @implements module:model/Base
      * @implements module:model/EnvironmentVariableRequest
+     * @implements module:model/EnvironmentVariableAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param key {String} key is case sensitive.
      * @param scope {module:model/APIVariableScopeEnum} 
      */
     constructor(id, createdAt, key, scope) { 
-        Base.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key);
+        Base.initialize(this, id, createdAt);EnvironmentVariableRequest.initialize(this, key);EnvironmentVariableAllOf.initialize(this, scope);
         EnvironmentVariable.initialize(this, id, createdAt, key, scope);
     }
 
@@ -65,6 +67,7 @@ class EnvironmentVariable {
             obj = obj || new EnvironmentVariable();
             Base.constructFromObject(data, obj);
             EnvironmentVariableRequest.constructFromObject(data, obj);
+            EnvironmentVariableAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -112,62 +115,8 @@ class EnvironmentVariable {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentVariable</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentVariable</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of EnvironmentVariable.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['key'] && !(typeof data['key'] === 'string' || data['key'] instanceof String)) {
-            throw new Error("Expected the field `key` to be a primitive type in the JSON string but got " + data['key']);
-        }
-        // ensure the json data is a string
-        if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
-            throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
-        }
-        // ensure the json data is a string
-        if (data['mount_path'] && !(typeof data['mount_path'] === 'string' || data['mount_path'] instanceof String)) {
-            throw new Error("Expected the field `mount_path` to be a primitive type in the JSON string but got " + data['mount_path']);
-        }
-        // validate the optional field `overridden_variable`
-        if (data['overridden_variable']) { // data not null
-          EnvironmentVariableOverride.validateJSON(data['overridden_variable']);
-        }
-        // validate the optional field `aliased_variable`
-        if (data['aliased_variable']) { // data not null
-          EnvironmentVariableAlias.validateJSON(data['aliased_variable']);
-        }
-        // ensure the json data is a string
-        if (data['service_id'] && !(typeof data['service_id'] === 'string' || data['service_id'] instanceof String)) {
-            throw new Error("Expected the field `service_id` to be a primitive type in the JSON string but got " + data['service_id']);
-        }
-        // ensure the json data is a string
-        if (data['service_name'] && !(typeof data['service_name'] === 'string' || data['service_name'] instanceof String)) {
-            throw new Error("Expected the field `service_name` to be a primitive type in the JSON string but got " + data['service_name']);
-        }
-        // ensure the json data is a string
-        if (data['owned_by'] && !(typeof data['owned_by'] === 'string' || data['owned_by'] instanceof String)) {
-            throw new Error("Expected the field `owned_by` to be a primitive type in the JSON string but got " + data['owned_by']);
-        }
-
-        return true;
-    }
-
 
 }
-
-EnvironmentVariable.RequiredProperties = ["id", "created_at", "key", "scope"];
 
 /**
  * @member {String} id
@@ -273,6 +222,40 @@ EnvironmentVariableRequest.prototype['value'] = undefined;
  * @member {String} mount_path
  */
 EnvironmentVariableRequest.prototype['mount_path'] = undefined;
+// Implement EnvironmentVariableAllOf interface:
+/**
+ * @member {module:model/EnvironmentVariableOverride} overridden_variable
+ */
+EnvironmentVariableAllOf.prototype['overridden_variable'] = undefined;
+/**
+ * @member {module:model/EnvironmentVariableAlias} aliased_variable
+ */
+EnvironmentVariableAllOf.prototype['aliased_variable'] = undefined;
+/**
+ * @member {module:model/APIVariableScopeEnum} scope
+ */
+EnvironmentVariableAllOf.prototype['scope'] = undefined;
+/**
+ * @member {module:model/APIVariableTypeEnum} variable_type
+ */
+EnvironmentVariableAllOf.prototype['variable_type'] = undefined;
+/**
+ * @member {String} service_id
+ */
+EnvironmentVariableAllOf.prototype['service_id'] = undefined;
+/**
+ * @member {String} service_name
+ */
+EnvironmentVariableAllOf.prototype['service_name'] = undefined;
+/**
+ * @member {module:model/LinkedServiceTypeEnum} service_type
+ */
+EnvironmentVariableAllOf.prototype['service_type'] = undefined;
+/**
+ * Entity that created/own the variable (i.e: Qovery, Doppler)
+ * @member {String} owned_by
+ */
+EnvironmentVariableAllOf.prototype['owned_by'] = undefined;
 
 
 

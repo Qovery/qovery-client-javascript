@@ -55,30 +55,8 @@ class HelmPortRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>HelmPortRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmPortRequest</code>.
-     */
-    static validateJSON(data) {
-        if (data['ports']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['ports'])) {
-                throw new Error("Expected the field `ports` to be an array in the JSON data but got " + data['ports']);
-            }
-            // validate the optional field `ports` (array)
-            for (const item of data['ports']) {
-                HelmPortRequestPortsInner.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {Array.<module:model/HelmPortRequestPortsInner>} ports

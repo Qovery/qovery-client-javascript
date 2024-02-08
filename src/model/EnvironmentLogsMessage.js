@@ -57,28 +57,8 @@ class EnvironmentLogsMessage {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentLogsMessage</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentLogsMessage</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['safe_message'] && !(typeof data['safe_message'] === 'string' || data['safe_message'] instanceof String)) {
-            throw new Error("Expected the field `safe_message` to be a primitive type in the JSON string but got " + data['safe_message']);
-        }
-        // ensure the json data is a string
-        if (data['full_details'] && !(typeof data['full_details'] === 'string' || data['full_details'] instanceof String)) {
-            throw new Error("Expected the field `full_details` to be a primitive type in the JSON string but got " + data['full_details']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {String} safe_message

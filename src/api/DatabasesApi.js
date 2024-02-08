@@ -52,7 +52,7 @@ export default class DatabasesApi {
      * This will create a new database with the same configuration on the targeted environment Id.
      * @param {String} databaseId Database ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneServiceRequest} [cloneServiceRequest] 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/DatabasesApi~cloneDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Database}
      */
@@ -97,7 +97,7 @@ export default class DatabasesApi {
      * Create a database
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DatabaseRequest} [databaseRequest] 
+     * @param {module:model/DatabaseRequest} opts.databaseRequest 
      * @param {module:api/DatabasesApi~createDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Database}
      */

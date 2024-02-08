@@ -99,7 +99,7 @@ export default class MembersApi {
      * Remove a member
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DeleteMemberRequest} [deleteMemberRequest] 
+     * @param {module:model/DeleteMemberRequest} opts.deleteMemberRequest 
      * @param {module:api/MembersApi~deleteMemberCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deleteMember(organizationId, opts, callback) {
@@ -144,7 +144,7 @@ export default class MembersApi {
      * Edit an organization member role
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/MemberRoleUpdateRequest} [memberRoleUpdateRequest] 
+     * @param {module:model/MemberRoleUpdateRequest} opts.memberRoleUpdateRequest 
      * @param {module:api/MembersApi~editOrganizationMemberRoleCallback} callback The callback function, accepting three arguments: error, data, response
      */
     editOrganizationMemberRole(organizationId, opts, callback) {
@@ -368,7 +368,7 @@ export default class MembersApi {
      * Invite someone in the organization
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/InviteMemberRequest} [inviteMemberRequest] 
+     * @param {module:model/InviteMemberRequest} opts.inviteMemberRequest 
      * @param {module:api/MembersApi~postInviteMemberCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/InviteMember}
      */
@@ -413,7 +413,7 @@ export default class MembersApi {
      * Transfer organization ownership to another user
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/TransferOwnershipRequest} [transferOwnershipRequest] 
+     * @param {module:model/TransferOwnershipRequest} opts.transferOwnershipRequest 
      * @param {module:api/MembersApi~postOrganizationTransferOwnershipCallback} callback The callback function, accepting three arguments: error, data, response
      */
     postOrganizationTransferOwnership(organizationId, opts, callback) {

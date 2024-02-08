@@ -92,7 +92,7 @@ export default class ContainerMainCallsApi {
      * - To edit the container you must have the admin permission. - For port edition, if you provide a port id, we will update the corresponding port. If you don't we will create a new one. If you remove a port from the payload, we will delete it. - For storage edition, if you provide a storage id, we will update the corresponding storage. If you don't we will create a new one. If you remove a storage from the payload, we will delete it. 
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ContainerRequest} [containerRequest] 
+     * @param {module:model/ContainerRequest} opts.containerRequest 
      * @param {module:api/ContainerMainCallsApi~editContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponse}
      */

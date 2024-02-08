@@ -57,24 +57,8 @@ class ProbeTypeTcp {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ProbeTypeTcp</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProbeTypeTcp</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['host'] && !(typeof data['host'] === 'string' || data['host'] instanceof String)) {
-            throw new Error("Expected the field `host` to be a primitive type in the JSON string but got " + data['host']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {Number} port

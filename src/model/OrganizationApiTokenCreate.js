@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import OrganizationApiTokenCreateAllOf from './OrganizationApiTokenCreateAllOf';
 
 /**
  * The OrganizationApiTokenCreate model module.
@@ -24,11 +25,12 @@ class OrganizationApiTokenCreate {
      * Constructs a new <code>OrganizationApiTokenCreate</code>.
      * @alias module:model/OrganizationApiTokenCreate
      * @implements module:model/Base
+     * @implements module:model/OrganizationApiTokenCreateAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);OrganizationApiTokenCreateAllOf.initialize(this);
         OrganizationApiTokenCreate.initialize(this, id, createdAt);
     }
 
@@ -53,6 +55,7 @@ class OrganizationApiTokenCreate {
         if (data) {
             obj = obj || new OrganizationApiTokenCreate();
             Base.constructFromObject(data, obj);
+            OrganizationApiTokenCreateAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -82,50 +85,8 @@ class OrganizationApiTokenCreate {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>OrganizationApiTokenCreate</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationApiTokenCreate</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of OrganizationApiTokenCreate.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // ensure the json data is a string
-        if (data['token'] && !(typeof data['token'] === 'string' || data['token'] instanceof String)) {
-            throw new Error("Expected the field `token` to be a primitive type in the JSON string but got " + data['token']);
-        }
-        // ensure the json data is a string
-        if (data['role_name'] && !(typeof data['role_name'] === 'string' || data['role_name'] instanceof String)) {
-            throw new Error("Expected the field `role_name` to be a primitive type in the JSON string but got " + data['role_name']);
-        }
-        // ensure the json data is a string
-        if (data['role_id'] && !(typeof data['role_id'] === 'string' || data['role_id'] instanceof String)) {
-            throw new Error("Expected the field `role_id` to be a primitive type in the JSON string but got " + data['role_id']);
-        }
-
-        return true;
-    }
-
 
 }
-
-OrganizationApiTokenCreate.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -182,6 +143,28 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement OrganizationApiTokenCreateAllOf interface:
+/**
+ * @member {String} name
+ */
+OrganizationApiTokenCreateAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+OrganizationApiTokenCreateAllOf.prototype['description'] = undefined;
+/**
+ * the generated token to send in 'Authorization' header prefixed by 'Token '
+ * @member {String} token
+ */
+OrganizationApiTokenCreateAllOf.prototype['token'] = undefined;
+/**
+ * @member {String} role_name
+ */
+OrganizationApiTokenCreateAllOf.prototype['role_name'] = undefined;
+/**
+ * @member {String} role_id
+ */
+OrganizationApiTokenCreateAllOf.prototype['role_id'] = undefined;
 
 
 

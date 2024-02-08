@@ -66,40 +66,8 @@ class EnvironmentServiceIdsAllRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentServiceIdsAllRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentServiceIdsAllRequest</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is an array
-        if (!Array.isArray(data['application_ids'])) {
-            throw new Error("Expected the field `application_ids` to be an array in the JSON data but got " + data['application_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['container_ids'])) {
-            throw new Error("Expected the field `container_ids` to be an array in the JSON data but got " + data['container_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['database_ids'])) {
-            throw new Error("Expected the field `database_ids` to be an array in the JSON data but got " + data['database_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['job_ids'])) {
-            throw new Error("Expected the field `job_ids` to be an array in the JSON data but got " + data['job_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['helm_ids'])) {
-            throw new Error("Expected the field `helm_ids` to be an array in the JSON data but got " + data['helm_ids']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {Array.<String>} application_ids

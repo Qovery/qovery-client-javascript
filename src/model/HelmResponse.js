@@ -12,9 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApplicationGitRepository from './ApplicationGitRepository';
 import Base from './Base';
+import HelmResponseAllOf from './HelmResponseAllOf';
 import HelmResponseAllOfPorts from './HelmResponseAllOfPorts';
-import HelmResponseAllOfSource from './HelmResponseAllOfSource';
 import HelmResponseAllOfValuesOverride from './HelmResponseAllOfValuesOverride';
 import ReferenceObject from './ReferenceObject';
 
@@ -28,19 +29,20 @@ class HelmResponse {
      * Constructs a new <code>HelmResponse</code>.
      * @alias module:model/HelmResponse
      * @implements module:model/Base
+     * @implements module:model/HelmResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
      * @param name {String} name is case insensitive
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
      * @param autoDeploy {Boolean} Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type. 
-     * @param source {module:model/HelmResponseAllOfSource} 
+     * @param source {module:model/OneOfobjectobject} 
      * @param _arguments {Array.<String>} The extra arguments to pass to helm
      * @param allowClusterWideResources {Boolean} If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights 
      * @param valuesOverride {module:model/HelmResponseAllOfValuesOverride} 
      */
     constructor(id, createdAt, environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);HelmResponseAllOf.initialize(this, environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride);
         HelmResponse.initialize(this, id, createdAt, environment, name, autoPreview, autoDeploy, source, _arguments, allowClusterWideResources, valuesOverride);
     }
 
@@ -73,6 +75,7 @@ class HelmResponse {
         if (data) {
             obj = obj || new HelmResponse();
             Base.constructFromObject(data, obj);
+            HelmResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -105,7 +108,7 @@ class HelmResponse {
                 obj['ports'] = ApiClient.convertToType(data['ports'], [HelmResponseAllOfPorts]);
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = HelmResponseAllOfSource.constructFromObject(data['source']);
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
             if (data.hasOwnProperty('arguments')) {
                 obj['arguments'] = ApiClient.convertToType(data['arguments'], ['String']);
@@ -120,64 +123,8 @@ class HelmResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>HelmResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmResponse</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of HelmResponse.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // validate the optional field `environment`
-        if (data['environment']) { // data not null
-          ReferenceObject.validateJSON(data['environment']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        if (data['ports']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['ports'])) {
-                throw new Error("Expected the field `ports` to be an array in the JSON data but got " + data['ports']);
-            }
-            // validate the optional field `ports` (array)
-            for (const item of data['ports']) {
-                HelmResponseAllOfPorts.validateJSON(item);
-            };
-        }
-        // validate the optional field `source`
-        if (data['source']) { // data not null
-          HelmResponseAllOfSource.validateJSON(data['source']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['arguments'])) {
-            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
-        }
-        // validate the optional field `values_override`
-        if (data['values_override']) { // data not null
-          HelmResponseAllOfValuesOverride.validateJSON(data['values_override']);
-        }
-
-        return true;
-    }
-
 
 }
-
-HelmResponse.RequiredProperties = ["id", "created_at", "environment", "name", "auto_preview", "auto_deploy", "source", "arguments", "allow_cluster_wide_resources", "values_override"];
 
 /**
  * @member {String} id
@@ -235,7 +182,7 @@ HelmResponse.prototype['auto_deploy'] = undefined;
 HelmResponse.prototype['ports'] = undefined;
 
 /**
- * @member {module:model/HelmResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 HelmResponse.prototype['source'] = undefined;
 
@@ -271,6 +218,59 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement HelmResponseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+HelmResponseAllOf.prototype['environment'] = undefined;
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+HelmResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+HelmResponseAllOf.prototype['description'] = undefined;
+/**
+ * Maximum number of seconds allowed for helm to run before killing it and mark it as failed 
+ * @member {Number} timeout_sec
+ * @default 600
+ */
+HelmResponseAllOf.prototype['timeout_sec'] = 600;
+/**
+ * Indicates if the 'environment preview option' is enabled.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
+ * @member {Boolean} auto_preview
+ */
+HelmResponseAllOf.prototype['auto_preview'] = undefined;
+/**
+ * Specify if the service will be automatically updated after receiving a new image tag or a new commit according to the source type. 
+ * @member {Boolean} auto_deploy
+ */
+HelmResponseAllOf.prototype['auto_deploy'] = undefined;
+/**
+ * @member {Array.<module:model/HelmResponseAllOfPorts>} ports
+ */
+HelmResponseAllOf.prototype['ports'] = undefined;
+/**
+ * @member {module:model/OneOfobjectobject} source
+ */
+HelmResponseAllOf.prototype['source'] = undefined;
+/**
+ * The extra arguments to pass to helm
+ * @member {Array.<String>} arguments
+ */
+HelmResponseAllOf.prototype['arguments'] = undefined;
+/**
+ * If we should allow the chart to deploy object outside his specified namespace. Setting this flag to true, requires special rights 
+ * @member {Boolean} allow_cluster_wide_resources
+ * @default false
+ */
+HelmResponseAllOf.prototype['allow_cluster_wide_resources'] = false;
+/**
+ * @member {module:model/HelmResponseAllOfValuesOverride} values_override
+ */
+HelmResponseAllOf.prototype['values_override'] = undefined;
 
 
 

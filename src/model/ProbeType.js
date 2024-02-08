@@ -67,36 +67,8 @@ class ProbeType {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ProbeType</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProbeType</code>.
-     */
-    static validateJSON(data) {
-        // validate the optional field `tcp`
-        if (data['tcp']) { // data not null
-          ProbeTypeTcp.validateJSON(data['tcp']);
-        }
-        // validate the optional field `http`
-        if (data['http']) { // data not null
-          ProbeTypeHttp.validateJSON(data['http']);
-        }
-        // validate the optional field `exec`
-        if (data['exec']) { // data not null
-          ProbeTypeExec.validateJSON(data['exec']);
-        }
-        // validate the optional field `grpc`
-        if (data['grpc']) { // data not null
-          ProbeTypeGrpc.validateJSON(data['grpc']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {module:model/ProbeTypeTcp} tcp

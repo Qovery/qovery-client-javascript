@@ -59,28 +59,8 @@ class HelmRequestAllOfValuesOverrideFile {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>HelmRequestAllOfValuesOverrideFile</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmRequestAllOfValuesOverrideFile</code>.
-     */
-    static validateJSON(data) {
-        // validate the optional field `git`
-        if (data['git']) { // data not null
-          HelmRequestAllOfValuesOverrideFileGit.validateJSON(data['git']);
-        }
-        // validate the optional field `raw`
-        if (data['raw']) { // data not null
-          HelmRequestAllOfValuesOverrideFileRaw.validateJSON(data['raw']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {module:model/HelmRequestAllOfValuesOverrideFileGit} git

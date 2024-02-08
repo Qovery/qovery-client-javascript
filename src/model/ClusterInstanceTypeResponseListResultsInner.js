@@ -84,46 +84,8 @@ class ClusterInstanceTypeResponseListResultsInner {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterInstanceTypeResponseListResultsInner</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterInstanceTypeResponseListResultsInner</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ClusterInstanceTypeResponseListResultsInner.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['type'] && !(typeof data['type'] === 'string' || data['type'] instanceof String)) {
-            throw new Error("Expected the field `type` to be a primitive type in the JSON string but got " + data['type']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['bandwidth_in_gbps'] && !(typeof data['bandwidth_in_gbps'] === 'string' || data['bandwidth_in_gbps'] instanceof String)) {
-            throw new Error("Expected the field `bandwidth_in_gbps` to be a primitive type in the JSON string but got " + data['bandwidth_in_gbps']);
-        }
-        // ensure the json data is a string
-        if (data['bandwidth_guarantee'] && !(typeof data['bandwidth_guarantee'] === 'string' || data['bandwidth_guarantee'] instanceof String)) {
-            throw new Error("Expected the field `bandwidth_guarantee` to be a primitive type in the JSON string but got " + data['bandwidth_guarantee']);
-        }
-        // ensure the json data is a string
-        if (data['architecture'] && !(typeof data['architecture'] === 'string' || data['architecture'] instanceof String)) {
-            throw new Error("Expected the field `architecture` to be a primitive type in the JSON string but got " + data['architecture']);
-        }
-
-        return true;
-    }
-
 
 }
-
-ClusterInstanceTypeResponseListResultsInner.RequiredProperties = ["type", "name", "cpu", "ram_in_gb", "bandwidth_in_gbps", "bandwidth_guarantee"];
 
 /**
  * @member {String} type

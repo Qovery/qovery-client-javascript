@@ -62,34 +62,8 @@ class HelmRequestAllOfValuesOverrideFileGit {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>HelmRequestAllOfValuesOverrideFileGit</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmRequestAllOfValuesOverrideFileGit</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of HelmRequestAllOfValuesOverrideFileGit.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // validate the optional field `git_repository`
-        if (data['git_repository']) { // data not null
-          ApplicationGitRepositoryRequest.validateJSON(data['git_repository']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['paths'])) {
-            throw new Error("Expected the field `paths` to be an array in the JSON data but got " + data['paths']);
-        }
-
-        return true;
-    }
-
 
 }
-
-HelmRequestAllOfValuesOverrideFileGit.RequiredProperties = ["git_repository", "paths"];
 
 /**
  * @member {module:model/ApplicationGitRepositoryRequest} git_repository

@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import Commit from './Commit';
+import DeploymentHistoryAllOf from './DeploymentHistoryAllOf';
 import DeploymentHistoryStatusEnum from './DeploymentHistoryStatusEnum';
 
 /**
@@ -26,11 +27,12 @@ class DeploymentHistory {
      * Constructs a new <code>DeploymentHistory</code>.
      * @alias module:model/DeploymentHistory
      * @implements module:model/Base
+     * @implements module:model/DeploymentHistoryAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);DeploymentHistoryAllOf.initialize(this);
         DeploymentHistory.initialize(this, id, createdAt);
     }
 
@@ -55,6 +57,7 @@ class DeploymentHistory {
         if (data) {
             obj = obj || new DeploymentHistory();
             Base.constructFromObject(data, obj);
+            DeploymentHistoryAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -78,38 +81,8 @@ class DeploymentHistory {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>DeploymentHistory</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistory</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of DeploymentHistory.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // validate the optional field `commit`
-        if (data['commit']) { // data not null
-          Commit.validateJSON(data['commit']);
-        }
-
-        return true;
-    }
-
 
 }
-
-DeploymentHistory.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -156,6 +129,20 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement DeploymentHistoryAllOf interface:
+/**
+ * name of the service
+ * @member {String} name
+ */
+DeploymentHistoryAllOf.prototype['name'] = undefined;
+/**
+ * @member {module:model/Commit} commit
+ */
+DeploymentHistoryAllOf.prototype['commit'] = undefined;
+/**
+ * @member {module:model/DeploymentHistoryStatusEnum} status
+ */
+DeploymentHistoryAllOf.prototype['status'] = undefined;
 
 
 

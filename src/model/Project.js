@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import ProjectAllOf from './ProjectAllOf';
 import ReferenceObject from './ReferenceObject';
 
 /**
@@ -25,13 +26,14 @@ class Project {
      * Constructs a new <code>Project</code>.
      * @alias module:model/Project
      * @implements module:model/Base
+     * @implements module:model/ProjectAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} 
      * @param organization {module:model/ReferenceObject} 
      */
     constructor(id, createdAt, name, organization) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);ProjectAllOf.initialize(this, name, organization);
         Project.initialize(this, id, createdAt, name, organization);
     }
 
@@ -58,6 +60,7 @@ class Project {
         if (data) {
             obj = obj || new Project();
             Base.constructFromObject(data, obj);
+            ProjectAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -81,42 +84,8 @@ class Project {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>Project</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Project</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of Project.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // validate the optional field `organization`
-        if (data['organization']) { // data not null
-          ReferenceObject.validateJSON(data['organization']);
-        }
-
-        return true;
-    }
-
 
 }
-
-Project.RequiredProperties = ["id", "created_at", "name", "organization"];
 
 /**
  * @member {String} id
@@ -162,6 +131,19 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement ProjectAllOf interface:
+/**
+ * @member {String} name
+ */
+ProjectAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+ProjectAllOf.prototype['description'] = undefined;
+/**
+ * @member {module:model/ReferenceObject} organization
+ */
+ProjectAllOf.prototype['organization'] = undefined;
 
 
 

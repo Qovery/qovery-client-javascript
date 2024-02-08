@@ -57,28 +57,8 @@ class JobDeployRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>JobDeployRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>JobDeployRequest</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['image_tag'] && !(typeof data['image_tag'] === 'string' || data['image_tag'] instanceof String)) {
-            throw new Error("Expected the field `image_tag` to be a primitive type in the JSON string but got " + data['image_tag']);
-        }
-        // ensure the json data is a string
-        if (data['git_commit_id'] && !(typeof data['git_commit_id'] === 'string' || data['git_commit_id'] instanceof String)) {
-            throw new Error("Expected the field `git_commit_id` to be a primitive type in the JSON string but got " + data['git_commit_id']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * Image tag to deploy.   Cannot be set if `git_commit_id` is defined 

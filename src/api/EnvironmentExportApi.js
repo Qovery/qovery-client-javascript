@@ -45,7 +45,7 @@ export default class EnvironmentExportApi {
      * Export full environment and its resources into Terraform manifests
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {Boolean} [exportSecrets = false)] export Secrets from configuration and include them into Terraform export
+     * @param {Boolean} opts.exportSecrets export Secrets from configuration and include them into Terraform export (default to false)
      * @param {module:api/EnvironmentExportApi~exportEnvironmentConfigurationIntoTerraformCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
      */

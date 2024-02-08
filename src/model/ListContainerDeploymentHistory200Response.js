@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import DeploymentHistoryContainer from './DeploymentHistoryContainer';
+import ListContainerDeploymentHistory200ResponseAllOf from './ListContainerDeploymentHistory200ResponseAllOf';
 import PaginationData from './PaginationData';
 
 /**
@@ -25,11 +26,12 @@ class ListContainerDeploymentHistory200Response {
      * Constructs a new <code>ListContainerDeploymentHistory200Response</code>.
      * @alias module:model/ListContainerDeploymentHistory200Response
      * @implements module:model/PaginationData
+     * @implements module:model/ListContainerDeploymentHistory200ResponseAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationData.initialize(this, page, pageSize);
+        PaginationData.initialize(this, page, pageSize);ListContainerDeploymentHistory200ResponseAllOf.initialize(this);
         ListContainerDeploymentHistory200Response.initialize(this, page, pageSize);
     }
 
@@ -54,6 +56,7 @@ class ListContainerDeploymentHistory200Response {
         if (data) {
             obj = obj || new ListContainerDeploymentHistory200Response();
             PaginationData.constructFromObject(data, obj);
+            ListContainerDeploymentHistory200ResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -68,36 +71,8 @@ class ListContainerDeploymentHistory200Response {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ListContainerDeploymentHistory200Response</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ListContainerDeploymentHistory200Response</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ListContainerDeploymentHistory200Response.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['results']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['results'])) {
-                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
-            }
-            // validate the optional field `results` (array)
-            for (const item of data['results']) {
-                DeploymentHistoryContainer.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-ListContainerDeploymentHistory200Response.RequiredProperties = ["page", "page_size"];
 
 /**
  * @member {Number} page
@@ -124,6 +99,11 @@ PaginationData.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationData.prototype['page_size'] = undefined;
+// Implement ListContainerDeploymentHistory200ResponseAllOf interface:
+/**
+ * @member {Array.<module:model/DeploymentHistoryContainer>} results
+ */
+ListContainerDeploymentHistory200ResponseAllOf.prototype['results'] = undefined;
 
 
 

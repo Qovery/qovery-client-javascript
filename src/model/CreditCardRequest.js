@@ -71,34 +71,8 @@ class CreditCardRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>CreditCardRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreditCardRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of CreditCardRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['number'] && !(typeof data['number'] === 'string' || data['number'] instanceof String)) {
-            throw new Error("Expected the field `number` to be a primitive type in the JSON string but got " + data['number']);
-        }
-        // ensure the json data is a string
-        if (data['cvv'] && !(typeof data['cvv'] === 'string' || data['cvv'] instanceof String)) {
-            throw new Error("Expected the field `cvv` to be a primitive type in the JSON string but got " + data['cvv']);
-        }
-
-        return true;
-    }
-
 
 }
-
-CreditCardRequest.RequiredProperties = ["number", "cvv", "expiry_month", "expiry_year"];
 
 /**
  * @member {String} number

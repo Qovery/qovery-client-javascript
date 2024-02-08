@@ -80,42 +80,8 @@ class VariableRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>VariableRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>VariableRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of VariableRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['key'] && !(typeof data['key'] === 'string' || data['key'] instanceof String)) {
-            throw new Error("Expected the field `key` to be a primitive type in the JSON string but got " + data['key']);
-        }
-        // ensure the json data is a string
-        if (data['value'] && !(typeof data['value'] === 'string' || data['value'] instanceof String)) {
-            throw new Error("Expected the field `value` to be a primitive type in the JSON string but got " + data['value']);
-        }
-        // ensure the json data is a string
-        if (data['mount_path'] && !(typeof data['mount_path'] === 'string' || data['mount_path'] instanceof String)) {
-            throw new Error("Expected the field `mount_path` to be a primitive type in the JSON string but got " + data['mount_path']);
-        }
-        // ensure the json data is a string
-        if (data['variable_parent_id'] && !(typeof data['variable_parent_id'] === 'string' || data['variable_parent_id'] instanceof String)) {
-            throw new Error("Expected the field `variable_parent_id` to be a primitive type in the JSON string but got " + data['variable_parent_id']);
-        }
-
-        return true;
-    }
-
 
 }
-
-VariableRequest.RequiredProperties = ["key", "value", "is_secret", "variable_scope", "variable_parent_id"];
 
 /**
  * the key of the environment variable

@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import DeploymentHistory from './DeploymentHistory';
+import DeploymentHistoryPaginatedResponseListAllOf from './DeploymentHistoryPaginatedResponseListAllOf';
 import PaginationData from './PaginationData';
 
 /**
@@ -25,11 +26,12 @@ class DeploymentHistoryPaginatedResponseList {
      * Constructs a new <code>DeploymentHistoryPaginatedResponseList</code>.
      * @alias module:model/DeploymentHistoryPaginatedResponseList
      * @implements module:model/PaginationData
+     * @implements module:model/DeploymentHistoryPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationData.initialize(this, page, pageSize);
+        PaginationData.initialize(this, page, pageSize);DeploymentHistoryPaginatedResponseListAllOf.initialize(this);
         DeploymentHistoryPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -54,6 +56,7 @@ class DeploymentHistoryPaginatedResponseList {
         if (data) {
             obj = obj || new DeploymentHistoryPaginatedResponseList();
             PaginationData.constructFromObject(data, obj);
+            DeploymentHistoryPaginatedResponseListAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -68,36 +71,8 @@ class DeploymentHistoryPaginatedResponseList {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>DeploymentHistoryPaginatedResponseList</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistoryPaginatedResponseList</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of DeploymentHistoryPaginatedResponseList.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['results']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['results'])) {
-                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
-            }
-            // validate the optional field `results` (array)
-            for (const item of data['results']) {
-                DeploymentHistory.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-DeploymentHistoryPaginatedResponseList.RequiredProperties = ["page", "page_size"];
 
 /**
  * @member {Number} page
@@ -124,6 +99,11 @@ PaginationData.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationData.prototype['page_size'] = undefined;
+// Implement DeploymentHistoryPaginatedResponseListAllOf interface:
+/**
+ * @member {Array.<module:model/DeploymentHistory>} results
+ */
+DeploymentHistoryPaginatedResponseListAllOf.prototype['results'] = undefined;
 
 
 

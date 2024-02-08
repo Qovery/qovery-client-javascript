@@ -86,38 +86,8 @@ class CreditCard {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>CreditCard</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CreditCard</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of CreditCard.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['last_digit'] && !(typeof data['last_digit'] === 'string' || data['last_digit'] instanceof String)) {
-            throw new Error("Expected the field `last_digit` to be a primitive type in the JSON string but got " + data['last_digit']);
-        }
-        // ensure the json data is a string
-        if (data['brand'] && !(typeof data['brand'] === 'string' || data['brand'] instanceof String)) {
-            throw new Error("Expected the field `brand` to be a primitive type in the JSON string but got " + data['brand']);
-        }
-
-        return true;
-    }
-
 
 }
-
-CreditCard.RequiredProperties = ["id", "created_at", "expiry_month", "expiry_year", "last_digit", "is_expired", "brand"];
 
 /**
  * @member {String} id

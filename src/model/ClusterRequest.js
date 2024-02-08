@@ -103,64 +103,8 @@ class ClusterRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ClusterRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // ensure the json data is a string
-        if (data['region'] && !(typeof data['region'] === 'string' || data['region'] instanceof String)) {
-            throw new Error("Expected the field `region` to be a primitive type in the JSON string but got " + data['region']);
-        }
-        // validate the optional field `cloud_provider_credentials`
-        if (data['cloud_provider_credentials']) { // data not null
-          ClusterCloudProviderInfoRequest.validateJSON(data['cloud_provider_credentials']);
-        }
-        // ensure the json data is a string
-        if (data['instance_type'] && !(typeof data['instance_type'] === 'string' || data['instance_type'] instanceof String)) {
-            throw new Error("Expected the field `instance_type` to be a primitive type in the JSON string but got " + data['instance_type']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['ssh_keys'])) {
-            throw new Error("Expected the field `ssh_keys` to be an array in the JSON data but got " + data['ssh_keys']);
-        }
-        // ensure the json data is a string
-        if (data['kubeconfig'] && !(typeof data['kubeconfig'] === 'string' || data['kubeconfig'] instanceof String)) {
-            throw new Error("Expected the field `kubeconfig` to be a primitive type in the JSON string but got " + data['kubeconfig']);
-        }
-        if (data['features']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['features'])) {
-                throw new Error("Expected the field `features` to be an array in the JSON data but got " + data['features']);
-            }
-            // validate the optional field `features` (array)
-            for (const item of data['features']) {
-                ClusterRequestFeaturesInner.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-ClusterRequest.RequiredProperties = ["name", "region", "cloud_provider"];
 
 /**
  * name is case-insensitive

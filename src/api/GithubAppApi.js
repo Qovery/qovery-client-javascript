@@ -46,7 +46,7 @@ export default class GithubAppApi {
      * Connect a github account to an organization
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationGithubAppConnectRequest} [organizationGithubAppConnectRequest] 
+     * @param {module:model/OrganizationGithubAppConnectRequest} opts.organizationGithubAppConnectRequest 
      * @param {module:api/GithubAppApi~organizationGithubAppConnectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     organizationGithubAppConnect(organizationId, opts, callback) {
@@ -90,7 +90,7 @@ export default class GithubAppApi {
      * Disconnect a github account from an organization
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {Boolean} [force] Indicates if the github app should be disconnected despite github applications linked to organization
+     * @param {Boolean} opts.force Indicates if the github app should be disconnected despite github applications linked to organization
      * @param {module:api/GithubAppApi~organizationGithubAppDisconnectCallback} callback The callback function, accepting three arguments: error, data, response
      */
     organizationGithubAppDisconnect(organizationId, opts, callback) {

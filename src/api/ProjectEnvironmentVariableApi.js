@@ -52,7 +52,7 @@ export default class ProjectEnvironmentVariableApi {
      * - Add an environment variable to the project.   - If the environment variable key already exists, then it will be replaced by the new one.   - If the environment variable value points toward an existing environment variable key, it will be considered as an alias. 
      * @param {String} projectId Project ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentVariableRequest} [environmentVariableRequest] 
+     * @param {module:model/EnvironmentVariableRequest} opts.environmentVariableRequest 
      * @param {module:api/ProjectEnvironmentVariableApi~createProjectEnvironmentVariableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -99,7 +99,7 @@ export default class ProjectEnvironmentVariableApi {
      * @param {String} projectId Project ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} [key] 
+     * @param {module:model/Key} opts.key 
      * @param {module:api/ProjectEnvironmentVariableApi~createProjectEnvironmentVariableAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */
@@ -151,7 +151,7 @@ export default class ProjectEnvironmentVariableApi {
      * @param {String} projectId Project ID
      * @param {String} environmentVariableId Environment Variable ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} [value] 
+     * @param {module:model/Value} opts.value 
      * @param {module:api/ProjectEnvironmentVariableApi~createProjectEnvironmentVariableOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EnvironmentVariable}
      */

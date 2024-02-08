@@ -98,78 +98,8 @@ class ClusterRequestFeaturesInnerValueOneOf {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterRequestFeaturesInnerValueOneOf</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterRequestFeaturesInnerValueOneOf</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ClusterRequestFeaturesInnerValueOneOf.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['aws_vpc_eks_id'] && !(typeof data['aws_vpc_eks_id'] === 'string' || data['aws_vpc_eks_id'] instanceof String)) {
-            throw new Error("Expected the field `aws_vpc_eks_id` to be a primitive type in the JSON string but got " + data['aws_vpc_eks_id']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['eks_subnets_zone_a_ids'])) {
-            throw new Error("Expected the field `eks_subnets_zone_a_ids` to be an array in the JSON data but got " + data['eks_subnets_zone_a_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['eks_subnets_zone_b_ids'])) {
-            throw new Error("Expected the field `eks_subnets_zone_b_ids` to be an array in the JSON data but got " + data['eks_subnets_zone_b_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['eks_subnets_zone_c_ids'])) {
-            throw new Error("Expected the field `eks_subnets_zone_c_ids` to be an array in the JSON data but got " + data['eks_subnets_zone_c_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['documentdb_subnets_zone_a_ids'])) {
-            throw new Error("Expected the field `documentdb_subnets_zone_a_ids` to be an array in the JSON data but got " + data['documentdb_subnets_zone_a_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['documentdb_subnets_zone_b_ids'])) {
-            throw new Error("Expected the field `documentdb_subnets_zone_b_ids` to be an array in the JSON data but got " + data['documentdb_subnets_zone_b_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['documentdb_subnets_zone_c_ids'])) {
-            throw new Error("Expected the field `documentdb_subnets_zone_c_ids` to be an array in the JSON data but got " + data['documentdb_subnets_zone_c_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['elasticache_subnets_zone_a_ids'])) {
-            throw new Error("Expected the field `elasticache_subnets_zone_a_ids` to be an array in the JSON data but got " + data['elasticache_subnets_zone_a_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['elasticache_subnets_zone_b_ids'])) {
-            throw new Error("Expected the field `elasticache_subnets_zone_b_ids` to be an array in the JSON data but got " + data['elasticache_subnets_zone_b_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['elasticache_subnets_zone_c_ids'])) {
-            throw new Error("Expected the field `elasticache_subnets_zone_c_ids` to be an array in the JSON data but got " + data['elasticache_subnets_zone_c_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['rds_subnets_zone_a_ids'])) {
-            throw new Error("Expected the field `rds_subnets_zone_a_ids` to be an array in the JSON data but got " + data['rds_subnets_zone_a_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['rds_subnets_zone_b_ids'])) {
-            throw new Error("Expected the field `rds_subnets_zone_b_ids` to be an array in the JSON data but got " + data['rds_subnets_zone_b_ids']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['rds_subnets_zone_c_ids'])) {
-            throw new Error("Expected the field `rds_subnets_zone_c_ids` to be an array in the JSON data but got " + data['rds_subnets_zone_c_ids']);
-        }
-
-        return true;
-    }
-
 
 }
-
-ClusterRequestFeaturesInnerValueOneOf.RequiredProperties = ["aws_vpc_eks_id", "eks_subnets_zone_a_ids", "eks_subnets_zone_b_ids", "eks_subnets_zone_c_ids"];
 
 /**
  * @member {String} aws_vpc_eks_id

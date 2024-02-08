@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import DeploymentHistoryContainerAllOf from './DeploymentHistoryContainerAllOf';
 import StateEnum from './StateEnum';
 
 /**
@@ -25,11 +26,12 @@ class DeploymentHistoryContainer {
      * Constructs a new <code>DeploymentHistoryContainer</code>.
      * @alias module:model/DeploymentHistoryContainer
      * @implements module:model/Base
+     * @implements module:model/DeploymentHistoryContainerAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      */
     constructor(id, createdAt) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);DeploymentHistoryContainerAllOf.initialize(this);
         DeploymentHistoryContainer.initialize(this, id, createdAt);
     }
 
@@ -54,6 +56,7 @@ class DeploymentHistoryContainer {
         if (data) {
             obj = obj || new DeploymentHistoryContainer();
             Base.constructFromObject(data, obj);
+            DeploymentHistoryContainerAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -86,50 +89,8 @@ class DeploymentHistoryContainer {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>DeploymentHistoryContainer</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentHistoryContainer</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of DeploymentHistoryContainer.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['image_name'] && !(typeof data['image_name'] === 'string' || data['image_name'] instanceof String)) {
-            throw new Error("Expected the field `image_name` to be a primitive type in the JSON string but got " + data['image_name']);
-        }
-        // ensure the json data is a string
-        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
-            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['arguments'])) {
-            throw new Error("Expected the field `arguments` to be an array in the JSON data but got " + data['arguments']);
-        }
-        // ensure the json data is a string
-        if (data['entrypoint'] && !(typeof data['entrypoint'] === 'string' || data['entrypoint'] instanceof String)) {
-            throw new Error("Expected the field `entrypoint` to be a primitive type in the JSON string but got " + data['entrypoint']);
-        }
-
-        return true;
-    }
-
 
 }
-
-DeploymentHistoryContainer.RequiredProperties = ["id", "created_at"];
 
 /**
  * @member {String} id
@@ -191,6 +152,32 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement DeploymentHistoryContainerAllOf interface:
+/**
+ * name of the container
+ * @member {String} name
+ */
+DeploymentHistoryContainerAllOf.prototype['name'] = undefined;
+/**
+ * @member {module:model/StateEnum} status
+ */
+DeploymentHistoryContainerAllOf.prototype['status'] = undefined;
+/**
+ * @member {String} image_name
+ */
+DeploymentHistoryContainerAllOf.prototype['image_name'] = undefined;
+/**
+ * @member {String} tag
+ */
+DeploymentHistoryContainerAllOf.prototype['tag'] = undefined;
+/**
+ * @member {Array.<String>} arguments
+ */
+DeploymentHistoryContainerAllOf.prototype['arguments'] = undefined;
+/**
+ * @member {String} entrypoint
+ */
+DeploymentHistoryContainerAllOf.prototype['entrypoint'] = undefined;
 
 
 

@@ -12,7 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelmDefaultValuesRequestAllOfSource from './HelmDefaultValuesRequestAllOfSource';
+import HelmDefaultValuesRequestAllOf from './HelmDefaultValuesRequestAllOf';
+import HelmGitRepositoryRequest from './HelmGitRepositoryRequest';
 
 /**
  * The HelmDefaultValuesRequest model module.
@@ -23,10 +24,11 @@ class HelmDefaultValuesRequest {
     /**
      * Constructs a new <code>HelmDefaultValuesRequest</code>.
      * @alias module:model/HelmDefaultValuesRequest
-     * @param source {module:model/HelmDefaultValuesRequestAllOfSource} 
+     * @implements module:model/HelmDefaultValuesRequestAllOf
+     * @param source {module:model/OneOfobjectobject} 
      */
     constructor(source) { 
-        
+        HelmDefaultValuesRequestAllOf.initialize(this, source);
         HelmDefaultValuesRequest.initialize(this, source);
     }
 
@@ -49,45 +51,29 @@ class HelmDefaultValuesRequest {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new HelmDefaultValuesRequest();
+            HelmDefaultValuesRequestAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('source')) {
-                obj['source'] = HelmDefaultValuesRequestAllOfSource.constructFromObject(data['source']);
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
         }
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>HelmDefaultValuesRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmDefaultValuesRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of HelmDefaultValuesRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // validate the optional field `source`
-        if (data['source']) { // data not null
-          HelmDefaultValuesRequestAllOfSource.validateJSON(data['source']);
-        }
-
-        return true;
-    }
-
 
 }
 
-HelmDefaultValuesRequest.RequiredProperties = ["source"];
-
 /**
- * @member {module:model/HelmDefaultValuesRequestAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 HelmDefaultValuesRequest.prototype['source'] = undefined;
 
 
+// Implement HelmDefaultValuesRequestAllOf interface:
+/**
+ * @member {module:model/OneOfobjectobject} source
+ */
+HelmDefaultValuesRequestAllOf.prototype['source'] = undefined;
 
 
 

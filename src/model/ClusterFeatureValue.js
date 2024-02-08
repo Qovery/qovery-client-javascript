@@ -22,48 +22,18 @@ class ClusterFeatureValue {
     /**
      * Constructs a new <code>ClusterFeatureValue</code>.
      * @alias module:model/ClusterFeatureValue
-     * @param {(module:model/Boolean|module:model/String)} instance The actual instance to initialize ClusterFeatureValue.
      */
-    constructor(instance = null) {
-        if (instance === null) {
-            this.actualInstance = null;
-            return;
-        }
-        var match = 0;
-        var errorMessages = [];
-        try {
-            // validate string
-            if (!(typeof instance === 'string')) {
-                throw new Error("Invalid value. Must be string. Input: " + JSON.stringify(instance));
-            }
-            this.actualInstance = instance;
-            match++;
-        } catch(err) {
-            // json data failed to deserialize into String
-            errorMessages.push("Failed to construct String: " + err)
-        }
+    constructor() { 
+        
+        ClusterFeatureValue.initialize(this);
+    }
 
-        try {
-            // validate boolean
-            if (!(typeof instance === 'boolean')) {
-                throw new Error("Invalid value. Must be boolean. Input: " + JSON.stringify(instance));
-            }
-            this.actualInstance = instance;
-            match++;
-        } catch(err) {
-            // json data failed to deserialize into Boolean
-            errorMessages.push("Failed to construct Boolean: " + err)
-        }
-
-        if (match > 1) {
-            throw new Error("Multiple matches found constructing `ClusterFeatureValue` with oneOf schemas Boolean, String. Input: " + JSON.stringify(instance));
-        } else if (match === 0) {
-            this.actualInstance = null; // clear the actual instance in case there are multiple matches
-            throw new Error("No match found constructing `ClusterFeatureValue` with oneOf schemas Boolean, String. Details: " +
-                            errorMessages.join(", "));
-        } else { // only 1 match
-            // the input is valid
-        }
+    /**
+     * Initializes the fields of this object.
+     * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+     * Only for internal use.
+     */
+    static initialize(obj) { 
     }
 
     /**
@@ -74,45 +44,20 @@ class ClusterFeatureValue {
      * @return {module:model/ClusterFeatureValue} The populated <code>ClusterFeatureValue</code> instance.
      */
     static constructFromObject(data, obj) {
-        return new ClusterFeatureValue(data);
+        if (data) {
+            obj = obj || new ClusterFeatureValue();
+
+        }
+        return obj;
     }
 
-    /**
-     * Gets the actual instance, which can be <code>Boolean</code>, <code>String</code>.
-     * @return {(module:model/Boolean|module:model/String)} The actual instance.
-     */
-    getActualInstance() {
-        return this.actualInstance;
-    }
 
-    /**
-     * Sets the actual instance, which can be <code>Boolean</code>, <code>String</code>.
-     * @param {(module:model/Boolean|module:model/String)} obj The actual instance.
-     */
-    setActualInstance(obj) {
-       this.actualInstance = ClusterFeatureValue.constructFromObject(obj).getActualInstance();
-    }
-
-    /**
-     * Returns the JSON representation of the actual instance.
-     * @return {string}
-     */
-    toJSON = function(){
-        return this.getActualInstance();
-    }
-
-    /**
-     * Create an instance of ClusterFeatureValue from a JSON string.
-     * @param {string} json_string JSON string.
-     * @return {module:model/ClusterFeatureValue} An instance of ClusterFeatureValue.
-     */
-    static fromJSON = function(json_string){
-        return ClusterFeatureValue.constructFromObject(JSON.parse(json_string));
-    }
 }
 
 
-ClusterFeatureValue.OneOf = ["Boolean", "String"];
+
+
+
 
 export default ClusterFeatureValue;
 

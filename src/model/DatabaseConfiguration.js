@@ -59,30 +59,8 @@ class DatabaseConfiguration {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>DatabaseConfiguration</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DatabaseConfiguration</code>.
-     */
-    static validateJSON(data) {
-        if (data['version']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['version'])) {
-                throw new Error("Expected the field `version` to be an array in the JSON data but got " + data['version']);
-            }
-            // validate the optional field `version` (array)
-            for (const item of data['version']) {
-                DatabaseVersionMode.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {module:model/DatabaseTypeEnum} database_type

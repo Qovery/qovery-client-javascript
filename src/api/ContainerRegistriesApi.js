@@ -49,7 +49,7 @@ export default class ContainerRegistriesApi {
      * Create a container registry
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ContainerRegistryRequest} [containerRegistryRequest] 
+     * @param {module:model/ContainerRegistryRequest} opts.containerRegistryRequest 
      * @param {module:api/ContainerRegistriesApi~createContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerRegistryResponse}
      */
@@ -142,7 +142,7 @@ export default class ContainerRegistriesApi {
      * @param {String} organizationId Organization ID
      * @param {String} containerRegistryId Container Registry ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ContainerRegistryRequest} [containerRegistryRequest] 
+     * @param {module:model/ContainerRegistryRequest} opts.containerRegistryRequest 
      * @param {module:api/ContainerRegistriesApi~editContainerRegistryCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerRegistryResponse}
      */

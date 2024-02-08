@@ -52,7 +52,7 @@ export default class ApplicationSecretApi {
      * - Add a secret to the application. 
      * @param {String} applicationId Application ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/SecretRequest} [secretRequest] 
+     * @param {module:model/SecretRequest} opts.secretRequest 
      * @param {module:api/ApplicationSecretApi~createApplicationSecretCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -99,7 +99,7 @@ export default class ApplicationSecretApi {
      * @param {String} applicationId Application ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} [key] 
+     * @param {module:model/Key} opts.key 
      * @param {module:api/ApplicationSecretApi~createApplicationSecretAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -151,7 +151,7 @@ export default class ApplicationSecretApi {
      * @param {String} applicationId Application ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} [value] 
+     * @param {module:model/Value} opts.value 
      * @param {module:api/ApplicationSecretApi~createApplicationSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */

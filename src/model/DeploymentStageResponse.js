@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import DeploymentStageResponseAllOf from './DeploymentStageResponseAllOf';
 import DeploymentStageServiceResponse from './DeploymentStageServiceResponse';
 import ReferenceObject from './ReferenceObject';
 
@@ -26,12 +27,13 @@ class DeploymentStageResponse {
      * Constructs a new <code>DeploymentStageResponse</code>.
      * @alias module:model/DeploymentStageResponse
      * @implements module:model/Base
+     * @implements module:model/DeploymentStageResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
      */
     constructor(id, createdAt, environment) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);DeploymentStageResponseAllOf.initialize(this, environment);
         DeploymentStageResponse.initialize(this, id, createdAt, environment);
     }
 
@@ -57,6 +59,7 @@ class DeploymentStageResponse {
         if (data) {
             obj = obj || new DeploymentStageResponse();
             Base.constructFromObject(data, obj);
+            DeploymentStageResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -86,52 +89,8 @@ class DeploymentStageResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>DeploymentStageResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>DeploymentStageResponse</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of DeploymentStageResponse.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // validate the optional field `environment`
-        if (data['environment']) { // data not null
-          ReferenceObject.validateJSON(data['environment']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        if (data['services']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['services'])) {
-                throw new Error("Expected the field `services` to be an array in the JSON data but got " + data['services']);
-            }
-            // validate the optional field `services` (array)
-            for (const item of data['services']) {
-                DeploymentStageServiceResponse.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-DeploymentStageResponse.RequiredProperties = ["id", "created_at", "environment"];
 
 /**
  * @member {String} id
@@ -189,6 +148,29 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement DeploymentStageResponseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+DeploymentStageResponseAllOf.prototype['environment'] = undefined;
+/**
+ * name is case insensitive
+ * @member {String} name
+ */
+DeploymentStageResponseAllOf.prototype['name'] = undefined;
+/**
+ * @member {String} description
+ */
+DeploymentStageResponseAllOf.prototype['description'] = undefined;
+/**
+ * Position of the deployment stage within the environment
+ * @member {Number} deployment_order
+ */
+DeploymentStageResponseAllOf.prototype['deployment_order'] = undefined;
+/**
+ * @member {Array.<module:model/DeploymentStageServiceResponse>} services
+ */
+DeploymentStageResponseAllOf.prototype['services'] = undefined;
 
 
 

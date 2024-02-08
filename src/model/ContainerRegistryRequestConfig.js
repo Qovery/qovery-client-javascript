@@ -73,48 +73,8 @@ class ContainerRegistryRequestConfig {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ContainerRegistryRequestConfig</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ContainerRegistryRequestConfig</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['access_key_id'] && !(typeof data['access_key_id'] === 'string' || data['access_key_id'] instanceof String)) {
-            throw new Error("Expected the field `access_key_id` to be a primitive type in the JSON string but got " + data['access_key_id']);
-        }
-        // ensure the json data is a string
-        if (data['secret_access_key'] && !(typeof data['secret_access_key'] === 'string' || data['secret_access_key'] instanceof String)) {
-            throw new Error("Expected the field `secret_access_key` to be a primitive type in the JSON string but got " + data['secret_access_key']);
-        }
-        // ensure the json data is a string
-        if (data['region'] && !(typeof data['region'] === 'string' || data['region'] instanceof String)) {
-            throw new Error("Expected the field `region` to be a primitive type in the JSON string but got " + data['region']);
-        }
-        // ensure the json data is a string
-        if (data['scaleway_access_key'] && !(typeof data['scaleway_access_key'] === 'string' || data['scaleway_access_key'] instanceof String)) {
-            throw new Error("Expected the field `scaleway_access_key` to be a primitive type in the JSON string but got " + data['scaleway_access_key']);
-        }
-        // ensure the json data is a string
-        if (data['scaleway_secret_key'] && !(typeof data['scaleway_secret_key'] === 'string' || data['scaleway_secret_key'] instanceof String)) {
-            throw new Error("Expected the field `scaleway_secret_key` to be a primitive type in the JSON string but got " + data['scaleway_secret_key']);
-        }
-        // ensure the json data is a string
-        if (data['username'] && !(typeof data['username'] === 'string' || data['username'] instanceof String)) {
-            throw new Error("Expected the field `username` to be a primitive type in the JSON string but got " + data['username']);
-        }
-        // ensure the json data is a string
-        if (data['password'] && !(typeof data['password'] === 'string' || data['password'] instanceof String)) {
-            throw new Error("Expected the field `password` to be a primitive type in the JSON string but got " + data['password']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * Required if kind is `ECR` or `PUBLIC_ECR`

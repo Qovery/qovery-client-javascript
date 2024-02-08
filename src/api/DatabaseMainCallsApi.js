@@ -94,7 +94,7 @@ export default class DatabaseMainCallsApi {
      * To edit a database  you must have the admin permission
      * @param {String} databaseId Database ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DatabaseEditRequest} [databaseEditRequest] 
+     * @param {module:model/DatabaseEditRequest} opts.databaseEditRequest 
      * @param {module:api/DatabaseMainCallsApi~editDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Database}
      */
@@ -139,7 +139,7 @@ export default class DatabaseMainCallsApi {
      * Edit database  master credentials
      * @param {String} databaseId Database ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CredentialsRequest} [credentialsRequest] 
+     * @param {module:model/CredentialsRequest} opts.credentialsRequest 
      * @param {module:api/DatabaseMainCallsApi~editDatabaseCredentialsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Credentials}
      */

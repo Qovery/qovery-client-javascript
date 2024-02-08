@@ -48,7 +48,7 @@ export default class EnvironmentApi {
      * Start a deployment of the environment. Any of the services within the chosen environment based on the following rule: a service is deployed only if a new version is specified in the payload for that application/container or if there was a change in its configuration that needs to be applied (vCPU,RAM etc..)
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/DeployAllRequest} [deployAllRequest] 
+     * @param {module:model/DeployAllRequest} opts.deployAllRequest 
      * @param {module:api/EnvironmentApi~deployAllApplicationsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */

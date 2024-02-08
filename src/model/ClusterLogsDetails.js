@@ -62,32 +62,8 @@ class ClusterLogsDetails {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ClusterLogsDetails</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ClusterLogsDetails</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['provider_kind'] && !(typeof data['provider_kind'] === 'string' || data['provider_kind'] instanceof String)) {
-            throw new Error("Expected the field `provider_kind` to be a primitive type in the JSON string but got " + data['provider_kind']);
-        }
-        // ensure the json data is a string
-        if (data['region'] && !(typeof data['region'] === 'string' || data['region'] instanceof String)) {
-            throw new Error("Expected the field `region` to be a primitive type in the JSON string but got " + data['region']);
-        }
-        // validate the optional field `transmitter`
-        if (data['transmitter']) { // data not null
-          ClusterLogsErrorEventDetailsTransmitter.validateJSON(data['transmitter']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * cloud provider used

@@ -67,40 +67,8 @@ class EnvironmentLogsError {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentLogsError</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentLogsError</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['tag'] && !(typeof data['tag'] === 'string' || data['tag'] instanceof String)) {
-            throw new Error("Expected the field `tag` to be a primitive type in the JSON string but got " + data['tag']);
-        }
-        // ensure the json data is a string
-        if (data['user_log_message'] && !(typeof data['user_log_message'] === 'string' || data['user_log_message'] instanceof String)) {
-            throw new Error("Expected the field `user_log_message` to be a primitive type in the JSON string but got " + data['user_log_message']);
-        }
-        // ensure the json data is a string
-        if (data['link'] && !(typeof data['link'] === 'string' || data['link'] instanceof String)) {
-            throw new Error("Expected the field `link` to be a primitive type in the JSON string but got " + data['link']);
-        }
-        // ensure the json data is a string
-        if (data['hint_message'] && !(typeof data['hint_message'] === 'string' || data['hint_message'] instanceof String)) {
-            throw new Error("Expected the field `hint_message` to be a primitive type in the JSON string but got " + data['hint_message']);
-        }
-        // validate the optional field `underlying_error`
-        if (data['underlying_error']) { // data not null
-          EnvironmentLogsErrorUnderlyingError.validateJSON(data['underlying_error']);
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {String} tag

@@ -59,7 +59,7 @@ export default class ClustersApi {
      * Create a cluster
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ClusterRequest} [clusterRequest] 
+     * @param {module:model/ClusterRequest} opts.clusterRequest 
      * @param {module:api/ClustersApi~createClusterCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Cluster}
      */
@@ -105,7 +105,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ClusterDeleteMode} [deleteMode] 
+     * @param {module:model/ClusterDeleteMode} opts.deleteMode 
      * @param {module:api/ClustersApi~deleteClusterCallback} callback The callback function, accepting three arguments: error, data, response
      */
     deleteCluster(organizationId, clusterId, opts, callback) {
@@ -205,7 +205,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ClusterRequest} [clusterRequest] 
+     * @param {module:model/ClusterRequest} opts.clusterRequest 
      * @param {module:api/ClustersApi~editClusterCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Cluster}
      */
@@ -257,7 +257,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ClusterAdvancedSettings} [clusterAdvancedSettings] 
+     * @param {module:model/ClusterAdvancedSettings} opts.clusterAdvancedSettings 
      * @param {module:api/ClustersApi~editClusterAdvancedSettingsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterAdvancedSettings}
      */
@@ -309,7 +309,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ClusterRoutingTableRequest} [clusterRoutingTableRequest] 
+     * @param {module:model/ClusterRoutingTableRequest} opts.clusterRoutingTableRequest 
      * @param {module:api/ClustersApi~editRoutingTableCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterRoutingTable}
      */
@@ -869,7 +869,7 @@ export default class ClustersApi {
      * @param {String} organizationId Organization ID
      * @param {String} clusterId Cluster ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ClusterCloudProviderInfoRequest} [clusterCloudProviderInfoRequest] 
+     * @param {module:model/ClusterCloudProviderInfoRequest} opts.clusterCloudProviderInfoRequest 
      * @param {module:api/ClustersApi~specifyClusterCloudProviderInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ClusterCloudProviderInfo}
      */

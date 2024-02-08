@@ -52,7 +52,7 @@ export default class JobSecretApi {
      * - Add a secret to the job. 
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/SecretRequest} [secretRequest] 
+     * @param {module:model/SecretRequest} opts.secretRequest 
      * @param {module:api/JobSecretApi~createJobSecretCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -99,7 +99,7 @@ export default class JobSecretApi {
      * @param {String} jobId Job ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Key} [key] 
+     * @param {module:model/Key} opts.key 
      * @param {module:api/JobSecretApi~createJobSecretAliasCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */
@@ -151,7 +151,7 @@ export default class JobSecretApi {
      * @param {String} jobId Job ID
      * @param {String} secretId Secret ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/Value} [value] 
+     * @param {module:model/Value} opts.value 
      * @param {module:api/JobSecretApi~createJobSecretOverrideCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Secret}
      */

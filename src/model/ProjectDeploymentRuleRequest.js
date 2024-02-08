@@ -99,50 +99,8 @@ class ProjectDeploymentRuleRequest {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>ProjectDeploymentRuleRequest</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>ProjectDeploymentRuleRequest</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of ProjectDeploymentRuleRequest.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // ensure the json data is a string
-        if (data['cluster_id'] && !(typeof data['cluster_id'] === 'string' || data['cluster_id'] instanceof String)) {
-            throw new Error("Expected the field `cluster_id` to be a primitive type in the JSON string but got " + data['cluster_id']);
-        }
-        // ensure the json data is a string
-        if (data['timezone'] && !(typeof data['timezone'] === 'string' || data['timezone'] instanceof String)) {
-            throw new Error("Expected the field `timezone` to be a primitive type in the JSON string but got " + data['timezone']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['weekdays'])) {
-            throw new Error("Expected the field `weekdays` to be an array in the JSON data but got " + data['weekdays']);
-        }
-        // ensure the json data is a string
-        if (data['wildcard'] && !(typeof data['wildcard'] === 'string' || data['wildcard'] instanceof String)) {
-            throw new Error("Expected the field `wildcard` to be a primitive type in the JSON string but got " + data['wildcard']);
-        }
-
-        return true;
-    }
-
 
 }
-
-ProjectDeploymentRuleRequest.RequiredProperties = ["name", "mode", "cluster_id", "timezone", "start_time", "stop_time", "weekdays", "wildcard"];
 
 /**
  * name is case insensitive

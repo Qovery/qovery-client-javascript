@@ -14,6 +14,7 @@
 import ApiClient from '../ApiClient';
 import Base from './Base';
 import DatabaseAccessibilityEnum from './DatabaseAccessibilityEnum';
+import DatabaseAllOf from './DatabaseAllOf';
 import DatabaseModeEnum from './DatabaseModeEnum';
 import DatabaseRequest from './DatabaseRequest';
 import DatabaseTypeEnum from './DatabaseTypeEnum';
@@ -30,6 +31,7 @@ class Database {
      * @alias module:model/Database
      * @implements module:model/Base
      * @implements module:model/DatabaseRequest
+     * @implements module:model/DatabaseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param name {String} name is case insensitive
@@ -39,7 +41,7 @@ class Database {
      * @param environment {module:model/ReferenceObject} 
      */
     constructor(id, createdAt, name, type, version, mode, environment) { 
-        Base.initialize(this, id, createdAt);DatabaseRequest.initialize(this, name, type, version, mode);
+        Base.initialize(this, id, createdAt);DatabaseRequest.initialize(this, name, type, version, mode);DatabaseAllOf.initialize(this, environment);
         Database.initialize(this, id, createdAt, name, type, version, mode, environment);
     }
 
@@ -70,6 +72,7 @@ class Database {
             obj = obj || new Database();
             Base.constructFromObject(data, obj);
             DatabaseRequest.constructFromObject(data, obj);
+            DatabaseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -132,54 +135,8 @@ class Database {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>Database</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Database</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of Database.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // ensure the json data is a string
-        if (data['version'] && !(typeof data['version'] === 'string' || data['version'] instanceof String)) {
-            throw new Error("Expected the field `version` to be a primitive type in the JSON string but got " + data['version']);
-        }
-        // ensure the json data is a string
-        if (data['instance_type'] && !(typeof data['instance_type'] === 'string' || data['instance_type'] instanceof String)) {
-            throw new Error("Expected the field `instance_type` to be a primitive type in the JSON string but got " + data['instance_type']);
-        }
-        // validate the optional field `environment`
-        if (data['environment']) { // data not null
-          ReferenceObject.validateJSON(data['environment']);
-        }
-        // ensure the json data is a string
-        if (data['host'] && !(typeof data['host'] === 'string' || data['host'] instanceof String)) {
-            throw new Error("Expected the field `host` to be a primitive type in the JSON string but got " + data['host']);
-        }
-
-        return true;
-    }
-
 
 }
-
-Database.RequiredProperties = ["id", "created_at", "name", "type", "version", "mode", "environment"];
 
 /**
  * @member {String} id
@@ -350,6 +307,39 @@ DatabaseRequest.prototype['memory'] = undefined;
  * @default 10
  */
 DatabaseRequest.prototype['storage'] = 10;
+// Implement DatabaseAllOf interface:
+/**
+ * @member {module:model/ReferenceObject} environment
+ */
+DatabaseAllOf.prototype['environment'] = undefined;
+/**
+ * @member {String} host
+ */
+DatabaseAllOf.prototype['host'] = undefined;
+/**
+ * @member {Number} port
+ */
+DatabaseAllOf.prototype['port'] = undefined;
+/**
+ * Maximum cpu that can be allocated to the database based on organization cluster configuration. unit is millicores (m). 1000m = 1 cpu
+ * @member {Number} maximum_cpu
+ */
+DatabaseAllOf.prototype['maximum_cpu'] = undefined;
+/**
+ * Maximum memory that can be allocated to the database based on organization cluster configuration. unit is MB. 1024 MB = 1GB
+ * @member {Number} maximum_memory
+ */
+DatabaseAllOf.prototype['maximum_memory'] = undefined;
+/**
+ * indicates if the database disk is encrypted or not
+ * @member {Boolean} disk_encrypted
+ */
+DatabaseAllOf.prototype['disk_encrypted'] = undefined;
+/**
+ * Database instance type to be used for this database. The list of values can be retrieved via the endpoint /{CloudProvider}/managedDatabase/instanceType/{region}/{dbType}. This field is null for container DB.
+ * @member {String} instance_type
+ */
+DatabaseAllOf.prototype['instance_type'] = undefined;
 
 
 

@@ -50,7 +50,7 @@ export default class OrganizationWebhookApi {
      * Create an organization webhook.
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationWebhookCreateRequest} [organizationWebhookCreateRequest] 
+     * @param {module:model/OrganizationWebhookCreateRequest} opts.organizationWebhookCreateRequest 
      * @param {module:api/OrganizationWebhookApi~createOrganizationWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationWebhookCreateResponse}
      */
@@ -145,7 +145,7 @@ export default class OrganizationWebhookApi {
      * @param {String} organizationId Organization ID
      * @param {String} webhookId Webhook ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationWebhookCreateRequest} [organizationWebhookCreateRequest] 
+     * @param {module:model/OrganizationWebhookCreateRequest} opts.organizationWebhookCreateRequest 
      * @param {module:api/OrganizationWebhookApi~editOrganizationWebhookCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationWebhookCreateResponse}
      */

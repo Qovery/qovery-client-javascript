@@ -55,7 +55,7 @@ export default class OrganizationMainCallsApi {
      * Create a new git token to be used as a git provider by a service
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/GitTokenRequest} [gitTokenRequest] 
+     * @param {module:model/GitTokenRequest} opts.gitTokenRequest 
      * @param {module:api/OrganizationMainCallsApi~createGitTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitTokenResponse}
      */
@@ -99,7 +99,7 @@ export default class OrganizationMainCallsApi {
     /**
      * Create an organization
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationRequest} [organizationRequest] 
+     * @param {module:model/OrganizationRequest} opts.organizationRequest 
      * @param {module:api/OrganizationMainCallsApi~createOrganizationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Organization}
      */
@@ -229,7 +229,7 @@ export default class OrganizationMainCallsApi {
      * @param {String} organizationId Organization ID
      * @param {String} gitTokenId Git Token ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/GitTokenRequest} [gitTokenRequest] 
+     * @param {module:model/GitTokenRequest} opts.gitTokenRequest 
      * @param {module:api/OrganizationMainCallsApi~editGitTokenCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GitTokenResponse}
      */
@@ -280,7 +280,7 @@ export default class OrganizationMainCallsApi {
      * To edit an organization you must have the admin permission
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationEditRequest} [organizationEditRequest] 
+     * @param {module:model/OrganizationEditRequest} opts.organizationEditRequest 
      * @param {module:api/OrganizationMainCallsApi~editOrganizationCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Organization}
      */

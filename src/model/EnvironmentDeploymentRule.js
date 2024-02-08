@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import Base from './Base';
+import EnvironmentDeploymentRuleAllOf from './EnvironmentDeploymentRuleAllOf';
 import WeekdayEnum from './WeekdayEnum';
 
 /**
@@ -25,6 +26,7 @@ class EnvironmentDeploymentRule {
      * Constructs a new <code>EnvironmentDeploymentRule</code>.
      * @alias module:model/EnvironmentDeploymentRule
      * @implements module:model/Base
+     * @implements module:model/EnvironmentDeploymentRuleAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param timezone {String} 
@@ -33,7 +35,7 @@ class EnvironmentDeploymentRule {
      * @param weekdays {Array.<module:model/WeekdayEnum>} 
      */
     constructor(id, createdAt, timezone, startTime, stopTime, weekdays) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);EnvironmentDeploymentRuleAllOf.initialize(this, timezone, startTime, stopTime, weekdays);
         EnvironmentDeploymentRule.initialize(this, id, createdAt, timezone, startTime, stopTime, weekdays);
     }
 
@@ -62,6 +64,7 @@ class EnvironmentDeploymentRule {
         if (data) {
             obj = obj || new EnvironmentDeploymentRule();
             Base.constructFromObject(data, obj);
+            EnvironmentDeploymentRuleAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -97,38 +100,8 @@ class EnvironmentDeploymentRule {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentDeploymentRule</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentDeploymentRule</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of EnvironmentDeploymentRule.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['timezone'] && !(typeof data['timezone'] === 'string' || data['timezone'] instanceof String)) {
-            throw new Error("Expected the field `timezone` to be a primitive type in the JSON string but got " + data['timezone']);
-        }
-        // ensure the json data is an array
-        if (!Array.isArray(data['weekdays'])) {
-            throw new Error("Expected the field `weekdays` to be an array in the JSON data but got " + data['weekdays']);
-        }
-
-        return true;
-    }
-
 
 }
-
-EnvironmentDeploymentRule.RequiredProperties = ["id", "created_at", "timezone", "start_time", "stop_time", "weekdays"];
 
 /**
  * @member {String} id
@@ -197,6 +170,38 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement EnvironmentDeploymentRuleAllOf interface:
+/**
+ * @member {Boolean} on_demand_preview
+ * @default false
+ */
+EnvironmentDeploymentRuleAllOf.prototype['on_demand_preview'] = false;
+/**
+ * @member {Boolean} auto_stop
+ * @default false
+ */
+EnvironmentDeploymentRuleAllOf.prototype['auto_stop'] = false;
+/**
+ * @member {Boolean} auto_preview
+ * @default false
+ */
+EnvironmentDeploymentRuleAllOf.prototype['auto_preview'] = false;
+/**
+ * @member {String} timezone
+ */
+EnvironmentDeploymentRuleAllOf.prototype['timezone'] = undefined;
+/**
+ * @member {Date} start_time
+ */
+EnvironmentDeploymentRuleAllOf.prototype['start_time'] = undefined;
+/**
+ * @member {Date} stop_time
+ */
+EnvironmentDeploymentRuleAllOf.prototype['stop_time'] = undefined;
+/**
+ * @member {Array.<module:model/WeekdayEnum>} weekdays
+ */
+EnvironmentDeploymentRuleAllOf.prototype['weekdays'] = undefined;
 
 
 

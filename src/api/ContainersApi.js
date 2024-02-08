@@ -55,7 +55,7 @@ export default class ContainersApi {
      * Triggers a new container deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the container should have the same image name and a different tag 
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationContainerAutoDeployRequest} [organizationContainerAutoDeployRequest] 
+     * @param {module:model/OrganizationContainerAutoDeployRequest} opts.organizationContainerAutoDeployRequest 
      * @param {module:api/ContainersApi~autoDeployContainerEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
@@ -101,7 +101,7 @@ export default class ContainersApi {
      * This will create a new container with the same configuration on the targeted environment Id.
      * @param {String} containerId Container ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneServiceRequest} [cloneServiceRequest] 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/ContainersApi~cloneContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponse}
      */
@@ -146,7 +146,7 @@ export default class ContainersApi {
      * Create a container
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/ContainerRequest} [containerRequest] 
+     * @param {module:model/ContainerRequest} opts.containerRequest 
      * @param {module:api/ContainersApi~createContainerCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContainerResponse}
      */
@@ -363,7 +363,7 @@ export default class ContainersApi {
      * Triggers a new container preview for each environment matching the following conditions - preview environment feature should be enabled for the container - the container should have the same image name and a different tag 
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationContainerPreviewRequest} [organizationContainerPreviewRequest] 
+     * @param {module:model/OrganizationContainerPreviewRequest} opts.organizationContainerPreviewRequest 
      * @param {module:api/ContainersApi~previewContainerEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */

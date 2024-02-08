@@ -48,7 +48,7 @@ export default class BackupsApi {
      * Add a backup to the Database 
      * @param {String} databaseId Database ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/BackupRequest} [backupRequest] 
+     * @param {module:model/BackupRequest} opts.backupRequest 
      * @param {module:api/BackupsApi~addBackupDatabaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Backup}
      */
@@ -94,7 +94,7 @@ export default class BackupsApi {
      * By default it returns the 20 last results. The response is paginated. In order to request the next page, you can use the startId query parameter
      * @param {String} databaseId Database ID
      * @param {Object} opts Optional parameters
-     * @param {String} [startId] Starting point after which to return results
+     * @param {String} opts.startId Starting point after which to return results
      * @param {module:api/BackupsApi~listDatabaseBackupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/BackupPaginatedResponseList}
      */

@@ -57,36 +57,8 @@ class HelmResponseAllOfValuesOverrideFileRaw {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>HelmResponseAllOfValuesOverrideFileRaw</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmResponseAllOfValuesOverrideFileRaw</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of HelmResponseAllOfValuesOverrideFileRaw.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['values']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['values'])) {
-                throw new Error("Expected the field `values` to be an array in the JSON data but got " + data['values']);
-            }
-            // validate the optional field `values` (array)
-            for (const item of data['values']) {
-                HelmResponseAllOfValuesOverrideFileRawValues.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-HelmResponseAllOfValuesOverrideFileRaw.RequiredProperties = ["values"];
 
 /**
  * @member {Array.<module:model/HelmResponseAllOfValuesOverrideFileRawValues>} values

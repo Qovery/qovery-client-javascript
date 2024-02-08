@@ -59,34 +59,8 @@ class EnvironmentStatusesWithStages {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentStatusesWithStages</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentStatusesWithStages</code>.
-     */
-    static validateJSON(data) {
-        // validate the optional field `environment`
-        if (data['environment']) { // data not null
-          EnvironmentStatus.validateJSON(data['environment']);
-        }
-        if (data['stages']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['stages'])) {
-                throw new Error("Expected the field `stages` to be an array in the JSON data but got " + data['stages']);
-            }
-            // validate the optional field `stages` (array)
-            for (const item of data['stages']) {
-                DeploymentStageWithServicesStatuses.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {module:model/EnvironmentStatus} environment

@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import EnvironmentLog from './EnvironmentLog';
+import EnvironmentLogPaginatedResponseListAllOf from './EnvironmentLogPaginatedResponseListAllOf';
 import PaginationData from './PaginationData';
 
 /**
@@ -25,11 +26,12 @@ class EnvironmentLogPaginatedResponseList {
      * Constructs a new <code>EnvironmentLogPaginatedResponseList</code>.
      * @alias module:model/EnvironmentLogPaginatedResponseList
      * @implements module:model/PaginationData
+     * @implements module:model/EnvironmentLogPaginatedResponseListAllOf
      * @param page {Number} 
      * @param pageSize {Number} 
      */
     constructor(page, pageSize) { 
-        PaginationData.initialize(this, page, pageSize);
+        PaginationData.initialize(this, page, pageSize);EnvironmentLogPaginatedResponseListAllOf.initialize(this);
         EnvironmentLogPaginatedResponseList.initialize(this, page, pageSize);
     }
 
@@ -54,6 +56,7 @@ class EnvironmentLogPaginatedResponseList {
         if (data) {
             obj = obj || new EnvironmentLogPaginatedResponseList();
             PaginationData.constructFromObject(data, obj);
+            EnvironmentLogPaginatedResponseListAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -68,36 +71,8 @@ class EnvironmentLogPaginatedResponseList {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>EnvironmentLogPaginatedResponseList</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>EnvironmentLogPaginatedResponseList</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of EnvironmentLogPaginatedResponseList.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        if (data['results']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['results'])) {
-                throw new Error("Expected the field `results` to be an array in the JSON data but got " + data['results']);
-            }
-            // validate the optional field `results` (array)
-            for (const item of data['results']) {
-                EnvironmentLog.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-EnvironmentLogPaginatedResponseList.RequiredProperties = ["page", "page_size"];
 
 /**
  * @member {Number} page
@@ -124,6 +99,11 @@ PaginationData.prototype['page'] = undefined;
  * @member {Number} page_size
  */
 PaginationData.prototype['page_size'] = undefined;
+// Implement EnvironmentLogPaginatedResponseListAllOf interface:
+/**
+ * @member {Array.<module:model/EnvironmentLog>} results
+ */
+EnvironmentLogPaginatedResponseListAllOf.prototype['results'] = undefined;
 
 
 

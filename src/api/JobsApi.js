@@ -54,7 +54,7 @@ export default class JobsApi {
      * Triggers a new job deploy in each environment matching the following conditions - environment should have the auto-deploy enabled - the job should have the same image name and a different tag 
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrganizationJobAutoDeployRequest} [organizationJobAutoDeployRequest] 
+     * @param {module:model/OrganizationJobAutoDeployRequest} opts.organizationJobAutoDeployRequest 
      * @param {module:api/JobsApi~autoDeployJobEnvironmentsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
@@ -100,7 +100,7 @@ export default class JobsApi {
      * This will create a new job with the same configuration on the targeted environment Id.
      * @param {String} jobId Job ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneServiceRequest} [cloneServiceRequest] 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/JobsApi~cloneJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobResponse}
      */
@@ -145,7 +145,7 @@ export default class JobsApi {
      * Create a job
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/JobRequest} [jobRequest] 
+     * @param {module:model/JobRequest} opts.jobRequest 
      * @param {module:api/JobsApi~createJobCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobResponse}
      */
@@ -270,7 +270,7 @@ export default class JobsApi {
      * List jobs
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {Boolean} [toUpdate = false)] return (or not) results that must be updated
+     * @param {Boolean} opts.toUpdate return (or not) results that must be updated (default to false)
      * @param {module:api/JobsApi~listJobsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/JobResponseList}
      */

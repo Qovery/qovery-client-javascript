@@ -52,14 +52,14 @@ export default class OrganizationEventApi {
      * Get available event targets to filter events
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {String} [fromTimestamp] Display targets available since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` The format is a timestamp with nano precision 
-     * @param {String} [toTimestamp] Display targets triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` The format is a timestamp with nano precision 
-     * @param {module:model/OrganizationEventType} [eventType] 
-     * @param {module:model/OrganizationEventTargetType} [targetType] 
-     * @param {String} [triggeredBy] Information about the owner of the event (user name / apitoken / automatic action)
-     * @param {module:model/OrganizationEventOrigin} [origin] 
-     * @param {String} [projectId] Mandatory when requesting an environment or a service
-     * @param {String} [environmentId] Mandatory when requesting a service
+     * @param {String} opts.fromTimestamp Display targets available since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` The format is a timestamp with nano precision 
+     * @param {String} opts.toTimestamp Display targets triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` The format is a timestamp with nano precision 
+     * @param {module:model/OrganizationEventType} opts.eventType 
+     * @param {module:model/OrganizationEventTargetType} opts.targetType 
+     * @param {String} opts.triggeredBy Information about the owner of the event (user name / apitoken / automatic action)
+     * @param {module:model/OrganizationEventOrigin} opts.origin 
+     * @param {String} opts.projectId Mandatory when requesting an environment or a service
+     * @param {String} opts.environmentId Mandatory when requesting a service
      * @param {module:api/OrganizationEventApi~getOrganizationEventTargetsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationEventTargetResponseList}
      */
@@ -113,17 +113,17 @@ export default class OrganizationEventApi {
      * Get all events inside the organization
      * @param {String} organizationId Organization ID
      * @param {Object} opts Optional parameters
-     * @param {Number} [pageSize = 10)] The number of events to display in the current page
-     * @param {String} [fromTimestamp] Display events triggered since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` The format is a timestamp with nano precision 
-     * @param {String} [toTimestamp] Display events triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` The format is a timestamp with nano precision 
-     * @param {String} [continueToken] Token used to fetch the next page results The format is a timestamp with nano precision 
-     * @param {String} [stepBackToken] Token used to fetch the previous page results The format is a timestamp with nano precision 
-     * @param {module:model/OrganizationEventType} [eventType] 
-     * @param {module:model/OrganizationEventTargetType} [targetType] 
-     * @param {String} [targetId] The target resource id to search.   Must be specified with the corresponding `target_type` 
-     * @param {module:model/OrganizationEventSubTargetType} [subTargetType] 
-     * @param {String} [triggeredBy] Information about the owner of the event (user name / apitoken / automatic action)
-     * @param {module:model/OrganizationEventOrigin} [origin] 
+     * @param {Number} opts.pageSize The number of events to display in the current page (default to 10)
+     * @param {String} opts.fromTimestamp Display events triggered since this timestamp.   A range of date can be specified by using `from-timestamp` with `to-timestamp` The format is a timestamp with nano precision 
+     * @param {String} opts.toTimestamp Display events triggered before this timestamp.   A range of date can be specified by using `to-timestamp` with `from-timestamp` The format is a timestamp with nano precision 
+     * @param {String} opts.continueToken Token used to fetch the next page results The format is a timestamp with nano precision 
+     * @param {String} opts.stepBackToken Token used to fetch the previous page results The format is a timestamp with nano precision 
+     * @param {module:model/OrganizationEventType} opts.eventType 
+     * @param {module:model/OrganizationEventTargetType} opts.targetType 
+     * @param {String} opts.targetId The target resource id to search.   Must be specified with the corresponding `target_type` 
+     * @param {module:model/OrganizationEventSubTargetType} opts.subTargetType 
+     * @param {String} opts.triggeredBy Information about the owner of the event (user name / apitoken / automatic action)
+     * @param {module:model/OrganizationEventOrigin} opts.origin 
      * @param {module:api/OrganizationEventApi~getOrganizationEventsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrganizationEventResponseList}
      */

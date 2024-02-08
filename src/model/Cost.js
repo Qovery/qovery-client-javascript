@@ -66,30 +66,8 @@ class Cost {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>Cost</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Cost</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of Cost.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['currency_code'] && !(typeof data['currency_code'] === 'string' || data['currency_code'] instanceof String)) {
-            throw new Error("Expected the field `currency_code` to be a primitive type in the JSON string but got " + data['currency_code']);
-        }
-
-        return true;
-    }
-
 
 }
-
-Cost.RequiredProperties = ["total_in_cents", "total", "currency_code"];
 
 /**
  * @member {Number} total_in_cents

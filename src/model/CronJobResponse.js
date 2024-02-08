@@ -12,8 +12,10 @@
  */
 
 import ApiClient from '../ApiClient';
+import ApplicationGitRepository from './ApplicationGitRepository';
 import BaseJobResponse from './BaseJobResponse';
-import BaseJobResponseAllOfSource from './BaseJobResponseAllOfSource';
+import ContainerSource from './ContainerSource';
+import CronJobResponseAllOf from './CronJobResponseAllOf';
 import CronJobResponseAllOfSchedule from './CronJobResponseAllOfSchedule';
 import Healthcheck from './Healthcheck';
 import ReferenceObject from './ReferenceObject';
@@ -28,6 +30,7 @@ class CronJobResponse {
      * Constructs a new <code>CronJobResponse</code>.
      * @alias module:model/CronJobResponse
      * @implements module:model/BaseJobResponse
+     * @implements module:model/CronJobResponseAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param environment {module:model/ReferenceObject} 
@@ -37,13 +40,13 @@ class CronJobResponse {
      * @param cpu {Number} unit is millicores (m). 1000m = 1 cpu
      * @param memory {Number} unit is MB. 1024 MB = 1GB
      * @param autoPreview {Boolean} Indicates if the 'environment preview option' is enabled for this container.   If enabled, a preview environment will be automatically cloned when `/preview` endpoint is called.   If not specified, it takes the value of the `auto_preview` property from the associated environment. 
-     * @param source {module:model/BaseJobResponseAllOfSource} 
+     * @param source {module:model/OneOfobjectobject} 
      * @param healthchecks {module:model/Healthcheck} 
      * @param jobType {module:model/CronJobResponse.JobTypeEnum} 
      * @param schedule {module:model/CronJobResponseAllOfSchedule} 
      */
     constructor(id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule) { 
-        BaseJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);
+        BaseJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks);CronJobResponseAllOf.initialize(this, jobType, schedule);
         CronJobResponse.initialize(this, id, createdAt, environment, maximumCpu, maximumMemory, name, cpu, memory, autoPreview, source, healthchecks, jobType, schedule);
     }
 
@@ -79,6 +82,7 @@ class CronJobResponse {
         if (data) {
             obj = obj || new CronJobResponse();
             BaseJobResponse.constructFromObject(data, obj);
+            CronJobResponseAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -123,7 +127,7 @@ class CronJobResponse {
                 obj['port'] = ApiClient.convertToType(data['port'], 'Number');
             }
             if (data.hasOwnProperty('source')) {
-                obj['source'] = BaseJobResponseAllOfSource.constructFromObject(data['source']);
+                obj['source'] = ApiClient.convertToType(data['source'], OneOfobjectobject);
             }
             if (data.hasOwnProperty('healthchecks')) {
                 obj['healthchecks'] = Healthcheck.constructFromObject(data['healthchecks']);
@@ -141,58 +145,8 @@ class CronJobResponse {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>CronJobResponse</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>CronJobResponse</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of CronJobResponse.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // validate the optional field `environment`
-        if (data['environment']) { // data not null
-          ReferenceObject.validateJSON(data['environment']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['description'] && !(typeof data['description'] === 'string' || data['description'] instanceof String)) {
-            throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
-        }
-        // validate the optional field `source`
-        if (data['source']) { // data not null
-          BaseJobResponseAllOfSource.validateJSON(data['source']);
-        }
-        // validate the optional field `healthchecks`
-        if (data['healthchecks']) { // data not null
-          Healthcheck.validateJSON(data['healthchecks']);
-        }
-        // ensure the json data is a string
-        if (data['job_type'] && !(typeof data['job_type'] === 'string' || data['job_type'] instanceof String)) {
-            throw new Error("Expected the field `job_type` to be a primitive type in the JSON string but got " + data['job_type']);
-        }
-        // validate the optional field `schedule`
-        if (data['schedule']) { // data not null
-          CronJobResponseAllOfSchedule.validateJSON(data['schedule']);
-        }
-
-        return true;
-    }
-
 
 }
-
-CronJobResponse.RequiredProperties = ["id", "created_at", "environment", "maximum_cpu", "maximum_memory", "name", "cpu", "memory", "auto_preview", "source", "healthchecks", "job_type", "schedule"];
 
 /**
  * @member {String} id
@@ -274,7 +228,7 @@ CronJobResponse.prototype['auto_preview'] = undefined;
 CronJobResponse.prototype['port'] = undefined;
 
 /**
- * @member {module:model/BaseJobResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 CronJobResponse.prototype['source'] = undefined;
 
@@ -367,7 +321,7 @@ BaseJobResponse.prototype['auto_preview'] = undefined;
  */
 BaseJobResponse.prototype['port'] = undefined;
 /**
- * @member {module:model/BaseJobResponseAllOfSource} source
+ * @member {module:model/OneOfobjectobject} source
  */
 BaseJobResponse.prototype['source'] = undefined;
 /**
@@ -379,6 +333,15 @@ BaseJobResponse.prototype['healthchecks'] = undefined;
  * @member {Boolean} auto_deploy
  */
 BaseJobResponse.prototype['auto_deploy'] = undefined;
+// Implement CronJobResponseAllOf interface:
+/**
+ * @member {module:model/CronJobResponseAllOf.JobTypeEnum} job_type
+ */
+CronJobResponseAllOf.prototype['job_type'] = undefined;
+/**
+ * @member {module:model/CronJobResponseAllOfSchedule} schedule
+ */
+CronJobResponseAllOf.prototype['schedule'] = undefined;
 
 
 

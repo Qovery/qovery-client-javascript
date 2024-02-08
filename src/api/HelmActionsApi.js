@@ -49,8 +49,8 @@ export default class HelmActionsApi {
      * You must provide a git commit id or an image tag depending on the source location of your code (git vs image repository).
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmForceEvent} [forceEvent] When filled, it indicates the target event to be deployed.   If the concerned helm hasn't the target event provided, the helm won't be deployed. 
-     * @param {module:model/HelmDeployRequest} [helmDeployRequest] 
+     * @param {module:model/HelmForceEvent} opts.forceEvent When filled, it indicates the target event to be deployed.   If the concerned helm hasn't the target event provided, the helm won't be deployed. 
+     * @param {module:model/HelmDeployRequest} opts.helmDeployRequest 
      * @param {module:api/HelmActionsApi~deployHelmCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */
@@ -97,7 +97,7 @@ export default class HelmActionsApi {
      * **Deprecated** - Please use the \"Redeploy helm\" endpoint now
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmForceEvent} [forceEvent] When filled, it indicates the target event to be deployed.   If the concerned helm hasn't the target event provided, the helm won't be deployed. 
+     * @param {module:model/HelmForceEvent} opts.forceEvent When filled, it indicates the target event to be deployed.   If the concerned helm hasn't the target event provided, the helm won't be deployed. 
      * @param {module:api/HelmActionsApi~restartHelmCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Status}
      */

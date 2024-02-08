@@ -84,42 +84,8 @@ class HelmResponseAllOfPorts {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>HelmResponseAllOfPorts</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelmResponseAllOfPorts</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of HelmResponseAllOfPorts.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['name'] && !(typeof data['name'] === 'string' || data['name'] instanceof String)) {
-            throw new Error("Expected the field `name` to be a primitive type in the JSON string but got " + data['name']);
-        }
-        // ensure the json data is a string
-        if (data['service_name'] && !(typeof data['service_name'] === 'string' || data['service_name'] instanceof String)) {
-            throw new Error("Expected the field `service_name` to be a primitive type in the JSON string but got " + data['service_name']);
-        }
-        // ensure the json data is a string
-        if (data['namespace'] && !(typeof data['namespace'] === 'string' || data['namespace'] instanceof String)) {
-            throw new Error("Expected the field `namespace` to be a primitive type in the JSON string but got " + data['namespace']);
-        }
-
-        return true;
-    }
-
 
 }
-
-HelmResponseAllOfPorts.RequiredProperties = ["id", "internal_port", "service_name", "protocol"];
 
 /**
  * @member {String} id

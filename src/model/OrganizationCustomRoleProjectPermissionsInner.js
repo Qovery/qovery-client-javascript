@@ -64,38 +64,8 @@ class OrganizationCustomRoleProjectPermissionsInner {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>OrganizationCustomRoleProjectPermissionsInner</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>OrganizationCustomRoleProjectPermissionsInner</code>.
-     */
-    static validateJSON(data) {
-        // ensure the json data is a string
-        if (data['project_id'] && !(typeof data['project_id'] === 'string' || data['project_id'] instanceof String)) {
-            throw new Error("Expected the field `project_id` to be a primitive type in the JSON string but got " + data['project_id']);
-        }
-        // ensure the json data is a string
-        if (data['project_name'] && !(typeof data['project_name'] === 'string' || data['project_name'] instanceof String)) {
-            throw new Error("Expected the field `project_name` to be a primitive type in the JSON string but got " + data['project_name']);
-        }
-        if (data['permissions']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['permissions'])) {
-                throw new Error("Expected the field `permissions` to be an array in the JSON data but got " + data['permissions']);
-            }
-            // validate the optional field `permissions` (array)
-            for (const item of data['permissions']) {
-                OrganizationCustomRoleUpdateRequestProjectPermissionsInnerPermissionsInner.validateJSON(item);
-            };
-        }
-
-        return true;
-    }
-
 
 }
-
-
 
 /**
  * @member {String} project_id

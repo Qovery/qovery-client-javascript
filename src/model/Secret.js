@@ -17,6 +17,7 @@ import APIVariableTypeEnum from './APIVariableTypeEnum';
 import Base from './Base';
 import LinkedServiceTypeEnum from './LinkedServiceTypeEnum';
 import SecretAlias from './SecretAlias';
+import SecretAllOf from './SecretAllOf';
 import SecretOverride from './SecretOverride';
 
 /**
@@ -29,13 +30,14 @@ class Secret {
      * Constructs a new <code>Secret</code>.
      * @alias module:model/Secret
      * @implements module:model/Base
+     * @implements module:model/SecretAllOf
      * @param id {String} 
      * @param createdAt {Date} 
      * @param key {String} key is case sensitive
      * @param scope {module:model/APIVariableScopeEnum} 
      */
     constructor(id, createdAt, key, scope) { 
-        Base.initialize(this, id, createdAt);
+        Base.initialize(this, id, createdAt);SecretAllOf.initialize(this, key, scope);
         Secret.initialize(this, id, createdAt, key, scope);
     }
 
@@ -62,6 +64,7 @@ class Secret {
         if (data) {
             obj = obj || new Secret();
             Base.constructFromObject(data, obj);
+            SecretAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
@@ -103,54 +106,8 @@ class Secret {
         return obj;
     }
 
-    /**
-     * Validates the JSON data with respect to <code>Secret</code>.
-     * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @return {boolean} to indicate whether the JSON data is valid with respect to <code>Secret</code>.
-     */
-    static validateJSON(data) {
-        // check to make sure all required properties are present in the JSON string
-        for (const property of Secret.RequiredProperties) {
-            if (!data[property]) {
-                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
-            }
-        }
-        // ensure the json data is a string
-        if (data['id'] && !(typeof data['id'] === 'string' || data['id'] instanceof String)) {
-            throw new Error("Expected the field `id` to be a primitive type in the JSON string but got " + data['id']);
-        }
-        // ensure the json data is a string
-        if (data['key'] && !(typeof data['key'] === 'string' || data['key'] instanceof String)) {
-            throw new Error("Expected the field `key` to be a primitive type in the JSON string but got " + data['key']);
-        }
-        // validate the optional field `overridden_secret`
-        if (data['overridden_secret']) { // data not null
-          SecretOverride.validateJSON(data['overridden_secret']);
-        }
-        // validate the optional field `aliased_secret`
-        if (data['aliased_secret']) { // data not null
-          SecretAlias.validateJSON(data['aliased_secret']);
-        }
-        // ensure the json data is a string
-        if (data['service_id'] && !(typeof data['service_id'] === 'string' || data['service_id'] instanceof String)) {
-            throw new Error("Expected the field `service_id` to be a primitive type in the JSON string but got " + data['service_id']);
-        }
-        // ensure the json data is a string
-        if (data['service_name'] && !(typeof data['service_name'] === 'string' || data['service_name'] instanceof String)) {
-            throw new Error("Expected the field `service_name` to be a primitive type in the JSON string but got " + data['service_name']);
-        }
-        // ensure the json data is a string
-        if (data['owned_by'] && !(typeof data['owned_by'] === 'string' || data['owned_by'] instanceof String)) {
-            throw new Error("Expected the field `owned_by` to be a primitive type in the JSON string but got " + data['owned_by']);
-        }
-
-        return true;
-    }
-
 
 }
-
-Secret.RequiredProperties = ["id", "created_at", "key", "scope"];
 
 /**
  * @member {String} id
@@ -228,6 +185,45 @@ Base.prototype['created_at'] = undefined;
  * @member {Date} updated_at
  */
 Base.prototype['updated_at'] = undefined;
+// Implement SecretAllOf interface:
+/**
+ * key is case sensitive
+ * @member {String} key
+ */
+SecretAllOf.prototype['key'] = undefined;
+/**
+ * @member {module:model/SecretOverride} overridden_secret
+ */
+SecretAllOf.prototype['overridden_secret'] = undefined;
+/**
+ * @member {module:model/SecretAlias} aliased_secret
+ */
+SecretAllOf.prototype['aliased_secret'] = undefined;
+/**
+ * @member {module:model/APIVariableScopeEnum} scope
+ */
+SecretAllOf.prototype['scope'] = undefined;
+/**
+ * @member {module:model/APIVariableTypeEnum} variable_type
+ */
+SecretAllOf.prototype['variable_type'] = undefined;
+/**
+ * @member {String} service_id
+ */
+SecretAllOf.prototype['service_id'] = undefined;
+/**
+ * @member {String} service_name
+ */
+SecretAllOf.prototype['service_name'] = undefined;
+/**
+ * @member {module:model/LinkedServiceTypeEnum} service_type
+ */
+SecretAllOf.prototype['service_type'] = undefined;
+/**
+ * Entity that created/own the variable (i.e: Qovery, Doppler)
+ * @member {String} owned_by
+ */
+SecretAllOf.prototype['owned_by'] = undefined;
 
 
 

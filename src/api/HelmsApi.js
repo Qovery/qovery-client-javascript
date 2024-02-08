@@ -53,7 +53,7 @@ export default class HelmsApi {
      * This will create a new helm with the same configuration on the targeted environment Id.
      * @param {String} helmId Helm ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/CloneServiceRequest} [cloneServiceRequest] 
+     * @param {module:model/CloneServiceRequest} opts.cloneServiceRequest 
      * @param {module:api/HelmsApi~cloneHelmCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmResponse}
      */
@@ -98,7 +98,7 @@ export default class HelmsApi {
      * Create a helm
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmRequest} [helmRequest] 
+     * @param {module:model/HelmRequest} opts.helmRequest 
      * @param {module:api/HelmsApi~createHelmCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelmResponse}
      */
@@ -143,7 +143,7 @@ export default class HelmsApi {
      * Get helm default values
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelmDefaultValuesRequest} [helmDefaultValuesRequest] 
+     * @param {module:model/HelmDefaultValuesRequest} opts.helmDefaultValuesRequest 
      * @param {module:api/HelmsApi~createHelmDefaultValuesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */

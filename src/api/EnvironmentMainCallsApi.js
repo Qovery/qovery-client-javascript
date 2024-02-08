@@ -93,7 +93,7 @@ export default class EnvironmentMainCallsApi {
      * To edit an environment you must have the admin permission
      * @param {String} environmentId Environment ID
      * @param {Object} opts Optional parameters
-     * @param {module:model/EnvironmentEditRequest} [environmentEditRequest] 
+     * @param {module:model/EnvironmentEditRequest} opts.environmentEditRequest 
      * @param {module:api/EnvironmentMainCallsApi~editEnvironmentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Environment}
      */

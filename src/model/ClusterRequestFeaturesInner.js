@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterFeatureValue from './ClusterFeatureValue';
+import ClusterRequestFeaturesInnerValue from './ClusterRequestFeaturesInnerValue';
 
 /**
  * The ClusterRequestFeaturesInner model module.
@@ -52,7 +52,7 @@ class ClusterRequestFeaturesInner {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('value')) {
-                obj['value'] = ClusterFeatureValue.constructFromObject(data['value']);
+                obj['value'] = ClusterRequestFeaturesInnerValue.constructFromObject(data['value']);
             }
         }
         return obj;
@@ -67,7 +67,7 @@ class ClusterRequestFeaturesInner {
 ClusterRequestFeaturesInner.prototype['id'] = undefined;
 
 /**
- * @member {module:model/ClusterFeatureValue} value
+ * @member {module:model/ClusterRequestFeaturesInnerValue} value
  */
 ClusterRequestFeaturesInner.prototype['value'] = undefined;
 

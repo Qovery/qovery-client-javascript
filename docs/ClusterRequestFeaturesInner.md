@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
-**value** | [**ClusterFeatureValue**](ClusterFeatureValue.md) |  | [optional] 
+**value** | [**ClusterRequestFeaturesInnerValue**](ClusterRequestFeaturesInnerValue.md) |  | [optional] 
 
 

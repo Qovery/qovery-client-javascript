@@ -95,7 +95,6 @@ docs/ClusterRegion.md
 docs/ClusterRegionResponseList.md
 docs/ClusterRequest.md
 docs/ClusterRequestFeaturesInner.md
-docs/ClusterRequestFeaturesInnerValue.md
 docs/ClusterResponseList.md
 docs/ClusterRoutingTable.md
 docs/ClusterRoutingTableRequest.md
@@ -701,7 +700,6 @@ src/model/ClusterRegion.js
 src/model/ClusterRegionResponseList.js
 src/model/ClusterRequest.js
 src/model/ClusterRequestFeaturesInner.js
-src/model/ClusterRequestFeaturesInnerValue.js
 src/model/ClusterResponseList.js
 src/model/ClusterRoutingTable.js
 src/model/ClusterRoutingTableRequest.js
@@ -1241,7 +1239,6 @@ test/model/ClusterRegion.spec.js
 test/model/ClusterRegionResponseList.spec.js
 test/model/ClusterRequest.spec.js
 test/model/ClusterRequestFeaturesInner.spec.js
-test/model/ClusterRequestFeaturesInnerValue.spec.js
 test/model/ClusterResponseList.spec.js
 test/model/ClusterRoutingTable.spec.js
 test/model/ClusterRoutingTableRequest.spec.js

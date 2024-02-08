@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ClusterFeatureAwsExistingVpc from './ClusterFeatureAwsExistingVpc';
 
 /**
  * The ClusterFeatureValue model module.
@@ -22,10 +23,15 @@ class ClusterFeatureValue {
     /**
      * Constructs a new <code>ClusterFeatureValue</code>.
      * @alias module:model/ClusterFeatureValue
+     * @implements module:model/ClusterFeatureAwsExistingVpc
+     * @param awsVpcEksId {String} 
+     * @param eksSubnetsZoneAIds {Array.<String>} 
+     * @param eksSubnetsZoneBIds {Array.<String>} 
+     * @param eksSubnetsZoneCIds {Array.<String>} 
      */
-    constructor() { 
-        
-        ClusterFeatureValue.initialize(this);
+    constructor(awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds) { 
+        ClusterFeatureAwsExistingVpc.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
+        ClusterFeatureValue.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
     }
 
     /**
@@ -33,7 +39,11 @@ class ClusterFeatureValue {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds) { 
+        obj['aws_vpc_eks_id'] = awsVpcEksId;
+        obj['eks_subnets_zone_a_ids'] = eksSubnetsZoneAIds;
+        obj['eks_subnets_zone_b_ids'] = eksSubnetsZoneBIds;
+        obj['eks_subnets_zone_c_ids'] = eksSubnetsZoneCIds;
     }
 
     /**
@@ -46,7 +56,47 @@ class ClusterFeatureValue {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ClusterFeatureValue();
+            ClusterFeatureAwsExistingVpc.constructFromObject(data, obj);
 
+            if (data.hasOwnProperty('aws_vpc_eks_id')) {
+                obj['aws_vpc_eks_id'] = ApiClient.convertToType(data['aws_vpc_eks_id'], 'String');
+            }
+            if (data.hasOwnProperty('eks_subnets_zone_a_ids')) {
+                obj['eks_subnets_zone_a_ids'] = ApiClient.convertToType(data['eks_subnets_zone_a_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('eks_subnets_zone_b_ids')) {
+                obj['eks_subnets_zone_b_ids'] = ApiClient.convertToType(data['eks_subnets_zone_b_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('eks_subnets_zone_c_ids')) {
+                obj['eks_subnets_zone_c_ids'] = ApiClient.convertToType(data['eks_subnets_zone_c_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('documentdb_subnets_zone_a_ids')) {
+                obj['documentdb_subnets_zone_a_ids'] = ApiClient.convertToType(data['documentdb_subnets_zone_a_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('documentdb_subnets_zone_b_ids')) {
+                obj['documentdb_subnets_zone_b_ids'] = ApiClient.convertToType(data['documentdb_subnets_zone_b_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('documentdb_subnets_zone_c_ids')) {
+                obj['documentdb_subnets_zone_c_ids'] = ApiClient.convertToType(data['documentdb_subnets_zone_c_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('elasticache_subnets_zone_a_ids')) {
+                obj['elasticache_subnets_zone_a_ids'] = ApiClient.convertToType(data['elasticache_subnets_zone_a_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('elasticache_subnets_zone_b_ids')) {
+                obj['elasticache_subnets_zone_b_ids'] = ApiClient.convertToType(data['elasticache_subnets_zone_b_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('elasticache_subnets_zone_c_ids')) {
+                obj['elasticache_subnets_zone_c_ids'] = ApiClient.convertToType(data['elasticache_subnets_zone_c_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('rds_subnets_zone_a_ids')) {
+                obj['rds_subnets_zone_a_ids'] = ApiClient.convertToType(data['rds_subnets_zone_a_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('rds_subnets_zone_b_ids')) {
+                obj['rds_subnets_zone_b_ids'] = ApiClient.convertToType(data['rds_subnets_zone_b_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('rds_subnets_zone_c_ids')) {
+                obj['rds_subnets_zone_c_ids'] = ApiClient.convertToType(data['rds_subnets_zone_c_ids'], ['String']);
+            }
         }
         return obj;
     }
@@ -54,7 +104,125 @@ class ClusterFeatureValue {
 
 }
 
+/**
+ * @member {String} aws_vpc_eks_id
+ */
+ClusterFeatureValue.prototype['aws_vpc_eks_id'] = undefined;
 
+/**
+ * @member {Array.<String>} eks_subnets_zone_a_ids
+ */
+ClusterFeatureValue.prototype['eks_subnets_zone_a_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} eks_subnets_zone_b_ids
+ */
+ClusterFeatureValue.prototype['eks_subnets_zone_b_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} eks_subnets_zone_c_ids
+ */
+ClusterFeatureValue.prototype['eks_subnets_zone_c_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} documentdb_subnets_zone_a_ids
+ */
+ClusterFeatureValue.prototype['documentdb_subnets_zone_a_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} documentdb_subnets_zone_b_ids
+ */
+ClusterFeatureValue.prototype['documentdb_subnets_zone_b_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} documentdb_subnets_zone_c_ids
+ */
+ClusterFeatureValue.prototype['documentdb_subnets_zone_c_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} elasticache_subnets_zone_a_ids
+ */
+ClusterFeatureValue.prototype['elasticache_subnets_zone_a_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} elasticache_subnets_zone_b_ids
+ */
+ClusterFeatureValue.prototype['elasticache_subnets_zone_b_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} elasticache_subnets_zone_c_ids
+ */
+ClusterFeatureValue.prototype['elasticache_subnets_zone_c_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} rds_subnets_zone_a_ids
+ */
+ClusterFeatureValue.prototype['rds_subnets_zone_a_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} rds_subnets_zone_b_ids
+ */
+ClusterFeatureValue.prototype['rds_subnets_zone_b_ids'] = undefined;
+
+/**
+ * @member {Array.<String>} rds_subnets_zone_c_ids
+ */
+ClusterFeatureValue.prototype['rds_subnets_zone_c_ids'] = undefined;
+
+
+// Implement ClusterFeatureAwsExistingVpc interface:
+/**
+ * @member {String} aws_vpc_eks_id
+ */
+ClusterFeatureAwsExistingVpc.prototype['aws_vpc_eks_id'] = undefined;
+/**
+ * @member {Array.<String>} eks_subnets_zone_a_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['eks_subnets_zone_a_ids'] = undefined;
+/**
+ * @member {Array.<String>} eks_subnets_zone_b_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['eks_subnets_zone_b_ids'] = undefined;
+/**
+ * @member {Array.<String>} eks_subnets_zone_c_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['eks_subnets_zone_c_ids'] = undefined;
+/**
+ * @member {Array.<String>} documentdb_subnets_zone_a_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['documentdb_subnets_zone_a_ids'] = undefined;
+/**
+ * @member {Array.<String>} documentdb_subnets_zone_b_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['documentdb_subnets_zone_b_ids'] = undefined;
+/**
+ * @member {Array.<String>} documentdb_subnets_zone_c_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['documentdb_subnets_zone_c_ids'] = undefined;
+/**
+ * @member {Array.<String>} elasticache_subnets_zone_a_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['elasticache_subnets_zone_a_ids'] = undefined;
+/**
+ * @member {Array.<String>} elasticache_subnets_zone_b_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['elasticache_subnets_zone_b_ids'] = undefined;
+/**
+ * @member {Array.<String>} elasticache_subnets_zone_c_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['elasticache_subnets_zone_c_ids'] = undefined;
+/**
+ * @member {Array.<String>} rds_subnets_zone_a_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_a_ids'] = undefined;
+/**
+ * @member {Array.<String>} rds_subnets_zone_b_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_b_ids'] = undefined;
+/**
+ * @member {Array.<String>} rds_subnets_zone_c_ids
+ */
+ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_c_ids'] = undefined;
 
 
 

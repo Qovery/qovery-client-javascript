@@ -599,7 +599,6 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterRegionResponseList](docs/ClusterRegionResponseList.md)
  - [QoveryApi.ClusterRequest](docs/ClusterRequest.md)
  - [QoveryApi.ClusterRequestFeaturesInner](docs/ClusterRequestFeaturesInner.md)
- - [QoveryApi.ClusterRequestFeaturesInnerValue](docs/ClusterRequestFeaturesInnerValue.md)
  - [QoveryApi.ClusterResponseList](docs/ClusterResponseList.md)
  - [QoveryApi.ClusterRoutingTable](docs/ClusterRoutingTable.md)
  - [QoveryApi.ClusterRoutingTableRequest](docs/ClusterRoutingTableRequest.md)

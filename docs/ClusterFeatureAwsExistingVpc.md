@@ -1,4 +1,4 @@
-# QoveryApi.ClusterRequestFeaturesInnerValueOneOf
+# QoveryApi.ClusterFeatureAwsExistingVpc
 
 ## Properties
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+    instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,88 +47,88 @@
       object[property] = value;
   }
 
-  describe('ClusterRequestFeaturesInnerValueOneOf', function() {
-    it('should create an instance of ClusterRequestFeaturesInnerValueOneOf', function() {
-      // uncomment below and update the code to test ClusterRequestFeaturesInnerValueOneOf
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
-      //expect(instance).to.be.a(QoveryApi.ClusterRequestFeaturesInnerValueOneOf);
+  describe('ClusterFeatureAwsExistingVpc', function() {
+    it('should create an instance of ClusterFeatureAwsExistingVpc', function() {
+      // uncomment below and update the code to test ClusterFeatureAwsExistingVpc
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
+      //expect(instance).to.be.a(QoveryApi.ClusterFeatureAwsExistingVpc);
     });
 
     it('should have the property awsVpcEksId (base name: "aws_vpc_eks_id")', function() {
       // uncomment below and update the code to test the property awsVpcEksId
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property eksSubnetsZoneAIds (base name: "eks_subnets_zone_a_ids")', function() {
       // uncomment below and update the code to test the property eksSubnetsZoneAIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property eksSubnetsZoneBIds (base name: "eks_subnets_zone_b_ids")', function() {
       // uncomment below and update the code to test the property eksSubnetsZoneBIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property eksSubnetsZoneCIds (base name: "eks_subnets_zone_c_ids")', function() {
       // uncomment below and update the code to test the property eksSubnetsZoneCIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property documentdbSubnetsZoneAIds (base name: "documentdb_subnets_zone_a_ids")', function() {
       // uncomment below and update the code to test the property documentdbSubnetsZoneAIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property documentdbSubnetsZoneBIds (base name: "documentdb_subnets_zone_b_ids")', function() {
       // uncomment below and update the code to test the property documentdbSubnetsZoneBIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property documentdbSubnetsZoneCIds (base name: "documentdb_subnets_zone_c_ids")', function() {
       // uncomment below and update the code to test the property documentdbSubnetsZoneCIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property elasticacheSubnetsZoneAIds (base name: "elasticache_subnets_zone_a_ids")', function() {
       // uncomment below and update the code to test the property elasticacheSubnetsZoneAIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property elasticacheSubnetsZoneBIds (base name: "elasticache_subnets_zone_b_ids")', function() {
       // uncomment below and update the code to test the property elasticacheSubnetsZoneBIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property elasticacheSubnetsZoneCIds (base name: "elasticache_subnets_zone_c_ids")', function() {
       // uncomment below and update the code to test the property elasticacheSubnetsZoneCIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property rdsSubnetsZoneAIds (base name: "rds_subnets_zone_a_ids")', function() {
       // uncomment below and update the code to test the property rdsSubnetsZoneAIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property rdsSubnetsZoneBIds (base name: "rds_subnets_zone_b_ids")', function() {
       // uncomment below and update the code to test the property rdsSubnetsZoneBIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 
     it('should have the property rdsSubnetsZoneCIds (base name: "rds_subnets_zone_c_ids")', function() {
       // uncomment below and update the code to test the property rdsSubnetsZoneCIds
-      //var instance = new QoveryApi.ClusterRequestFeaturesInnerValueOneOf();
+      //var instance = new QoveryApi.ClusterFeatureAwsExistingVpc();
       //expect(instance).to.be();
     });
 

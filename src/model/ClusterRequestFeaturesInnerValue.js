@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import ClusterRequestFeaturesInnerValueOneOf from './ClusterRequestFeaturesInnerValueOneOf';
+import ClusterFeatureAwsExistingVpc from './ClusterFeatureAwsExistingVpc';
 
 /**
  * The ClusterRequestFeaturesInnerValue model module.
@@ -23,14 +23,14 @@ class ClusterRequestFeaturesInnerValue {
     /**
      * Constructs a new <code>ClusterRequestFeaturesInnerValue</code>.
      * @alias module:model/ClusterRequestFeaturesInnerValue
-     * @implements module:model/ClusterRequestFeaturesInnerValueOneOf
+     * @implements module:model/ClusterFeatureAwsExistingVpc
      * @param awsVpcEksId {String} 
      * @param eksSubnetsZoneAIds {Array.<String>} 
      * @param eksSubnetsZoneBIds {Array.<String>} 
      * @param eksSubnetsZoneCIds {Array.<String>} 
      */
     constructor(awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds) { 
-        ClusterRequestFeaturesInnerValueOneOf.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
+        ClusterFeatureAwsExistingVpc.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
         ClusterRequestFeaturesInnerValue.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
     }
 
@@ -56,7 +56,7 @@ class ClusterRequestFeaturesInnerValue {
     static constructFromObject(data, obj) {
         if (data) {
             obj = obj || new ClusterRequestFeaturesInnerValue();
-            ClusterRequestFeaturesInnerValueOneOf.constructFromObject(data, obj);
+            ClusterFeatureAwsExistingVpc.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('aws_vpc_eks_id')) {
                 obj['aws_vpc_eks_id'] = ApiClient.convertToType(data['aws_vpc_eks_id'], 'String');
@@ -170,59 +170,59 @@ ClusterRequestFeaturesInnerValue.prototype['rds_subnets_zone_b_ids'] = undefined
 ClusterRequestFeaturesInnerValue.prototype['rds_subnets_zone_c_ids'] = undefined;
 
 
-// Implement ClusterRequestFeaturesInnerValueOneOf interface:
+// Implement ClusterFeatureAwsExistingVpc interface:
 /**
  * @member {String} aws_vpc_eks_id
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['aws_vpc_eks_id'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['aws_vpc_eks_id'] = undefined;
 /**
  * @member {Array.<String>} eks_subnets_zone_a_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['eks_subnets_zone_a_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['eks_subnets_zone_a_ids'] = undefined;
 /**
  * @member {Array.<String>} eks_subnets_zone_b_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['eks_subnets_zone_b_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['eks_subnets_zone_b_ids'] = undefined;
 /**
  * @member {Array.<String>} eks_subnets_zone_c_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['eks_subnets_zone_c_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['eks_subnets_zone_c_ids'] = undefined;
 /**
  * @member {Array.<String>} documentdb_subnets_zone_a_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['documentdb_subnets_zone_a_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['documentdb_subnets_zone_a_ids'] = undefined;
 /**
  * @member {Array.<String>} documentdb_subnets_zone_b_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['documentdb_subnets_zone_b_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['documentdb_subnets_zone_b_ids'] = undefined;
 /**
  * @member {Array.<String>} documentdb_subnets_zone_c_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['documentdb_subnets_zone_c_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['documentdb_subnets_zone_c_ids'] = undefined;
 /**
  * @member {Array.<String>} elasticache_subnets_zone_a_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['elasticache_subnets_zone_a_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['elasticache_subnets_zone_a_ids'] = undefined;
 /**
  * @member {Array.<String>} elasticache_subnets_zone_b_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['elasticache_subnets_zone_b_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['elasticache_subnets_zone_b_ids'] = undefined;
 /**
  * @member {Array.<String>} elasticache_subnets_zone_c_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['elasticache_subnets_zone_c_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['elasticache_subnets_zone_c_ids'] = undefined;
 /**
  * @member {Array.<String>} rds_subnets_zone_a_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['rds_subnets_zone_a_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_a_ids'] = undefined;
 /**
  * @member {Array.<String>} rds_subnets_zone_b_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['rds_subnets_zone_b_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_b_ids'] = undefined;
 /**
  * @member {Array.<String>} rds_subnets_zone_c_ids
  */
-ClusterRequestFeaturesInnerValueOneOf.prototype['rds_subnets_zone_c_ids'] = undefined;
+ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_c_ids'] = undefined;
 
 
 

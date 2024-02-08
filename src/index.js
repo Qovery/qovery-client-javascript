@@ -73,6 +73,7 @@ import ClusterDeleteMode from './model/ClusterDeleteMode';
 import ClusterDeploymentStatusEnum from './model/ClusterDeploymentStatusEnum';
 import ClusterFeature from './model/ClusterFeature';
 import ClusterFeatureAcceptedValuesInner from './model/ClusterFeatureAcceptedValuesInner';
+import ClusterFeatureAwsExistingVpc from './model/ClusterFeatureAwsExistingVpc';
 import ClusterFeatureResponseList from './model/ClusterFeatureResponseList';
 import ClusterFeatureValue from './model/ClusterFeatureValue';
 import ClusterInstanceTypeResponseList from './model/ClusterInstanceTypeResponseList';
@@ -91,7 +92,6 @@ import ClusterRegionResponseList from './model/ClusterRegionResponseList';
 import ClusterRequest from './model/ClusterRequest';
 import ClusterRequestFeaturesInner from './model/ClusterRequestFeaturesInner';
 import ClusterRequestFeaturesInnerValue from './model/ClusterRequestFeaturesInnerValue';
-import ClusterRequestFeaturesInnerValueOneOf from './model/ClusterRequestFeaturesInnerValueOneOf';
 import ClusterResponseList from './model/ClusterResponseList';
 import ClusterRoutingTable from './model/ClusterRoutingTable';
 import ClusterRoutingTableRequest from './model/ClusterRoutingTableRequest';
@@ -954,6 +954,12 @@ export {
     ClusterFeatureAcceptedValuesInner,
 
     /**
+     * The ClusterFeatureAwsExistingVpc model constructor.
+     * @property {module:model/ClusterFeatureAwsExistingVpc}
+     */
+    ClusterFeatureAwsExistingVpc,
+
+    /**
      * The ClusterFeatureResponseList model constructor.
      * @property {module:model/ClusterFeatureResponseList}
      */
@@ -1060,12 +1066,6 @@ export {
      * @property {module:model/ClusterRequestFeaturesInnerValue}
      */
     ClusterRequestFeaturesInnerValue,
-
-    /**
-     * The ClusterRequestFeaturesInnerValueOneOf model constructor.
-     * @property {module:model/ClusterRequestFeaturesInnerValueOneOf}
-     */
-    ClusterRequestFeaturesInnerValueOneOf,
 
     /**
      * The ClusterResponseList model constructor.

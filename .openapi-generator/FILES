@@ -77,6 +77,7 @@ docs/ClusterDeleteMode.md
 docs/ClusterDeploymentStatusEnum.md
 docs/ClusterFeature.md
 docs/ClusterFeatureAcceptedValuesInner.md
+docs/ClusterFeatureAwsExistingVpc.md
 docs/ClusterFeatureResponseList.md
 docs/ClusterFeatureValue.md
 docs/ClusterInstanceTypeResponseList.md
@@ -95,7 +96,6 @@ docs/ClusterRegionResponseList.md
 docs/ClusterRequest.md
 docs/ClusterRequestFeaturesInner.md
 docs/ClusterRequestFeaturesInnerValue.md
-docs/ClusterRequestFeaturesInnerValueOneOf.md
 docs/ClusterResponseList.md
 docs/ClusterRoutingTable.md
 docs/ClusterRoutingTableRequest.md
@@ -683,6 +683,7 @@ src/model/ClusterDeleteMode.js
 src/model/ClusterDeploymentStatusEnum.js
 src/model/ClusterFeature.js
 src/model/ClusterFeatureAcceptedValuesInner.js
+src/model/ClusterFeatureAwsExistingVpc.js
 src/model/ClusterFeatureResponseList.js
 src/model/ClusterFeatureValue.js
 src/model/ClusterInstanceTypeResponseList.js
@@ -701,7 +702,6 @@ src/model/ClusterRegionResponseList.js
 src/model/ClusterRequest.js
 src/model/ClusterRequestFeaturesInner.js
 src/model/ClusterRequestFeaturesInnerValue.js
-src/model/ClusterRequestFeaturesInnerValueOneOf.js
 src/model/ClusterResponseList.js
 src/model/ClusterRoutingTable.js
 src/model/ClusterRoutingTableRequest.js
@@ -1223,6 +1223,7 @@ test/model/ClusterDeleteMode.spec.js
 test/model/ClusterDeploymentStatusEnum.spec.js
 test/model/ClusterFeature.spec.js
 test/model/ClusterFeatureAcceptedValuesInner.spec.js
+test/model/ClusterFeatureAwsExistingVpc.spec.js
 test/model/ClusterFeatureResponseList.spec.js
 test/model/ClusterFeatureValue.spec.js
 test/model/ClusterInstanceTypeResponseList.spec.js
@@ -1241,7 +1242,6 @@ test/model/ClusterRegionResponseList.spec.js
 test/model/ClusterRequest.spec.js
 test/model/ClusterRequestFeaturesInner.spec.js
 test/model/ClusterRequestFeaturesInnerValue.spec.js
-test/model/ClusterRequestFeaturesInnerValueOneOf.spec.js
 test/model/ClusterResponseList.spec.js
 test/model/ClusterRoutingTable.spec.js
 test/model/ClusterRoutingTableRequest.spec.js

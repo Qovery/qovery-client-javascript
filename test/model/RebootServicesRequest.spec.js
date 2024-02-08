@@ -54,19 +54,19 @@
       //expect(instance).to.be.a(QoveryApi.RebootServicesRequest);
     });
 
-    it('should have the property applicationIds (base name: "applicationIds")', function() {
+    it('should have the property applicationIds (base name: "application_ids")', function() {
       // uncomment below and update the code to test the property applicationIds
       //var instance = new QoveryApi.RebootServicesRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property databaseIds (base name: "databaseIds")', function() {
+    it('should have the property databaseIds (base name: "database_ids")', function() {
       // uncomment below and update the code to test the property databaseIds
       //var instance = new QoveryApi.RebootServicesRequest();
       //expect(instance).to.be();
     });
 
-    it('should have the property containerIds (base name: "containerIds")', function() {
+    it('should have the property containerIds (base name: "container_ids")', function() {
       // uncomment below and update the code to test the property containerIds
       //var instance = new QoveryApi.RebootServicesRequest();
       //expect(instance).to.be();

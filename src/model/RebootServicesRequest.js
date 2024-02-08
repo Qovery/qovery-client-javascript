@@ -47,14 +47,14 @@ class RebootServicesRequest {
         if (data) {
             obj = obj || new RebootServicesRequest();
 
-            if (data.hasOwnProperty('applicationIds')) {
-                obj['applicationIds'] = ApiClient.convertToType(data['applicationIds'], ['String']);
+            if (data.hasOwnProperty('application_ids')) {
+                obj['application_ids'] = ApiClient.convertToType(data['application_ids'], ['String']);
             }
-            if (data.hasOwnProperty('databaseIds')) {
-                obj['databaseIds'] = ApiClient.convertToType(data['databaseIds'], ['String']);
+            if (data.hasOwnProperty('database_ids')) {
+                obj['database_ids'] = ApiClient.convertToType(data['database_ids'], ['String']);
             }
-            if (data.hasOwnProperty('containerIds')) {
-                obj['containerIds'] = ApiClient.convertToType(data['containerIds'], ['String']);
+            if (data.hasOwnProperty('container_ids')) {
+                obj['container_ids'] = ApiClient.convertToType(data['container_ids'], ['String']);
             }
         }
         return obj;
@@ -67,16 +67,16 @@ class RebootServicesRequest {
      */
     static validateJSON(data) {
         // ensure the json data is an array
-        if (!Array.isArray(data['applicationIds'])) {
-            throw new Error("Expected the field `applicationIds` to be an array in the JSON data but got " + data['applicationIds']);
+        if (!Array.isArray(data['application_ids'])) {
+            throw new Error("Expected the field `application_ids` to be an array in the JSON data but got " + data['application_ids']);
         }
         // ensure the json data is an array
-        if (!Array.isArray(data['databaseIds'])) {
-            throw new Error("Expected the field `databaseIds` to be an array in the JSON data but got " + data['databaseIds']);
+        if (!Array.isArray(data['database_ids'])) {
+            throw new Error("Expected the field `database_ids` to be an array in the JSON data but got " + data['database_ids']);
         }
         // ensure the json data is an array
-        if (!Array.isArray(data['containerIds'])) {
-            throw new Error("Expected the field `containerIds` to be an array in the JSON data but got " + data['containerIds']);
+        if (!Array.isArray(data['container_ids'])) {
+            throw new Error("Expected the field `container_ids` to be an array in the JSON data but got " + data['container_ids']);
         }
 
         return true;
@@ -88,19 +88,19 @@ class RebootServicesRequest {
 
 
 /**
- * @member {Array.<String>} applicationIds
+ * @member {Array.<String>} application_ids
  */
-RebootServicesRequest.prototype['applicationIds'] = undefined;
+RebootServicesRequest.prototype['application_ids'] = undefined;
 
 /**
- * @member {Array.<String>} databaseIds
+ * @member {Array.<String>} database_ids
  */
-RebootServicesRequest.prototype['databaseIds'] = undefined;
+RebootServicesRequest.prototype['database_ids'] = undefined;
 
 /**
- * @member {Array.<String>} containerIds
+ * @member {Array.<String>} container_ids
  */
-RebootServicesRequest.prototype['containerIds'] = undefined;
+RebootServicesRequest.prototype['container_ids'] = undefined;
 
 
 

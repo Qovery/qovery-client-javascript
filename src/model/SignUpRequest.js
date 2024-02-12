@@ -95,6 +95,9 @@ class SignUpRequest {
             if (data.hasOwnProperty('dx_auth')) {
                 obj['dx_auth'] = ApiClient.convertToType(data['dx_auth'], 'Boolean');
             }
+            if (data.hasOwnProperty('infrastructure_hosting')) {
+                obj['infrastructure_hosting'] = ApiClient.convertToType(data['infrastructure_hosting'], 'String');
+            }
         }
         return obj;
     }
@@ -161,6 +164,11 @@ SignUpRequest.prototype['current_step'] = undefined;
  * @member {Boolean} dx_auth
  */
 SignUpRequest.prototype['dx_auth'] = undefined;
+
+/**
+ * @member {String} infrastructure_hosting
+ */
+SignUpRequest.prototype['infrastructure_hosting'] = undefined;
 
 
 

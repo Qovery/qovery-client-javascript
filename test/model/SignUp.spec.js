@@ -144,6 +144,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property infrastructureHosting (base name: "infrastructure_hosting")', function() {
+      // uncomment below and update the code to test the property infrastructureHosting
+      //var instance = new QoveryApi.SignUp();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

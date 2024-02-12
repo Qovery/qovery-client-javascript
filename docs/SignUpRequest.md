@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **userQuestions** | **String** |  | [optional] 
 **currentStep** | **String** |  | [optional] 
 **dxAuth** | **Boolean** |  | [optional] 
+**infrastructureHosting** | **String** |  | [optional] 
 
 

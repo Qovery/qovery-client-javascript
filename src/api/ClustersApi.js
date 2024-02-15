@@ -296,6 +296,56 @@ export default class ClustersApi {
     }
 
     /**
+     * Callback function to receive the result of the editClusterKubeconfig operation.
+     * @callback module:api/ClustersApi~editClusterKubeconfigCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Edit cluster kubeconfig
+     * @param {String} organizationId Organization ID
+     * @param {String} clusterId Cluster ID
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.body 
+     * @param {module:api/ClustersApi~editClusterKubeconfigCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    editClusterKubeconfig(organizationId, clusterId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['body'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling editClusterKubeconfig");
+      }
+      // verify the required parameter 'clusterId' is set
+      if (clusterId === undefined || clusterId === null) {
+        throw new Error("Missing the required parameter 'clusterId' when calling editClusterKubeconfig");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId,
+        'clusterId': clusterId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/x-yaml'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/cluster/{clusterId}/kubeconfig', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the editRoutingTable operation.
      * @callback module:api/ClustersApi~editRoutingTableCallback
      * @param {String} error Error message, if any.
@@ -435,7 +485,7 @@ export default class ClustersApi {
 
       let authNames = ['ApiKeyAuth', 'bearerAuth'];
       let contentTypes = [];
-      let accepts = ['text/plain'];
+      let accepts = ['application/x-yaml'];
       let returnType = 'String';
       return this.apiClient.callApi(
         '/organization/{organizationId}/cluster/{clusterId}/kubeconfig', 'GET',

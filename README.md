@@ -231,6 +231,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.ClustersApi* | [**deployCluster**](docs/ClustersApi.md#deployCluster) | **POST** /organization/{organizationId}/cluster/{clusterId}/deploy | Deploy a cluster
 *QoveryApi.ClustersApi* | [**editCluster**](docs/ClustersApi.md#editCluster) | **PUT** /organization/{organizationId}/cluster/{clusterId} | Edit a cluster
 *QoveryApi.ClustersApi* | [**editClusterAdvancedSettings**](docs/ClustersApi.md#editClusterAdvancedSettings) | **PUT** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Edit advanced settings
+*QoveryApi.ClustersApi* | [**editClusterKubeconfig**](docs/ClustersApi.md#editClusterKubeconfig) | **PUT** /organization/{organizationId}/cluster/{clusterId}/kubeconfig | Edit cluster kubeconfig
 *QoveryApi.ClustersApi* | [**editRoutingTable**](docs/ClustersApi.md#editRoutingTable) | **PUT** /organization/{organizationId}/cluster/{clusterId}/routingTable | Edit routing table
 *QoveryApi.ClustersApi* | [**getClusterAdvancedSettings**](docs/ClustersApi.md#getClusterAdvancedSettings) | **GET** /organization/{organizationId}/cluster/{clusterId}/advancedSettings | Get advanced settings
 *QoveryApi.ClustersApi* | [**getClusterKubeconfig**](docs/ClustersApi.md#getClusterKubeconfig) | **GET** /organization/{organizationId}/cluster/{clusterId}/kubeconfig | Get cluster kubeconfig

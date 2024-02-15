@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('editClusterKubeconfig', function() {
+      it('should call editClusterKubeconfig successfully', function(done) {
+        //uncomment below and update the code to test editClusterKubeconfig
+        //instance.editClusterKubeconfig(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('editRoutingTable', function() {
       it('should call editRoutingTable successfully', function(done) {
         //uncomment below and update the code to test editRoutingTable

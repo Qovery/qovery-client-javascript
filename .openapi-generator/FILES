@@ -408,7 +408,6 @@ docs/OrganizationContainerAutoDeployRequest.md
 docs/OrganizationContainerPreviewRequest.md
 docs/OrganizationCreditCodeRequest.md
 docs/OrganizationCurrentCost.md
-docs/OrganizationCurrentCostAllOf.md
 docs/OrganizationCustomRole.md
 docs/OrganizationCustomRoleApi.md
 docs/OrganizationCustomRoleClusterPermission.md
@@ -445,7 +444,6 @@ docs/OrganizationWebhookKindEnum.md
 docs/OrganizationWebhookResponse.md
 docs/OrganizationWebhookResponseList.md
 docs/PaginationData.md
-docs/PaidUsage.md
 docs/PlanEnum.md
 docs/PortProtocolEnum.md
 docs/Probe.md
@@ -964,7 +962,6 @@ src/model/OrganizationContainerAutoDeployRequest.js
 src/model/OrganizationContainerPreviewRequest.js
 src/model/OrganizationCreditCodeRequest.js
 src/model/OrganizationCurrentCost.js
-src/model/OrganizationCurrentCostAllOf.js
 src/model/OrganizationCustomRole.js
 src/model/OrganizationCustomRoleClusterPermission.js
 src/model/OrganizationCustomRoleClusterPermissionsInner.js
@@ -997,7 +994,6 @@ src/model/OrganizationWebhookKindEnum.js
 src/model/OrganizationWebhookResponse.js
 src/model/OrganizationWebhookResponseList.js
 src/model/PaginationData.js
-src/model/PaidUsage.js
 src/model/PlanEnum.js
 src/model/PortProtocolEnum.js
 src/model/Probe.js
@@ -1503,7 +1499,6 @@ test/model/OrganizationContainerAutoDeployRequest.spec.js
 test/model/OrganizationContainerPreviewRequest.spec.js
 test/model/OrganizationCreditCodeRequest.spec.js
 test/model/OrganizationCurrentCost.spec.js
-test/model/OrganizationCurrentCostAllOf.spec.js
 test/model/OrganizationCustomRole.spec.js
 test/model/OrganizationCustomRoleClusterPermission.spec.js
 test/model/OrganizationCustomRoleClusterPermissionsInner.spec.js
@@ -1536,7 +1531,6 @@ test/model/OrganizationWebhookKindEnum.spec.js
 test/model/OrganizationWebhookResponse.spec.js
 test/model/OrganizationWebhookResponseList.spec.js
 test/model/PaginationData.spec.js
-test/model/PaidUsage.spec.js
 test/model/PlanEnum.spec.js
 test/model/PortProtocolEnum.spec.js
 test/model/Probe.spec.js

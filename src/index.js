@@ -355,7 +355,6 @@ import OrganizationContainerAutoDeployRequest from './model/OrganizationContaine
 import OrganizationContainerPreviewRequest from './model/OrganizationContainerPreviewRequest';
 import OrganizationCreditCodeRequest from './model/OrganizationCreditCodeRequest';
 import OrganizationCurrentCost from './model/OrganizationCurrentCost';
-import OrganizationCurrentCostAllOf from './model/OrganizationCurrentCostAllOf';
 import OrganizationCustomRole from './model/OrganizationCustomRole';
 import OrganizationCustomRoleClusterPermission from './model/OrganizationCustomRoleClusterPermission';
 import OrganizationCustomRoleClusterPermissionsInner from './model/OrganizationCustomRoleClusterPermissionsInner';
@@ -388,7 +387,6 @@ import OrganizationWebhookKindEnum from './model/OrganizationWebhookKindEnum';
 import OrganizationWebhookResponse from './model/OrganizationWebhookResponse';
 import OrganizationWebhookResponseList from './model/OrganizationWebhookResponseList';
 import PaginationData from './model/PaginationData';
-import PaidUsage from './model/PaidUsage';
 import PlanEnum from './model/PlanEnum';
 import PortProtocolEnum from './model/PortProtocolEnum';
 import Probe from './model/Probe';
@@ -2645,12 +2643,6 @@ export {
     OrganizationCurrentCost,
 
     /**
-     * The OrganizationCurrentCostAllOf model constructor.
-     * @property {module:model/OrganizationCurrentCostAllOf}
-     */
-    OrganizationCurrentCostAllOf,
-
-    /**
      * The OrganizationCustomRole model constructor.
      * @property {module:model/OrganizationCustomRole}
      */
@@ -2841,12 +2833,6 @@ export {
      * @property {module:model/PaginationData}
      */
     PaginationData,
-
-    /**
-     * The PaidUsage model constructor.
-     * @property {module:model/PaidUsage}
-     */
-    PaidUsage,
 
     /**
      * The PlanEnum model constructor.

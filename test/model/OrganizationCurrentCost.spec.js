@@ -66,20 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property remainingCredits (base name: "remaining_credits")', function() {
-      // uncomment below and update the code to test the property remainingCredits
+    it('should have the property renewalAt (base name: "renewal_at")', function() {
+      // uncomment below and update the code to test the property renewalAt
       //var instance = new QoveryApi.OrganizationCurrentCost();
       //expect(instance).to.be();
     });
 
     it('should have the property cost (base name: "cost")', function() {
       // uncomment below and update the code to test the property cost
-      //var instance = new QoveryApi.OrganizationCurrentCost();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property paidUsage (base name: "paid_usage")', function() {
-      // uncomment below and update the code to test the property paidUsage
       //var instance = new QoveryApi.OrganizationCurrentCost();
       //expect(instance).to.be();
     });

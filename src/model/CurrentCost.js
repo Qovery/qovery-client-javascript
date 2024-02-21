@@ -14,7 +14,6 @@
 import ApiClient from '../ApiClient';
 import Cost from './Cost';
 import PlanEnum from './PlanEnum';
-import RemainingCredits from './RemainingCredits';
 
 /**
  * The CurrentCost model module.
@@ -56,8 +55,8 @@ class CurrentCost {
             if (data.hasOwnProperty('remaining_trial_day')) {
                 obj['remaining_trial_day'] = ApiClient.convertToType(data['remaining_trial_day'], 'Number');
             }
-            if (data.hasOwnProperty('remaining_credits')) {
-                obj['remaining_credits'] = RemainingCredits.constructFromObject(data['remaining_credits']);
+            if (data.hasOwnProperty('renewal_at')) {
+                obj['renewal_at'] = ApiClient.convertToType(data['renewal_at'], 'Date');
             }
             if (data.hasOwnProperty('cost')) {
                 obj['cost'] = Cost.constructFromObject(data['cost']);
@@ -81,9 +80,10 @@ CurrentCost.prototype['plan'] = undefined;
 CurrentCost.prototype['remaining_trial_day'] = undefined;
 
 /**
- * @member {module:model/RemainingCredits} remaining_credits
+ * date when the current plan will be renewed
+ * @member {Date} renewal_at
  */
-CurrentCost.prototype['remaining_credits'] = undefined;
+CurrentCost.prototype['renewal_at'] = undefined;
 
 /**
  * @member {module:model/Cost} cost

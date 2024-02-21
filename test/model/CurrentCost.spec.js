@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property remainingCredits (base name: "remaining_credits")', function() {
-      // uncomment below and update the code to test the property remainingCredits
+    it('should have the property renewalAt (base name: "renewal_at")', function() {
+      // uncomment below and update the code to test the property renewalAt
       //var instance = new QoveryApi.CurrentCost();
       //expect(instance).to.be();
     });

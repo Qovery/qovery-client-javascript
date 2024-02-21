@@ -14,10 +14,7 @@
 import ApiClient from '../ApiClient';
 import Cost from './Cost';
 import CurrentCost from './CurrentCost';
-import OrganizationCurrentCostAllOf from './OrganizationCurrentCostAllOf';
-import PaidUsage from './PaidUsage';
 import PlanEnum from './PlanEnum';
-import RemainingCredits from './RemainingCredits';
 
 /**
  * The OrganizationCurrentCost model module.
@@ -29,10 +26,9 @@ class OrganizationCurrentCost {
      * Constructs a new <code>OrganizationCurrentCost</code>.
      * @alias module:model/OrganizationCurrentCost
      * @implements module:model/CurrentCost
-     * @implements module:model/OrganizationCurrentCostAllOf
      */
     constructor() { 
-        CurrentCost.initialize(this);OrganizationCurrentCostAllOf.initialize(this);
+        CurrentCost.initialize(this);
         OrganizationCurrentCost.initialize(this);
     }
 
@@ -55,7 +51,6 @@ class OrganizationCurrentCost {
         if (data) {
             obj = obj || new OrganizationCurrentCost();
             CurrentCost.constructFromObject(data, obj);
-            OrganizationCurrentCostAllOf.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('plan')) {
                 obj['plan'] = PlanEnum.constructFromObject(data['plan']);
@@ -63,14 +58,11 @@ class OrganizationCurrentCost {
             if (data.hasOwnProperty('remaining_trial_day')) {
                 obj['remaining_trial_day'] = ApiClient.convertToType(data['remaining_trial_day'], 'Number');
             }
-            if (data.hasOwnProperty('remaining_credits')) {
-                obj['remaining_credits'] = RemainingCredits.constructFromObject(data['remaining_credits']);
+            if (data.hasOwnProperty('renewal_at')) {
+                obj['renewal_at'] = ApiClient.convertToType(data['renewal_at'], 'Date');
             }
             if (data.hasOwnProperty('cost')) {
                 obj['cost'] = Cost.constructFromObject(data['cost']);
-            }
-            if (data.hasOwnProperty('paid_usage')) {
-                obj['paid_usage'] = PaidUsage.constructFromObject(data['paid_usage']);
             }
         }
         return obj;
@@ -91,19 +83,15 @@ OrganizationCurrentCost.prototype['plan'] = undefined;
 OrganizationCurrentCost.prototype['remaining_trial_day'] = undefined;
 
 /**
- * @member {module:model/RemainingCredits} remaining_credits
+ * date when the current plan will be renewed
+ * @member {Date} renewal_at
  */
-OrganizationCurrentCost.prototype['remaining_credits'] = undefined;
+OrganizationCurrentCost.prototype['renewal_at'] = undefined;
 
 /**
  * @member {module:model/Cost} cost
  */
 OrganizationCurrentCost.prototype['cost'] = undefined;
-
-/**
- * @member {module:model/PaidUsage} paid_usage
- */
-OrganizationCurrentCost.prototype['paid_usage'] = undefined;
 
 
 // Implement CurrentCost interface:
@@ -117,18 +105,14 @@ CurrentCost.prototype['plan'] = undefined;
  */
 CurrentCost.prototype['remaining_trial_day'] = undefined;
 /**
- * @member {module:model/RemainingCredits} remaining_credits
+ * date when the current plan will be renewed
+ * @member {Date} renewal_at
  */
-CurrentCost.prototype['remaining_credits'] = undefined;
+CurrentCost.prototype['renewal_at'] = undefined;
 /**
  * @member {module:model/Cost} cost
  */
 CurrentCost.prototype['cost'] = undefined;
-// Implement OrganizationCurrentCostAllOf interface:
-/**
- * @member {module:model/PaidUsage} paid_usage
- */
-OrganizationCurrentCostAllOf.prototype['paid_usage'] = undefined;
 
 
 

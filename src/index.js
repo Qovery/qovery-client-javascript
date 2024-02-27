@@ -350,6 +350,8 @@ import OrganizationApiTokenResponseList from './model/OrganizationApiTokenRespon
 import OrganizationApiTokenScope from './model/OrganizationApiTokenScope';
 import OrganizationAvailableRole from './model/OrganizationAvailableRole';
 import OrganizationAvailableRoleList from './model/OrganizationAvailableRoleList';
+import OrganizationBillingUsageReportRequest from './model/OrganizationBillingUsageReportRequest';
+import OrganizationBillingUsageReportResponse from './model/OrganizationBillingUsageReportResponse';
 import OrganizationChangePlanRequest from './model/OrganizationChangePlanRequest';
 import OrganizationContainerAutoDeployRequest from './model/OrganizationContainerAutoDeployRequest';
 import OrganizationContainerPreviewRequest from './model/OrganizationContainerPreviewRequest';
@@ -2611,6 +2613,18 @@ export {
      * @property {module:model/OrganizationAvailableRoleList}
      */
     OrganizationAvailableRoleList,
+
+    /**
+     * The OrganizationBillingUsageReportRequest model constructor.
+     * @property {module:model/OrganizationBillingUsageReportRequest}
+     */
+    OrganizationBillingUsageReportRequest,
+
+    /**
+     * The OrganizationBillingUsageReportResponse model constructor.
+     * @property {module:model/OrganizationBillingUsageReportResponse}
+     */
+    OrganizationBillingUsageReportResponse,
 
     /**
      * The OrganizationChangePlanRequest model constructor.

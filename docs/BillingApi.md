@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**changePlan**](BillingApi.md#changePlan) | **POST** /organization/{organizationId}/changePlan | Change organization plan
 [**deleteCreditCard**](BillingApi.md#deleteCreditCard) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 [**editOrganizationBillingInfo**](BillingApi.md#editOrganizationBillingInfo) | **PUT** /organization/{organizationId}/billingInfo | Edit Organization Billing Info
+[**generateBillingUsageReport**](BillingApi.md#generateBillingUsageReport) | **POST** /organization/{organizationId}/billingUsageReport | Generate organization billing usage report
 [**getClusterCurrentCost**](BillingApi.md#getClusterCurrentCost) | **GET** /organization/{organizationId}/cluster/{clusterId}/currentCost | Get cluster current cost
 [**getOrganizationBillingExternalId**](BillingApi.md#getOrganizationBillingExternalId) | **GET** /organization/{organizationId}/billingExternalId | Get organization billing external ID
 [**getOrganizationBillingInfo**](BillingApi.md#getOrganizationBillingInfo) | **GET** /organization/{organizationId}/billingInfo | Get organization billing info
@@ -289,6 +290,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BillingInfo**](BillingInfo.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth), [bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## generateBillingUsageReport
+
+> OrganizationBillingUsageReportResponse generateBillingUsageReport(organizationId, opts)
+
+Generate organization billing usage report
+
+### Example
+
+```javascript
+import QoveryApi from 'qovery_api';
+let defaultClient = QoveryApi.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new QoveryApi.BillingApi();
+let organizationId = "organizationId_example"; // String | Organization ID
+let opts = {
+  'organizationBillingUsageReportRequest': new QoveryApi.OrganizationBillingUsageReportRequest() // OrganizationBillingUsageReportRequest | 
+};
+apiInstance.generateBillingUsageReport(organizationId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationId** | **String**| Organization ID | 
+ **organizationBillingUsageReportRequest** | [**OrganizationBillingUsageReportRequest**](OrganizationBillingUsageReportRequest.md)|  | [optional] 
+
+### Return type
+
+[**OrganizationBillingUsageReportResponse**](OrganizationBillingUsageReportResponse.md)
 
 ### Authorization
 

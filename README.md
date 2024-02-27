@@ -184,6 +184,7 @@ Class | Method | HTTP request | Description
 *QoveryApi.BillingApi* | [**changePlan**](docs/BillingApi.md#changePlan) | **POST** /organization/{organizationId}/changePlan | Change organization plan
 *QoveryApi.BillingApi* | [**deleteCreditCard**](docs/BillingApi.md#deleteCreditCard) | **DELETE** /organization/{organizationId}/creditCard/{creditCardId} | Delete credit card
 *QoveryApi.BillingApi* | [**editOrganizationBillingInfo**](docs/BillingApi.md#editOrganizationBillingInfo) | **PUT** /organization/{organizationId}/billingInfo | Edit Organization Billing Info
+*QoveryApi.BillingApi* | [**generateBillingUsageReport**](docs/BillingApi.md#generateBillingUsageReport) | **POST** /organization/{organizationId}/billingUsageReport | Generate organization billing usage report
 *QoveryApi.BillingApi* | [**getClusterCurrentCost**](docs/BillingApi.md#getClusterCurrentCost) | **GET** /organization/{organizationId}/cluster/{clusterId}/currentCost | Get cluster current cost
 *QoveryApi.BillingApi* | [**getOrganizationBillingExternalId**](docs/BillingApi.md#getOrganizationBillingExternalId) | **GET** /organization/{organizationId}/billingExternalId | Get organization billing external ID
 *QoveryApi.BillingApi* | [**getOrganizationBillingInfo**](docs/BillingApi.md#getOrganizationBillingInfo) | **GET** /organization/{organizationId}/billingInfo | Get organization billing info
@@ -859,6 +860,8 @@ Class | Method | HTTP request | Description
  - [QoveryApi.OrganizationApiTokenScope](docs/OrganizationApiTokenScope.md)
  - [QoveryApi.OrganizationAvailableRole](docs/OrganizationAvailableRole.md)
  - [QoveryApi.OrganizationAvailableRoleList](docs/OrganizationAvailableRoleList.md)
+ - [QoveryApi.OrganizationBillingUsageReportRequest](docs/OrganizationBillingUsageReportRequest.md)
+ - [QoveryApi.OrganizationBillingUsageReportResponse](docs/OrganizationBillingUsageReportResponse.md)
  - [QoveryApi.OrganizationChangePlanRequest](docs/OrganizationChangePlanRequest.md)
  - [QoveryApi.OrganizationContainerAutoDeployRequest](docs/OrganizationContainerAutoDeployRequest.md)
  - [QoveryApi.OrganizationContainerPreviewRequest](docs/OrganizationContainerPreviewRequest.md)

@@ -25,6 +25,8 @@ import Invoice from '../model/Invoice';
 import InvoiceResponseList from '../model/InvoiceResponseList';
 import Link from '../model/Link';
 import Organization from '../model/Organization';
+import OrganizationBillingUsageReportRequest from '../model/OrganizationBillingUsageReportRequest';
+import OrganizationBillingUsageReportResponse from '../model/OrganizationBillingUsageReportResponse';
 import OrganizationChangePlanRequest from '../model/OrganizationChangePlanRequest';
 import OrganizationCreditCodeRequest from '../model/OrganizationCreditCodeRequest';
 import OrganizationCurrentCost from '../model/OrganizationCurrentCost';
@@ -269,6 +271,51 @@ export default class BillingApi {
       let returnType = BillingInfo;
       return this.apiClient.callApi(
         '/organization/{organizationId}/billingInfo', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the generateBillingUsageReport operation.
+     * @callback module:api/BillingApi~generateBillingUsageReportCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/OrganizationBillingUsageReportResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Generate organization billing usage report
+     * @param {String} organizationId Organization ID
+     * @param {Object} opts Optional parameters
+     * @param {module:model/OrganizationBillingUsageReportRequest} opts.organizationBillingUsageReportRequest 
+     * @param {module:api/BillingApi~generateBillingUsageReportCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/OrganizationBillingUsageReportResponse}
+     */
+    generateBillingUsageReport(organizationId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['organizationBillingUsageReportRequest'];
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling generateBillingUsageReport");
+      }
+
+      let pathParams = {
+        'organizationId': organizationId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth', 'bearerAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = OrganizationBillingUsageReportResponse;
+      return this.apiClient.callApi(
+        '/organization/{organizationId}/billingUsageReport', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

@@ -403,6 +403,8 @@ docs/OrganizationApiTokenResponseList.md
 docs/OrganizationApiTokenScope.md
 docs/OrganizationAvailableRole.md
 docs/OrganizationAvailableRoleList.md
+docs/OrganizationBillingUsageReportRequest.md
+docs/OrganizationBillingUsageReportResponse.md
 docs/OrganizationChangePlanRequest.md
 docs/OrganizationContainerAutoDeployRequest.md
 docs/OrganizationContainerPreviewRequest.md
@@ -957,6 +959,8 @@ src/model/OrganizationApiTokenResponseList.js
 src/model/OrganizationApiTokenScope.js
 src/model/OrganizationAvailableRole.js
 src/model/OrganizationAvailableRoleList.js
+src/model/OrganizationBillingUsageReportRequest.js
+src/model/OrganizationBillingUsageReportResponse.js
 src/model/OrganizationChangePlanRequest.js
 src/model/OrganizationContainerAutoDeployRequest.js
 src/model/OrganizationContainerPreviewRequest.js
@@ -1494,6 +1498,8 @@ test/model/OrganizationApiTokenResponseList.spec.js
 test/model/OrganizationApiTokenScope.spec.js
 test/model/OrganizationAvailableRole.spec.js
 test/model/OrganizationAvailableRoleList.spec.js
+test/model/OrganizationBillingUsageReportRequest.spec.js
+test/model/OrganizationBillingUsageReportResponse.spec.js
 test/model/OrganizationChangePlanRequest.spec.js
 test/model/OrganizationContainerAutoDeployRequest.spec.js
 test/model/OrganizationContainerPreviewRequest.spec.js

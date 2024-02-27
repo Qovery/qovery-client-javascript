@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('generateBillingUsageReport', function() {
+      it('should call generateBillingUsageReport successfully', function(done) {
+        //uncomment below and update the code to test generateBillingUsageReport
+        //instance.generateBillingUsageReport(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getClusterCurrentCost', function() {
       it('should call getClusterCurrentCost successfully', function(done) {
         //uncomment below and update the code to test getClusterCurrentCost

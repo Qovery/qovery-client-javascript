@@ -22,10 +22,13 @@ class OrganizationBillingUsageReportRequest {
     /**
      * Constructs a new <code>OrganizationBillingUsageReportRequest</code>.
      * @alias module:model/OrganizationBillingUsageReportRequest
+     * @param from {Date} The start date of the report
+     * @param to {Date} The end date of the report
+     * @param reportExpirationInSeconds {Number} The number of seconds the report will be publicly available
      */
-    constructor() { 
+    constructor(from, to, reportExpirationInSeconds) { 
         
-        OrganizationBillingUsageReportRequest.initialize(this);
+        OrganizationBillingUsageReportRequest.initialize(this, from, to, reportExpirationInSeconds);
     }
 
     /**
@@ -33,7 +36,10 @@ class OrganizationBillingUsageReportRequest {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, from, to, reportExpirationInSeconds) { 
+        obj['from'] = from;
+        obj['to'] = to;
+        obj['report_expiration_in_seconds'] = reportExpirationInSeconds;
     }
 
     /**

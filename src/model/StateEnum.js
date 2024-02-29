@@ -118,6 +118,13 @@ export default class StateEnum {
 
     
         /**
+         * value: "RECAP"
+         * @const
+         */
+        "RECAP" = "RECAP";
+
+    
+        /**
          * value: "STOPPED"
          * @const
          */

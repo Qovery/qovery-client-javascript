@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **networkIngressExtraHeaders** | **String** | Allows to define response headers | [optional] 
 **hpaCpuAverageUtilizationPercent** | **Number** | Percentage value of cpu usage at which point pods should scale up. | [optional] 
 **securityServiceAccountName** | **String** | Allows you to set an existing Kubernetes service account name  | [optional] 
+**securityAutomountServiceAccountToken** | **Boolean** | Automount Kubernetes service account token to have access to Kubernetes API from pods  | [optional] 
 **securityReadOnlyRootFilesystem** | **Boolean** | Mounts the container&#39;s root filesystem as read-only  | [optional] 
 
 

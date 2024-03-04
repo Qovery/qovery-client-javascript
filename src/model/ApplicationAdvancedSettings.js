@@ -143,6 +143,9 @@ class ApplicationAdvancedSettings {
             if (data.hasOwnProperty('security.service_account_name')) {
                 obj['security.service_account_name'] = ApiClient.convertToType(data['security.service_account_name'], 'String');
             }
+            if (data.hasOwnProperty('security.automount_service_account_token')) {
+                obj['security.automount_service_account_token'] = ApiClient.convertToType(data['security.automount_service_account_token'], 'Boolean');
+            }
             if (data.hasOwnProperty('security.read_only_root_filesystem')) {
                 obj['security.read_only_root_filesystem'] = ApiClient.convertToType(data['security.read_only_root_filesystem'], 'Boolean');
             }
@@ -338,6 +341,12 @@ ApplicationAdvancedSettings.prototype['hpa.cpu.average_utilization_percent'] = u
  * @member {String} security.service_account_name
  */
 ApplicationAdvancedSettings.prototype['security.service_account_name'] = undefined;
+
+/**
+ * Automount Kubernetes service account token to have access to Kubernetes API from pods 
+ * @member {Boolean} security.automount_service_account_token
+ */
+ApplicationAdvancedSettings.prototype['security.automount_service_account_token'] = undefined;
 
 /**
  * Mounts the container's root filesystem as read-only 

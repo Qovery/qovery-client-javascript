@@ -234,6 +234,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property securityAutomountServiceAccountToken (base name: "security.automount_service_account_token")', function() {
+      // uncomment below and update the code to test the property securityAutomountServiceAccountToken
+      //var instance = new QoveryApi.ContainerAdvancedSettings();
+      //expect(instance).to.be();
+    });
+
     it('should have the property securityReadOnlyRootFilesystem (base name: "security.read_only_root_filesystem")', function() {
       // uncomment below and update the code to test the property securityReadOnlyRootFilesystem
       //var instance = new QoveryApi.ContainerAdvancedSettings();

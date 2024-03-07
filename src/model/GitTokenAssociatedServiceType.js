@@ -27,10 +27,17 @@ export default class GitTokenAssociatedServiceType {
 
     
         /**
-         * value: "JOB"
+         * value: "CRON"
          * @const
          */
-        "JOB" = "JOB";
+        "CRON" = "CRON";
+
+    
+        /**
+         * value: "LIFECYCLE"
+         * @const
+         */
+        "LIFECYCLE" = "LIFECYCLE";
 
     
         /**

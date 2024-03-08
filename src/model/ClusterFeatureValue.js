@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ClusterFeatureAwsExistingVpc from './ClusterFeatureAwsExistingVpc';
+import ClusterFeatureGcpExistingVpc from './ClusterFeatureGcpExistingVpc';
 
 /**
  * The ClusterFeatureValue model module.
@@ -24,14 +25,16 @@ class ClusterFeatureValue {
      * Constructs a new <code>ClusterFeatureValue</code>.
      * @alias module:model/ClusterFeatureValue
      * @implements module:model/ClusterFeatureAwsExistingVpc
+     * @implements module:model/ClusterFeatureGcpExistingVpc
      * @param awsVpcEksId {String} 
      * @param eksSubnetsZoneAIds {Array.<String>} 
      * @param eksSubnetsZoneBIds {Array.<String>} 
      * @param eksSubnetsZoneCIds {Array.<String>} 
+     * @param vpcName {String} 
      */
-    constructor(awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds) { 
-        ClusterFeatureAwsExistingVpc.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
-        ClusterFeatureValue.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);
+    constructor(awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds, vpcName) { 
+        ClusterFeatureAwsExistingVpc.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds);ClusterFeatureGcpExistingVpc.initialize(this, vpcName);
+        ClusterFeatureValue.initialize(this, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds, vpcName);
     }
 
     /**
@@ -39,11 +42,12 @@ class ClusterFeatureValue {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds) { 
+    static initialize(obj, awsVpcEksId, eksSubnetsZoneAIds, eksSubnetsZoneBIds, eksSubnetsZoneCIds, vpcName) { 
         obj['aws_vpc_eks_id'] = awsVpcEksId;
         obj['eks_subnets_zone_a_ids'] = eksSubnetsZoneAIds;
         obj['eks_subnets_zone_b_ids'] = eksSubnetsZoneBIds;
         obj['eks_subnets_zone_c_ids'] = eksSubnetsZoneCIds;
+        obj['vpc_name'] = vpcName;
     }
 
     /**
@@ -57,6 +61,7 @@ class ClusterFeatureValue {
         if (data) {
             obj = obj || new ClusterFeatureValue();
             ClusterFeatureAwsExistingVpc.constructFromObject(data, obj);
+            ClusterFeatureGcpExistingVpc.constructFromObject(data, obj);
 
             if (data.hasOwnProperty('aws_vpc_eks_id')) {
                 obj['aws_vpc_eks_id'] = ApiClient.convertToType(data['aws_vpc_eks_id'], 'String');
@@ -96,6 +101,24 @@ class ClusterFeatureValue {
             }
             if (data.hasOwnProperty('rds_subnets_zone_c_ids')) {
                 obj['rds_subnets_zone_c_ids'] = ApiClient.convertToType(data['rds_subnets_zone_c_ids'], ['String']);
+            }
+            if (data.hasOwnProperty('vpc_name')) {
+                obj['vpc_name'] = ApiClient.convertToType(data['vpc_name'], 'String');
+            }
+            if (data.hasOwnProperty('vpc_project_id')) {
+                obj['vpc_project_id'] = ApiClient.convertToType(data['vpc_project_id'], 'String');
+            }
+            if (data.hasOwnProperty('subnetwork_name')) {
+                obj['subnetwork_name'] = ApiClient.convertToType(data['subnetwork_name'], 'String');
+            }
+            if (data.hasOwnProperty('ip_range_services_name')) {
+                obj['ip_range_services_name'] = ApiClient.convertToType(data['ip_range_services_name'], 'String');
+            }
+            if (data.hasOwnProperty('ip_range_pods_name')) {
+                obj['ip_range_pods_name'] = ApiClient.convertToType(data['ip_range_pods_name'], 'String');
+            }
+            if (data.hasOwnProperty('additional_ip_range_pods_names')) {
+                obj['additional_ip_range_pods_names'] = ApiClient.convertToType(data['additional_ip_range_pods_names'], ['String']);
             }
         }
         return obj;
@@ -169,6 +192,36 @@ ClusterFeatureValue.prototype['rds_subnets_zone_b_ids'] = undefined;
  */
 ClusterFeatureValue.prototype['rds_subnets_zone_c_ids'] = undefined;
 
+/**
+ * @member {String} vpc_name
+ */
+ClusterFeatureValue.prototype['vpc_name'] = undefined;
+
+/**
+ * @member {String} vpc_project_id
+ */
+ClusterFeatureValue.prototype['vpc_project_id'] = undefined;
+
+/**
+ * @member {String} subnetwork_name
+ */
+ClusterFeatureValue.prototype['subnetwork_name'] = undefined;
+
+/**
+ * @member {String} ip_range_services_name
+ */
+ClusterFeatureValue.prototype['ip_range_services_name'] = undefined;
+
+/**
+ * @member {String} ip_range_pods_name
+ */
+ClusterFeatureValue.prototype['ip_range_pods_name'] = undefined;
+
+/**
+ * @member {Array.<String>} additional_ip_range_pods_names
+ */
+ClusterFeatureValue.prototype['additional_ip_range_pods_names'] = undefined;
+
 
 // Implement ClusterFeatureAwsExistingVpc interface:
 /**
@@ -223,6 +276,31 @@ ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_b_ids'] = undefined;
  * @member {Array.<String>} rds_subnets_zone_c_ids
  */
 ClusterFeatureAwsExistingVpc.prototype['rds_subnets_zone_c_ids'] = undefined;
+// Implement ClusterFeatureGcpExistingVpc interface:
+/**
+ * @member {String} vpc_name
+ */
+ClusterFeatureGcpExistingVpc.prototype['vpc_name'] = undefined;
+/**
+ * @member {String} vpc_project_id
+ */
+ClusterFeatureGcpExistingVpc.prototype['vpc_project_id'] = undefined;
+/**
+ * @member {String} subnetwork_name
+ */
+ClusterFeatureGcpExistingVpc.prototype['subnetwork_name'] = undefined;
+/**
+ * @member {String} ip_range_services_name
+ */
+ClusterFeatureGcpExistingVpc.prototype['ip_range_services_name'] = undefined;
+/**
+ * @member {String} ip_range_pods_name
+ */
+ClusterFeatureGcpExistingVpc.prototype['ip_range_pods_name'] = undefined;
+/**
+ * @member {Array.<String>} additional_ip_range_pods_names
+ */
+ClusterFeatureGcpExistingVpc.prototype['additional_ip_range_pods_names'] = undefined;
 
 
 

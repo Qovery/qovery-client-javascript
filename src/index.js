@@ -74,6 +74,7 @@ import ClusterDeploymentStatusEnum from './model/ClusterDeploymentStatusEnum';
 import ClusterFeature from './model/ClusterFeature';
 import ClusterFeatureAcceptedValuesInner from './model/ClusterFeatureAcceptedValuesInner';
 import ClusterFeatureAwsExistingVpc from './model/ClusterFeatureAwsExistingVpc';
+import ClusterFeatureGcpExistingVpc from './model/ClusterFeatureGcpExistingVpc';
 import ClusterFeatureResponseList from './model/ClusterFeatureResponseList';
 import ClusterFeatureValue from './model/ClusterFeatureValue';
 import ClusterInstanceTypeResponseList from './model/ClusterInstanceTypeResponseList';
@@ -957,6 +958,12 @@ export {
      * @property {module:model/ClusterFeatureAwsExistingVpc}
      */
     ClusterFeatureAwsExistingVpc,
+
+    /**
+     * The ClusterFeatureGcpExistingVpc model constructor.
+     * @property {module:model/ClusterFeatureGcpExistingVpc}
+     */
+    ClusterFeatureGcpExistingVpc,
 
     /**
      * The ClusterFeatureResponseList model constructor.

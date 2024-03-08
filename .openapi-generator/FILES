@@ -78,6 +78,7 @@ docs/ClusterDeploymentStatusEnum.md
 docs/ClusterFeature.md
 docs/ClusterFeatureAcceptedValuesInner.md
 docs/ClusterFeatureAwsExistingVpc.md
+docs/ClusterFeatureGcpExistingVpc.md
 docs/ClusterFeatureResponseList.md
 docs/ClusterFeatureValue.md
 docs/ClusterInstanceTypeResponseList.md
@@ -683,6 +684,7 @@ src/model/ClusterDeploymentStatusEnum.js
 src/model/ClusterFeature.js
 src/model/ClusterFeatureAcceptedValuesInner.js
 src/model/ClusterFeatureAwsExistingVpc.js
+src/model/ClusterFeatureGcpExistingVpc.js
 src/model/ClusterFeatureResponseList.js
 src/model/ClusterFeatureValue.js
 src/model/ClusterInstanceTypeResponseList.js
@@ -1222,6 +1224,7 @@ test/model/ClusterDeploymentStatusEnum.spec.js
 test/model/ClusterFeature.spec.js
 test/model/ClusterFeatureAcceptedValuesInner.spec.js
 test/model/ClusterFeatureAwsExistingVpc.spec.js
+test/model/ClusterFeatureGcpExistingVpc.spec.js
 test/model/ClusterFeatureResponseList.spec.js
 test/model/ClusterFeatureValue.spec.js
 test/model/ClusterInstanceTypeResponseList.spec.js

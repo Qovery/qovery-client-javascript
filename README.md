@@ -584,6 +584,7 @@ Class | Method | HTTP request | Description
  - [QoveryApi.ClusterFeature](docs/ClusterFeature.md)
  - [QoveryApi.ClusterFeatureAcceptedValuesInner](docs/ClusterFeatureAcceptedValuesInner.md)
  - [QoveryApi.ClusterFeatureAwsExistingVpc](docs/ClusterFeatureAwsExistingVpc.md)
+ - [QoveryApi.ClusterFeatureGcpExistingVpc](docs/ClusterFeatureGcpExistingVpc.md)
  - [QoveryApi.ClusterFeatureResponseList](docs/ClusterFeatureResponseList.md)
  - [QoveryApi.ClusterFeatureValue](docs/ClusterFeatureValue.md)
  - [QoveryApi.ClusterInstanceTypeResponseList](docs/ClusterInstanceTypeResponseList.md)

@@ -132,6 +132,42 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property vpcName (base name: "vpc_name")', function() {
+      // uncomment below and update the code to test the property vpcName
+      //var instance = new QoveryApi.ClusterFeatureValue();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property vpcProjectId (base name: "vpc_project_id")', function() {
+      // uncomment below and update the code to test the property vpcProjectId
+      //var instance = new QoveryApi.ClusterFeatureValue();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subnetworkName (base name: "subnetwork_name")', function() {
+      // uncomment below and update the code to test the property subnetworkName
+      //var instance = new QoveryApi.ClusterFeatureValue();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ipRangeServicesName (base name: "ip_range_services_name")', function() {
+      // uncomment below and update the code to test the property ipRangeServicesName
+      //var instance = new QoveryApi.ClusterFeatureValue();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ipRangePodsName (base name: "ip_range_pods_name")', function() {
+      // uncomment below and update the code to test the property ipRangePodsName
+      //var instance = new QoveryApi.ClusterFeatureValue();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property additionalIpRangePodsNames (base name: "additional_ip_range_pods_names")', function() {
+      // uncomment below and update the code to test the property additionalIpRangePodsNames
+      //var instance = new QoveryApi.ClusterFeatureValue();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
